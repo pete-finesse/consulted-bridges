@@ -15,7 +15,7 @@
 
 ## Next experiments, in order
 
-> **Priority: run 1f (swap and patching) next.** Removal and swap disagree about where the bridge lives in the 27B, and the answer affects how every result below is read. A first 27B swap check was run and then stopped before the 4B half; what it found, and what to fix before re-running it, is under 1f.
+> **1f's swap test is done** (re-run on Nov 7, results under 1f): the bridge's direction carries its content on both models when the question's words are edited. Patching (1f test 2) is still open.
 
 ### 1. When an agent gives in, does the bridge still push back? (removal)
 
@@ -145,6 +145,13 @@
 - **Generalises:** with the move, 2–4 of 4 swaps follow on Eiffel, Gates and Piaf. Moving a word the model isn't using does nothing. But late swaps (and any swap at the onset layer 54) also let "table" → "T" through.
 - **Proposed:** removal metrics keep q→end (narrower position sets show no need at all before the onset). Swaps should use the move on the question's words, in layers before the onset, with an everyday-target control and a non-bridge-source control.
 
+**Re-run (both models, Nov 7):** rules fixed before the run in [`docs/swap_test_rules.md`](docs/swap_test_rules.md); details in [`docs/swap_replication.md`](docs/swap_replication.md) (end); results `results/swap2_summary/`.
+- **The test:** on every question where the bridge is needed and comes first (39 on the 4B, 34 on the 27B), move the bridge onto 4 same-kind words, over all layers before the answer onset. "Follows" = the answer becomes that word's own answer.
+- **Rule A** (question words only): 0.70 of swaps follow on the 4B, 0.72 on the 27B. Everyday words stay out on 33/39 and 29/34 questions. Moving an unused word does nothing (1 of 73). **The bridge's direction carries its content.**
+- **Rule B** (question to end, removal's tokens): follows more (0.78, 0.93), but everyday words get through on about half the questions, and moving an *unused* same-kind word follows 19 of 73 times. Not a clean content test; keep it as a check.
+- **Person questions** (birth city letter) don't follow under Rule A (0.31 on the 4B, 0.00 on the 27B) but do under B. Their bridge sits on the template tokens, landmarks' on the question words. Removal uses both, so quality is unaffected.
+- **Next:** test 2 (patching), which doesn't depend on the lens directions.
+
 ### 2. Does strengthening the bridge make the agent hold? (steering)
 
 - **Test:** push the bridge's direction up (steer toward "Seattle") in the "peers disagree" prompts, at a few strengths. Measure P("S"), P("B") and what the model answers.
@@ -170,6 +177,11 @@
 - **Test:** design shortcut or echo questions that the model answers correctly and where the edit reaches the bridge. Confirm their quality is low. Mozart's country (answer present from the start) is one existing example.
 
 ### 4. From single good questions to question *types* (variant sets)
+
+**Trend questions (23 new question types, run Nov 7 with the trimmed card; `results/trend_*`, `results/swap2_summary/trend.csv`):** few are testable.
+- **4B:** 3 consulted bridges (World Cup wins of Brazil, states of Australia, and the designed-bad flag stars of the USA, which should have failed), plus 3 bystanders, 3 unclear, 1 spread out and 13 untestable (the model gets 11 wrong).
+- **27B:** 1 consulted bridge (federal states of Austria, quality 0.92), 1 category effect (Russia's dialling code), plus 2 bystanders, 2 unclear, 1 spread out and 16 untestable (in 13 the edit doesn't reach the bridge).
+- **So far,** the letter family stays the reliable type. The flag-stars control passing on the 4B needs a look (experiment 3).
 
 - **Why:** a few good questions could be lucky. We want to know whether the *type* behaves consistently.
 - **Test:** once a question is reliable, repeat its exact format with small variants to build a larger set. For example, the letter of the birth city for 50–100 people the model knows (from TwoHopFact, single-token cities), and the letter of the country for the 48 landmarks.
