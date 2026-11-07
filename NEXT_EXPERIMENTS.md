@@ -15,7 +15,7 @@
 
 ## Next experiments, in order
 
-> **1f's swap test is done** (re-run on Nov 7, results under 1f): the bridge's direction carries its content on both models when the question's words are edited. Patching (1f test 2) is still open.
+> **1f's swap test is done** (re-run on Nov 7, results under 1f): the bridge's direction carries its content on both models when the question's words are edited. Patching (1f test 2) is still open. **Flagged to revisit:** person questions hold their bridge on different tokens from landmark questions (1g).
 
 ### 1. When an agent gives in, does the bridge still push back? (removal)
 
@@ -149,8 +149,37 @@
 - **The test:** on every question where the bridge is needed and comes first (39 on the 4B, 34 on the 27B), move the bridge onto 4 same-kind words, over all layers before the answer onset. "Follows" = the answer becomes that word's own answer.
 - **Rule A** (question words only): 0.70 of swaps follow on the 4B, 0.72 on the 27B. Everyday words stay out on 33/39 and 29/34 questions. Moving an unused word does nothing (1 of 73). **The bridge's direction carries its content.**
 - **Rule B** (question to end, removal's tokens): follows more (0.78, 0.93), but everyday words get through on about half the questions, and moving an *unused* same-kind word follows 19 of 73 times. Not a clean content test; keep it as a check.
-- **Person questions** (birth city letter) don't follow under Rule A (0.31 on the 4B, 0.00 on the 27B) but do under B. Their bridge sits on the template tokens, landmarks' on the question words. Removal uses both, so quality is unaffected.
+- **Person questions** (birth city letter) don't follow under Rule A (0.31 on the 4B, 0.00 on the 27B) but do under B. Their bridge seems to sit on the template tokens, landmarks' on the question words. Removal uses both, so quality is unaffected. **Notable and not yet understood: see 1g.**
 - **Next:** test 2 (patching), which doesn't depend on the lens directions.
+
+### 1g. Open: why does a person's birth city sit on different tokens from a landmark's country? (revisit)
+
+> **Flagged as notable (Nov 7).** Found in the 1f swap re-run, not explained yet. It matters for Silent Dissent: the group and give-up experiments use person questions (Gates, Piaf, Mozart).
+
+- **What we saw** (Qwen3.6-27B, swap over the whole pre-onset range; follow share of 4 same-kind swaps):
+
+  | Questions | Rule A: question words only | Rule B: question to end (incl. template) |
+  |---|---|---|
+  | Landmark → country letter (`V_LM_*`, 10) | 0.98 (0.75–1.00) | 1.00 |
+  | University → city letter (`V_LU_*`, 4) | 1.00 on all 4 | 1.00 |
+  | Person → birth city letter (`V_LP_*`, 5) | **0.00 on all 5** | 0.65 (0.25–1.00) |
+  | The bank's person questions (`L_gates`, `L_piaf`, `L_mozart`) | 0.25–0.50 | 1.00 |
+
+  - **The 4B shows the same pattern, less sharply.** Rule A: landmarks 0.84, people 0.31.
+  - **The split isn't simply "people vs places".** `L_york` (York University → Toronto) gets only 0.25 under Rule A on the 27B, though the other university questions get 1.00.
+- **Why the Rule B result isn't just a leak here:** Rule B is unreliable overall (everyday words get through on about half the questions, and an unused same-kind word follows 19 of 73 times). But on the person questions both of its controls pass on the 27B: moving an unused same-kind word does nothing on all 8, and the everyday-word check passes on 7 of 8.
+- **Removal agrees.** Michelle Obama → Chicago (27B): removing Chicago from the question words alone leaves "C", while removing it from the question to the end gives "A".
+- **What it might mean:**
+  - The model may hold a person's birth city only once it has read the whole question (on the template tokens), and a landmark's country already on the landmark's own words.
+  - Or the person's name pulls the city in late, and the J-lens direction on the question tokens doesn't capture it there.
+
+  Either way, "the bridge is on the question's words" is not true for every question type, and the swap rule that works for landmarks (Rule A) misses people.
+- **Tests to run:**
+  1. **Per-position readout:** the J-lens rank of the bridge at each token (subject, rest of the question, each template token) by layer, for person vs landmark questions. Where does the bridge first appear?
+  2. **Swap on the template tokens only** (positions after `<|im_end|>`), with the same everyday and unused-source controls. If person questions follow there and landmarks don't, the split is confirmed.
+  3. **Activation patching** (1f test 2) at question vs template positions: paste another person's state (born in a city with a different letter) and see which position set carries the answer.
+  4. **Group format:** recheck whether the give-up results (experiment 1) depend on template positions for Gates, Piaf and Mozart, since the peers' lines change what comes before the template.
+- **Where the numbers are:** `results/swap2_summary/questions.csv`, `results/swap2_qwen36_27b/`, `results/swap2_qwen35_4b/`; write-up in [`docs/swap_replication.md`](docs/swap_replication.md) (end).
 
 ### 2. Does strengthening the bridge make the agent hold? (steering)
 
