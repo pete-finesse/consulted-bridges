@@ -1,0 +1,9 @@
+sentence,answer_onset,swapA_follow,swapA_n,swapA_counts,swapB_follow,swapB_n,swapB_counts,swapA_windows_counted,swapA_windows,swapB_windows_counted,swapB_windows
+S_element_gold,48,0.75,4,,1.0,3,,0,7,0,7
+Q_month_thanksgiving_days,54,1.0,2,,1.0,2,,0,8,0,8
+C_bad_banana,36,0.5,4,True,0.75,4,True,5,5,5,5
+V_LM_fuji,54,1.0,4,True,1.0,4,False,8,8,5,8
+V_LP_hendrix,54,0.0,4,True,0.25,4,True,8,8,5,8
+V_LM_pisa,54,1.0,4,True,1.0,3,False,8,8,6,8
+V_LM_petronas,54,1.0,4,True,1.0,4,True,8,8,6,8
+V_D_valentine,54,0.5,2,,1.0,1,,0,8,0,8

@@ -1,0 +1,9 @@
+sentence,answer_onset,swapA_follow,swapA_n,swapA_counts,swapB_follow,swapB_n,swapB_counts,swapA_windows_counted,swapA_windows,swapB_windows_counted,swapB_windows
+L_spider,54,0.75,4,True,1.0,4,False,8,8,6,8
+L_piaf,54,0.5,4,True,1.0,4,True,8,8,8,8
+X_mozart_country,30,1.0,4,True,1.0,4,True,4,4,4,4
+V_LM_sydney,54,1.0,4,True,1.0,4,True,8,8,6,8
+V_LP_obama_m,54,0.0,4,True,1.0,4,True,8,8,8,8
+V_LU_pompeu,54,1.0,4,True,1.0,4,True,8,8,8,8
+V_LM_pyramids,54,1.0,4,True,1.0,3,False,8,8,6,8
+V_LP_ali,54,0.0,4,True,0.5,4,True,8,8,8,8

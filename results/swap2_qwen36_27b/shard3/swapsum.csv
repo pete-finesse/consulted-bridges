@@ -1,0 +1,137 @@
+sentence,rule,layers,whole,n_layers,positions,fallback,right,targets,everyday,n_informative,n_follow,follow_share,n_everyday_readable,n_everyday_through,counts,source_everyday_follows,source_kind_follows
+S_element_gold,A,0-11,False,12,3-24,Au,Au,"silver, iron, copper, lead","table, river, garden",4,0,0.0,0,0,,False,False
+S_element_gold,A,6-17,False,12,3-24,Au,Au,"silver, iron, copper, lead","table, river, garden",4,0,0.0,0,0,,False,False
+S_element_gold,A,12-23,False,12,3-24,Au,Au,"silver, iron, copper, lead","table, river, garden",4,0,0.0,0,0,,False,False
+S_element_gold,A,18-29,False,12,3-24,Au,Au,"silver, iron, copper, lead","table, river, garden",4,1,0.25,0,0,,False,False
+S_element_gold,A,24-35,False,12,3-24,Au,Au,"silver, iron, copper, lead","table, river, garden",4,2,0.5,0,0,,False,False
+S_element_gold,A,30-41,False,12,3-24,Au,Au,"silver, iron, copper, lead","table, river, garden",4,3,0.75,0,0,,False,False
+S_element_gold,A,36-47,False,12,3-24,Au,Au,"silver, iron, copper, lead","table, river, garden",4,3,0.75,0,0,,False,False
+S_element_gold,A,whole,True,48,3-24,Au,Au,"silver, iron, copper, lead","table, river, garden",4,3,0.75,0,0,,False,False
+S_element_gold,B,0-11,False,12,3-33,Au,Au,"silver, iron, copper, lead","table, river, garden",4,0,0.0,0,0,,False,False
+S_element_gold,B,6-17,False,12,3-33,Au,Au,"silver, iron, copper, lead","table, river, garden",4,0,0.0,0,0,,False,False
+S_element_gold,B,12-23,False,12,3-33,Au,Au,"silver, iron, copper, lead","table, river, garden",4,1,0.25,0,0,,False,False
+S_element_gold,B,18-29,False,12,3-33,Au,Au,"silver, iron, copper, lead","table, river, garden",4,2,0.5,0,0,,False,False
+S_element_gold,B,24-35,False,12,3-33,Au,Au,"silver, iron, copper, lead","table, river, garden",4,3,0.75,0,0,,False,False
+S_element_gold,B,30-41,False,12,3-33,Ag,Au,"silver, iron, copper, lead","table, river, garden",3,3,1.0,0,0,,False,False
+S_element_gold,B,36-47,False,12,3-33,Ag,Au,"silver, iron, copper, lead","table, river, garden",3,3,1.0,0,0,,False,False
+S_element_gold,B,whole,True,48,3-33,Ag,Au,"silver, iron, copper, lead","table, river, garden",3,3,1.0,0,0,,False,False
+Q_month_thanksgiving_days,A,0-11,False,12,3-19,30,30,"January, February","table, river, garden",2,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,A,6-17,False,12,3-19,30,30,"January, February","table, river, garden",2,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,A,12-23,False,12,3-19,30,30,"January, February","table, river, garden",2,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,A,18-29,False,12,3-19,30,30,"January, February","table, river, garden",2,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,A,24-35,False,12,3-19,30,30,"January, February","table, river, garden",2,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,A,30-41,False,12,3-19,30,30,"January, February","table, river, garden",2,1,0.5,0,0,,False,False
+Q_month_thanksgiving_days,A,36-47,False,12,3-19,30,30,"January, February","table, river, garden",2,1,0.5,0,0,,False,False
+Q_month_thanksgiving_days,A,42-53,False,12,3-19,30,30,"January, February","table, river, garden",2,1,0.5,0,0,,False,False
+Q_month_thanksgiving_days,A,whole,True,54,3-19,30,30,"January, February","table, river, garden",2,2,1.0,0,0,,False,False
+Q_month_thanksgiving_days,B,0-11,False,12,3-28,30,30,"January, February","table, river, garden",2,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,B,6-17,False,12,3-28,30,30,"January, February","table, river, garden",2,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,B,12-23,False,12,3-28,30,30,"January, February","table, river, garden",2,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,B,18-29,False,12,3-28,30,30,"January, February","table, river, garden",2,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,B,24-35,False,12,3-28,30,30,"January, February","table, river, garden",2,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,B,30-41,False,12,3-28,30,30,"January, February","table, river, garden",2,1,0.5,0,0,,False,False
+Q_month_thanksgiving_days,B,36-47,False,12,3-28,30,30,"January, February","table, river, garden",2,1,0.5,0,0,,False,False
+Q_month_thanksgiving_days,B,42-53,False,12,3-28,31,30,"January, February","table, river, garden",1,0,0.0,0,0,,False,False
+Q_month_thanksgiving_days,B,whole,True,54,3-28,30,30,"January, February","table, river, garden",2,2,1.0,0,0,,False,True
+C_bad_banana,A,0-11,False,12,3-19,Yellow,Yellow,"apple, lime, orange, grape","table, river, garden",4,0,0.0,3,0,True,False,False
+C_bad_banana,A,6-17,False,12,3-19,Yellow,Yellow,"apple, lime, orange, grape","table, river, garden",4,0,0.0,3,0,True,False,False
+C_bad_banana,A,12-23,False,12,3-19,Yellow,Yellow,"apple, lime, orange, grape","table, river, garden",4,0,0.0,3,0,True,False,False
+C_bad_banana,A,18-29,False,12,3-19,Yellow,Yellow,"apple, lime, orange, grape","table, river, garden",4,0,0.0,3,0,True,False,False
+C_bad_banana,A,24-35,False,12,3-19,Yellow,Yellow,"apple, lime, orange, grape","table, river, garden",4,2,0.5,3,0,True,False,False
+C_bad_banana,A,whole,True,36,3-19,Yellow,Yellow,"apple, lime, orange, grape","table, river, garden",4,2,0.5,3,0,True,False,False
+C_bad_banana,B,0-11,False,12,3-28,Yellow,Yellow,"apple, lime, orange, grape","table, river, garden",4,0,0.0,3,0,True,False,False
+C_bad_banana,B,6-17,False,12,3-28,Yellow,Yellow,"apple, lime, orange, grape","table, river, garden",4,0,0.0,3,0,True,False,False
+C_bad_banana,B,12-23,False,12,3-28,Yellow,Yellow,"apple, lime, orange, grape","table, river, garden",4,0,0.0,3,0,True,False,False
+C_bad_banana,B,18-29,False,12,3-28,other,Yellow,"apple, lime, orange, grape","table, river, garden",4,2,0.5,3,0,True,False,False
+C_bad_banana,B,24-35,False,12,3-28,other,Yellow,"apple, lime, orange, grape","table, river, garden",4,2,0.5,3,0,True,False,False
+C_bad_banana,B,whole,True,36,3-28,other,Yellow,"apple, lime, orange, grape","table, river, garden",4,3,0.75,3,0,True,False,False
+V_LM_fuji,A,0-11,False,12,3-23,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_fuji,A,6-17,False,12,3-23,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_fuji,A,12-23,False,12,3-23,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_fuji,A,18-29,False,12,3-23,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_fuji,A,24-35,False,12,3-23,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_fuji,A,30-41,False,12,3-23,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_fuji,A,36-47,False,12,3-23,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_fuji,A,42-53,False,12,3-23,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,2,0.5,3,0,True,False,False
+V_LM_fuji,A,whole,True,54,3-23,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_fuji,B,0-11,False,12,3-32,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_fuji,B,6-17,False,12,3-32,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_fuji,B,12-23,False,12,3-32,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_fuji,B,18-29,False,12,3-32,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_fuji,B,24-35,False,12,3-32,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_fuji,B,30-41,False,12,3-32,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,4,1.0,3,1,False,False,False
+V_LM_fuji,B,36-47,False,12,3-32,J,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,4,1.0,3,2,False,False,False
+V_LM_fuji,B,42-53,False,12,3-32,G,J,"Germany, Spain, Brazil, Canada","table, river, garden",3,3,1.0,2,1,False,False,False
+V_LM_fuji,B,whole,True,54,3-32,I,J,"Germany, Spain, Brazil, Canada","table, river, garden",4,4,1.0,3,1,False,False,False
+V_LP_hendrix,A,0-11,False,12,3-25,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,A,6-17,False,12,3-25,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,A,12-23,False,12,3-25,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,A,18-29,False,12,3-25,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,A,24-35,False,12,3-25,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,A,30-41,False,12,3-25,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,A,36-47,False,12,3-25,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,A,42-53,False,12,3-25,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,A,whole,True,54,3-25,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,B,0-11,False,12,3-34,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,B,6-17,False,12,3-34,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,B,12-23,False,12,3-34,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,B,18-29,False,12,3-34,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LP_hendrix,B,24-35,False,12,3-34,S,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,1,0.25,3,1,False,False,False
+V_LP_hendrix,B,30-41,False,12,3-34,R,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,2,0.5,2,1,False,False,False
+V_LP_hendrix,B,36-47,False,12,3-34,R,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,2,0.5,2,0,True,False,False
+V_LP_hendrix,B,42-53,False,12,3-34,R,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,4,1.0,2,1,False,False,False
+V_LP_hendrix,B,whole,True,54,3-34,R,S,"Munich, Paris, Tokyo, Berlin","table, river, garden",4,1,0.25,2,0,True,False,False
+V_LM_pisa,A,0-11,False,12,3-27,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_pisa,A,6-17,False,12,3-27,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_pisa,A,12-23,False,12,3-27,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_pisa,A,18-29,False,12,3-27,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_pisa,A,24-35,False,12,3-27,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_pisa,A,30-41,False,12,3-27,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_pisa,A,36-47,False,12,3-27,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_pisa,A,42-53,False,12,3-27,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_pisa,A,whole,True,54,3-27,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_pisa,B,0-11,False,12,3-36,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_pisa,B,6-17,False,12,3-36,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_pisa,B,12-23,False,12,3-36,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,1,0.25,3,0,True,False,False
+V_LM_pisa,B,18-29,False,12,3-36,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_pisa,B,24-35,False,12,3-36,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_pisa,B,30-41,False,12,3-36,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_pisa,B,36-47,False,12,3-36,I,I,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,2,False,False,False
+V_LM_pisa,B,42-53,False,12,3-36,G,I,"Germany, Japan, Spain, Brazil","table, river, garden",3,3,1.0,2,2,False,False,False
+V_LM_pisa,B,whole,True,54,3-36,S,I,"Germany, Japan, Spain, Brazil","table, river, garden",3,3,1.0,3,1,False,False,False
+V_LM_petronas,A,0-11,False,12,3-26,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_petronas,A,6-17,False,12,3-26,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_petronas,A,12-23,False,12,3-26,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_petronas,A,18-29,False,12,3-26,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,3,0.75,3,0,True,False,False
+V_LM_petronas,A,24-35,False,12,3-26,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_petronas,A,30-41,False,12,3-26,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_petronas,A,36-47,False,12,3-26,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_petronas,A,42-53,False,12,3-26,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,1,0.25,3,0,True,False,False
+V_LM_petronas,A,whole,True,54,3-26,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_petronas,B,0-11,False,12,3-35,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_petronas,B,6-17,False,12,3-35,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_petronas,B,12-23,False,12,3-35,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,0,0.0,3,0,True,False,False
+V_LM_petronas,B,18-29,False,12,3-35,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_petronas,B,24-35,False,12,3-35,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_petronas,B,30-41,False,12,3-35,M,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,1,False,False,False
+V_LM_petronas,B,36-47,False,12,3-35,I,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_LM_petronas,B,42-53,False,12,3-35,S,M,"Germany, Japan, Spain, Brazil","table, river, garden",3,3,1.0,3,3,False,False,False
+V_LM_petronas,B,whole,True,54,3-35,I,M,"Germany, Japan, Spain, Brazil","table, river, garden",4,4,1.0,3,0,True,False,False
+V_D_valentine,A,0-11,False,12,3-19,28,28,"April, January","table, river, garden",2,0,0.0,0,0,,False,False
+V_D_valentine,A,6-17,False,12,3-19,28,28,"April, January","table, river, garden",2,0,0.0,0,0,,False,False
+V_D_valentine,A,12-23,False,12,3-19,28,28,"April, January","table, river, garden",2,0,0.0,0,0,,False,False
+V_D_valentine,A,18-29,False,12,3-19,28,28,"April, January","table, river, garden",2,0,0.0,0,0,,False,False
+V_D_valentine,A,24-35,False,12,3-19,28,28,"April, January","table, river, garden",2,1,0.5,0,0,,False,False
+V_D_valentine,A,30-41,False,12,3-19,28,28,"April, January","table, river, garden",2,1,0.5,0,0,,False,False
+V_D_valentine,A,36-47,False,12,3-19,28,28,"April, January","table, river, garden",2,1,0.5,0,0,,False,False
+V_D_valentine,A,42-53,False,12,3-19,28,28,"April, January","table, river, garden",2,1,0.5,0,0,,False,False
+V_D_valentine,A,whole,True,54,3-19,28,28,"April, January","table, river, garden",2,1,0.5,0,0,,False,False
+V_D_valentine,B,0-11,False,12,3-28,28,28,"April, January","table, river, garden",2,0,0.0,0,0,,False,False
+V_D_valentine,B,6-17,False,12,3-28,28,28,"April, January","table, river, garden",2,0,0.0,0,0,,False,False
+V_D_valentine,B,12-23,False,12,3-28,28,28,"April, January","table, river, garden",2,0,0.0,0,0,,False,False
+V_D_valentine,B,18-29,False,12,3-28,28,28,"April, January","table, river, garden",2,0,0.0,0,0,,False,False
+V_D_valentine,B,24-35,False,12,3-28,28,28,"April, January","table, river, garden",2,1,0.5,0,0,,False,False
+V_D_valentine,B,30-41,False,12,3-28,28,28,"April, January","table, river, garden",2,1,0.5,0,0,,False,False
+V_D_valentine,B,36-47,False,12,3-28,31,28,"April, January","table, river, garden",1,1,1.0,0,0,,False,False
+V_D_valentine,B,42-53,False,12,3-28,31,28,"April, January","table, river, garden",1,1,1.0,0,0,,False,False
+V_D_valentine,B,whole,True,54,3-28,31,28,"April, January","table, river, garden",1,1,1.0,0,0,,False,False

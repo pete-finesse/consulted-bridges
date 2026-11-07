@@ -1,0 +1,9 @@
+sentence,answer_onset,swapA_follow,swapA_n,swapA_counts,swapB_follow,swapB_n,swapB_counts,swapA_windows_counted,swapA_windows,swapB_windows_counted,swapB_windows
+L_colosseum,54,1.0,4,True,1.0,4,True,8,8,6,8
+L_gates,54,0.25,4,True,1.0,4,True,8,8,7,8
+X_york_country,42,1.0,4,True,1.0,4,True,2,6,4,6
+V_LM_machu,54,1.0,4,True,1.0,4,False,8,8,5,8
+V_LP_hemsworth,54,0.0,3,True,0.5,4,True,8,8,8,8
+V_LU_alberta,54,1.0,4,True,1.0,4,True,8,8,7,8
+V_LM_angkor,54,0.75,4,True,1.0,4,True,8,8,8,8
+V_LU_fudan,54,1.0,4,True,1.0,4,True,8,8,8,8
