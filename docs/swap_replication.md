@@ -111,7 +111,7 @@ Sources:
 | Reach gate | q→end of its own prompt | It checks that need's edit reaches the bridge, so it must be the same edit. Not re-tested here. |
 | **Swap** | **The question's words (3 to `<|im_end|>` − 1), Neuronpedia's move, layers ending before the onset** | Spain → "S" at 0.79–0.98. The everyday target never follows, and non-bridge sources do nothing. Editing question and template together lets "table" through at 32–53 (layers × positions grid in the explainer page); question words alone pass the control at every range before the onset. |
 
-## Proposed changes (not made)
+## Proposed changes (made on Nov 7; see the re-run below)
 
 1. Add a `move` swap kind to `src/consulted_bridges/interventions.py` (`h + (h·ŝ)(t̂ − ŝ)`). Keep `swap` (the paper's exchange) for comparison.
 2. Scorecard swap test:
@@ -121,3 +121,50 @@ Sources:
 4. `swap_check.py` is superseded by `swap_np.py`. Its `sc(54)` range bug is not fixed (the script wasn't touched).
 
 **Caveat:** this rests on one question for removal and four for swaps, with only 4 alternatives each. The 4B was not tested.
+
+## Re-run on every needed-and-first question (Nov 7)
+
+*Rules fixed and committed before the run: [`swap_test_rules.md`](swap_test_rules.md). Results: `results/swap2_*`, `results/trend_*`, summary `results/swap2_summary/`. Nothing in the rules was changed after the results.*
+
+**Setup:**
+- **Questions:** every question where the bridge is needed and comes first. From the question bank and close variants: 36 on Qwen3.5-4B and 32 on Qwen3.6-27B. From the 23 new trend questions: those that passed their new card (3 on the 4B, 2 on the 27B).
+- **Edit:** Neuronpedia's move of the bridge onto 4 same-kind words with different answers, over all layers before the answer onset.
+- **Follows:** the answer becomes the swapped-in word's own answer.
+- **Counts:** none of the 3 everyday words (table, river, garden) gets through. A question with no readable everyday word (number answers) is *not checked*.
+
+**Headline: share of swaps that follow, mean over questions (questions where the range counts / all):**
+
+| Model | Rule A: question words only | Rule B: question to end (removal's tokens) |
+|---|---|---|
+| Qwen3.5-4B (39) | **0.70**, counts 33/39 | 0.78, counts 18/39 |
+| Qwen3.6-27B (34) | **0.72**, counts 29/34 | 0.93, counts 19/34 |
+
+**Source controls** (move a word the model isn't using onto the first target; it should do nothing):
+
+| Source | Rule A, 4B | Rule A, 27B | Rule B, 4B | Rule B, 27B |
+|---|---|---|---|---|
+| "table" | 0/39 | 0/34 | 0/39 | 0/34 |
+| an unused same-kind word | 1/39 | 0/34 | **12/39** | **7/34** |
+
+**Reading:**
+- **The bridge's direction carries its content.** Under Rule A, about 7 in 10 swaps give the swapped-in word's own answer. Everyday words don't get through on most questions, and moving a word the model isn't using does nothing (1 of 73).
+- **Rule B is not a clean content test.**
+  - It follows more often, but on about half the questions an everyday word also gets through.
+  - Moving an *unused* same-kind word also follows in 19 of 73 cases.
+  - So on the template tokens the move mostly writes the target in, whatever the source. (The same-kind source shares part of its direction with the bridge, so part of this may be the bridge moving too.)
+  - Rule A is the swap to report. Rule B stays as a check.
+- **Where the content sits depends on the question.**
+
+  | Family | Rule A, 4B | Rule A, 27B |
+  |---|---|---|
+  | Landmark → country letter (`V_LM_*`) | 0.84 | 0.98 |
+  | Person → birth city letter (`V_LP_*`) | 0.31 | **0.00** |
+
+  - The person questions do follow under Rule B: 0.56 on the 4B, 0.65 on the 27B.
+  - Example, Michelle Obama → Chicago on the 27B. Removing Chicago from the question words alone leaves the answer "C". The same removal from the question to the end turns it into "A".
+  - So for people the birth city is held on the template tokens, not on the question's words. For landmarks the country is on the question's words. The removal metrics already use q→end, so need and quality are unaffected.
+- **Layer windows** (detail): over single pre-onset windows that pass the check, 0.38–0.54 of swaps follow. Windows that fail it follow 0.48–0.92.
+
+**Caveats:**
+- 4 swaps per question, with answers read greedily.
+- Number questions (Thanksgiving days, gold, Valentine's Day, dialling code) have no readable everyday control, so their ranges are *not checked*.
