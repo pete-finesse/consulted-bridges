@@ -49,7 +49,13 @@ Verdicts:
   BYSTANDER          beats noise < 0.2 and the 16-layer and all-layer drops < 0.2.
   UNCLEAR            anything else.
 
-  uv run python scripts/bridge_card2.py [--spec E_spider ...] [--shard 0/3] [--config qwen35_4b]
+Modes (v4.2, docs/swap_test_rules.md):
+  --trim         only what quality and the verdict need: no whole-answer onset, no tests 4, 5, 8, 9, and the
+                 12 everyday words only in windows that end before the onset
+  --swaps        where the bridge is needed and comes first, run the swap test (swaptest.py, move, rules A and B)
+  --swaps-only JOBS.csv   the swap test alone, at each question's saved onset (columns sentence, answer_onset)
+
+  uv run python -m consulted_bridges.scorecard --config qwen35_4b --sets card3 [--spec L_gates ...] [--shard 0/3]
 """
 from __future__ import annotations
 
@@ -67,6 +73,7 @@ import torch
 from consulted_bridges.questions.core import SPECS  # noqa: E402
 from consulted_bridges.interventions import Edit, answer_probs, directions, generate  # noqa: E402
 from consulted_bridges.load import load  # noqa: E402
+from consulted_bridges.swaptest import headline, swap_test  # noqa: E402
 from consulted_bridges.text import chat, resolve_positions  # noqa: E402
 from silent_dissent.model import get_layers, layer_output  # noqa: E402
 
@@ -89,8 +96,10 @@ def q(w):
 
 
 class Card:
-    def __init__(self, h, name, S, verbose=True):
+    def __init__(self, h, name, S, verbose=True, trim=False, swaps=False):
         self.h, self.name, self.S, self.say = h, name, S, (print if verbose else (lambda *a, **k: None))
+        self.trim, self.swaps = trim, swaps
+        self.swap_rows, self.swap_summary = [], []
         self.L = h.n_layers
         # layer numbers below are for a 32-layer model; sc() scales them to this model's depth
         self.f = self.L / 32
@@ -173,7 +182,7 @@ class Card:
         def finish(verdict, why):
             res.update(verdict=verdict, verdict_reason=why)
             self.say(f"[{self.name}] {verdict}: {why}")
-            return res, tests, swaps, controls, profile
+            return res, tests, swaps, controls, profile, self.swap_rows, self.swap_summary
 
         # G1: knows it
         base = self.P(text, ans_forms)
@@ -207,7 +216,8 @@ class Card:
 
         # profiles: bridge and answer, every window
         pb = [self.drop(base, self.P(text, ans_forms, self.rm(b, w))) for w in self.wins]
-        pa_whole = [self.drop(base, self.P(text, ans_forms, self.rm(S["answer_dirs"], w))) for w in self.wins]
+        pa_whole = ([None] * len(self.wins) if self.trim else
+                    [self.drop(base, self.P(text, ans_forms, self.rm(S["answer_dirs"], w))) for w in self.wins])
         # v4: the answer's OWN part (minus the bridge), so removing it can't work by damaging the bridge
         pa = [self.drop(base, self.P(text, ans_forms, [Edit("ablate_excl", [a] + b, w, self.ALL) for a in S["answer_dirs"]]))
               for w in self.wins]
@@ -215,7 +225,7 @@ class Card:
         # last window. Stricter than "two consecutive windows", which a two-window bump could pass (27B Piaf: 0.53, 0.64,
         # then 0.20, 0.11, 0.07 before the real onset). Re-checked on all saved 4B v4 profiles: none change.
         sustained = lambda p: next((i for i in range(len(p)) if all(d >= TH["gate"] for d in p[i:])), None)  # noqa: E731
-        whole_i = sustained(pa_whole)
+        whole_i = None if self.trim else sustained(pa_whole)
         res["answer_onset_whole"] = None if whole_i is None else self.wins[whole_i][0]
         # answer onset: the first of two consecutive windows that both kill the answer (or the last window),
         # so one noisy early window can't set it
@@ -224,8 +234,9 @@ class Card:
              max(pa), "pass" if onset_i is not None else "fail",
              (f"Remove the answer {A}'s own part ({A} minus {q(b[0])}): first kills it in {fmt_layers(self.wins[onset_i])} "
               f"(P {base:.2f} → {base * (1 - pa[onset_i]):.2f}, drop {pa[onset_i]:.2f}). "
-              f"That's where the model starts writing the answer. (Whole {A} direction: from "
-              f"{'layer ' + str(res['answer_onset_whole']) if res['answer_onset_whole'] is not None else 'never'}.)") if onset_i is not None else
+              f"That's where the model starts writing the answer." + ("" if self.trim else
+              f" (Whole {A} direction: from "
+              f"{'layer ' + str(res['answer_onset_whole']) if res['answer_onset_whole'] is not None else 'never'}.)")) if onset_i is not None else
              f"Removing the answer {A} itself never kills it (best drop {max(pa):.2f}), so these edits can't test this question.")
         if onset_i is None and SKIP:
             onset_i = len(self.wins) // 2
@@ -238,9 +249,11 @@ class Card:
             early = [0]
         def add_profile(nprof):
             for i, w in enumerate(self.wins):
+                nd = [] if nprof is None else [v[i] for v in nprof.values() if v[i] is not None]
                 profile.append(dict(key=f"{self.name}|{w[0]}", sentence=self.name, window=fmt_layers(w), start=w[0],
-                                    bridge_drop=round(pb[i], 3), answer_drop=round(pa[i], 3), answer_whole_drop=round(pa_whole[i], 3),
-                                    noise_drop=None if nprof is None else round(max(v[i] for v in nprof.values()), 3)))
+                                    bridge_drop=round(pb[i], 3), answer_drop=round(pa[i], 3),
+                                    answer_whole_drop=None if pa_whole[i] is None else round(pa_whole[i], 3),
+                                    noise_drop=round(max(nd), 3) if nd else None))
         if not early:
             add_profile(None)
             return finish("ANSWER FROM THE START", f"removing the answer already kills it in {fmt_layers(self.wins[onset_i])}, "
@@ -270,7 +283,9 @@ class Card:
         sb = self.strength(store, b[0], mid, allpos)
         stn = {w: self.strength(store, w, mid, allpos) for w in NULL_POOL if self.one_token(w)}
         nulls = sorted(stn, key=lambda w: abs(stn[w] - sb))[:12]
-        nprof = {w: [self.drop(base, self.P(text, ans_forms, self.rm([w], win))) for win in self.wins] for w in nulls}
+        # trim: only the early windows, the only ones tests 1-2 read
+        nprof = {w: [self.drop(base, self.P(text, ans_forms, self.rm([w], win))) if (i in early or not self.trim) else None
+                     for i, win in enumerate(self.wins)] for w in nulls}
         add_profile(nprof)
         for n in nulls:
             e = max(nprof[n][i] for i in early)
@@ -302,11 +317,13 @@ class Card:
         # 4 beats own kind
         lay = self.wins[ni]
         kd = {}
-        for w in same_kind:
+        for w in ([] if self.trim else same_kind):
             kd[w] = max(self.drop(base, self.P(text, ans_forms, self.rm([w], self.wins[i]))) for i in early)
             controls.append(dict(key=f"{self.name}|kind|{w}", sentence=self.name, word=w,
                                  kind=f"same kind as {b[0]}, same answer", strength=None, early_drop=round(kd[w], 3)))
-        if kd:
+        if self.trim:
+            bk = None
+        elif kd:
             kw = max(kd, key=kd.get)
             bk = ne - kd[kw]
             test("t4", "4 · Beats own kind", "Does removing the bridge matter more than removing another word of the same kind (another city, another animal)?",
@@ -321,17 +338,18 @@ class Card:
 
         # 5 no collateral
         coll, parts = 0.0, []
-        for uq, uforms in UNRELATED:
+        for uq, uforms in ([] if self.trim else UNRELATED):
             ut = chat(h, uq, "")
             u0 = self.P(ut, uforms)
             u1 = self.P(ut, uforms, self.rm(b, lay, "from:" + " ".join(uq.split()[:2])))
             d = self.drop(u0, u1)
             coll = max(coll, d)
             parts.append(f"{q(uq)} → P({q(uforms[0])}) {u0:.2f} → {u1:.2f}")
-        res["collateral"] = round(coll, 3)
-        test("t5", "5 · Collateral damage (reported)", "Does the same edit leave unrelated questions alone?", coll,
-             "info",
-             f"Same edit ({fmt_layers(lay)}): " + "; ".join(parts) + f". Biggest drop {coll:.2f} (pass ≤ {TH['collateral']}).")
+        res["collateral"] = None if self.trim else round(coll, 3)
+        if not self.trim:
+            test("t5", "5 · Collateral damage (reported)", "Does the same edit leave unrelated questions alone?", coll,
+                 "info",
+                 f"Same edit ({fmt_layers(lay)}): " + "; ".join(parts) + f". Biggest drop {coll:.2f} (pass ≤ {TH['collateral']}).")
 
         # 6 spread out
         r16 = self.drop(base, self.P(text, ans_forms, self.rm(b, [l for l in range(self.sc(8), self.sc(24)) if l < self.L])))
@@ -364,9 +382,9 @@ class Card:
         sl = [l for l in range(self.sc(6), onset)] or [l for l in range(onset)]
         if not sl:
             sl = self.wins[early[0]]
-        fallback = self.classify(self.gen(text, self.rm(b, sl)))
+        fallback = None if self.trim else self.classify(self.gen(text, self.rm(b, sl)))
         hit, keep = [], []
-        for w in sw_words:
+        for w in ([] if self.trim else sw_words):
             belief_text = self.gen(chat(h, S["check"].format(w), ""))
             belief = self.classify(belief_text)
             try:
@@ -390,11 +408,12 @@ class Card:
         K = sum(keep) / len(keep) if keep else None
         res.update(swaps_follow=None if F is None else round(F, 3), same_answer_keeps=None if K is None else round(K, 3),
                    fallback=fallback)
-        test("t8", "8 · Swaps follow (reported)", "Swap in another word: does the answer become that word's answer?",
-             F, "info", (f"{sum(hit)} of {len(hit)} swaps gave the swapped word's own answer "
-                         f"(fallback answer with the bridge removed: {q(fallback)}).") if hit else "No usable swaps.")
-        test("t9", "9 · Same-answer swap (reported)", "Swap in a word with the same answer: is the answer kept?",
-             K, "info", f"{sum(keep)} of {len(keep)} kept the answer." if keep else "No same-answer swap word available.")
+        if not self.trim:
+            test("t8", "8 · Swaps follow (reported)", "Swap in another word: does the answer become that word's answer?",
+                 F, "info", (f"{sum(hit)} of {len(hit)} swaps gave the swapped word's own answer "
+                             f"(fallback answer with the bridge removed: {q(fallback)}).") if hit else "No usable swaps.")
+            test("t9", "9 · Same-answer swap (reported)", "Swap in a word with the same answer: is the answer kept?",
+                 K, "info", f"{sum(keep)} of {len(keep)} kept the answer." if keep else "No same-answer swap word available.")
         if dropped:
             res["words_skipped"] = ", ".join(dropped)
 
@@ -412,8 +431,12 @@ class Card:
              f"isolation {iso:.2f} (share left when the part shared with the answer is kept) = {quality:.2f}"
              + ("" if first else " → 0 because the bridge doesn't act before the answer") + ".")
 
-        # verdict
+        # the swap test (rules fixed in docs/swap_test_rules.md), only where the bridge is needed and comes first
         bn = ne - noise
+        if self.swaps and bn >= TH["beats_noise"] and first:
+            self.run_swaps(onset, res)
+
+        # verdict
         if bn >= TH["beats_noise"] and first:
             if bk is None:
                 return finish("CONSULTED (KIND NOT CHECKED)", "needed early, beats noise, comes first; no same-kind word to compare")
@@ -429,6 +452,18 @@ class Card:
         if bn < TH["bystander"] and max(r16, rall) < TH["bystander"]:
             return finish("BYSTANDER", "the edit reaches the bridge, but removing it doesn't change the answer")
         return finish("UNCLEAR", "in between")  # reach_ok here
+
+
+    def run_swaps(self, onset, res=None):
+        """The swap test at a given answer onset; its headline goes into `res` (next to quality, not inside it)."""
+        rows, summ = swap_test(self, onset)
+        self.swap_rows.extend(rows)
+        self.swap_summary.extend(summ)
+        hl = headline(summ)
+        if res is not None:
+            res.update(hl)
+        self.say(f"[{self.name}] swap test: " + ", ".join(f"{k} {v}" for k, v in hl.items()))
+        return hl
 
 
 KIND = {"A": "country", "B": "city", "C": "city"}
@@ -454,9 +489,20 @@ def load_sets(sets):
         out.update({f"v3_{k}": v for k, v in importlib.import_module("consulted_bridges.questions.core").SPECS.items()})
     if "proposed" in sets:   # PROPOSED close variants (questions/proposed/similar.py), ids already V_...
         out.update(importlib.import_module("consulted_bridges.questions.proposed.similar").SPECS)
+    if "trend" in sets:      # PROPOSED trend questions (questions/proposed/trend.py), ids already T_...
+        out.update(importlib.import_module("consulted_bridges.questions.proposed.trend").SPECS)
     if "ideas" in sets:
         for m in ("consulted_bridges.questions.ideas.sequence", "consulted_bridges.questions.ideas.language", "consulted_bridges.questions.ideas.science", "consulted_bridges.questions.ideas.culture"):
             out.update({f"i_{k}": v for k, v in importlib.import_module(m).SPECS.items()})
+    return out
+
+
+def spec_lookup():
+    """Every question by the id its saved results use: prefixed (v3_, i_) as in the 4B runs, and bare as in the 27B's."""
+    out = load_sets(["card3", "proposed", "ideas", "trend"])
+    for k in list(out):
+        bare = re.sub(r"^(v3_|i_)", "", k)
+        out.setdefault(bare, out[k])
     return out
 
 
@@ -469,6 +515,10 @@ def main():
     ap.add_argument("--config", default="qwen35_4b")
     ap.add_argument("--shard", default="0/1")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--trim", action="store_true", help="only the tests quality and the verdict need")
+    ap.add_argument("--swaps", action="store_true", help="run the swap test where the bridge is needed and first")
+    ap.add_argument("--swaps-only", default=None, metavar="JOBS.csv",
+                    help="swap test alone at saved onsets (columns sentence, answer_onset)")
     args = ap.parse_args()
     h = load(args.config)
     specs = SPECS
@@ -481,23 +531,38 @@ def main():
             specs = {**SPECS, **specs}
     if args.sets:
         specs = load_sets(args.sets.split(","))
-    names = args.spec or list(specs)
+    onsets = None
+    if args.swaps_only:
+        jobs = pd.read_csv(args.swaps_only)
+        specs = spec_lookup()
+        onsets = dict(zip(jobs.sentence, jobs.answer_onset.astype(int)))
+        missing = [n for n in onsets if n not in specs]
+        if missing:
+            raise SystemExit(f"no spec for {missing}")
+    names = args.spec or (list(onsets) if onsets else list(specs))
     i, n = map(int, args.shard.split("/"))
     names = names[i::n]
     out = Path(args.out or f"results/card4_{Path(args.config).stem}") / f"shard{i}"
     out.mkdir(parents=True, exist_ok=True)
-    acc = {k: [] for k in ("cards", "tests", "swaps", "controls", "profile")}
+    keys = ("cards", "tests", "swaps", "controls", "profile", "swap2", "swapsum")
+    acc = {k: [] for k in keys}
     for k, name in enumerate(names):
         print(f"PROGRESS {k}/{len(names)} starting {name}", flush=True)
         try:
-            parts = Card(h, name, specs[name]).run()
+            card = Card(h, name, specs[name], trim=args.trim, swaps=args.swaps)
+            if onsets:
+                hl = card.run_swaps(onsets[name])
+                parts = (dict(sentence=name, answer_onset=onsets[name], **hl), [], [], [], [],
+                         card.swap_rows, card.swap_summary)
+            else:
+                parts = card.run()
         except Exception as err:
             import traceback
             traceback.print_exc()
             print(f"!! {name} failed: {err!r}", flush=True)
             continue
         acc["cards"].append(parts[0])
-        for key, rows in zip(("tests", "swaps", "controls", "profile"), parts[1:]):
+        for key, rows in zip(keys[1:], parts[1:]):
             acc[key].extend(rows)
         for key, rows in acc.items():
             pd.DataFrame(rows).to_csv(out / f"{key}.csv", index=False)
