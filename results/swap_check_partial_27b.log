@@ -1,0 +1,69 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  63%|██████▎   | 538/851 [00:00<00:00, 5354.84it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 5419.50it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/swarm-explore/projects/silent-dissent/harness/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+
+[L_colosseum] bridge 'Italy', model says 'I'
+  scorecard (6..onset-1)   layers 12-63: 1/5 follow | Spain->'I', France->'I', Germany->'I', Japan->'J', Brazil->'I', table->'T', river->'R', garden->'G'
+  Neuronpedia 9-27         layers 9-27: 2/5 follow | Spain->'I', France->'F', Germany->'G', Japan->'I', Brazil->'I', table->'I', river->'I', garden->'I'
+  early (first quarter)    layers 0-15: 0/5 follow | Spain->'I', France->'I', Germany->'I', Japan->'I', Brazil->'I', table->'I', river->'I', garden->'I'
+  early-mid                layers 8-23: 0/5 follow | Spain->'I', France->'I', Germany->'I', Japan->'I', Brazil->'I', table->'I', river->'I', garden->'I'
+  mid                      layers 16-31: 0/5 follow | Spain->'I', France->'I', Germany->'I', Japan->'I', Brazil->'I', table->'I', river->'I', garden->'I'
+  late (before answer)     layers 32-53: 0/5 follow | Spain->'I', France->'I', Germany->'I', Japan->'I', Brazil->'I', table->'I', river->'I', garden->'I'
+
+[L_gates] bridge 'Seattle', model says 'S'
+  scorecard (6..onset-1)   layers 12-63: 0/5 follow | Munich->'S', Paris->'N', Tokyo->'N', Berlin->'N', Rome->'N', table->'S', river->'T', garden->'G'
+  Neuronpedia 9-27         layers 9-27: 0/5 follow | Munich->'S', Paris->'D', Tokyo->'S', Berlin->'S', Rome->'S', table->'S', river->'S', garden->'S'
+  early (first quarter)    layers 0-15: 0/5 follow | Munich->'S', Paris->'S', Tokyo->'S', Berlin->'S', Rome->'S', table->'S', river->'S', garden->'S'
+  early-mid                layers 8-23: 0/5 follow | Munich->'S', Paris->'S', Tokyo->'S', Berlin->'S', Rome->'S', table->'S', river->'S', garden->'S'
+  mid                      layers 16-31: 0/5 follow | Munich->'S', Paris->'S', Tokyo->'S', Berlin->'S', Rome->'S', table->'S', river->'S', garden->'S'
+  late (before answer)     layers 32-53: 0/5 follow | Munich->'S', Paris->'D', Tokyo->'D', Berlin->'S', Rome->'N', table->'S', river->'T', garden->'D'
+
+[L_piaf] bridge 'Paris', model says 'P'
+  scorecard (6..onset-1)   layers 12-63: 2/5 follow | Munich->'S', Tokyo->'P', Berlin->'B', Rome->'R', Madrid->'C', table->'S', river->'S', garden->'N'
+  Neuronpedia 9-27         layers 9-27: 0/5 follow | Munich->'P', Tokyo->'P', Berlin->'P', Rome->'P', Madrid->'P', table->'S', river->'P', garden->'P'
+  early (first quarter)    layers 0-15: 0/5 follow | Munich->'P', Tokyo->'P', Berlin->'P', Rome->'P', Madrid->'P', table->'P', river->'P', garden->'P'
+  early-mid                layers 8-23: 0/5 follow | Munich->'P', Tokyo->'P', Berlin->'P', Rome->'P', Madrid->'P', table->'P', river->'P', garden->'P'
+  mid                      layers 16-31: 0/5 follow | Munich->'P', Tokyo->'P', Berlin->'P', Rome->'P', Madrid->'P', table->'P', river->'P', garden->'P'
+  late (before answer)     layers 32-53: 1/5 follow | Munich->'P', Tokyo->'P', Berlin->'P', Rome->'R', Madrid->'P', table->'S', river->'P', garden->'P'
+
+[L_mozart] bridge 'Salzburg', model says 'S'
+  scorecard (6..onset-1)   layers 12-63: 0/5 follow | Munich->'A', Paris->'S', Tokyo->'V', Berlin->'A', Rome->'V', table->'L', river->'S', garden->'G'
+  Neuronpedia 9-27         layers 9-27: 0/5 follow | Munich->'S', Paris->'S', Tokyo->'S', Berlin->'S', Rome->'S', table->'S', river->'S', garden->'S'
+  early (first quarter)    layers 0-15: 0/5 follow | Munich->'S', Paris->'S', Tokyo->'S', Berlin->'S', Rome->'S', table->'S', river->'S', garden->'S'
+  early-mid                layers 8-23: 0/5 follow | Munich->'S', Paris->'S', Tokyo->'S', Berlin->'S', Rome->'S', table->'S', river->'S', garden->'S'
+  mid                      layers 16-31: 0/5 follow | Munich->'S', Paris->'S', Tokyo->'S', Berlin->'S', Rome->'S', table->'S', river->'S', garden->'S'
+  late (before answer)     layers 32-53: 0/5 follow | Munich->'S', Paris->'S', Tokyo->'S', Berlin->'S', Rome->'S', table->'L', river->'S', garden->'S'
+
+[L_york] bridge 'Toronto', model says 'T'
+  scorecard (6..onset-1)   layers 12-63: 0/5 follow | Munich->'T', Paris->'T', Berlin->'T', Rome->'T', Madrid->'T', table->'T', river->'J', garden->'T'
+  Neuronpedia 9-27         layers 9-27: 0/5 follow | Munich->'T', Paris->'T', Berlin->'T', Rome->'T', Madrid->'T', table->'T', river->'T', garden->'T'
+  early (first quarter)    layers 0-15: 0/5 follow | Munich->'T', Paris->'T', Berlin->'T', Rome->'T', Madrid->'T', table->'T', river->'T', garden->'T'
+  early-mid                layers 8-23: 0/5 follow | Munich->'T', Paris->'T', Berlin->'T', Rome->'T', Madrid->'T', table->'T', river->'T', garden->'T'
+  mid                      layers 16-31: 0/5 follow | Munich->'T', Paris->'T', Berlin->'T', Rome->'T', Madrid->'T', table->'T', river->'T', garden->'T'
+  late (before answer)     layers 32-53: 0/5 follow | Munich->'T', Paris->'T', Berlin->'T', Rome->'T', Madrid->'T', table->'T', river->'T', garden->'T'
+
+[V_LM_eiffel] bridge 'France', model says 'F'
+  scorecard (6..onset-1)   layers 12-63: 2/5 follow | Spain->'F', Germany->'F', Japan->'J', Brazil->'F', Canada->'C', table->'T', river->'R', garden->'G'
+  Neuronpedia 9-27         layers 9-27: 0/5 follow | Spain->'F', Germany->'F', Japan->'F', Brazil->'F', Canada->'F', table->'F', river->'F', garden->'F'
+  early (first quarter)    layers 0-15: 0/5 follow | Spain->'F', Germany->'F', Japan->'F', Brazil->'F', Canada->'F', table->'F', river->'F', garden->'F'
+  early-mid                layers 8-23: 0/5 follow | Spain->'F', Germany->'F', Japan->'F', Brazil->'F', Canada->'F', table->'F', river->'F', garden->'F'
+  mid                      layers 16-31: 0/5 follow | Spain->'F', Germany->'F', Japan->'F', Brazil->'F', Canada->'F', table->'F', river->'F', garden->'F'
+  late (before answer)     layers 32-53: 0/5 follow | Spain->'F', Germany->'F', Japan->'F', Brazil->'F', Canada->'F', table->'F', river->'F', garden->'F'
+
+[V_LM_machu] bridge 'Peru', model says 'P'
+  scorecard (6..onset-1)   layers 12-63: 2/5 follow | Spain->'P', France->'F', Germany->'P', Japan->'P', Brazil->'B', table->'A', river->'A', garden->'A'
+  Neuronpedia 9-27         layers 9-27: 0/5 follow | Spain->'P', France->'P', Germany->'P', Japan->'P', Brazil->'P', table->'P', river->'P', garden->'P'
+  early (first quarter)    layers 0-15: 0/5 follow | Spain->'P', France->'P', Germany->'P', Japan->'P', Brazil->'P', table->'P', river->'P', garden->'P'
+  early-mid                layers 8-23: 0/5 follow | Spain->'P', France->'P', Germany->'P', Japan->'P', Brazil->'P', table->'P', river->'P', garden->'P'
+  mid                      layers 16-31: 0/5 follow | Spain->'P', France->'P', Germany->'P', Japan->'P', Brazil->'P', table->'P', river->'P', garden->'P'
+  late (before answer)     layers 32-53: 0/5 follow | Spain->'P', France->'P', Germany->'P', Japan->'P', Brazil->'P', table->'P', river->'P', garden->'P'
+
+[V_LM_fuji] bridge 'Japan', model says 'J'
+  scorecard (6..onset-1)   layers 12-63: 0/5 follow | Spain->'J', France->'J', Germany->'J', Brazil->'J', Canada->'J', table->'I', river->'R', garden->'G'
+  Neuronpedia 9-27         layers 9-27: 0/5 follow | Spain->'J', France->'J', Germany->'J', Brazil->'J', Canada->'J', table->'J', river->'J', garden->'J'
+  early (first quarter)    layers 0-15: 0/5 follow | Spain->'J', France->'J', Germany->'J', Brazil->'J', Canada->'J', table->'J', river->'J', garden->'J'
+  early-mid                layers 8-23: 0/5 follow | Spain->'J', France->'J', Germany->'J', Brazil->'J', Canada->'J', table->'J', river->'J', garden->'J'
+  mid                      layers 16-31: 0/5 follow | Spain->'J', France->'J', Germany->'J', Brazil->'J', Canada->'J', table->'J', river->'J', garden->'J'
+  late (before answer)     layers 32-53: 0/5 follow | Spain->'J', France->'J', Germany->'J', Brazil->'J', Canada->'J', table->'I', river->'J', garden->'J'
+ALLDONE

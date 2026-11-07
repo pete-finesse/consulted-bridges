@@ -1,0 +1,109 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+R_bee|spider,R_bee,spider,layers 12–41,Eight,Six,didn't follow
+R_bee|dog,R_bee,dog,layers 12–41,Four,Six,didn't follow
+R_bee|bird,R_bee,bird,layers 12–41,Two,Six,didn't follow
+R_bee|snake,R_bee,snake,layers 12–41,Zero,Six,didn't follow
+R_bee|horse,R_bee,horse,layers 12–41,Four,Six,didn't follow
+R_bee|duck,R_bee,duck,layers 12–41,Two,Six,didn't follow
+R_bee|ant,R_bee,ant,layers 12–41,Six,Six,kept the answer
+R_spider|bee,R_spider,bee,layers 12–41,Six,Eight,didn't follow
+R_spider|ant,R_spider,ant,layers 12–41,Six,Eight,didn't follow
+R_spider|dog,R_spider,dog,layers 12–41,Four,Eight,didn't follow
+R_spider|bird,R_spider,bird,layers 12–41,Two,Eight,didn't follow
+R_spider|snake,R_spider,snake,layers 12–41,Zero,Eight,didn't follow
+R_spider|horse,R_spider,horse,layers 12–41,Four,Eight,didn't follow
+R_spider|duck,R_spider,duck,layers 12–41,Two,Eight,didn't follow
+X_mishima_country|Munich,X_mishima_country,Munich,layers 12–41,Germany,Japan,didn't follow
+X_mishima_country|Milan,X_mishima_country,Milan,layers 12–41,Italy,Japan,didn't follow
+X_mishima_country|Lyon,X_mishima_country,Lyon,layers 12–41,France,Japan,didn't follow
+X_mishima_country|Barcelona,X_mishima_country,Barcelona,layers 12–41,Spain,Japan,didn't follow
+X_mishima_country|Osaka,X_mishima_country,Osaka,layers 12–41,Japan,Japan,kept the answer
+X_mishima_country|Toronto,X_mishima_country,Toronto,layers 12–41,Canada,Japan,didn't follow
+X_mishima_country|Chicago,X_mishima_country,Chicago,layers 12–41,USA,Japan,didn't follow
+X_mishima_country|Manchester,X_mishima_country,Manchester,layers 12–41,England,Japan,didn't follow
+X_mozart_country|Munich,X_mozart_country,Munich,layers 12–29,Germany,Germany,followed the swap
+X_mozart_country|Milan,X_mozart_country,Milan,layers 12–29,Italy,Austria,didn't follow
+X_mozart_country|Lyon,X_mozart_country,Lyon,layers 12–29,France,France,"gave it, but it's also the fallback"
+X_mozart_country|Barcelona,X_mozart_country,Barcelona,layers 12–29,Spain,Austria,didn't follow
+X_mozart_country|Osaka,X_mozart_country,Osaka,layers 12–29,Japan,Germany,didn't follow
+X_mozart_country|Toronto,X_mozart_country,Toronto,layers 12–29,Canada,Austria,didn't follow
+X_mozart_country|Chicago,X_mozart_country,Chicago,layers 12–29,USA,Austria,didn't follow
+X_mozart_country|Manchester,X_mozart_country,Manchester,layers 12–29,England,Austria,didn't follow
+X_spider|bee,X_spider,bee,layers 12–41,Six,Eight,didn't follow
+X_spider|ant,X_spider,ant,layers 12–41,Six,Eight,didn't follow
+X_spider|dog,X_spider,dog,layers 12–41,Four,Eight,didn't follow
+X_spider|bird,X_spider,bird,layers 12–41,Two,Eight,didn't follow
+X_spider|snake,X_spider,snake,layers 12–41,Zero,Eight,didn't follow
+X_spider|horse,X_spider,horse,layers 12–41,Four,Eight,didn't follow
+X_spider|beetle,X_spider,beetle,layers 12–41,Six,Eight,didn't follow
+X_spider|tick,X_spider,tick,layers 12–41,Eight,Eight,kept the answer
+X_york_country|Munich,X_york_country,Munich,layers 12–41,Germany,Canada,didn't follow
+X_york_country|Milan,X_york_country,Milan,layers 12–41,Italy,Canada,didn't follow
+X_york_country|Lyon,X_york_country,Lyon,layers 12–41,France,Canada,didn't follow
+X_york_country|Barcelona,X_york_country,Barcelona,layers 12–41,Spain,Canada,didn't follow
+X_york_country|Osaka,X_york_country,Osaka,layers 12–41,Japan,Canada,didn't follow
+X_york_country|Chicago,X_york_country,Chicago,layers 12–41,USA,Canada,didn't follow
+X_york_country|Manchester,X_york_country,Manchester,layers 12–41,England,Canada,didn't follow
+X_york_country|Mumbai,X_york_country,Mumbai,layers 12–41,India,Canada,didn't follow
+X_york_country|Vancouver,X_york_country,Vancouver,layers 12–41,Canada,Canada,kept the answer
+X_york_country|Ottawa,X_york_country,Ottawa,layers 12–41,Canada,Canada,kept the answer
+W_bad_mice|goose,W_bad_mice,goose,layers 12–41,geese,Mice,didn't follow
+W_bad_mice|ox,W_bad_mice,ox,layers 12–41,oxen,Mice,didn't follow
+W_bad_mice|wolf,W_bad_mice,wolf,layers 12–41,wolves,Mice,didn't follow
+W_bad_mice|cat,W_bad_mice,cat,layers 12–41,cats,Mice,didn't follow
+W_bad_mice|dog,W_bad_mice,dog,layers 12–41,dogs,Mice,didn't follow
+W_bad_mice|sheep,W_bad_mice,sheep,layers 12–41,sheep,Mice,didn't follow
+W_bad_mice|rat,W_bad_mice,rat,layers 12–41,rats,Mice,didn't follow
+S_bad_cow_sound|dog,S_bad_cow_sound,dog,layers 12–53,Bark,Moo,didn't follow
+S_bad_cow_sound|cat,S_bad_cow_sound,cat,layers 12–53,Meow,Moo,didn't follow
+S_bad_cow_sound|duck,S_bad_cow_sound,duck,layers 12–53,Quack,Moo,didn't follow
+S_bad_cow_sound|sheep,S_bad_cow_sound,sheep,layers 12–53,Baa,Moo,didn't follow
+S_bad_cow_sound|pig,S_bad_cow_sound,pig,layers 12–53,Oink,Moo,didn't follow
+S_bad_cow_sound|lion,S_bad_cow_sound,lion,layers 12–53,Roar,Moo,didn't follow
+S_bad_cow_sound|horse,S_bad_cow_sound,horse,layers 12–53,Neigh,Moo,didn't follow
+S_bad_cow_sound|bull,S_bad_cow_sound,bull,layers 12–53,Moo,Moo,kept the answer
+S_element_sodium|gold,S_element_sodium,gold,layers 12–53,Au,Na,didn't follow
+S_element_sodium|silver,S_element_sodium,silver,layers 12–53,Ag,Na,didn't follow
+S_element_sodium|iron,S_element_sodium,iron,layers 12–53,Fe,Na,didn't follow
+S_element_sodium|copper,S_element_sodium,copper,layers 12–53,Cu,Na,didn't follow
+S_element_sodium|lead,S_element_sodium,lead,layers 12–53,Pb,Na,didn't follow
+S_element_sodium|tin,S_element_sodium,tin,layers 12–53,Sn,Na,didn't follow
+S_element_sodium|zinc,S_element_sodium,zinc,layers 12–53,Zn,Na,didn't follow
+S_hearts_squid|fish,S_hearts_squid,fish,layers 12–35,One,Three,didn't follow
+S_hearts_squid|dog,S_hearts_squid,dog,layers 12–35,One,Three,didn't follow
+S_hearts_squid|cat,S_hearts_squid,cat,layers 12–35,One,Three,didn't follow
+S_hearts_squid|frog,S_hearts_squid,frog,layers 12–35,One,Three,didn't follow
+S_hearts_squid|horse,S_hearts_squid,horse,layers 12–35,One,Three,didn't follow
+S_hearts_squid|worm,S_hearts_squid,worm,layers 12–35,Five,Three,didn't follow
+S_hearts_squid|crab,S_hearts_squid,crab,layers 12–35,One,Three,didn't follow
+S_organ_kidney|liver,S_organ_kidney,liver,layers 12–53,One,Two,didn't follow
+S_organ_kidney|heart,S_organ_kidney,heart,layers 12–53,One,Two,didn't follow
+S_organ_kidney|brain,S_organ_kidney,brain,layers 12–53,One,Two,didn't follow
+S_organ_kidney|stomach,S_organ_kidney,stomach,layers 12–53,One,Two,didn't follow
+S_organ_kidney|bladder,S_organ_kidney,bladder,layers 12–53,One,Two,didn't follow
+S_organ_kidney|lung,S_organ_kidney,lung,layers 12–53,Two,Two,kept the answer
+S_organ_kidney|eye,S_organ_kidney,eye,layers 12–53,Two,Two,kept the answer
+S_wings_bee|bird,S_wings_bee,bird,layers 12–35,Two,Four,didn't follow
+S_wings_bee|fly,S_wings_bee,fly,layers 12–35,Two,Four,didn't follow
+S_wings_bee|duck,S_wings_bee,duck,layers 12–35,Two,Four,didn't follow
+S_wings_bee|bat,S_wings_bee,bat,layers 12–35,Two,Four,didn't follow
+S_wings_bee|chicken,S_wings_bee,chicken,layers 12–35,Two,Four,didn't follow
+S_wings_bee|eagle,S_wings_bee,eagle,layers 12–35,Two,Four,didn't follow
+S_wings_bee|butterfly,S_wings_bee,butterfly,layers 12–35,Four,Four,kept the answer
+C_bad_banana|apple,C_bad_banana,apple,layers 12–35,Red,Yellow,didn't follow
+C_bad_banana|lime,C_bad_banana,lime,layers 12–35,Green,Bananas,didn't follow
+C_bad_banana|orange,C_bad_banana,orange,layers 12–35,Orange,Yellow,didn't follow
+C_bad_banana|grape,C_bad_banana,grape,layers 12–35,Purple,Yellow,didn't follow
+C_bad_banana|plum,C_bad_banana,plum,layers 12–35,Purple,Yellow,didn't follow
+C_bad_banana|cherry,C_bad_banana,cherry,layers 12–35,Red,Bananas,didn't follow
+C_bad_banana|strawberry,C_bad_banana,strawberry,layers 12–35,Red,Yellow,didn't follow
+C_bad_banana|lemon,C_bad_banana,lemon,layers 12–35,Yellow,Yellow,kept the answer
+C_food_fries|tomato,C_food_fries,tomato,layers 12–47,Above,Below,didn't follow
+C_food_fries|apple,C_food_fries,apple,layers 12–47,Above,Below,didn't follow
+C_food_fries|corn,C_food_fries,corn,layers 12–47,Above,Below,didn't follow
+C_food_fries|rice,C_food_fries,rice,layers 12–47,Above,Below,didn't follow
+C_food_fries|banana,C_food_fries,banana,layers 12–47,Above,Below,didn't follow
+C_food_fries|wheat,C_food_fries,wheat,layers 12–47,Above,Below,didn't follow
+C_food_fries|grape,C_food_fries,grape,layers 12–47,Above,Below,didn't follow
+C_food_fries|carrot,C_food_fries,carrot,layers 12–47,Below,Below,kept the answer
+C_food_fries|onion,C_food_fries,onion,layers 12–47,Below,Below,kept the answer

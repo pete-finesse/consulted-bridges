@@ -1,0 +1,4 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+O_bicycle|car,O_bicycle,car,layers 6–20,Four,Two,didn't follow
+O_bicycle|bus,O_bicycle,bus,layers 6–20,Eight,Two,didn't follow
+O_bicycle|motorcycle,O_bicycle,motorcycle,layers 6–20,Two,Two,kept the answer

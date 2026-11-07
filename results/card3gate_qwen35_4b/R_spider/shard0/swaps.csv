@@ -1,0 +1,8 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+R_spider|bee,R_spider,bee,layers 6–20,Six,Six,followed the swap
+R_spider|ant,R_spider,ant,layers 6–20,Six,Six,followed the swap
+R_spider|dog,R_spider,dog,layers 6–20,Four,Four,"gave it, but it's also the fallback"
+R_spider|bird,R_spider,bird,layers 6–20,Two,Four,didn't follow
+R_spider|snake,R_spider,snake,layers 6–20,Zero,Eight,didn't follow
+R_spider|horse,R_spider,horse,layers 6–20,Four,Four,"gave it, but it's also the fallback"
+R_spider|duck,R_spider,duck,layers 6–20,Two,Four,didn't follow

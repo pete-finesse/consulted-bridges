@@ -1,0 +1,2 @@
+results/** -diff linguist-generated=true
+uv.lock -diff linguist-generated=true

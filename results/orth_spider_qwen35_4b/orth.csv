@@ -1,0 +1,157 @@
+target,win,P
+spider (full),L0-5,0.8176744193151838
+spider (full),L3-8,0.7288905394332176
+spider (full),L6-11,0.47970974881919637
+spider (full),L9-14,0.10355857414077818
+spider (full),L12-17,0.010659541619007045
+spider (full),L15-20,0.0012914861805830334
+spider (full),L18-23,0.0012785409843673863
+spider (full),L21-26,0.037918449149856655
+spider (full),L24-29,0.39628693317062924
+spider (full),L27-31,0.9122484081595683
+spider (full),mid 12-21,0.0009711212404898753
+spider (full),answer@mid,Four
+spider minus answer,L0-5,0.8317042227459674
+spider minus answer,L3-8,0.7542702831742746
+spider minus answer,L6-11,0.5439385301549192
+spider minus answer,L9-14,0.23953428623434556
+spider minus answer,L12-17,0.054809121943683675
+spider minus answer,L15-20,0.008409332184378381
+spider minus answer,L18-23,0.010837327031073736
+spider minus answer,L21-26,0.2206378456102055
+spider minus answer,L24-29,0.698053917589114
+spider minus answer,L27-31,0.9083211547512249
+spider minus answer,mid 12-21,0.004564376552947192
+spider minus answer,answer@mid,Four
+spider minus answer+insects,L0-5,0.8411511031086437
+spider minus answer+insects,L3-8,0.7660619205091339
+spider minus answer+insects,L6-11,0.6387944049872005
+spider minus answer+insects,L9-14,0.43705042533996336
+spider minus answer+insects,L12-17,0.23722509789615503
+spider minus answer+insects,L15-20,0.09258988100110148
+spider minus answer+insects,L18-23,0.1196770611417136
+spider minus answer+insects,L21-26,0.3544550857214553
+spider minus answer+insects,L24-29,0.7912990074022176
+spider minus answer+insects,L27-31,0.9057948578008406
+spider minus answer+insects,mid 12-21,0.051850709910681844
+spider minus answer+insects,answer@mid,Six
+insects (full),L0-5,0.8714572081909142
+insects (full),L3-8,0.8590102808930284
+insects (full),L6-11,0.7511195963255296
+insects (full),L9-14,0.5885416976844642
+insects (full),L12-17,0.4654553762356061
+insects (full),L15-20,0.22569411979225118
+insects (full),L18-23,0.14335657579368924
+insects (full),L21-26,0.6392067602534622
+insects (full),L24-29,0.7230265547580436
+insects (full),L27-31,0.9015788390489826
+insects (full),mid 12-21,0.18180023798451878
+insects (full),answer@mid,Four
+insects minus answer,L0-5,0.8867706925249979
+insects minus answer,L3-8,0.8732456696848158
+insects minus answer,L6-11,0.7960203175822512
+insects minus answer,L9-14,0.6609371908058774
+insects minus answer,L12-17,0.5678571029826172
+insects minus answer,L15-20,0.48136286301858333
+insects minus answer,L18-23,0.3611755227469641
+insects minus answer,L21-26,0.7886440224779797
+insects minus answer,L24-29,0.8395514440123943
+insects minus answer,L27-31,0.9069240347895564
+insects minus answer,mid 12-21,0.3891484358722014
+insects minus answer,answer@mid,Four
+animals (full),L0-5,0.8555936767005873
+animals (full),L3-8,0.9242276128318724
+animals (full),L6-11,0.909880804909823
+animals (full),L9-14,0.9080046836058777
+animals (full),L12-17,0.9262978219995806
+animals (full),L15-20,0.9591667620955986
+animals (full),L18-23,0.9649823977461176
+animals (full),L21-26,0.9687583383480702
+animals (full),L24-29,0.8734930996179557
+animals (full),L27-31,0.8988511691987827
+animals (full),mid 12-21,0.9417937059449313
+animals (full),answer@mid,Eight
+animals minus answer,L0-5,0.8982065728976847
+animals minus answer,L3-8,0.9276148988086336
+animals minus answer,L6-11,0.9243978891059993
+animals minus answer,L9-14,0.9205993527220927
+animals minus answer,L12-17,0.9397138262627569
+animals minus answer,L15-20,0.953735860084679
+animals minus answer,L18-23,0.9627533548975125
+animals minus answer,L21-26,0.9624537290672943
+animals minus answer,L24-29,0.8998469337067156
+animals minus answer,L27-31,0.893655899967626
+animals minus answer,mid 12-21,0.9473391062883981
+animals minus answer,answer@mid,Eight
+dogs (full),L0-5,0.7701815882765205
+dogs (full),L3-8,0.9331663546449384
+dogs (full),L6-11,0.9445980233193253
+dogs (full),L9-14,0.931714162096681
+dogs (full),L12-17,0.9293581370492329
+dogs (full),L15-20,0.9431990921362693
+dogs (full),L18-23,0.9434306915667184
+dogs (full),L21-26,0.9597427473499662
+dogs (full),L24-29,0.9097450027778692
+dogs (full),L27-31,0.8957883593712367
+dogs (full),mid 12-21,0.9409069695401174
+dogs (full),answer@mid,Eight
+dogs minus answer,L0-5,0.876121931321759
+dogs minus answer,L3-8,0.9347517876163144
+dogs minus answer,L6-11,0.9497059560415184
+dogs minus answer,L9-14,0.943666794996192
+dogs minus answer,L12-17,0.9418235126470061
+dogs minus answer,L15-20,0.9477321034871694
+dogs minus answer,L18-23,0.9461689198438449
+dogs minus answer,L21-26,0.9524446805041685
+dogs minus answer,L24-29,0.9051877586201795
+dogs minus answer,L27-31,0.8930508041544998
+dogs minus answer,mid 12-21,0.9493667708202086
+dogs minus answer,answer@mid,Eight
+legs (full),L0-5,0.8116807081756808
+legs (full),L3-8,0.8810899924861177
+legs (full),L6-11,0.9273203688611015
+legs (full),L9-14,0.935869548806974
+legs (full),L12-17,0.9234238375545484
+legs (full),L15-20,0.9281016913669697
+legs (full),L18-23,0.9056549357037199
+legs (full),L21-26,0.8852998495336408
+legs (full),L24-29,0.7523035230662087
+legs (full),L27-31,0.9309256506458361
+legs (full),mid 12-21,0.9243230401611291
+legs (full),answer@mid,Eight
+legs minus answer,L0-5,0.8579320437121233
+legs minus answer,L3-8,0.8930731407711863
+legs minus answer,L6-11,0.9209031201421504
+legs minus answer,L9-14,0.9340693660810927
+legs minus answer,L12-17,0.9236485636994318
+legs minus answer,L15-20,0.9316430049724126
+legs minus answer,L18-23,0.9216127735643593
+legs minus answer,L21-26,0.8940039214754654
+legs minus answer,L24-29,0.8278334650033301
+legs minus answer,L27-31,0.9315519310669726
+legs minus answer,mid 12-21,0.9278788078809254
+legs minus answer,answer@mid,Eight
+webs (full),L0-5,0.8767489098399864
+webs (full),L3-8,0.8345755370390131
+webs (full),L6-11,0.8155300573652461
+webs (full),L9-14,0.658066193681452
+webs (full),L12-17,0.5459825872515017
+webs (full),L15-20,0.5562902583623501
+webs (full),L18-23,0.5415740428204063
+webs (full),L21-26,0.7480697339772447
+webs (full),L24-29,0.8770315174759782
+webs (full),L27-31,0.9232483970280382
+webs (full),mid 12-21,0.3508746718523203
+webs (full),answer@mid,Four
+webs minus answer,L0-5,0.8690734105234507
+webs minus answer,L3-8,0.8350886031199166
+webs minus answer,L6-11,0.827102725113017
+webs minus answer,L9-14,0.6668481518081276
+webs minus answer,L12-17,0.6004598562041675
+webs minus answer,L15-20,0.6188963381979941
+webs minus answer,L18-23,0.6388038466314011
+webs minus answer,L21-26,0.7969587257430644
+webs minus answer,L24-29,0.8963773645808145
+webs minus answer,L27-31,0.9130526384834791
+webs minus answer,mid 12-21,0.46633578640243234
+webs minus answer,answer@mid,Four

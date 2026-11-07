@@ -1,0 +1,721 @@
+question,bridge,layers,positions,swap,dirs,word,everyday,top,p_top,p_target,p_bridge,follows
+L_colosseum,Italy,9-27,template,exch,raw,Spain,False,I,0.983,0.0,0.983,False
+L_colosseum,Italy,9-27,template,exch,raw,France,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,exch,raw,Germany,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,exch,raw,Japan,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,exch,raw,table,True,I,0.995,0.0,0.995,False
+L_colosseum,Italy,9-27,template,exch,nogain,Spain,False,I,0.984,0.0,0.984,False
+L_colosseum,Italy,9-27,template,exch,nogain,France,False,I,0.995,0.0,0.995,False
+L_colosseum,Italy,9-27,template,exch,nogain,Germany,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,exch,nogain,Japan,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,exch,nogain,table,True,I,0.995,0.0,0.995,False
+L_colosseum,Italy,9-27,template,exch,gain,Spain,False,I,0.984,0.0,0.984,False
+L_colosseum,Italy,9-27,template,exch,gain,France,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,exch,gain,Germany,False,I,0.995,0.0,0.995,False
+L_colosseum,Italy,9-27,template,exch,gain,Japan,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,exch,gain,table,True,I,0.995,0.0,0.995,False
+L_colosseum,Italy,9-27,template,exch*2,raw,Spain,False, Spain,0.323,0.0,0.0,True
+L_colosseum,Italy,9-27,template,exch*2,raw,France,False,法国,0.342,0.0,0.0,False
+L_colosseum,Italy,9-27,template,exch*2,raw,Germany,False,德国,0.63,0.0,0.0,False
+L_colosseum,Italy,9-27,template,exch*2,raw,Japan,False,意大利,0.775,0.0,0.0,False
+L_colosseum,Italy,9-27,template,exch*2,raw,table,True, table,0.954,0.0,0.0,True
+L_colosseum,Italy,9-27,template,exch*2,nogain,Spain,False, Spain,0.341,0.0,0.0,True
+L_colosseum,Italy,9-27,template,exch*2,nogain,France,False, French,0.302,0.0,0.0,True
+L_colosseum,Italy,9-27,template,exch*2,nogain,Germany,False,在德国,0.469,0.0,0.0,False
+L_colosseum,Italy,9-27,template,exch*2,nogain,Japan,False,意大利,0.768,0.0,0.0,False
+L_colosseum,Italy,9-27,template,exch*2,nogain,table,True, table,0.97,0.0,0.0,True
+L_colosseum,Italy,9-27,template,exch*2,gain,Spain,False, Spain,0.353,0.0,0.0,True
+L_colosseum,Italy,9-27,template,exch*2,gain,France,False, French,0.283,0.0,0.0,True
+L_colosseum,Italy,9-27,template,exch*2,gain,Germany,False,在德国,0.401,0.0,0.0,False
+L_colosseum,Italy,9-27,template,exch*2,gain,Japan,False,意大利,0.8,0.0,0.0,False
+L_colosseum,Italy,9-27,template,exch*2,gain,table,True, table,0.944,0.0,0.0,True
+L_colosseum,Italy,9-27,template,np*2,raw,Spain,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,np*2,raw,France,False,I,0.995,0.001,0.995,False
+L_colosseum,Italy,9-27,template,np*2,raw,Germany,False,I,0.994,0.001,0.994,False
+L_colosseum,Italy,9-27,template,np*2,raw,Japan,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,np*2,raw,table,True,I,0.995,0.0,0.995,False
+L_colosseum,Italy,9-27,template,np*2,nogain,Spain,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,np*2,nogain,France,False,I,0.995,0.001,0.995,False
+L_colosseum,Italy,9-27,template,np*2,nogain,Germany,False,I,0.994,0.001,0.994,False
+L_colosseum,Italy,9-27,template,np*2,nogain,Japan,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,template,np*2,nogain,table,True,I,0.995,0.0,0.995,False
+L_colosseum,Italy,9-27,template,np*2,gain,Spain,False,I,0.992,0.0,0.992,False
+L_colosseum,Italy,9-27,template,np*2,gain,France,False,I,0.994,0.001,0.994,False
+L_colosseum,Italy,9-27,template,np*2,gain,Germany,False,I,0.995,0.0,0.995,False
+L_colosseum,Italy,9-27,template,np*2,gain,Japan,False,I,0.991,0.0,0.991,False
+L_colosseum,Italy,9-27,template,np*2,gain,table,True,I,0.993,0.0,0.993,False
+L_colosseum,Italy,9-27,q->end,exch,raw,Spain,False,I,0.99,0.0,0.99,False
+L_colosseum,Italy,9-27,q->end,exch,raw,France,False,F,0.941,0.941,0.053,True
+L_colosseum,Italy,9-27,q->end,exch,raw,Germany,False,G,0.812,0.812,0.181,True
+L_colosseum,Italy,9-27,q->end,exch,raw,Japan,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,q->end,exch,raw,table,True,I,0.995,0.001,0.995,False
+L_colosseum,Italy,9-27,q->end,exch,nogain,Spain,False,I,0.99,0.0,0.99,False
+L_colosseum,Italy,9-27,q->end,exch,nogain,France,False,F,0.888,0.888,0.106,True
+L_colosseum,Italy,9-27,q->end,exch,nogain,Germany,False,G,0.528,0.528,0.466,True
+L_colosseum,Italy,9-27,q->end,exch,nogain,Japan,False,I,0.993,0.0,0.993,False
+L_colosseum,Italy,9-27,q->end,exch,nogain,table,True,I,0.995,0.001,0.995,False
+L_colosseum,Italy,9-27,q->end,exch,gain,Spain,False,I,0.989,0.0,0.989,False
+L_colosseum,Italy,9-27,q->end,exch,gain,France,False,F,0.933,0.933,0.06,True
+L_colosseum,Italy,9-27,q->end,exch,gain,Germany,False,G,0.726,0.726,0.267,True
+L_colosseum,Italy,9-27,q->end,exch,gain,Japan,False,I,0.992,0.002,0.992,False
+L_colosseum,Italy,9-27,q->end,exch,gain,table,True,I,0.994,0.001,0.994,False
+L_colosseum,Italy,9-27,q->end,exch*2,raw,Spain,False, Spain,0.323,0.0,0.0,True
+L_colosseum,Italy,9-27,q->end,exch*2,raw,France,False,法国,0.342,0.0,0.0,False
+L_colosseum,Italy,9-27,q->end,exch*2,raw,Germany,False,意大利,0.112,0.0,0.0,False
+L_colosseum,Italy,9-27,q->end,exch*2,raw,Japan,False,意大利,0.775,0.0,0.0,False
+L_colosseum,Italy,9-27,q->end,exch*2,raw,table,True, table,0.954,0.0,0.0,True
+L_colosseum,Italy,9-27,q->end,exch*2,nogain,Spain,False, Spain,0.34,0.0,0.0,True
+L_colosseum,Italy,9-27,q->end,exch*2,nogain,France,False, French,0.302,0.0,0.0,True
+L_colosseum,Italy,9-27,q->end,exch*2,nogain,Germany,False,在德国,0.469,0.0,0.0,False
+L_colosseum,Italy,9-27,q->end,exch*2,nogain,Japan,False,意大利,0.77,0.0,0.0,False
+L_colosseum,Italy,9-27,q->end,exch*2,nogain,table,True, table,0.97,0.0,0.0,True
+L_colosseum,Italy,9-27,q->end,exch*2,gain,Spain,False, Spain,0.354,0.0,0.0,True
+L_colosseum,Italy,9-27,q->end,exch*2,gain,France,False, French,0.283,0.0,0.0,True
+L_colosseum,Italy,9-27,q->end,exch*2,gain,Germany,False,在德国,0.402,0.0,0.0,False
+L_colosseum,Italy,9-27,q->end,exch*2,gain,Japan,False,意大利,0.8,0.0,0.0,False
+L_colosseum,Italy,9-27,q->end,exch*2,gain,table,True, table,0.944,0.0,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,raw,Spain,False,S,0.994,0.994,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,raw,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,raw,Germany,False,G,0.99,0.99,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,raw,Japan,False,J,0.993,0.993,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,raw,table,True,I,0.993,0.001,0.993,False
+L_colosseum,Italy,9-27,q->end,np*2,nogain,Spain,False,S,0.994,0.994,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,nogain,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,nogain,Germany,False,G,0.99,0.99,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,nogain,Japan,False,J,0.992,0.992,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,nogain,table,True,I,0.992,0.001,0.992,False
+L_colosseum,Italy,9-27,q->end,np*2,gain,Spain,False,S,0.993,0.993,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,gain,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,gain,Germany,False,G,0.99,0.99,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,gain,Japan,False,J,0.986,0.986,0.0,True
+L_colosseum,Italy,9-27,q->end,np*2,gain,table,True,I,0.99,0.001,0.99,False
+L_colosseum,Italy,9-27,all,exch,raw,Spain,False,I,0.987,0.0,0.987,False
+L_colosseum,Italy,9-27,all,exch,raw,France,False,F,0.941,0.941,0.053,True
+L_colosseum,Italy,9-27,all,exch,raw,Germany,False,G,0.812,0.812,0.181,True
+L_colosseum,Italy,9-27,all,exch,raw,Japan,False,I,0.993,0.0,0.993,False
+L_colosseum,Italy,9-27,all,exch,raw,table,True,I,0.995,0.001,0.995,False
+L_colosseum,Italy,9-27,all,exch,nogain,Spain,False,I,0.991,0.0,0.991,False
+L_colosseum,Italy,9-27,all,exch,nogain,France,False,F,0.899,0.899,0.095,True
+L_colosseum,Italy,9-27,all,exch,nogain,Germany,False,G,0.559,0.559,0.435,True
+L_colosseum,Italy,9-27,all,exch,nogain,Japan,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,9-27,all,exch,nogain,table,True,I,0.995,0.0,0.995,False
+L_colosseum,Italy,9-27,all,exch,gain,Spain,False,I,0.985,0.0,0.985,False
+L_colosseum,Italy,9-27,all,exch,gain,France,False,F,0.94,0.94,0.053,True
+L_colosseum,Italy,9-27,all,exch,gain,Germany,False,G,0.75,0.75,0.244,True
+L_colosseum,Italy,9-27,all,exch,gain,Japan,False,I,0.992,0.001,0.992,False
+L_colosseum,Italy,9-27,all,exch,gain,table,True,I,0.994,0.001,0.994,False
+L_colosseum,Italy,9-27,all,exch*2,raw,Spain,False, Spain,0.325,0.0,0.0,True
+L_colosseum,Italy,9-27,all,exch*2,raw,France,False,法国,0.342,0.0,0.0,False
+L_colosseum,Italy,9-27,all,exch*2,raw,Germany,False,德国,0.63,0.0,0.0,False
+L_colosseum,Italy,9-27,all,exch*2,raw,Japan,False,意大利,0.775,0.0,0.0,False
+L_colosseum,Italy,9-27,all,exch*2,raw,table,True, table,0.954,0.0,0.0,True
+L_colosseum,Italy,9-27,all,exch*2,nogain,Spain,False, Spain,0.34,0.0,0.0,True
+L_colosseum,Italy,9-27,all,exch*2,nogain,France,False, French,0.302,0.0,0.0,True
+L_colosseum,Italy,9-27,all,exch*2,nogain,Germany,False,在德国,0.469,0.0,0.0,False
+L_colosseum,Italy,9-27,all,exch*2,nogain,Japan,False,意大利,0.767,0.0,0.0,False
+L_colosseum,Italy,9-27,all,exch*2,nogain,table,True, table,0.97,0.0,0.0,True
+L_colosseum,Italy,9-27,all,exch*2,gain,Spain,False, Spain,0.354,0.0,0.0,True
+L_colosseum,Italy,9-27,all,exch*2,gain,France,False, French,0.283,0.0,0.0,True
+L_colosseum,Italy,9-27,all,exch*2,gain,Germany,False,在德国,0.402,0.0,0.0,False
+L_colosseum,Italy,9-27,all,exch*2,gain,Japan,False,意大利,0.8,0.0,0.0,False
+L_colosseum,Italy,9-27,all,exch*2,gain,table,True, table,0.944,0.0,0.0,True
+L_colosseum,Italy,9-27,all,np*2,raw,Spain,False,S,0.994,0.994,0.0,True
+L_colosseum,Italy,9-27,all,np*2,raw,France,False,F,0.997,0.997,0.0,True
+L_colosseum,Italy,9-27,all,np*2,raw,Germany,False,G,0.99,0.99,0.0,True
+L_colosseum,Italy,9-27,all,np*2,raw,Japan,False,J,0.99,0.99,0.0,True
+L_colosseum,Italy,9-27,all,np*2,raw,table,True,I,0.993,0.001,0.993,False
+L_colosseum,Italy,9-27,all,np*2,nogain,Spain,False,S,0.995,0.995,0.0,True
+L_colosseum,Italy,9-27,all,np*2,nogain,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,9-27,all,np*2,nogain,Germany,False,G,0.99,0.99,0.0,True
+L_colosseum,Italy,9-27,all,np*2,nogain,Japan,False,J,0.993,0.993,0.0,True
+L_colosseum,Italy,9-27,all,np*2,nogain,table,True,I,0.992,0.001,0.992,False
+L_colosseum,Italy,9-27,all,np*2,gain,Spain,False,S,0.994,0.994,0.0,True
+L_colosseum,Italy,9-27,all,np*2,gain,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,9-27,all,np*2,gain,Germany,False,G,0.99,0.99,0.0,True
+L_colosseum,Italy,9-27,all,np*2,gain,Japan,False,J,0.988,0.988,0.0,True
+L_colosseum,Italy,9-27,all,np*2,gain,table,True,I,0.99,0.001,0.99,False
+L_colosseum,Italy,42-54,template,exch,raw,Spain,False,I,0.986,0.009,0.986,False
+L_colosseum,Italy,42-54,template,exch,raw,France,False,I,0.83,0.163,0.83,False
+L_colosseum,Italy,42-54,template,exch,raw,Germany,False,I,0.527,0.465,0.527,False
+L_colosseum,Italy,42-54,template,exch,raw,Japan,False,J,0.774,0.774,0.222,True
+L_colosseum,Italy,42-54,template,exch,raw,table,True,I,0.973,0.018,0.973,False
+L_colosseum,Italy,42-54,template,exch,nogain,Spain,False,I,0.983,0.011,0.983,False
+L_colosseum,Italy,42-54,template,exch,nogain,France,False,I,0.846,0.147,0.846,False
+L_colosseum,Italy,42-54,template,exch,nogain,Germany,False,I,0.588,0.404,0.588,False
+L_colosseum,Italy,42-54,template,exch,nogain,Japan,False,J,0.752,0.752,0.244,True
+L_colosseum,Italy,42-54,template,exch,nogain,table,True,I,0.978,0.014,0.978,False
+L_colosseum,Italy,42-54,template,exch,gain,Spain,False,I,0.987,0.008,0.987,False
+L_colosseum,Italy,42-54,template,exch,gain,France,False,I,0.83,0.163,0.83,False
+L_colosseum,Italy,42-54,template,exch,gain,Germany,False,I,0.557,0.434,0.557,False
+L_colosseum,Italy,42-54,template,exch,gain,Japan,False,J,0.774,0.774,0.222,True
+L_colosseum,Italy,42-54,template,exch,gain,table,True,I,0.958,0.033,0.958,False
+L_colosseum,Italy,42-54,template,exch*2,raw,Spain,False, Spain,0.928,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,raw,France,False, France,0.994,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,raw,Germany,False, Germany,0.5,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,raw,Japan,False, Japan,0.98,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,raw,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,nogain,Spain,False, Spain,0.955,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,nogain,France,False, France,0.994,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,nogain,Germany,False,德国,0.464,0.0,0.0,False
+L_colosseum,Italy,42-54,template,exch*2,nogain,Japan,False, Japan,0.968,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,nogain,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,gain,Spain,False, Spain,0.953,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,gain,France,False, France,0.993,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,gain,Germany,False,德国,0.464,0.0,0.0,False
+L_colosseum,Italy,42-54,template,exch*2,gain,Japan,False, Japan,0.96,0.0,0.0,True
+L_colosseum,Italy,42-54,template,exch*2,gain,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,42-54,template,np*2,raw,Spain,False,S,0.967,0.967,0.0,True
+L_colosseum,Italy,42-54,template,np*2,raw,France,False,F,0.995,0.995,0.0,True
+L_colosseum,Italy,42-54,template,np*2,raw,Germany,False,G,0.992,0.992,0.0,True
+L_colosseum,Italy,42-54,template,np*2,raw,Japan,False,J,0.997,0.997,0.0,True
+L_colosseum,Italy,42-54,template,np*2,raw,table,True,T,0.908,0.908,0.045,True
+L_colosseum,Italy,42-54,template,np*2,nogain,Spain,False,S,0.967,0.967,0.0,True
+L_colosseum,Italy,42-54,template,np*2,nogain,France,False,F,0.995,0.995,0.0,True
+L_colosseum,Italy,42-54,template,np*2,nogain,Germany,False,G,0.992,0.992,0.0,True
+L_colosseum,Italy,42-54,template,np*2,nogain,Japan,False,J,0.997,0.997,0.0,True
+L_colosseum,Italy,42-54,template,np*2,nogain,table,True,T,0.9,0.9,0.051,True
+L_colosseum,Italy,42-54,template,np*2,gain,Spain,False,S,0.963,0.963,0.0,True
+L_colosseum,Italy,42-54,template,np*2,gain,France,False,F,0.995,0.995,0.0,True
+L_colosseum,Italy,42-54,template,np*2,gain,Germany,False,G,0.993,0.993,0.0,True
+L_colosseum,Italy,42-54,template,np*2,gain,Japan,False,J,0.997,0.997,0.0,True
+L_colosseum,Italy,42-54,template,np*2,gain,table,True,T,0.937,0.937,0.005,True
+L_colosseum,Italy,42-54,q->end,exch,raw,Spain,False,S,0.772,0.772,0.221,True
+L_colosseum,Italy,42-54,q->end,exch,raw,France,False,F,0.983,0.983,0.011,True
+L_colosseum,Italy,42-54,q->end,exch,raw,Germany,False,G,0.983,0.983,0.01,True
+L_colosseum,Italy,42-54,q->end,exch,raw,Japan,False,J,0.996,0.996,0.001,True
+L_colosseum,Italy,42-54,q->end,exch,raw,table,True,T,0.678,0.678,0.283,True
+L_colosseum,Italy,42-54,q->end,exch,nogain,Spain,False,S,0.811,0.811,0.181,True
+L_colosseum,Italy,42-54,q->end,exch,nogain,France,False,F,0.982,0.982,0.012,True
+L_colosseum,Italy,42-54,q->end,exch,nogain,Germany,False,G,0.983,0.983,0.01,True
+L_colosseum,Italy,42-54,q->end,exch,nogain,Japan,False,J,0.996,0.996,0.002,True
+L_colosseum,Italy,42-54,q->end,exch,nogain,table,True,T,0.57,0.57,0.392,True
+L_colosseum,Italy,42-54,q->end,exch,gain,Spain,False,S,0.7,0.7,0.292,True
+L_colosseum,Italy,42-54,q->end,exch,gain,France,False,F,0.982,0.982,0.012,True
+L_colosseum,Italy,42-54,q->end,exch,gain,Germany,False,G,0.981,0.981,0.011,True
+L_colosseum,Italy,42-54,q->end,exch,gain,Japan,False,J,0.996,0.996,0.001,True
+L_colosseum,Italy,42-54,q->end,exch,gain,table,True,T,0.932,0.932,0.036,True
+L_colosseum,Italy,42-54,q->end,exch*2,raw,Spain,False, Spain,0.927,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,raw,France,False, France,0.994,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,raw,Germany,False, Germany,0.5,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,raw,Japan,False, Japan,0.98,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,raw,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,nogain,Spain,False, Spain,0.955,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,nogain,France,False, France,0.993,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,nogain,Germany,False,德国,0.464,0.0,0.0,False
+L_colosseum,Italy,42-54,q->end,exch*2,nogain,Japan,False, Japan,0.968,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,nogain,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,gain,Spain,False, Spain,0.953,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,gain,France,False, France,0.993,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,gain,Germany,False,德国,0.464,0.0,0.0,False
+L_colosseum,Italy,42-54,q->end,exch*2,gain,Japan,False, Japan,0.96,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,exch*2,gain,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,raw,Spain,False,S,0.974,0.974,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,raw,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,raw,Germany,False,G,0.993,0.993,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,raw,Japan,False,J,0.997,0.997,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,raw,table,True,T,0.852,0.852,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,nogain,Spain,False,S,0.974,0.974,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,nogain,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,nogain,Germany,False,G,0.993,0.993,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,nogain,Japan,False,J,0.997,0.997,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,nogain,table,True,T,0.869,0.869,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,gain,Spain,False,S,0.971,0.971,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,gain,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,gain,Germany,False,G,0.993,0.993,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,gain,Japan,False,J,0.997,0.997,0.0,True
+L_colosseum,Italy,42-54,q->end,np*2,gain,table,True,T,0.837,0.837,0.0,True
+L_colosseum,Italy,42-54,all,exch,raw,Spain,False,S,0.772,0.772,0.221,True
+L_colosseum,Italy,42-54,all,exch,raw,France,False,F,0.984,0.984,0.011,True
+L_colosseum,Italy,42-54,all,exch,raw,Germany,False,G,0.983,0.983,0.009,True
+L_colosseum,Italy,42-54,all,exch,raw,Japan,False,J,0.996,0.996,0.001,True
+L_colosseum,Italy,42-54,all,exch,raw,table,True,T,0.706,0.706,0.26,True
+L_colosseum,Italy,42-54,all,exch,nogain,Spain,False,S,0.812,0.812,0.181,True
+L_colosseum,Italy,42-54,all,exch,nogain,France,False,F,0.982,0.982,0.012,True
+L_colosseum,Italy,42-54,all,exch,nogain,Germany,False,G,0.981,0.981,0.011,True
+L_colosseum,Italy,42-54,all,exch,nogain,Japan,False,J,0.996,0.996,0.001,True
+L_colosseum,Italy,42-54,all,exch,nogain,table,True,T,0.569,0.569,0.391,True
+L_colosseum,Italy,42-54,all,exch,gain,Spain,False,S,0.725,0.725,0.267,True
+L_colosseum,Italy,42-54,all,exch,gain,France,False,F,0.983,0.983,0.011,True
+L_colosseum,Italy,42-54,all,exch,gain,Germany,False,G,0.981,0.981,0.011,True
+L_colosseum,Italy,42-54,all,exch,gain,Japan,False,J,0.996,0.996,0.001,True
+L_colosseum,Italy,42-54,all,exch,gain,table,True,T,0.936,0.936,0.032,True
+L_colosseum,Italy,42-54,all,exch*2,raw,Spain,False, Spain,0.927,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,raw,France,False, France,0.994,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,raw,Germany,False, Germany,0.491,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,raw,Japan,False, Japan,0.98,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,raw,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,nogain,Spain,False, Spain,0.955,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,nogain,France,False, France,0.993,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,nogain,Germany,False,德国,0.464,0.0,0.0,False
+L_colosseum,Italy,42-54,all,exch*2,nogain,Japan,False, Japan,0.968,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,nogain,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,gain,Spain,False, Spain,0.953,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,gain,France,False, France,0.993,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,gain,Germany,False,德国,0.464,0.0,0.0,False
+L_colosseum,Italy,42-54,all,exch*2,gain,Japan,False, Japan,0.96,0.0,0.0,True
+L_colosseum,Italy,42-54,all,exch*2,gain,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,42-54,all,np*2,raw,Spain,False,S,0.971,0.971,0.0,True
+L_colosseum,Italy,42-54,all,np*2,raw,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,42-54,all,np*2,raw,Germany,False,G,0.993,0.993,0.0,True
+L_colosseum,Italy,42-54,all,np*2,raw,Japan,False,J,0.997,0.997,0.0,True
+L_colosseum,Italy,42-54,all,np*2,raw,table,True,T,0.847,0.847,0.0,True
+L_colosseum,Italy,42-54,all,np*2,nogain,Spain,False,S,0.971,0.971,0.0,True
+L_colosseum,Italy,42-54,all,np*2,nogain,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,42-54,all,np*2,nogain,Germany,False,G,0.993,0.993,0.0,True
+L_colosseum,Italy,42-54,all,np*2,nogain,Japan,False,J,0.997,0.997,0.0,True
+L_colosseum,Italy,42-54,all,np*2,nogain,table,True,T,0.866,0.866,0.0,True
+L_colosseum,Italy,42-54,all,np*2,gain,Spain,False,S,0.971,0.971,0.0,True
+L_colosseum,Italy,42-54,all,np*2,gain,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,42-54,all,np*2,gain,Germany,False,G,0.994,0.994,0.0,True
+L_colosseum,Italy,42-54,all,np*2,gain,Japan,False,J,0.998,0.998,0.0,True
+L_colosseum,Italy,42-54,all,np*2,gain,table,True,T,0.859,0.859,0.0,True
+L_colosseum,Italy,32-54,template,exch,raw,Spain,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,32-54,template,exch,raw,France,False,I,0.965,0.029,0.965,False
+L_colosseum,Italy,32-54,template,exch,raw,Germany,False,I,0.793,0.201,0.793,False
+L_colosseum,Italy,32-54,template,exch,raw,Japan,False,I,0.56,0.436,0.56,False
+L_colosseum,Italy,32-54,template,exch,raw,table,True,I,0.983,0.004,0.983,False
+L_colosseum,Italy,32-54,template,exch,nogain,Spain,False,I,0.993,0.0,0.993,False
+L_colosseum,Italy,32-54,template,exch,nogain,France,False,I,0.972,0.023,0.972,False
+L_colosseum,Italy,32-54,template,exch,nogain,Germany,False,I,0.847,0.147,0.847,False
+L_colosseum,Italy,32-54,template,exch,nogain,Japan,False,I,0.648,0.347,0.648,False
+L_colosseum,Italy,32-54,template,exch,nogain,table,True,I,0.985,0.004,0.985,False
+L_colosseum,Italy,32-54,template,exch,gain,Spain,False,I,0.993,0.0,0.993,False
+L_colosseum,Italy,32-54,template,exch,gain,France,False,I,0.968,0.026,0.968,False
+L_colosseum,Italy,32-54,template,exch,gain,Germany,False,I,0.83,0.163,0.83,False
+L_colosseum,Italy,32-54,template,exch,gain,Japan,False,I,0.62,0.376,0.62,False
+L_colosseum,Italy,32-54,template,exch,gain,table,True,I,0.982,0.005,0.982,False
+L_colosseum,Italy,32-54,template,exch*2,raw,Spain,False, Italy,0.764,0.0,0.0,False
+L_colosseum,Italy,32-54,template,exch*2,raw,France,False, Italy,0.432,0.0,0.0,False
+L_colosseum,Italy,32-54,template,exch*2,raw,Germany,False, Germany,0.491,0.0,0.0,True
+L_colosseum,Italy,32-54,template,exch*2,raw,Japan,False, Japan,0.98,0.0,0.0,True
+L_colosseum,Italy,32-54,template,exch*2,raw,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,32-54,template,exch*2,nogain,Spain,False, Italy,0.757,0.0,0.0,False
+L_colosseum,Italy,32-54,template,exch*2,nogain,France,False, Italy,0.556,0.0,0.0,False
+L_colosseum,Italy,32-54,template,exch*2,nogain,Germany,False, Germany,0.41,0.0,0.0,True
+L_colosseum,Italy,32-54,template,exch*2,nogain,Japan,False, Japan,0.968,0.0,0.0,True
+L_colosseum,Italy,32-54,template,exch*2,nogain,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,32-54,template,exch*2,gain,Spain,False, Italy,0.708,0.0,0.0,False
+L_colosseum,Italy,32-54,template,exch*2,gain,France,False, Italy,0.507,0.0,0.0,False
+L_colosseum,Italy,32-54,template,exch*2,gain,Germany,False, Italy,0.801,0.0,0.0,False
+L_colosseum,Italy,32-54,template,exch*2,gain,Japan,False, Italy,0.847,0.0,0.0,False
+L_colosseum,Italy,32-54,template,exch*2,gain,table,True, Italy,0.999,0.0,0.0,False
+L_colosseum,Italy,32-54,template,np*2,raw,Spain,False,S,0.954,0.954,0.0,True
+L_colosseum,Italy,32-54,template,np*2,raw,France,False,F,0.994,0.994,0.0,True
+L_colosseum,Italy,32-54,template,np*2,raw,Germany,False,G,0.969,0.969,0.0,True
+L_colosseum,Italy,32-54,template,np*2,raw,Japan,False,J,0.987,0.987,0.001,True
+L_colosseum,Italy,32-54,template,np*2,raw,table,True,T,0.857,0.857,0.102,True
+L_colosseum,Italy,32-54,template,np*2,nogain,Spain,False,S,0.954,0.954,0.0,True
+L_colosseum,Italy,32-54,template,np*2,nogain,France,False,F,0.994,0.994,0.0,True
+L_colosseum,Italy,32-54,template,np*2,nogain,Germany,False,G,0.969,0.969,0.0,True
+L_colosseum,Italy,32-54,template,np*2,nogain,Japan,False,J,0.987,0.987,0.001,True
+L_colosseum,Italy,32-54,template,np*2,nogain,table,True,T,0.844,0.844,0.114,True
+L_colosseum,Italy,32-54,template,np*2,gain,Spain,False,S,0.963,0.963,0.0,True
+L_colosseum,Italy,32-54,template,np*2,gain,France,False,F,0.993,0.993,0.0,True
+L_colosseum,Italy,32-54,template,np*2,gain,Germany,False,G,0.97,0.97,0.0,True
+L_colosseum,Italy,32-54,template,np*2,gain,Japan,False,J,0.988,0.988,0.001,True
+L_colosseum,Italy,32-54,template,np*2,gain,table,True,T,0.92,0.92,0.036,True
+L_colosseum,Italy,32-54,q->end,exch,raw,Spain,False,S,0.527,0.527,0.465,True
+L_colosseum,Italy,32-54,q->end,exch,raw,France,False,F,0.957,0.957,0.037,True
+L_colosseum,Italy,32-54,q->end,exch,raw,Germany,False,G,0.98,0.98,0.014,True
+L_colosseum,Italy,32-54,q->end,exch,raw,Japan,False,J,0.994,0.994,0.003,True
+L_colosseum,Italy,32-54,q->end,exch,raw,table,True,F,0.331,0.331,0.074,False
+L_colosseum,Italy,32-54,q->end,exch,nogain,Spain,False,S,0.527,0.527,0.465,True
+L_colosseum,Italy,32-54,q->end,exch,nogain,France,False,F,0.957,0.957,0.037,True
+L_colosseum,Italy,32-54,q->end,exch,nogain,Germany,False,G,0.98,0.98,0.014,True
+L_colosseum,Italy,32-54,q->end,exch,nogain,Japan,False,J,0.994,0.994,0.004,True
+L_colosseum,Italy,32-54,q->end,exch,nogain,table,True,F,0.271,0.239,0.239,False
+L_colosseum,Italy,32-54,q->end,exch,gain,Spain,False,I,0.7,0.292,0.7,False
+L_colosseum,Italy,32-54,q->end,exch,gain,France,False,F,0.96,0.96,0.033,True
+L_colosseum,Italy,32-54,q->end,exch,gain,Germany,False,G,0.983,0.983,0.011,True
+L_colosseum,Italy,32-54,q->end,exch,gain,Japan,False,J,0.995,0.995,0.002,True
+L_colosseum,Italy,32-54,q->end,exch,gain,table,True,T,0.426,0.426,0.019,True
+L_colosseum,Italy,32-54,q->end,exch*2,raw,Spain,False, Italy,0.764,0.0,0.0,False
+L_colosseum,Italy,32-54,q->end,exch*2,raw,France,False, Italy,0.432,0.0,0.0,False
+L_colosseum,Italy,32-54,q->end,exch*2,raw,Germany,False, Germany,0.491,0.0,0.0,True
+L_colosseum,Italy,32-54,q->end,exch*2,raw,Japan,False, Japan,0.98,0.0,0.0,True
+L_colosseum,Italy,32-54,q->end,exch*2,raw,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,32-54,q->end,exch*2,nogain,Spain,False, Italy,0.757,0.0,0.0,False
+L_colosseum,Italy,32-54,q->end,exch*2,nogain,France,False, Italy,0.556,0.0,0.0,False
+L_colosseum,Italy,32-54,q->end,exch*2,nogain,Germany,False, Germany,0.41,0.0,0.0,True
+L_colosseum,Italy,32-54,q->end,exch*2,nogain,Japan,False, Japan,0.968,0.0,0.0,True
+L_colosseum,Italy,32-54,q->end,exch*2,nogain,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,32-54,q->end,exch*2,gain,Spain,False, Italy,0.708,0.0,0.0,False
+L_colosseum,Italy,32-54,q->end,exch*2,gain,France,False, Italy,0.556,0.0,0.0,False
+L_colosseum,Italy,32-54,q->end,exch*2,gain,Germany,False, Italy,0.759,0.0,0.0,False
+L_colosseum,Italy,32-54,q->end,exch*2,gain,Japan,False, Japan,0.96,0.0,0.0,True
+L_colosseum,Italy,32-54,q->end,exch*2,gain,table,True, Italy,0.999,0.0,0.0,False
+L_colosseum,Italy,32-54,q->end,np*2,raw,Spain,False,S,0.991,0.991,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,raw,France,False,F,0.995,0.995,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,raw,Germany,False,G,0.993,0.993,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,raw,Japan,False,J,0.996,0.996,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,raw,table,True,T,0.664,0.664,0.002,True
+L_colosseum,Italy,32-54,q->end,np*2,nogain,Spain,False,S,0.991,0.991,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,nogain,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,nogain,Germany,False,G,0.993,0.993,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,nogain,Japan,False,J,0.996,0.996,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,nogain,table,True,T,0.691,0.691,0.002,True
+L_colosseum,Italy,32-54,q->end,np*2,gain,Spain,False,S,0.989,0.989,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,gain,France,False,F,0.994,0.994,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,gain,Germany,False,G,0.991,0.991,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,gain,Japan,False,J,0.995,0.995,0.0,True
+L_colosseum,Italy,32-54,q->end,np*2,gain,table,True,U,0.451,0.273,0.001,False
+L_colosseum,Italy,32-54,all,exch,raw,Spain,False,S,0.527,0.527,0.465,True
+L_colosseum,Italy,32-54,all,exch,raw,France,False,F,0.958,0.958,0.037,True
+L_colosseum,Italy,32-54,all,exch,raw,Germany,False,G,0.98,0.98,0.014,True
+L_colosseum,Italy,32-54,all,exch,raw,Japan,False,J,0.995,0.995,0.003,True
+L_colosseum,Italy,32-54,all,exch,raw,table,True,T,0.346,0.346,0.077,True
+L_colosseum,Italy,32-54,all,exch,nogain,Spain,False,S,0.558,0.558,0.434,True
+L_colosseum,Italy,32-54,all,exch,nogain,France,False,F,0.958,0.958,0.037,True
+L_colosseum,Italy,32-54,all,exch,nogain,Germany,False,G,0.978,0.978,0.016,True
+L_colosseum,Italy,32-54,all,exch,nogain,Japan,False,J,0.994,0.994,0.003,True
+L_colosseum,Italy,32-54,all,exch,nogain,table,True,F,0.269,0.269,0.237,False
+L_colosseum,Italy,32-54,all,exch,gain,Spain,False,I,0.647,0.346,0.647,False
+L_colosseum,Italy,32-54,all,exch,gain,France,False,F,0.961,0.961,0.033,True
+L_colosseum,Italy,32-54,all,exch,gain,Germany,False,G,0.981,0.981,0.012,True
+L_colosseum,Italy,32-54,all,exch,gain,Japan,False,J,0.995,0.995,0.002,True
+L_colosseum,Italy,32-54,all,exch,gain,table,True,T,0.432,0.432,0.017,True
+L_colosseum,Italy,32-54,all,exch*2,raw,Spain,False, Italy,0.764,0.0,0.0,False
+L_colosseum,Italy,32-54,all,exch*2,raw,France,False, Italy,0.432,0.0,0.0,False
+L_colosseum,Italy,32-54,all,exch*2,raw,Germany,False, Germany,0.491,0.0,0.0,True
+L_colosseum,Italy,32-54,all,exch*2,raw,Japan,False, Japan,0.98,0.0,0.0,True
+L_colosseum,Italy,32-54,all,exch*2,raw,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,32-54,all,exch*2,nogain,Spain,False, Italy,0.757,0.0,0.0,False
+L_colosseum,Italy,32-54,all,exch*2,nogain,France,False, Italy,0.556,0.0,0.0,False
+L_colosseum,Italy,32-54,all,exch*2,nogain,Germany,False, Italy,0.8,0.0,0.0,False
+L_colosseum,Italy,32-54,all,exch*2,nogain,Japan,False, Japan,0.968,0.0,0.0,True
+L_colosseum,Italy,32-54,all,exch*2,nogain,table,True, table,1.0,0.0,0.0,True
+L_colosseum,Italy,32-54,all,exch*2,gain,Spain,False, Italy,0.708,0.0,0.0,False
+L_colosseum,Italy,32-54,all,exch*2,gain,France,False, Italy,0.507,0.0,0.0,False
+L_colosseum,Italy,32-54,all,exch*2,gain,Germany,False, Italy,0.801,0.0,0.0,False
+L_colosseum,Italy,32-54,all,exch*2,gain,Japan,False, Japan,0.96,0.0,0.0,True
+L_colosseum,Italy,32-54,all,exch*2,gain,table,True, Italy,0.999,0.0,0.0,False
+L_colosseum,Italy,32-54,all,np*2,raw,Spain,False,S,0.991,0.991,0.0,True
+L_colosseum,Italy,32-54,all,np*2,raw,France,False,F,0.996,0.996,0.0,True
+L_colosseum,Italy,32-54,all,np*2,raw,Germany,False,G,0.993,0.993,0.0,True
+L_colosseum,Italy,32-54,all,np*2,raw,Japan,False,J,0.996,0.996,0.0,True
+L_colosseum,Italy,32-54,all,np*2,raw,table,True,T,0.684,0.684,0.002,True
+L_colosseum,Italy,32-54,all,np*2,nogain,Spain,False,S,0.992,0.992,0.0,True
+L_colosseum,Italy,32-54,all,np*2,nogain,France,False,F,0.995,0.995,0.0,True
+L_colosseum,Italy,32-54,all,np*2,nogain,Germany,False,G,0.992,0.992,0.0,True
+L_colosseum,Italy,32-54,all,np*2,nogain,Japan,False,J,0.996,0.996,0.0,True
+L_colosseum,Italy,32-54,all,np*2,nogain,table,True,T,0.707,0.707,0.002,True
+L_colosseum,Italy,32-54,all,np*2,gain,Spain,False,S,0.988,0.988,0.0,True
+L_colosseum,Italy,32-54,all,np*2,gain,France,False,F,0.994,0.994,0.0,True
+L_colosseum,Italy,32-54,all,np*2,gain,Germany,False,G,0.992,0.992,0.0,True
+L_colosseum,Italy,32-54,all,np*2,gain,Japan,False,J,0.994,0.994,0.0,True
+L_colosseum,Italy,32-54,all,np*2,gain,table,True,U,0.42,0.289,0.001,False
+L_colosseum,Italy,12-41,template,exch,raw,Spain,False,I,0.986,0.0,0.986,False
+L_colosseum,Italy,12-41,template,exch,raw,France,False,I,0.907,0.084,0.907,False
+L_colosseum,Italy,12-41,template,exch,raw,Germany,False,I,0.956,0.037,0.956,False
+L_colosseum,Italy,12-41,template,exch,raw,Japan,False,I,0.995,0.0,0.995,False
+L_colosseum,Italy,12-41,template,exch,raw,table,True,I,0.993,0.001,0.993,False
+L_colosseum,Italy,12-41,template,exch,nogain,Spain,False,I,0.985,0.0,0.985,False
+L_colosseum,Italy,12-41,template,exch,nogain,France,False,I,0.908,0.084,0.908,False
+L_colosseum,Italy,12-41,template,exch,nogain,Germany,False,I,0.976,0.018,0.976,False
+L_colosseum,Italy,12-41,template,exch,nogain,Japan,False,I,0.995,0.0,0.995,False
+L_colosseum,Italy,12-41,template,exch,nogain,table,True,I,0.993,0.001,0.993,False
+L_colosseum,Italy,12-41,template,exch,gain,Spain,False,I,0.98,0.0,0.98,False
+L_colosseum,Italy,12-41,template,exch,gain,France,False,I,0.896,0.094,0.896,False
+L_colosseum,Italy,12-41,template,exch,gain,Germany,False,I,0.976,0.018,0.976,False
+L_colosseum,Italy,12-41,template,exch,gain,Japan,False,I,0.994,0.0,0.994,False
+L_colosseum,Italy,12-41,template,exch,gain,table,True,I,0.992,0.001,0.992,False
+L_colosseum,Italy,12-41,template,exch*2,raw,Spain,False, Spain,0.453,0.0,0.0,True
+L_colosseum,Italy,12-41,template,exch*2,raw,France,False,意大利,0.735,0.0,0.0,False
+L_colosseum,Italy,12-41,template,exch*2,raw,Germany,False,意大利,0.374,0.0,0.0,False
+L_colosseum,Italy,12-41,template,exch*2,raw,Japan,False, Japan,0.518,0.0,0.0,True
+L_colosseum,Italy,12-41,template,exch*2,raw,table,True, Italy,0.904,0.0,0.0,False
+L_colosseum,Italy,12-41,template,exch*2,nogain,Spain,False, Spain,0.539,0.0,0.0,True
+L_colosseum,Italy,12-41,template,exch*2,nogain,France,False,意大利,0.738,0.0,0.0,False
+L_colosseum,Italy,12-41,template,exch*2,nogain,Germany,False,意大利,0.432,0.0,0.0,False
+L_colosseum,Italy,12-41,template,exch*2,nogain,Japan,False, Japan,0.269,0.0,0.0,True
+L_colosseum,Italy,12-41,template,exch*2,nogain,table,True, Italy,0.88,0.0,0.0,False
+L_colosseum,Italy,12-41,template,exch*2,gain,Spain,False, Spain,0.525,0.0,0.0,True
+L_colosseum,Italy,12-41,template,exch*2,gain,France,False,意大利,0.739,0.0,0.0,False
+L_colosseum,Italy,12-41,template,exch*2,gain,Germany,False,意大利,0.45,0.0,0.0,False
+L_colosseum,Italy,12-41,template,exch*2,gain,Japan,False, Japanese,0.254,0.0,0.0,True
+L_colosseum,Italy,12-41,template,exch*2,gain,table,True, Italy,0.88,0.0,0.0,False
+L_colosseum,Italy,12-41,template,np*2,raw,Spain,False,S,0.915,0.915,0.075,True
+L_colosseum,Italy,12-41,template,np*2,raw,France,False,F,0.91,0.91,0.085,True
+L_colosseum,Italy,12-41,template,np*2,raw,Germany,False,G,0.519,0.519,0.458,True
+L_colosseum,Italy,12-41,template,np*2,raw,Japan,False,I,0.724,0.266,0.724,False
+L_colosseum,Italy,12-41,template,np*2,raw,table,True,I,0.99,0.002,0.99,False
+L_colosseum,Italy,12-41,template,np*2,nogain,Spain,False,S,0.924,0.924,0.067,True
+L_colosseum,Italy,12-41,template,np*2,nogain,France,False,F,0.91,0.91,0.085,True
+L_colosseum,Italy,12-41,template,np*2,nogain,Germany,False,G,0.519,0.519,0.458,True
+L_colosseum,Italy,12-41,template,np*2,nogain,Japan,False,I,0.724,0.266,0.724,False
+L_colosseum,Italy,12-41,template,np*2,nogain,table,True,I,0.99,0.002,0.99,False
+L_colosseum,Italy,12-41,template,np*2,gain,Spain,False,S,0.922,0.922,0.067,True
+L_colosseum,Italy,12-41,template,np*2,gain,France,False,F,0.94,0.94,0.053,True
+L_colosseum,Italy,12-41,template,np*2,gain,Germany,False,G,0.549,0.549,0.427,True
+L_colosseum,Italy,12-41,template,np*2,gain,Japan,False,I,0.697,0.29,0.697,False
+L_colosseum,Italy,12-41,template,np*2,gain,table,True,I,0.985,0.002,0.985,False
+L_colosseum,Italy,12-41,q->end,exch,raw,Spain,False,I,0.987,0.0,0.987,False
+L_colosseum,Italy,12-41,q->end,exch,raw,France,False,F,0.808,0.808,0.18,True
+L_colosseum,Italy,12-41,q->end,exch,raw,Germany,False,I,0.831,0.164,0.831,False
+L_colosseum,Italy,12-41,q->end,exch,raw,Japan,False,J,0.59,0.59,0.406,True
+L_colosseum,Italy,12-41,q->end,exch,raw,table,True,I,0.985,0.002,0.985,False
+L_colosseum,Italy,12-41,q->end,exch,nogain,Spain,False,I,0.986,0.001,0.986,False
+L_colosseum,Italy,12-41,q->end,exch,nogain,France,False,F,0.748,0.748,0.243,True
+L_colosseum,Italy,12-41,q->end,exch,nogain,Germany,False,I,0.9,0.095,0.9,False
+L_colosseum,Italy,12-41,q->end,exch,nogain,Japan,False,J,0.59,0.59,0.406,True
+L_colosseum,Italy,12-41,q->end,exch,nogain,table,True,I,0.986,0.002,0.986,False
+L_colosseum,Italy,12-41,q->end,exch,gain,Spain,False,I,0.984,0.001,0.984,False
+L_colosseum,Italy,12-41,q->end,exch,gain,France,False,F,0.843,0.843,0.146,True
+L_colosseum,Italy,12-41,q->end,exch,gain,Germany,False,I,0.9,0.095,0.9,False
+L_colosseum,Italy,12-41,q->end,exch,gain,Japan,False,J,0.649,0.649,0.347,True
+L_colosseum,Italy,12-41,q->end,exch,gain,table,True,I,0.979,0.004,0.979,False
+L_colosseum,Italy,12-41,q->end,exch*2,raw,Spain,False, Spain,0.455,0.0,0.0,True
+L_colosseum,Italy,12-41,q->end,exch*2,raw,France,False,意大利,0.735,0.0,0.0,False
+L_colosseum,Italy,12-41,q->end,exch*2,raw,Germany,False,意大利,0.383,0.0,0.0,False
+L_colosseum,Italy,12-41,q->end,exch*2,raw,Japan,False, Japan,0.518,0.0,0.0,True
+L_colosseum,Italy,12-41,q->end,exch*2,raw,table,True, Italy,0.904,0.0,0.0,False
+L_colosseum,Italy,12-41,q->end,exch*2,nogain,Spain,False, Spain,0.539,0.0,0.0,True
+L_colosseum,Italy,12-41,q->end,exch*2,nogain,France,False,意大利,0.738,0.0,0.0,False
+L_colosseum,Italy,12-41,q->end,exch*2,nogain,Germany,False,意大利,0.432,0.0,0.0,False
+L_colosseum,Italy,12-41,q->end,exch*2,nogain,Japan,False, Japan,0.294,0.0,0.0,True
+L_colosseum,Italy,12-41,q->end,exch*2,nogain,table,True, Italy,0.88,0.0,0.0,False
+L_colosseum,Italy,12-41,q->end,exch*2,gain,Spain,False, Spain,0.525,0.0,0.0,True
+L_colosseum,Italy,12-41,q->end,exch*2,gain,France,False,意大利,0.739,0.0,0.0,False
+L_colosseum,Italy,12-41,q->end,exch*2,gain,Germany,False,意大利,0.45,0.0,0.0,False
+L_colosseum,Italy,12-41,q->end,exch*2,gain,Japan,False, Japan,0.246,0.0,0.0,True
+L_colosseum,Italy,12-41,q->end,exch*2,gain,table,True, Italy,0.88,0.0,0.0,False
+L_colosseum,Italy,12-41,q->end,np*2,raw,Spain,False,S,0.996,0.996,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,raw,France,False,F,0.997,0.997,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,raw,Germany,False,G,0.988,0.988,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,raw,Japan,False,J,0.992,0.992,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,raw,table,True,I,0.469,0.284,0.469,False
+L_colosseum,Italy,12-41,q->end,np*2,nogain,Spain,False,S,0.996,0.996,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,nogain,France,False,F,0.997,0.997,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,nogain,Germany,False,G,0.988,0.988,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,nogain,Japan,False,J,0.992,0.992,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,nogain,table,True,I,0.485,0.26,0.485,False
+L_colosseum,Italy,12-41,q->end,np*2,gain,Spain,False,S,0.994,0.994,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,gain,France,False,F,0.995,0.995,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,gain,Germany,False,G,0.984,0.984,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,gain,Japan,False,J,0.988,0.988,0.0,True
+L_colosseum,Italy,12-41,q->end,np*2,gain,table,True,T,0.294,0.294,0.139,True
+L_colosseum,Italy,12-41,all,exch,raw,Spain,False,I,0.983,0.0,0.983,False
+L_colosseum,Italy,12-41,all,exch,raw,France,False,F,0.789,0.789,0.2,True
+L_colosseum,Italy,12-41,all,exch,raw,Germany,False,I,0.847,0.147,0.847,False
+L_colosseum,Italy,12-41,all,exch,raw,Japan,False,J,0.59,0.59,0.406,True
+L_colosseum,Italy,12-41,all,exch,raw,table,True,I,0.986,0.002,0.986,False
+L_colosseum,Italy,12-41,all,exch,nogain,Spain,False,I,0.985,0.0,0.985,False
+L_colosseum,Italy,12-41,all,exch,nogain,France,False,F,0.748,0.748,0.243,True
+L_colosseum,Italy,12-41,all,exch,nogain,Germany,False,I,0.9,0.095,0.9,False
+L_colosseum,Italy,12-41,all,exch,nogain,Japan,False,J,0.56,0.56,0.436,True
+L_colosseum,Italy,12-41,all,exch,nogain,table,True,I,0.985,0.002,0.985,False
+L_colosseum,Italy,12-41,all,exch,gain,Spain,False,I,0.987,0.0,0.987,False
+L_colosseum,Italy,12-41,all,exch,gain,France,False,F,0.841,0.841,0.146,True
+L_colosseum,Italy,12-41,all,exch,gain,Germany,False,I,0.9,0.095,0.9,False
+L_colosseum,Italy,12-41,all,exch,gain,Japan,False,J,0.62,0.62,0.376,True
+L_colosseum,Italy,12-41,all,exch,gain,table,True,I,0.977,0.005,0.977,False
+L_colosseum,Italy,12-41,all,exch*2,raw,Spain,False, Spain,0.446,0.0,0.0,True
+L_colosseum,Italy,12-41,all,exch*2,raw,France,False,意大利,0.735,0.0,0.0,False
+L_colosseum,Italy,12-41,all,exch*2,raw,Germany,False,意大利,0.376,0.0,0.0,False
+L_colosseum,Italy,12-41,all,exch*2,raw,Japan,False, Japan,0.518,0.0,0.0,True
+L_colosseum,Italy,12-41,all,exch*2,raw,table,True, Italy,0.904,0.0,0.0,False
+L_colosseum,Italy,12-41,all,exch*2,nogain,Spain,False, Spain,0.539,0.0,0.0,True
+L_colosseum,Italy,12-41,all,exch*2,nogain,France,False,意大利,0.738,0.0,0.0,False
+L_colosseum,Italy,12-41,all,exch*2,nogain,Germany,False,意大利,0.432,0.0,0.0,False
+L_colosseum,Italy,12-41,all,exch*2,nogain,Japan,False, Japan,0.269,0.0,0.0,True
+L_colosseum,Italy,12-41,all,exch*2,nogain,table,True, Italy,0.88,0.0,0.0,False
+L_colosseum,Italy,12-41,all,exch*2,gain,Spain,False, Spain,0.525,0.0,0.0,True
+L_colosseum,Italy,12-41,all,exch*2,gain,France,False,意大利,0.739,0.0,0.0,False
+L_colosseum,Italy,12-41,all,exch*2,gain,Germany,False,意大利,0.45,0.0,0.0,False
+L_colosseum,Italy,12-41,all,exch*2,gain,Japan,False, Japanese,0.254,0.0,0.0,True
+L_colosseum,Italy,12-41,all,exch*2,gain,table,True, Italy,0.88,0.0,0.0,False
+L_colosseum,Italy,12-41,all,np*2,raw,Spain,False,S,0.996,0.996,0.0,True
+L_colosseum,Italy,12-41,all,np*2,raw,France,False,F,0.997,0.997,0.0,True
+L_colosseum,Italy,12-41,all,np*2,raw,Germany,False,G,0.989,0.989,0.0,True
+L_colosseum,Italy,12-41,all,np*2,raw,Japan,False,J,0.993,0.993,0.0,True
+L_colosseum,Italy,12-41,all,np*2,raw,table,True,I,0.494,0.264,0.494,False
+L_colosseum,Italy,12-41,all,np*2,nogain,Spain,False,S,0.996,0.996,0.0,True
+L_colosseum,Italy,12-41,all,np*2,nogain,France,False,F,0.997,0.997,0.0,True
+L_colosseum,Italy,12-41,all,np*2,nogain,Germany,False,G,0.988,0.988,0.0,True
+L_colosseum,Italy,12-41,all,np*2,nogain,Japan,False,J,0.992,0.992,0.0,True
+L_colosseum,Italy,12-41,all,np*2,nogain,table,True,I,0.47,0.285,0.47,False
+L_colosseum,Italy,12-41,all,np*2,gain,Spain,False,S,0.995,0.995,0.0,True
+L_colosseum,Italy,12-41,all,np*2,gain,France,False,F,0.994,0.994,0.0,True
+L_colosseum,Italy,12-41,all,np*2,gain,Germany,False,G,0.982,0.982,0.0,True
+L_colosseum,Italy,12-41,all,np*2,gain,Japan,False,J,0.985,0.985,0.0,True
+L_colosseum,Italy,12-41,all,np*2,gain,table,True,T,0.261,0.261,0.123,True
+L_gates,Seattle,9-27,all,exch,raw,Munich,False,S,0.811,0.002,0.811,False
+L_gates,Seattle,9-27,all,exch,raw,Tokyo,False,S,0.844,0.001,0.844,False
+L_gates,Seattle,9-27,all,exch,raw,Berlin,False,S,0.707,0.015,0.707,False
+L_gates,Seattle,9-27,all,exch,raw,Rome,False,S,0.706,0.0,0.706,False
+L_gates,Seattle,9-27,all,exch,raw,table,True,S,0.68,0.004,0.68,False
+L_gates,Seattle,9-27,all,exch,gain,Munich,False,S,0.772,0.001,0.772,False
+L_gates,Seattle,9-27,all,exch,gain,Tokyo,False,S,0.842,0.002,0.842,False
+L_gates,Seattle,9-27,all,exch,gain,Berlin,False,S,0.6,0.014,0.6,False
+L_gates,Seattle,9-27,all,exch,gain,Rome,False,S,0.68,0.0,0.68,False
+L_gates,Seattle,9-27,all,exch,gain,table,True,S,0.565,0.007,0.565,False
+L_gates,Seattle,9-27,all,exch*2,raw,Munich,False, Munich,0.727,0.0,0.0,True
+L_gates,Seattle,9-27,all,exch*2,raw,Tokyo,False,Seattle,0.605,0.0,0.0,False
+L_gates,Seattle,9-27,all,exch*2,raw,Berlin,False, Berlin,0.612,0.0,0.0,True
+L_gates,Seattle,9-27,all,exch*2,raw,Rome,False, Seattle,0.759,0.0,0.0,False
+L_gates,Seattle,9-27,all,exch*2,raw,table,True, table,0.952,0.0,0.0,True
+L_gates,Seattle,9-27,all,exch*2,gain,Munich,False, Munich,0.654,0.0,0.0,True
+L_gates,Seattle,9-27,all,exch*2,gain,Tokyo,False,Seattle,0.609,0.0,0.0,False
+L_gates,Seattle,9-27,all,exch*2,gain,Berlin,False, Berlin,0.403,0.0,0.0,True
+L_gates,Seattle,9-27,all,exch*2,gain,Rome,False, Seattle,0.728,0.0,0.0,False
+L_gates,Seattle,9-27,all,exch*2,gain,table,True, table,0.904,0.0,0.0,True
+L_gates,Seattle,9-27,all,np*2,raw,Munich,False,M,0.618,0.618,0.015,True
+L_gates,Seattle,9-27,all,np*2,raw,Tokyo,False,N,0.971,0.0,0.002,False
+L_gates,Seattle,9-27,all,np*2,raw,Berlin,False,B,0.616,0.616,0.291,True
+L_gates,Seattle,9-27,all,np*2,raw,Rome,False,N,0.965,0.0,0.001,False
+L_gates,Seattle,9-27,all,np*2,raw,table,True,D,0.561,0.3,0.052,False
+L_gates,Seattle,9-27,all,np*2,gain,Munich,False,M,0.619,0.619,0.016,True
+L_gates,Seattle,9-27,all,np*2,gain,Tokyo,False,N,0.974,0.0,0.001,False
+L_gates,Seattle,9-27,all,np*2,gain,Berlin,False,B,0.513,0.513,0.4,True
+L_gates,Seattle,9-27,all,np*2,gain,Rome,False,N,0.959,0.001,0.001,False
+L_gates,Seattle,9-27,all,np*2,gain,table,True,D,0.487,0.379,0.019,False
+L_gates,Seattle,32-54,all,exch,raw,Munich,False,M,0.537,0.537,0.039,True
+L_gates,Seattle,32-54,all,exch,raw,Tokyo,False,N,0.791,0.156,0.007,False
+L_gates,Seattle,32-54,all,exch,raw,Berlin,False,N,0.553,0.179,0.028,False
+L_gates,Seattle,32-54,all,exch,raw,Rome,False,N,0.681,0.006,0.004,False
+L_gates,Seattle,32-54,all,exch,raw,table,True,S,0.623,0.066,0.623,False
+L_gates,Seattle,32-54,all,exch,gain,Munich,False,M,0.356,0.356,0.055,True
+L_gates,Seattle,32-54,all,exch,gain,Tokyo,False,N,0.807,0.124,0.012,False
+L_gates,Seattle,32-54,all,exch,gain,Berlin,False,N,0.466,0.194,0.034,False
+L_gates,Seattle,32-54,all,exch,gain,Rome,False,N,0.725,0.006,0.003,False
+L_gates,Seattle,32-54,all,exch,gain,table,True,S,0.716,0.031,0.716,False
+L_gates,Seattle,32-54,all,exch*2,raw,Munich,False, Munich,1.0,0.0,0.0,True
+L_gates,Seattle,32-54,all,exch*2,raw,Tokyo,False, Tokyo,1.0,0.0,0.0,True
+L_gates,Seattle,32-54,all,exch*2,raw,Berlin,False, Berlin,0.997,0.0,0.0,True
+L_gates,Seattle,32-54,all,exch*2,raw,Rome,False, Seattle,0.999,0.0,0.0,False
+L_gates,Seattle,32-54,all,exch*2,raw,table,True, table,1.0,0.0,0.0,True
+L_gates,Seattle,32-54,all,exch*2,gain,Munich,False, Munich,1.0,0.0,0.0,True
+L_gates,Seattle,32-54,all,exch*2,gain,Tokyo,False, Tokyo,1.0,0.0,0.0,True
+L_gates,Seattle,32-54,all,exch*2,gain,Berlin,False, Berlin,0.996,0.0,0.0,True
+L_gates,Seattle,32-54,all,exch*2,gain,Rome,False, Seattle,0.999,0.0,0.0,False
+L_gates,Seattle,32-54,all,exch*2,gain,table,True, table,1.0,0.0,0.0,True
+L_gates,Seattle,32-54,all,np*2,raw,Munich,False,M,0.699,0.699,0.001,True
+L_gates,Seattle,32-54,all,np*2,raw,Tokyo,False,T,0.99,0.99,0.001,True
+L_gates,Seattle,32-54,all,np*2,raw,Berlin,False,B,0.996,0.996,0.0,True
+L_gates,Seattle,32-54,all,np*2,raw,Rome,False,R,0.855,0.855,0.008,True
+L_gates,Seattle,32-54,all,np*2,raw,table,True,S,0.668,0.012,0.668,False
+L_gates,Seattle,32-54,all,np*2,gain,Munich,False,M,0.548,0.548,0.001,True
+L_gates,Seattle,32-54,all,np*2,gain,Tokyo,False,T,0.993,0.993,0.001,True
+L_gates,Seattle,32-54,all,np*2,gain,Berlin,False,B,0.995,0.995,0.0,True
+L_gates,Seattle,32-54,all,np*2,gain,Rome,False,R,0.835,0.835,0.006,True
+L_gates,Seattle,32-54,all,np*2,gain,table,True,B,0.773,0.006,0.039,False
+V_LM_eiffel,France,9-27,all,exch,raw,Spain,False,F,0.995,0.0,0.995,False
+V_LM_eiffel,France,9-27,all,exch,raw,Germany,False,F,0.559,0.436,0.559,False
+V_LM_eiffel,France,9-27,all,exch,raw,Japan,False,F,0.996,0.0,0.996,False
+V_LM_eiffel,France,9-27,all,exch,raw,Brazil,False,F,0.993,0.0,0.993,False
+V_LM_eiffel,France,9-27,all,exch,raw,table,True,F,0.996,0.0,0.996,False
+V_LM_eiffel,France,9-27,all,exch,gain,Spain,False,F,0.994,0.0,0.994,False
+V_LM_eiffel,France,9-27,all,exch,gain,Germany,False,F,0.815,0.182,0.815,False
+V_LM_eiffel,France,9-27,all,exch,gain,Japan,False,F,0.996,0.0,0.996,False
+V_LM_eiffel,France,9-27,all,exch,gain,Brazil,False,F,0.995,0.0,0.995,False
+V_LM_eiffel,France,9-27,all,exch,gain,table,True,F,0.995,0.0,0.995,False
+V_LM_eiffel,France,9-27,all,exch*2,raw,Spain,False,法国,0.62,0.0,0.0,False
+V_LM_eiffel,France,9-27,all,exch*2,raw,Germany,False, French,0.524,0.0,0.0,False
+V_LM_eiffel,France,9-27,all,exch*2,raw,Japan,False,法国,0.278,0.0,0.0,False
+V_LM_eiffel,France,9-27,all,exch*2,raw,Brazil,False,法国,0.627,0.0,0.0,False
+V_LM_eiffel,France,9-27,all,exch*2,raw,table,True, table,0.882,0.0,0.0,True
+V_LM_eiffel,France,9-27,all,exch*2,gain,Spain,False,法国,0.33,0.0,0.0,False
+V_LM_eiffel,France,9-27,all,exch*2,gain,Germany,False,在德国,0.53,0.0,0.0,False
+V_LM_eiffel,France,9-27,all,exch*2,gain,Japan,False, French,0.283,0.0,0.0,False
+V_LM_eiffel,France,9-27,all,exch*2,gain,Brazil,False,法国,0.367,0.0,0.0,False
+V_LM_eiffel,France,9-27,all,exch*2,gain,table,True, France,0.839,0.0,0.0,False
+V_LM_eiffel,France,9-27,all,np*2,raw,Spain,False,S,0.991,0.991,0.0,True
+V_LM_eiffel,France,9-27,all,np*2,raw,Germany,False,G,0.988,0.988,0.0,True
+V_LM_eiffel,France,9-27,all,np*2,raw,Japan,False,J,0.993,0.993,0.0,True
+V_LM_eiffel,France,9-27,all,np*2,raw,Brazil,False,B,0.995,0.995,0.0,True
+V_LM_eiffel,France,9-27,all,np*2,raw,table,True,F,0.994,0.0,0.994,False
+V_LM_eiffel,France,9-27,all,np*2,gain,Spain,False,S,0.992,0.992,0.0,True
+V_LM_eiffel,France,9-27,all,np*2,gain,Germany,False,G,0.99,0.99,0.0,True
+V_LM_eiffel,France,9-27,all,np*2,gain,Japan,False,J,0.993,0.993,0.0,True
+V_LM_eiffel,France,9-27,all,np*2,gain,Brazil,False,B,0.994,0.994,0.0,True
+V_LM_eiffel,France,9-27,all,np*2,gain,table,True,F,0.992,0.001,0.992,False
+V_LM_eiffel,France,32-54,all,exch,raw,Spain,False,S,0.529,0.529,0.467,True
+V_LM_eiffel,France,32-54,all,exch,raw,Germany,False,G,0.985,0.985,0.01,True
+V_LM_eiffel,France,32-54,all,exch,raw,Japan,False,J,0.987,0.987,0.01,True
+V_LM_eiffel,France,32-54,all,exch,raw,Brazil,False,B,0.775,0.775,0.222,True
+V_LM_eiffel,France,32-54,all,exch,raw,table,True,T,0.832,0.832,0.113,True
+V_LM_eiffel,France,32-54,all,exch,gain,Spain,False,F,0.703,0.293,0.703,False
+V_LM_eiffel,France,32-54,all,exch,gain,Germany,False,G,0.985,0.985,0.011,True
+V_LM_eiffel,France,32-54,all,exch,gain,Japan,False,J,0.987,0.987,0.01,True
+V_LM_eiffel,France,32-54,all,exch,gain,Brazil,False,B,0.753,0.753,0.244,True
+V_LM_eiffel,France,32-54,all,exch,gain,table,True,T,0.936,0.936,0.032,True
+V_LM_eiffel,France,32-54,all,exch*2,raw,Spain,False, France,0.993,0.0,0.0,False
+V_LM_eiffel,France,32-54,all,exch*2,raw,Germany,False, Germany,0.356,0.0,0.0,True
+V_LM_eiffel,France,32-54,all,exch*2,raw,Japan,False, Japan,0.791,0.0,0.0,True
+V_LM_eiffel,France,32-54,all,exch*2,raw,Brazil,False,Brazil,0.51,0.0,0.0,True
+V_LM_eiffel,France,32-54,all,exch*2,raw,table,True, table,1.0,0.0,0.0,True
+V_LM_eiffel,France,32-54,all,exch*2,gain,Spain,False,西班牙,0.52,0.0,0.0,False
+V_LM_eiffel,France,32-54,all,exch*2,gain,Germany,False, German,0.289,0.0,0.0,True
+V_LM_eiffel,France,32-54,all,exch*2,gain,Japan,False, Japan,0.753,0.0,0.0,True
+V_LM_eiffel,France,32-54,all,exch*2,gain,Brazil,False, Brazil,0.583,0.0,0.0,True
+V_LM_eiffel,France,32-54,all,exch*2,gain,table,True, table,1.0,0.0,0.0,True
+V_LM_eiffel,France,32-54,all,np*2,raw,Spain,False,S,0.997,0.997,0.0,True
+V_LM_eiffel,France,32-54,all,np*2,raw,Germany,False,G,0.996,0.996,0.0,True
+V_LM_eiffel,France,32-54,all,np*2,raw,Japan,False,J,0.997,0.997,0.0,True
+V_LM_eiffel,France,32-54,all,np*2,raw,Brazil,False,B,0.998,0.998,0.0,True
+V_LM_eiffel,France,32-54,all,np*2,raw,table,True,T,0.981,0.981,0.0,True
+V_LM_eiffel,France,32-54,all,np*2,gain,Spain,False,S,0.998,0.998,0.0,True
+V_LM_eiffel,France,32-54,all,np*2,gain,Germany,False,G,0.996,0.996,0.0,True
+V_LM_eiffel,France,32-54,all,np*2,gain,Japan,False,J,0.997,0.997,0.0,True
+V_LM_eiffel,France,32-54,all,np*2,gain,Brazil,False,B,0.998,0.998,0.0,True
+V_LM_eiffel,France,32-54,all,np*2,gain,table,True,T,0.975,0.975,0.0,True
+L_piaf,Paris,9-27,all,exch,raw,Munich,False,P,0.949,0.001,0.949,False
+L_piaf,Paris,9-27,all,exch,raw,Tokyo,False,P,0.977,0.0,0.977,False
+L_piaf,Paris,9-27,all,exch,raw,Berlin,False,P,0.962,0.006,0.962,False
+L_piaf,Paris,9-27,all,exch,raw,Rome,False,P,0.979,0.001,0.979,False
+L_piaf,Paris,9-27,all,exch,raw,table,True,S,0.67,0.001,0.091,False
+L_piaf,Paris,9-27,all,exch,gain,Munich,False,P,0.945,0.001,0.945,False
+L_piaf,Paris,9-27,all,exch,gain,Tokyo,False,P,0.972,0.0,0.972,False
+L_piaf,Paris,9-27,all,exch,gain,Berlin,False,P,0.958,0.008,0.958,False
+L_piaf,Paris,9-27,all,exch,gain,Rome,False,P,0.973,0.001,0.973,False
+L_piaf,Paris,9-27,all,exch,gain,table,True,S,0.57,0.001,0.112,False
+L_piaf,Paris,9-27,all,exch*2,raw,Munich,False, Paris,0.833,0.0,0.0,False
+L_piaf,Paris,9-27,all,exch*2,raw,Tokyo,False, Paris,0.613,0.0,0.0,False
+L_piaf,Paris,9-27,all,exch*2,raw,Berlin,False, Paris,0.44,0.0,0.0,False
+L_piaf,Paris,9-27,all,exch*2,raw,Rome,False, Paris,0.847,0.0,0.0,False
+L_piaf,Paris,9-27,all,exch*2,raw,table,True, table,0.928,0.0,0.0,True
+L_piaf,Paris,9-27,all,exch*2,gain,Munich,False, Paris,0.8,0.0,0.0,False
+L_piaf,Paris,9-27,all,exch*2,gain,Tokyo,False, Paris,0.083,0.0,0.0,False
+L_piaf,Paris,9-27,all,exch*2,gain,Berlin,False, Paris,0.255,0.0,0.0,False
+L_piaf,Paris,9-27,all,exch*2,gain,Rome,False, Paris,0.754,0.0,0.0,False
+L_piaf,Paris,9-27,all,exch*2,gain,table,True, table,0.935,0.0,0.0,True
+L_piaf,Paris,9-27,all,np*2,raw,Munich,False,H,0.736,0.002,0.001,False
+L_piaf,Paris,9-27,all,np*2,raw,Tokyo,False,T,0.929,0.929,0.0,True
+L_piaf,Paris,9-27,all,np*2,raw,Berlin,False,B,0.488,0.488,0.001,True
+L_piaf,Paris,9-27,all,np*2,raw,Rome,False,R,0.966,0.966,0.005,True
+L_piaf,Paris,9-27,all,np*2,raw,table,True,S,0.798,0.001,0.007,False
+L_piaf,Paris,9-27,all,np*2,gain,Munich,False,B,0.545,0.009,0.0,False
+L_piaf,Paris,9-27,all,np*2,gain,Tokyo,False,T,0.911,0.911,0.0,True
+L_piaf,Paris,9-27,all,np*2,gain,Berlin,False,S,0.522,0.46,0.001,False
+L_piaf,Paris,9-27,all,np*2,gain,Rome,False,R,0.972,0.972,0.003,True
+L_piaf,Paris,9-27,all,np*2,gain,table,True,S,0.772,0.001,0.009,False
+L_piaf,Paris,32-54,all,exch,raw,Munich,False,S,0.658,0.003,0.089,False
+L_piaf,Paris,32-54,all,exch,raw,Tokyo,False,T,0.973,0.973,0.003,True
+L_piaf,Paris,32-54,all,exch,raw,Berlin,False,P,0.66,0.07,0.66,False
+L_piaf,Paris,32-54,all,exch,raw,Rome,False,R,0.966,0.966,0.004,True
+L_piaf,Paris,32-54,all,exch,raw,table,True,S,0.605,0.005,0.005,False
+L_piaf,Paris,32-54,all,exch,gain,Munich,False,S,0.576,0.003,0.078,False
+L_piaf,Paris,32-54,all,exch,gain,Tokyo,False,T,0.957,0.957,0.006,True
+L_piaf,Paris,32-54,all,exch,gain,Berlin,False,P,0.631,0.075,0.631,False
+L_piaf,Paris,32-54,all,exch,gain,Rome,False,R,0.965,0.965,0.003,True
+L_piaf,Paris,32-54,all,exch,gain,table,True,S,0.552,0.006,0.006,False
+L_piaf,Paris,32-54,all,exch*2,raw,Munich,False, Munich,1.0,0.0,0.0,True
+L_piaf,Paris,32-54,all,exch*2,raw,Tokyo,False, Tokyo,1.0,0.0,0.0,True
+L_piaf,Paris,32-54,all,exch*2,raw,Berlin,False, Paris,0.986,0.0,0.0,False
+L_piaf,Paris,32-54,all,exch*2,raw,Rome,False, Paris,0.997,0.0,0.0,False
+L_piaf,Paris,32-54,all,exch*2,raw,table,True, table,1.0,0.0,0.0,True
+L_piaf,Paris,32-54,all,exch*2,gain,Munich,False, Munich,1.0,0.0,0.0,True
+L_piaf,Paris,32-54,all,exch*2,gain,Tokyo,False, Tokyo,1.0,0.0,0.0,True
+L_piaf,Paris,32-54,all,exch*2,gain,Berlin,False, Berlin,0.987,0.0,0.0,True
+L_piaf,Paris,32-54,all,exch*2,gain,Rome,False, Rome,1.0,0.0,0.0,True
+L_piaf,Paris,32-54,all,exch*2,gain,table,True, table,1.0,0.0,0.0,True
+L_piaf,Paris,32-54,all,np*2,raw,Munich,False,H,0.717,0.206,0.0,False
+L_piaf,Paris,32-54,all,np*2,raw,Tokyo,False,T,0.932,0.932,0.0,True
+L_piaf,Paris,32-54,all,np*2,raw,Berlin,False,B,0.525,0.525,0.0,True
+L_piaf,Paris,32-54,all,np*2,raw,Rome,False,R,0.942,0.942,0.002,True
+L_piaf,Paris,32-54,all,np*2,raw,table,True,S,0.796,0.004,0.002,False
+L_piaf,Paris,32-54,all,np*2,gain,Munich,False,M,0.728,0.728,0.0,True
+L_piaf,Paris,32-54,all,np*2,gain,Tokyo,False,T,0.917,0.917,0.0,True
+L_piaf,Paris,32-54,all,np*2,gain,Berlin,False,B,0.585,0.585,0.0,True
+L_piaf,Paris,32-54,all,np*2,gain,Rome,False,R,0.92,0.92,0.002,True
+L_piaf,Paris,32-54,all,np*2,gain,table,True,S,0.823,0.004,0.002,False

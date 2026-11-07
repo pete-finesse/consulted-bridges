@@ -1,0 +1,15 @@
+key,sentence,word,kind,strength,early_drop
+O_bicycle|null|shoe,O_bicycle,shoe,everyday word (noise),0.155,0.003
+O_bicycle|null|spoon,O_bicycle,spoon,everyday word (noise),0.125,0.01
+O_bicycle|null|ticket,O_bicycle,ticket,everyday word (noise),0.116,0.02
+O_bicycle|null|helmet,O_bicycle,helmet,everyday word (noise),0.115,0.009
+O_bicycle|null|saddle,O_bicycle,saddle,everyday word (noise),0.115,0.021
+O_bicycle|null|rocket,O_bicycle,rocket,everyday word (noise),0.111,0.013
+O_bicycle|null|basket,O_bicycle,basket,everyday word (noise),0.11,0.009
+O_bicycle|null|ladder,O_bicycle,ladder,everyday word (noise),0.108,0.0
+O_bicycle|null|hammer,O_bicycle,hammer,everyday word (noise),0.107,0.017
+O_bicycle|null|button,O_bicycle,button,everyday word (noise),0.101,0.008
+O_bicycle|null|pillow,O_bicycle,pillow,everyday word (noise),0.098,0.004
+O_bicycle|null|kettle,O_bicycle,kettle,everyday word (noise),0.095,0.005
+O_bicycle|kind|car,O_bicycle,car,"same kind as bicycle, same answer",,0.024
+O_bicycle|kind|bus,O_bicycle,bus,"same kind as bicycle, same answer",,0.049

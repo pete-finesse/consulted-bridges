@@ -1,0 +1,19 @@
+sentence,verdict,P_base,model_said,reach,need,specificity,isolation,lead,quality,swaps_follow
+L_colosseum,CATEGORY EFFECT,0.977,I,0.958,0.954,0.133,0.999,18.0,0.127,0.5
+L_federer,BYSTANDER,0.895,B,0.976,0.0,0.315,0.299,0.0,0.0,0.0
+L_gates,CATEGORY EFFECT,0.758,S,0.918,0.804,0.258,0.988,21.0,0.205,0.143
+L_maldini,UNTESTABLE,0.181,S,,,,,,,
+L_mishima,UNTESTABLE,0.188,Y,,,,,,,
+L_mozart,CATEGORY EFFECT,0.841,S,1.0,0.669,0.226,1.0,21.0,0.151,0.143
+L_piaf,UNTESTABLE,0.173,M,,,,,,,
+L_spider,UNTESTABLE,0.073,W,,,,,,,
+L_york,CONSULTED BRIDGE,0.901,T,0.999,0.913,0.609,0.999,21.0,0.555,0.0
+O_bicycle,UNTESTABLE,0.954,Two,0.092,0.298,0.845,1.0,3.0,0.252,0.0
+O_guitar,UNTESTABLE,0.347,Four,,,,,,,
+R_bee,UNCLEAR,0.957,Six,0.53,0.118,0.691,1.0,,0.0,0.0
+R_duck,UNTESTABLE,0.958,Two,,,,,,,
+R_spider,CONSULTED BRIDGE,0.882,Eight,0.103,0.95,0.678,1.0,12.0,0.644,0.4
+X_mishima_country,BYSTANDER,0.998,Japan,0.741,0.0,0.0,0.251,,0.0,0.0
+X_mozart_country,ANSWER FROM THE START,0.503,Austria,,,,,,,
+X_spider,CONSULTED BRIDGE,0.882,Eight,0.103,0.95,0.955,1.0,12.0,0.907,0.6
+X_york_country,CONSULTED BRIDGE,0.994,Canada,0.982,0.65,0.966,0.011,6.0,0.007,0.0

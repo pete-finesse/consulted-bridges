@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  70%|██████▉   | 595/851 [00:00<00:00, 5933.03it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 5705.48it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+PROGRESS 0/18 L_colosseum__1peer
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/swarm-explore/projects/silent-dissent/harness/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_colosseum__1peer] says 'I'; P(right) 0.98 P(peer F) 0.00 LO -5.37 | steer 'Italy' +0.5 (layers 6–17): P(right) 0.98→0.80, P(peer) 0.00→0.02, says 'I'; holds in 2/12 | noise best dLO +1.68 | same kind 2.77 | answer dir -7.64 | EFFECT -0.07
+PROGRESS 1/18 L_colosseum__2peer
+[L_colosseum__2peer] says 'I'; P(right) 0.73 P(peer F) 0.18 LO -1.37 | steer 'Italy' +1.0 (layers 24–35): P(right) 0.73→0.00, P(peer) 0.18→0.00, says ''; holds in 1/12 | noise best dLO +1.06 | same kind 0.67 | answer dir -11.64 | EFFECT +0.64
+PROGRESS 2/18 L_colosseum__3peer

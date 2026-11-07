@@ -1,0 +1,183 @@
+key,sentence,word,kind,strength,early_drop
+L_colosseum__alone|null|jacket,L_colosseum__alone,jacket,everyday word (noise),0.046,0.004
+L_colosseum__alone|null|bottle,L_colosseum__alone,bottle,everyday word (noise),0.043,0.001
+L_colosseum__alone|null|blanket,L_colosseum__alone,blanket,everyday word (noise),0.043,0.006
+L_colosseum__alone|null|spoon,L_colosseum__alone,spoon,everyday word (noise),0.042,0.001
+L_colosseum__alone|null|river,L_colosseum__alone,river,everyday word (noise),0.042,0.003
+L_colosseum__alone|null|button,L_colosseum__alone,button,everyday word (noise),0.042,0.002
+L_colosseum__alone|null|lantern,L_colosseum__alone,lantern,everyday word (noise),0.042,0.001
+L_colosseum__alone|null|pencil,L_colosseum__alone,pencil,everyday word (noise),0.04,0.001
+L_colosseum__alone|null|candle,L_colosseum__alone,candle,everyday word (noise),0.039,0.001
+L_colosseum__alone|null|brick,L_colosseum__alone,brick,everyday word (noise),0.038,0.0
+L_colosseum__alone|null|bread,L_colosseum__alone,bread,everyday word (noise),0.038,0.001
+L_colosseum__alone|null|helmet,L_colosseum__alone,helmet,everyday word (noise),0.038,0.001
+L_colosseum__alone|kind|Spain,L_colosseum__alone,Spain,"same kind as Italy, same answer",,0.001
+L_colosseum__alone|kind|France,L_colosseum__alone,France,"same kind as Italy, same answer",,0.002
+L_colosseum__agree|null|ribbon,L_colosseum__agree,ribbon,everyday word (noise),0.048,0.002
+L_colosseum__agree|null|jacket,L_colosseum__agree,jacket,everyday word (noise),0.044,0.016
+L_colosseum__agree|null|spoon,L_colosseum__agree,spoon,everyday word (noise),0.042,0.001
+L_colosseum__agree|null|pencil,L_colosseum__agree,pencil,everyday word (noise),0.042,0.029
+L_colosseum__agree|null|river,L_colosseum__agree,river,everyday word (noise),0.042,0.011
+L_colosseum__agree|null|blanket,L_colosseum__agree,blanket,everyday word (noise),0.042,0.027
+L_colosseum__agree|null|bread,L_colosseum__agree,bread,everyday word (noise),0.041,0.011
+L_colosseum__agree|null|button,L_colosseum__agree,button,everyday word (noise),0.041,0.016
+L_colosseum__agree|null|brick,L_colosseum__agree,brick,everyday word (noise),0.04,0.015
+L_colosseum__agree|null|window,L_colosseum__agree,window,everyday word (noise),0.04,0.007
+L_colosseum__agree|null|kettle,L_colosseum__agree,kettle,everyday word (noise),0.039,0.024
+L_colosseum__agree|null|bottle,L_colosseum__agree,bottle,everyday word (noise),0.038,0.01
+L_colosseum__agree|kind|Spain,L_colosseum__agree,Spain,"same kind as Italy, same answer",,0.032
+L_colosseum__agree|kind|France,L_colosseum__agree,France,"same kind as Italy, same answer",,0.024
+L_colosseum__disagree|null|ribbon,L_colosseum__disagree,ribbon,everyday word (noise),0.048,0.038
+L_colosseum__disagree|null|jacket,L_colosseum__disagree,jacket,everyday word (noise),0.044,0.021
+L_colosseum__disagree|null|pencil,L_colosseum__disagree,pencil,everyday word (noise),0.042,0.036
+L_colosseum__disagree|null|river,L_colosseum__disagree,river,everyday word (noise),0.042,0.019
+L_colosseum__disagree|null|blanket,L_colosseum__disagree,blanket,everyday word (noise),0.042,0.038
+L_colosseum__disagree|null|spoon,L_colosseum__disagree,spoon,everyday word (noise),0.042,0.054
+L_colosseum__disagree|null|brick,L_colosseum__disagree,brick,everyday word (noise),0.041,0.054
+L_colosseum__disagree|null|bread,L_colosseum__disagree,bread,everyday word (noise),0.041,0.036
+L_colosseum__disagree|null|button,L_colosseum__disagree,button,everyday word (noise),0.041,0.022
+L_colosseum__disagree|null|window,L_colosseum__disagree,window,everyday word (noise),0.04,0.054
+L_colosseum__disagree|null|kettle,L_colosseum__disagree,kettle,everyday word (noise),0.039,0.038
+L_colosseum__disagree|null|bottle,L_colosseum__disagree,bottle,everyday word (noise),0.038,0.093
+L_colosseum__disagree|kind|Spain,L_colosseum__disagree,Spain,"same kind as Italy, same answer",,0.108
+L_colosseum__disagree|kind|France,L_colosseum__disagree,France,"same kind as Italy, same answer",,0.018
+L_gates__alone|null|wallet,L_gates__alone,wallet,everyday word (noise),0.059,0.012
+L_gates__alone|null|river,L_gates__alone,river,everyday word (noise),0.054,0.016
+L_gates__alone|null|jacket,L_gates__alone,jacket,everyday word (noise),0.047,0.013
+L_gates__alone|null|bottle,L_gates__alone,bottle,everyday word (noise),0.043,0.005
+L_gates__alone|null|mountain,L_gates__alone,mountain,everyday word (noise),0.043,0.007
+L_gates__alone|null|lantern,L_gates__alone,lantern,everyday word (noise),0.042,0.007
+L_gates__alone|null|spoon,L_gates__alone,spoon,everyday word (noise),0.041,0.001
+L_gates__alone|null|pencil,L_gates__alone,pencil,everyday word (noise),0.04,0.008
+L_gates__alone|null|mirror,L_gates__alone,mirror,everyday word (noise),0.04,0.006
+L_gates__alone|null|candle,L_gates__alone,candle,everyday word (noise),0.039,0.007
+L_gates__alone|null|bread,L_gates__alone,bread,everyday word (noise),0.039,0.014
+L_gates__alone|null|door,L_gates__alone,door,everyday word (noise),0.038,0.014
+L_gates__alone|kind|Boston,L_gates__alone,Boston,"same kind as Seattle, same answer",,0.057
+L_gates__alone|kind|Chicago,L_gates__alone,Chicago,"same kind as Seattle, same answer",,0.06
+L_gates__agree|null|wallet,L_gates__agree,wallet,everyday word (noise),0.056,0.016
+L_gates__agree|null|ribbon,L_gates__agree,ribbon,everyday word (noise),0.049,0.011
+L_gates__agree|null|river,L_gates__agree,river,everyday word (noise),0.048,0.011
+L_gates__agree|null|jacket,L_gates__agree,jacket,everyday word (noise),0.045,0.015
+L_gates__agree|null|pencil,L_gates__agree,pencil,everyday word (noise),0.042,0.016
+L_gates__agree|null|bread,L_gates__agree,bread,everyday word (noise),0.041,0.011
+L_gates__agree|null|spoon,L_gates__agree,spoon,everyday word (noise),0.04,0.011
+L_gates__agree|null|mirror,L_gates__agree,mirror,everyday word (noise),0.039,0.014
+L_gates__agree|null|bottle,L_gates__agree,bottle,everyday word (noise),0.038,0.008
+L_gates__agree|null|window,L_gates__agree,window,everyday word (noise),0.038,0.009
+L_gates__agree|null|mountain,L_gates__agree,mountain,everyday word (noise),0.037,0.01
+L_gates__agree|null|door,L_gates__agree,door,everyday word (noise),0.037,0.021
+L_gates__agree|kind|Boston,L_gates__agree,Boston,"same kind as Seattle, same answer",,0.016
+L_gates__agree|kind|Chicago,L_gates__agree,Chicago,"same kind as Seattle, same answer",,0.028
+L_piaf__alone|null|mirror,L_piaf__alone,mirror,everyday word (noise),0.065,0.0
+L_piaf__alone|null|window,L_piaf__alone,window,everyday word (noise),0.064,0.008
+L_piaf__alone|null|button,L_piaf__alone,button,everyday word (noise),0.063,0.002
+L_piaf__alone|null|table,L_piaf__alone,table,everyday word (noise),0.061,0.008
+L_piaf__alone|null|blanket,L_piaf__alone,blanket,everyday word (noise),0.059,0.005
+L_piaf__alone|null|basket,L_piaf__alone,basket,everyday word (noise),0.059,0.0
+L_piaf__alone|null|cloud,L_piaf__alone,cloud,everyday word (noise),0.058,0.009
+L_piaf__alone|null|bottle,L_piaf__alone,bottle,everyday word (noise),0.055,0.014
+L_piaf__alone|null|river,L_piaf__alone,river,everyday word (noise),0.054,0.008
+L_piaf__alone|null|door,L_piaf__alone,door,everyday word (noise),0.053,0.007
+L_piaf__alone|null|carpet,L_piaf__alone,carpet,everyday word (noise),0.052,0.024
+L_piaf__alone|null|garden,L_piaf__alone,garden,everyday word (noise),0.051,0.003
+L_piaf__alone|kind|Lyon,L_piaf__alone,Lyon,"same kind as Paris, same answer",,0.0
+L_piaf__alone|kind|Marseille,L_piaf__alone,Marseille,"same kind as Paris, same answer",,0.328
+L_piaf__agree|null|mirror,L_piaf__agree,mirror,everyday word (noise),0.066,0.016
+L_piaf__agree|null|window,L_piaf__agree,window,everyday word (noise),0.064,0.007
+L_piaf__agree|null|button,L_piaf__agree,button,everyday word (noise),0.062,0.008
+L_piaf__agree|null|cloud,L_piaf__agree,cloud,everyday word (noise),0.059,0.01
+L_piaf__agree|null|table,L_piaf__agree,table,everyday word (noise),0.059,0.006
+L_piaf__agree|null|basket,L_piaf__agree,basket,everyday word (noise),0.059,0.004
+L_piaf__agree|null|blanket,L_piaf__agree,blanket,everyday word (noise),0.059,0.009
+L_piaf__agree|null|bottle,L_piaf__agree,bottle,everyday word (noise),0.055,0.017
+L_piaf__agree|null|carpet,L_piaf__agree,carpet,everyday word (noise),0.053,0.026
+L_piaf__agree|null|garden,L_piaf__agree,garden,everyday word (noise),0.051,0.006
+L_piaf__agree|null|door,L_piaf__agree,door,everyday word (noise),0.051,0.001
+L_piaf__agree|null|river,L_piaf__agree,river,everyday word (noise),0.05,0.016
+L_piaf__agree|kind|Lyon,L_piaf__agree,Lyon,"same kind as Paris, same answer",,0.014
+L_piaf__agree|kind|Marseille,L_piaf__agree,Marseille,"same kind as Paris, same answer",,0.042
+L_mozart__alone|null|river,L_mozart__alone,river,everyday word (noise),0.054,0.0
+L_mozart__alone|null|blanket,L_mozart__alone,blanket,everyday word (noise),0.049,0.0
+L_mozart__alone|null|jacket,L_mozart__alone,jacket,everyday word (noise),0.048,0.0
+L_mozart__alone|null|bottle,L_mozart__alone,bottle,everyday word (noise),0.043,0.0
+L_mozart__alone|null|mountain,L_mozart__alone,mountain,everyday word (noise),0.042,0.0
+L_mozart__alone|null|lantern,L_mozart__alone,lantern,everyday word (noise),0.042,0.0
+L_mozart__alone|null|spoon,L_mozart__alone,spoon,everyday word (noise),0.041,0.0
+L_mozart__alone|null|button,L_mozart__alone,button,everyday word (noise),0.041,0.0
+L_mozart__alone|null|table,L_mozart__alone,table,everyday word (noise),0.04,0.0
+L_mozart__alone|null|pencil,L_mozart__alone,pencil,everyday word (noise),0.039,0.0
+L_mozart__alone|null|candle,L_mozart__alone,candle,everyday word (noise),0.039,0.0
+L_mozart__alone|null|shoe,L_mozart__alone,shoe,everyday word (noise),0.039,0.0
+L_mozart__alone|kind|Vienna,L_mozart__alone,Vienna,"same kind as Salzburg, same answer",,0.01
+L_mozart__alone|kind|Graz,L_mozart__alone,Graz,"same kind as Salzburg, same answer",,0.0
+L_mozart__agree|null|blanket,L_mozart__agree,blanket,everyday word (noise),0.051,0.004
+L_mozart__agree|null|ribbon,L_mozart__agree,ribbon,everyday word (noise),0.05,0.001
+L_mozart__agree|null|river,L_mozart__agree,river,everyday word (noise),0.048,0.002
+L_mozart__agree|null|jacket,L_mozart__agree,jacket,everyday word (noise),0.045,0.004
+L_mozart__agree|null|pencil,L_mozart__agree,pencil,everyday word (noise),0.043,0.006
+L_mozart__agree|null|window,L_mozart__agree,window,everyday word (noise),0.041,0.0
+L_mozart__agree|null|bread,L_mozart__agree,bread,everyday word (noise),0.041,0.003
+L_mozart__agree|null|button,L_mozart__agree,button,everyday word (noise),0.04,0.004
+L_mozart__agree|null|spoon,L_mozart__agree,spoon,everyday word (noise),0.04,0.003
+L_mozart__agree|null|table,L_mozart__agree,table,everyday word (noise),0.039,0.005
+L_mozart__agree|null|bottle,L_mozart__agree,bottle,everyday word (noise),0.038,0.001
+L_mozart__agree|null|brick,L_mozart__agree,brick,everyday word (noise),0.038,0.003
+L_mozart__agree|kind|Vienna,L_mozart__agree,Vienna,"same kind as Salzburg, same answer",,0.003
+L_mozart__agree|kind|Graz,L_mozart__agree,Graz,"same kind as Salzburg, same answer",,0.003
+L_spider__alone|null|pillow,L_spider__alone,pillow,everyday word (noise),0.075,0.002
+L_spider__alone|null|lantern,L_spider__alone,lantern,everyday word (noise),0.056,0.003
+L_spider__alone|null|jacket,L_spider__alone,jacket,everyday word (noise),0.048,0.004
+L_spider__alone|null|bottle,L_spider__alone,bottle,everyday word (noise),0.043,0.003
+L_spider__alone|null|spoon,L_spider__alone,spoon,everyday word (noise),0.043,0.002
+L_spider__alone|null|ladder,L_spider__alone,ladder,everyday word (noise),0.042,0.003
+L_spider__alone|null|river,L_spider__alone,river,everyday word (noise),0.042,0.002
+L_spider__alone|null|candle,L_spider__alone,candle,everyday word (noise),0.042,0.002
+L_spider__alone|null|pencil,L_spider__alone,pencil,everyday word (noise),0.04,0.001
+L_spider__alone|null|shoe,L_spider__alone,shoe,everyday word (noise),0.039,0.002
+L_spider__alone|null|kettle,L_spider__alone,kettle,everyday word (noise),0.039,0.002
+L_spider__alone|null|bread,L_spider__alone,bread,everyday word (noise),0.037,0.002
+L_spider__alone|kind|ants,L_spider__alone,ants,"same kind as spider, same answer",,0.002
+L_spider__alone|kind|bees,L_spider__alone,bees,"same kind as spider, same answer",,0.006
+L_spider__agree|null|pillow,L_spider__agree,pillow,everyday word (noise),0.072,0.001
+L_spider__agree|null|lantern,L_spider__agree,lantern,everyday word (noise),0.052,0.008
+L_spider__agree|null|ribbon,L_spider__agree,ribbon,everyday word (noise),0.049,0.005
+L_spider__agree|null|jacket,L_spider__agree,jacket,everyday word (noise),0.044,0.01
+L_spider__agree|null|pencil,L_spider__agree,pencil,everyday word (noise),0.042,0.003
+L_spider__agree|null|river,L_spider__agree,river,everyday word (noise),0.042,0.003
+L_spider__agree|null|spoon,L_spider__agree,spoon,everyday word (noise),0.041,0.003
+L_spider__agree|null|kettle,L_spider__agree,kettle,everyday word (noise),0.041,0.004
+L_spider__agree|null|barrel,L_spider__agree,barrel,everyday word (noise),0.041,0.004
+L_spider__agree|null|bread,L_spider__agree,bread,everyday word (noise),0.04,0.004
+L_spider__agree|null|carpet,L_spider__agree,carpet,everyday word (noise),0.039,0.008
+L_spider__agree|null|bottle,L_spider__agree,bottle,everyday word (noise),0.038,0.004
+L_spider__agree|kind|ants,L_spider__agree,ants,"same kind as spider, same answer",,0.006
+L_spider__agree|kind|bees,L_spider__agree,bees,"same kind as spider, same answer",,0.008
+L_york__alone|null|river,L_york__alone,river,everyday word (noise),0.054,0.009
+L_york__alone|null|jacket,L_york__alone,jacket,everyday word (noise),0.047,0.006
+L_york__alone|null|button,L_york__alone,button,everyday word (noise),0.043,0.047
+L_york__alone|null|mountain,L_york__alone,mountain,everyday word (noise),0.043,0.012
+L_york__alone|null|bottle,L_york__alone,bottle,everyday word (noise),0.043,0.013
+L_york__alone|null|lantern,L_york__alone,lantern,everyday word (noise),0.043,0.006
+L_york__alone|null|spoon,L_york__alone,spoon,everyday word (noise),0.042,0.001
+L_york__alone|null|pencil,L_york__alone,pencil,everyday word (noise),0.04,0.01
+L_york__alone|null|shoe,L_york__alone,shoe,everyday word (noise),0.04,0.012
+L_york__alone|null|candle,L_york__alone,candle,everyday word (noise),0.04,0.02
+L_york__alone|null|bread,L_york__alone,bread,everyday word (noise),0.039,0.008
+L_york__alone|null|pillow,L_york__alone,pillow,everyday word (noise),0.037,0.01
+L_york__alone|kind|Vancouver,L_york__alone,Vancouver,"same kind as Toronto, same answer",,0.138
+L_york__alone|kind|Ottawa,L_york__alone,Ottawa,"same kind as Toronto, same answer",,0.132
+L_york__agree|null|ribbon,L_york__agree,ribbon,everyday word (noise),0.049,0.005
+L_york__agree|null|river,L_york__agree,river,everyday word (noise),0.048,0.003
+L_york__agree|null|jacket,L_york__agree,jacket,everyday word (noise),0.045,0.007
+L_york__agree|null|pencil,L_york__agree,pencil,everyday word (noise),0.041,0.016
+L_york__agree|null|spoon,L_york__agree,spoon,everyday word (noise),0.041,0.007
+L_york__agree|null|bread,L_york__agree,bread,everyday word (noise),0.041,0.006
+L_york__agree|null|button,L_york__agree,button,everyday word (noise),0.04,0.009
+L_york__agree|null|barrel,L_york__agree,barrel,everyday word (noise),0.038,0.004
+L_york__agree|null|lantern,L_york__agree,lantern,everyday word (noise),0.038,0.005
+L_york__agree|null|bottle,L_york__agree,bottle,everyday word (noise),0.038,0.007
+L_york__agree|null|mountain,L_york__agree,mountain,everyday word (noise),0.037,0.006
+L_york__agree|null|carpet,L_york__agree,carpet,everyday word (noise),0.037,0.011
+L_york__agree|kind|Vancouver,L_york__agree,Vancouver,"same kind as Toronto, same answer",,0.013
+L_york__agree|kind|Ottawa,L_york__agree,Ottawa,"same kind as Toronto, same answer",,0.015

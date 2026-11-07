@@ -1,0 +1,177 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+v2_E_spider|bee,v2_E_spider,bee,layers 6–20,Six,Six,followed the swap
+v2_E_spider|ant,v2_E_spider,ant,layers 6–20,Six,Six,followed the swap
+v2_E_spider|dog,v2_E_spider,dog,layers 6–20,Four,Four,"gave it, but it's also the fallback"
+v2_E_spider|bird,v2_E_spider,bird,layers 6–20,Two,Four,didn't follow
+v2_E_spider|snake,v2_E_spider,snake,layers 6–20,Zero,Eight,didn't follow
+v2_E_spider|horse,v2_E_spider,horse,layers 6–20,Four,Four,"gave it, but it's also the fallback"
+v2_E_spider|beetle,v2_E_spider,beetle,layers 6–20,Six,Six,followed the swap
+v2_E_spider|tick,v2_E_spider,tick,layers 6–20,Eight,Four,lost the answer
+v2_E_elephant|spider,v2_E_elephant,spider,layers 6–23,Eight,Four,didn't follow
+v2_E_elephant|ant,v2_E_elephant,ant,layers 6–23,Six,Four,didn't follow
+v2_E_elephant|bird,v2_E_elephant,bird,layers 6–23,Two,Four,didn't follow
+v2_E_elephant|snake,v2_E_elephant,snake,layers 6–23,Zero,Four,didn't follow
+v2_E_elephant|horse,v2_E_elephant,horse,layers 6–23,Four,Four,kept the answer
+v2_E_elephant|dog,v2_E_elephant,dog,layers 6–23,Four,Four,kept the answer
+v2_A2_christ_redeemer|Germany,v2_A2_christ_redeemer,Germany,layers 6–11,Berlin,Brasília,didn't follow
+v2_A2_christ_redeemer|Japan,v2_A2_christ_redeemer,Japan,layers 6–11,Tokyo,Brasília,didn't follow
+v2_A2_christ_redeemer|Spain,v2_A2_christ_redeemer,Spain,layers 6–11,Madrid,Brasília,didn't follow
+v2_A2_christ_redeemer|Egypt,v2_A2_christ_redeemer,Egypt,layers 6–11,Cairo,Brasília,didn't follow
+v2_A2_christ_redeemer|Poland,v2_A2_christ_redeemer,Poland,layers 6–11,Warsaw,Brasília,didn't follow
+v2_A2_christ_redeemer|Greece,v2_A2_christ_redeemer,Greece,layers 6–11,Athens,Brasília,didn't follow
+v2_B1_piaf|Munich,v2_B1_piaf,Munich,layers 6–14,Germany,France,didn't follow
+v2_B1_piaf|Milan,v2_B1_piaf,Milan,layers 6–14,Italy,France,didn't follow
+v2_B1_piaf|Lyon,v2_B1_piaf,Lyon,layers 6–14,France,France,kept the answer
+v2_B1_piaf|Barcelona,v2_B1_piaf,Barcelona,layers 6–14,Spain,France,didn't follow
+v2_B1_piaf|Osaka,v2_B1_piaf,Osaka,layers 6–14,Japan,France,didn't follow
+v2_B1_piaf|Toronto,v2_B1_piaf,Toronto,layers 6–14,Canada,France,didn't follow
+v2_B1_piaf|Chicago,v2_B1_piaf,Chicago,layers 6–14,USA,France,didn't follow
+v2_B1_piaf|Manchester,v2_B1_piaf,Manchester,layers 6–14,United Kingdom,France,didn't follow
+v2_B1_piaf|Lyon,v2_B1_piaf,Lyon,layers 6–14,France,France,kept the answer
+v2_B1_piaf|Marseille,v2_B1_piaf,Marseille,layers 6–14,France,France,kept the answer
+v2_B2_federer|Munich,v2_B2_federer,Munich,layers 6–17,Germany,Switzerland,didn't follow
+v2_B2_federer|Milan,v2_B2_federer,Milan,layers 6–17,Italy,Switzerland,didn't follow
+v2_B2_federer|Lyon,v2_B2_federer,Lyon,layers 6–17,France,Switzerland,didn't follow
+v2_B2_federer|Barcelona,v2_B2_federer,Barcelona,layers 6–17,Spain,Switzerland,didn't follow
+v2_B2_federer|Osaka,v2_B2_federer,Osaka,layers 6–17,Japan,Switzerland,didn't follow
+v2_B2_federer|Toronto,v2_B2_federer,Toronto,layers 6–17,Canada,Switzerland,didn't follow
+v2_B2_federer|Chicago,v2_B2_federer,Chicago,layers 6–17,USA,Switzerland,didn't follow
+v2_B2_federer|Manchester,v2_B2_federer,Manchester,layers 6–17,United Kingdom,Switzerland,didn't follow
+v2_B2_federer|Zurich,v2_B2_federer,Zurich,layers 6–17,Switzerland,Switzerland,kept the answer
+v2_B2_federer|Geneva,v2_B2_federer,Geneva,layers 6–17,Switzerland,Switzerland,kept the answer
+v2_B2_maldini|Munich,v2_B2_maldini,Munich,layers 6–17,Germany,Italy,didn't follow
+v2_B2_maldini|Lyon,v2_B2_maldini,Lyon,layers 6–17,France,Italy,didn't follow
+v2_B2_maldini|Barcelona,v2_B2_maldini,Barcelona,layers 6–17,Spain,Italy,didn't follow
+v2_B2_maldini|Osaka,v2_B2_maldini,Osaka,layers 6–17,Japan,Italy,didn't follow
+v2_B2_maldini|Toronto,v2_B2_maldini,Toronto,layers 6–17,Canada,Italy,didn't follow
+v2_B2_maldini|Chicago,v2_B2_maldini,Chicago,layers 6–17,USA,Italy,didn't follow
+v2_B2_maldini|Manchester,v2_B2_maldini,Manchester,layers 6–17,United Kingdom,Italy,didn't follow
+v2_B2_maldini|Mumbai,v2_B2_maldini,Mumbai,layers 6–17,India,Italy,didn't follow
+v2_B2_maldini|Naples,v2_B2_maldini,Naples,layers 6–17,Italy,Italy,kept the answer
+v2_B2_maldini|Florence,v2_B2_maldini,Florence,layers 6–17,Italy,Italy,kept the answer
+v2_C1_charles|Munich,v2_C1_charles,Munich,layers 6–20,Germany,Czechia,didn't follow
+v2_C1_charles|Milan,v2_C1_charles,Milan,layers 6–20,Italy,Czechia,didn't follow
+v2_C1_charles|Lyon,v2_C1_charles,Lyon,layers 6–20,France,Czechia,didn't follow
+v2_C1_charles|Barcelona,v2_C1_charles,Barcelona,layers 6–20,Spain,Czechia,didn't follow
+v2_C1_charles|Osaka,v2_C1_charles,Osaka,layers 6–20,Japan,Czechia,didn't follow
+v2_C1_charles|Toronto,v2_C1_charles,Toronto,layers 6–20,Canada,Czechia,didn't follow
+v2_C1_charles|Chicago,v2_C1_charles,Chicago,layers 6–20,USA,Czechia,didn't follow
+v2_C1_charles|Manchester,v2_C1_charles,Manchester,layers 6–20,United Kingdom,UK,followed the swap
+v2_C2_fudan|Munich,v2_C2_fudan,Munich,layers 6–17,Germany,China,didn't follow
+v2_C2_fudan|Milan,v2_C2_fudan,Milan,layers 6–17,Italy,China,didn't follow
+v2_C2_fudan|Lyon,v2_C2_fudan,Lyon,layers 6–17,France,China,didn't follow
+v2_C2_fudan|Barcelona,v2_C2_fudan,Barcelona,layers 6–17,Spain,China,didn't follow
+v2_C2_fudan|Osaka,v2_C2_fudan,Osaka,layers 6–17,Japan,China,didn't follow
+v2_C2_fudan|Toronto,v2_C2_fudan,Toronto,layers 6–17,Canada,China,didn't follow
+v2_C2_fudan|Chicago,v2_C2_fudan,Chicago,layers 6–17,USA,China,didn't follow
+v2_C2_fudan|Manchester,v2_C2_fudan,Manchester,layers 6–17,United Kingdom,China,didn't follow
+v2_C2_fudan|Beijing,v2_C2_fudan,Beijing,layers 6–17,China,China,kept the answer
+v2_C2_mcgill|Munich,v2_C2_mcgill,Munich,layers 6–14,Germany,Canada,didn't follow
+v2_C2_mcgill|Milan,v2_C2_mcgill,Milan,layers 6–14,Italy,Canada,didn't follow
+v2_C2_mcgill|Lyon,v2_C2_mcgill,Lyon,layers 6–14,France,Canada,didn't follow
+v2_C2_mcgill|Barcelona,v2_C2_mcgill,Barcelona,layers 6–14,Spain,Canada,didn't follow
+v2_C2_mcgill|Osaka,v2_C2_mcgill,Osaka,layers 6–14,Japan,Canada,didn't follow
+v2_C2_mcgill|Toronto,v2_C2_mcgill,Toronto,layers 6–14,Canada,Canada,kept the answer
+v2_C2_mcgill|Chicago,v2_C2_mcgill,Chicago,layers 6–14,USA,Canada,didn't follow
+v2_C2_mcgill|Manchester,v2_C2_mcgill,Manchester,layers 6–14,United Kingdom,Canada,didn't follow
+v2_C2_mcgill|Vancouver,v2_C2_mcgill,Vancouver,layers 6–14,Canada,Canada,kept the answer
+v2_C2_mcgill|Ottawa,v2_C2_mcgill,Ottawa,layers 6–14,Canada,Canada,kept the answer
+v3_L_federer|Munich,v3_L_federer,Munich,layers 6–26,M,B,didn't follow
+v3_L_federer|Paris,v3_L_federer,Paris,layers 6–26,P,B,didn't follow
+v3_L_federer|Tokyo,v3_L_federer,Tokyo,layers 6–26,T,B,didn't follow
+v3_L_federer|Berlin,v3_L_federer,Berlin,layers 6–26,B,B,kept the answer
+v3_L_federer|Rome,v3_L_federer,Rome,layers 6–26,R,B,didn't follow
+v3_L_federer|Madrid,v3_L_federer,Madrid,layers 6–26,M,B,didn't follow
+v3_L_federer|Chicago,v3_L_federer,Chicago,layers 6–26,C,B,didn't follow
+v3_L_federer|Lyon,v3_L_federer,Lyon,layers 6–26,L,B,didn't follow
+v3_L_colosseum|Germany,v3_L_colosseum,Germany,layers 6–26,G,G,followed the swap
+v3_L_colosseum|Japan,v3_L_colosseum,Japan,layers 6–26,J,I,didn't follow
+v3_L_colosseum|Spain,v3_L_colosseum,Spain,layers 6–26,S,S,followed the swap
+v3_L_colosseum|France,v3_L_colosseum,France,layers 6–26,F,F,followed the swap
+v3_L_colosseum|Brazil,v3_L_colosseum,Brazil,layers 6–26,B,I,didn't follow
+v3_L_colosseum|Canada,v3_L_colosseum,Canada,layers 6–26,C,U,didn't follow
+v3_R_duck|spider,v3_R_duck,spider,layers 6–23,Eight,Two,didn't follow
+v3_R_duck|ant,v3_R_duck,ant,layers 6–23,Six,Two,didn't follow
+v3_R_duck|dog,v3_R_duck,dog,layers 6–23,Four,Two,didn't follow
+v3_R_duck|snake,v3_R_duck,snake,layers 6–23,Zero,Two,didn't follow
+v3_R_duck|horse,v3_R_duck,horse,layers 6–23,Four,Two,didn't follow
+v3_R_duck|bee,v3_R_duck,bee,layers 6–23,Six,Two,didn't follow
+v3_R_duck|chicken,v3_R_duck,chicken,layers 6–23,Two,Two,kept the answer
+v3_X_spider|bee,v3_X_spider,bee,layers 6–20,Six,Six,followed the swap
+v3_X_spider|ant,v3_X_spider,ant,layers 6–20,Six,Six,followed the swap
+v3_X_spider|dog,v3_X_spider,dog,layers 6–20,Four,Four,"gave it, but it's also the fallback"
+v3_X_spider|bird,v3_X_spider,bird,layers 6–20,Two,Four,didn't follow
+v3_X_spider|snake,v3_X_spider,snake,layers 6–20,Zero,Eight,didn't follow
+v3_X_spider|horse,v3_X_spider,horse,layers 6–20,Four,Four,"gave it, but it's also the fallback"
+v3_X_spider|beetle,v3_X_spider,beetle,layers 6–20,Six,Six,followed the swap
+v3_X_spider|tick,v3_X_spider,tick,layers 6–20,Eight,Four,lost the answer
+v3_X_york_country|Munich,v3_X_york_country,Munich,layers 6–14,Germany,Canada,didn't follow
+v3_X_york_country|Milan,v3_X_york_country,Milan,layers 6–14,Italy,Belgium,didn't follow
+v3_X_york_country|Lyon,v3_X_york_country,Lyon,layers 6–14,France,Canada,didn't follow
+v3_X_york_country|Barcelona,v3_X_york_country,Barcelona,layers 6–14,Spain,Belgium,didn't follow
+v3_X_york_country|Osaka,v3_X_york_country,Osaka,layers 6–14,Japan,Canada,didn't follow
+v3_X_york_country|Chicago,v3_X_york_country,Chicago,layers 6–14,USA,Canada,didn't follow
+v3_X_york_country|Manchester,v3_X_york_country,Manchester,layers 6–14,United Kingdom,Canada,didn't follow
+v3_X_york_country|Mumbai,v3_X_york_country,Mumbai,layers 6–14,India,Canada,didn't follow
+v3_X_york_country|Vancouver,v3_X_york_country,Vancouver,layers 6–14,Canada,Canada,kept the answer
+v3_X_york_country|Ottawa,v3_X_york_country,Ottawa,layers 6–14,Canada,Canada,kept the answer
+i_Q_day_moon_next|Sunday,i_Q_day_moon_next,Sunday,layers 6–20,Monday,Tuesday,didn't follow
+i_Q_day_moon_next|Tuesday,i_Q_day_moon_next,Tuesday,layers 6–20,Wednesday,Tuesday,didn't follow
+i_Q_day_moon_next|Wednesday,i_Q_day_moon_next,Wednesday,layers 6–20,Thursday,Tuesday,didn't follow
+i_Q_day_moon_next|Thursday,i_Q_day_moon_next,Thursday,layers 6–20,Friday,Tuesday,didn't follow
+i_Q_day_moon_next|Friday,i_Q_day_moon_next,Friday,layers 6–20,Saturday,Tuesday,didn't follow
+i_Q_day_moon_next|Saturday,i_Q_day_moon_next,Saturday,layers 6–20,Sunday,Tuesday,didn't follow
+i_Q_num_triangle_double|two,i_Q_num_triangle_double,two,layers 6–20,Four,4,"gave it, but it's also the fallback"
+i_Q_num_triangle_double|four,i_Q_num_triangle_double,four,layers 6–20,Eight,6,didn't follow
+i_Q_num_triangle_double|five,i_Q_num_triangle_double,five,layers 6–20,Ten,6,didn't follow
+i_Q_num_triangle_double|six,i_Q_num_triangle_double,six,layers 6–20,Twelve,6,didn't follow
+i_Q_num_triangle_double|eight,i_Q_num_triangle_double,eight,layers 6–20,Sixteen,6,didn't follow
+i_Q_num_triangle_double|ten,i_Q_num_triangle_double,ten,layers 6–20,Twenty,6,didn't follow
+i_Q_color_snow_opposite|black,i_Q_color_snow_opposite,black,layers 6–11,White,Black,didn't follow
+i_Q_color_snow_opposite|red,i_Q_color_snow_opposite,red,layers 6–11,Green,Black,didn't follow
+i_Q_color_snow_opposite|green,i_Q_color_snow_opposite,green,layers 6–11,Red,Black,didn't follow
+i_Q_color_snow_opposite|blue,i_Q_color_snow_opposite,blue,layers 6–11,Yellow,Black,didn't follow
+i_Q_color_snow_opposite|yellow,i_Q_color_snow_opposite,yellow,layers 6–11,Violet,Black,no usable belief
+i_W_tr_green|red,i_W_tr_green,red,layers 6–20,Rojo,Verde,didn't follow
+i_W_tr_green|blue,i_W_tr_green,blue,layers 6–20,Azul,Verde,didn't follow
+i_W_tr_green|white,i_W_tr_green,white,layers 6–20,blanco,Verde,didn't follow
+i_W_tr_green|black,i_W_tr_green,black,layers 6–20,Negro,Verde,didn't follow
+i_W_tr_green|yellow,i_W_tr_green,yellow,layers 6–20,Amarillo,Verde,didn't follow
+i_W_tr_green|orange,i_W_tr_green,orange,layers 6–20,Naranja,Verde,didn't follow
+i_W_tr_green|pink,i_W_tr_green,pink,layers 6–20,rosa,Verde,didn't follow
+i_S_element_gold|silver,i_S_element_gold,silver,layers 6–20,Ag,Ag,followed the swap
+i_S_element_gold|iron,i_S_element_gold,iron,layers 6–20,Fe,Fe,followed the swap
+i_S_element_gold|copper,i_S_element_gold,copper,layers 6–20,Cu,Au,didn't follow
+i_S_element_gold|lead,i_S_element_gold,lead,layers 6–20,Pb,Au,didn't follow
+i_S_element_gold|tin,i_S_element_gold,tin,layers 6–20,Sn,Au,didn't follow
+i_S_element_gold|sodium,i_S_element_gold,sodium,layers 6–20,Na,Au,didn't follow
+i_S_element_gold|zinc,i_S_element_gold,zinc,layers 6–20,Zn,Au,didn't follow
+i_S_state_mercury|iron,i_S_state_mercury,iron,layers 6–14,Solid,Solid,followed the swap
+i_S_state_mercury|gold,i_S_state_mercury,gold,layers 6–14,Solid,Liquid,didn't follow
+i_S_state_mercury|copper,i_S_state_mercury,copper,layers 6–14,Solid,Liquid,didn't follow
+i_S_state_mercury|oxygen,i_S_state_mercury,oxygen,layers 6–14,Gas,Liquid,didn't follow
+i_S_state_mercury|helium,i_S_state_mercury,helium,layers 6–14,Gas,Liquid,didn't follow
+i_S_state_mercury|nitrogen,i_S_state_mercury,nitrogen,layers 6–14,Gas,Liquid,didn't follow
+i_S_state_mercury|water,i_S_state_mercury,water,layers 6–14,Liquid,Liquid,kept the answer
+i_S_bad_helium_state|iron,i_S_bad_helium_state,iron,layers 6–11,Solid,Gas,didn't follow
+i_S_bad_helium_state|gold,i_S_bad_helium_state,gold,layers 6–11,Solid,Gas,didn't follow
+i_S_bad_helium_state|copper,i_S_bad_helium_state,copper,layers 6–11,Solid,Gas,didn't follow
+i_S_bad_helium_state|mercury,i_S_bad_helium_state,mercury,layers 6–11,Liquid,Gas,didn't follow
+i_S_bad_helium_state|water,i_S_bad_helium_state,water,layers 6–11,Liquid,Gas,didn't follow
+i_S_bad_helium_state|hydrogen,i_S_bad_helium_state,hydrogen,layers 6–11,Gas,Gas,kept the answer
+i_S_bad_helium_state|oxygen,i_S_bad_helium_state,oxygen,layers 6–11,Gas,Gas,kept the answer
+i_C_sport_hockey|soccer,i_C_sport_hockey,soccer,layers 6–20,11,Six,didn't follow
+i_C_sport_hockey|basketball,i_C_sport_hockey,basketball,layers 6–20,Five,Six,didn't follow
+i_C_sport_hockey|baseball,i_C_sport_hockey,baseball,layers 6–20,Nine,Six,didn't follow
+i_C_sport_hockey|rugby,i_C_sport_hockey,rugby,layers 6–20,15,Six,didn't follow
+i_C_sport_hockey|cricket,i_C_sport_hockey,cricket,layers 6–20,11,Six,didn't follow
+i_C_sport_hockey|polo,i_C_sport_hockey,polo,layers 6–20,Four,Six,didn't follow
+i_C_sport_hockey|volleyball,i_C_sport_hockey,volleyball,layers 6–20,Six,Six,kept the answer
+i_C_music_ringo|guitar,i_C_music_ringo,guitar,layers 6–14,String,Percussion,didn't follow
+i_C_music_ringo|trumpet,i_C_music_ringo,trumpet,layers 6–14,Brass,Percussion,didn't follow
+i_C_music_ringo|flute,i_C_music_ringo,flute,layers 6–14,Woodwind,Percussion,didn't follow
+i_C_music_ringo|violin,i_C_music_ringo,violin,layers 6–14,Strings,Percussion,didn't follow
+i_C_music_ringo|sax,i_C_music_ringo,sax,layers 6–14,Woodwind,Percussion,didn't follow
+i_C_music_ringo|horn,i_C_music_ringo,horn,layers 6–14,Brass,Percussion,didn't follow
+i_C_music_ringo|bass,i_C_music_ringo,bass,layers 6–14,Strings,Percussion,didn't follow
+i_C_music_ringo|triangle,i_C_music_ringo,triangle,layers 6–14,Percussion,String,lost the answer

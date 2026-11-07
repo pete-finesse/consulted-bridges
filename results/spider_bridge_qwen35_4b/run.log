@@ -1,0 +1,206 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  20%|█▉        | 84/426 [00:00<00:00, 836.62it/s]Loading weights:  41%|████▏     | 176/426 [00:00<00:00, 860.62it/s]Loading weights:  64%|██████▍   | 274/426 [00:00<00:00, 914.08it/s]Loading weights:  86%|████████▌ | 366/426 [00:00<00:00, 893.35it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 871.44it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/swarm-explore/projects/silent-dissent/harness/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[base] no edit                                      -> 'Eight'    P(8)=0.89 spider_rank=1
+
+Strength in the residual (max over positions, mean over layers 12-21; fraction of |h|):
+animals=0.240, spiders=0.208, spider=0.189, dogs=0.184, webs=0.183, Answer=0.175, legs=0.169, insects=0.169, humans=0.153, word=0.147, sentence=0.136, yarn=0.134, living=0.112, ways=0.085, following=0.063
+
+== A. Sliding 6-layer windows, all question+template positions ==
+[A] ablate spider L0-5                           -> 'Eight'    P(8)=0.81 spider_rank=1
+[A] swap spider->bird L0-5                       -> 'Eight'    P(8)=0.84 expect=2 P=0.00 spider_rank=1
+[A] swap spider->ant L0-5                        -> 'Eight'    P(8)=0.82 expect=6 P=0.02 spider_rank=1
+[A] swap spider->dog L0-5                        -> 'Eight'    P(8)=0.83 expect=4 P=0.13 spider_rank=1
+[A] control ablate animals L0-5                  -> 'Eight'    P(8)=0.85 spider_rank=1
+[A] control swap sentence->bird L0-5             -> 'Eight'    P(8)=0.89 expect=2 P=0.00 spider_rank=1
+[A] ablate spider L3-8                           -> 'Eight'    P(8)=0.71 spider_rank=1
+[A] swap spider->bird L3-8                       -> 'Eight'    P(8)=0.65 expect=2 P=0.00 spider_rank=1
+[A] swap spider->ant L3-8                        -> 'Eight'    P(8)=0.70 expect=6 P=0.10 spider_rank=1
+[A] swap spider->dog L3-8                        -> 'Eight'    P(8)=0.65 expect=4 P=0.30 spider_rank=1
+[A] control ablate animals L3-8                  -> 'Eight'    P(8)=0.93 spider_rank=1
+[A] control swap sentence->bird L3-8             -> 'Eight'    P(8)=0.89 expect=2 P=0.00 spider_rank=1
+[A] ablate spider L6-11                          -> 'Eight'    P(8)=0.42 spider_rank=1
+[A] swap spider->bird L6-11                      -> 'Eight'    P(8)=0.62 expect=2 P=0.00 spider_rank=1
+[A] swap spider->ant L6-11                       -> 'Eight'    P(8)=0.58 expect=6 P=0.23 spider_rank=1
+[A] swap spider->dog L6-11                       -> 'Eight'    P(8)=0.59 expect=4 P=0.36 spider_rank=1
+[A] control ablate animals L6-11                 -> 'Eight'    P(8)=0.91 spider_rank=1
+[A] control swap sentence->bird L6-11            -> 'Eight'    P(8)=0.91 expect=2 P=0.00 spider_rank=1
+[A] ablate spider L9-14                          -> 'Four'     P(8)=0.12 spider_rank=1
+[A] swap spider->bird L9-14                      -> 'Eight'    P(8)=0.81 expect=2 P=0.00 spider_rank=1
+[A] swap spider->ant L9-14                       -> 'Eight'    P(8)=0.47 expect=6 P=0.31 spider_rank=1
+[A] swap spider->dog L9-14                       -> 'Eight'    P(8)=0.65 expect=4 P=0.30 spider_rank=1
+[A] control ablate animals L9-14                 -> 'Eight'    P(8)=0.90 spider_rank=1
+[A] control swap sentence->bird L9-14            -> 'Eight'    P(8)=0.91 expect=2 P=0.00 spider_rank=1
+[A] ablate spider L12-17                         -> 'Four'     P(8)=0.01 spider_rank=1
+[A] swap spider->bird L12-17                     -> 'Eight'    P(8)=0.70 expect=2 P=0.00 spider_rank=1
+[A] swap spider->ant L12-17                      -> 'Four'     P(8)=0.17 expect=6 P=0.44 spider_rank=1
+[A] swap spider->dog L12-17                      -> 'Eight'    P(8)=0.62 expect=4 P=0.33 spider_rank=1
+[A] control ablate animals L12-17                -> 'Eight'    P(8)=0.93 spider_rank=1
+[A] control swap sentence->bird L12-17           -> 'Eight'    P(8)=0.87 expect=2 P=0.00 spider_rank=1
+[A] ablate spider L15-20                         -> 'Four'     P(8)=0.00 spider_rank=1
+[A] swap spider->bird L15-20                     -> 'Four'     P(8)=0.30 expect=2 P=0.01 spider_rank=1
+[A] swap spider->ant L15-20                      -> 'Four'     P(8)=0.10 expect=6 P=0.20 spider_rank=1
+[A] swap spider->dog L15-20                      -> 'Four'     P(8)=0.05 expect=4 P=0.90 spider_rank=1
+[A] control ablate animals L15-20                -> 'Eight'    P(8)=0.96 spider_rank=1
+[A] control swap sentence->bird L15-20           -> 'Eight'    P(8)=0.87 expect=2 P=0.00 spider_rank=1
+[A] ablate spider L18-23                         -> 'Four'     P(8)=0.00 spider_rank=2
+[A] swap spider->bird L18-23                     -> 'Four'     P(8)=0.37 expect=2 P=0.03 spider_rank=1
+[A] swap spider->ant L18-23                      -> 'Four'     P(8)=0.07 expect=6 P=0.01 spider_rank=2
+[A] swap spider->dog L18-23                      -> 'Four'     P(8)=0.06 expect=4 P=0.82 spider_rank=1
+[A] control ablate animals L18-23                -> 'Eight'    P(8)=0.96 spider_rank=0
+[A] control swap sentence->bird L18-23           -> 'Eight'    P(8)=0.89 expect=2 P=0.00 spider_rank=1
+[A] ablate spider L21-26                         -> 'Six'      P(8)=0.03 spider_rank=1
+[A] swap spider->bird L21-26                     -> 'Eight'    P(8)=0.44 expect=2 P=0.02 spider_rank=1
+[A] swap spider->ant L21-26                      -> 'Six'      P(8)=0.37 expect=6 P=0.45 spider_rank=1
+[A] swap spider->dog L21-26                      -> 'Six'      P(8)=0.13 expect=4 P=0.24 spider_rank=1
+[A] control ablate animals L21-26                -> 'Eight'    P(8)=0.97 spider_rank=0
+[A] control swap sentence->bird L21-26           -> 'Eight'    P(8)=0.88 expect=2 P=0.00 spider_rank=1
+[A] ablate spider L24-29                         -> 'Four'     P(8)=0.40 spider_rank=1
+[A] swap spider->bird L24-29                     -> 'Eight'    P(8)=0.71 expect=2 P=0.01 spider_rank=0
+[A] swap spider->ant L24-29                      -> 'Eight'    P(8)=0.75 expect=6 P=0.01 spider_rank=1
+[A] swap spider->dog L24-29                      -> 'Four'     P(8)=0.42 expect=4 P=0.52 spider_rank=0
+[A] control ablate animals L24-29                -> 'Eight'    P(8)=0.88 spider_rank=0
+[A] control swap sentence->bird L24-29           -> 'Eight'    P(8)=0.88 expect=2 P=0.00 spider_rank=1
+[A] ablate spider L27-31                         -> 'Eight'    P(8)=0.91 spider_rank=1
+[A] swap spider->bird L27-31                     -> 'Eight'    P(8)=0.88 expect=2 P=0.00 spider_rank=1
+[A] swap spider->ant L27-31                      -> '8'        P(8)=0.86 expect=6 P=0.01 spider_rank=1
+[A] swap spider->dog L27-31                      -> 'Eight'    P(8)=0.89 expect=4 P=0.08 spider_rank=1
+[A] control ablate animals L27-31                -> 'Eight'    P(8)=0.90 spider_rank=1
+[A] control swap sentence->bird L27-31           -> 'Eight'    P(8)=0.88 expect=2 P=0.00 spider_rank=1
+
+== B. Swap spider -> animal with a known leg count ==
+[B] swap spider->ant [mid 12-21]                 -> 'Four'     P(8)=0.09 expect=6 P=0.29 spider_rank=1
+[B] swap spider->bee [mid 12-21]                 -> 'Six'      P(8)=0.04 expect=6 P=0.89 spider_rank=1
+[B] swap spider->dog [mid 12-21]                 -> 'Four'     P(8)=0.01 expect=4 P=0.97 spider_rank=1
+[B] swap spider->cat [mid 12-21]                 -> 'Four'     P(8)=0.01 expect=4 P=0.97 spider_rank=1
+[B] swap spider->bird [mid 12-21]                -> 'Four'     P(8)=0.09 expect=2 P=0.15 spider_rank=1
+[B] swap spider->human [mid 12-21]               -> 'Eight'    P(8)=0.59 expect=2 P=0.00 spider_rank=1
+[B] swap spider->snake [mid 12-21]               -> 'Eight'    P(8)=0.43 expect=0 P=0.00 spider_rank=1
+[B] swap spider->fish [mid 12-21]                -> 'Eight'    P(8)=0.38 expect=0 P=0.01 spider_rank=0
+[B] swap spider->crab [mid 12-21]                -> 'Four'     P(8)=0.00 expect=10 P=0.00 spider_rank=1
+[B] swap spider->octopus [mid 12-21]             -> 'Eight'    P(8)=0.55 expect=8 P=0.55 spider_rank=0
+[B] swap spider->ant [8-23]                      -> 'Four'     P(8)=0.10 expect=6 P=0.17 spider_rank=1
+[B] swap spider->bee [8-23]                      -> 'Six'      P(8)=0.21 expect=6 P=0.68 spider_rank=1
+[B] swap spider->dog [8-23]                      -> 'Four'     P(8)=0.01 expect=4 P=0.97 spider_rank=1
+[B] swap spider->cat [8-23]                      -> 'Four'     P(8)=0.05 expect=4 P=0.87 spider_rank=1
+[B] swap spider->bird [8-23]                     -> 'Four'     P(8)=0.05 expect=2 P=0.25 spider_rank=1
+[B] swap spider->human [8-23]                    -> 'Four'     P(8)=0.42 expect=2 P=0.00 spider_rank=1
+[B] swap spider->snake [8-23]                    -> 'Four'     P(8)=0.42 expect=0 P=0.00 spider_rank=1
+[B] swap spider->fish [8-23]                     -> 'Eight'    P(8)=0.40 expect=0 P=0.01 spider_rank=0
+[B] swap spider->crab [8-23]                     -> 'Six'      P(8)=0.02 expect=10 P=0.00 spider_rank=0
+[B] swap spider->octopus [8-23]                  -> 'Eight'    P(8)=0.70 expect=8 P=0.70 spider_rank=1
+[B] swap spider->ant [all]                       -> 'Four'     P(8)=0.03 expect=6 P=0.22 spider_rank=6
+[B] swap spider->bee [all]                       -> 'Six'      P(8)=0.05 expect=6 P=0.80 spider_rank=0
+[B] swap spider->dog [all]                       -> 'Four'     P(8)=0.01 expect=4 P=0.96 spider_rank=1
+[B] swap spider->cat [all]                       -> 'Four'     P(8)=0.01 expect=4 P=0.95 spider_rank=3
+[B] swap spider->bird [all]                      -> 'Four'     P(8)=0.04 expect=2 P=0.25 spider_rank=1
+[B] swap spider->human [all]                     -> 'Four'     P(8)=0.14 expect=2 P=0.01 spider_rank=15
+[B] swap spider->snake [all]                     -> 'Four'     P(8)=0.19 expect=0 P=0.00 spider_rank=1
+[B] swap spider->fish [all]                      -> 'Four'     P(8)=0.23 expect=0 P=0.01 spider_rank=0
+[B] swap spider->crab [all]                      -> 'Six'      P(8)=0.01 expect=10 P=0.00 spider_rank=1
+[B] swap spider->octopus [all]                   -> '8'        P(8)=0.68 expect=8 P=0.68 spider_rank=0
+
+== C. Swap other strongly present words -> bird (does any swap just plant 'bird'?) ==
+[C] swap animals->bird [mid 12-21] (strength 0.240) -> 'Eight'    P(8)=0.85 expect=2 P=0.00 spider_rank=1
+[C] ablate animals [mid 12-21]                   -> 'Eight'    P(8)=0.94 spider_rank=0
+[C] swap legs->bird [mid 12-21] (strength 0.169) -> 'Eight'    P(8)=0.87 expect=2 P=0.00 spider_rank=1
+[C] ablate legs [mid 12-21]                      -> 'Eight'    P(8)=0.93 spider_rank=0
+[C] swap webs->bird [mid 12-21] (strength 0.183) -> 'Eight'    P(8)=0.78 expect=2 P=0.00 spider_rank=1
+[C] ablate webs [mid 12-21]                      -> 'Four'     P(8)=0.35 spider_rank=1
+[C] swap insects->bird [mid 12-21] (strength 0.169) -> 'Four'     P(8)=0.48 expect=2 P=0.01 spider_rank=1
+[C] ablate insects [mid 12-21]                   -> 'Four'     P(8)=0.18 spider_rank=1
+[C] swap humans->bird [mid 12-21] (strength 0.153) -> 'Eight'    P(8)=0.85 expect=2 P=0.00 spider_rank=1
+[C] ablate humans [mid 12-21]                    -> 'Eight'    P(8)=0.86 spider_rank=1
+[C] swap dogs->bird [mid 12-21] (strength 0.184) -> 'Eight'    P(8)=0.88 expect=2 P=0.00 spider_rank=1
+[C] ablate dogs [mid 12-21]                      -> 'Eight'    P(8)=0.94 spider_rank=1
+[C] swap ways->bird [mid 12-21] (strength 0.085) -> 'Eight'    P(8)=0.88 expect=2 P=0.00 spider_rank=1
+[C] ablate ways [mid 12-21]                      -> 'Eight'    P(8)=0.90 spider_rank=1
+[C] swap sentence->bird [mid 12-21] (strength 0.136) -> 'Eight'    P(8)=0.86 expect=2 P=0.00 spider_rank=1
+[C] ablate sentence [mid 12-21]                  -> 'Eight'    P(8)=0.88 spider_rank=1
+[C] swap word->bird [mid 12-21] (strength 0.147) -> 'Eight'    P(8)=0.88 expect=2 P=0.00 spider_rank=1
+[C] ablate word [mid 12-21]                      -> 'Eight'    P(8)=0.89 spider_rank=1
+[C] swap following->bird [mid 12-21] (strength 0.063) -> 'Eight'    P(8)=0.87 expect=2 P=0.00 spider_rank=1
+[C] ablate following [mid 12-21]                 -> 'Eight'    P(8)=0.83 spider_rank=1
+[C] swap living->bird [mid 12-21] (strength 0.112) -> 'Eight'    P(8)=0.84 expect=2 P=0.00 spider_rank=1
+[C] ablate living [mid 12-21]                    -> 'Eight'    P(8)=0.87 spider_rank=1
+[C] swap yarn->bird [mid 12-21] (strength 0.134) -> 'Eight'    P(8)=0.88 expect=2 P=0.00 spider_rank=1
+[C] ablate yarn [mid 12-21]                      -> 'Eight'    P(8)=0.83 spider_rank=1
+[C] swap Answer->bird [mid 12-21] (strength 0.175) -> 'Eight'    P(8)=0.90 expect=2 P=0.00 spider_rank=1
+[C] ablate Answer [mid 12-21]                    -> 'Eight'    P(8)=0.90 spider_rank=1
+[C] swap animals->bird [8-23] (strength 0.240)   -> 'Eight'    P(8)=0.88 expect=2 P=0.01 spider_rank=0
+[C] ablate animals [8-23]                        -> 'Eight'    P(8)=0.92 spider_rank=0
+[C] swap legs->bird [8-23] (strength 0.169)      -> 'Eight'    P(8)=0.85 expect=2 P=0.00 spider_rank=0
+[C] ablate legs [8-23]                           -> 'Eight'    P(8)=0.94 spider_rank=0
+[C] swap webs->bird [8-23] (strength 0.183)      -> 'Eight'    P(8)=0.80 expect=2 P=0.00 spider_rank=1
+[C] ablate webs [8-23]                           -> 'Four'     P(8)=0.50 spider_rank=1
+[C] swap insects->bird [8-23] (strength 0.169)   -> 'Four'     P(8)=0.25 expect=2 P=0.03 spider_rank=0
+[C] ablate insects [8-23]                        -> 'Four'     P(8)=0.22 spider_rank=0
+[C] swap humans->bird [8-23] (strength 0.153)    -> 'Eight'    P(8)=0.87 expect=2 P=0.00 spider_rank=1
+[C] ablate humans [8-23]                         -> 'Eight'    P(8)=0.80 spider_rank=0
+[C] swap dogs->bird [8-23] (strength 0.184)      -> 'Eight'    P(8)=0.89 expect=2 P=0.00 spider_rank=1
+[C] ablate dogs [8-23]                           -> 'Eight'    P(8)=0.95 spider_rank=1
+[C] swap ways->bird [8-23] (strength 0.085)      -> 'Eight'    P(8)=0.92 expect=2 P=0.00 spider_rank=1
+[C] ablate ways [8-23]                           -> 'Eight'    P(8)=0.90 spider_rank=1
+[C] swap sentence->bird [8-23] (strength 0.136)  -> 'Eight'    P(8)=0.89 expect=2 P=0.00 spider_rank=1
+[C] ablate sentence [8-23]                       -> 'Eight'    P(8)=0.85 spider_rank=1
+[C] swap word->bird [8-23] (strength 0.147)      -> 'Eight'    P(8)=0.90 expect=2 P=0.00 spider_rank=1
+[C] ablate word [8-23]                           -> 'Eight'    P(8)=0.87 spider_rank=1
+[C] swap following->bird [8-23] (strength 0.063) -> 'Eight'    P(8)=0.89 expect=2 P=0.00 spider_rank=1
+[C] ablate following [8-23]                      -> 'Eight'    P(8)=0.86 spider_rank=1
+[C] swap living->bird [8-23] (strength 0.112)    -> 'Eight'    P(8)=0.88 expect=2 P=0.00 spider_rank=1
+[C] ablate living [8-23]                         -> 'Eight'    P(8)=0.88 spider_rank=1
+[C] swap yarn->bird [8-23] (strength 0.134)      -> 'Eight'    P(8)=0.90 expect=2 P=0.00 spider_rank=1
+[C] ablate yarn [8-23]                           -> 'Eight'    P(8)=0.82 spider_rank=1
+[C] swap Answer->bird [8-23] (strength 0.175)    -> 'Eight'    P(8)=0.91 expect=2 P=0.00 spider_rank=1
+[C] ablate Answer [8-23]                         -> 'Eight'    P(8)=0.86 spider_rank=1
+[C] swap animals->bird [all] (strength 0.240)    -> 'Eight'    P(8)=0.90 expect=2 P=0.00 spider_rank=0
+[C] ablate animals [all]                         -> 'Eight'    P(8)=0.88 spider_rank=0
+[C] swap legs->bird [all] (strength 0.169)       -> 'Eight'    P(8)=0.86 expect=2 P=0.00 spider_rank=0
+[C] ablate legs [all]                            -> 'Eight'    P(8)=0.86 spider_rank=1
+[C] swap webs->bird [all] (strength 0.183)       -> 'Eight'    P(8)=0.77 expect=2 P=0.00 spider_rank=0
+[C] ablate webs [all]                            -> 'Eight'    P(8)=0.65 spider_rank=1
+[C] swap insects->bird [all] (strength 0.169)    -> 'Four'     P(8)=0.13 expect=2 P=0.09 spider_rank=0
+[C] ablate insects [all]                         -> 'Four'     P(8)=0.18 spider_rank=0
+[C] swap humans->bird [all] (strength 0.153)     -> 'Eight'    P(8)=0.87 expect=2 P=0.00 spider_rank=1
+[C] ablate humans [all]                          -> 'Eight'    P(8)=0.81 spider_rank=0
+[C] swap dogs->bird [all] (strength 0.184)       -> 'Eight'    P(8)=0.90 expect=2 P=0.00 spider_rank=1
+[C] ablate dogs [all]                            -> 'Eight'    P(8)=0.87 spider_rank=1
+[C] swap ways->bird [all] (strength 0.085)       -> 'Eight'    P(8)=0.91 expect=2 P=0.00 spider_rank=1
+[C] ablate ways [all]                            -> 'Eight'    P(8)=0.90 spider_rank=1
+[C] swap sentence->bird [all] (strength 0.136)   -> 'Eight'    P(8)=0.90 expect=2 P=0.00 spider_rank=1
+[C] ablate sentence [all]                        -> 'Eight'    P(8)=0.83 spider_rank=1
+[C] swap word->bird [all] (strength 0.147)       -> 'Eight'    P(8)=0.91 expect=2 P=0.00 spider_rank=1
+[C] ablate word [all]                            -> 'Eight'    P(8)=0.64 spider_rank=1
+[C] swap following->bird [all] (strength 0.063)  -> 'Eight'    P(8)=0.90 expect=2 P=0.00 spider_rank=1
+[C] ablate following [all]                       -> 'Eight'    P(8)=0.87 spider_rank=1
+[C] swap living->bird [all] (strength 0.112)     -> 'Eight'    P(8)=0.88 expect=2 P=0.00 spider_rank=1
+[C] ablate living [all]                          -> 'Eight'    P(8)=0.82 spider_rank=1
+[C] swap yarn->bird [all] (strength 0.134)       -> 'Eight'    P(8)=0.91 expect=2 P=0.00 spider_rank=1
+[C] ablate yarn [all]                            -> 'Eight'    P(8)=0.78 spider_rank=1
+[C] swap Answer->bird [all] (strength 0.175)     -> 'Eight'    P(8)=0.87 expect=2 P=0.00 spider_rank=1
+[C] ablate Answer [all]                          -> 'Eight'    P(8)=0.86 spider_rank=1
+
+== D. Question tokens vs template tokens ==
+[D] ablate spider [mid 12-21] @question          -> 'Four'     P(8)=0.40 spider_rank=1
+[D] swap spider->bird [mid 12-21] @question      -> 'Eight'    P(8)=0.68 expect=2 P=0.00 spider_rank=1
+[D] swap spider->ant [mid 12-21] @question       -> 'Eight'    P(8)=0.72 expect=6 P=0.05 spider_rank=1
+[D] ablate spider [8-23] @question               -> 'Eight'    P(8)=0.70 spider_rank=1
+[D] swap spider->bird [8-23] @question           -> 'Eight'    P(8)=0.72 expect=2 P=0.00 spider_rank=1
+[D] swap spider->ant [8-23] @question            -> 'Eight'    P(8)=0.79 expect=6 P=0.04 spider_rank=1
+[D] ablate spider [all] @question                -> 'Eight'    P(8)=0.60 spider_rank=1
+[D] swap spider->bird [all] @question            -> 'Eight'    P(8)=0.61 expect=2 P=0.00 spider_rank=1
+[D] swap spider->ant [all] @question             -> 'Eight'    P(8)=0.63 expect=6 P=0.09 spider_rank=1
+[D] ablate spider [mid 12-21] @template          -> 'Six'      P(8)=0.04 spider_rank=0
+[D] swap spider->bird [mid 12-21] @template      -> 'Eight'    P(8)=0.55 expect=2 P=0.00 spider_rank=1
+[D] swap spider->ant [mid 12-21] @template       -> 'Four'     P(8)=0.30 expect=6 P=0.23 spider_rank=1
+[D] ablate spider [8-23] @template               -> 'Six'      P(8)=0.02 spider_rank=1
+[D] swap spider->bird [8-23] @template           -> 'Eight'    P(8)=0.45 expect=2 P=0.01 spider_rank=1
+[D] swap spider->ant [8-23] @template            -> 'Four'     P(8)=0.32 expect=6 P=0.05 spider_rank=1
+[D] ablate spider [all] @template                -> 'Six'      P(8)=0.00 spider_rank=1
+[D] swap spider->bird [all] @template            -> 'Eight'    P(8)=0.34 expect=2 P=0.03 spider_rank=1
+[D] swap spider->ant [all] @template             -> 'Four'     P(8)=0.17 expect=6 P=0.13 spider_rank=1
+
+B: answer matched the swapped animal's leg count in 12 of 30
+wrote results/spider_bridge_qwen35_4b

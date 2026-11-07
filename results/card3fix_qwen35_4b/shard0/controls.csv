@@ -1,0 +1,57 @@
+key,sentence,word,kind,strength,early_drop
+L_mozart|null|ribbon,L_mozart,ribbon,everyday word (noise),0.114,0.106
+L_mozart|null|button,L_mozart,button,everyday word (noise),0.109,0.186
+L_mozart|null|pencil,L_mozart,pencil,everyday word (noise),0.107,0.23
+L_mozart|null|spoon,L_mozart,spoon,everyday word (noise),0.102,0.228
+L_mozart|null|river,L_mozart,river,everyday word (noise),0.096,0.056
+L_mozart|null|shoe,L_mozart,shoe,everyday word (noise),0.09,0.271
+L_mozart|null|blanket,L_mozart,blanket,everyday word (noise),0.087,0.306
+L_mozart|null|table,L_mozart,table,everyday word (noise),0.087,0.323
+L_mozart|null|mountain,L_mozart,mountain,everyday word (noise),0.077,0.0
+L_mozart|null|ticket,L_mozart,ticket,everyday word (noise),0.076,0.164
+L_mozart|null|chair,L_mozart,chair,everyday word (noise),0.074,0.28
+L_mozart|null|pillow,L_mozart,pillow,everyday word (noise),0.074,0.03
+L_mozart|kind|Vienna,L_mozart,Vienna,"same kind as Salzburg, same answer",,0.768
+L_mozart|kind|Graz,L_mozart,Graz,"same kind as Salzburg, same answer",,0.089
+L_york|null|ribbon,L_york,ribbon,everyday word (noise),0.114,0.026
+L_york|null|button,L_york,button,everyday word (noise),0.11,0.064
+L_york|null|pencil,L_york,pencil,everyday word (noise),0.104,0.008
+L_york|null|spoon,L_york,spoon,everyday word (noise),0.103,0.066
+L_york|null|chair,L_york,chair,everyday word (noise),0.101,0.017
+L_york|null|river,L_york,river,everyday word (noise),0.096,0.034
+L_york|null|shoe,L_york,shoe,everyday word (noise),0.09,0.032
+L_york|null|table,L_york,table,everyday word (noise),0.086,0.08
+L_york|null|ticket,L_york,ticket,everyday word (noise),0.08,0.015
+L_york|null|pillow,L_york,pillow,everyday word (noise),0.08,0.033
+L_york|null|mountain,L_york,mountain,everyday word (noise),0.077,0.022
+L_york|null|hammer,L_york,hammer,everyday word (noise),0.075,0.085
+L_york|kind|Vancouver,L_york,Vancouver,"same kind as Toronto, same answer",,0.222
+L_york|kind|Ottawa,L_york,Ottawa,"same kind as Toronto, same answer",,0.39
+R_bee|null|bread,R_bee,bread,everyday word (noise),0.122,0.005
+R_bee|null|garden,R_bee,garden,everyday word (noise),0.105,0.018
+R_bee|null|ladder,R_bee,ladder,everyday word (noise),0.101,0.002
+R_bee|null|basket,R_bee,basket,everyday word (noise),0.099,0.005
+R_bee|null|lantern,R_bee,lantern,everyday word (noise),0.096,0.005
+R_bee|null|spoon,R_bee,spoon,everyday word (noise),0.096,0.012
+R_bee|null|shoe,R_bee,shoe,everyday word (noise),0.094,0.006
+R_bee|null|bottle,R_bee,bottle,everyday word (noise),0.09,0.005
+R_bee|null|pillow,R_bee,pillow,everyday word (noise),0.086,0.0
+R_bee|null|candle,R_bee,candle,everyday word (noise),0.086,0.005
+R_bee|null|kitchen,R_bee,kitchen,everyday word (noise),0.082,0.009
+R_bee|null|river,R_bee,river,everyday word (noise),0.081,0.025
+R_bee|kind|ants,R_bee,ants,"same kind as bee, same answer",,0.044
+R_bee|kind|spiders,R_bee,spiders,"same kind as bee, same answer",,0.032
+X_mishima_country|null|river,X_mishima_country,river,everyday word (noise),0.086,0.001
+X_mishima_country|null|button,X_mishima_country,button,everyday word (noise),0.08,0.001
+X_mishima_country|null|mirror,X_mishima_country,mirror,everyday word (noise),0.077,0.001
+X_mishima_country|null|mountain,X_mishima_country,mountain,everyday word (noise),0.074,0.0
+X_mishima_country|null|blanket,X_mishima_country,blanket,everyday word (noise),0.073,0.0
+X_mishima_country|null|saddle,X_mishima_country,saddle,everyday word (noise),0.073,0.001
+X_mishima_country|null|pencil,X_mishima_country,pencil,everyday word (noise),0.072,0.0
+X_mishima_country|null|rocket,X_mishima_country,rocket,everyday word (noise),0.071,0.001
+X_mishima_country|null|barrel,X_mishima_country,barrel,everyday word (noise),0.068,0.001
+X_mishima_country|null|ladder,X_mishima_country,ladder,everyday word (noise),0.068,0.001
+X_mishima_country|null|candle,X_mishima_country,candle,everyday word (noise),0.066,0.001
+X_mishima_country|null|ticket,X_mishima_country,ticket,everyday word (noise),0.064,0.001
+X_mishima_country|kind|Osaka,X_mishima_country,Osaka,"same kind as Tokyo, same answer",,0.002
+X_mishima_country|kind|Kyoto,X_mishima_country,Kyoto,"same kind as Tokyo, same answer",,0.0

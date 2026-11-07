@@ -1,0 +1,268 @@
+section,run,answer,class,expect,P_answer,P_expect
+base,no edit,Austria,Austria,,0.46118181786130813,
+A,remove Salzburg L0-5,Italy,Italy,,0.2650889224630763,
+A,control remove Vienna L0-5,Italy,Italy,,0.25733099017898736,
+A,control remove Graz L0-5,Austria,Austria,,0.42392062963054755,
+A,control remove Innsbruck L0-5,Austria,Austria,,0.38740625113142024,
+A,control remove Tokyo L0-5,Austria,Austria,,0.48519565216472127,
+A,control remove Mozart L0-5,Italy,Italy,,0.24007343855234797,
+A,control remove music L0-5,Austria,Austria,,0.4598817492398094,
+A,control remove composer L0-5,Austria,Austria,,0.532366484594483,
+A,control remove Wolfgang L0-5,Italy,Italy,,0.30305896442862335,
+A,control remove cities L0-5,Austria,Austria,,0.4606285232239203,
+A,control remove Russia L0-5,Austria,Austria,,0.4201155584869243,
+A,control remove Cities L0-5,Austria,Austria,,0.49156818168517424,
+A,control remove City L0-5,Austria,Austria,,0.4308033823898752,
+A,control remove countries L0-5,Austria,Austria,,0.47224114480494983,
+A,control remove Belgium L0-5,Austria,Austria,,0.3760239550020265,
+A,control remove town L0-5,Austria,Austria,,0.43257288432609836,
+A,control remove Netherlands L0-5,Austria,Austria,,0.41939201214316263,
+A,remove Salzburg L3-8,Italy,Italy,,0.04311130234936744,
+A,control remove Vienna L3-8,Italy,Italy,,0.07709291316627233,
+A,control remove Graz L3-8,Austria,Austria,,0.4302940608367467,
+A,control remove Innsbruck L3-8,Germany,Germany,,0.26622671341699033,
+A,control remove Tokyo L3-8,Austria,Austria,,0.47175677730030874,
+A,control remove Mozart L3-8,Germany,Germany,,0.13745511786014267,
+A,control remove music L3-8,Austria,Austria,,0.42952806772183727,
+A,control remove composer L3-8,Austria,Austria,,0.5285152503781074,
+A,control remove Wolfgang L3-8,Italy,Italy,,0.14013470285202054,
+A,control remove cities L3-8,Austria,Austria,,0.445682549250592,
+A,control remove Russia L3-8,Austria,Austria,,0.46455843783166995,
+A,control remove Cities L3-8,Austria,Austria,,0.4589500084354879,
+A,control remove City L3-8,Austria,Austria,,0.40458600698597247,
+A,control remove countries L3-8,Austria,Austria,,0.4245064216620934,
+A,control remove Belgium L3-8,Germany,Germany,,0.31652210980520157,
+A,control remove town L3-8,Austria,Austria,,0.4447124442152768,
+A,control remove Netherlands L3-8,Austria,Austria,,0.4196424019013314,
+A,remove Salzburg L6-11,Italy,Italy,,0.0018418162071514627,
+A,control remove Vienna L6-11,Italy,Italy,,0.03626979518373675,
+A,control remove Graz L6-11,Austria,Austria,,0.4446387844772337,
+A,control remove Innsbruck L6-11,Germany,Germany,,0.1852556991671382,
+A,control remove Tokyo L6-11,Austria,Austria,,0.47797568867954926,
+A,control remove Mozart L6-11,Germany,Germany,,0.191781828574425,
+A,control remove music L6-11,Austria,Austria,,0.4263535733828486,
+A,control remove composer L6-11,Austria,Austria,,0.49919377000847365,
+A,control remove Wolfgang L6-11,Italy,Italy,,0.0731971690835003,
+A,control remove cities L6-11,Austria,Austria,,0.4163351523812827,
+A,control remove Russia L6-11,Austria,Austria,,0.5007614617254051,
+A,control remove Cities L6-11,Austria,Austria,,0.44595816489235124,
+A,control remove City L6-11,Austria,Austria,,0.4014560995096603,
+A,control remove countries L6-11,Austria,Austria,,0.38851392200627716,
+A,control remove Belgium L6-11,Germany,Germany,,0.23899114820405745,
+A,control remove town L6-11,Austria,Austria,,0.4162588604733367,
+A,control remove Netherlands L6-11,Austria,Austria,,0.3677575008027083,
+A,remove Salzburg L9-14,Italy,Italy,,0.0005242151643026627,
+A,control remove Vienna L9-14,Italy,Italy,,0.015927924375082312,
+A,control remove Graz L9-14,Austria,Austria,,0.4479071996056167,
+A,control remove Innsbruck L9-14,Germany,Germany,,0.2546294074862464,
+A,control remove Tokyo L9-14,Austria,Austria,,0.461582295808611,
+A,control remove Mozart L9-14,Italy,Italy,,0.16862118489828398,
+A,control remove music L9-14,Austria,Austria,,0.4718697484080679,
+A,control remove composer L9-14,Austria,Austria,,0.5213570255682869,
+A,control remove Wolfgang L9-14,Italy,Italy,,0.05259839855913628,
+A,control remove cities L9-14,Austria,Austria,,0.3905152026032672,
+A,control remove Russia L9-14,Austria,Austria,,0.45549795031771667,
+A,control remove Cities L9-14,Austria,Austria,,0.43300292070771584,
+A,control remove City L9-14,Austria,Austria,,0.40793220973873406,
+A,control remove countries L9-14,Germany,Germany,,0.31551078502513114,
+A,control remove Belgium L9-14,Germany,Germany,,0.1861102326975585,
+A,control remove town L9-14,Austria,Austria,,0.419027948130479,
+A,control remove Netherlands L9-14,Germany,Germany,,0.29762287722947406,
+A,remove Salzburg L12-17,Italy,Italy,,0.00023399193550473007,
+A,control remove Vienna L12-17,Italy,Italy,,0.01116993849218422,
+A,control remove Graz L12-17,Austria,Austria,,0.4447041150674918,
+A,control remove Innsbruck L12-17,Germany,Germany,,0.1971089555756258,
+A,control remove Tokyo L12-17,Austria,Austria,,0.4613625072344131,
+A,control remove Mozart L12-17,Italy,Italy,,0.08534343500060274,
+A,control remove music L12-17,Austria,Austria,,0.4369700581676958,
+A,control remove composer L12-17,Austria,Austria,,0.5315037362059281,
+A,control remove Wolfgang L12-17,Italy,Italy,,0.04253694378460387,
+A,control remove cities L12-17,Austria,Austria,,0.47535956480901204,
+A,control remove Russia L12-17,Austria,Austria,,0.4055882917097697,
+A,control remove Cities L12-17,Austria,Austria,,0.47352443665565436,
+A,control remove City L12-17,Austria,Austria,,0.4504975876955574,
+A,control remove countries L12-17,Austria,Austria,,0.35485397401387586,
+A,control remove Belgium L12-17,Germany,Germany,,0.15721967986355667,
+A,control remove town L12-17,Austria,Austria,,0.489695348612172,
+A,control remove Netherlands L12-17,Italy,Italy,,0.20172111916482496,
+A,remove Salzburg L15-20,Italy,Italy,,5.5690187465044e-05,
+A,control remove Vienna L15-20,Italy,Italy,,0.003810059014945021,
+A,control remove Graz L15-20,Austria,Austria,,0.4639354897532549,
+A,control remove Innsbruck L15-20,Germany,Germany,,0.19616322364910485,
+A,control remove Tokyo L15-20,Austria,Austria,,0.4769234703087222,
+A,control remove Mozart L15-20,Italy,Italy,,0.11585619378404062,
+A,control remove music L15-20,Austria,Austria,,0.44561655845036324,
+A,control remove composer L15-20,Austria,Austria,,0.5156338569076002,
+A,control remove Wolfgang L15-20,Italy,Italy,,0.038040945316210946,
+A,control remove cities L15-20,Austria,Austria,,0.4590199505653099,
+A,control remove Russia L15-20,Austria,Austria,,0.45954229248037826,
+A,control remove Cities L15-20,Austria,Austria,,0.5010779867091657,
+A,control remove City L15-20,Austria,Austria,,0.4825466404127026,
+A,control remove countries L15-20,Germany,Germany,,0.32383940576908316,
+A,control remove Belgium L15-20,Germany,Germany,,0.07926065165876695,
+A,control remove town L15-20,Austria,Austria,,0.5049319360165274,
+A,control remove Netherlands L15-20,Italy,Italy,,0.16655218006687053,
+A,remove Salzburg L18-23,Italy,Italy,,0.0001356943518318103,
+A,control remove Vienna L18-23,Italy,Italy,,0.010009247530907291,
+A,control remove Graz L18-23,Austria,Austria,,0.3964858239172175,
+A,control remove Innsbruck L18-23,Germany,Germany,,0.18763421244853334,
+A,control remove Tokyo L18-23,Austria,Austria,,0.46362499552724146,
+A,control remove Mozart L18-23,Italy,Italy,,0.23382456029388377,
+A,control remove music L18-23,Austria,Austria,,0.4704753554153793,
+A,control remove composer L18-23,Austria,Austria,,0.47618632361170543,
+A,control remove Wolfgang L18-23,Italy,Italy,,0.10976501194813205,
+A,control remove cities L18-23,Austria,Austria,,0.4595475630600576,
+A,control remove Russia L18-23,Austria,Austria,,0.5037063691366038,
+A,control remove Cities L18-23,Austria,Austria,,0.50369982940235,
+A,control remove City L18-23,Austria,Austria,,0.49822698916278024,
+A,control remove countries L18-23,Germany,Germany,,0.2418180852922704,
+A,control remove Belgium L18-23,Germany,Germany,,0.023868434089430023,
+A,control remove town L18-23,Austria,Austria,,0.4946697049296976,
+A,control remove Netherlands L18-23,Italy,Italy,,0.10402904115700778,
+A,remove Salzburg L21-26,Italy,Italy,,0.0017127359971857161,
+A,control remove Vienna L21-26,Italy,Italy,,0.003486752653185032,
+A,control remove Graz L21-26,Austria,Austria,,0.3817498538870383,
+A,control remove Innsbruck L21-26,Germany,Germany,,0.16255408991288192,
+A,control remove Tokyo L21-26,Austria,Austria,,0.5082718951477725,
+A,control remove Mozart L21-26,Germany,Germany,,0.24077625843480552,
+A,control remove music L21-26,Austria,Austria,,0.45068709028308196,
+A,control remove composer L21-26,Austria,Austria,,0.49010735179975684,
+A,control remove Wolfgang L21-26,Italy,Italy,,0.26040363154357477,
+A,control remove cities L21-26,Austria,Austria,,0.49022988498186265,
+A,control remove Russia L21-26,Austria,Austria,,0.6510541556005348,
+A,control remove Cities L21-26,Austria,Austria,,0.5348454461454015,
+A,control remove City L21-26,Austria,Austria,,0.5256136106570621,
+A,control remove countries L21-26,Austria,Austria,,0.4010540216204353,
+A,control remove Belgium L21-26,Italy,Italy,,0.04265046591150036,
+A,control remove town L21-26,Austria,Austria,,0.49158167207364484,
+A,control remove Netherlands L21-26,Italy,Italy,,0.1745621129265216,
+A,remove Salzburg L24-29,Italy,Italy,,0.04559913655220983,
+A,control remove Vienna L24-29,Italy,Italy,,0.02663465567608905,
+A,control remove Graz L24-29,Austria,Austria,,0.486081925758793,
+A,control remove Innsbruck L24-29,Germany,Germany,,0.305870312628816,
+A,control remove Tokyo L24-29,Austria,Austria,,0.5174045821359133,
+A,control remove Mozart L24-29,Austria,Austria,,0.43194470532577983,
+A,control remove music L24-29,Austria,Austria,,0.4516285813569405,
+A,control remove composer L24-29,Austria,Austria,,0.5263929670901641,
+A,control remove Wolfgang L24-29,Austria,Austria,,0.4456837252239438,
+A,control remove cities L24-29,Austria,Austria,,0.47301946575554465,
+A,control remove Russia L24-29,Austria,Austria,,0.5131175908829865,
+A,control remove Cities L24-29,Austria,Austria,,0.5179783957354963,
+A,control remove City L24-29,Austria,Austria,,0.4914385310415517,
+A,control remove countries L24-29,Austria,Austria,,0.4799471258861739,
+A,control remove Belgium L24-29,Italy,Italy,,0.22161958128814388,
+A,control remove town L24-29,Austria,Austria,,0.48969924425836414,
+A,control remove Netherlands L24-29,Austria,Austria,,0.39268560939422026,
+A,remove Salzburg L27-31,Italy,Italy,,0.23129628595973306,
+A,control remove Vienna L27-31,Italy,Italy,,0.18747788008610491,
+A,control remove Graz L27-31,Austria,Austria,,0.40340814533330177,
+A,control remove Innsbruck L27-31,Austria,Austria,,0.3204774033930679,
+A,control remove Tokyo L27-31,Italy,Italy,,0.3011417427404653,
+A,control remove Mozart L27-31,Austria,Austria,,0.33235071798821186,
+A,control remove music L27-31,Austria,Austria,,0.47562902209106606,
+A,control remove composer L27-31,Austria,Austria,,0.45917320941759804,
+A,control remove Wolfgang L27-31,Austria,Austria,,0.3522022488322532,
+A,control remove cities L27-31,Austria,Austria,,0.47626192745123547,
+A,control remove Russia L27-31,Austria,Austria,,0.5261446175041863,
+A,control remove Cities L27-31,Austria,Austria,,0.32659947177364473,
+A,control remove City L27-31,Austria,Austria,,0.4771690468937747,
+A,control remove countries L27-31,Austria,Austria,,0.5326743097271527,
+A,control remove Belgium L27-31,Austria,Austria,,0.4767370045888652,
+A,control remove town L27-31,Austria,Austria,,0.4758710883509857,
+A,control remove Netherlands L27-31,Austria,Austria,,0.44052792492324117,
+B,swap Salzburg->Munich [mid 12-21],Germany,Germany,Germany,0.32699634450946646,0.477499110993265
+B,swap Salzburg->Paris [mid 12-21],Italy,Italy,France,0.16543510019866497,0.004424681257542063
+B,swap Salzburg->Budapest [mid 12-21],Italy,Italy,Hungary,0.4151316726859899,0.0002446629911538994
+B,swap Salzburg->Milan [mid 12-21],Italy,Italy,Italy,0.06483109746353831,0.8991435957062283
+B,swap Salzburg->Zurich [mid 12-21],Italy,Italy,Switzerland,0.20741871405344386,0.009136757583668883
+B,swap Salzburg->Prague [mid 12-21],Austria,Austria,Czech,0.46442931648608726,0.0034771749230627686
+B,swap Salzburg->Krakow [mid 12-21],Italy,Italy,Poland,0.2939043860743466,2.6484427309872364e-05
+B,swap Salzburg->Madrid [mid 12-21],Italy,Italy,Spain,0.16549632152586982,0.002090840428729048
+B,swap Salzburg->Osaka [mid 12-21],Italy,Italy,Japan,0.14119478461188317,8.351659619875625e-05
+B,swap Salzburg->Innsbruck [mid 12-21],Italy,Italy,Austria,0.3321816411625638,0.3321816411625638
+B,swap Salzburg->Graz [mid 12-21],Italy,Italy,Austria,0.11928596938204883,0.11928596938204883
+B,swap Salzburg->Linz [mid 12-21],Italy,Italy,Austria,0.09066518244846407,0.09066518244846407
+B,swap Salzburg->Munich [8-23],Germany,Germany,Germany,0.07754597910245842,0.8360757704348103
+B,swap Salzburg->Paris [8-23],Italy,Italy,France,0.008705840827663566,0.17607405871497747
+B,swap Salzburg->Budapest [8-23],Italy,Italy,Hungary,0.3241152391145905,0.0028084668940030087
+B,swap Salzburg->Milan [8-23],Italy,Italy,Italy,0.010716557126745886,0.9721713954169372
+B,swap Salzburg->Zurich [8-23],Italy,Italy,Switzerland,0.07053019851354239,0.07087585517999888
+B,swap Salzburg->Prague [8-23],Austria,Austria,Czech,0.3750286042199804,0.08445296396449692
+B,swap Salzburg->Krakow [8-23],Italy,Italy,Poland,0.31656712657266006,0.006561942964795362
+B,swap Salzburg->Madrid [8-23],Italy,Italy,Spain,0.009707503444067317,0.28543467155519886
+B,swap Salzburg->Osaka [8-23],Italy,Italy,Japan,0.0026663059402300677,0.00047023048901146097
+B,swap Salzburg->Innsbruck [8-23],Italy,Italy,Austria,0.24916327430871968,0.24916327430871968
+B,swap Salzburg->Graz [8-23],Italy,Italy,Austria,0.06307776471511732,0.06307776471511732
+B,swap Salzburg->Linz [8-23],Italy,Italy,Austria,0.004809423156974635,0.004809423156974635
+B,swap Salzburg->Munich [all],Germany,Germany,Germany,0.1421816637523669,0.8205276993907216
+B,swap Salzburg->Paris [all],France,France,France,0.006971896543852403,0.5593796688381952
+B,swap Salzburg->Budapest [all],Italy,Italy,Hungary,0.3649406390056116,0.016051375326003627
+B,swap Salzburg->Milan [all],Italy,Italy,Italy,0.022371463621761477,0.9585993266954443
+B,swap Salzburg->Zurich [all],Italy,Italy,Switzerland,0.1065125384386775,0.13752094337706086
+B,swap Salzburg->Prague [all],Austria,Austria,Czech,0.3906743559486418,0.11309847280082548
+B,swap Salzburg->Krakow [all],Austria,Austria,Poland,0.3920337242322384,0.011827017445572985
+B,swap Salzburg->Madrid [all],Italy,Italy,Spain,0.02576946312670852,0.3581638075441186
+B,swap Salzburg->Osaka [all],Italy,Italy,Japan,0.0054132613005318415,0.0015765753718179026
+B,swap Salzburg->Innsbruck [all],Italy,Italy,Austria,0.2549112600185674,0.2549112600185674
+B,swap Salzburg->Graz [all],Italy,Italy,Austria,0.08923904364689562,0.08923904364689562
+B,swap Salzburg->Linz [all],Italy,Italy,Austria,0.021456016756030587,0.021456016756030587
+C,swap Vienna->Budapest [mid 12-21] (strength 0.114),Austria,Austria,Hungary,0.42001587422232506,0.00019265591140393368
+C,swap Graz->Budapest [mid 12-21] (strength 0.062),Austria,Austria,Hungary,0.3477104026015699,6.240276289651628e-05
+C,swap Innsbruck->Budapest [mid 12-21] (strength 0.079),Austria,Austria,Hungary,0.43591288252783905,7.832185454632006e-05
+C,swap Tokyo->Budapest [mid 12-21] (strength 0.110),Germany,Germany,Hungary,0.1910534092249748,3.8926228828448784e-05
+C,swap Mozart->Budapest [mid 12-21] (strength 0.246),Austria,Austria,Hungary,0.523209555475428,0.00042198668037512165
+C,swap music->Budapest [mid 12-21] (strength 0.095),Austria,Austria,Hungary,0.3734566001620112,4.6086859522015904e-05
+C,swap composer->Budapest [mid 12-21] (strength 0.150),Austria,Austria,Hungary,0.5407606988943304,7.568031068146567e-05
+C,swap Wolfgang->Budapest [mid 12-21] (strength 0.170),Austria,Austria,Hungary,0.4748342401627862,7.071065881301213e-05
+C,swap cities->Budapest [mid 12-21] (strength 0.171),Italy,Italy,Hungary,0.1375061591513538,4.338452639184421e-05
+C,swap Russia->Budapest [mid 12-21] (strength 0.167),Austria,Austria,Hungary,0.3720612825012588,0.0001035777333653692
+C,swap Cities->Budapest [mid 12-21] (strength 0.165),Italy,Italy,Hungary,0.19825367951497705,5.8759981274548906e-05
+C,swap City->Budapest [mid 12-21] (strength 0.164),Italy,Italy,Hungary,0.19422256286208428,6.942863023531359e-05
+C,swap countries->Budapest [mid 12-21] (strength 0.187),Germany,Germany,Hungary,0.22015244129677075,6.949835616083278e-05
+C,swap Belgium->Budapest [mid 12-21] (strength 0.158),Austria,Austria,Hungary,0.4268579844684022,0.00011877788650365781
+C,swap town->Budapest [mid 12-21] (strength 0.158),Germany,Germany,Hungary,0.262305212140193,6.442133279803824e-05
+C,swap Netherlands->Budapest [mid 12-21] (strength 0.157),Austria,Austria,Hungary,0.40251586632069214,0.00011925326400853758
+C,swap Vienna->Budapest [8-23] (strength 0.114),Austria,Austria,Hungary,0.38033296489426643,0.00032603413820328703
+C,swap Graz->Budapest [8-23] (strength 0.062),Austria,Austria,Hungary,0.4085515255296476,7.337730616052366e-05
+C,swap Innsbruck->Budapest [8-23] (strength 0.079),Austria,Austria,Hungary,0.46492800297404235,6.111805669053465e-05
+C,swap Tokyo->Budapest [8-23] (strength 0.110),Germany,Germany,Hungary,0.08571043954307926,1.6439517352023593e-05
+C,swap Mozart->Budapest [8-23] (strength 0.246),Austria,Austria,Hungary,0.6497855489309483,0.005631203729182399
+C,swap music->Budapest [8-23] (strength 0.095),Austria,Austria,Hungary,0.36289328731127585,3.711868169744852e-05
+C,swap composer->Budapest [8-23] (strength 0.150),Austria,Austria,Hungary,0.48505866877747067,7.222722235204252e-05
+C,swap Wolfgang->Budapest [8-23] (strength 0.170),Austria,Austria,Hungary,0.5492761785382042,0.0002089197881238921
+C,swap cities->Budapest [8-23] (strength 0.171),Italy,Italy,Hungary,0.06362540675173407,2.5805055813842806e-05
+C,swap Russia->Budapest [8-23] (strength 0.167),Austria,Austria,Hungary,0.37136519276962215,9.714986492095303e-05
+C,swap Cities->Budapest [8-23] (strength 0.165),Germany,Germany,Hungary,0.09002411902006181,2.8432317928680444e-05
+C,swap City->Budapest [8-23] (strength 0.164),Italy,Italy,Hungary,0.08833233087317013,4.319926902038321e-05
+C,swap countries->Budapest [8-23] (strength 0.187),Italy,Italy,Hungary,0.19962529737848275,4.910160055121475e-05
+C,swap Belgium->Budapest [8-23] (strength 0.158),Austria,Austria,Hungary,0.39277307110211646,0.0002042072626918358
+C,swap town->Budapest [8-23] (strength 0.158),Germany,Germany,Hungary,0.14307597354612167,2.9145275178587876e-05
+C,swap Netherlands->Budapest [8-23] (strength 0.157),Austria,Austria,Hungary,0.3858772110582014,0.00014672936132808544
+C,swap Vienna->Budapest [all] (strength 0.114),Italy,Italy,Hungary,0.4338821624130409,0.0015652701155714282
+C,swap Graz->Budapest [all] (strength 0.062),Austria,Austria,Hungary,0.4928174669781716,0.00012880916956219736
+C,swap Innsbruck->Budapest [all] (strength 0.079),Austria,Austria,Hungary,0.5038004392042921,0.00015868485685708317
+C,swap Tokyo->Budapest [all] (strength 0.110),Germany,Germany,Hungary,0.1368061879882926,1.1631886328411124e-05
+C,swap Mozart->Budapest [all] (strength 0.246),Austria,Austria,Hungary,0.6334781583818343,0.027855629206305025
+C,swap music->Budapest [all] (strength 0.095),Austria,Austria,Hungary,0.42334356420026475,7.591464445559859e-05
+C,swap composer->Budapest [all] (strength 0.150),Austria,Austria,Hungary,0.476531786378233,0.00018110516321775592
+C,swap Wolfgang->Budapest [all] (strength 0.170),Austria,Austria,Hungary,0.6424990549589032,0.0002443802477789322
+C,swap cities->Budapest [all] (strength 0.171),Germany,Germany,Hungary,0.06878247910819578,4.898327745693795e-05
+C,swap Russia->Budapest [all] (strength 0.167),Austria,Austria,Hungary,0.5317716459585334,0.0003554585401486189
+C,swap Cities->Budapest [all] (strength 0.165),Germany,Germany,Hungary,0.1327793774972275,3.473723545392629e-05
+C,swap City->Budapest [all] (strength 0.164),Germany,Germany,Hungary,0.12305478662865532,3.429061905644501e-05
+C,swap countries->Budapest [all] (strength 0.187),Germany,Germany,Hungary,0.19786076618708506,0.00023231691668267285
+C,swap Belgium->Budapest [all] (strength 0.158),Austria,Austria,Hungary,0.5261523868118964,0.00115220566447598
+C,swap town->Budapest [all] (strength 0.158),Germany,Germany,Hungary,0.06873263236090742,2.7854699173100863e-05
+C,swap Netherlands->Budapest [all] (strength 0.157),Austria,Austria,Hungary,0.5132494019668188,0.0003646676109437059
+D,remove Salzburg [mid 12-21] @question,Italy,Italy,,0.00020652436487492628,
+D,swap Salzburg->Budapest [mid 12-21] @question,Italy,Italy,Hungary,0.39252949940986104,0.00035834560420503706
+D,remove Salzburg [8-23] @question,Italy,Italy,,0.000124037340407564,
+D,swap Salzburg->Budapest [8-23] @question,Italy,Italy,Hungary,0.27781396062497093,0.0030909748935653617
+D,remove Salzburg [all] @question,Italy,Italy,,0.0012641182365694926,
+D,swap Salzburg->Budapest [all] @question,Austria,Austria,Hungary,0.42605266105248835,0.003257359485304323
+D,remove Salzburg [mid 12-21] @template,Italy,Italy,,0.28577622479660636,
+D,swap Salzburg->Budapest [mid 12-21] @template,Austria,Austria,Hungary,0.48837692485188067,0.0001058099116659553
+D,remove Salzburg [8-23] @template,Italy,Italy,,0.02832963597441983,
+D,swap Salzburg->Budapest [8-23] @template,Austria,Austria,Hungary,0.38858879213541303,0.0005848406713105393
+D,remove Salzburg [all] @template,Italy,Italy,,0.0011000869936370564,
+D,swap Salzburg->Budapest [all] @template,Austria,Austria,Hungary,0.4379905331599523,0.0022997750024937266

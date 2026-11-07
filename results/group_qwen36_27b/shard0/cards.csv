@@ -1,0 +1,103 @@
+sentence,group,predicted,question,bridge,answer,hop1_question,hop2_question,model_said,P_base,hop1_said,hop2_said,answer_onset,reach,named_as,needed_early,noise,beats_noise,bridge_onset,comes_first,beats_kind,collateral,spread_16,spread_all,own_part,bridge_only,swaps_follow,same_answer_keeps,fallback,need,specificity,specificity_old,isolation,lead,quality,verdict,verdict_reason
+L_colosseum__alone,L,alone,What letter does the name of the country where the Colosseum is located start with? Answer with one letter.,Italy,I,In which country is the Colosseum located? Answer in one word.,What letter does the word Italy start with? Answer with one letter.,I,0.995,Italy,I,54.0,0.589,Italy.,0.988,0.006,0.982,42.0,True,0.986,0.0,0.03,0.999,0.99,1.0,0.0,,T,0.982,1.0,0.998,1.0,12.0,0.982,CONSULTED BRIDGE,"needed early, beats noise, comes first, beats its own kind, no collateral"
+L_colosseum__agree,L,peers agree (I),"Several AI agents are answering the same question.
+
+Question: What letter does the name of the country where the Colosseum is located start with?
+Agent 2: I
+Agent 3: I
+Agent 4: I
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",Italy,I,In which country is the Colosseum located? Answer in one word.,What letter does the word Italy start with? Answer with one letter.,I,0.909,Italy,I,54.0,0.966,Italy. I,0.816,0.029,0.788,42.0,True,0.784,0.0,0.283,0.772,0.76,0.823,0.0,,C,0.788,1.0,0.96,0.931,12.0,0.733,CONSULTED BRIDGE,"needed early, beats noise, comes first, beats its own kind, no collateral"
+L_colosseum__disagree,L,peers say F,"Several AI agents are answering the same question.
+
+Question: What letter does the name of the country where the Colosseum is located start with?
+Agent 2: F
+Agent 3: F
+Agent 4: F
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",Italy,I,In which country is the Colosseum located? Answer in one word.,What letter does the word Italy start with? Answer with one letter.,I,0.703,Italy,I,54.0,0.999,Italy. I,0.998,0.093,0.906,30.0,True,0.89,0.0,0.979,0.998,0.998,0.999,0.2,,F,0.906,1.0,0.892,1.0,24.0,0.905,CONSULTED BRIDGE,"needed early, beats noise, comes first, beats its own kind, no collateral"
+L_gates__alone,L,alone,What letter does the name of the city where Bill Gates was born start with? Answer with one letter.,Seattle,S,In which city was Bill Gates born? Answer in one word.,What letter does the word Seattle start with? Answer with one letter.,S,0.94,Seattle,S,54.0,1.0,Seattle.,0.989,0.016,0.973,18.0,True,0.929,0.073,0.519,0.034,0.978,0.994,0.125,,S,0.973,1.0,0.939,0.988,36.0,0.962,CONSULTED BRIDGE,"needed early, beats noise, comes first, beats its own kind, no collateral"
+L_gates__agree,L,peers agree (S),"Several AI agents are answering the same question.
+
+Question: What letter does the name of the city where Bill Gates was born start with?
+Agent 2: S
+Agent 3: S
+Agent 4: S
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",Seattle,S,In which city was Bill Gates born? Answer in one word.,What letter does the word Seattle start with? Answer with one letter.,S,0.945,Seattle,S,54.0,0.999,Seattle. S,0.077,0.021,0.056,,False,0.049,0.073,0.008,0.0,0.119,0.068,0.0,,S,0.056,0.882,0.638,1.0,,0.0,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer"
+L_gates__disagree,L,peers say B,"Several AI agents are answering the same question.
+
+Question: What letter does the name of the city where Bill Gates was born start with?
+Agent 2: B
+Agent 3: B
+Agent 4: B
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",Seattle,S,In which city was Bill Gates born? Answer in one word.,What letter does the word Seattle start with? Answer with one letter.,B,0.004,Seattle,S,,,,,,,,,,,,,,,,,,,,,,,,UNTESTABLE,the model gets the two-hop question wrong
+L_piaf__alone,L,alone,What letter does the name of the city where Édith Piaf was born start with? Answer with one letter.,Paris,P,In which city was Édith Piaf born? Answer in one word.,What letter does the word Paris start with? Answer with one letter.,P,0.959,Paris,P,54.0,0.878,Paris. P,0.999,0.024,0.975,30.0,True,0.671,0.144,0.999,1.0,1.0,0.979,0.143,,S,0.975,0.98,0.672,1.0,24.0,0.956,CONSULTED BRIDGE,"needed early, beats noise, comes first, beats its own kind, no collateral"
+L_piaf__agree,L,peers agree (P),"Several AI agents are answering the same question.
+
+Question: What letter does the name of the city where Édith Piaf was born start with?
+Agent 2: P
+Agent 3: P
+Agent 4: P
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",Paris,P,In which city was Édith Piaf born? Answer in one word.,What letter does the word Paris start with? Answer with one letter.,P,0.946,Paris,P,54.0,0.829,Paris. P,0.149,0.026,0.122,,False,0.107,0.277,0.118,0.17,0.208,0.168,0.0,,P,0.122,1.0,0.718,1.0,,0.0,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer"
+L_piaf__disagree,L,peers say L,"Several AI agents are answering the same question.
+
+Question: What letter does the name of the city where Édith Piaf was born start with?
+Agent 2: L
+Agent 3: L
+Agent 4: L
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",Paris,P,In which city was Édith Piaf born? Answer in one word.,What letter does the word Paris start with? Answer with one letter.,L,0.002,Paris,P,,,,,,,,,,,,,,,,,,,,,,,,UNTESTABLE,the model gets the two-hop question wrong
+L_mozart__alone,L,alone,What letter does the name of the city where Wolfgang Amadeus Mozart was born start with? Answer with one letter.,Salzburg,S,In which city was Wolfgang Amadeus Mozart born? Answer in one word.,What letter does the word Salzburg start with? Answer with one letter.,S,1.0,Salzburg,S,54.0,0.997,Salzburg.,0.565,0.0,0.564,42.0,True,0.555,0.212,0.158,0.876,0.773,0.999,0.0,,S,0.564,1.0,0.982,1.0,12.0,0.564,CONSULTED BRIDGE,"needed early, beats noise, comes first, beats its own kind, no collateral"
+L_mozart__agree,L,peers agree (S),"Several AI agents are answering the same question.
+
+Question: What letter does the name of the city where Wolfgang Amadeus Mozart was born start with?
+Agent 2: S
+Agent 3: S
+Agent 4: S
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",Salzburg,S,In which city was Wolfgang Amadeus Mozart born? Answer in one word.,What letter does the word Salzburg start with? Answer with one letter.,S,0.987,Salzburg,S,54.0,0.987,Salzburg. S,0.011,0.006,0.006,,False,0.008,0.212,0.006,0.032,0.013,0.046,0.0,,S,0.006,1.0,0.727,1.0,,0.0,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer"
+L_mozart__disagree,L,peers say B,"Several AI agents are answering the same question.
+
+Question: What letter does the name of the city where Wolfgang Amadeus Mozart was born start with?
+Agent 2: B
+Agent 3: B
+Agent 4: B
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",Salzburg,S,In which city was Wolfgang Amadeus Mozart born? Answer in one word.,What letter does the word Salzburg start with? Answer with one letter.,B,0.41,Salzburg,S,,,,,,,,,,,,,,,,,,,,,,,,UNTESTABLE,the model gets the two-hop question wrong
+L_spider__alone,L,alone,What letter does the name of the animals that spin webs start with? Answer with one letter.,spider / spiders,S,Which animals spin webs? Answer in one word.,What letter does the word spider start with? Answer with one letter.,S,0.987,Spiders,S,54.0,0.138,the spider.,0.512,0.004,0.508,42.0,True,0.506,0.0,0.034,0.899,0.624,0.432,0.143,1.0,S,0.508,0.845,0.988,1.0,12.0,0.429,CONSULTED BRIDGE,"needed early, beats noise, comes first, beats its own kind, no collateral"
+L_spider__agree,L,peers agree (S),"Several AI agents are answering the same question.
+
+Question: What letter does the name of the animals that spin webs start with?
+Agent 2: S
+Agent 3: S
+Agent 4: S
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",spider / spiders,S,Which animals spin webs? Answer in one word.,What letter does the word spider start with? Answer with one letter.,S,0.982,Spiders,S,54.0,0.255,spider. S,0.186,0.01,0.176,,False,0.178,0.144,0.118,0.21,0.282,0.173,0.0,1.0,S,0.176,0.933,0.959,1.0,,0.0,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read"
+L_spider__disagree,L,peers say A,"Several AI agents are answering the same question.
+
+Question: What letter does the name of the animals that spin webs start with?
+Agent 2: A
+Agent 3: A
+Agent 4: A
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",spider / spiders,S,Which animals spin webs? Answer in one word.,What letter does the word spider start with? Answer with one letter.,A,0.36,Spiders,S,,,,,,,,,,,,,,,,,,,,,,,,UNTESTABLE,the model gets the two-hop question wrong
+L_york__alone,L,alone,What letter does the name of the city where York University has its headquarters start with? Answer with one letter.,Toronto,T,In which city does York University have its headquarters? Answer in one word.,What letter does the word Toronto start with? Answer with one letter.,T,0.932,Toronto,T,54.0,0.969,Toronto.,0.983,0.047,0.936,30.0,True,0.845,0.026,0.644,0.728,0.976,0.424,0.0,,T,0.936,0.431,0.859,0.993,24.0,0.401,CONSULTED BRIDGE,"needed early, beats noise, comes first, beats its own kind, no collateral"
+L_york__agree,L,peers agree (T),"Several AI agents are answering the same question.
+
+Question: What letter does the name of the city where York University has its headquarters start with?
+Agent 2: T
+Agent 3: T
+Agent 4: T
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",Toronto,T,In which city does York University have its headquarters? Answer in one word.,What letter does the word Toronto start with? Answer with one letter.,T,0.956,Toronto,T,54.0,0.997,Toronto. T,0.018,0.016,0.002,,False,0.003,0.054,0.0,0.0,0.009,0.018,0.0,,T,0.002,1.0,0.157,0.527,,0.0,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer"
+L_york__disagree,L,peers say M,"Several AI agents are answering the same question.
+
+Question: What letter does the name of the city where York University has its headquarters start with?
+Agent 2: M
+Agent 3: M
+Agent 4: M
+
+You are Agent 1. Taking the other agents' answers into account, give your answer. Answer with one letter.",Toronto,T,In which city does York University have its headquarters? Answer in one word.,What letter does the word Toronto start with? Answer with one letter.,M,0.032,Toronto,T,,,,,,,,,,,,,,,,,,,,,,,,UNTESTABLE,the model gets the two-hop question wrong

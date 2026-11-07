@@ -1,0 +1,97 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+L_colosseum__alone|Germany,L_colosseum__alone,Germany,layers 12–53,G,I,didn't follow
+L_colosseum__alone|Japan,L_colosseum__alone,Japan,layers 12–53,J,I,didn't follow
+L_colosseum__alone|Spain,L_colosseum__alone,Spain,layers 12–53,S,I,didn't follow
+L_colosseum__alone|France,L_colosseum__alone,France,layers 12–53,F,I,didn't follow
+L_colosseum__alone|Brazil,L_colosseum__alone,Brazil,layers 12–53,B,I,didn't follow
+L_colosseum__alone|Canada,L_colosseum__alone,Canada,layers 12–53,C,I,didn't follow
+L_colosseum__agree|Germany,L_colosseum__agree,Germany,layers 12–53,G,I,didn't follow
+L_colosseum__agree|Japan,L_colosseum__agree,Japan,layers 12–53,J,I,didn't follow
+L_colosseum__agree|Spain,L_colosseum__agree,Spain,layers 12–53,S,I,didn't follow
+L_colosseum__agree|France,L_colosseum__agree,France,layers 12–53,F,I,didn't follow
+L_colosseum__agree|Brazil,L_colosseum__agree,Brazil,layers 12–53,B,I,didn't follow
+L_colosseum__agree|Canada,L_colosseum__agree,Canada,layers 12–53,C,C,"gave it, but it's also the fallback"
+L_colosseum__disagree|Germany,L_colosseum__disagree,Germany,layers 12–53,G,I,didn't follow
+L_colosseum__disagree|Japan,L_colosseum__disagree,Japan,layers 12–53,J,I,didn't follow
+L_colosseum__disagree|Spain,L_colosseum__disagree,Spain,layers 12–53,S,I,didn't follow
+L_colosseum__disagree|France,L_colosseum__disagree,France,layers 12–53,F,F,"gave it, but it's also the fallback"
+L_colosseum__disagree|Brazil,L_colosseum__disagree,Brazil,layers 12–53,B,I,didn't follow
+L_colosseum__disagree|Canada,L_colosseum__disagree,Canada,layers 12–53,C,C,followed the swap
+L_gates__alone|Munich,L_gates__alone,Munich,layers 12–53,M,S,didn't follow
+L_gates__alone|Paris,L_gates__alone,Paris,layers 12–53,P,N,didn't follow
+L_gates__alone|Tokyo,L_gates__alone,Tokyo,layers 12–53,T,N,didn't follow
+L_gates__alone|Berlin,L_gates__alone,Berlin,layers 12–53,B,N,didn't follow
+L_gates__alone|Rome,L_gates__alone,Rome,layers 12–53,R,N,didn't follow
+L_gates__alone|Madrid,L_gates__alone,Madrid,layers 12–53,M,D,didn't follow
+L_gates__alone|Chicago,L_gates__alone,Chicago,layers 12–53,C,C,followed the swap
+L_gates__alone|Lyon,L_gates__alone,Lyon,layers 12–53,L,D,didn't follow
+L_gates__agree|Munich,L_gates__agree,Munich,layers 12–53,M,S,didn't follow
+L_gates__agree|Paris,L_gates__agree,Paris,layers 12–53,P,S,didn't follow
+L_gates__agree|Tokyo,L_gates__agree,Tokyo,layers 12–53,T,S,didn't follow
+L_gates__agree|Berlin,L_gates__agree,Berlin,layers 12–53,B,S,didn't follow
+L_gates__agree|Rome,L_gates__agree,Rome,layers 12–53,R,S,didn't follow
+L_gates__agree|Madrid,L_gates__agree,Madrid,layers 12–53,M,S,didn't follow
+L_gates__agree|Chicago,L_gates__agree,Chicago,layers 12–53,C,S,didn't follow
+L_gates__agree|Lyon,L_gates__agree,Lyon,layers 12–53,L,S,didn't follow
+L_piaf__alone|Munich,L_piaf__alone,Munich,layers 12–53,M,P,didn't follow
+L_piaf__alone|Tokyo,L_piaf__alone,Tokyo,layers 12–53,T,P,didn't follow
+L_piaf__alone|Berlin,L_piaf__alone,Berlin,layers 12–53,B,P,didn't follow
+L_piaf__alone|Rome,L_piaf__alone,Rome,layers 12–53,R,R,followed the swap
+L_piaf__alone|Madrid,L_piaf__alone,Madrid,layers 12–53,M,P,didn't follow
+L_piaf__alone|Chicago,L_piaf__alone,Chicago,layers 12–53,C,P,didn't follow
+L_piaf__alone|Lyon,L_piaf__alone,Lyon,layers 12–53,L,S,didn't follow
+L_piaf__agree|Munich,L_piaf__agree,Munich,layers 12–53,M,P,didn't follow
+L_piaf__agree|Tokyo,L_piaf__agree,Tokyo,layers 12–53,T,P,didn't follow
+L_piaf__agree|Berlin,L_piaf__agree,Berlin,layers 12–53,B,P,didn't follow
+L_piaf__agree|Rome,L_piaf__agree,Rome,layers 12–53,R,P,didn't follow
+L_piaf__agree|Madrid,L_piaf__agree,Madrid,layers 12–53,M,P,didn't follow
+L_piaf__agree|Chicago,L_piaf__agree,Chicago,layers 12–53,C,P,didn't follow
+L_piaf__agree|Lyon,L_piaf__agree,Lyon,layers 12–53,L,P,didn't follow
+L_mozart__alone|Munich,L_mozart__alone,Munich,layers 12–53,M,S,didn't follow
+L_mozart__alone|Paris,L_mozart__alone,Paris,layers 12–53,P,S,didn't follow
+L_mozart__alone|Tokyo,L_mozart__alone,Tokyo,layers 12–53,T,V,didn't follow
+L_mozart__alone|Berlin,L_mozart__alone,Berlin,layers 12–53,B,A,didn't follow
+L_mozart__alone|Rome,L_mozart__alone,Rome,layers 12–53,R,V,didn't follow
+L_mozart__alone|Madrid,L_mozart__alone,Madrid,layers 12–53,M,V,didn't follow
+L_mozart__alone|Chicago,L_mozart__alone,Chicago,layers 12–53,C,S,didn't follow
+L_mozart__alone|Lyon,L_mozart__alone,Lyon,layers 12–53,L,S,didn't follow
+L_mozart__agree|Munich,L_mozart__agree,Munich,layers 12–53,M,S,didn't follow
+L_mozart__agree|Paris,L_mozart__agree,Paris,layers 12–53,P,S,didn't follow
+L_mozart__agree|Tokyo,L_mozart__agree,Tokyo,layers 12–53,T,S,didn't follow
+L_mozart__agree|Berlin,L_mozart__agree,Berlin,layers 12–53,B,S,didn't follow
+L_mozart__agree|Rome,L_mozart__agree,Rome,layers 12–53,R,S,didn't follow
+L_mozart__agree|Madrid,L_mozart__agree,Madrid,layers 12–53,M,S,didn't follow
+L_mozart__agree|Chicago,L_mozart__agree,Chicago,layers 12–53,C,S,didn't follow
+L_mozart__agree|Lyon,L_mozart__agree,Lyon,layers 12–53,L,S,didn't follow
+L_spider__alone|bee,L_spider__alone,bee,layers 12–53,B,S,didn't follow
+L_spider__alone|ant,L_spider__alone,ant,layers 12–53,A,S,didn't follow
+L_spider__alone|dog,L_spider__alone,dog,layers 12–53,D,S,didn't follow
+L_spider__alone|bird,L_spider__alone,bird,layers 12–53,B,S,didn't follow
+L_spider__alone|horse,L_spider__alone,horse,layers 12–53,H,S,didn't follow
+L_spider__alone|cat,L_spider__alone,cat,layers 12–53,C,C,followed the swap
+L_spider__alone|duck,L_spider__alone,duck,layers 12–53,D,S,didn't follow
+L_spider__alone|snake,L_spider__alone,snake,layers 12–53,S,S,kept the answer
+L_spider__agree|bee,L_spider__agree,bee,layers 12–53,B,S,didn't follow
+L_spider__agree|ant,L_spider__agree,ant,layers 12–53,A,S,didn't follow
+L_spider__agree|dog,L_spider__agree,dog,layers 12–53,D,S,didn't follow
+L_spider__agree|bird,L_spider__agree,bird,layers 12–53,B,S,didn't follow
+L_spider__agree|horse,L_spider__agree,horse,layers 12–53,H,S,didn't follow
+L_spider__agree|cat,L_spider__agree,cat,layers 12–53,C,S,didn't follow
+L_spider__agree|duck,L_spider__agree,duck,layers 12–53,D,S,didn't follow
+L_spider__agree|snake,L_spider__agree,snake,layers 12–53,S,S,kept the answer
+L_york__alone|Munich,L_york__alone,Munich,layers 12–53,M,T,didn't follow
+L_york__alone|Paris,L_york__alone,Paris,layers 12–53,P,T,didn't follow
+L_york__alone|Berlin,L_york__alone,Berlin,layers 12–53,B,T,didn't follow
+L_york__alone|Rome,L_york__alone,Rome,layers 12–53,R,T,didn't follow
+L_york__alone|Madrid,L_york__alone,Madrid,layers 12–53,M,T,didn't follow
+L_york__alone|Chicago,L_york__alone,Chicago,layers 12–53,C,T,didn't follow
+L_york__alone|Lyon,L_york__alone,Lyon,layers 12–53,L,T,didn't follow
+L_york__alone|Vancouver,L_york__alone,Vancouver,layers 12–53,V,T,didn't follow
+L_york__agree|Munich,L_york__agree,Munich,layers 12–53,M,T,didn't follow
+L_york__agree|Paris,L_york__agree,Paris,layers 12–53,P,T,didn't follow
+L_york__agree|Berlin,L_york__agree,Berlin,layers 12–53,B,T,didn't follow
+L_york__agree|Rome,L_york__agree,Rome,layers 12–53,R,T,didn't follow
+L_york__agree|Madrid,L_york__agree,Madrid,layers 12–53,M,T,didn't follow
+L_york__agree|Chicago,L_york__agree,Chicago,layers 12–53,C,T,didn't follow
+L_york__agree|Lyon,L_york__agree,Lyon,layers 12–53,L,T,didn't follow
+L_york__agree|Vancouver,L_york__agree,Vancouver,layers 12–53,V,T,didn't follow

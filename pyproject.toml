@@ -1,0 +1,32 @@
+[project]
+name = "consulted-bridges"
+version = "0.1.0"
+description = "Causal J-lens tests of whether LLMs consult the hidden middle step of two-hop questions, applied to Silent Dissent"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    # the Silent Dissent authors' code (MIT): lens loading, prompts, token handling
+    "silent-dissent @ git+https://github.com/ziangni-sys/silent-dissent.git@fe78a9f9240efd334b9c3482e08b2c9c028ace18",
+    "torch>=2.4",
+    "transformers>=4.57",
+    "huggingface_hub",
+    "pandas",
+    "pyyaml",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+cb = "consulted_bridges.cli:main"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

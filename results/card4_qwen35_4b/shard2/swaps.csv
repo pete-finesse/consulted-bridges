@@ -1,0 +1,122 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+v2_A1_kremlin|Germany,v2_A1_kremlin,Germany,layers 6–17,Berlin,Moscow,didn't follow
+v2_A1_kremlin|Japan,v2_A1_kremlin,Japan,layers 6–17,Tokyo,Moscow,didn't follow
+v2_A1_kremlin|Spain,v2_A1_kremlin,Spain,layers 6–17,Madrid,Moscow,didn't follow
+v2_A1_kremlin|Egypt,v2_A1_kremlin,Egypt,layers 6–17,Cairo,Moscow,didn't follow
+v2_A1_kremlin|Poland,v2_A1_kremlin,Poland,layers 6–17,Warsaw,Moscow,didn't follow
+v2_A1_kremlin|Greece,v2_A1_kremlin,Greece,layers 6–17,Athens,Moscow,didn't follow
+v2_B1_mishima|Munich,v2_B1_mishima,Munich,layers 6–17,Germany,Japan,didn't follow
+v2_B1_mishima|Milan,v2_B1_mishima,Milan,layers 6–17,Italy,Japan,didn't follow
+v2_B1_mishima|Lyon,v2_B1_mishima,Lyon,layers 6–17,France,Japan,didn't follow
+v2_B1_mishima|Barcelona,v2_B1_mishima,Barcelona,layers 6–17,Spain,Japan,didn't follow
+v2_B1_mishima|Osaka,v2_B1_mishima,Osaka,layers 6–17,Japan,Japan,kept the answer
+v2_B1_mishima|Toronto,v2_B1_mishima,Toronto,layers 6–17,Canada,Japan,didn't follow
+v2_B1_mishima|Chicago,v2_B1_mishima,Chicago,layers 6–17,USA,Japan,didn't follow
+v2_B1_mishima|Manchester,v2_B1_mishima,Manchester,layers 6–17,United Kingdom,Japan,didn't follow
+v2_B1_mishima|Osaka,v2_B1_mishima,Osaka,layers 6–17,Japan,Japan,kept the answer
+v2_B1_mishima|Kyoto,v2_B1_mishima,Kyoto,layers 6–17,Japan,Japan,kept the answer
+v2_B2_mozart|Munich,v2_B2_mozart,Munich,layers 6–14,Germany,Germany,followed the swap
+v2_B2_mozart|Milan,v2_B2_mozart,Milan,layers 6–14,Italy,Italy,"gave it, but it's also the fallback"
+v2_B2_mozart|Lyon,v2_B2_mozart,Lyon,layers 6–14,France,France,followed the swap
+v2_B2_mozart|Barcelona,v2_B2_mozart,Barcelona,layers 6–14,Spain,Italy,didn't follow
+v2_B2_mozart|Osaka,v2_B2_mozart,Osaka,layers 6–14,Japan,Italy,didn't follow
+v2_B2_mozart|Toronto,v2_B2_mozart,Toronto,layers 6–14,Canada,Italy,didn't follow
+v2_B2_mozart|Chicago,v2_B2_mozart,Chicago,layers 6–14,USA,Italy,didn't follow
+v2_B2_mozart|Manchester,v2_B2_mozart,Manchester,layers 6–14,United Kingdom,United Kingdom,followed the swap
+v2_B2_mozart|Vienna,v2_B2_mozart,Vienna,layers 6–14,Austria,Austria,kept the answer
+v2_B2_mozart|Graz,v2_B2_mozart,Graz,layers 6–14,Austria,Italy,lost the answer
+v2_B2_gates|Munich,v2_B2_gates,Munich,layers 6–14,Germany,Germany,followed the swap
+v2_B2_gates|Milan,v2_B2_gates,Milan,layers 6–14,Italy,India,didn't follow
+v2_B2_gates|Lyon,v2_B2_gates,Lyon,layers 6–14,France,United Kingdom,didn't follow
+v2_B2_gates|Barcelona,v2_B2_gates,Barcelona,layers 6–14,Spain,India,didn't follow
+v2_B2_gates|Osaka,v2_B2_gates,Osaka,layers 6–14,Japan,India,didn't follow
+v2_B2_gates|Toronto,v2_B2_gates,Toronto,layers 6–14,Canada,Canada,followed the swap
+v2_B2_gates|Chicago,v2_B2_gates,Chicago,layers 6–14,USA,United States,kept the answer
+v2_B2_gates|Manchester,v2_B2_gates,Manchester,layers 6–14,United Kingdom,United Kingdom,"gave it, but it's also the fallback"
+v2_B2_gates|Boston,v2_B2_gates,Boston,layers 6–14,USA,United States,kept the answer
+v2_B2_gates|Chicago,v2_B2_gates,Chicago,layers 6–14,USA,United States,kept the answer
+v2_C1_tsinghua|Munich,v2_C1_tsinghua,Munich,layers 6–17,Germany,China,didn't follow
+v2_C1_tsinghua|Milan,v2_C1_tsinghua,Milan,layers 6–17,Italy,China,didn't follow
+v2_C1_tsinghua|Lyon,v2_C1_tsinghua,Lyon,layers 6–17,France,China,didn't follow
+v2_C1_tsinghua|Barcelona,v2_C1_tsinghua,Barcelona,layers 6–17,Spain,China,didn't follow
+v2_C1_tsinghua|Osaka,v2_C1_tsinghua,Osaka,layers 6–17,Japan,China,didn't follow
+v2_C1_tsinghua|Toronto,v2_C1_tsinghua,Toronto,layers 6–17,Canada,China,didn't follow
+v2_C1_tsinghua|Chicago,v2_C1_tsinghua,Chicago,layers 6–17,USA,China,didn't follow
+v2_C1_tsinghua|Manchester,v2_C1_tsinghua,Manchester,layers 6–17,United Kingdom,China,didn't follow
+v2_C1_tsinghua|Shenzhen,v2_C1_tsinghua,Shenzhen,layers 6–17,China,China,kept the answer
+v2_C2_york|Munich,v2_C2_york,Munich,layers 6–14,Germany,Canada,didn't follow
+v2_C2_york|Milan,v2_C2_york,Milan,layers 6–14,Italy,Belgium,didn't follow
+v2_C2_york|Lyon,v2_C2_york,Lyon,layers 6–14,France,Canada,didn't follow
+v2_C2_york|Barcelona,v2_C2_york,Barcelona,layers 6–14,Spain,Belgium,didn't follow
+v2_C2_york|Osaka,v2_C2_york,Osaka,layers 6–14,Japan,Canada,didn't follow
+v2_C2_york|Chicago,v2_C2_york,Chicago,layers 6–14,USA,Canada,didn't follow
+v2_C2_york|Manchester,v2_C2_york,Manchester,layers 6–14,United Kingdom,Canada,didn't follow
+v2_C2_york|Mumbai,v2_C2_york,Mumbai,layers 6–14,India,Canada,didn't follow
+v2_C2_york|Vancouver,v2_C2_york,Vancouver,layers 6–14,Canada,Canada,kept the answer
+v2_C2_york|Ottawa,v2_C2_york,Ottawa,layers 6–14,Canada,Canada,kept the answer
+v3_L_gates|Munich,v3_L_gates,Munich,layers 6–23,M,W,didn't follow
+v3_L_gates|Paris,v3_L_gates,Paris,layers 6–23,P,J,didn't follow
+v3_L_gates|Tokyo,v3_L_gates,Tokyo,layers 6–23,T,M,didn't follow
+v3_L_gates|Berlin,v3_L_gates,Berlin,layers 6–23,B,B,"gave it, but it's also the fallback"
+v3_L_gates|Rome,v3_L_gates,Rome,layers 6–23,R,M,didn't follow
+v3_L_gates|Madrid,v3_L_gates,Madrid,layers 6–23,M,M,followed the swap
+v3_L_gates|Chicago,v3_L_gates,Chicago,layers 6–23,C,W,didn't follow
+v3_L_gates|Lyon,v3_L_gates,Lyon,layers 6–23,L,B,didn't follow
+v3_R_bee|spider,v3_R_bee,spider,layers 6–23,Eight,Six,didn't follow
+v3_R_bee|dog,v3_R_bee,dog,layers 6–23,Four,Six,didn't follow
+v3_R_bee|bird,v3_R_bee,bird,layers 6–23,Two,6,didn't follow
+v3_R_bee|snake,v3_R_bee,snake,layers 6–23,Zero,Six,didn't follow
+v3_R_bee|horse,v3_R_bee,horse,layers 6–23,Four,Six,didn't follow
+v3_R_bee|duck,v3_R_bee,duck,layers 6–23,Two,6,didn't follow
+v3_R_bee|ant,v3_R_bee,ant,layers 6–23,Six,Six,kept the answer
+v3_O_bicycle|car,v3_O_bicycle,car,layers 6–20,Four,Two,didn't follow
+v3_O_bicycle|bus,v3_O_bicycle,bus,layers 6–20,Eight,Two,didn't follow
+v3_O_bicycle|motorcycle,v3_O_bicycle,motorcycle,layers 6–20,Two,Two,kept the answer
+v3_X_mishima_country|Munich,v3_X_mishima_country,Munich,layers 6–17,Germany,Japan,didn't follow
+v3_X_mishima_country|Milan,v3_X_mishima_country,Milan,layers 6–17,Italy,Japan,didn't follow
+v3_X_mishima_country|Lyon,v3_X_mishima_country,Lyon,layers 6–17,France,Japan,didn't follow
+v3_X_mishima_country|Barcelona,v3_X_mishima_country,Barcelona,layers 6–17,Spain,Japan,didn't follow
+v3_X_mishima_country|Osaka,v3_X_mishima_country,Osaka,layers 6–17,Japan,Japan,kept the answer
+v3_X_mishima_country|Toronto,v3_X_mishima_country,Toronto,layers 6–17,Canada,Japan,didn't follow
+v3_X_mishima_country|Chicago,v3_X_mishima_country,Chicago,layers 6–17,USA,Japan,didn't follow
+v3_X_mishima_country|Manchester,v3_X_mishima_country,Manchester,layers 6–17,United Kingdom,Japan,didn't follow
+i_Q_num_week_plus1|two,i_Q_num_week_plus1,two,layers 6–23,Three,2,didn't follow
+i_Q_num_week_plus1|four,i_Q_num_week_plus1,four,layers 6–23,Five,Five,followed the swap
+i_Q_num_week_plus1|five,i_Q_num_week_plus1,five,layers 6–23,Six,6,followed the swap
+i_Q_num_week_plus1|nine,i_Q_num_week_plus1,nine,layers 6–23,Ten,8,didn't follow
+i_Q_num_week_plus1|ten,i_Q_num_week_plus1,ten,layers 6–23,Eleven,8,didn't follow
+i_Q_num_week_plus1|eleven,i_Q_num_week_plus1,eleven,layers 6–23,Twelve,8,didn't follow
+i_Q_month_christmas_next|January,i_Q_month_christmas_next,January,layers 6–17,February,January,didn't follow
+i_Q_month_christmas_next|February,i_Q_month_christmas_next,February,layers 6–17,March,January,didn't follow
+i_Q_month_christmas_next|March,i_Q_month_christmas_next,March,layers 6–17,April,January,didn't follow
+i_Q_month_christmas_next|June,i_Q_month_christmas_next,June,layers 6–17,July,January,didn't follow
+i_Q_month_christmas_next|September,i_Q_month_christmas_next,September,layers 6–17,October,January,didn't follow
+i_Q_month_christmas_next|October,i_Q_month_christmas_next,October,layers 6–17,November,January,didn't follow
+i_W_len_jupiter|Mars,i_W_len_jupiter,Mars,layers 6–11,4,Seven,didn't follow
+i_W_len_jupiter|Venus,i_W_len_jupiter,Venus,layers 6–11,5,Seven,didn't follow
+i_W_len_jupiter|Earth,i_W_len_jupiter,Earth,layers 6–11,5,Seven,didn't follow
+i_W_len_jupiter|Saturn,i_W_len_jupiter,Saturn,layers 6–11,6,Seven,didn't follow
+i_W_len_jupiter|Pluto,i_W_len_jupiter,Pluto,layers 6–11,5,Seven,didn't follow
+i_W_len_jupiter|Mercury,i_W_len_jupiter,Mercury,layers 6–11,8,Seven,didn't follow
+i_W_len_jupiter|Neptune,i_W_len_jupiter,Neptune,layers 6–11,8,Seven,didn't follow
+i_S_element_sodium|gold,i_S_element_sodium,gold,layers 6–23,Au,Na,didn't follow
+i_S_element_sodium|silver,i_S_element_sodium,silver,layers 6–23,Ag,Ag,followed the swap
+i_S_element_sodium|iron,i_S_element_sodium,iron,layers 6–23,Fe,Fe,followed the swap
+i_S_element_sodium|copper,i_S_element_sodium,copper,layers 6–23,Cu,Cu,followed the swap
+i_S_element_sodium|lead,i_S_element_sodium,lead,layers 6–23,Pb,K,didn't follow
+i_S_element_sodium|tin,i_S_element_sodium,tin,layers 6–23,Sn,K,didn't follow
+i_S_element_sodium|zinc,i_S_element_sodium,zinc,layers 6–23,Zn,Cl,didn't follow
+i_C_food_fries|tomato,i_C_food_fries,tomato,layers 6–14,Above,Below,didn't follow
+i_C_food_fries|apple,i_C_food_fries,apple,layers 6–14,Above,Below,didn't follow
+i_C_food_fries|corn,i_C_food_fries,corn,layers 6–14,Above,Below,didn't follow
+i_C_food_fries|rice,i_C_food_fries,rice,layers 6–14,Above,Below,didn't follow
+i_C_food_fries|banana,i_C_food_fries,banana,layers 6–14,Above,Below,didn't follow
+i_C_food_fries|wheat,i_C_food_fries,wheat,layers 6–14,Above,Below,didn't follow
+i_C_food_fries|grape,i_C_food_fries,grape,layers 6–14,Above,Below,didn't follow
+i_C_food_fries|carrot,i_C_food_fries,carrot,layers 6–14,Below,Below,kept the answer
+i_C_food_fries|onion,i_C_food_fries,onion,layers 6–14,Below,Below,kept the answer
+i_C_bad_halloween|Christmas,i_C_bad_halloween,Christmas,layers 6–20,December,November,didn't follow
+i_C_bad_halloween|Thanksgiving,i_C_bad_halloween,Thanksgiving,layers 6–20,November,October,didn't follow
+i_C_bad_halloween|Valentine,i_C_bad_halloween,Valentine,layers 6–20,February,October,didn't follow
+i_C_bad_halloween|Easter,i_C_bad_halloween,Easter,layers 6–20,March,October,didn't follow
+i_C_bad_halloween|Ramadan,i_C_bad_halloween,Ramadan,layers 6–20,March,October,didn't follow

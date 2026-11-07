@@ -1,0 +1,15 @@
+key,sentence,word,kind,strength,early_drop
+L_federer|null|shoe,L_federer,shoe,everyday word (noise),0.09,0.028
+L_federer|null|table,L_federer,table,everyday word (noise),0.087,0.02
+L_federer|null|river,L_federer,river,everyday word (noise),0.096,0.091
+L_federer|null|mountain,L_federer,mountain,everyday word (noise),0.077,0.037
+L_federer|null|ticket,L_federer,ticket,everyday word (noise),0.076,0.046
+L_federer|null|chair,L_federer,chair,everyday word (noise),0.075,0.043
+L_federer|null|spoon,L_federer,spoon,everyday word (noise),0.103,0.101
+L_federer|null|pillow,L_federer,pillow,everyday word (noise),0.074,0.011
+L_federer|null|pencil,L_federer,pencil,everyday word (noise),0.106,0.05
+L_federer|null|lantern,L_federer,lantern,everyday word (noise),0.071,0.12
+L_federer|null|window,L_federer,window,everyday word (noise),0.071,0.023
+L_federer|null|bottle,L_federer,bottle,everyday word (noise),0.071,0.026
+L_federer|kind|Zurich,L_federer,Zurich,"same kind as Basel, same answer",,0.0
+L_federer|kind|Geneva,L_federer,Geneva,"same kind as Basel, same answer",,0.058

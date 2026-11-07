@@ -1,0 +1,55 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 6291.06it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/swarm-explore/projects/silent-dissent/harness/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+/workspace/swarm-explore/projects/silent-dissent/harness/scripts/bridge_card.py:132: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  cb = max(abs(float(unit(h, w, l) @ unit(h, b, l))) for l in clip([12, 18, 24]))
+
+######## spider: 'How many legs do the animals that spin webs have? Answer in one word.'
+baseline answer 'Eight', P(8) = 0.88
+bridge best J-lens rank 1, strength 0.189; auto controls animales(0.187)=0.02, pets(0.194)=0.05, babies(0.162)=0.13, noun(0.157)=0.00, spun(0.146)=0.08, Humans(0.143)=0.07
+same kind (minus answer): insects=0.59, ants=0.26, crabs=0.04
+N=1.00 S=0.86 O=0.22 U=0.99 D=0.40 T=+0.82 (after 0.98, question 0.15) K=0.50 F=0.75 F_hit=0.40 fallback=4 -> CONSULTED BRIDGE (6/6)
+
+######## mozart: 'In which country is the city where Wolfgang Amadeus Mozart was born? Answer in one word.'
+baseline answer 'Austria', P(Austria) = 0.50
+bridge best J-lens rank 0, strength 0.173; auto controls cities(0.171)=0.20, Cities(0.165)=0.35, town(0.158)=0.20, Musik(0.156)=0.61, municipality(0.155)=0.32, birth(0.153)=0.25
+same kind (minus answer): Vienna=0.35, Graz=0.10, Innsbruck=0.26
+N=1.00 S=0.39 O=0.55 U=0.58 D=0.23 T=-0.06 (after 0.94, question 1.00) K=0.00 F=0.88 F_hit=0.14 fallback=Italy -> ANSWER ECHO (2/6)
+
+######## mozart_direct: 'Which country was Wolfgang Amadeus Mozart from? Answer in one word.'
+baseline answer 'Austria', P(Austria) = 0.75
+bridge best J-lens rank 0, strength 0.175; auto controls composer(0.164)=0.05, composers(0.161)=0.02, Musik(0.158)=0.13, Musical(0.152)=0.13, Composer(0.145)=0.08, violin(0.143)=0.26
+same kind (minus answer): Vienna=0.13, Graz=0.00, Innsbruck=0.16
+N=1.00 S=0.74 O=0.55 U=0.24 D=0.08 T=-0.20 (after 0.80, question 1.00) K=0.75 F=0.50 F_hit=0.17 fallback=Italy -> ANSWER ECHO (3/6)
+
+######## elephant: 'How many legs does the animal with a trunk and tusks have? Answer in one word.'
+baseline answer 'Four', P(4) = 0.95
+bridge best J-lens rank 0, strength 0.155; auto controls noun(0.157)=0.00, Wildlife(0.142)=0.05, teeth(0.141)=0.01, Humans(0.141)=0.16, humanoid(0.138)=0.00, horns(0.136)=0.00
+same kind (minus answer): giraffe=0.01, horse=0.02, lion=0.01
+N=0.00 S=-0.16 O=0.30 U=0.01 D=-0.02 T=+0.00 (after 0.00, question 0.00) K=1.00 F=0.00 F_hit=0.00 fallback=4 -> BYSTANDER (2/6)
+
+######## apple: 'What color is the fruit that keeps the doctor away? Answer in one word.'
+baseline answer 'Red', P(red) = 0.73
+bridge best J-lens rank 0, strength 0.160; auto controls clinic(0.150)=0.15, palette(0.172)=0.07, medicine(0.147)=0.09, hospital(0.146)=0.11, medic(0.146)=0.09, physician(0.145)=0.14
+same kind (minus answer): banana=0.00, orange=0.00, pear=0.00
+N=0.60 S=0.46 O=0.35 U=0.02 D=0.02 T=+0.33 (after 0.49, question 0.16) K=1.00 F=0.25 F_hit=0.00 fallback=green -> UNCLEAR (2/6)
+
+######## eiffel: 'What is the capital of the country where the Eiffel Tower is? Answer in one word.'
+baseline answer 'Paris', P(Paris) = 0.99
+bridge best J-lens rank 0, strength 0.171; auto controls столиц(0.183)=0.12, Hauptstadt(0.158)=0.05, Statue(0.151)=0.00, Monument(0.149)=0.01, located(0.148)=0.00, monument(0.146)=0.00
+same kind (minus answer): Germany=0.00, Italy=0.00, Spain=0.00
+N=0.00 S=-0.12 O=0.64 U=0.00 D=-0.00 T=+0.00 (after 0.00, question 0.00) K=nan F=0.00 F_hit=0.00 fallback=Paris -> BYSTANDER (1/5)
+
+== Scorecards ==
+     sentence   bridge  answer  P_base  bridge_rank   N     S    O    U     D     T    K    F  F_hit fallback  passed  scored          verdict
+       spider   spider       8    0.88            1 1.0  0.86 0.22 0.99  0.40  0.82 0.50 0.75   0.40        4       6       6 CONSULTED BRIDGE
+       mozart Salzburg Austria    0.50            0 1.0  0.39 0.55 0.58  0.23 -0.06 0.00 0.88   0.14    Italy       2       6      ANSWER ECHO
+mozart_direct Salzburg Austria    0.75            0 1.0  0.74 0.55 0.24  0.08 -0.20 0.75 0.50   0.17    Italy       3       6      ANSWER ECHO
+     elephant elephant       4    0.95            0 0.0 -0.16 0.30 0.01 -0.02  0.00 1.00 0.00   0.00        4       2       6        BYSTANDER
+        apple    apple     red    0.73            0 0.6  0.46 0.35 0.02  0.02  0.33 1.00 0.25   0.00    green       2       6          UNCLEAR
+       eiffel   France   Paris    0.99            0 0.0 -0.12 0.64 0.00 -0.00  0.00  NaN 0.00   0.00    Paris       1       5        BYSTANDER
+wrote results/bridge_card_qwen35_4b/cards.csv
+ALLDONE

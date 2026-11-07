@@ -1,0 +1,43 @@
+key,sentence,word,kind,strength,early_drop
+B1_mishima|null|river,B1_mishima,river,everyday word (noise),0.086,0.001
+B1_mishima|null|button,B1_mishima,button,everyday word (noise),0.08,0.001
+B1_mishima|null|mirror,B1_mishima,mirror,everyday word (noise),0.077,0.001
+B1_mishima|null|mountain,B1_mishima,mountain,everyday word (noise),0.074,0.0
+B1_mishima|null|blanket,B1_mishima,blanket,everyday word (noise),0.073,0.0
+B1_mishima|null|saddle,B1_mishima,saddle,everyday word (noise),0.073,0.001
+B1_mishima|null|pencil,B1_mishima,pencil,everyday word (noise),0.072,0.0
+B1_mishima|null|rocket,B1_mishima,rocket,everyday word (noise),0.071,0.001
+B1_mishima|null|barrel,B1_mishima,barrel,everyday word (noise),0.068,0.001
+B1_mishima|null|ladder,B1_mishima,ladder,everyday word (noise),0.068,0.001
+B1_mishima|null|candle,B1_mishima,candle,everyday word (noise),0.066,0.001
+B1_mishima|null|ticket,B1_mishima,ticket,everyday word (noise),0.064,0.001
+B1_mishima|kind|Osaka,B1_mishima,Osaka,"same kind as Tokyo, same answer",,0.002
+B1_mishima|kind|Kyoto,B1_mishima,Kyoto,"same kind as Tokyo, same answer",,0.0
+C1_tsinghua|null|chair,C1_tsinghua,chair,everyday word (noise),0.093,0.001
+C1_tsinghua|null|river,C1_tsinghua,river,everyday word (noise),0.086,0.001
+C1_tsinghua|null|button,C1_tsinghua,button,everyday word (noise),0.082,0.001
+C1_tsinghua|null|blanket,C1_tsinghua,blanket,everyday word (noise),0.077,0.0
+C1_tsinghua|null|mountain,C1_tsinghua,mountain,everyday word (noise),0.074,0.0
+C1_tsinghua|null|ticket,C1_tsinghua,ticket,everyday word (noise),0.073,0.0
+C1_tsinghua|null|pencil,C1_tsinghua,pencil,everyday word (noise),0.072,0.0
+C1_tsinghua|null|garden,C1_tsinghua,garden,everyday word (noise),0.071,0.001
+C1_tsinghua|null|barrel,C1_tsinghua,barrel,everyday word (noise),0.07,0.001
+C1_tsinghua|null|spoon,C1_tsinghua,spoon,everyday word (noise),0.07,0.001
+C1_tsinghua|null|hammer,C1_tsinghua,hammer,everyday word (noise),0.068,0.001
+C1_tsinghua|null|wallet,C1_tsinghua,wallet,everyday word (noise),0.067,0.001
+C1_tsinghua|kind|Shenzhen,C1_tsinghua,Shenzhen,"same kind as Beijing, same answer",,0.0
+C2_york|null|chair,C2_york,chair,everyday word (noise),0.101,0.001
+C2_york|null|river,C2_york,river,everyday word (noise),0.086,0.002
+C2_york|null|button,C2_york,button,everyday word (noise),0.086,0.001
+C2_york|null|hammer,C2_york,hammer,everyday word (noise),0.078,0.001
+C2_york|null|ticket,C2_york,ticket,everyday word (noise),0.078,0.001
+C2_york|null|mountain,C2_york,mountain,everyday word (noise),0.074,0.001
+C2_york|null|pencil,C2_york,pencil,everyday word (noise),0.072,0.001
+C2_york|null|spoon,C2_york,spoon,everyday word (noise),0.068,0.001
+C2_york|null|pillow,C2_york,pillow,everyday word (noise),0.067,0.001
+C2_york|null|barrel,C2_york,barrel,everyday word (noise),0.066,0.002
+C2_york|null|candle,C2_york,candle,everyday word (noise),0.064,0.001
+C2_york|null|shoe,C2_york,shoe,everyday word (noise),0.063,0.003
+C2_york|kind|Vancouver,C2_york,Vancouver,"same kind as Toronto, same answer",,0.022
+C2_york|kind|Ottawa,C2_york,Ottawa,"same kind as Toronto, same answer",,0.021
+C2_york|kind|Calgary,C2_york,Calgary,"same kind as Toronto, same answer",,0.005

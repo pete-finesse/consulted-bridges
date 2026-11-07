@@ -1,0 +1,43 @@
+key,sentence,word,kind,strength,early_drop
+Q_father_wizard|null|helmet,Q_father_wizard,helmet,everyday word (noise),0.09,0.0
+Q_father_wizard|null|bread,Q_father_wizard,bread,everyday word (noise),0.086,0.071
+Q_father_wizard|null|shoe,Q_father_wizard,shoe,everyday word (noise),0.085,0.064
+Q_father_wizard|null|button,Q_father_wizard,button,everyday word (noise),0.082,0.014
+Q_father_wizard|null|rocket,Q_father_wizard,rocket,everyday word (noise),0.081,0.001
+Q_father_wizard|null|pencil,Q_father_wizard,pencil,everyday word (noise),0.079,0.01
+Q_father_wizard|null|cloud,Q_father_wizard,cloud,everyday word (noise),0.079,0.044
+Q_father_wizard|null|ribbon,Q_father_wizard,ribbon,everyday word (noise),0.079,0.0
+Q_father_wizard|null|hammer,Q_father_wizard,hammer,everyday word (noise),0.078,0.031
+Q_father_wizard|null|garden,Q_father_wizard,garden,everyday word (noise),0.077,0.059
+Q_father_wizard|null|pillow,Q_father_wizard,pillow,everyday word (noise),0.076,0.004
+Q_father_wizard|null|lantern,Q_father_wizard,lantern,everyday word (noise),0.076,0.039
+Q_father_wizard|kind|Ron,Q_father_wizard,Ron,"same kind as Harry, same answer",,0.0
+Q_father_wizard|kind|Hermione,Q_father_wizard,Hermione,"same kind as Harry, same answer",,0.375
+W_bad_west|null|rocket,W_bad_west,rocket,everyday word (noise),0.117,0.0
+W_bad_west|null|lantern,W_bad_west,lantern,everyday word (noise),0.117,0.0
+W_bad_west|null|candle,W_bad_west,candle,everyday word (noise),0.111,0.0
+W_bad_west|null|cloud,W_bad_west,cloud,everyday word (noise),0.11,0.0
+W_bad_west|null|mountain,W_bad_west,mountain,everyday word (noise),0.104,0.0
+W_bad_west|null|river,W_bad_west,river,everyday word (noise),0.097,0.038
+W_bad_west|null|mirror,W_bad_west,mirror,everyday word (noise),0.094,0.02
+W_bad_west|null|shoe,W_bad_west,shoe,everyday word (noise),0.089,0.024
+W_bad_west|null|button,W_bad_west,button,everyday word (noise),0.087,0.0
+W_bad_west|null|garden,W_bad_west,garden,everyday word (noise),0.084,0.004
+W_bad_west|null|pillow,W_bad_west,pillow,everyday word (noise),0.083,0.0
+W_bad_west|null|door,W_bad_west,door,everyday word (noise),0.081,0.02
+W_bad_west|kind|north,W_bad_west,north,"same kind as east, same answer",,0.176
+W_bad_west|kind|south,W_bad_west,south,"same kind as east, same answer",,0.167
+S_state_mercury|null|bottle,S_state_mercury,bottle,everyday word (noise),0.108,0.06
+S_state_mercury|null|pencil,S_state_mercury,pencil,everyday word (noise),0.107,0.006
+S_state_mercury|null|kitchen,S_state_mercury,kitchen,everyday word (noise),0.103,0.06
+S_state_mercury|null|shoe,S_state_mercury,shoe,everyday word (noise),0.101,0.073
+S_state_mercury|null|kettle,S_state_mercury,kettle,everyday word (noise),0.1,0.0
+S_state_mercury|null|lantern,S_state_mercury,lantern,everyday word (noise),0.099,0.014
+S_state_mercury|null|candle,S_state_mercury,candle,everyday word (noise),0.094,0.041
+S_state_mercury|null|helmet,S_state_mercury,helmet,everyday word (noise),0.09,0.0
+S_state_mercury|null|brick,S_state_mercury,brick,everyday word (noise),0.087,0.111
+S_state_mercury|null|pillow,S_state_mercury,pillow,everyday word (noise),0.083,0.013
+S_state_mercury|null|door,S_state_mercury,door,everyday word (noise),0.083,0.068
+S_state_mercury|null|barrel,S_state_mercury,barrel,everyday word (noise),0.083,0.042
+S_state_mercury|kind|iron,S_state_mercury,iron,"same kind as mercury, same answer",,0.016
+S_state_mercury|kind|copper,S_state_mercury,copper,"same kind as mercury, same answer",,0.036

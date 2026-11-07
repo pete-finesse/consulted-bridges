@@ -1,0 +1,103 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+V_LM_pisa|Germany,V_LM_pisa,Germany,layers 12–53,G,I,didn't follow
+V_LM_pisa|Japan,V_LM_pisa,Japan,layers 12–53,J,I,didn't follow
+V_LM_pisa|Spain,V_LM_pisa,Spain,layers 12–53,S,I,didn't follow
+V_LM_pisa|Brazil,V_LM_pisa,Brazil,layers 12–53,B,I,didn't follow
+V_LM_pisa|Canada,V_LM_pisa,Canada,layers 12–53,C,C,followed the swap
+V_LM_pisa|Egypt,V_LM_pisa,Egypt,layers 12–53,E,I,didn't follow
+V_LM_kremlin|Germany,V_LM_kremlin,Germany,layers 12–53,G,G,followed the swap
+V_LM_kremlin|Japan,V_LM_kremlin,Japan,layers 12–53,J,R,didn't follow
+V_LM_kremlin|Spain,V_LM_kremlin,Spain,layers 12–53,S,R,didn't follow
+V_LM_kremlin|Brazil,V_LM_kremlin,Brazil,layers 12–53,B,R,didn't follow
+V_LM_kremlin|Canada,V_LM_kremlin,Canada,layers 12–53,C,C,followed the swap
+V_LM_kremlin|Egypt,V_LM_kremlin,Egypt,layers 12–53,E,R,didn't follow
+V_LM_christ|Germany,V_LM_christ,Germany,layers 12–53,G,G,followed the swap
+V_LM_christ|Japan,V_LM_christ,Japan,layers 12–53,J,J,followed the swap
+V_LM_christ|Spain,V_LM_christ,Spain,layers 12–53,S,B,didn't follow
+V_LM_christ|Canada,V_LM_christ,Canada,layers 12–53,C,C,followed the swap
+V_LM_christ|Egypt,V_LM_christ,Egypt,layers 12–53,E,E,followed the swap
+V_LM_christ|Mexico,V_LM_christ,Mexico,layers 12–53,M,M,followed the swap
+V_LM_pyramids|Germany,V_LM_pyramids,Germany,layers 12–53,G,E,didn't follow
+V_LM_pyramids|Japan,V_LM_pyramids,Japan,layers 12–53,J,J,followed the swap
+V_LM_pyramids|Spain,V_LM_pyramids,Spain,layers 12–53,S,S,"gave it, but it's also the fallback"
+V_LM_pyramids|Brazil,V_LM_pyramids,Brazil,layers 12–53,B,B,followed the swap
+V_LM_pyramids|Canada,V_LM_pyramids,Canada,layers 12–53,C,C,followed the swap
+V_LM_pyramids|Mexico,V_LM_pyramids,Mexico,layers 12–53,M,M,followed the swap
+V_LM_acropolis|Japan,V_LM_acropolis,Japan,layers 12–53,J,G,didn't follow
+V_LM_acropolis|Spain,V_LM_acropolis,Spain,layers 12–53,S,G,didn't follow
+V_LM_acropolis|Brazil,V_LM_acropolis,Brazil,layers 12–53,B,G,didn't follow
+V_LM_acropolis|Canada,V_LM_acropolis,Canada,layers 12–53,C,G,didn't follow
+V_LM_acropolis|Egypt,V_LM_acropolis,Egypt,layers 12–53,E,G,didn't follow
+V_LM_acropolis|Mexico,V_LM_acropolis,Mexico,layers 12–53,M,G,didn't follow
+V_LM_angkor|Germany,V_LM_angkor,Germany,layers 12–53,G,C,didn't follow
+V_LM_angkor|Japan,V_LM_angkor,Japan,layers 12–53,J,C,didn't follow
+V_LM_angkor|Spain,V_LM_angkor,Spain,layers 12–53,S,C,didn't follow
+V_LM_angkor|Brazil,V_LM_angkor,Brazil,layers 12–53,B,C,didn't follow
+V_LM_angkor|Egypt,V_LM_angkor,Egypt,layers 12–53,E,C,didn't follow
+V_LM_angkor|Mexico,V_LM_angkor,Mexico,layers 12–53,M,C,didn't follow
+V_LM_petronas|Germany,V_LM_petronas,Germany,layers 12–53,G,M,didn't follow
+V_LM_petronas|Japan,V_LM_petronas,Japan,layers 12–53,J,M,didn't follow
+V_LM_petronas|Spain,V_LM_petronas,Spain,layers 12–53,S,M,didn't follow
+V_LM_petronas|Brazil,V_LM_petronas,Brazil,layers 12–53,B,M,didn't follow
+V_LM_petronas|Canada,V_LM_petronas,Canada,layers 12–53,C,M,didn't follow
+V_LM_petronas|Egypt,V_LM_petronas,Egypt,layers 12–53,E,M,didn't follow
+V_LP_beyonce|Munich,V_LP_beyonce,Munich,layers 12–53,M,H,didn't follow
+V_LP_beyonce|Paris,V_LP_beyonce,Paris,layers 12–53,P,P,"gave it, but it's also the fallback"
+V_LP_beyonce|Tokyo,V_LP_beyonce,Tokyo,layers 12–53,T,H,didn't follow
+V_LP_beyonce|Berlin,V_LP_beyonce,Berlin,layers 12–53,B,H,didn't follow
+V_LP_beyonce|Rome,V_LP_beyonce,Rome,layers 12–53,R,W,didn't follow
+V_LP_beyonce|Madrid,V_LP_beyonce,Madrid,layers 12–53,M,H,didn't follow
+V_LP_beyonce|Chicago,V_LP_beyonce,Chicago,layers 12–53,C,H,didn't follow
+V_LP_ali|Munich,V_LP_ali,Munich,layers 12–53,M,C,didn't follow
+V_LP_ali|Paris,V_LP_ali,Paris,layers 12–53,P,N,didn't follow
+V_LP_ali|Tokyo,V_LP_ali,Tokyo,layers 12–53,T,C,didn't follow
+V_LP_ali|Berlin,V_LP_ali,Berlin,layers 12–53,B,B,followed the swap
+V_LP_ali|Rome,V_LP_ali,Rome,layers 12–53,R,C,didn't follow
+V_LP_ali|Madrid,V_LP_ali,Madrid,layers 12–53,M,C,didn't follow
+V_LP_ali|Chicago,V_LP_ali,Chicago,layers 12–53,C,C,"gave it, but it's also the fallback"
+V_LU_fudan|Munich,V_LU_fudan,Munich,layers 12–53,M,S,didn't follow
+V_LU_fudan|Paris,V_LU_fudan,Paris,layers 12–53,P,S,didn't follow
+V_LU_fudan|Tokyo,V_LU_fudan,Tokyo,layers 12–53,T,S,didn't follow
+V_LU_fudan|Berlin,V_LU_fudan,Berlin,layers 12–53,B,S,didn't follow
+V_LU_fudan|Rome,V_LU_fudan,Rome,layers 12–53,R,B,didn't follow
+V_LU_fudan|Madrid,V_LU_fudan,Madrid,layers 12–53,M,S,didn't follow
+V_LU_fudan|Chicago,V_LU_fudan,Chicago,layers 12–53,C,S,didn't follow
+V_LU_hopkins|Munich,V_LU_hopkins,Munich,layers 12–53,M,B,didn't follow
+V_LU_hopkins|Paris,V_LU_hopkins,Paris,layers 12–53,P,B,didn't follow
+V_LU_hopkins|Tokyo,V_LU_hopkins,Tokyo,layers 12–53,T,B,didn't follow
+V_LU_hopkins|Rome,V_LU_hopkins,Rome,layers 12–53,R,B,didn't follow
+V_LU_hopkins|Madrid,V_LU_hopkins,Madrid,layers 12–53,M,B,didn't follow
+V_LU_hopkins|Chicago,V_LU_hopkins,Chicago,layers 12–53,C,B,didn't follow
+V_LU_hopkins|Lyon,V_LU_hopkins,Lyon,layers 12–53,L,B,didn't follow
+V_LU_dalhousie|Munich,V_LU_dalhousie,Munich,layers 12–53,M,H,didn't follow
+V_LU_dalhousie|Paris,V_LU_dalhousie,Paris,layers 12–53,P,M,didn't follow
+V_LU_dalhousie|Tokyo,V_LU_dalhousie,Tokyo,layers 12–53,T,H,didn't follow
+V_LU_dalhousie|Berlin,V_LU_dalhousie,Berlin,layers 12–53,B,H,didn't follow
+V_LU_dalhousie|Rome,V_LU_dalhousie,Rome,layers 12–53,R,H,didn't follow
+V_LU_dalhousie|Madrid,V_LU_dalhousie,Madrid,layers 12–53,M,H,didn't follow
+V_LU_dalhousie|Chicago,V_LU_dalhousie,Chicago,layers 12–53,C,H,didn't follow
+V_T_basketball|hockey,V_T_basketball,hockey,layers 12–41,Six,Five,didn't follow
+V_T_basketball|baseball,V_T_basketball,baseball,layers 12–41,Nine,Five,didn't follow
+V_T_basketball|cricket,V_T_basketball,cricket,layers 12–41,Eleven,Five,didn't follow
+V_T_basketball|polo,V_T_basketball,polo,layers 12–41,Four,Five,didn't follow
+V_T_basketball|tennis,V_T_basketball,tennis,layers 12–41,Two,Five,didn't follow
+V_T_baseball|hockey,V_T_baseball,hockey,layers 12–47,Six,Nine,didn't follow
+V_T_baseball|basketball,V_T_baseball,basketball,layers 12–47,Five,Nine,didn't follow
+V_T_baseball|cricket,V_T_baseball,cricket,layers 12–47,Eleven,Nine,didn't follow
+V_T_baseball|polo,V_T_baseball,polo,layers 12–47,Four,Nine,didn't follow
+V_T_baseball|tennis,V_T_baseball,tennis,layers 12–47,Two,Nine,didn't follow
+V_D_valentine|April,V_D_valentine,April,layers 12–53,30,28,didn't follow
+V_D_valentine|June,V_D_valentine,June,layers 12–53,30,31,didn't follow
+V_D_valentine|January,V_D_valentine,January,layers 12–53,31,31,"gave it, but it's also the fallback"
+V_D_valentine|March,V_D_valentine,March,layers 12–53,31,28,didn't follow
+V_D_valentine|September,V_D_valentine,September,layers 12–53,30,28,didn't follow
+V_D_july4|June,V_D_july4,June,layers 12–53,30,31,didn't follow
+V_D_july4|February,V_D_july4,February,layers 12–53,28,31,didn't follow
+V_D_july4|April,V_D_july4,April,layers 12–53,30,31,didn't follow
+V_D_july4|September,V_D_july4,September,layers 12–53,30,31,didn't follow
+V_D_july4|August,V_D_july4,August,layers 12–53,31,31,kept the answer
+V_R_ant|spider,V_R_ant,spider,layers 12–47,Eight,Six,didn't follow
+V_R_ant|dog,V_R_ant,dog,layers 12–47,Four,Six,didn't follow
+V_R_ant|bird,V_R_ant,bird,layers 12–47,Two,Six,didn't follow
+V_R_ant|horse,V_R_ant,horse,layers 12–47,Four,Six,didn't follow
+V_R_ant|tick,V_R_ant,tick,layers 12–47,Eight,Six,didn't follow

@@ -1,0 +1,15 @@
+key,sentence,word,kind,strength,early_drop
+E_bee|null|bread,E_bee,bread,everyday word (noise),0.123,0.015
+E_bee|null|ladder,E_bee,ladder,everyday word (noise),0.101,0.016
+E_bee|null|basket,E_bee,basket,everyday word (noise),0.095,0.01
+E_bee|null|spoon,E_bee,spoon,everyday word (noise),0.094,0.019
+E_bee|null|shoe,E_bee,shoe,everyday word (noise),0.094,0.022
+E_bee|null|lantern,E_bee,lantern,everyday word (noise),0.093,0.007
+E_bee|null|bottle,E_bee,bottle,everyday word (noise),0.092,0.009
+E_bee|null|garden,E_bee,garden,everyday word (noise),0.088,0.03
+E_bee|null|pillow,E_bee,pillow,everyday word (noise),0.084,0.013
+E_bee|null|button,E_bee,button,everyday word (noise),0.082,0.009
+E_bee|null|candle,E_bee,candle,everyday word (noise),0.08,0.014
+E_bee|null|carpet,E_bee,carpet,everyday word (noise),0.079,0.021
+E_bee|kind|ant,E_bee,ant,"same kind as bee, same answer",,0.005
+E_bee|kind|beetle,E_bee,beetle,"same kind as bee, same answer",,0.021

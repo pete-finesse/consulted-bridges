@@ -1,0 +1,30 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+B1_mishima|Munich,B1_mishima,Munich,layers 6–23,Germany,Japan,didn't follow
+B1_mishima|Milan,B1_mishima,Milan,layers 6–23,Italy,Japan,didn't follow
+B1_mishima|Lyon,B1_mishima,Lyon,layers 6–23,France,Japan,didn't follow
+B1_mishima|Barcelona,B1_mishima,Barcelona,layers 6–23,Spain,Japan,didn't follow
+B1_mishima|Osaka,B1_mishima,Osaka,layers 6–23,Japan,Japan,kept the answer
+B1_mishima|Toronto,B1_mishima,Toronto,layers 6–23,Canada,Japan,didn't follow
+B1_mishima|Chicago,B1_mishima,Chicago,layers 6–23,USA,Japan,didn't follow
+B1_mishima|Manchester,B1_mishima,Manchester,layers 6–23,United Kingdom,Japan,didn't follow
+B1_mishima|Osaka,B1_mishima,Osaka,layers 6–23,Japan,Japan,kept the answer
+B1_mishima|Kyoto,B1_mishima,Kyoto,layers 6–23,Japan,Japan,kept the answer
+C1_tsinghua|Munich,C1_tsinghua,Munich,layers 6–20,Germany,China,didn't follow
+C1_tsinghua|Milan,C1_tsinghua,Milan,layers 6–20,Italy,China,didn't follow
+C1_tsinghua|Lyon,C1_tsinghua,Lyon,layers 6–20,France,China,didn't follow
+C1_tsinghua|Barcelona,C1_tsinghua,Barcelona,layers 6–20,Spain,China,didn't follow
+C1_tsinghua|Osaka,C1_tsinghua,Osaka,layers 6–20,Japan,China,didn't follow
+C1_tsinghua|Toronto,C1_tsinghua,Toronto,layers 6–20,Canada,China,didn't follow
+C1_tsinghua|Chicago,C1_tsinghua,Chicago,layers 6–20,USA,China,didn't follow
+C1_tsinghua|Manchester,C1_tsinghua,Manchester,layers 6–20,United Kingdom,China,didn't follow
+C1_tsinghua|Shenzhen,C1_tsinghua,Shenzhen,layers 6–20,China,China,kept the answer
+C2_york|Munich,C2_york,Munich,layers 6–14,Germany,Canada,didn't follow
+C2_york|Milan,C2_york,Milan,layers 6–14,Italy,Belgium,didn't follow
+C2_york|Lyon,C2_york,Lyon,layers 6–14,France,Canada,didn't follow
+C2_york|Barcelona,C2_york,Barcelona,layers 6–14,Spain,Belgium,didn't follow
+C2_york|Osaka,C2_york,Osaka,layers 6–14,Japan,Canada,didn't follow
+C2_york|Chicago,C2_york,Chicago,layers 6–14,USA,Canada,didn't follow
+C2_york|Manchester,C2_york,Manchester,layers 6–14,United Kingdom,Canada,didn't follow
+C2_york|Mumbai,C2_york,Mumbai,layers 6–14,India,Canada,didn't follow
+C2_york|Vancouver,C2_york,Vancouver,layers 6–14,Canada,Canada,kept the answer
+C2_york|Ottawa,C2_york,Ottawa,layers 6–14,Canada,Canada,kept the answer

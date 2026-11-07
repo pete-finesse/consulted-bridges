@@ -1,0 +1,30 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+Q_num_triangle_double|two,Q_num_triangle_double,two,layers 6–23,Four,6,didn't follow
+Q_num_triangle_double|four,Q_num_triangle_double,four,layers 6–23,Eight,6,didn't follow
+Q_num_triangle_double|five,Q_num_triangle_double,five,layers 6–23,Ten,6,didn't follow
+Q_num_triangle_double|six,Q_num_triangle_double,six,layers 6–23,Twelve,6,didn't follow
+Q_num_triangle_double|eight,Q_num_triangle_double,eight,layers 6–23,Sixteen,6,didn't follow
+Q_num_triangle_double|ten,Q_num_triangle_double,ten,layers 6–23,Twenty,6,didn't follow
+W_tr_green|red,W_tr_green,red,layers 6–17,Rojo,Verde,didn't follow
+W_tr_green|blue,W_tr_green,blue,layers 6–17,Azul,Verde,didn't follow
+W_tr_green|white,W_tr_green,white,layers 6–17,blanco,Verde,didn't follow
+W_tr_green|black,W_tr_green,black,layers 6–17,Negro,Verde,didn't follow
+W_tr_green|yellow,W_tr_green,yellow,layers 6–17,Amarillo,Verde,didn't follow
+W_tr_green|orange,W_tr_green,orange,layers 6–17,Naranja,Verde,didn't follow
+W_tr_green|pink,W_tr_green,pink,layers 6–17,rosa,Verde,didn't follow
+S_bad_helium_state|iron,S_bad_helium_state,iron,layers 6–17,Solid,Gas,didn't follow
+S_bad_helium_state|gold,S_bad_helium_state,gold,layers 6–17,Solid,Gas,didn't follow
+S_bad_helium_state|copper,S_bad_helium_state,copper,layers 6–17,Solid,Gas,didn't follow
+S_bad_helium_state|mercury,S_bad_helium_state,mercury,layers 6–17,Liquid,Gas,didn't follow
+S_bad_helium_state|water,S_bad_helium_state,water,layers 6–17,Liquid,Gas,didn't follow
+S_bad_helium_state|hydrogen,S_bad_helium_state,hydrogen,layers 6–17,Gas,Gas,kept the answer
+S_bad_helium_state|oxygen,S_bad_helium_state,oxygen,layers 6–17,Gas,Gas,kept the answer
+C_food_fries|tomato,C_food_fries,tomato,layers 6–14,Above,Below,didn't follow
+C_food_fries|apple,C_food_fries,apple,layers 6–14,Above,Below,didn't follow
+C_food_fries|corn,C_food_fries,corn,layers 6–14,Above,Below,didn't follow
+C_food_fries|rice,C_food_fries,rice,layers 6–14,Above,Below,didn't follow
+C_food_fries|banana,C_food_fries,banana,layers 6–14,Above,Below,didn't follow
+C_food_fries|wheat,C_food_fries,wheat,layers 6–14,Above,Below,didn't follow
+C_food_fries|grape,C_food_fries,grape,layers 6–14,Above,Below,didn't follow
+C_food_fries|carrot,C_food_fries,carrot,layers 6–14,Below,Below,kept the answer
+C_food_fries|onion,C_food_fries,onion,layers 6–14,Below,Below,kept the answer

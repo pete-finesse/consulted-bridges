@@ -1,0 +1,45 @@
+key,sentence,word,kind,strength,early_drop
+E_spider|null|pillow,E_spider,pillow,everyday word (noise),0.115,0.033
+E_spider|null|garden,E_spider,garden,everyday word (noise),0.105,0.049
+E_spider|null|ladder,E_spider,ladder,everyday word (noise),0.101,0.012
+E_spider|null|shoe,E_spider,shoe,everyday word (noise),0.094,0.015
+E_spider|null|lantern,E_spider,lantern,everyday word (noise),0.09,0.027
+E_spider|null|button,E_spider,button,everyday word (noise),0.082,0.038
+E_spider|null|bread,E_spider,bread,everyday word (noise),0.082,0.025
+E_spider|null|kitchen,E_spider,kitchen,everyday word (noise),0.082,0.045
+E_spider|null|spoon,E_spider,spoon,everyday word (noise),0.08,0.037
+E_spider|null|carpet,E_spider,carpet,everyday word (noise),0.08,0.04
+E_spider|null|mountain,E_spider,mountain,everyday word (noise),0.079,0.013
+E_spider|null|rocket,E_spider,rocket,everyday word (noise),0.077,0.037
+E_spider|kind|tick,E_spider,tick,"same kind as spider, same answer",,0.029
+E_spider|kind|ticks,E_spider,ticks,"same kind as spider, same answer",,0.045
+B1_piaf|null|window,B1_piaf,window,everyday word (noise),0.098,0.004
+B1_piaf|null|cloud,B1_piaf,cloud,everyday word (noise),0.095,0.005
+B1_piaf|null|blanket,B1_piaf,blanket,everyday word (noise),0.089,0.001
+B1_piaf|null|bottle,B1_piaf,bottle,everyday word (noise),0.089,0.002
+B1_piaf|null|river,B1_piaf,river,everyday word (noise),0.086,0.001
+B1_piaf|null|button,B1_piaf,button,everyday word (noise),0.081,0.004
+B1_piaf|null|basket,B1_piaf,basket,everyday word (noise),0.08,0.002
+B1_piaf|null|table,B1_piaf,table,everyday word (noise),0.079,0.003
+B1_piaf|null|saddle,B1_piaf,saddle,everyday word (noise),0.078,0.002
+B1_piaf|null|mountain,B1_piaf,mountain,everyday word (noise),0.076,0.001
+B1_piaf|null|ladder,B1_piaf,ladder,everyday word (noise),0.075,0.003
+B1_piaf|null|kitchen,B1_piaf,kitchen,everyday word (noise),0.074,0.002
+B1_piaf|kind|Lyon,B1_piaf,Lyon,"same kind as Paris, same answer",,0.001
+B1_piaf|kind|Marseille,B1_piaf,Marseille,"same kind as Paris, same answer",,0.0
+B1_piaf|kind|Toulouse,B1_piaf,Toulouse,"same kind as Paris, same answer",,0.002
+B2_maldini|null|blanket,B2_maldini,blanket,everyday word (noise),0.108,0.003
+B2_maldini|null|river,B2_maldini,river,everyday word (noise),0.086,0.005
+B2_maldini|null|button,B2_maldini,button,everyday word (noise),0.079,0.006
+B2_maldini|null|saddle,B2_maldini,saddle,everyday word (noise),0.076,0.007
+B2_maldini|null|pencil,B2_maldini,pencil,everyday word (noise),0.075,0.004
+B2_maldini|null|cloud,B2_maldini,cloud,everyday word (noise),0.075,0.015
+B2_maldini|null|kettle,B2_maldini,kettle,everyday word (noise),0.075,0.004
+B2_maldini|null|mountain,B2_maldini,mountain,everyday word (noise),0.074,0.004
+B2_maldini|null|lantern,B2_maldini,lantern,everyday word (noise),0.072,0.005
+B2_maldini|null|table,B2_maldini,table,everyday word (noise),0.065,0.007
+B2_maldini|null|window,B2_maldini,window,everyday word (noise),0.064,0.011
+B2_maldini|null|candle,B2_maldini,candle,everyday word (noise),0.064,0.007
+B2_maldini|kind|Naples,B2_maldini,Naples,"same kind as Milan, same answer",,0.01
+B2_maldini|kind|Florence,B2_maldini,Florence,"same kind as Milan, same answer",,0.009
+B2_maldini|kind|Venice,B2_maldini,Venice,"same kind as Milan, same answer",,0.013

@@ -1,0 +1,4 @@
+# Tiny random Qwen3.5 (4 layers, d=64), built and J-lens-fitted offline on first use.
+# For testing the code only: its numbers mean nothing.
+model: {name: tiny, device: cpu, tiny: {n_layers: 4, seed: 0}}
+band: null          # default: the last ~30% of layers without the final one

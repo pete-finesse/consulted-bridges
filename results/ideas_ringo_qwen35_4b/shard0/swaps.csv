@@ -1,0 +1,9 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+C_music_ringo|guitar,C_music_ringo,guitar,layers 0–5,String,Percussion,didn't follow
+C_music_ringo|trumpet,C_music_ringo,trumpet,layers 0–5,Brass,Percussion,didn't follow
+C_music_ringo|flute,C_music_ringo,flute,layers 0–5,Woodwind,Percussion,didn't follow
+C_music_ringo|violin,C_music_ringo,violin,layers 0–5,Strings,Percussion,didn't follow
+C_music_ringo|sax,C_music_ringo,sax,layers 0–5,Woodwind,Percussion,didn't follow
+C_music_ringo|horn,C_music_ringo,horn,layers 0–5,Brass,Percussion,didn't follow
+C_music_ringo|bass,C_music_ringo,bass,layers 0–5,Strings,Percussion,didn't follow
+C_music_ringo|triangle,C_music_ringo,triangle,layers 0–5,Percussion,Percussion,kept the answer

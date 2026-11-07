@@ -1,0 +1,29 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+E_spider|bee,E_spider,bee,layers 6–20,Six,Six,followed the swap
+E_spider|ant,E_spider,ant,layers 6–20,Six,Six,followed the swap
+E_spider|dog,E_spider,dog,layers 6–20,Four,Four,"gave it, but it's also the fallback"
+E_spider|bird,E_spider,bird,layers 6–20,Two,Four,didn't follow
+E_spider|snake,E_spider,snake,layers 6–20,Zero,Eight,didn't follow
+E_spider|horse,E_spider,horse,layers 6–20,Four,Four,"gave it, but it's also the fallback"
+E_spider|beetle,E_spider,beetle,layers 6–20,Six,Six,followed the swap
+E_spider|tick,E_spider,tick,layers 6–20,Eight,Four,lost the answer
+B1_piaf|Munich,B1_piaf,Munich,layers 6–20,Germany,France,didn't follow
+B1_piaf|Milan,B1_piaf,Milan,layers 6–20,Italy,France,didn't follow
+B1_piaf|Lyon,B1_piaf,Lyon,layers 6–20,France,France,kept the answer
+B1_piaf|Barcelona,B1_piaf,Barcelona,layers 6–20,Spain,France,didn't follow
+B1_piaf|Osaka,B1_piaf,Osaka,layers 6–20,Japan,France,didn't follow
+B1_piaf|Toronto,B1_piaf,Toronto,layers 6–20,Canada,France,didn't follow
+B1_piaf|Chicago,B1_piaf,Chicago,layers 6–20,USA,France,didn't follow
+B1_piaf|Manchester,B1_piaf,Manchester,layers 6–20,United Kingdom,France,didn't follow
+B1_piaf|Lyon,B1_piaf,Lyon,layers 6–20,France,France,kept the answer
+B1_piaf|Marseille,B1_piaf,Marseille,layers 6–20,France,France,kept the answer
+B2_maldini|Munich,B2_maldini,Munich,layers 6–23,Germany,Italy,didn't follow
+B2_maldini|Lyon,B2_maldini,Lyon,layers 6–23,France,Italy,didn't follow
+B2_maldini|Barcelona,B2_maldini,Barcelona,layers 6–23,Spain,Italy,didn't follow
+B2_maldini|Osaka,B2_maldini,Osaka,layers 6–23,Japan,Italy,didn't follow
+B2_maldini|Toronto,B2_maldini,Toronto,layers 6–23,Canada,Italy,didn't follow
+B2_maldini|Chicago,B2_maldini,Chicago,layers 6–23,USA,Italy,didn't follow
+B2_maldini|Manchester,B2_maldini,Manchester,layers 6–23,United Kingdom,Italy,didn't follow
+B2_maldini|Mumbai,B2_maldini,Mumbai,layers 6–23,India,Italy,didn't follow
+B2_maldini|Naples,B2_maldini,Naples,layers 6–23,Italy,Italy,kept the answer
+B2_maldini|Florence,B2_maldini,Florence,layers 6–23,Italy,Italy,kept the answer

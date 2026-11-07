@@ -1,0 +1,11 @@
+key,sentence,window,start,bridge_drop,answer_drop,noise_drop
+X_spider|0,X_spider,layers 0–5,0,0.073,0.0,0.049
+X_spider|3,X_spider,layers 3–8,3,0.173,0.0,0.026
+X_spider|6,X_spider,layers 6–11,6,0.456,0.0,0.015
+X_spider|9,X_spider,layers 9–14,9,0.883,0.003,0.032
+X_spider|12,X_spider,layers 12–17,12,0.988,0.009,0.016
+X_spider|15,X_spider,layers 15–20,15,0.999,0.004,0.033
+X_spider|18,X_spider,layers 18–23,18,0.999,0.468,0.017
+X_spider|21,X_spider,layers 21–26,21,0.957,0.848,0.01
+X_spider|24,X_spider,layers 24–29,24,0.551,1.0,0.0
+X_spider|27,X_spider,layers 27–31,27,0.0,1.0,0.003

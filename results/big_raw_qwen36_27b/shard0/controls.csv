@@ -1,0 +1,211 @@
+key,sentence,word,kind,strength,early_drop
+L_mozart|null|river,L_mozart,river,everyday word (noise),0.054,0.0
+L_mozart|null|blanket,L_mozart,blanket,everyday word (noise),0.049,0.0
+L_mozart|null|jacket,L_mozart,jacket,everyday word (noise),0.048,0.0
+L_mozart|null|bottle,L_mozart,bottle,everyday word (noise),0.043,0.0
+L_mozart|null|mountain,L_mozart,mountain,everyday word (noise),0.042,0.0
+L_mozart|null|lantern,L_mozart,lantern,everyday word (noise),0.042,0.0
+L_mozart|null|spoon,L_mozart,spoon,everyday word (noise),0.041,0.0
+L_mozart|null|button,L_mozart,button,everyday word (noise),0.041,0.0
+L_mozart|null|table,L_mozart,table,everyday word (noise),0.04,0.0
+L_mozart|null|pencil,L_mozart,pencil,everyday word (noise),0.039,0.0
+L_mozart|null|candle,L_mozart,candle,everyday word (noise),0.039,0.0
+L_mozart|null|shoe,L_mozart,shoe,everyday word (noise),0.039,0.0
+L_mozart|kind|Vienna,L_mozart,Vienna,"same kind as Salzburg, same answer",,0.01
+L_mozart|kind|Graz,L_mozart,Graz,"same kind as Salzburg, same answer",,0.0
+L_mishima|null|river,L_mishima,river,everyday word (noise),0.054,0.002
+L_mishima|null|brick,L_mishima,brick,everyday word (noise),0.05,0.001
+L_mishima|null|jacket,L_mishima,jacket,everyday word (noise),0.047,0.002
+L_mishima|null|bottle,L_mishima,bottle,everyday word (noise),0.043,0.0
+L_mishima|null|table,L_mishima,table,everyday word (noise),0.043,0.001
+L_mishima|null|mountain,L_mishima,mountain,everyday word (noise),0.042,0.002
+L_mishima|null|lantern,L_mishima,lantern,everyday word (noise),0.042,0.0
+L_mishima|null|button,L_mishima,button,everyday word (noise),0.041,0.002
+L_mishima|null|spoon,L_mishima,spoon,everyday word (noise),0.041,0.003
+L_mishima|null|shoe,L_mishima,shoe,everyday word (noise),0.041,0.006
+L_mishima|null|barrel,L_mishima,barrel,everyday word (noise),0.04,0.005
+L_mishima|null|blanket,L_mishima,blanket,everyday word (noise),0.04,0.001
+L_mishima|kind|Osaka,L_mishima,Osaka,"same kind as Tokyo, same answer",,0.031
+L_mishima|kind|Kyoto,L_mishima,Kyoto,"same kind as Tokyo, same answer",,0.029
+L_maldini|null|blanket,L_maldini,blanket,everyday word (noise),0.059,0.001
+L_maldini|null|river,L_maldini,river,everyday word (noise),0.054,0.001
+L_maldini|null|button,L_maldini,button,everyday word (noise),0.051,0.001
+L_maldini|null|jacket,L_maldini,jacket,everyday word (noise),0.047,0.002
+L_maldini|null|table,L_maldini,table,everyday word (noise),0.047,0.0
+L_maldini|null|ribbon,L_maldini,ribbon,everyday word (noise),0.043,0.001
+L_maldini|null|bottle,L_maldini,bottle,everyday word (noise),0.043,0.001
+L_maldini|null|mountain,L_maldini,mountain,everyday word (noise),0.043,0.006
+L_maldini|null|lantern,L_maldini,lantern,everyday word (noise),0.042,0.0
+L_maldini|null|spoon,L_maldini,spoon,everyday word (noise),0.041,0.001
+L_maldini|null|saddle,L_maldini,saddle,everyday word (noise),0.04,0.001
+L_maldini|null|window,L_maldini,window,everyday word (noise),0.04,0.001
+L_maldini|kind|Rome,L_maldini,Rome,"same kind as Milan, same answer",,0.009
+L_maldini|kind|Naples,L_maldini,Naples,"same kind as Milan, same answer",,0.008
+L_piaf|null|mirror,L_piaf,mirror,everyday word (noise),0.065,0.0
+L_piaf|null|window,L_piaf,window,everyday word (noise),0.064,0.008
+L_piaf|null|button,L_piaf,button,everyday word (noise),0.063,0.002
+L_piaf|null|table,L_piaf,table,everyday word (noise),0.061,0.008
+L_piaf|null|blanket,L_piaf,blanket,everyday word (noise),0.059,0.005
+L_piaf|null|basket,L_piaf,basket,everyday word (noise),0.059,0.0
+L_piaf|null|cloud,L_piaf,cloud,everyday word (noise),0.058,0.009
+L_piaf|null|bottle,L_piaf,bottle,everyday word (noise),0.055,0.014
+L_piaf|null|river,L_piaf,river,everyday word (noise),0.054,0.008
+L_piaf|null|door,L_piaf,door,everyday word (noise),0.053,0.007
+L_piaf|null|carpet,L_piaf,carpet,everyday word (noise),0.052,0.024
+L_piaf|null|garden,L_piaf,garden,everyday word (noise),0.051,0.003
+L_piaf|kind|Lyon,L_piaf,Lyon,"same kind as Paris, same answer",,0.0
+L_piaf|kind|Marseille,L_piaf,Marseille,"same kind as Paris, same answer",,0.328
+L_gates|null|wallet,L_gates,wallet,everyday word (noise),0.059,0.012
+L_gates|null|river,L_gates,river,everyday word (noise),0.054,0.016
+L_gates|null|jacket,L_gates,jacket,everyday word (noise),0.047,0.013
+L_gates|null|bottle,L_gates,bottle,everyday word (noise),0.043,0.005
+L_gates|null|mountain,L_gates,mountain,everyday word (noise),0.043,0.007
+L_gates|null|lantern,L_gates,lantern,everyday word (noise),0.042,0.007
+L_gates|null|spoon,L_gates,spoon,everyday word (noise),0.041,0.001
+L_gates|null|pencil,L_gates,pencil,everyday word (noise),0.04,0.008
+L_gates|null|mirror,L_gates,mirror,everyday word (noise),0.04,0.006
+L_gates|null|candle,L_gates,candle,everyday word (noise),0.039,0.007
+L_gates|null|bread,L_gates,bread,everyday word (noise),0.039,0.014
+L_gates|null|door,L_gates,door,everyday word (noise),0.038,0.014
+L_gates|kind|Boston,L_gates,Boston,"same kind as Seattle, same answer",,0.057
+L_gates|kind|Chicago,L_gates,Chicago,"same kind as Seattle, same answer",,0.06
+O_bicycle|null|saddle,O_bicycle,saddle,everyday word (noise),0.068,0.0
+O_bicycle|null|spoon,O_bicycle,spoon,everyday word (noise),0.061,0.047
+O_bicycle|null|helmet,O_bicycle,helmet,everyday word (noise),0.057,0.069
+O_bicycle|null|shoe,O_bicycle,shoe,everyday word (noise),0.052,0.049
+O_bicycle|null|jacket,O_bicycle,jacket,everyday word (noise),0.047,0.192
+O_bicycle|null|basket,O_bicycle,basket,everyday word (noise),0.046,0.0
+O_bicycle|null|kettle,O_bicycle,kettle,everyday word (noise),0.045,0.026
+O_bicycle|null|pillow,O_bicycle,pillow,everyday word (noise),0.045,0.0
+O_bicycle|null|barrel,O_bicycle,barrel,everyday word (noise),0.044,0.185
+O_bicycle|null|hammer,O_bicycle,hammer,everyday word (noise),0.043,0.073
+O_bicycle|null|door,O_bicycle,door,everyday word (noise),0.041,0.256
+O_bicycle|null|lantern,O_bicycle,lantern,everyday word (noise),0.04,0.0
+O_bicycle|kind|car,O_bicycle,car,"same kind as bicycle, same answer",,0.323
+O_bicycle|kind|bus,O_bicycle,bus,"same kind as bicycle, same answer",,0.293
+Q_month_halloween_number|null|lantern,Q_month_halloween_number,lantern,everyday word (noise),0.069,0.036
+Q_month_halloween_number|null|candle,Q_month_halloween_number,candle,everyday word (noise),0.056,0.007
+Q_month_halloween_number|null|jacket,Q_month_halloween_number,jacket,everyday word (noise),0.046,0.091
+Q_month_halloween_number|null|river,Q_month_halloween_number,river,everyday word (noise),0.04,0.086
+Q_month_halloween_number|null|spoon,Q_month_halloween_number,spoon,everyday word (noise),0.036,0.039
+Q_month_halloween_number|null|mountain,Q_month_halloween_number,mountain,everyday word (noise),0.034,0.053
+Q_month_halloween_number|null|ticket,Q_month_halloween_number,ticket,everyday word (noise),0.034,0.034
+Q_month_halloween_number|null|bread,Q_month_halloween_number,bread,everyday word (noise),0.033,0.059
+Q_month_halloween_number|null|kitchen,Q_month_halloween_number,kitchen,everyday word (noise),0.032,0.048
+Q_month_halloween_number|null|door,Q_month_halloween_number,door,everyday word (noise),0.032,0.03
+Q_month_halloween_number|null|saddle,Q_month_halloween_number,saddle,everyday word (noise),0.032,0.041
+Q_month_halloween_number|null|wallet,Q_month_halloween_number,wallet,everyday word (noise),0.032,0.114
+Q_month_halloween_number|kind|November,Q_month_halloween_number,November,"same kind as October, same answer",,0.035
+Q_month_halloween_number|kind|August,Q_month_halloween_number,August,"same kind as October, same answer",,0.083
+Q_month_thanksgiving_days|null|candle,Q_month_thanksgiving_days,candle,everyday word (noise),0.05,0.038
+Q_month_thanksgiving_days|null|jacket,Q_month_thanksgiving_days,jacket,everyday word (noise),0.047,0.088
+Q_month_thanksgiving_days|null|kitchen,Q_month_thanksgiving_days,kitchen,everyday word (noise),0.046,0.044
+Q_month_thanksgiving_days|null|ticket,Q_month_thanksgiving_days,ticket,everyday word (noise),0.045,0.0
+Q_month_thanksgiving_days|null|bread,Q_month_thanksgiving_days,bread,everyday word (noise),0.038,0.084
+Q_month_thanksgiving_days|null|river,Q_month_thanksgiving_days,river,everyday word (noise),0.038,0.096
+Q_month_thanksgiving_days|null|lantern,Q_month_thanksgiving_days,lantern,everyday word (noise),0.036,0.043
+Q_month_thanksgiving_days|null|table,Q_month_thanksgiving_days,table,everyday word (noise),0.036,0.041
+Q_month_thanksgiving_days|null|cloud,Q_month_thanksgiving_days,cloud,everyday word (noise),0.036,0.082
+Q_month_thanksgiving_days|null|blanket,Q_month_thanksgiving_days,blanket,everyday word (noise),0.036,0.048
+Q_month_thanksgiving_days|null|window,Q_month_thanksgiving_days,window,everyday word (noise),0.035,0.047
+Q_month_thanksgiving_days|null|spoon,Q_month_thanksgiving_days,spoon,everyday word (noise),0.034,0.079
+Q_month_thanksgiving_days|kind|October,Q_month_thanksgiving_days,October,"same kind as November, same answer",,0.29
+Q_month_thanksgiving_days|kind|May,Q_month_thanksgiving_days,May,"same kind as November, same answer",,0.043
+Q_num_week_plus1|null|candle,Q_num_week_plus1,candle,everyday word (noise),0.049,0.058
+Q_num_week_plus1|null|button,Q_num_week_plus1,button,everyday word (noise),0.047,0.056
+Q_num_week_plus1|null|spoon,Q_num_week_plus1,spoon,everyday word (noise),0.047,0.027
+Q_num_week_plus1|null|jacket,Q_num_week_plus1,jacket,everyday word (noise),0.046,0.056
+Q_num_week_plus1|null|bottle,Q_num_week_plus1,bottle,everyday word (noise),0.039,0.062
+Q_num_week_plus1|null|river,Q_num_week_plus1,river,everyday word (noise),0.038,0.037
+Q_num_week_plus1|null|ladder,Q_num_week_plus1,ladder,everyday word (noise),0.038,0.028
+Q_num_week_plus1|null|bread,Q_num_week_plus1,bread,everyday word (noise),0.037,0.056
+Q_num_week_plus1|null|wallet,Q_num_week_plus1,wallet,everyday word (noise),0.037,0.089
+Q_num_week_plus1|null|cloud,Q_num_week_plus1,cloud,everyday word (noise),0.037,0.029
+Q_num_week_plus1|null|pencil,Q_num_week_plus1,pencil,everyday word (noise),0.037,0.09
+Q_num_week_plus1|null|basket,Q_num_week_plus1,basket,everyday word (noise),0.036,0.03
+Q_num_week_plus1|kind|three,Q_num_week_plus1,three,"same kind as seven, same answer",,0.066
+Q_num_week_plus1|kind|six,Q_num_week_plus1,six,"same kind as seven, same answer",,0.006
+Q_num_triangle_double|null|candle,Q_num_triangle_double,candle,everyday word (noise),0.042,0.13
+Q_num_triangle_double|null|jacket,Q_num_triangle_double,jacket,everyday word (noise),0.046,0.16
+Q_num_triangle_double|null|bread,Q_num_triangle_double,bread,everyday word (noise),0.039,0.136
+Q_num_triangle_double|null|spoon,Q_num_triangle_double,spoon,everyday word (noise),0.038,0.012
+Q_num_triangle_double|null|pillow,Q_num_triangle_double,pillow,everyday word (noise),0.038,0.08
+Q_num_triangle_double|null|river,Q_num_triangle_double,river,everyday word (noise),0.038,0.143
+Q_num_triangle_double|null|pencil,Q_num_triangle_double,pencil,everyday word (noise),0.037,0.199
+Q_num_triangle_double|null|wallet,Q_num_triangle_double,wallet,everyday word (noise),0.037,0.195
+Q_num_triangle_double|null|mountain,Q_num_triangle_double,mountain,everyday word (noise),0.036,0.107
+Q_num_triangle_double|null|helmet,Q_num_triangle_double,helmet,everyday word (noise),0.035,0.14
+Q_num_triangle_double|null|shoe,Q_num_triangle_double,shoe,everyday word (noise),0.035,0.151
+Q_num_triangle_double|null|basket,Q_num_triangle_double,basket,everyday word (noise),0.034,0.076
+Q_num_triangle_double|kind|seven,Q_num_triangle_double,seven,"same kind as three, same answer",,0.03
+Q_num_triangle_double|kind|nine,Q_num_triangle_double,nine,"same kind as three, same answer",,0.003
+S_element_helium|null|lantern,S_element_helium,lantern,everyday word (noise),0.065,0.002
+S_element_helium|null|pillow,S_element_helium,pillow,everyday word (noise),0.064,0.001
+S_element_helium|null|candle,S_element_helium,candle,everyday word (noise),0.056,0.001
+S_element_helium|null|bottle,S_element_helium,bottle,everyday word (noise),0.054,0.019
+S_element_helium|null|rocket,S_element_helium,rocket,everyday word (noise),0.049,0.021
+S_element_helium|null|jacket,S_element_helium,jacket,everyday word (noise),0.046,0.029
+S_element_helium|null|ribbon,S_element_helium,ribbon,everyday word (noise),0.046,0.02
+S_element_helium|null|cloud,S_element_helium,cloud,everyday word (noise),0.045,0.015
+S_element_helium|null|wallet,S_element_helium,wallet,everyday word (noise),0.042,0.003
+S_element_helium|null|helmet,S_element_helium,helmet,everyday word (noise),0.042,0.018
+S_element_helium|null|basket,S_element_helium,basket,everyday word (noise),0.041,0.019
+S_element_helium|null|kettle,S_element_helium,kettle,everyday word (noise),0.039,0.015
+S_element_helium|kind|neon,S_element_helium,neon,"same kind as helium, same answer",,0.01
+S_element_helium|kind|hydrogen,S_element_helium,hydrogen,"same kind as helium, same answer",,0.061
+S_bad_cow_sound|null|kitchen,S_bad_cow_sound,kitchen,everyday word (noise),0.079,0.001
+S_bad_cow_sound|null|garden,S_bad_cow_sound,garden,everyday word (noise),0.066,0.001
+S_bad_cow_sound|null|spoon,S_bad_cow_sound,spoon,everyday word (noise),0.061,0.0
+S_bad_cow_sound|null|bread,S_bad_cow_sound,bread,everyday word (noise),0.061,0.0
+S_bad_cow_sound|null|bottle,S_bad_cow_sound,bottle,everyday word (noise),0.053,0.001
+S_bad_cow_sound|null|kettle,S_bad_cow_sound,kettle,everyday word (noise),0.052,0.0
+S_bad_cow_sound|null|river,S_bad_cow_sound,river,everyday word (noise),0.045,0.004
+S_bad_cow_sound|null|jacket,S_bad_cow_sound,jacket,everyday word (noise),0.045,0.004
+S_bad_cow_sound|null|pillow,S_bad_cow_sound,pillow,everyday word (noise),0.044,0.0
+S_bad_cow_sound|null|lantern,S_bad_cow_sound,lantern,everyday word (noise),0.042,0.0
+S_bad_cow_sound|null|basket,S_bad_cow_sound,basket,everyday word (noise),0.04,0.001
+S_bad_cow_sound|null|saddle,S_bad_cow_sound,saddle,everyday word (noise),0.04,0.001
+S_bad_cow_sound|kind|sheep,S_bad_cow_sound,sheep,"same kind as cow, same answer",,0.0
+S_bad_cow_sound|kind|pig,S_bad_cow_sound,pig,"same kind as cow, same answer",,0.0
+C_chess_knight|null|pillow,C_chess_knight,pillow,everyday word (noise),0.05,0.029
+C_chess_knight|null|ladder,C_chess_knight,ladder,everyday word (noise),0.049,0.043
+C_chess_knight|null|pencil,C_chess_knight,pencil,everyday word (noise),0.047,0.029
+C_chess_knight|null|jacket,C_chess_knight,jacket,everyday word (noise),0.046,0.124
+C_chess_knight|null|helmet,C_chess_knight,helmet,everyday word (noise),0.044,0.091
+C_chess_knight|null|lantern,C_chess_knight,lantern,everyday word (noise),0.044,0.009
+C_chess_knight|null|ticket,C_chess_knight,ticket,everyday word (noise),0.041,0.021
+C_chess_knight|null|kettle,C_chess_knight,kettle,everyday word (noise),0.04,0.052
+C_chess_knight|null|wallet,C_chess_knight,wallet,everyday word (noise),0.039,0.028
+C_chess_knight|null|river,C_chess_knight,river,everyday word (noise),0.039,0.104
+C_chess_knight|null|candle,C_chess_knight,candle,everyday word (noise),0.038,0.05
+C_chess_knight|null|chair,C_chess_knight,chair,everyday word (noise),0.038,0.073
+C_chess_knight|kind|queen,C_chess_knight,queen,"same kind as knight, same answer",,0.073
+C_chess_knight|kind|pawn,C_chess_knight,pawn,"same kind as knight, same answer",,0.071
+C_sport_messi|null|ticket,C_sport_messi,ticket,everyday word (noise),0.056,0.081
+C_sport_messi|null|table,C_sport_messi,table,everyday word (noise),0.056,0.135
+C_sport_messi|null|window,C_sport_messi,window,everyday word (noise),0.054,0.085
+C_sport_messi|null|cloud,C_sport_messi,cloud,everyday word (noise),0.051,0.113
+C_sport_messi|null|jacket,C_sport_messi,jacket,everyday word (noise),0.05,0.157
+C_sport_messi|null|helmet,C_sport_messi,helmet,everyday word (noise),0.047,0.069
+C_sport_messi|null|basket,C_sport_messi,basket,everyday word (noise),0.047,0.021
+C_sport_messi|null|door,C_sport_messi,door,everyday word (noise),0.046,0.174
+C_sport_messi|null|kitchen,C_sport_messi,kitchen,everyday word (noise),0.044,0.04
+C_sport_messi|null|chair,C_sport_messi,chair,everyday word (noise),0.042,0.199
+C_sport_messi|null|button,C_sport_messi,button,everyday word (noise),0.042,0.055
+C_sport_messi|null|brick,C_sport_messi,brick,everyday word (noise),0.041,0.0
+C_sport_messi|kind|tennis,C_sport_messi,tennis,"same kind as football, same answer",,0.0
+C_sport_messi|kind|golf,C_sport_messi,golf,"same kind as football, same answer",,0.044
+C_month_thanksgiving|null|candle,C_month_thanksgiving,candle,everyday word (noise),0.05,0.027
+C_month_thanksgiving|null|jacket,C_month_thanksgiving,jacket,everyday word (noise),0.047,0.03
+C_month_thanksgiving|null|kitchen,C_month_thanksgiving,kitchen,everyday word (noise),0.045,0.022
+C_month_thanksgiving|null|ticket,C_month_thanksgiving,ticket,everyday word (noise),0.045,0.022
+C_month_thanksgiving|null|bread,C_month_thanksgiving,bread,everyday word (noise),0.039,0.013
+C_month_thanksgiving|null|river,C_month_thanksgiving,river,everyday word (noise),0.038,0.025
+C_month_thanksgiving|null|lantern,C_month_thanksgiving,lantern,everyday word (noise),0.038,0.025
+C_month_thanksgiving|null|blanket,C_month_thanksgiving,blanket,everyday word (noise),0.037,0.031
+C_month_thanksgiving|null|table,C_month_thanksgiving,table,everyday word (noise),0.037,0.034
+C_month_thanksgiving|null|chair,C_month_thanksgiving,chair,everyday word (noise),0.034,0.03
+C_month_thanksgiving|null|spoon,C_month_thanksgiving,spoon,everyday word (noise),0.034,0.023
+C_month_thanksgiving|null|mountain,C_month_thanksgiving,mountain,everyday word (noise),0.034,0.02
+C_month_thanksgiving|kind|March,C_month_thanksgiving,March,"same kind as November, same answer",,0.014
+C_month_thanksgiving|kind|August,C_month_thanksgiving,August,"same kind as November, same answer",,0.034

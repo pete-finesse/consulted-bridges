@@ -1,0 +1,8 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+E_bee|spider,E_bee,spider,layers 6–23,Eight,Six,didn't follow
+E_bee|dog,E_bee,dog,layers 6–23,Four,Six,didn't follow
+E_bee|bird,E_bee,bird,layers 6–23,Two,Six,didn't follow
+E_bee|snake,E_bee,snake,layers 6–23,Zero,Six,didn't follow
+E_bee|horse,E_bee,horse,layers 6–23,Four,Six,didn't follow
+E_bee|ant,E_bee,ant,layers 6–23,Six,Six,kept the answer
+E_bee|beetle,E_bee,beetle,layers 6–23,Six,Six,kept the answer

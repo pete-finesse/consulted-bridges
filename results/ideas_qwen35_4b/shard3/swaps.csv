@@ -1,0 +1,45 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+Q_num_week_plus1|two,Q_num_week_plus1,two,layers 6–23,Three,2,didn't follow
+Q_num_week_plus1|four,Q_num_week_plus1,four,layers 6–23,Five,Five,followed the swap
+Q_num_week_plus1|five,Q_num_week_plus1,five,layers 6–23,Six,6,followed the swap
+Q_num_week_plus1|nine,Q_num_week_plus1,nine,layers 6–23,Ten,8,didn't follow
+Q_num_week_plus1|ten,Q_num_week_plus1,ten,layers 6–23,Eleven,8,didn't follow
+Q_num_week_plus1|eleven,Q_num_week_plus1,eleven,layers 6–23,Twelve,8,didn't follow
+Q_color_snow_opposite|black,Q_color_snow_opposite,black,layers 6–17,White,Black,didn't follow
+Q_color_snow_opposite|red,Q_color_snow_opposite,red,layers 6–17,Green,Black,didn't follow
+Q_color_snow_opposite|green,Q_color_snow_opposite,green,layers 6–17,Red,Black,didn't follow
+Q_color_snow_opposite|blue,Q_color_snow_opposite,blue,layers 6–17,Yellow,Black,didn't follow
+Q_color_snow_opposite|yellow,Q_color_snow_opposite,yellow,layers 6–17,Violet,Black,no usable belief
+W_len_jupiter|Mars,W_len_jupiter,Mars,layers 6–20,4,Seven,didn't follow
+W_len_jupiter|Venus,W_len_jupiter,Venus,layers 6–20,5,Seven,didn't follow
+W_len_jupiter|Earth,W_len_jupiter,Earth,layers 6–20,5,Seven,didn't follow
+W_len_jupiter|Saturn,W_len_jupiter,Saturn,layers 6–20,6,Seven,didn't follow
+W_len_jupiter|Pluto,W_len_jupiter,Pluto,layers 6–20,5,Seven,didn't follow
+W_len_jupiter|Mercury,W_len_jupiter,Mercury,layers 6–20,8,Seven,didn't follow
+W_len_jupiter|Neptune,W_len_jupiter,Neptune,layers 6–20,8,Seven,didn't follow
+S_element_gold|silver,S_element_gold,silver,layers 6–20,Ag,Ag,followed the swap
+S_element_gold|iron,S_element_gold,iron,layers 6–20,Fe,Fe,followed the swap
+S_element_gold|copper,S_element_gold,copper,layers 6–20,Cu,Au,didn't follow
+S_element_gold|lead,S_element_gold,lead,layers 6–20,Pb,Au,didn't follow
+S_element_gold|tin,S_element_gold,tin,layers 6–20,Sn,Au,didn't follow
+S_element_gold|sodium,S_element_gold,sodium,layers 6–20,Na,Au,didn't follow
+S_element_gold|zinc,S_element_gold,zinc,layers 6–20,Zn,Au,didn't follow
+S_element_sodium|gold,S_element_sodium,gold,layers 6–17,Au,Na,didn't follow
+S_element_sodium|silver,S_element_sodium,silver,layers 6–17,Ag,Na,didn't follow
+S_element_sodium|iron,S_element_sodium,iron,layers 6–17,Fe,Na,didn't follow
+S_element_sodium|copper,S_element_sodium,copper,layers 6–17,Cu,Na,didn't follow
+S_element_sodium|lead,S_element_sodium,lead,layers 6–17,Pb,Na,didn't follow
+S_element_sodium|tin,S_element_sodium,tin,layers 6–17,Sn,Na,didn't follow
+S_element_sodium|zinc,S_element_sodium,zinc,layers 6–17,Zn,Na,didn't follow
+C_sport_hockey|soccer,C_sport_hockey,soccer,layers 6–23,11,Six,didn't follow
+C_sport_hockey|basketball,C_sport_hockey,basketball,layers 6–23,Five,Six,didn't follow
+C_sport_hockey|baseball,C_sport_hockey,baseball,layers 6–23,Nine,Six,didn't follow
+C_sport_hockey|rugby,C_sport_hockey,rugby,layers 6–23,15,Six,didn't follow
+C_sport_hockey|cricket,C_sport_hockey,cricket,layers 6–23,11,Six,didn't follow
+C_sport_hockey|polo,C_sport_hockey,polo,layers 6–23,Four,Six,didn't follow
+C_sport_hockey|volleyball,C_sport_hockey,volleyball,layers 6–23,Six,Six,kept the answer
+C_bad_halloween|Christmas,C_bad_halloween,Christmas,layers 6–20,December,November,didn't follow
+C_bad_halloween|Thanksgiving,C_bad_halloween,Thanksgiving,layers 6–20,November,October,didn't follow
+C_bad_halloween|Valentine,C_bad_halloween,Valentine,layers 6–20,February,October,didn't follow
+C_bad_halloween|Easter,C_bad_halloween,Easter,layers 6–20,March,October,didn't follow
+C_bad_halloween|Ramadan,C_bad_halloween,Ramadan,layers 6–20,March,October,didn't follow

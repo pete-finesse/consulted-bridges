@@ -1,0 +1,44 @@
+key,sentence,word,kind,strength,early_drop
+L_gates|null|ribbon,L_gates,ribbon,everyday word (noise),0.114,0.028
+L_gates|null|button,L_gates,button,everyday word (noise),0.11,0.164
+L_gates|null|pencil,L_gates,pencil,everyday word (noise),0.106,0.036
+L_gates|null|spoon,L_gates,spoon,everyday word (noise),0.103,0.062
+L_gates|null|river,L_gates,river,everyday word (noise),0.096,0.05
+L_gates|null|shoe,L_gates,shoe,everyday word (noise),0.09,0.042
+L_gates|null|table,L_gates,table,everyday word (noise),0.085,0.121
+L_gates|null|wallet,L_gates,wallet,everyday word (noise),0.08,0.169
+L_gates|null|ticket,L_gates,ticket,everyday word (noise),0.078,0.025
+L_gates|null|mountain,L_gates,mountain,everyday word (noise),0.077,0.085
+L_gates|null|chair,L_gates,chair,everyday word (noise),0.075,0.014
+L_gates|null|pillow,L_gates,pillow,everyday word (noise),0.074,0.058
+L_gates|kind|Boston,L_gates,Boston,"same kind as Seattle, same answer",,0.721
+L_gates|kind|Chicago,L_gates,Chicago,"same kind as Seattle, same answer",,0.251
+L_colosseum|null|ribbon,L_colosseum,ribbon,everyday word (noise),0.114,0.012
+L_colosseum|null|button,L_colosseum,button,everyday word (noise),0.11,0.019
+L_colosseum|null|pencil,L_colosseum,pencil,everyday word (noise),0.105,0.008
+L_colosseum|null|spoon,L_colosseum,spoon,everyday word (noise),0.103,0.013
+L_colosseum|null|shoe,L_colosseum,shoe,everyday word (noise),0.09,0.017
+L_colosseum|null|table,L_colosseum,table,everyday word (noise),0.086,0.028
+L_colosseum|null|river,L_colosseum,river,everyday word (noise),0.084,0.017
+L_colosseum|null|cloud,L_colosseum,cloud,everyday word (noise),0.081,0.045
+L_colosseum|null|mountain,L_colosseum,mountain,everyday word (noise),0.078,0.01
+L_colosseum|null|ticket,L_colosseum,ticket,everyday word (noise),0.076,0.015
+L_colosseum|null|chair,L_colosseum,chair,everyday word (noise),0.075,0.018
+L_colosseum|null|blanket,L_colosseum,blanket,everyday word (noise),0.075,0.007
+L_colosseum|kind|Spain,L_colosseum,Spain,"same kind as Italy, same answer",,0.866
+L_colosseum|kind|France,L_colosseum,France,"same kind as Italy, same answer",,0.816
+X_york_country|null|chair,X_york_country,chair,everyday word (noise),0.101,0.001
+X_york_country|null|river,X_york_country,river,everyday word (noise),0.086,0.002
+X_york_country|null|button,X_york_country,button,everyday word (noise),0.086,0.001
+X_york_country|null|hammer,X_york_country,hammer,everyday word (noise),0.078,0.001
+X_york_country|null|ticket,X_york_country,ticket,everyday word (noise),0.078,0.001
+X_york_country|null|mountain,X_york_country,mountain,everyday word (noise),0.074,0.001
+X_york_country|null|pencil,X_york_country,pencil,everyday word (noise),0.072,0.001
+X_york_country|null|spoon,X_york_country,spoon,everyday word (noise),0.068,0.001
+X_york_country|null|pillow,X_york_country,pillow,everyday word (noise),0.067,0.001
+X_york_country|null|barrel,X_york_country,barrel,everyday word (noise),0.066,0.002
+X_york_country|null|candle,X_york_country,candle,everyday word (noise),0.064,0.001
+X_york_country|null|shoe,X_york_country,shoe,everyday word (noise),0.063,0.003
+X_york_country|kind|Vancouver,X_york_country,Vancouver,"same kind as Toronto, same answer",,0.022
+X_york_country|kind|Ottawa,X_york_country,Ottawa,"same kind as Toronto, same answer",,0.021
+X_york_country|kind|Calgary,X_york_country,Calgary,"same kind as Toronto, same answer",,0.005

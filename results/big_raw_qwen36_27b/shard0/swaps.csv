@@ -1,0 +1,101 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+L_mozart|Munich,L_mozart,Munich,layers 12–53,M,S,didn't follow
+L_mozart|Paris,L_mozart,Paris,layers 12–53,P,S,didn't follow
+L_mozart|Tokyo,L_mozart,Tokyo,layers 12–53,T,V,didn't follow
+L_mozart|Berlin,L_mozart,Berlin,layers 12–53,B,A,didn't follow
+L_mozart|Rome,L_mozart,Rome,layers 12–53,R,V,didn't follow
+L_mozart|Madrid,L_mozart,Madrid,layers 12–53,M,V,didn't follow
+L_mozart|Chicago,L_mozart,Chicago,layers 12–53,C,S,didn't follow
+L_mozart|Lyon,L_mozart,Lyon,layers 12–53,L,S,didn't follow
+L_mishima|Munich,L_mishima,Munich,layers 12–53,M,T,didn't follow
+L_mishima|Paris,L_mishima,Paris,layers 12–53,P,P,followed the swap
+L_mishima|Berlin,L_mishima,Berlin,layers 12–53,B,T,didn't follow
+L_mishima|Rome,L_mishima,Rome,layers 12–53,R,T,didn't follow
+L_mishima|Madrid,L_mishima,Madrid,layers 12–53,M,T,didn't follow
+L_mishima|Chicago,L_mishima,Chicago,layers 12–53,C,T,didn't follow
+L_mishima|Lyon,L_mishima,Lyon,layers 12–53,L,T,didn't follow
+L_mishima|Osaka,L_mishima,Osaka,layers 12–53,O,T,didn't follow
+L_maldini|Munich,L_maldini,Munich,layers 12–53,M,M,kept the answer
+L_maldini|Paris,L_maldini,Paris,layers 12–53,P,M,didn't follow
+L_maldini|Tokyo,L_maldini,Tokyo,layers 12–53,T,M,didn't follow
+L_maldini|Berlin,L_maldini,Berlin,layers 12–53,B,M,didn't follow
+L_maldini|Madrid,L_maldini,Madrid,layers 12–53,M,M,kept the answer
+L_maldini|Chicago,L_maldini,Chicago,layers 12–53,C,M,didn't follow
+L_maldini|Lyon,L_maldini,Lyon,layers 12–53,L,M,didn't follow
+L_maldini|Rome,L_maldini,Rome,layers 12–53,R,M,didn't follow
+L_piaf|Munich,L_piaf,Munich,layers 12–53,M,P,didn't follow
+L_piaf|Tokyo,L_piaf,Tokyo,layers 12–53,T,P,didn't follow
+L_piaf|Berlin,L_piaf,Berlin,layers 12–53,B,P,didn't follow
+L_piaf|Rome,L_piaf,Rome,layers 12–53,R,R,followed the swap
+L_piaf|Madrid,L_piaf,Madrid,layers 12–53,M,P,didn't follow
+L_piaf|Chicago,L_piaf,Chicago,layers 12–53,C,P,didn't follow
+L_piaf|Lyon,L_piaf,Lyon,layers 12–53,L,S,didn't follow
+L_gates|Munich,L_gates,Munich,layers 12–53,M,S,didn't follow
+L_gates|Paris,L_gates,Paris,layers 12–53,P,N,didn't follow
+L_gates|Tokyo,L_gates,Tokyo,layers 12–53,T,N,didn't follow
+L_gates|Berlin,L_gates,Berlin,layers 12–53,B,N,didn't follow
+L_gates|Rome,L_gates,Rome,layers 12–53,R,N,didn't follow
+L_gates|Madrid,L_gates,Madrid,layers 12–53,M,D,didn't follow
+L_gates|Chicago,L_gates,Chicago,layers 12–53,C,C,followed the swap
+L_gates|Lyon,L_gates,Lyon,layers 12–53,L,D,didn't follow
+O_bicycle|car,O_bicycle,car,layers 12–41,Four,Two,didn't follow
+O_bicycle|bus,O_bicycle,bus,layers 12–41,6,Two,didn't follow
+O_bicycle|motorcycle,O_bicycle,motorcycle,layers 12–41,Two,Two,kept the answer
+Q_month_halloween_number|January,Q_month_halloween_number,January,layers 12–53,1,10,didn't follow
+Q_month_halloween_number|March,Q_month_halloween_number,March,layers 12–53,3,10,didn't follow
+Q_month_halloween_number|May,Q_month_halloween_number,May,layers 12–53,Fifth,10,didn't follow
+Q_month_halloween_number|July,Q_month_halloween_number,July,layers 12–53,7,10,didn't follow
+Q_month_halloween_number|September,Q_month_halloween_number,September,layers 12–53,9,10,didn't follow
+Q_month_halloween_number|December,Q_month_halloween_number,December,layers 12–53,12,10,didn't follow
+Q_month_thanksgiving_days|January,Q_month_thanksgiving_days,January,layers 12–53,31,31,"gave it, but it's also the fallback"
+Q_month_thanksgiving_days|February,Q_month_thanksgiving_days,February,layers 12–53,28,30,didn't follow
+Q_month_thanksgiving_days|March,Q_month_thanksgiving_days,March,layers 12–53,31,31,"gave it, but it's also the fallback"
+Q_month_thanksgiving_days|July,Q_month_thanksgiving_days,July,layers 12–53,31,31,"gave it, but it's also the fallback"
+Q_month_thanksgiving_days|December,Q_month_thanksgiving_days,December,layers 12–53,31,30,didn't follow
+Q_month_thanksgiving_days|April,Q_month_thanksgiving_days,April,layers 12–53,30,30,kept the answer
+Q_month_thanksgiving_days|June,Q_month_thanksgiving_days,June,layers 12–53,30,30,kept the answer
+Q_num_week_plus1|two,Q_num_week_plus1,two,layers 12–53,Three,8,didn't follow
+Q_num_week_plus1|four,Q_num_week_plus1,four,layers 12–53,Five,5,followed the swap
+Q_num_week_plus1|five,Q_num_week_plus1,five,layers 12–53,Six,6,followed the swap
+Q_num_week_plus1|nine,Q_num_week_plus1,nine,layers 12–53,10,8,didn't follow
+Q_num_week_plus1|ten,Q_num_week_plus1,ten,layers 12–53,11,8,didn't follow
+Q_num_week_plus1|eleven,Q_num_week_plus1,eleven,layers 12–53,12,8,didn't follow
+Q_num_triangle_double|two,Q_num_triangle_double,two,layers 12–53,Four,6,didn't follow
+Q_num_triangle_double|four,Q_num_triangle_double,four,layers 12–53,8,Six,didn't follow
+Q_num_triangle_double|five,Q_num_triangle_double,five,layers 12–53,10,6,didn't follow
+Q_num_triangle_double|six,Q_num_triangle_double,six,layers 12–53,12,6,didn't follow
+Q_num_triangle_double|eight,Q_num_triangle_double,eight,layers 12–53,16,6,didn't follow
+Q_num_triangle_double|ten,Q_num_triangle_double,ten,layers 12–53,20,6,didn't follow
+S_element_helium|hydrogen,S_element_helium,hydrogen,layers 12–53,1,2,didn't follow
+S_element_helium|lithium,S_element_helium,lithium,layers 12–53,3,2,didn't follow
+S_element_helium|carbon,S_element_helium,carbon,layers 12–53,6,2,didn't follow
+S_element_helium|nitrogen,S_element_helium,nitrogen,layers 12–53,7,2,didn't follow
+S_element_helium|oxygen,S_element_helium,oxygen,layers 12–53,8,2,didn't follow
+S_element_helium|neon,S_element_helium,neon,layers 12–53,10,2,didn't follow
+S_bad_cow_sound|dog,S_bad_cow_sound,dog,layers 12–47,Bark,Moo,didn't follow
+S_bad_cow_sound|cat,S_bad_cow_sound,cat,layers 12–47,Meow,Moo,didn't follow
+S_bad_cow_sound|duck,S_bad_cow_sound,duck,layers 12–47,Quack,Moo,didn't follow
+S_bad_cow_sound|sheep,S_bad_cow_sound,sheep,layers 12–47,Baa,Moo,didn't follow
+S_bad_cow_sound|pig,S_bad_cow_sound,pig,layers 12–47,Oink,Moo,didn't follow
+S_bad_cow_sound|lion,S_bad_cow_sound,lion,layers 12–47,Roar,Moo,didn't follow
+S_bad_cow_sound|horse,S_bad_cow_sound,horse,layers 12–47,Neigh,Moo,didn't follow
+S_bad_cow_sound|bull,S_bad_cow_sound,bull,layers 12–47,Moo,Moo,kept the answer
+C_chess_knight|pawn,C_chess_knight,pawn,layers 12–53,One,3,didn't follow
+C_chess_knight|queen,C_chess_knight,queen,layers 12–53,9,3,didn't follow
+C_chess_knight|castle,C_chess_knight,castle,layers 12–53,5,3,didn't follow
+C_chess_knight|bishop,C_chess_knight,bishop,layers 12–53,3,3,kept the answer
+C_sport_messi|basketball,C_sport_messi,basketball,layers 12–53,Five,11,didn't follow
+C_sport_messi|baseball,C_sport_messi,baseball,layers 12–53,Nine,11,didn't follow
+C_sport_messi|hockey,C_sport_messi,hockey,layers 12–53,Six,11,didn't follow
+C_sport_messi|rugby,C_sport_messi,rugby,layers 12–53,15,11,didn't follow
+C_sport_messi|volleyball,C_sport_messi,volleyball,layers 12–53,Six,11,didn't follow
+C_sport_messi|polo,C_sport_messi,polo,layers 12–53,Four,11,didn't follow
+C_sport_messi|cricket,C_sport_messi,cricket,layers 12–53,Eleven,11,kept the answer
+C_month_thanksgiving|February,C_month_thanksgiving,February,layers 12–53,2,11,didn't follow
+C_month_thanksgiving|October,C_month_thanksgiving,October,layers 12–53,10,11,didn't follow
+C_month_thanksgiving|December,C_month_thanksgiving,December,layers 12–53,12,11,didn't follow
+C_month_thanksgiving|January,C_month_thanksgiving,January,layers 12–53,1,11,didn't follow
+C_month_thanksgiving|July,C_month_thanksgiving,July,layers 12–53,7,11,didn't follow
+C_month_thanksgiving|May,C_month_thanksgiving,May,layers 12–53,5,11,didn't follow
+C_month_thanksgiving|June,C_month_thanksgiving,June,layers 12–53,6,11,didn't follow
+C_month_thanksgiving|Nov,C_month_thanksgiving,Nov,layers 12–53,11,11,kept the answer

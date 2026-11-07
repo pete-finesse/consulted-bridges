@@ -1,0 +1,259 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 4442.93it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/swarm-explore/projects/silent-dissent/harness/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+PROMPT: '<|im_start|>user\nWhich country was Wolfgang Amadeus Mozart from? Answer in one word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
+[base] no edit                                          -> 'Austria'        P(Austria)=0.77
+
+J-lens ranks (best over positions from the question on; band 12-29):
+    word  last_best_rank  allpos_best_rank  allpos_band_logrank
+Salzburg               8                 0             0.183963
+  Vienna              11                 1             1.157925
+    Graz             191                15             2.966003
+   Tokyo            2161               367             3.278189
+   music             570                 2             0.910311
+composer             919                 0             0.408839
+
+Where the bridge ranks best:
+ lens  pos        token  layer     word  rank
+jlens   10       Mozart     28 Salzburg     0
+jlens   20 <|im_start|>     23 Salzburg     0
+jlens   20 <|im_start|>     24 Salzburg     0
+jlens   20 <|im_start|>     25 Salzburg     0
+jlens   20 <|im_start|>     26 Salzburg     0
+jlens   20 <|im_start|>     27 Salzburg     0
+
+Strength (fraction of |h|, layers 12-21): bridge Salzburg=0.175; Vienna=0.108, Graz=0.062, Tokyo=0.073, music=0.126, composer=0.164, Wolfgang=0.176, Spain=0.167, Musik=0.158, Belgium=0.155, Netherlands=0.153, countries=0.198, Britain=0.144, violin=0.143
+
+== A. Remove, sliding 6-layer windows (question onward) ==
+[A] remove Salzburg L0-5                             -> 'Austria'        P(Austria)=0.72
+[A] control remove Vienna L0-5                       -> 'Austria'        P(Austria)=0.59
+[A] control remove Graz L0-5                         -> 'Austria'        P(Austria)=0.77
+[A] control remove Tokyo L0-5                        -> 'Austria'        P(Austria)=0.78
+[A] control remove music L0-5                        -> 'Austria'        P(Austria)=0.73
+[A] control remove composer L0-5                     -> 'Austria'        P(Austria)=0.77
+[A] control remove Wolfgang L0-5                     -> 'Austria'        P(Austria)=0.71
+[A] control remove Spain L0-5                        -> 'Austria'        P(Austria)=0.75
+[A] control remove Musik L0-5                        -> 'Austria'        P(Austria)=0.72
+[A] control remove Belgium L0-5                      -> 'Austria'        P(Austria)=0.66
+[A] control remove Netherlands L0-5                  -> 'Austria'        P(Austria)=0.76
+[A] control remove countries L0-5                    -> 'Austria'        P(Austria)=0.75
+[A] control remove Britain L0-5                      -> 'Austria'        P(Austria)=0.77
+[A] control remove violin L0-5                       -> 'Austria'        P(Austria)=0.69
+[A] remove Salzburg L3-8                             -> 'Italy'          P(Austria)=0.28
+[A] control remove Vienna L3-8                       -> 'Germany'        P(Austria)=0.25
+[A] control remove Graz L3-8                         -> 'Austria'        P(Austria)=0.74
+[A] control remove Tokyo L3-8                        -> 'Austria'        P(Austria)=0.80
+[A] control remove music L3-8                        -> 'Austria'        P(Austria)=0.71
+[A] control remove composer L3-8                     -> 'Austria'        P(Austria)=0.72
+[A] control remove Wolfgang L3-8                     -> 'Austria'        P(Austria)=0.64
+[A] control remove Spain L3-8                        -> 'Austria'        P(Austria)=0.73
+[A] control remove Musik L3-8                        -> 'Austria'        P(Austria)=0.71
+[A] control remove Belgium L3-8                      -> 'Austria'        P(Austria)=0.50
+[A] control remove Netherlands L3-8                  -> 'Austria'        P(Austria)=0.74
+[A] control remove countries L3-8                    -> 'Austria'        P(Austria)=0.76
+[A] control remove Britain L3-8                      -> 'Austria'        P(Austria)=0.77
+[A] control remove violin L3-8                       -> 'Austria'        P(Austria)=0.56
+[A] remove Salzburg L6-11                            -> 'Italy'          P(Austria)=0.02
+[A] control remove Vienna L6-11                      -> 'Germany'        P(Austria)=0.15
+[A] control remove Graz L6-11                        -> 'Austria'        P(Austria)=0.77
+[A] control remove Tokyo L6-11                       -> 'Austria'        P(Austria)=0.79
+[A] control remove music L6-11                       -> 'Austria'        P(Austria)=0.73
+[A] control remove composer L6-11                    -> 'Austria'        P(Austria)=0.69
+[A] control remove Wolfgang L6-11                    -> 'Austria'        P(Austria)=0.56
+[A] control remove Spain L6-11                       -> 'Austria'        P(Austria)=0.78
+[A] control remove Musik L6-11                       -> 'Austria'        P(Austria)=0.71
+[A] control remove Belgium L6-11                     -> 'Germany'        P(Austria)=0.44
+[A] control remove Netherlands L6-11                 -> 'Austria'        P(Austria)=0.70
+[A] control remove countries L6-11                   -> 'Austria'        P(Austria)=0.73
+[A] control remove Britain L6-11                     -> 'Austria'        P(Austria)=0.77
+[A] control remove violin L6-11                      -> 'Austria'        P(Austria)=0.55
+[A] remove Salzburg L9-14                            -> 'Italy'          P(Austria)=0.01
+[A] control remove Vienna L9-14                      -> 'Germany'        P(Austria)=0.10
+[A] control remove Graz L9-14                        -> 'Austria'        P(Austria)=0.75
+[A] control remove Tokyo L9-14                       -> 'Austria'        P(Austria)=0.77
+[A] control remove music L9-14                       -> 'Austria'        P(Austria)=0.79
+[A] control remove composer L9-14                    -> 'Austria'        P(Austria)=0.83
+[A] control remove Wolfgang L9-14                    -> 'Austria'        P(Austria)=0.48
+[A] control remove Spain L9-14                       -> 'Austria'        P(Austria)=0.75
+[A] control remove Musik L9-14                       -> 'Austria'        P(Austria)=0.77
+[A] control remove Belgium L9-14                     -> 'Germany'        P(Austria)=0.32
+[A] control remove Netherlands L9-14                 -> 'Austria'        P(Austria)=0.62
+[A] control remove countries L9-14                   -> 'Austria'        P(Austria)=0.67
+[A] control remove Britain L9-14                     -> 'Austria'        P(Austria)=0.72
+[A] control remove violin L9-14                      -> 'Austria'        P(Austria)=0.76
+[A] remove Salzburg L12-17                           -> 'Italy'          P(Austria)=0.00
+[A] control remove Vienna L12-17                     -> 'Germany'        P(Austria)=0.12
+[A] control remove Graz L12-17                       -> 'Austria'        P(Austria)=0.77
+[A] control remove Tokyo L12-17                      -> 'Austria'        P(Austria)=0.76
+[A] control remove music L12-17                      -> 'Austria'        P(Austria)=0.80
+[A] control remove composer L12-17                   -> 'Austria'        P(Austria)=0.82
+[A] control remove Wolfgang L12-17                   -> 'Italy'          P(Austria)=0.42
+[A] control remove Spain L12-17                      -> 'Austria'        P(Austria)=0.78
+[A] control remove Musik L12-17                      -> 'Austria'        P(Austria)=0.75
+[A] control remove Belgium L12-17                    -> 'Germany'        P(Austria)=0.34
+[A] control remove Netherlands L12-17                -> 'Austria'        P(Austria)=0.60
+[A] control remove countries L12-17                  -> 'Austria'        P(Austria)=0.71
+[A] control remove Britain L12-17                    -> 'Austria'        P(Austria)=0.73
+[A] control remove violin L12-17                     -> 'Austria'        P(Austria)=0.76
+[A] remove Salzburg L15-20                           -> 'Italy'          P(Austria)=0.00
+[A] control remove Vienna L15-20                     -> 'Germany'        P(Austria)=0.08
+[A] control remove Graz L15-20                       -> 'Austria'        P(Austria)=0.73
+[A] control remove Tokyo L15-20                      -> 'Austria'        P(Austria)=0.75
+[A] control remove music L15-20                      -> 'Austria'        P(Austria)=0.81
+[A] control remove composer L15-20                   -> 'Austria'        P(Austria)=0.85
+[A] control remove Wolfgang L15-20                   -> 'Italy'          P(Austria)=0.37
+[A] control remove Spain L15-20                      -> 'Austria'        P(Austria)=0.79
+[A] control remove Musik L15-20                      -> 'Austria'        P(Austria)=0.76
+[A] control remove Belgium L15-20                    -> 'Germany'        P(Austria)=0.23
+[A] control remove Netherlands L15-20                -> 'Austria'        P(Austria)=0.52
+[A] control remove countries L15-20                  -> 'Austria'        P(Austria)=0.71
+[A] control remove Britain L15-20                    -> 'Austria'        P(Austria)=0.78
+[A] control remove violin L15-20                     -> 'Austria'        P(Austria)=0.76
+[A] remove Salzburg L18-23                           -> 'Italy'          P(Austria)=0.00
+[A] control remove Vienna L18-23                     -> 'Germany'        P(Austria)=0.04
+[A] control remove Graz L18-23                       -> 'Austria'        P(Austria)=0.64
+[A] control remove Tokyo L18-23                      -> 'Austria'        P(Austria)=0.75
+[A] control remove music L18-23                      -> 'Austria'        P(Austria)=0.81
+[A] control remove composer L18-23                   -> 'Austria'        P(Austria)=0.83
+[A] control remove Wolfgang L18-23                   -> 'Austria'        P(Austria)=0.68
+[A] control remove Spain L18-23                      -> 'Austria'        P(Austria)=0.68
+[A] control remove Musik L18-23                      -> 'Austria'        P(Austria)=0.82
+[A] control remove Belgium L18-23                    -> 'Germany'        P(Austria)=0.12
+[A] control remove Netherlands L18-23                -> 'Austria'        P(Austria)=0.48
+[A] control remove countries L18-23                  -> 'Austria'        P(Austria)=0.69
+[A] control remove Britain L18-23                    -> 'Austria'        P(Austria)=0.78
+[A] control remove violin L18-23                     -> 'Austria'        P(Austria)=0.74
+[A] remove Salzburg L21-26                           -> 'Germany'        P(Austria)=0.01
+[A] control remove Vienna L21-26                     -> 'Germany'        P(Austria)=0.01
+[A] control remove Graz L21-26                       -> 'Austria'        P(Austria)=0.61
+[A] control remove Tokyo L21-26                      -> 'Austria'        P(Austria)=0.79
+[A] control remove music L21-26                      -> 'Austria'        P(Austria)=0.79
+[A] control remove composer L21-26                   -> 'Austria'        P(Austria)=0.83
+[A] control remove Wolfgang L21-26                   -> 'Austria'        P(Austria)=0.80
+[A] control remove Spain L21-26                      -> 'Austria'        P(Austria)=0.76
+[A] control remove Musik L21-26                      -> 'Austria'        P(Austria)=0.80
+[A] control remove Belgium L21-26                    -> 'Germany'        P(Austria)=0.27
+[A] control remove Netherlands L21-26                -> 'Austria'        P(Austria)=0.73
+[A] control remove countries L21-26                  -> 'Austria'        P(Austria)=0.76
+[A] control remove Britain L21-26                    -> 'Austria'        P(Austria)=0.79
+[A] control remove violin L21-26                     -> 'Austria'        P(Austria)=0.64
+[A] remove Salzburg L24-29                           -> 'Italy'          P(Austria)=0.37
+[A] control remove Vienna L24-29                     -> 'Italy'          P(Austria)=0.23
+[A] control remove Graz L24-29                       -> 'Austria'        P(Austria)=0.76
+[A] control remove Tokyo L24-29                      -> 'Austria'        P(Austria)=0.81
+[A] control remove music L24-29                      -> 'Austria'        P(Austria)=0.77
+[A] control remove composer L24-29                   -> 'Austria'        P(Austria)=0.84
+[A] control remove Wolfgang L24-29                   -> 'Austria'        P(Austria)=0.88
+[A] control remove Spain L24-29                      -> 'Austria'        P(Austria)=0.80
+[A] control remove Musik L24-29                      -> 'Austria'        P(Austria)=0.78
+[A] control remove Belgium L24-29                    -> 'Austria'        P(Austria)=0.68
+[A] control remove Netherlands L24-29                -> 'Austria'        P(Austria)=0.87
+[A] control remove countries L24-29                  -> 'Austria'        P(Austria)=0.81
+[A] control remove Britain L24-29                    -> 'Austria'        P(Austria)=0.81
+[A] control remove violin L24-29                     -> 'Austria'        P(Austria)=0.71
+[A] remove Salzburg L27-31                           -> 'Austria'        P(Austria)=0.54
+[A] control remove Vienna L27-31                     -> 'Austria'        P(Austria)=0.52
+[A] control remove Graz L27-31                       -> 'Austria'        P(Austria)=0.73
+[A] control remove Tokyo L27-31                      -> 'Austria'        P(Austria)=0.60
+[A] control remove music L27-31                      -> 'Austria'        P(Austria)=0.79
+[A] control remove composer L27-31                   -> 'Austria'        P(Austria)=0.79
+[A] control remove Wolfgang L27-31                   -> 'Austria'        P(Austria)=0.73
+[A] control remove Spain L27-31                      -> 'Austria'        P(Austria)=0.85
+[A] control remove Musik L27-31                      -> 'Austria'        P(Austria)=0.68
+[A] control remove Belgium L27-31                    -> 'Austria'        P(Austria)=0.73
+[A] control remove Netherlands L27-31                -> 'Austria'        P(Austria)=0.73
+[A] control remove countries L27-31                  -> 'Austria'        P(Austria)=0.84
+[A] control remove Britain L27-31                    -> 'Austria'        P(Austria)=0.79
+[A] control remove violin L27-31                     -> 'Austria'        P(Austria)=0.79
+
+== B. Swap the bridge for alternatives with a known answer ==
+[B] swap Salzburg->Munich [mid 12-21]                -> 'Austria'        P(Austria)=0.47 expect=Germany P=0.48
+[B] swap Salzburg->Budapest [mid 12-21]              -> 'Austria'        P(Austria)=0.83 expect=Hungary P=0.00
+[B] swap Salzburg->Milan [mid 12-21]                 -> 'Italy'          P(Austria)=0.19 expect=Italy P=0.76
+[B] swap Salzburg->Innsbruck [mid 12-21]             -> 'Austria'        P(Austria)=0.78 expect=Austria P=0.78
+[B] swap Salzburg->Munich [8-23]                     -> 'Germany'        P(Austria)=0.06 expect=Germany P=0.89
+[B] swap Salzburg->Budapest [8-23]                   -> 'Austria'        P(Austria)=0.78 expect=Hungary P=0.00
+[B] swap Salzburg->Milan [8-23]                      -> 'Italy'          P(Austria)=0.02 expect=Italy P=0.96
+[B] swap Salzburg->Innsbruck [8-23]                  -> 'Austria'        P(Austria)=0.60 expect=Austria P=0.60
+[B] swap Salzburg->Munich [all]                      -> 'Germany'        P(Austria)=0.16 expect=Germany P=0.81
+[B] swap Salzburg->Budapest [all]                    -> 'Austria'        P(Austria)=0.85 expect=Hungary P=0.01
+[B] swap Salzburg->Milan [all]                       -> 'Italy'          P(Austria)=0.04 expect=Italy P=0.93
+[B] swap Salzburg->Innsbruck [all]                   -> 'Austria'        P(Austria)=0.66 expect=Austria P=0.66
+
+== C. Swap controls -> Budapest (does a swap just plant it?) ==
+[C] swap Vienna->Budapest [mid 12-21] (strength 0.108) -> 'Austria'        P(Austria)=0.81 expect=Hungary P=0.00
+[C] swap Graz->Budapest [mid 12-21] (strength 0.062) -> 'Austria'        P(Austria)=0.67 expect=Hungary P=0.00
+[C] swap Tokyo->Budapest [mid 12-21] (strength 0.073) -> 'Germany'        P(Austria)=0.43 expect=Hungary P=0.00
+[C] swap music->Budapest [mid 12-21] (strength 0.126) -> 'Austria'        P(Austria)=0.70 expect=Hungary P=0.00
+[C] swap composer->Budapest [mid 12-21] (strength 0.164) -> 'Austria'        P(Austria)=0.83 expect=Hungary P=0.00
+[C] swap Wolfgang->Budapest [mid 12-21] (strength 0.176) -> 'Austria'        P(Austria)=0.83 expect=Hungary P=0.00
+[C] swap Spain->Budapest [mid 12-21] (strength 0.167) -> 'Austria'        P(Austria)=0.75 expect=Hungary P=0.00
+[C] swap Musik->Budapest [mid 12-21] (strength 0.158) -> 'Austria'        P(Austria)=0.84 expect=Hungary P=0.00
+[C] swap Belgium->Budapest [mid 12-21] (strength 0.155) -> 'Austria'        P(Austria)=0.73 expect=Hungary P=0.00
+[C] swap Netherlands->Budapest [mid 12-21] (strength 0.153) -> 'Austria'        P(Austria)=0.73 expect=Hungary P=0.00
+[C] swap countries->Budapest [mid 12-21] (strength 0.198) -> 'Austria'        P(Austria)=0.61 expect=Hungary P=0.00
+[C] swap Britain->Budapest [mid 12-21] (strength 0.144) -> 'Austria'        P(Austria)=0.77 expect=Hungary P=0.00
+[C] swap violin->Budapest [mid 12-21] (strength 0.143) -> 'Austria'        P(Austria)=0.78 expect=Hungary P=0.00
+[C] swap Vienna->Budapest [8-23] (strength 0.108)    -> 'Austria'        P(Austria)=0.73 expect=Hungary P=0.00
+[C] swap Graz->Budapest [8-23] (strength 0.062)      -> 'Austria'        P(Austria)=0.67 expect=Hungary P=0.00
+[C] swap Tokyo->Budapest [8-23] (strength 0.073)     -> 'Germany'        P(Austria)=0.13 expect=Hungary P=0.00
+[C] swap music->Budapest [8-23] (strength 0.126)     -> 'Austria'        P(Austria)=0.59 expect=Hungary P=0.00
+[C] swap composer->Budapest [8-23] (strength 0.164)  -> 'Austria'        P(Austria)=0.72 expect=Hungary P=0.00
+[C] swap Wolfgang->Budapest [8-23] (strength 0.176)  -> 'Austria'        P(Austria)=0.87 expect=Hungary P=0.00
+[C] swap Spain->Budapest [8-23] (strength 0.167)     -> 'Austria'        P(Austria)=0.77 expect=Hungary P=0.00
+[C] swap Musik->Budapest [8-23] (strength 0.158)     -> 'Austria'        P(Austria)=0.80 expect=Hungary P=0.00
+[C] swap Belgium->Budapest [8-23] (strength 0.155)   -> 'Austria'        P(Austria)=0.76 expect=Hungary P=0.00
+[C] swap Netherlands->Budapest [8-23] (strength 0.153) -> 'Austria'        P(Austria)=0.76 expect=Hungary P=0.00
+[C] swap countries->Budapest [8-23] (strength 0.198) -> 'Austria'        P(Austria)=0.59 expect=Hungary P=0.00
+[C] swap Britain->Budapest [8-23] (strength 0.144)   -> 'Austria'        P(Austria)=0.73 expect=Hungary P=0.00
+[C] swap violin->Budapest [8-23] (strength 0.143)    -> 'Austria'        P(Austria)=0.68 expect=Hungary P=0.00
+[C] swap Vienna->Budapest [all] (strength 0.108)     -> 'Austria'        P(Austria)=0.81 expect=Hungary P=0.00
+[C] swap Graz->Budapest [all] (strength 0.062)       -> 'Austria'        P(Austria)=0.67 expect=Hungary P=0.00
+[C] swap Tokyo->Budapest [all] (strength 0.073)      -> 'Germany'        P(Austria)=0.11 expect=Hungary P=0.00
+[C] swap music->Budapest [all] (strength 0.126)      -> 'Austria'        P(Austria)=0.61 expect=Hungary P=0.00
+[C] swap composer->Budapest [all] (strength 0.164)   -> 'Austria'        P(Austria)=0.71 expect=Hungary P=0.00
+[C] swap Wolfgang->Budapest [all] (strength 0.176)   -> 'Austria'        P(Austria)=0.86 expect=Hungary P=0.00
+[C] swap Spain->Budapest [all] (strength 0.167)      -> 'Austria'        P(Austria)=0.84 expect=Hungary P=0.00
+[C] swap Musik->Budapest [all] (strength 0.158)      -> 'Austria'        P(Austria)=0.78 expect=Hungary P=0.00
+[C] swap Belgium->Budapest [all] (strength 0.155)    -> 'Austria'        P(Austria)=0.77 expect=Hungary P=0.00
+[C] swap Netherlands->Budapest [all] (strength 0.153) -> 'Austria'        P(Austria)=0.79 expect=Hungary P=0.00
+[C] swap countries->Budapest [all] (strength 0.198)  -> 'Austria'        P(Austria)=0.52 expect=Hungary P=0.00
+[C] swap Britain->Budapest [all] (strength 0.144)    -> 'Austria'        P(Austria)=0.75 expect=Hungary P=0.00
+[C] swap violin->Budapest [all] (strength 0.143)     -> 'Austria'        P(Austria)=0.66 expect=Hungary P=0.00
+
+== D. Question tokens vs template tokens ==
+[D] remove Salzburg [mid 12-21] @question            -> 'Italy'          P(Austria)=0.00
+[D] swap Salzburg->Budapest [mid 12-21] @question    -> 'Austria'        P(Austria)=0.82 expect=Hungary P=0.00
+[D] remove Salzburg [8-23] @question                 -> 'Italy'          P(Austria)=0.00
+[D] swap Salzburg->Budapest [8-23] @question         -> 'Austria'        P(Austria)=0.77 expect=Hungary P=0.00
+[D] remove Salzburg [all] @question                  -> 'Italy'          P(Austria)=0.01
+[D] swap Salzburg->Budapest [all] @question          -> 'Austria'        P(Austria)=0.85 expect=Hungary P=0.00
+[D] remove Salzburg [mid 12-21] @template            -> 'Austria'        P(Austria)=0.65
+[D] swap Salzburg->Budapest [mid 12-21] @template    -> 'Austria'        P(Austria)=0.77 expect=Hungary P=0.00
+[D] remove Salzburg [8-23] @template                 -> 'Germany'        P(Austria)=0.17
+[D] swap Salzburg->Budapest [8-23] @template         -> 'Austria'        P(Austria)=0.72 expect=Hungary P=0.00
+[D] remove Salzburg [all] @template                  -> 'Germany'        P(Austria)=0.01
+[D] swap Salzburg->Budapest [all] @template          -> 'Austria'        P(Austria)=0.76 expect=Hungary P=0.00
+
+== Summary A: P(Austria) after removing each word, per layer window ==
+win          L0-5  L3-8  L6-11  L9-14  L12-17  L15-20  L18-23  L21-26  L24-29  L27-31
+target                                                                               
+Salzburg     0.72  0.28   0.02   0.01    0.00    0.00    0.00    0.01    0.37    0.54
+Vienna       0.59  0.25   0.15   0.10    0.12    0.08    0.04    0.01    0.23    0.52
+Graz         0.77  0.74   0.77   0.75    0.77    0.73    0.64    0.61    0.76    0.73
+Tokyo        0.78  0.80   0.79   0.77    0.76    0.75    0.75    0.79    0.81    0.60
+music        0.73  0.71   0.73   0.79    0.80    0.81    0.81    0.79    0.77    0.79
+composer     0.77  0.72   0.69   0.83    0.82    0.85    0.83    0.83    0.84    0.79
+Wolfgang     0.71  0.64   0.56   0.48    0.42    0.37    0.68    0.80    0.88    0.73
+Spain        0.75  0.73   0.78   0.75    0.78    0.79    0.68    0.76    0.80    0.85
+Musik        0.72  0.71   0.71   0.77    0.75    0.76    0.82    0.80    0.78    0.68
+Belgium      0.66  0.50   0.44   0.32    0.34    0.23    0.12    0.27    0.68    0.73
+Netherlands  0.76  0.74   0.70   0.62    0.60    0.52    0.48    0.73    0.87    0.73
+countries    0.75  0.76   0.73   0.67    0.71    0.71    0.69    0.76    0.81    0.84
+Britain      0.77  0.77   0.77   0.72    0.73    0.78    0.78    0.79    0.81    0.79
+violin       0.69  0.56   0.55   0.76    0.76    0.76    0.74    0.64    0.71    0.79
+
+B: swaps that should change the answer: 5 of 9 moved away from Austria; 8 of 12 gave exactly the expected answer
+wrote results/bridge_mozart_direct_qwen35_4b
+ALLDONE

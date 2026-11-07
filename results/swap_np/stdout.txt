@@ -1,0 +1,246 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   8%|▊         | 67/851 [00:00<00:01, 611.90it/s]Loading weights:  15%|█▌        | 129/851 [00:00<00:01, 558.85it/s]Loading weights:  22%|██▏       | 186/851 [00:00<00:01, 558.81it/s]Loading weights:  28%|██▊       | 242/851 [00:00<00:01, 427.04it/s]Loading weights:  34%|███▍      | 288/851 [00:00<00:01, 412.76it/s]Loading weights:  39%|███▉      | 332/851 [00:00<00:01, 413.56it/s]Loading weights:  45%|████▍     | 382/851 [00:00<00:01, 437.91it/s]Loading weights:  53%|█████▎    | 450/851 [00:00<00:00, 497.94it/s]Loading weights:  60%|██████    | 513/851 [00:01<00:00, 523.93it/s]Loading weights:  67%|██████▋   | 567/851 [00:01<00:00, 471.69it/s]Loading weights:  72%|███████▏  | 616/851 [00:01<00:00, 453.70it/s]Loading weights:  78%|███████▊  | 663/851 [00:01<00:00, 444.80it/s]Loading weights:  84%|████████▍ | 715/851 [00:01<00:00, 461.47it/s]Loading weights: 100%|██████████| 851/851 [00:01<00:00, 534.65it/s]
+tokens: 0='<|im_start|>' 1='user' 2='\n' 3='What' 4=' letter' 5=' does' 6=' the' 7=' name' 8=' of' 9=' the' 10=' country' 11=' where' 12=' the' 13=' Col' 14='osse' 15='um' 16=' is' 17=' located' 18=' start' 19=' with' 20='?' 21=' Answer' 22=' with' 23=' one' 24=' letter' 25='.' 26='<|im_end|>' 27='\n' 28='<|im_start|>' 29='assistant' 30='\n' 31='<think>' 32='\n\n' 33='</think>' 34='\n\n'
+final-norm gain: mean 1.959 std 0.136 min 0.727 max 2.750 top5 [2.75, 2.65625, 2.59375, 2.546875, 2.53125]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/swarm-explore/projects/silent-dissent/harness/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+/workspace/swarm-explore/projects/silent-dissent/harness/scripts/swap_np.py:206: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  row["cos_gain_nogain_Italy"] = float(D("Italy", l, "gain") @ D("Italy", l, "nogain"))
+   layer  cos_gain_nogain_Italy  cos_Italy_Spain_gain  hs/|h|_gain_q  ht/|h|_gain_q  hs/|h|_gain_tmpl  ht/|h|_gain_tmpl  cos_Italy_Spain_nogain  hs/|h|_nogain_q  ht/|h|_nogain_q  hs/|h|_nogain_tmpl  ht/|h|_nogain_tmpl
+0      9                  0.971                 0.766          0.004          0.003            -0.005            -0.007                   0.802            0.006            0.005              -0.004              -0.006
+1     18                  0.972                 0.786          0.016          0.021             0.003             0.007                   0.815            0.014            0.018               0.005               0.008
+2     27                  0.974                 0.797          0.028          0.031             0.014             0.014                   0.829            0.027            0.029               0.019               0.018
+3     32                  0.976                 0.811          0.011          0.012             0.006             0.009                   0.844            0.003            0.002               0.010               0.012
+4     42                  0.991                 0.653          0.030          0.028             0.046             0.032                   0.666            0.025            0.021               0.047               0.033
+5     48                  0.992                 0.643          0.033          0.032             0.036             0.025                   0.645            0.028            0.026               0.036               0.025
+6     54                  0.995                 0.538          0.035          0.033             0.072             0.047                   0.546            0.030            0.028               0.071               0.044
+7     60                  0.994                 0.483          0.049          0.037             0.115             0.047                   0.497            0.040            0.028               0.107               0.040
+
+[L_colosseum] bridge 'Italy'; base first token 'I' p=0.99; positions: imend+1=27; template=27-34; q->end=3-34; all=0-34
+  L9-27    pos imend+1   np    gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos imend+1   np    nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos imend+1   exch  gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos imend+1   exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos imend+1   projx gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos imend+1   projx nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos template  np    gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos template  np    nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos template  exch  gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos template  exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos template  projx gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos template  projx nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos q->end    np    gain   4/4 | Spain:'S'0.99 France:'F'1.00 Germany:'G'0.99 Japan:'J'0.99 table:'I'0.00
+  L9-27    pos q->end    np    nogain 4/4 | Spain:'S'0.99 France:'F'1.00 Germany:'G'0.99 Japan:'J'0.99 table:'I'0.00
+  L9-27    pos q->end    exch  gain   2/4 | Spain:'I'0.00 France:'F'0.93 Germany:'G'0.73 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos q->end    exch  nogain 2/4 | Spain:'I'0.00 France:'F'0.89 Germany:'G'0.56 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos q->end    projx gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos q->end    projx nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos all       np    gain   4/4 | Spain:'S'0.99 France:'F'0.99 Germany:'G'0.99 Japan:'J'0.99 table:'I'0.00
+  L9-27    pos all       np    nogain 4/4 | Spain:'S'0.99 France:'F'1.00 Germany:'G'0.99 Japan:'J'0.99 table:'I'0.00
+  L9-27    pos all       exch  gain   2/4 | Spain:'I'0.00 France:'F'0.94 Germany:'G'0.75 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos all       exch  nogain 2/4 | Spain:'I'0.00 France:'F'0.91 Germany:'G'0.56 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos all       projx gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L9-27    pos all       projx nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L42-54   pos imend+1   np    gain   3/4 | Spain:'I'0.27 France:'F'0.97 Germany:'G'0.90 Japan:'J'0.89 table:'I'0.02
+  L42-54   pos imend+1   np    nogain 3/4 | Spain:'I'0.29 France:'F'0.95 Germany:'G'0.87 Japan:'J'0.88 table:'I'0.01
+  L42-54   pos imend+1   exch  gain   0/4 | Spain:'I'0.00 France:'I'0.03 Germany:'I'0.05 Japan:'I'0.05 table:'I'0.00
+  L42-54   pos imend+1   exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.03 Germany:'I'0.05 Japan:'I'0.04 table:'I'0.00
+  L42-54   pos imend+1   projx gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L42-54   pos imend+1   projx nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L42-54   pos template  np    gain   4/4 | Spain:'S'0.97 France:'F'1.00 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.94
+  L42-54   pos template  np    nogain 4/4 | Spain:'S'0.98 France:'F'0.99 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.66
+  L42-54   pos template  exch  gain   1/4 | Spain:'I'0.01 France:'I'0.16 Germany:'I'0.40 Japan:'J'0.80 table:'I'0.03
+  L42-54   pos template  exch  nogain 1/4 | Spain:'I'0.01 France:'I'0.15 Germany:'I'0.40 Japan:'J'0.75 table:'I'0.01
+  L42-54   pos template  projx gain   0/4 | Spain:'I'0.00 France:'I'0.01 Germany:'I'0.01 Japan:'I'0.00 table:'I'0.00
+  L42-54   pos template  projx nogain 0/4 | Spain:'I'0.00 France:'I'0.01 Germany:'I'0.01 Japan:'I'0.00 table:'I'0.00
+  L42-54   pos q->end    np    gain   4/4 | Spain:'S'0.98 France:'F'1.00 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.88
+  L42-54   pos q->end    np    nogain 4/4 | Spain:'S'0.97 France:'F'1.00 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.87
+  L42-54   pos q->end    exch  gain   4/4 | Spain:'S'0.70 France:'F'0.98 Germany:'G'0.98 Japan:'J'1.00 table:'T'0.93
+  L42-54   pos q->end    exch  nogain 4/4 | Spain:'S'0.81 France:'F'0.98 Germany:'G'0.98 Japan:'J'1.00 table:'T'0.57
+  L42-54   pos q->end    projx gain   0/4 | Spain:'I'0.00 France:'I'0.15 Germany:'I'0.16 Japan:'I'0.20 table:'I'0.01
+  L42-54   pos q->end    projx nogain 0/4 | Spain:'I'0.00 France:'I'0.12 Germany:'I'0.16 Japan:'I'0.20 table:'I'0.00
+  L42-54   pos all       np    gain   4/4 | Spain:'S'0.97 France:'F'1.00 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.88
+  L42-54   pos all       np    nogain 4/4 | Spain:'S'0.98 France:'F'1.00 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.89
+  L42-54   pos all       exch  gain   4/4 | Spain:'S'0.73 France:'F'0.98 Germany:'G'0.98 Japan:'J'1.00 table:'T'0.94
+  L42-54   pos all       exch  nogain 4/4 | Spain:'S'0.81 France:'F'0.98 Germany:'G'0.98 Japan:'J'1.00 table:'T'0.57
+  L42-54   pos all       projx gain   0/4 | Spain:'I'0.00 France:'I'0.15 Germany:'I'0.16 Japan:'I'0.20 table:'I'0.01
+  L42-54   pos all       projx nogain 0/4 | Spain:'I'0.00 France:'I'0.12 Germany:'I'0.16 Japan:'I'0.20 table:'I'0.00
+  L32-54   pos imend+1   np    gain   2/4 | Spain:'I'0.22 France:'F'0.50 Germany:'G'0.55 Japan:'I'0.43 table:'I'0.03
+  L32-54   pos imend+1   np    nogain 1/4 | Spain:'I'0.24 France:'I'0.43 Germany:'G'0.55 Japan:'I'0.37 table:'I'0.02
+  L32-54   pos imend+1   exch  gain   0/4 | Spain:'I'0.00 France:'I'0.01 Germany:'I'0.03 Japan:'I'0.06 table:'I'0.00
+  L32-54   pos imend+1   exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.01 Germany:'I'0.03 Japan:'I'0.05 table:'I'0.00
+  L32-54   pos imend+1   projx gain   0/4 | Spain:'I'0.00 France:'I'0.01 Germany:'I'0.01 Japan:'I'0.00 table:'I'0.00
+  L32-54   pos imend+1   projx nogain 0/4 | Spain:'I'0.00 France:'I'0.01 Germany:'I'0.01 Japan:'I'0.00 table:'I'0.00
+  L32-54   pos template  np    gain   4/4 | Spain:'S'0.95 France:'F'0.99 Germany:'G'0.96 Japan:'J'0.99 table:'T'0.89
+  L32-54   pos template  np    nogain 4/4 | Spain:'S'0.95 France:'F'0.99 Germany:'G'0.96 Japan:'J'0.99 table:'T'0.73
+  L32-54   pos template  exch  gain   0/4 | Spain:'I'0.00 France:'I'0.03 Germany:'I'0.16 Japan:'I'0.38 table:'I'0.01
+  L32-54   pos template  exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.03 Germany:'I'0.16 Japan:'I'0.38 table:'I'0.00
+  L32-54   pos template  projx gain   0/4 | Spain:'I'0.00 France:'I'0.02 Germany:'I'0.04 Japan:'I'0.03 table:'I'0.00
+  L32-54   pos template  projx nogain 0/4 | Spain:'I'0.00 France:'I'0.02 Germany:'I'0.03 Japan:'I'0.02 table:'I'0.00
+  L32-54   pos q->end    np    gain   4/4 | Spain:'S'0.99 France:'F'0.99 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.63
+  L32-54   pos q->end    np    nogain 4/4 | Spain:'S'0.99 France:'F'1.00 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.82
+  L32-54   pos q->end    exch  gain   3/4 | Spain:'I'0.35 France:'F'0.96 Germany:'G'0.98 Japan:'J'1.00 table:'T'0.42
+  L32-54   pos q->end    exch  nogain 4/4 | Spain:'S'0.53 France:'F'0.96 Germany:'G'0.98 Japan:'J'0.99 table:'F'0.25
+  L32-54   pos q->end    projx gain   0/4 | Spain:'I'0.01 France:'I'0.40 Germany:'I'0.38 Japan:'I'0.50 table:'T'0.32
+  L32-54   pos q->end    projx nogain 0/4 | Spain:'I'0.01 France:'I'0.35 Germany:'I'0.38 Japan:'I'0.47 table:'I'0.10
+  L32-54   pos all       np    gain   4/4 | Spain:'S'0.99 France:'F'0.99 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.62
+  L32-54   pos all       np    nogain 4/4 | Spain:'S'0.99 France:'F'1.00 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.81
+  L32-54   pos all       exch  gain   3/4 | Spain:'I'0.35 France:'F'0.96 Germany:'G'0.98 Japan:'J'1.00 table:'T'0.44
+  L32-54   pos all       exch  nogain 4/4 | Spain:'S'0.56 France:'F'0.95 Germany:'G'0.98 Japan:'J'0.99 table:'F'0.26
+  L32-54   pos all       projx gain   1/4 | Spain:'I'0.01 France:'I'0.37 Germany:'I'0.38 Japan:'J'0.53 table:'T'0.33
+  L32-54   pos all       projx nogain 0/4 | Spain:'I'0.01 France:'I'0.35 Germany:'I'0.38 Japan:'I'0.50 table:'I'0.10
+  L12-41   pos imend+1   np    gain   0/4 | Spain:'I'0.08 France:'I'0.40 Germany:'I'0.24 Japan:'I'0.07 table:'I'0.00
+  L12-41   pos imend+1   np    nogain 0/4 | Spain:'I'0.07 France:'I'0.38 Germany:'I'0.24 Japan:'I'0.06 table:'I'0.00
+  L12-41   pos imend+1   exch  gain   0/4 | Spain:'I'0.00 France:'I'0.05 Germany:'I'0.01 Japan:'I'0.00 table:'I'0.00
+  L12-41   pos imend+1   exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.04 Germany:'I'0.01 Japan:'I'0.00 table:'I'0.00
+  L12-41   pos imend+1   projx gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L12-41   pos imend+1   projx nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L12-41   pos template  np    gain   3/4 | Spain:'S'0.82 France:'F'0.92 Germany:'G'0.64 Japan:'I'0.43 table:'I'0.00
+  L12-41   pos template  np    nogain 3/4 | Spain:'S'0.81 France:'F'0.92 Germany:'G'0.64 Japan:'I'0.40 table:'I'0.00
+  L12-41   pos template  exch  gain   0/4 | Spain:'I'0.00 France:'I'0.09 Germany:'I'0.02 Japan:'I'0.00 table:'I'0.00
+  L12-41   pos template  exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.08 Germany:'I'0.02 Japan:'I'0.00 table:'I'0.00
+  L12-41   pos template  projx gain   0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L12-41   pos template  projx nogain 0/4 | Spain:'I'0.00 France:'I'0.00 Germany:'I'0.00 Japan:'I'0.00 table:'I'0.00
+  L12-41   pos q->end    np    gain   4/4 | Spain:'S'0.99 France:'F'1.00 Germany:'G'0.99 Japan:'J'0.99 table:'I'0.13
+  L12-41   pos q->end    np    nogain 4/4 | Spain:'S'1.00 France:'F'1.00 Germany:'G'0.99 Japan:'J'0.99 table:'I'0.07
+  L12-41   pos q->end    exch  gain   2/4 | Spain:'I'0.00 France:'F'0.86 Germany:'I'0.09 Japan:'J'0.62 table:'I'0.00
+  L12-41   pos q->end    exch  nogain 2/4 | Spain:'I'0.00 France:'F'0.75 Germany:'I'0.09 Japan:'J'0.53 table:'I'0.00
+  L12-41   pos q->end    projx gain   1/4 | Spain:'I'0.00 France:'F'0.81 Germany:'I'0.40 Japan:'I'0.47 table:'I'0.00
+  L12-41   pos q->end    projx nogain 1/4 | Spain:'I'0.00 France:'F'0.77 Germany:'I'0.40 Japan:'I'0.41 table:'I'0.00
+  L12-41   pos all       np    gain   4/4 | Spain:'S'1.00 France:'F'0.99 Germany:'G'0.99 Japan:'J'0.99 table:'I'0.14
+  L12-41   pos all       np    nogain 4/4 | Spain:'S'1.00 France:'F'1.00 Germany:'G'0.99 Japan:'J'0.99 table:'I'0.07
+  L12-41   pos all       exch  gain   2/4 | Spain:'I'0.00 France:'F'0.86 Germany:'I'0.11 Japan:'J'0.62 table:'I'0.00
+  L12-41   pos all       exch  nogain 2/4 | Spain:'I'0.00 France:'F'0.75 Germany:'I'0.09 Japan:'J'0.53 table:'I'0.00
+  L12-41   pos all       projx gain   1/4 | Spain:'I'0.00 France:'F'0.79 Germany:'I'0.40 Japan:'I'0.47 table:'I'0.00
+  L12-41   pos all       projx nogain 1/4 | Spain:'I'0.00 France:'F'0.77 Germany:'I'0.40 Japan:'I'0.41 table:'I'0.00
+  L0-63    pos imend+1   np    gain   2/4 | Spain:'I'0.12 France:'F'0.65 Germany:'G'0.55 Japan:'I'0.37 table:'I'0.09
+  L0-63    pos imend+1   np    nogain 2/4 | Spain:'I'0.15 France:'F'0.62 Germany:'G'0.55 Japan:'I'0.40 table:'I'0.07
+  L0-63    pos imend+1   exch  gain   0/4 | Spain:'I'0.00 France:'I'0.01 Germany:'I'0.01 Japan:'I'0.00 table:'I'0.01
+  L0-63    pos imend+1   exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.01 Germany:'I'0.01 Japan:'I'0.00 table:'I'0.00
+  L0-63    pos imend+1   projx gain   0/4 | Spain:'I'0.00 France:'I'0.01 Germany:'I'0.02 Japan:'I'0.01 table:'I'0.01
+  L0-63    pos imend+1   projx nogain 0/4 | Spain:'I'0.00 France:'I'0.01 Germany:'I'0.02 Japan:'I'0.00 table:'I'0.00
+  L0-63    pos template  np    gain   4/4 | Spain:'S'0.79 France:'F'0.99 Germany:'G'0.95 Japan:'J'0.99 table:'T'0.98
+  L0-63    pos template  np    nogain 4/4 | Spain:'S'0.77 France:'F'0.99 Germany:'G'0.95 Japan:'J'0.99 table:'T'0.98
+  L0-63    pos template  exch  gain   0/4 | Spain:'I'0.00 France:'I'0.24 Germany:'I'0.12 Japan:'I'0.40 table:'I'0.19
+  L0-63    pos template  exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.18 Germany:'I'0.12 Japan:'I'0.37 table:'I'0.06
+  L0-63    pos template  projx gain   0/4 | Spain:'I'0.03 France:'I'0.37 Germany:'I'0.18 Japan:'I'0.44 table:'T'0.52
+  L0-63    pos template  projx nogain 0/4 | Spain:'I'0.04 France:'I'0.35 Germany:'I'0.20 Japan:'I'0.41 table:'I'0.15
+  L0-63    pos q->end    np    gain   4/4 | Spain:'S'0.96 France:'F'0.99 Germany:'G'0.99 Japan:'J'0.99 table:'T'0.96
+  L0-63    pos q->end    np    nogain 4/4 | Spain:'S'0.97 France:'F'1.00 Germany:'G'0.99 Japan:'J'1.00 table:'T'0.97
+  L0-63    pos q->end    exch  gain   0/4 | Spain:'I'0.00 France:'I'0.38 Germany:'I'0.18 Japan:'I'0.50 table:'T'0.84
+  L0-63    pos q->end    exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.29 Germany:'I'0.18 Japan:'I'0.47 table:'T'0.79
+  L0-63    pos q->end    projx gain   1/4 | Spain:'I'0.07 France:'I'0.47 Germany:'I'0.22 Japan:'J'0.59 table:'T'0.86
+  L0-63    pos q->end    projx nogain 1/4 | Spain:'I'0.08 France:'I'0.44 Germany:'I'0.20 Japan:'J'0.56 table:'T'0.84
+  L0-63    pos all       np    gain   4/4 | Spain:'S'0.97 France:'F'1.00 Germany:'G'0.99 Japan:'J'0.99 table:'T'0.96
+  L0-63    pos all       np    nogain 4/4 | Spain:'S'0.97 France:'F'1.00 Germany:'G'0.99 Japan:'J'0.99 table:'T'0.97
+  L0-63    pos all       exch  gain   0/4 | Spain:'I'0.00 France:'I'0.37 Germany:'I'0.18 Japan:'I'0.50 table:'T'0.84
+  L0-63    pos all       exch  nogain 0/4 | Spain:'I'0.00 France:'I'0.29 Germany:'I'0.18 Japan:'I'0.50 table:'T'0.78
+  L0-63    pos all       projx gain   1/4 | Spain:'I'0.07 France:'I'0.47 Germany:'I'0.22 Japan:'J'0.59 table:'T'0.85
+  L0-63    pos all       projx nogain 1/4 | Spain:'I'0.08 France:'I'0.43 Germany:'I'0.22 Japan:'J'0.56 table:'T'0.84
+part 1 done 280s
+
+[L_gates] bridge 'Seattle'; base first token 'S' p=0.94; positions: template=25-32; all=0-32
+  L9-27    pos template  np    gain   0/4 | Munich:'S'0.00 Tokyo:'S'0.00 Berlin:'S'0.01 Rome:'S'0.00 table:'S'0.00
+  L9-27    pos template  np    nogain 0/4 | Munich:'S'0.00 Tokyo:'S'0.00 Berlin:'S'0.01 Rome:'S'0.00 table:'S'0.00
+  L9-27    pos template  exch  gain   0/4 | Munich:'S'0.00 Tokyo:'S'0.00 Berlin:'S'0.01 Rome:'S'0.00 table:'S'0.00
+  L9-27    pos template  exch  nogain 0/4 | Munich:'S'0.00 Tokyo:'S'0.00 Berlin:'S'0.01 Rome:'S'0.00 table:'S'0.00
+  L9-27    pos all       np    gain   2/4 | Munich:'M'0.65 Tokyo:'N'0.00 Berlin:'B'0.59 Rome:'N'0.00 table:'D'0.37
+  L9-27    pos all       np    nogain 2/4 | Munich:'M'0.52 Tokyo:'N'0.00 Berlin:'B'0.68 Rome:'N'0.00 table:'D'0.29
+  L9-27    pos all       exch  gain   0/4 | Munich:'S'0.00 Tokyo:'S'0.00 Berlin:'S'0.02 Rome:'S'0.00 table:'S'0.01
+  L9-27    pos all       exch  nogain 0/4 | Munich:'S'0.00 Tokyo:'S'0.00 Berlin:'S'0.02 Rome:'S'0.00 table:'S'0.00
+  L32-54   pos template  np    gain   4/4 | Munich:'M'0.68 Tokyo:'T'0.93 Berlin:'B'0.76 Rome:'R'0.64 table:'D'0.10
+  L32-54   pos template  np    nogain 4/4 | Munich:'M'0.69 Tokyo:'T'0.92 Berlin:'B'0.76 Rome:'R'0.62 table:'D'0.11
+  L32-54   pos template  exch  gain   0/4 | Munich:'D'0.01 Tokyo:'D'0.14 Berlin:'D'0.03 Rome:'D'0.01 table:'D'0.11
+  L32-54   pos template  exch  nogain 0/4 | Munich:'D'0.01 Tokyo:'D'0.18 Berlin:'D'0.03 Rome:'D'0.01 table:'D'0.13
+  L32-54   pos all       np    gain   4/4 | Munich:'M'0.72 Tokyo:'T'0.99 Berlin:'B'0.99 Rome:'R'0.63 table:'B'0.02
+  L32-54   pos all       np    nogain 4/4 | Munich:'M'0.77 Tokyo:'T'0.99 Berlin:'B'0.99 Rome:'R'0.54 table:'S'0.01
+  L32-54   pos all       exch  gain   1/4 | Munich:'M'0.42 Tokyo:'N'0.14 Berlin:'N'0.20 Rome:'N'0.01 table:'S'0.03
+  L32-54   pos all       exch  nogain 1/4 | Munich:'M'0.32 Tokyo:'N'0.12 Berlin:'N'0.12 Rome:'N'0.00 table:'S'0.08
+  L42-54   pos template  np    gain   4/4 | Munich:'M'0.84 Tokyo:'T'0.95 Berlin:'B'0.91 Rome:'R'0.66 table:'G'0.06
+  L42-54   pos template  np    nogain 4/4 | Munich:'M'0.84 Tokyo:'T'0.94 Berlin:'B'0.91 Rome:'R'0.64 table:'G'0.06
+  L42-54   pos template  exch  gain   2/4 | Munich:'D'0.15 Tokyo:'T'0.95 Berlin:'G'0.11 Rome:'R'0.41 table:'G'0.05
+  L42-54   pos template  exch  nogain 2/4 | Munich:'D'0.15 Tokyo:'T'0.96 Berlin:'G'0.10 Rome:'R'0.39 table:'G'0.05
+  L42-54   pos all       np    gain   4/4 | Munich:'M'0.62 Tokyo:'T'0.95 Berlin:'B'0.98 Rome:'R'0.49 table:'G'0.02
+  L42-54   pos all       np    nogain 4/4 | Munich:'M'0.66 Tokyo:'T'0.95 Berlin:'B'0.98 Rome:'R'0.52 table:'G'0.02
+  L42-54   pos all       exch  gain   3/4 | Munich:'M'0.50 Tokyo:'T'0.95 Berlin:'G'0.25 Rome:'R'0.48 table:'G'0.10
+  L42-54   pos all       exch  nogain 3/4 | Munich:'M'0.51 Tokyo:'T'0.94 Berlin:'G'0.21 Rome:'R'0.41 table:'G'0.11
+
+[V_LM_eiffel] bridge 'France'; base first token 'F' p=1.00; positions: template=27-34; all=0-34
+  L9-27    pos template  np    gain   0/4 | Spain:'F'0.00 Germany:'F'0.00 Japan:'F'0.00 Brazil:'F'0.00 table:'F'0.00
+  L9-27    pos template  np    nogain 0/4 | Spain:'F'0.00 Germany:'F'0.00 Japan:'F'0.00 Brazil:'F'0.00 table:'F'0.00
+  L9-27    pos template  exch  gain   0/4 | Spain:'F'0.00 Germany:'F'0.00 Japan:'F'0.00 Brazil:'F'0.00 table:'F'0.00
+  L9-27    pos template  exch  nogain 0/4 | Spain:'F'0.00 Germany:'F'0.00 Japan:'F'0.00 Brazil:'F'0.00 table:'F'0.00
+  L9-27    pos all       np    gain   4/4 | Spain:'S'0.99 Germany:'G'0.99 Japan:'J'0.99 Brazil:'B'1.00 table:'F'0.00
+  L9-27    pos all       np    nogain 4/4 | Spain:'S'0.99 Germany:'G'0.99 Japan:'J'0.99 Brazil:'B'0.99 table:'F'0.00
+  L9-27    pos all       exch  gain   0/4 | Spain:'F'0.00 Germany:'F'0.20 Japan:'F'0.00 Brazil:'F'0.00 table:'F'0.00
+  L9-27    pos all       exch  nogain 0/4 | Spain:'F'0.00 Germany:'F'0.38 Japan:'F'0.00 Brazil:'F'0.00 table:'F'0.00
+  L32-54   pos template  np    gain   4/4 | Spain:'S'0.99 Germany:'G'0.99 Japan:'J'0.99 Brazil:'B'1.00 table:'F'0.12
+  L32-54   pos template  np    nogain 4/4 | Spain:'S'0.99 Germany:'G'0.99 Japan:'J'0.99 Brazil:'B'1.00 table:'F'0.03
+  L32-54   pos template  exch  gain   0/4 | Spain:'F'0.00 Germany:'F'0.01 Japan:'F'0.00 Brazil:'F'0.00 table:'F'0.00
+  L32-54   pos template  exch  nogain 0/4 | Spain:'F'0.00 Germany:'F'0.01 Japan:'F'0.00 Brazil:'F'0.00 table:'F'0.00
+  L32-54   pos all       np    gain   4/4 | Spain:'S'1.00 Germany:'G'1.00 Japan:'J'1.00 Brazil:'B'1.00 table:'T'0.98
+  L32-54   pos all       np    nogain 4/4 | Spain:'S'1.00 Germany:'G'1.00 Japan:'J'1.00 Brazil:'B'1.00 table:'T'0.99
+  L32-54   pos all       exch  gain   3/4 | Spain:'F'0.27 Germany:'G'0.98 Japan:'J'0.99 Brazil:'B'0.75 table:'T'0.92
+  L32-54   pos all       exch  nogain 4/4 | Spain:'S'0.59 Germany:'G'0.99 Japan:'J'0.99 Brazil:'B'0.86 table:'T'0.51
+  L42-54   pos template  np    gain   4/4 | Spain:'S'0.99 Germany:'G'0.99 Japan:'J'1.00 Brazil:'B'1.00 table:'F'0.02
+  L42-54   pos template  np    nogain 4/4 | Spain:'S'0.99 Germany:'G'1.00 Japan:'J'1.00 Brazil:'B'1.00 table:'F'0.00
+  L42-54   pos template  exch  gain   0/4 | Spain:'F'0.00 Germany:'F'0.05 Japan:'F'0.02 Brazil:'F'0.00 table:'F'0.00
+  L42-54   pos template  exch  nogain 0/4 | Spain:'F'0.00 Germany:'F'0.06 Japan:'F'0.02 Brazil:'F'0.00 table:'F'0.00
+  L42-54   pos all       np    gain   4/4 | Spain:'S'1.00 Germany:'G'1.00 Japan:'J'1.00 Brazil:'B'1.00 table:'T'0.92
+  L42-54   pos all       np    nogain 4/4 | Spain:'S'1.00 Germany:'G'1.00 Japan:'J'1.00 Brazil:'B'1.00 table:'T'0.91
+  L42-54   pos all       exch  gain   3/4 | Spain:'F'0.27 Germany:'G'0.98 Japan:'J'0.99 Brazil:'B'0.94 table:'F'0.42
+  L42-54   pos all       exch  nogain 3/4 | Spain:'F'0.50 Germany:'G'0.98 Japan:'J'0.99 Brazil:'B'0.95 table:'F'0.20
+
+[L_piaf] bridge 'Paris'; base first token 'P' p=0.96; positions: template=27-34; all=0-34
+  L9-27    pos template  np    gain   0/4 | Munich:'P'0.00 Tokyo:'P'0.00 Berlin:'P'0.00 Rome:'P'0.00 table:'P'0.00
+  L9-27    pos template  np    nogain 0/4 | Munich:'P'0.00 Tokyo:'P'0.00 Berlin:'P'0.00 Rome:'P'0.00 table:'P'0.00
+  L9-27    pos template  exch  gain   0/4 | Munich:'P'0.00 Tokyo:'P'0.00 Berlin:'P'0.00 Rome:'P'0.00 table:'P'0.00
+  L9-27    pos template  exch  nogain 0/4 | Munich:'P'0.00 Tokyo:'P'0.00 Berlin:'P'0.00 Rome:'P'0.00 table:'P'0.00
+  L9-27    pos all       np    gain   2/4 | Munich:'H'0.00 Tokyo:'T'0.85 Berlin:'S'0.40 Rome:'R'0.88 table:'S'0.00
+  L9-27    pos all       np    nogain 1/4 | Munich:'P'0.00 Tokyo:'T'0.88 Berlin:'S'0.46 Rome:'P'0.46 table:'S'0.00
+  L9-27    pos all       exch  gain   0/4 | Munich:'P'0.00 Tokyo:'P'0.00 Berlin:'P'0.01 Rome:'P'0.00 table:'S'0.00
+  L9-27    pos all       exch  nogain 0/4 | Munich:'P'0.00 Tokyo:'P'0.00 Berlin:'P'0.01 Rome:'P'0.00 table:'S'0.00
+  L32-54   pos template  np    gain   3/4 | Munich:'B'0.20 Tokyo:'T'0.95 Berlin:'B'0.70 Rome:'R'0.98 table:'S'0.01
+  L32-54   pos template  np    nogain 3/4 | Munich:'S'0.09 Tokyo:'T'0.97 Berlin:'B'0.62 Rome:'R'0.98 table:'S'0.01
+  L32-54   pos template  exch  gain   0/4 | Munich:'S'0.00 Tokyo:'P'0.00 Berlin:'P'0.01 Rome:'P'0.05 table:'S'0.01
+  L32-54   pos template  exch  nogain 0/4 | Munich:'S'0.00 Tokyo:'P'0.00 Berlin:'P'0.01 Rome:'P'0.04 table:'S'0.01
+  L32-54   pos all       np    gain   4/4 | Munich:'M'0.50 Tokyo:'T'0.92 Berlin:'B'0.52 Rome:'R'0.93 table:'S'0.00
+  L32-54   pos all       np    nogain 2/4 | Munich:'H'0.13 Tokyo:'T'0.94 Berlin:'S'0.40 Rome:'R'0.95 table:'S'0.00
+  L32-54   pos all       exch  gain   2/4 | Munich:'S'0.00 Tokyo:'T'0.96 Berlin:'P'0.08 Rome:'R'0.97 table:'S'0.01
+  L32-54   pos all       exch  nogain 2/4 | Munich:'S'0.00 Tokyo:'T'0.97 Berlin:'P'0.07 Rome:'R'0.97 table:'S'0.01
+  L42-54   pos template  np    gain   3/4 | Munich:'B'0.03 Tokyo:'T'0.97 Berlin:'B'0.90 Rome:'R'0.97 table:'C'0.04
+  L42-54   pos template  np    nogain 3/4 | Munich:'S'0.02 Tokyo:'T'0.98 Berlin:'B'0.88 Rome:'R'0.98 table:'C'0.02
+  L42-54   pos template  exch  gain   0/4 | Munich:'S'0.00 Tokyo:'P'0.02 Berlin:'P'0.03 Rome:'N'0.17 table:'T'0.27
+  L42-54   pos template  exch  nogain 0/4 | Munich:'S'0.00 Tokyo:'P'0.02 Berlin:'P'0.02 Rome:'N'0.13 table:'T'0.29
+  L42-54   pos all       np    gain   3/4 | Munich:'H'0.04 Tokyo:'T'0.96 Berlin:'B'0.85 Rome:'R'0.93 table:'S'0.04
+  L42-54   pos all       np    nogain 3/4 | Munich:'H'0.02 Tokyo:'T'0.96 Berlin:'B'0.83 Rome:'R'0.94 table:'S'0.03
+  L42-54   pos all       exch  gain   2/4 | Munich:'S'0.00 Tokyo:'T'0.92 Berlin:'P'0.05 Rome:'R'0.90 table:'T'0.61
+  L42-54   pos all       exch  nogain 2/4 | Munich:'S'0.00 Tokyo:'T'0.94 Berlin:'P'0.04 Rome:'R'0.88 table:'T'0.55
+part 2 done 319s
+  removal pos last      0-11:0.00/0.00/0.00 6-17:0.00/0.00/0.00 12-23:0.00/0.01/0.00 18-29:0.00/0.00/0.00 24-35:0.00/0.01/0.00 30-41:0.00/0.01/0.00 36-47:0.00/0.00/0.00 42-53:0.00/0.00/0.00 48-59:0.00/0.00/0.00 54-63:0.00/1.00/0.00
+  removal pos imend+1   0-11:0.00/0.00/0.00 6-17:0.00/0.00/0.00 12-23:0.00/0.00/0.00 18-29:0.00/0.00/0.00 24-35:0.00/0.00/0.00 30-41:0.00/0.00/0.00 36-47:0.00/0.00/0.00 42-53:0.00/0.00/0.00 48-59:0.00/0.00/0.00 54-63:0.00/0.00/0.00
+  removal pos template  0-11:0.00/0.00/0.00 6-17:0.00/0.00/0.00 12-23:0.00/0.00/0.00 18-29:0.00/0.00/0.00 24-35:0.00/0.01/0.00 30-41:0.00/0.01/0.00 36-47:0.00/0.00/0.00 42-53:0.01/0.01/0.00 48-59:0.98/0.00/0.00 54-63:0.82/1.00/0.00
+  removal pos subject   0-11:0.00/0.00/0.00 6-17:0.00/0.00/0.00 12-23:0.00/0.00/0.00 18-29:0.00/0.00/0.00 24-35:0.00/0.00/0.00 30-41:0.00/0.00/0.00 36-47:0.00/0.00/0.00 42-53:0.00/0.00/0.00 48-59:0.00/0.00/0.00 54-63:0.00/0.00/0.00
+  removal pos q->end    0-11:0.00/0.00/0.00 6-17:0.00/0.00/0.00 12-23:0.00/0.00/0.00 18-29:0.00/0.00/0.00 24-35:0.00/0.01/0.00 30-41:0.01/0.01/0.00 36-47:0.01/0.00/0.00 42-53:0.99/0.01/0.00 48-59:1.00/0.00/0.00 54-63:0.98/1.00/0.00
+  removal pos all       0-11:0.00/0.00/0.00 6-17:0.00/0.00/0.00 12-23:0.00/0.00/0.00 18-29:0.00/0.00/0.00 24-35:0.00/0.00/0.00 30-41:0.01/0.01/0.00 36-47:0.01/0.00/0.00 42-53:0.99/0.01/0.00 48-59:1.00/0.00/0.00 54-63:0.97/1.00/0.00
+part 3 done 348s
+  gen L9-27 np nogain all+gen: 'S⏎'
+  gen L9-27 np nogain q->end: 'S⏎'
+  gen L9-27 np gain all+gen: 'S⏎'
+  gen L9-27 np gain q->end: 'S⏎'
+  gen L9-27 exch gain all+gen: 'I⏎'
+  gen L9-27 exch gain q->end: 'I⏎'
+  gen L42-54 np nogain all+gen: 'S⏎'
+  gen L42-54 np nogain q->end: 'S⏎'
+  gen L42-54 np gain all+gen: 'S⏎'
+  gen L42-54 np gain q->end: 'S⏎'
+  gen L42-54 exch gain all+gen: 'S⏎'
+  gen L42-54 exch gain q->end: 'S⏎'
+  gen L32-54 np nogain all+gen: 'S⏎'
+  gen L32-54 np nogain q->end: 'S⏎'
+  gen L32-54 np gain all+gen: 'S⏎'
+  gen L32-54 np gain q->end: 'S⏎'
+  gen L32-54 exch gain all+gen: 'I⏎'
+  gen L32-54 exch gain q->end: 'I⏎'
+ALLDONE 352s

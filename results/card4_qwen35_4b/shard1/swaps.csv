@@ -1,0 +1,125 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+v2_E_bee|spider,v2_E_bee,spider,layers 6–23,Eight,Six,didn't follow
+v2_E_bee|dog,v2_E_bee,dog,layers 6–23,Four,Six,didn't follow
+v2_E_bee|bird,v2_E_bee,bird,layers 6–23,Two,Six,didn't follow
+v2_E_bee|snake,v2_E_bee,snake,layers 6–23,Zero,Six,didn't follow
+v2_E_bee|horse,v2_E_bee,horse,layers 6–23,Four,Six,didn't follow
+v2_E_bee|ant,v2_E_bee,ant,layers 6–23,Six,Six,kept the answer
+v2_E_bee|beetle,v2_E_bee,beetle,layers 6–23,Six,Six,kept the answer
+v2_E_apple|banana,v2_E_apple,banana,layers 6–14,Yellow,Red,didn't follow
+v2_E_apple|lime,v2_E_apple,lime,layers 6–14,Green,Red,didn't follow
+v2_E_apple|grape,v2_E_apple,grape,layers 6–14,Purple,Red,didn't follow
+v2_E_apple|lemon,v2_E_apple,lemon,layers 6–14,Yellow,Red,didn't follow
+v2_E_apple|cherry,v2_E_apple,cherry,layers 6–14,Red,Red,kept the answer
+v2_E_apple|strawberry,v2_E_apple,strawberry,layers 6–14,Red,Red,kept the answer
+v2_A1_colosseum|Germany,v2_A1_colosseum,Germany,layers 6–20,Berlin,Rome,didn't follow
+v2_A1_colosseum|Japan,v2_A1_colosseum,Japan,layers 6–20,Tokyo,Tokyo,followed the swap
+v2_A1_colosseum|Spain,v2_A1_colosseum,Spain,layers 6–20,Madrid,Rome,didn't follow
+v2_A1_colosseum|Egypt,v2_A1_colosseum,Egypt,layers 6–20,Cairo,Rome,didn't follow
+v2_A1_colosseum|Poland,v2_A1_colosseum,Poland,layers 6–20,Warsaw,Rome,didn't follow
+v2_A1_colosseum|Greece,v2_A1_colosseum,Greece,layers 6–20,Athens,Rome,didn't follow
+v2_A2_cn_tower|Germany,v2_A2_cn_tower,Germany,layers 6–14,Berlin,Berlin,followed the swap
+v2_A2_cn_tower|Japan,v2_A2_cn_tower,Japan,layers 6–14,Tokyo,Toronto,didn't follow
+v2_A2_cn_tower|Spain,v2_A2_cn_tower,Spain,layers 6–14,Madrid,Madrid,followed the swap
+v2_A2_cn_tower|Egypt,v2_A2_cn_tower,Egypt,layers 6–14,Cairo,Dubai,didn't follow
+v2_A2_cn_tower|Poland,v2_A2_cn_tower,Poland,layers 6–14,Warsaw,Toronto,didn't follow
+v2_A2_cn_tower|Greece,v2_A2_cn_tower,Greece,layers 6–14,Athens,Toronto,didn't follow
+v2_B2_messi|Munich,v2_B2_messi,Munich,layers 6–14,Germany,Argentina,didn't follow
+v2_B2_messi|Milan,v2_B2_messi,Milan,layers 6–14,Italy,Argentina,didn't follow
+v2_B2_messi|Lyon,v2_B2_messi,Lyon,layers 6–14,France,Spain,didn't follow
+v2_B2_messi|Barcelona,v2_B2_messi,Barcelona,layers 6–14,Spain,Argentina,didn't follow
+v2_B2_messi|Osaka,v2_B2_messi,Osaka,layers 6–14,Japan,Argentina,didn't follow
+v2_B2_messi|Toronto,v2_B2_messi,Toronto,layers 6–14,Canada,Argentina,didn't follow
+v2_B2_messi|Chicago,v2_B2_messi,Chicago,layers 6–14,USA,Argentina,didn't follow
+v2_B2_messi|Manchester,v2_B2_messi,Manchester,layers 6–14,United Kingdom,Spain,didn't follow
+v2_B2_messi|Mendoza,v2_B2_messi,Mendoza,layers 6–14,Argentina,Argentina,kept the answer
+v2_C1_karolinska|Munich,v2_C1_karolinska,Munich,layers 6–14,Germany,Sweden,didn't follow
+v2_C1_karolinska|Milan,v2_C1_karolinska,Milan,layers 6–14,Italy,Sweden,didn't follow
+v2_C1_karolinska|Lyon,v2_C1_karolinska,Lyon,layers 6–14,France,Sweden,didn't follow
+v2_C1_karolinska|Barcelona,v2_C1_karolinska,Barcelona,layers 6–14,Spain,Sweden,didn't follow
+v2_C1_karolinska|Osaka,v2_C1_karolinska,Osaka,layers 6–14,Japan,Sweden,didn't follow
+v2_C1_karolinska|Toronto,v2_C1_karolinska,Toronto,layers 6–14,Canada,Sweden,didn't follow
+v2_C1_karolinska|Chicago,v2_C1_karolinska,Chicago,layers 6–14,USA,Sweden,didn't follow
+v2_C1_karolinska|Manchester,v2_C1_karolinska,Manchester,layers 6–14,United Kingdom,Sweden,didn't follow
+v2_C2_hopkins|Munich,v2_C2_hopkins,Munich,layers 6–14,Germany,United States,didn't follow
+v2_C2_hopkins|Milan,v2_C2_hopkins,Milan,layers 6–14,Italy,United States,didn't follow
+v2_C2_hopkins|Lyon,v2_C2_hopkins,Lyon,layers 6–14,France,United States,didn't follow
+v2_C2_hopkins|Barcelona,v2_C2_hopkins,Barcelona,layers 6–14,Spain,United States,didn't follow
+v2_C2_hopkins|Osaka,v2_C2_hopkins,Osaka,layers 6–14,Japan,United States,didn't follow
+v2_C2_hopkins|Toronto,v2_C2_hopkins,Toronto,layers 6–14,Canada,United States,didn't follow
+v2_C2_hopkins|Chicago,v2_C2_hopkins,Chicago,layers 6–14,USA,United States,kept the answer
+v2_C2_hopkins|Manchester,v2_C2_hopkins,Manchester,layers 6–14,United Kingdom,United Kingdom,followed the swap
+v2_C2_hopkins|Boston,v2_C2_hopkins,Boston,layers 6–14,USA,United States,kept the answer
+v2_C2_hopkins|Chicago,v2_C2_hopkins,Chicago,layers 6–14,USA,United States,kept the answer
+v3_L_mozart|Munich,v3_L_mozart,Munich,layers 6–23,M,G,didn't follow
+v3_L_mozart|Paris,v3_L_mozart,Paris,layers 6–23,P,G,didn't follow
+v3_L_mozart|Tokyo,v3_L_mozart,Tokyo,layers 6–23,T,G,didn't follow
+v3_L_mozart|Berlin,v3_L_mozart,Berlin,layers 6–23,B,G,didn't follow
+v3_L_mozart|Rome,v3_L_mozart,Rome,layers 6–23,R,P,didn't follow
+v3_L_mozart|Madrid,v3_L_mozart,Madrid,layers 6–23,M,Mozart was born in,didn't follow
+v3_L_mozart|Chicago,v3_L_mozart,Chicago,layers 6–23,C,G,didn't follow
+v3_L_mozart|Lyon,v3_L_mozart,Lyon,layers 6–23,L,L,followed the swap
+v3_L_york|Munich,v3_L_york,Munich,layers 6–23,M,T,didn't follow
+v3_L_york|Paris,v3_L_york,Paris,layers 6–23,P,O,didn't follow
+v3_L_york|Berlin,v3_L_york,Berlin,layers 6–23,B,O,didn't follow
+v3_L_york|Rome,v3_L_york,Rome,layers 6–23,R,O,didn't follow
+v3_L_york|Madrid,v3_L_york,Madrid,layers 6–23,M,O,didn't follow
+v3_L_york|Chicago,v3_L_york,Chicago,layers 6–23,C,T,didn't follow
+v3_L_york|Lyon,v3_L_york,Lyon,layers 6–23,L,O,didn't follow
+v3_L_york|Vancouver,v3_L_york,Vancouver,layers 6–23,V,O,didn't follow
+v3_R_spider|bee,v3_R_spider,bee,layers 6–20,Six,Six,followed the swap
+v3_R_spider|ant,v3_R_spider,ant,layers 6–20,Six,Six,followed the swap
+v3_R_spider|dog,v3_R_spider,dog,layers 6–20,Four,Four,"gave it, but it's also the fallback"
+v3_R_spider|bird,v3_R_spider,bird,layers 6–20,Two,Four,didn't follow
+v3_R_spider|snake,v3_R_spider,snake,layers 6–20,Zero,Eight,didn't follow
+v3_R_spider|horse,v3_R_spider,horse,layers 6–20,Four,Four,"gave it, but it's also the fallback"
+v3_R_spider|duck,v3_R_spider,duck,layers 6–20,Two,Four,didn't follow
+v3_X_mozart_country|Munich,v3_X_mozart_country,Munich,layers 6–14,Germany,Germany,followed the swap
+v3_X_mozart_country|Milan,v3_X_mozart_country,Milan,layers 6–14,Italy,Italy,"gave it, but it's also the fallback"
+v3_X_mozart_country|Lyon,v3_X_mozart_country,Lyon,layers 6–14,France,France,followed the swap
+v3_X_mozart_country|Barcelona,v3_X_mozart_country,Barcelona,layers 6–14,Spain,Italy,didn't follow
+v3_X_mozart_country|Osaka,v3_X_mozart_country,Osaka,layers 6–14,Japan,Italy,didn't follow
+v3_X_mozart_country|Toronto,v3_X_mozart_country,Toronto,layers 6–14,Canada,Italy,didn't follow
+v3_X_mozart_country|Chicago,v3_X_mozart_country,Chicago,layers 6–14,USA,Italy,didn't follow
+v3_X_mozart_country|Manchester,v3_X_mozart_country,Manchester,layers 6–14,United Kingdom,United Kingdom,followed the swap
+i_Q_month_thanksgiving_days|January,i_Q_month_thanksgiving_days,January,layers 6–23,31,31,followed the swap
+i_Q_month_thanksgiving_days|February,i_Q_month_thanksgiving_days,February,layers 6–23,28,30,didn't follow
+i_Q_month_thanksgiving_days|March,i_Q_month_thanksgiving_days,March,layers 6–23,31,30,didn't follow
+i_Q_month_thanksgiving_days|July,i_Q_month_thanksgiving_days,July,layers 6–23,31,30,didn't follow
+i_Q_month_thanksgiving_days|December,i_Q_month_thanksgiving_days,December,layers 6–23,31,30,didn't follow
+i_Q_month_thanksgiving_days|April,i_Q_month_thanksgiving_days,April,layers 6–23,30,30,kept the answer
+i_Q_month_thanksgiving_days|June,i_Q_month_thanksgiving_days,June,layers 6–23,30,30,kept the answer
+i_Q_father_wizard|Bart,i_Q_father_wizard,Bart,layers 6–17,Nelson,James,no usable belief
+i_Q_father_wizard|Luke,i_Q_father_wizard,Luke,layers 6–17,Joseph,James,no usable belief
+i_Q_father_wizard|Isaac,i_Q_father_wizard,Isaac,layers 6–17,Abraham,James,didn't follow
+i_Q_father_wizard|Thor,i_Q_father_wizard,Thor,layers 6–17,Odin,James,didn't follow
+i_Q_father_wizard|Draco,i_Q_father_wizard,Draco,layers 6–17,Lucius,James,didn't follow
+i_Q_father_wizard|Lisa,i_Q_father_wizard,Lisa,layers 6–17,Noah,James,no usable belief
+i_W_bad_west|north,i_W_bad_west,north,layers 6–20,South,West,didn't follow
+i_W_bad_west|south,i_W_bad_west,south,layers 6–20,North,West,didn't follow
+i_W_bad_west|west,i_W_bad_west,west,layers 6–20,East,West,didn't follow
+i_W_bad_west|left,i_W_bad_west,left,layers 6–20,Right,West,didn't follow
+i_W_bad_west|up,i_W_bad_west,up,layers 6–20,Down,West,didn't follow
+i_W_bad_west|down,i_W_bad_west,down,layers 6–20,Up,West,didn't follow
+i_S_organ_kidney|liver,i_S_organ_kidney,liver,layers 6–26,One,Two,didn't follow
+i_S_organ_kidney|heart,i_S_organ_kidney,heart,layers 6–26,One,Two,didn't follow
+i_S_organ_kidney|brain,i_S_organ_kidney,brain,layers 6–26,One,Two,didn't follow
+i_S_organ_kidney|stomach,i_S_organ_kidney,stomach,layers 6–26,One,Two,didn't follow
+i_S_organ_kidney|bladder,i_S_organ_kidney,bladder,layers 6–26,One,Two,didn't follow
+i_S_organ_kidney|lung,i_S_organ_kidney,lung,layers 6–26,Two,Two,kept the answer
+i_S_organ_kidney|eye,i_S_organ_kidney,eye,layers 6–26,Two,Two,kept the answer
+i_S_bad_cow_sound|dog,i_S_bad_cow_sound,dog,layers 6–23,Bark,Moo,didn't follow
+i_S_bad_cow_sound|cat,i_S_bad_cow_sound,cat,layers 6–23,Meow,Moo,didn't follow
+i_S_bad_cow_sound|duck,i_S_bad_cow_sound,duck,layers 6–23,Quack,Moo,didn't follow
+i_S_bad_cow_sound|sheep,i_S_bad_cow_sound,sheep,layers 6–23,Baa,Moo,didn't follow
+i_S_bad_cow_sound|pig,i_S_bad_cow_sound,pig,layers 6–23,Oink,Moo,didn't follow
+i_S_bad_cow_sound|lion,i_S_bad_cow_sound,lion,layers 6–23,Roar,Moo,didn't follow
+i_S_bad_cow_sound|horse,i_S_bad_cow_sound,horse,layers 6–23,Neigh,Moo,didn't follow
+i_S_bad_cow_sound|bull,i_S_bad_cow_sound,bull,layers 6–23,Bellow,Moo,no usable belief
+i_C_sport_messi|basketball,i_C_sport_messi,basketball,layers 6–26,Five,11,didn't follow
+i_C_sport_messi|baseball,i_C_sport_messi,baseball,layers 6–26,Nine,11,didn't follow
+i_C_sport_messi|hockey,i_C_sport_messi,hockey,layers 6–26,Six,11,didn't follow
+i_C_sport_messi|rugby,i_C_sport_messi,rugby,layers 6–26,15,11,didn't follow
+i_C_sport_messi|volleyball,i_C_sport_messi,volleyball,layers 6–26,Six,11,didn't follow
+i_C_sport_messi|polo,i_C_sport_messi,polo,layers 6–26,Four,11,didn't follow
+i_C_sport_messi|cricket,i_C_sport_messi,cricket,layers 6–26,11,11,kept the answer

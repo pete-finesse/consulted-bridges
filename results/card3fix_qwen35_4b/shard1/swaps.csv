@@ -1,0 +1,25 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+L_gates|Munich,L_gates,Munich,layers 6–23,M,W,didn't follow
+L_gates|Paris,L_gates,Paris,layers 6–23,P,J,didn't follow
+L_gates|Tokyo,L_gates,Tokyo,layers 6–23,T,M,didn't follow
+L_gates|Berlin,L_gates,Berlin,layers 6–23,B,B,"gave it, but it's also the fallback"
+L_gates|Rome,L_gates,Rome,layers 6–23,R,M,didn't follow
+L_gates|Madrid,L_gates,Madrid,layers 6–23,M,M,followed the swap
+L_gates|Chicago,L_gates,Chicago,layers 6–23,C,W,didn't follow
+L_gates|Lyon,L_gates,Lyon,layers 6–23,L,B,didn't follow
+L_colosseum|Germany,L_colosseum,Germany,layers 6–26,G,G,followed the swap
+L_colosseum|Japan,L_colosseum,Japan,layers 6–26,J,I,didn't follow
+L_colosseum|Spain,L_colosseum,Spain,layers 6–26,S,S,followed the swap
+L_colosseum|France,L_colosseum,France,layers 6–26,F,F,followed the swap
+L_colosseum|Brazil,L_colosseum,Brazil,layers 6–26,B,I,didn't follow
+L_colosseum|Canada,L_colosseum,Canada,layers 6–26,C,U,didn't follow
+X_york_country|Munich,X_york_country,Munich,layers 6–14,Germany,Canada,didn't follow
+X_york_country|Milan,X_york_country,Milan,layers 6–14,Italy,Belgium,didn't follow
+X_york_country|Lyon,X_york_country,Lyon,layers 6–14,France,Canada,didn't follow
+X_york_country|Barcelona,X_york_country,Barcelona,layers 6–14,Spain,Belgium,didn't follow
+X_york_country|Osaka,X_york_country,Osaka,layers 6–14,Japan,Canada,didn't follow
+X_york_country|Chicago,X_york_country,Chicago,layers 6–14,USA,Canada,didn't follow
+X_york_country|Manchester,X_york_country,Manchester,layers 6–14,United Kingdom,Canada,didn't follow
+X_york_country|Mumbai,X_york_country,Mumbai,layers 6–14,India,Canada,didn't follow
+X_york_country|Vancouver,X_york_country,Vancouver,layers 6–14,Canada,Canada,kept the answer
+X_york_country|Ottawa,X_york_country,Ottawa,layers 6–14,Canada,Canada,kept the answer

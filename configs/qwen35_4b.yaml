@@ -1,0 +1,16 @@
+# The paper's main model, with the Neuronpedia J-lens named in the authors' config
+# (repos/silent-dissent/configs/qwen35_4b_entity.yaml). Needs a download: ask Peter first.
+model:
+  name: Qwen/Qwen3.5-4B
+  dtype: bfloat16          # float32 on a 36 GB Mac avoids bf16 rank ties, at ~2x memory (~18 GB)
+  device: auto             # cuda > mps (Apple GPU) > cpu
+  chat_template_kwargs: {enable_thinking: false}
+  size_note: "~9-10 GB"
+lens:
+  name: jlens
+  kwargs:
+    repo: neuronpedia/jacobian-lens
+    revision: qwen-n1000
+    filename: qwen3.5-4b/jlens/Salesforce-wikitext/Qwen3.5-4B_jacobian_lens_n1000.pt
+  size_note: "~0.4-0.8 GB"
+band: [23, 30]             # the authors' pre-registered layers (prereg/qwen35_4b_entity.json)

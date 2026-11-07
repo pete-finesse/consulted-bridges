@@ -1,0 +1,99 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+V_LM_eiffel|Germany,V_LM_eiffel,Germany,layers 12–53,G,F,didn't follow
+V_LM_eiffel|Japan,V_LM_eiffel,Japan,layers 12–53,J,F,didn't follow
+V_LM_eiffel|Spain,V_LM_eiffel,Spain,layers 12–53,S,F,didn't follow
+V_LM_eiffel|Brazil,V_LM_eiffel,Brazil,layers 12–53,B,F,didn't follow
+V_LM_eiffel|Canada,V_LM_eiffel,Canada,layers 12–53,C,C,followed the swap
+V_LM_eiffel|Egypt,V_LM_eiffel,Egypt,layers 12–53,E,F,didn't follow
+V_LM_taj|Germany,V_LM_taj,Germany,layers 12–53,G,I,didn't follow
+V_LM_taj|Japan,V_LM_taj,Japan,layers 12–53,J,I,didn't follow
+V_LM_taj|Spain,V_LM_taj,Spain,layers 12–53,S,I,didn't follow
+V_LM_taj|Brazil,V_LM_taj,Brazil,layers 12–53,B,I,didn't follow
+V_LM_taj|Canada,V_LM_taj,Canada,layers 12–53,C,I,didn't follow
+V_LM_taj|Egypt,V_LM_taj,Egypt,layers 12–53,E,I,didn't follow
+V_LM_sydney|Germany,V_LM_sydney,Germany,layers 12–53,G,A,didn't follow
+V_LM_sydney|Japan,V_LM_sydney,Japan,layers 12–53,J,A,didn't follow
+V_LM_sydney|Spain,V_LM_sydney,Spain,layers 12–53,S,A,didn't follow
+V_LM_sydney|Brazil,V_LM_sydney,Brazil,layers 12–53,B,A,didn't follow
+V_LM_sydney|Canada,V_LM_sydney,Canada,layers 12–53,C,C,followed the swap
+V_LM_sydney|Egypt,V_LM_sydney,Egypt,layers 12–53,E,A,didn't follow
+V_LM_machu|Germany,V_LM_machu,Germany,layers 12–53,G,P,didn't follow
+V_LM_machu|Japan,V_LM_machu,Japan,layers 12–53,J,P,didn't follow
+V_LM_machu|Spain,V_LM_machu,Spain,layers 12–53,S,P,didn't follow
+V_LM_machu|Brazil,V_LM_machu,Brazil,layers 12–53,B,P,didn't follow
+V_LM_machu|Canada,V_LM_machu,Canada,layers 12–53,C,P,didn't follow
+V_LM_machu|Egypt,V_LM_machu,Egypt,layers 12–53,E,P,didn't follow
+V_LM_fuji|Germany,V_LM_fuji,Germany,layers 12–53,G,J,didn't follow
+V_LM_fuji|Spain,V_LM_fuji,Spain,layers 12–53,S,J,didn't follow
+V_LM_fuji|Brazil,V_LM_fuji,Brazil,layers 12–53,B,J,didn't follow
+V_LM_fuji|Canada,V_LM_fuji,Canada,layers 12–53,C,C,followed the swap
+V_LM_fuji|Egypt,V_LM_fuji,Egypt,layers 12–53,E,J,didn't follow
+V_LM_fuji|Mexico,V_LM_fuji,Mexico,layers 12–53,M,M,followed the swap
+V_LM_sagrada|Germany,V_LM_sagrada,Germany,layers 12–53,G,G,followed the swap
+V_LM_sagrada|Japan,V_LM_sagrada,Japan,layers 12–53,J,S,didn't follow
+V_LM_sagrada|Brazil,V_LM_sagrada,Brazil,layers 12–53,B,S,didn't follow
+V_LM_sagrada|Canada,V_LM_sagrada,Canada,layers 12–53,C,C,followed the swap
+V_LM_sagrada|Egypt,V_LM_sagrada,Egypt,layers 12–53,E,S,didn't follow
+V_LM_sagrada|Mexico,V_LM_sagrada,Mexico,layers 12–53,M,M,followed the swap
+V_LM_brandenburg|Japan,V_LM_brandenburg,Japan,layers 12–53,J,G,didn't follow
+V_LM_brandenburg|Spain,V_LM_brandenburg,Spain,layers 12–53,S,G,didn't follow
+V_LM_brandenburg|Brazil,V_LM_brandenburg,Brazil,layers 12–53,B,G,didn't follow
+V_LM_brandenburg|Canada,V_LM_brandenburg,Canada,layers 12–53,C,C,followed the swap
+V_LM_brandenburg|Egypt,V_LM_brandenburg,Egypt,layers 12–53,E,G,didn't follow
+V_LM_brandenburg|Mexico,V_LM_brandenburg,Mexico,layers 12–53,M,M,followed the swap
+V_LP_obama_m|Munich,V_LP_obama_m,Munich,layers 12–53,M,C,didn't follow
+V_LP_obama_m|Paris,V_LP_obama_m,Paris,layers 12–53,P,W,didn't follow
+V_LP_obama_m|Tokyo,V_LP_obama_m,Tokyo,layers 12–53,T,C,didn't follow
+V_LP_obama_m|Berlin,V_LP_obama_m,Berlin,layers 12–53,B,W,didn't follow
+V_LP_obama_m|Rome,V_LP_obama_m,Rome,layers 12–53,R,W,didn't follow
+V_LP_obama_m|Madrid,V_LP_obama_m,Madrid,layers 12–53,M,W,didn't follow
+V_LP_obama_m|Lyon,V_LP_obama_m,Lyon,layers 12–53,L,N,didn't follow
+V_LP_hemsworth|Paris,V_LP_hemsworth,Paris,layers 12–53,P,B,didn't follow
+V_LP_hemsworth|Tokyo,V_LP_hemsworth,Tokyo,layers 12–53,T,S,didn't follow
+V_LP_hemsworth|Berlin,V_LP_hemsworth,Berlin,layers 12–53,B,B,followed the swap
+V_LP_hemsworth|Rome,V_LP_hemsworth,Rome,layers 12–53,R,B,didn't follow
+V_LP_hemsworth|Chicago,V_LP_hemsworth,Chicago,layers 12–53,C,A,didn't follow
+V_LP_hemsworth|Lyon,V_LP_hemsworth,Lyon,layers 12–53,L,B,didn't follow
+V_LP_timberlake|Paris,V_LP_timberlake,Paris,layers 12–53,P,M,didn't follow
+V_LP_timberlake|Tokyo,V_LP_timberlake,Tokyo,layers 12–53,T,M,didn't follow
+V_LP_timberlake|Berlin,V_LP_timberlake,Berlin,layers 12–53,B,M,didn't follow
+V_LP_timberlake|Rome,V_LP_timberlake,Rome,layers 12–53,R,M,didn't follow
+V_LP_timberlake|Chicago,V_LP_timberlake,Chicago,layers 12–53,C,M,didn't follow
+V_LP_timberlake|Lyon,V_LP_timberlake,Lyon,layers 12–53,L,M,didn't follow
+V_LP_hendrix|Munich,V_LP_hendrix,Munich,layers 12–53,M,S,didn't follow
+V_LP_hendrix|Paris,V_LP_hendrix,Paris,layers 12–53,P,R,didn't follow
+V_LP_hendrix|Tokyo,V_LP_hendrix,Tokyo,layers 12–53,T,S,didn't follow
+V_LP_hendrix|Berlin,V_LP_hendrix,Berlin,layers 12–53,B,R,didn't follow
+V_LP_hendrix|Rome,V_LP_hendrix,Rome,layers 12–53,R,R,"gave it, but it's also the fallback"
+V_LP_hendrix|Madrid,V_LP_hendrix,Madrid,layers 12–53,M,D,didn't follow
+V_LP_hendrix|Chicago,V_LP_hendrix,Chicago,layers 12–53,C,S,didn't follow
+V_LU_berklee|Munich,V_LU_berklee,Munich,layers 12–53,M,B,didn't follow
+V_LU_berklee|Paris,V_LU_berklee,Paris,layers 12–53,P,B,didn't follow
+V_LU_berklee|Tokyo,V_LU_berklee,Tokyo,layers 12–53,T,B,didn't follow
+V_LU_berklee|Rome,V_LU_berklee,Rome,layers 12–53,R,B,didn't follow
+V_LU_berklee|Madrid,V_LU_berklee,Madrid,layers 12–53,M,B,didn't follow
+V_LU_berklee|Chicago,V_LU_berklee,Chicago,layers 12–53,C,B,didn't follow
+V_LU_berklee|Lyon,V_LU_berklee,Lyon,layers 12–53,L,B,didn't follow
+V_LU_pompeu|Munich,V_LU_pompeu,Munich,layers 12–53,M,B,didn't follow
+V_LU_pompeu|Paris,V_LU_pompeu,Paris,layers 12–53,P,B,didn't follow
+V_LU_pompeu|Tokyo,V_LU_pompeu,Tokyo,layers 12–53,T,B,didn't follow
+V_LU_pompeu|Rome,V_LU_pompeu,Rome,layers 12–53,R,B,didn't follow
+V_LU_pompeu|Madrid,V_LU_pompeu,Madrid,layers 12–53,M,B,didn't follow
+V_LU_pompeu|Chicago,V_LU_pompeu,Chicago,layers 12–53,C,B,didn't follow
+V_LU_pompeu|Lyon,V_LU_pompeu,Lyon,layers 12–53,L,B,didn't follow
+V_LU_alberta|Munich,V_LU_alberta,Munich,layers 12–53,M,E,didn't follow
+V_LU_alberta|Paris,V_LU_alberta,Paris,layers 12–53,P,E,didn't follow
+V_LU_alberta|Tokyo,V_LU_alberta,Tokyo,layers 12–53,T,E,didn't follow
+V_LU_alberta|Berlin,V_LU_alberta,Berlin,layers 12–53,B,E,didn't follow
+V_LU_alberta|Rome,V_LU_alberta,Rome,layers 12–53,R,E,didn't follow
+V_LU_alberta|Madrid,V_LU_alberta,Madrid,layers 12–53,M,E,didn't follow
+V_LU_alberta|Chicago,V_LU_alberta,Chicago,layers 12–53,C,E,didn't follow
+V_T_cricket|hockey,V_T_cricket,hockey,layers 12–53,Six,11,didn't follow
+V_T_cricket|basketball,V_T_cricket,basketball,layers 12–53,Five,11,didn't follow
+V_T_cricket|baseball,V_T_cricket,baseball,layers 12–53,Nine,11,didn't follow
+V_T_cricket|polo,V_T_cricket,polo,layers 12–53,Four,11,didn't follow
+V_T_cricket|tennis,V_T_cricket,tennis,layers 12–53,Two,Eleven,didn't follow
+V_T_polo|hockey,V_T_polo,hockey,layers 12–23,Six,Four,didn't follow
+V_T_polo|basketball,V_T_polo,basketball,layers 12–23,Five,Four,didn't follow
+V_T_polo|baseball,V_T_polo,baseball,layers 12–23,Nine,Four,didn't follow
+V_T_polo|cricket,V_T_polo,cricket,layers 12–23,Eleven,Four,didn't follow

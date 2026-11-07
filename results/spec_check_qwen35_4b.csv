@@ -1,0 +1,15 @@
+question,bridge,answer,control,overlap,random_pair,bridge_drop,control_drop,control_only_drop,bridge_only_drop,specificity
+L_colosseum,Italy,I,Spain,0.651,0.332,0.999,0.866,0.012,0.998,0.133
+L_colosseum,Italy,I,France,0.665,0.332,0.999,0.816,0.018,1.0,0.183
+L_colosseum,Italy,I,Germany,0.653,0.332,0.999,0.532,0.022,0.999,0.468
+L_mozart,Salzburg,S,Vienna,0.575,0.352,0.992,0.768,0.005,0.982,0.226
+L_mozart,Salzburg,S,Graz,0.331,0.352,0.992,0.089,0.0,0.989,0.91
+L_mozart,Salzburg,S,Munich,0.508,0.352,0.992,0.0,0.022,0.983,1.0
+L_gates,Seattle,S,Boston,0.673,0.352,0.973,0.721,0.0,0.898,0.258
+L_gates,Seattle,S,Chicago,0.719,0.352,0.973,0.251,0.045,0.962,0.742
+L_york,Toronto,T,Ottawa,0.687,0.352,0.998,0.39,0.007,0.998,0.609
+L_york,Toronto,T,Vancouver,0.657,0.352,0.998,0.222,0.006,0.969,0.778
+X_spider,spider,8,ticks,0.413,0.369,0.999,0.045,0.017,0.999,0.955
+X_spider,spider,8,ants,0.517,0.369,0.999,0.322,0.011,0.994,0.678
+X_spider,spider,8,bees,0.432,0.369,0.999,0.145,0.007,0.999,0.855
+X_spider,spider,8,dogs,0.414,0.369,0.999,0.127,0.007,1.0,0.873

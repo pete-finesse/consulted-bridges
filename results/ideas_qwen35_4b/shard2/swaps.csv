@@ -1,0 +1,13 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+Q_day_moon_next|Sunday,Q_day_moon_next,Sunday,layers 6–14,Monday,Tuesday,didn't follow
+Q_day_moon_next|Tuesday,Q_day_moon_next,Tuesday,layers 6–14,Wednesday,Tuesday,didn't follow
+Q_day_moon_next|Wednesday,Q_day_moon_next,Wednesday,layers 6–14,Thursday,Tuesday,didn't follow
+Q_day_moon_next|Thursday,Q_day_moon_next,Thursday,layers 6–14,Friday,Tuesday,didn't follow
+Q_day_moon_next|Friday,Q_day_moon_next,Friday,layers 6–14,Saturday,Tuesday,didn't follow
+Q_day_moon_next|Saturday,Q_day_moon_next,Saturday,layers 6–14,Sunday,Tuesday,didn't follow
+Q_month_christmas_next|January,Q_month_christmas_next,January,layers 6–14,February,January,didn't follow
+Q_month_christmas_next|February,Q_month_christmas_next,February,layers 6–14,March,January,didn't follow
+Q_month_christmas_next|March,Q_month_christmas_next,March,layers 6–14,April,January,didn't follow
+Q_month_christmas_next|June,Q_month_christmas_next,June,layers 6–14,July,January,didn't follow
+Q_month_christmas_next|September,Q_month_christmas_next,September,layers 6–14,October,January,didn't follow
+Q_month_christmas_next|October,Q_month_christmas_next,October,layers 6–14,November,January,didn't follow

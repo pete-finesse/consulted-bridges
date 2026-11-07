@@ -1,0 +1,20 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+Q_father_wizard|Bart,Q_father_wizard,Bart,layers 6–17,Nelson,James,no usable belief
+Q_father_wizard|Luke,Q_father_wizard,Luke,layers 6–17,Joseph,James,no usable belief
+Q_father_wizard|Isaac,Q_father_wizard,Isaac,layers 6–17,Abraham,James,didn't follow
+Q_father_wizard|Thor,Q_father_wizard,Thor,layers 6–17,Odin,James,didn't follow
+Q_father_wizard|Draco,Q_father_wizard,Draco,layers 6–17,Lucius,James,didn't follow
+Q_father_wizard|Lisa,Q_father_wizard,Lisa,layers 6–17,Noah,James,no usable belief
+W_bad_west|north,W_bad_west,north,layers 6–17,South,West,didn't follow
+W_bad_west|south,W_bad_west,south,layers 6–17,North,West,didn't follow
+W_bad_west|west,W_bad_west,west,layers 6–17,East,West,didn't follow
+W_bad_west|left,W_bad_west,left,layers 6–17,Right,West,didn't follow
+W_bad_west|up,W_bad_west,up,layers 6–17,Down,West,didn't follow
+W_bad_west|down,W_bad_west,down,layers 6–17,Up,West,didn't follow
+S_state_mercury|iron,S_state_mercury,iron,layers 0–5,Solid,Liquid,didn't follow
+S_state_mercury|gold,S_state_mercury,gold,layers 0–5,Solid,Liquid,didn't follow
+S_state_mercury|copper,S_state_mercury,copper,layers 0–5,Solid,Liquid,didn't follow
+S_state_mercury|oxygen,S_state_mercury,oxygen,layers 0–5,Gas,Liquid,didn't follow
+S_state_mercury|helium,S_state_mercury,helium,layers 0–5,Gas,Liquid,didn't follow
+S_state_mercury|nitrogen,S_state_mercury,nitrogen,layers 0–5,Gas,Liquid,didn't follow
+S_state_mercury|water,S_state_mercury,water,layers 0–5,Liquid,Liquid,kept the answer

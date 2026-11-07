@@ -1,0 +1,157 @@
+target,win,P
+Salzburg (full),L0-5,0.7209833861931344
+Salzburg (full),L3-8,0.27718254857065394
+Salzburg (full),L6-11,0.018475933191177223
+Salzburg (full),L9-14,0.006005169450112372
+Salzburg (full),L12-17,0.0014218942178623303
+Salzburg (full),L15-20,0.00021847150166819034
+Salzburg (full),L18-23,0.0015234811641148046
+Salzburg (full),L21-26,0.006665923760195354
+Salzburg (full),L24-29,0.36652687684091445
+Salzburg (full),L27-31,0.5396384711931299
+Salzburg (full),mid 12-21,8.009499783587149e-05
+Salzburg (full),answer@mid,Italy
+Salzburg minus answer,L0-5,0.8230605223720772
+Salzburg minus answer,L3-8,0.7859110439742129
+Salzburg minus answer,L6-11,0.7030196343174655
+Salzburg minus answer,L9-14,0.6914929267890911
+Salzburg minus answer,L12-17,0.6054861935732789
+Salzburg minus answer,L15-20,0.6180576680306017
+Salzburg minus answer,L18-23,0.5706721662191313
+Salzburg minus answer,L21-26,0.6379882952576349
+Salzburg minus answer,L24-29,0.7894460105241802
+Salzburg minus answer,L27-31,0.780120544462707
+Salzburg minus answer,mid 12-21,0.5690568303546968
+Salzburg minus answer,answer@mid,Austria
+Salzburg minus answer+Vienna,L0-5,0.8163376075492688
+Salzburg minus answer+Vienna,L3-8,0.8098789972192382
+Salzburg minus answer+Vienna,L6-11,0.7440525574862947
+Salzburg minus answer+Vienna,L9-14,0.7361590804202133
+Salzburg minus answer+Vienna,L12-17,0.7020862537181629
+Salzburg minus answer+Vienna,L15-20,0.6913380291794121
+Salzburg minus answer+Vienna,L18-23,0.6750914897572599
+Salzburg minus answer+Vienna,L21-26,0.7573448986990581
+Salzburg minus answer+Vienna,L24-29,0.7893828091585944
+Salzburg minus answer+Vienna,L27-31,0.7594502724862398
+Salzburg minus answer+Vienna,mid 12-21,0.6712473935508081
+Salzburg minus answer+Vienna,answer@mid,Austria
+Vienna (full),L0-5,0.5887032205866547
+Vienna (full),L3-8,0.23543017025089893
+Vienna (full),L6-11,0.1356910768845212
+Vienna (full),L9-14,0.09692110684383068
+Vienna (full),L12-17,0.12697862212277758
+Vienna (full),L15-20,0.07250242299947007
+Vienna (full),L18-23,0.04433003107377382
+Vienna (full),L21-26,0.010135572160114629
+Vienna (full),L24-29,0.21832436538751493
+Vienna (full),L27-31,0.5207326207314874
+Vienna (full),mid 12-21,0.034609495095439764
+Vienna (full),answer@mid,Italy
+Vienna minus answer,L0-5,0.723791233803498
+Vienna minus answer,L3-8,0.6801754933780799
+Vienna minus answer,L6-11,0.7066983782410614
+Vienna minus answer,L9-14,0.7092865373863981
+Vienna minus answer,L12-17,0.6552691212205838
+Vienna minus answer,L15-20,0.6597607600901257
+Vienna minus answer,L18-23,0.6577341223017455
+Vienna minus answer,L21-26,0.6791718561696537
+Vienna minus answer,L24-29,0.7710085019670795
+Vienna minus answer,L27-31,0.8092678855398977
+Vienna minus answer,mid 12-21,0.632819625448886
+Vienna minus answer,answer@mid,Austria
+Graz (full),L0-5,0.7487096181246992
+Graz (full),L3-8,0.7274415816989022
+Graz (full),L6-11,0.7482960665977413
+Graz (full),L9-14,0.7694888069543938
+Graz (full),L12-17,0.7899389166048245
+Graz (full),L15-20,0.7501695125635076
+Graz (full),L18-23,0.6110829103447804
+Graz (full),L21-26,0.5822720054699619
+Graz (full),L24-29,0.7333606379614883
+Graz (full),L27-31,0.7275112279798285
+Graz (full),mid 12-21,0.7320934503820312
+Graz (full),answer@mid,Austria
+Graz minus answer,L0-5,0.782832241992639
+Graz minus answer,L3-8,0.7705630320170025
+Graz minus answer,L6-11,0.7744769612014107
+Graz minus answer,L9-14,0.7951343885513136
+Graz minus answer,L12-17,0.7907346281982781
+Graz minus answer,L15-20,0.7655114556776861
+Graz minus answer,L18-23,0.7706252883799163
+Graz minus answer,L21-26,0.7937892387410427
+Graz minus answer,L24-29,0.7947093761525893
+Graz minus answer,L27-31,0.7915340386261901
+Graz minus answer,mid 12-21,0.7520101399000563
+Graz minus answer,answer@mid,Austria
+Tokyo (full),L0-5,0.8007701802342803
+Tokyo (full),L3-8,0.785537484084958
+Tokyo (full),L6-11,0.7870994690281667
+Tokyo (full),L9-14,0.749254984305961
+Tokyo (full),L12-17,0.7441669834094256
+Tokyo (full),L15-20,0.7513005920192001
+Tokyo (full),L18-23,0.7527736621824354
+Tokyo (full),L21-26,0.7530678304319921
+Tokyo (full),L24-29,0.7893324428038746
+Tokyo (full),L27-31,0.5957568059488098
+Tokyo (full),mid 12-21,0.7466425483329364
+Tokyo (full),answer@mid,Austria
+Tokyo minus answer,L0-5,0.7658309827750825
+Tokyo minus answer,L3-8,0.7692948358489227
+Tokyo minus answer,L6-11,0.7460445872639254
+Tokyo minus answer,L9-14,0.7523142231028949
+Tokyo minus answer,L12-17,0.6795760313942272
+Tokyo minus answer,L15-20,0.6754192374570746
+Tokyo minus answer,L18-23,0.6294809359645461
+Tokyo minus answer,L21-26,0.6300530559155397
+Tokyo minus answer,L24-29,0.7043900118845752
+Tokyo minus answer,L27-31,0.6778985154006018
+Tokyo minus answer,mid 12-21,0.7028884916147516
+Tokyo minus answer,answer@mid,Austria
+Wolfgang (full),L0-5,0.7119113212329831
+Wolfgang (full),L3-8,0.644222119827262
+Wolfgang (full),L6-11,0.5826446650459192
+Wolfgang (full),L9-14,0.4788854518471179
+Wolfgang (full),L12-17,0.44513429231834517
+Wolfgang (full),L15-20,0.3655428840789327
+Wolfgang (full),L18-23,0.7003753358070445
+Wolfgang (full),L21-26,0.7976539832678616
+Wolfgang (full),L24-29,0.8782553136480845
+Wolfgang (full),L27-31,0.7113997394148821
+Wolfgang (full),mid 12-21,0.26261895991805073
+Wolfgang (full),answer@mid,Italy
+Wolfgang minus answer,L0-5,0.8116828245994977
+Wolfgang minus answer,L3-8,0.8825323755714721
+Wolfgang minus answer,L6-11,0.8844087742318721
+Wolfgang minus answer,L9-14,0.8712062429445568
+Wolfgang minus answer,L12-17,0.860842857282923
+Wolfgang minus answer,L15-20,0.8755423383472893
+Wolfgang minus answer,L18-23,0.8753962260966008
+Wolfgang minus answer,L21-26,0.8701404267764643
+Wolfgang minus answer,L24-29,0.8499050904333566
+Wolfgang minus answer,L27-31,0.7915831765547539
+Wolfgang minus answer,mid 12-21,0.8741907411283012
+Wolfgang minus answer,answer@mid,Austria
+music (full),L0-5,0.7369516196250374
+music (full),L3-8,0.692573540120478
+music (full),L6-11,0.7063264193268304
+music (full),L9-14,0.8101940531628765
+music (full),L12-17,0.8008272362962409
+music (full),L15-20,0.8048647410801877
+music (full),L18-23,0.8107153785568322
+music (full),L21-26,0.7514187776836792
+music (full),L24-29,0.7516607446698245
+music (full),L27-31,0.7732634674923289
+music (full),mid 12-21,0.8028585764538907
+music (full),answer@mid,Austria
+music minus answer,L0-5,0.7598854783224913
+music minus answer,L3-8,0.7579472757433586
+music minus answer,L6-11,0.7543629427909486
+music minus answer,L9-14,0.8313659104834963
+music minus answer,L12-17,0.7936152617776254
+music minus answer,L15-20,0.8084873457730278
+music minus answer,L18-23,0.8085181028158048
+music minus answer,L21-26,0.7691123141057059
+music minus answer,L24-29,0.7682506580353821
+music minus answer,L27-31,0.8229691684231584
+music minus answer,mid 12-21,0.8058040676213988
+music minus answer,answer@mid,Austria

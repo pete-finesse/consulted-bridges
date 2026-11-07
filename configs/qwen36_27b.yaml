@@ -1,0 +1,15 @@
+# The model on Neuronpedia's site. ~54 GB in bf16: needs a rented GPU (ask Peter first).
+model:
+  name: Qwen/Qwen3.6-27B
+  dtype: bfloat16
+  device: auto
+  chat_template_kwargs: {enable_thinking: false}
+  size_note: "~54 GB"
+lens:
+  name: jlens
+  kwargs:
+    repo: neuronpedia/jacobian-lens
+    revision: qwen-n1000
+    filename: qwen3.6-27b/jlens/Salesforce-wikitext/Qwen3.6-27B_jacobian_lens_n1000.pt
+  size_note: "a few GB"
+band: [52, 55]             # prereg/qwen36_27b_entity_v2.json

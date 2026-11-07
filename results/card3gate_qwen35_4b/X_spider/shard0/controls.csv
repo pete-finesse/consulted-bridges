@@ -1,0 +1,14 @@
+key,sentence,word,kind,strength,early_drop
+X_spider|null|pillow,X_spider,pillow,everyday word (noise),0.115,0.033
+X_spider|null|garden,X_spider,garden,everyday word (noise),0.105,0.049
+X_spider|null|ladder,X_spider,ladder,everyday word (noise),0.101,0.012
+X_spider|null|shoe,X_spider,shoe,everyday word (noise),0.094,0.015
+X_spider|null|lantern,X_spider,lantern,everyday word (noise),0.09,0.027
+X_spider|null|button,X_spider,button,everyday word (noise),0.082,0.038
+X_spider|null|bread,X_spider,bread,everyday word (noise),0.082,0.025
+X_spider|null|kitchen,X_spider,kitchen,everyday word (noise),0.082,0.045
+X_spider|null|spoon,X_spider,spoon,everyday word (noise),0.08,0.037
+X_spider|null|carpet,X_spider,carpet,everyday word (noise),0.08,0.04
+X_spider|null|mountain,X_spider,mountain,everyday word (noise),0.079,0.013
+X_spider|null|rocket,X_spider,rocket,everyday word (noise),0.077,0.037
+X_spider|kind|ticks,X_spider,ticks,"same kind as spider, same answer",,0.045

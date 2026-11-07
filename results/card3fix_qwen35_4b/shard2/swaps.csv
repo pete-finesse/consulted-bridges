@@ -1,0 +1,9 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+L_federer|Munich,L_federer,Munich,layers 6–26,M,B,didn't follow
+L_federer|Paris,L_federer,Paris,layers 6–26,P,B,didn't follow
+L_federer|Tokyo,L_federer,Tokyo,layers 6–26,T,B,didn't follow
+L_federer|Berlin,L_federer,Berlin,layers 6–26,B,B,kept the answer
+L_federer|Rome,L_federer,Rome,layers 6–26,R,B,didn't follow
+L_federer|Madrid,L_federer,Madrid,layers 6–26,M,B,didn't follow
+L_federer|Chicago,L_federer,Chicago,layers 6–26,C,B,didn't follow
+L_federer|Lyon,L_federer,Lyon,layers 6–26,L,B,didn't follow

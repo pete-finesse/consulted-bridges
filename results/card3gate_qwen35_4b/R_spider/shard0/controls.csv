@@ -1,0 +1,15 @@
+key,sentence,word,kind,strength,early_drop
+R_spider|null|pillow,R_spider,pillow,everyday word (noise),0.115,0.033
+R_spider|null|garden,R_spider,garden,everyday word (noise),0.105,0.049
+R_spider|null|ladder,R_spider,ladder,everyday word (noise),0.101,0.012
+R_spider|null|shoe,R_spider,shoe,everyday word (noise),0.094,0.015
+R_spider|null|lantern,R_spider,lantern,everyday word (noise),0.09,0.027
+R_spider|null|button,R_spider,button,everyday word (noise),0.082,0.038
+R_spider|null|bread,R_spider,bread,everyday word (noise),0.082,0.025
+R_spider|null|kitchen,R_spider,kitchen,everyday word (noise),0.082,0.045
+R_spider|null|spoon,R_spider,spoon,everyday word (noise),0.08,0.037
+R_spider|null|carpet,R_spider,carpet,everyday word (noise),0.08,0.04
+R_spider|null|mountain,R_spider,mountain,everyday word (noise),0.079,0.013
+R_spider|null|rocket,R_spider,rocket,everyday word (noise),0.077,0.037
+R_spider|kind|ants,R_spider,ants,"same kind as spider, same answer",,0.322
+R_spider|kind|bees,R_spider,bees,"same kind as spider, same answer",,0.145

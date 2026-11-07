@@ -1,0 +1,110 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 50/426 [00:00<00:00, 499.04it/s]Loading weights:  26%|██▌       | 110/426 [00:00<00:00, 533.69it/s]Loading weights:  39%|███▉      | 168/426 [00:00<00:00, 550.82it/s]Loading weights:  53%|█████▎    | 224/426 [00:00<00:00, 455.86it/s]Loading weights:  64%|██████▍   | 274/426 [00:00<00:00, 469.08it/s]Loading weights:  77%|███████▋  | 326/426 [00:00<00:00, 482.16it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 557.09it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/swarm-explore/projects/silent-dissent/harness/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+
+######## mozart: 'In which country is the city where Wolfgang Amadeus Mozart was born? Answer in one word.'  baseline P(Austria) = 0.48
+Share of each direction NOT shared with the answer (norm after projection): Salzburg=0.83, Vienna=0.76, Graz=0.95, Innsbruck=0.94, Tokyo=0.96, Wolfgang=0.92, music=0.98
+  Salzburg (full)                    mid 12-21: P=0.00 answer='Italy'
+  Salzburg minus answer              mid 12-21: P=0.19 answer='Italy'
+  Salzburg minus answer+Vienna       mid 12-21: P=0.32 answer='Italy'
+  Vienna (full)                      mid 12-21: P=0.00 answer='Italy'
+  Vienna minus answer                mid 12-21: P=0.31 answer='Germany'
+  Graz (full)                        mid 12-21: P=0.45 answer='Austria'
+  Graz minus answer                  mid 12-21: P=0.45 answer='Austria'
+  Innsbruck (full)                   mid 12-21: P=0.15 answer='Germany'
+  Innsbruck minus answer             mid 12-21: P=0.40 answer='Austria'
+  Tokyo (full)                       mid 12-21: P=0.49 answer='Austria'
+  Tokyo minus answer                 mid 12-21: P=0.44 answer='Austria'
+  Wolfgang (full)                    mid 12-21: P=0.03 answer='Italy'
+  Wolfgang minus answer              mid 12-21: P=0.45 answer='Austria'
+  music (full)                       mid 12-21: P=0.46 answer='Austria'
+  music minus answer                 mid 12-21: P=0.49 answer='Austria'
+
+P(Austria) after removal (baseline 0.48):
+win                           L0-5  L3-8  L6-11  L9-14  L12-17  L15-20  L18-23  L21-26  L24-29  L27-31  mid 12-21
+target                                                                                                           
+Salzburg (full)               0.27  0.05   0.00   0.00    0.00    0.00    0.00    0.00    0.05    0.22       0.00
+Salzburg minus answer         0.44  0.37   0.30   0.33    0.24    0.23    0.29    0.37    0.49    0.54       0.19
+Salzburg minus answer+Vienna  0.44  0.44   0.36   0.38    0.33    0.30    0.37    0.49    0.51    0.51       0.32
+Vienna (full)                 0.24  0.08   0.04   0.02    0.01    0.00    0.01    0.00    0.03    0.19       0.00
+Vienna minus answer           0.41  0.37   0.37   0.35    0.35    0.34    0.34    0.38    0.50    0.52       0.31
+Graz (full)                   0.43  0.43   0.45   0.48    0.47    0.45    0.38    0.38    0.47    0.42       0.45
+Graz minus answer             0.49  0.48   0.48   0.49    0.45    0.45    0.46    0.51    0.54    0.51       0.45
+Innsbruck (full)              0.42  0.27   0.20   0.23    0.22    0.20    0.18    0.16    0.29    0.32       0.15
+Innsbruck minus answer        0.44  0.43   0.40   0.43    0.41    0.41    0.42    0.42    0.45    0.46       0.40
+Tokyo (full)                  0.47  0.50   0.51   0.47    0.48    0.49    0.49    0.54    0.49    0.33       0.49
+Tokyo minus answer            0.48  0.49   0.47   0.46    0.41    0.40    0.40    0.41    0.42    0.42       0.44
+Wolfgang (full)               0.28  0.14   0.07   0.05    0.05    0.04    0.12    0.24    0.44    0.37       0.03
+Wolfgang minus answer         0.52  0.56   0.54   0.50    0.42    0.45    0.47    0.51    0.52    0.45       0.45
+music (full)                  0.46  0.44   0.44   0.44    0.47    0.49    0.46    0.45    0.43    0.49       0.46
+music minus answer            0.46  0.51   0.49   0.52    0.49    0.50    0.53    0.52    0.47    0.53       0.49
+
+######## mozart_direct: 'Which country was Wolfgang Amadeus Mozart from? Answer in one word.'  baseline P(Austria) = 0.75
+Share of each direction NOT shared with the answer (norm after projection): Salzburg=0.83, Vienna=0.76, Graz=0.95, Tokyo=0.96, Wolfgang=0.92, music=0.98
+  Salzburg (full)                    mid 12-21: P=0.00 answer='Italy'
+  Salzburg minus answer              mid 12-21: P=0.57 answer='Austria'
+  Salzburg minus answer+Vienna       mid 12-21: P=0.67 answer='Austria'
+  Vienna (full)                      mid 12-21: P=0.03 answer='Italy'
+  Vienna minus answer                mid 12-21: P=0.63 answer='Austria'
+  Graz (full)                        mid 12-21: P=0.73 answer='Austria'
+  Graz minus answer                  mid 12-21: P=0.75 answer='Austria'
+  Tokyo (full)                       mid 12-21: P=0.75 answer='Austria'
+  Tokyo minus answer                 mid 12-21: P=0.70 answer='Austria'
+  Wolfgang (full)                    mid 12-21: P=0.26 answer='Italy'
+  Wolfgang minus answer              mid 12-21: P=0.87 answer='Austria'
+  music (full)                       mid 12-21: P=0.80 answer='Austria'
+  music minus answer                 mid 12-21: P=0.81 answer='Austria'
+
+P(Austria) after removal (baseline 0.75):
+win                           L0-5  L3-8  L6-11  L9-14  L12-17  L15-20  L18-23  L21-26  L24-29  L27-31  mid 12-21
+target                                                                                                           
+Salzburg (full)               0.72  0.28   0.02   0.01    0.00    0.00    0.00    0.01    0.37    0.54       0.00
+Salzburg minus answer         0.82  0.79   0.70   0.69    0.61    0.62    0.57    0.64    0.79    0.78       0.57
+Salzburg minus answer+Vienna  0.82  0.81   0.74   0.74    0.70    0.69    0.68    0.76    0.79    0.76       0.67
+Vienna (full)                 0.59  0.24   0.14   0.10    0.13    0.07    0.04    0.01    0.22    0.52       0.03
+Vienna minus answer           0.72  0.68   0.71   0.71    0.66    0.66    0.66    0.68    0.77    0.81       0.63
+Graz (full)                   0.75  0.73   0.75   0.77    0.79    0.75    0.61    0.58    0.73    0.73       0.73
+Graz minus answer             0.78  0.77   0.77   0.80    0.79    0.77    0.77    0.79    0.79    0.79       0.75
+Tokyo (full)                  0.80  0.79   0.79   0.75    0.74    0.75    0.75    0.75    0.79    0.60       0.75
+Tokyo minus answer            0.77  0.77   0.75   0.75    0.68    0.68    0.63    0.63    0.70    0.68       0.70
+Wolfgang (full)               0.71  0.64   0.58   0.48    0.45    0.37    0.70    0.80    0.88    0.71       0.26
+Wolfgang minus answer         0.81  0.88   0.88   0.87    0.86    0.88    0.88    0.87    0.85    0.79       0.87
+music (full)                  0.74  0.69   0.71   0.81    0.80    0.80    0.81    0.75    0.75    0.77       0.80
+music minus answer            0.76  0.76   0.75   0.83    0.79    0.81    0.81    0.77    0.77    0.82       0.81
+
+######## spider: 'How many legs do the animals that spin webs have? Answer in one word.'  baseline P(8) = 0.88
+Share of each direction NOT shared with the answer (norm after projection): spider=0.97, insects=0.97, animals=0.97, dogs=0.96, legs=0.96, webs=0.99
+  spider (full)                      mid 12-21: P=0.00 answer='Four'
+  spider minus answer                mid 12-21: P=0.00 answer='Four'
+  spider minus answer+insects        mid 12-21: P=0.05 answer='Six'
+  insects (full)                     mid 12-21: P=0.18 answer='Four'
+  insects minus answer               mid 12-21: P=0.39 answer='Four'
+  animals (full)                     mid 12-21: P=0.94 answer='Eight'
+  animals minus answer               mid 12-21: P=0.95 answer='Eight'
+  dogs (full)                        mid 12-21: P=0.94 answer='Eight'
+  dogs minus answer                  mid 12-21: P=0.95 answer='Eight'
+  legs (full)                        mid 12-21: P=0.92 answer='Eight'
+  legs minus answer                  mid 12-21: P=0.93 answer='Eight'
+  webs (full)                        mid 12-21: P=0.35 answer='Four'
+  webs minus answer                  mid 12-21: P=0.47 answer='Four'
+
+P(8) after removal (baseline 0.88):
+win                          L0-5  L3-8  L6-11  L9-14  L12-17  L15-20  L18-23  L21-26  L24-29  L27-31  mid 12-21
+target                                                                                                          
+spider (full)                0.82  0.73   0.48   0.10    0.01    0.00    0.00    0.04    0.40    0.91       0.00
+spider minus answer          0.83  0.75   0.54   0.24    0.05    0.01    0.01    0.22    0.70    0.91       0.00
+spider minus answer+insects  0.84  0.77   0.64   0.44    0.24    0.09    0.12    0.35    0.79    0.91       0.05
+insects (full)               0.87  0.86   0.75   0.59    0.47    0.23    0.14    0.64    0.72    0.90       0.18
+insects minus answer         0.89  0.87   0.80   0.66    0.57    0.48    0.36    0.79    0.84    0.91       0.39
+animals (full)               0.86  0.92   0.91   0.91    0.93    0.96    0.96    0.97    0.87    0.90       0.94
+animals minus answer         0.90  0.93   0.92   0.92    0.94    0.95    0.96    0.96    0.90    0.89       0.95
+dogs (full)                  0.77  0.93   0.94   0.93    0.93    0.94    0.94    0.96    0.91    0.90       0.94
+dogs minus answer            0.88  0.93   0.95   0.94    0.94    0.95    0.95    0.95    0.91    0.89       0.95
+legs (full)                  0.81  0.88   0.93   0.94    0.92    0.93    0.91    0.89    0.75    0.93       0.92
+legs minus answer            0.86  0.89   0.92   0.93    0.92    0.93    0.92    0.89    0.83    0.93       0.93
+webs (full)                  0.88  0.83   0.82   0.66    0.55    0.56    0.54    0.75    0.88    0.92       0.35
+webs minus answer            0.87  0.84   0.83   0.67    0.60    0.62    0.64    0.80    0.90    0.91       0.47
+wrote results/orth_*
+ALLDONE

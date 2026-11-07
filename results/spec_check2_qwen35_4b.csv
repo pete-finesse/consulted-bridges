@@ -1,0 +1,6 @@
+question,bridge,answer,controls,left,bridge_drop,all_controls_drop,bridge_only_drop,specificity_strict
+L_colosseum,Italy,I,Spain + France + Germany,0.658,0.999,0.967,0.993,0.993
+L_mozart,Salzburg,S,Vienna + Graz + Munich,0.779,0.992,0.708,0.948,0.956
+L_gates,Seattle,S,Boston + Chicago,0.641,0.973,0.72,0.887,0.912
+L_york,Toronto,T,Ottawa + Vancouver,0.647,0.998,0.886,0.994,0.996
+X_spider,spider,8,ticks + ants + bees + dogs,0.83,0.999,0.078,0.994,0.996

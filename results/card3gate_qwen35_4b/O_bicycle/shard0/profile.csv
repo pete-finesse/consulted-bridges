@@ -1,0 +1,11 @@
+key,sentence,window,start,bridge_drop,answer_drop,noise_drop
+O_bicycle|0,O_bicycle,layers 0–5,0,0.02,0.02,0.017
+O_bicycle|3,O_bicycle,layers 3–8,3,0.065,0.027,0.007
+O_bicycle|6,O_bicycle,layers 6–11,6,0.088,0.023,0.002
+O_bicycle|9,O_bicycle,layers 9–14,9,0.14,0.019,0.016
+O_bicycle|12,O_bicycle,layers 12–17,12,0.067,0.093,0.021
+O_bicycle|15,O_bicycle,layers 15–20,15,0.318,0.265,0.02
+O_bicycle|18,O_bicycle,layers 18–23,18,0.663,0.366,0.015
+O_bicycle|21,O_bicycle,layers 21–26,21,0.365,0.7,0.0
+O_bicycle|24,O_bicycle,layers 24–29,24,0.0,0.221,0.0
+O_bicycle|27,O_bicycle,layers 27–31,27,0.0,0.205,0.0

@@ -1,0 +1,212 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  39%|███▊      | 165/426 [00:00<00:00, 1648.87it/s]Loading weights:  77%|███████▋  | 330/426 [00:00<00:00, 1513.49it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 1547.30it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/swarm-explore/projects/silent-dissent/harness/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+/workspace/swarm-explore/projects/silent-dissent/harness/scripts/spider_legs.py:199: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  cos = max(cos, float((D.to(S.device) @ S.T).abs().max()))
+PROMPT: '<|im_start|>user\nHow many legs do the animals that spin webs have? Answer in one word.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
+
+== 1. Baseline ==
+greedy answer: 'Eight<|im_end|>'
+top next tokens: 'Eight' 0.726, '8' 0.162, 'Four' 0.067, '4' 0.012, 'eight' 0.010
+candidates p_full: {'Eight': 0.7256, 'Six': 0.0071, 'Four': 0.0675, 'Two': 0.0007, 'Ten': 0.0004, 'Seven': 0.0, 'Zero': 0.0001, '8': 0.1619, '6': 0.0034}
+
+== 2. Discovery: J-lens top-20 words, positions from 'How' on ==
+Most frequent words (layers 8-30, all those positions; count = position x layer cells):
+?\:282, ____:240, ？:203, ?:203, ___:201, <|im_end|>:201, ?**:160, __:150, _____:148, ？**:142, **:137, \n:135, ______:133, \":126, **?:124, ?”:124, ________:121, ?":109, "?:108, spiders:93, ？”:88, ?*:74, animals:73, </think>:73, ?",:72, <think>:71, spider:65, legs:64, answer:63, **“:58, '?:58, ...:55, \u:53, ?</:53, insects:51, .\:51, ”**:49, )?:48, ?“:47, _:47, ）**:47, <|endoftext|>:46, ?<:44, \:44, \"\:42, "**:41, ?):41, ...\:39, **【:39, ?(:38, .**:37, snakes:34, :\":34, ?".:33, humans:33, _________:32, **”:32, ?...:31, \.:31, ants:31, 蜘蛛:31, ?':30, 回答:30, webs:29, spinner:28, ：**:28, ?::27, **-:27, .?:27, :\:27, ;**:27, .\":26, 蛛:26, animal:25, spinning:25, .:25, worms:25, ?!:25, mammals:25, 答案:25, four:25, **。:24, words:24, !**:24, answers:24, ”?:23, insect:23, ?”,:22, \(:22, leg:22
+
+Top 6 words per position at layers [10, 14, 18, 22, 26, 30]
+  3 'How'        L10: ?\|?",|___|？|__|？**   L14: ?\|?",|**?|?**|?”|?”,   L18: ?\|?|？|?**|?",|?</   L22: ?\|?</|?”|?",|how|？”   L26: does|?\|Does|?</|?”|many   L30: does|many|do|can|much|would
+  4 ' many'      L10: ？|？”|?\|__|____|__   L14: ？|?\|？**|？”|____|?**   L18: ?\|？|?|？**|？”|?**   L22: ?\|?",|number|?”|ways|?"   L26: ways|distinct|integers|atoms|triangles|letters   L30: ways|integers|distinct|atoms|triangles|words
+  5 ' legs'      L10: _____||____|_____||___   L14: ?\|_____|\n|_____|____|___   L18: ?\|？**|?**|**?|?</|？   L22: ?\|?**|？**|-leg|legs|Legs   L26: legs|-leg|Legs|leg|legs|腿   L30: does|do|did|are|does|Does
+  6 ' do'        L10: \"|?|?\|___|___|__   L14: ?\|?|___|___|\"|？   L18: ?|?\|？|?"|?)|?**   L22: ?\|?|?"|animals|humans|?”   L26: spiders|dogs|snakes|humans|insects|animals   L30: spiders|ants|dogs|insects|humans|cats
+  7 ' the'       L10: \"|\"|?|\(|?\|____   L14: ?\|\"|____|?|\"|?”   L18: ?\|?|？|?"|?*|?)   L22: animals|?\|members|humans|kids|creatures   L26: following|animals|creatures|legs|characters|spiders   L30: following|animals|legs|ants|creatures|characters
+  8 ' animals'   L10: animals|animal|Animals|animals|Animal|wildlife   L14: animals|___|**?|____|________|___   L18: ?\|animals|？|?|？**|Animals   L22: ?\|animals|Animals|animal|的动物|Animal   L26: animals|Animals|animal|动物|Animal|animals   L30: have|mentioned|in|listed|described|below
+  9 ' that'      L10: _____|_____||____|____|___   L14: _____|_____|____|____|___|___   L18: ?\|_____|_____|?|？|____   L22: are|animals|belongs|belong|?\|belonged   L26: living|lives|live|lived|inhabit|Living   L30: live|eat|inhabit|have|are|belong
+ 10 ' spin'      L10: spinning|spins|____|__|_|___   L14: ___|___|____|?\|____|\"   L18: ?\|spinning|?|spins|\"|？   L22: spinning|spins|-spin|spun|spin|Spin   L26: spinning|-spin|spins|spun|spin|Spin   L30: yarn|webs|wheels|circles|their|balls
+ 11 ' webs'      L10: ____|__|___|______|____|？**   L14: ____|____|？**|___|______|__   L18: ?\|____|？**|____|?**|___   L22: ?\|spiders|?**|webs|？**|**?   L26: webs|web|Webs|web|webs|Web   L30: have|?|?\|spiders|?**|spin
+ 12 ' have'      L10: ___|__|________|___|？|________   L14: ？|?|____|?\|________|___   L18: ?|？|?\|?|'?|?**   L22: ?\|?|？|?(|?**|？**   L26: ?|?\|？|?**|?(|?”   L30: ?|legs|?\|?**|how|?
+ 13 '?'          L10: ||？|||   L14: ？|？**|?|?**|?\|**   L18: ?|?\|？|?**|？**|?*   L22: ?\|__|___|<|im_end|>|____|   L26: How|how|How|how|如何|Legs   L30: How|Legs|<|im_end|>|legs|how|Leg
+ 14 ' Answer'    L10: __|____|？|________|___|___   L14: ____|？|?\|**?|________|__   L18: Answer|?\|?|？|**?|Answers   L22: :\"|:\|\n|回答|...\|questions   L26: questions|Questions|Choices|提问|questions|question   L30: this|This|Choices|choices|based|questions
+ 15 ' in'        L10: ?\|\u|___|\n|\|**   L14: ?\|**?|\u|**|\n|**   L18: answer|...\|Answer|\u|answers|\n   L22: 字数|format|简短|:\"|格式|lowercase   L26: sentences|words|sentence|一句话|numbers|numeric   L30: one|ONE|fewer|words|exactly|numbers
+ 16 ' one'       L10: ____|_____|\_|?\|\n|\(   L14: _____|____|?\|\n|**|_____   L18: ?\|<|im_end|>|\n|\.|____|_____   L22: sentence|single|句话|/single|sentences|的一句话   L26: sentence|sentences|Sentence|sentence|word|Sentence   L30: sentence|word|line|paragraph|or|-word
+ 17 ' word'      L10: <|im_end|>|____|____||______|_____   L14: ____|____|<|im_end|>|______|_____|___   L18: ？|<|im_end|>|.\"|?|?\|____   L22: .\"|.\|.|.**|.”|.*   L26: -word|word|Word|word|words|answer   L30: .|.\|.**|.\"|."|.?
+ 18 '.'          L10: |<|im_end|>||...|____|   L14: |<|im_end|>|____|____|?\|?   L18: <|im_end|>||.|?|?\|？   L22: <|im_end|>||\"|<think>|\n|.\   L26: Answer|answer|<|im_end|>|answer|Answer|回答   L30: Answer|<|im_end|>|How|One|answer|Give
+ 19 '<|im_end|>' L10: <|im_end|>|____|____|___|__|___   L14: <|im_end|>|____|____|___|__|___   L18: <|im_end|>|?”|?\|?**|:\"|<think>   L22: <|im_end|>|<think>|</think>|>**|**”|*\   L26: assistant|<think>|</think>|Assistant|<|im_end|>|**“   L30: |<|im_end|>|assistant|***|######|**(
+ 20 '\n'         L10: spiders|insects|insect|spider|bees|ants   L14: spiders|insects|spider|insect|____|ants   L18: spiders|insects|？**|spider|?\|？   L22: spiders|spider|insects|蜘蛛|Spider|大多数   L26: spiders|spider|webs|web|web|蜘蛛   L30: spiders|Sp|spider|Sp|Spider|<|im_start|>
+ 21 '<|im_start|>' L10: <|im_end|>|spiders|insects|\"|____|snakes   L14: ____|<|im_end|>|____|？|?|___   L18: ?\|？|\"|____|？**|?*   L22: 四肢|Legs|legs|legs|spiders|四条   L26: legs|spiders|spider|Legs|legs|spinner   L30: eight|Eight|八|Eight|-eight|eight
+ 22 'assistant'  L10: <|im_end|>|__|____|____||   L14: <|im_end|>|||**|____|____   L18: <|im_end|>||<think>|</think>||____   L22: <think>|<|im_end|>|**|答案|</think>|Answer   L26: <think>|**|<|im_end|>|</think>|Answer|答案   L30: <think>|Eight|Eight|Four|eight|Two
+ 23 '\n'         L10: <|im_end|>||<|endoftext|>|?|\"|______   L14: <|im_end|>|？|____|?|______|?   L18: <|im_end|>||？|____|__|?   L22: <|im_end|>|legs||Legs|legs|__   L26: legs|Legs|legs|腿|spiders|-legged   L30: <think>|Eight|8|八|Eight|eight
+ 24 '<think>'    L10: **【|**|"**|________||**“   L14: **【|**||**(|**-|"**   L18: **【||”**|】**|**「|）**   L22: "**|".**|”**|】**|）**|**!   L26: Thinking|thinking|Thinking|"**|思考|"**   L30: Thinking|||thinking|Thinking|thinking
+ 25 '\n\n'       L10: **|”|”**|“|）**|   L14: **|”|.”|”**|.**|**。   L18: ）**|**|”**|<think>|**”|   L22: **”|”**|</think>|）**|>**|"**   L26: </think>|：**|;**|’**|**“|$q   L30: </think>|<|im_end|>|<think>|**||```
+ 26 '</think>'   L10: |____|，||<|im_end|>|____   L14: <|endoftext|>|**|<|im_end|>|**|</think>|**【   L18: <|im_end|>||<|endoftext|>|</think>||<think>   L22: ）**|**|</think>|)**|”**|<|im_end|>   L26: Legs|）**|)</|**|)**|legs   L30: Eight|Eight|Four|Six|eight|eight
+ 27 '\n\n'       L10: <|endoftext|>|<|im_end|>||_____|____|...   L14: <|endoftext|>|**|<|im_end|>|**|*|：**   L18: <|im_end|>|<|endoftext|>|？||<think>|</think>   L22: Four|fours|four|四|两只|three   L26: legs|legs|Legs|spiders|fours|Leg   L30: 8|Eight|Eight|eight|4|eight
+
+== 3. Tracked words (rank 0 = top; band 12-29) ==
+ lens     word  last_best_rank  last_best_layer  last_band_logrank  last_final_layer_rank  allpos_best_rank  allpos_best_layer  allpos_band_logrank
+jlens   spider               1               24           2.855715                   2073                 1                  7             0.398559
+jlens  spiders               0               23           2.431620                    643                 0                  7             0.000000
+jlens arachnid             180               28           4.015024                   7625                 9                 30             3.078170
+jlens    eight               0               28           1.703876                     13                 0                 28             1.663377
+jlens      six               4               27           1.816290                     85                 4                 27             1.701547
+jlens     four               1               28           1.739231                     44                 1                 28             1.552044
+jlens      two              28                0           2.639960                   2930                 6                 30             2.075939
+jlens   insect              18               24           3.125285                  13988                 1                  8             0.980681
+jlens  insects               6               24           2.714295                   3669                 0                 11             0.471336
+jlens      web              61               24           3.596582                   5918                 1                 26             2.044529
+jlens     webs              10               24           3.391049                   4448                 0                  7             0.992238
+jlens     silk             198               24           4.189780                   9149                 6                 30             1.773291
+jlens     legs               0               25           2.310131                    525                 0                 25             0.844048
+jlens      ant            2025               13           4.433836                 103010                68                 31             3.435721
+jlens      bee            2404               24           4.131983                 136620                 7                  9             1.989402
+jlens     bird             508               20           3.988236                 232759                11                  8             2.141276
+jlens     nest           10479               20           4.891981                 157957                41                  7             2.663374
+jlens  octopus              46               28           3.486365                   2281                25                 31             3.116667
+jlens     crab             392               23           4.170726                  78665                21                 23             2.085962
+jlens    wings             137               20           3.252749                  14132                 5                 21             2.074621
+jlens     spin             978                0           4.526293                  29546                 4                  3             1.262660
+
+Where 'spider' ranks best (J-lens):
+ lens  pos token  layer   word  rank
+jlens   11  webs     24 spider     1
+jlens   20    \n      7 spider     1
+jlens   20    \n     19 spider     1
+jlens   20    \n     21 spider     1
+jlens   20    \n     22 spider     1
+jlens   20    \n     23 spider     1
+jlens   20    \n     24 spider     1
+jlens   20    \n     25 spider     1
+
+Where 'eight' ranks best (J-lens):
+ lens  pos        token  layer  word  rank
+jlens   21 <|im_start|>     29 eight     0
+jlens   21 <|im_start|>     30 eight     0
+jlens   26     </think>     28 eight     0
+jlens   27         \n\n     28 eight     0
+jlens   27         \n\n     29 eight     0
+jlens   22    assistant     29 eight     1
+jlens   23           \n     29 eight     1
+jlens   26     </think>     29 eight     1
+
+== 4. Edits (positions: 'from:How many'; spider never edited) ==
+ablate eight/Eight/8 [early]               -> 'Eight<|im_end|>' P(Eight)=0.878 P(8)=0.056 win=Eight:0.88 spider_rank(last/any)=1/1 cos=0.341
+ablate eight/Eight/8 [mid]                 -> '8<|im_end|>'  P(Eight)=0.430 P(8)=0.430 win=Eight:0.43 spider_rank(last/any)=2/1 cos=0.341
+ablate eight/Eight/8 [late]                -> '4<|im_end|>'  P(Eight)=0.000 P(8)=0.000 win=6:0.26 spider_rank(last/any)=3/1 cos=0.341
+ablate eight/Eight/8 [all]                 -> '4<|im_end|>'  P(Eight)=0.000 P(8)=0.000 win=6:0.36 spider_rank(last/any)=3/1 cos=0.341
+swap eight->six [early]                    -> 'Eight<|im_end|>' P(Eight)=0.775 P(8)=0.135 win=Eight:0.77 spider_rank(last/any)=1/1 cos=0.35
+swap eight->six [mid]                      -> 'Eight<|im_end|>' P(Eight)=0.749 P(8)=0.167 win=Eight:0.75 spider_rank(last/any)=1/1 cos=0.35
+swap eight->six [late]                     -> 'Six<|im_end|>' P(Eight)=0.117 P(8)=0.071 win=Six:0.52 spider_rank(last/any)=1/1 cos=0.35
+swap eight->six [all]                      -> 'Eight<|im_end|>' P(Eight)=0.722 P(8)=0.111 win=Eight:0.72 spider_rank(last/any)=1/1 cos=0.35
+swap eight->four [early]                   -> 'Eight<|im_end|>' P(Eight)=0.749 P(8)=0.167 win=Eight:0.75 spider_rank(last/any)=1/1 cos=0.341
+swap eight->four [mid]                     -> 'Eight<|im_end|>' P(Eight)=0.760 P(8)=0.192 win=Eight:0.76 spider_rank(last/any)=1/1 cos=0.341
+swap eight->four [late]                    -> 'Four<|im_end|>' P(Eight)=0.069 P(8)=0.054 win=Four:0.65 spider_rank(last/any)=1/1 cos=0.341
+swap eight->four [all]                     -> 'Eight<|im_end|>' P(Eight)=0.578 P(8)=0.310 win=Eight:0.58 spider_rank(last/any)=1/1 cos=0.341
+swap eight->two [early]                    -> 'Eight<|im_end|>' P(Eight)=0.726 P(8)=0.162 win=Eight:0.73 spider_rank(last/any)=1/1 cos=0.341
+swap eight->two [mid]                      -> 'Eight<|im_end|>' P(Eight)=0.581 P(8)=0.274 win=Eight:0.58 spider_rank(last/any)=1/1 cos=0.341
+swap eight->two [late]                     -> 'Two<|im_end|>' P(Eight)=0.024 P(8)=0.045 win=Two:0.42 spider_rank(last/any)=1/1 cos=0.341
+swap eight->two [all]                      -> 'Four<|im_end|>' P(Eight)=0.220 P(8)=0.151 win=Four:0.25 spider_rank(last/any)=1/1 cos=0.341
+swap eight->ten [early]                    -> 'Eight<|im_end|>' P(Eight)=0.762 P(8)=0.150 win=Eight:0.76 spider_rank(last/any)=1/1 cos=0.351
+swap eight->ten [mid]                      -> 'Eight<|im_end|>' P(Eight)=0.661 P(8)=0.167 win=Eight:0.66 spider_rank(last/any)=1/1 cos=0.351
+swap eight->ten [late]                     -> 'Ten<|im_end|>' P(Eight)=0.028 P(8)=0.017 win=Ten:0.49 spider_rank(last/any)=1/1 cos=0.351
+swap eight->ten [all]                      -> 'Four<|im_end|>' P(Eight)=0.211 P(8)=0.053 win=Four:0.31 spider_rank(last/any)=2/1 cos=0.351
+ablate web/webs [early]                    -> 'Eight<|im_end|>' P(Eight)=0.614 P(8)=0.176 win=Eight:0.61 spider_rank(last/any)=2/1 cos=0.556
+ablate web/webs [mid]                      -> 'Four<|im_end|>' P(Eight)=0.210 P(8)=0.028 win=Four:0.57 spider_rank(last/any)=7/1 cos=0.556
+ablate web/webs [late]                     -> 'Eight<|im_end|>' P(Eight)=0.639 P(8)=0.046 win=Eight:0.64 spider_rank(last/any)=7/1 cos=0.556
+ablate web/webs [all]                      -> 'Eight<|im_end|>' P(Eight)=0.471 P(8)=0.082 win=Eight:0.47 spider_rank(last/any)=33/1 cos=0.556
+swap web->nest [early]                     -> 'Eight<|im_end|>' P(Eight)=0.664 P(8)=0.216 win=Eight:0.66 spider_rank(last/any)=1/1 cos=0.556
+swap web->nest [mid]                       -> 'Eight<|im_end|>' P(Eight)=0.736 P(8)=0.128 win=Eight:0.74 spider_rank(last/any)=1/1 cos=0.556
+swap web->nest [late]                      -> 'Eight<|im_end|>' P(Eight)=0.674 P(8)=0.170 win=Eight:0.67 spider_rank(last/any)=1/1 cos=0.556
+swap web->nest [all]                       -> 'Eight<|im_end|>' P(Eight)=0.630 P(8)=0.232 win=Eight:0.63 spider_rank(last/any)=3/1 cos=0.556
+swap web->hive [early]                     -> 'Eight<|im_end|>' P(Eight)=0.594 P(8)=0.219 win=Eight:0.59 spider_rank(last/any)=1/1 cos=0.556
+swap web->hive [mid]                       -> 'Eight<|im_end|>' P(Eight)=0.384 P(8)=0.125 win=Eight:0.38 spider_rank(last/any)=3/1 cos=0.556
+swap web->hive [late]                      -> 'Eight<|im_end|>' P(Eight)=0.551 P(8)=0.139 win=Eight:0.55 spider_rank(last/any)=2/1 cos=0.556
+swap web->hive [all]                       -> 'Four<|im_end|>' P(Eight)=0.175 P(8)=0.106 win=Four:0.37 spider_rank(last/any)=5/1 cos=0.556
+ablate arachnid [early]                    -> 'Eight.<|im_end|>' P(Eight)=0.247 P(8)=0.004 win=Eight:0.25 spider_rank(last/any)=4/1 cos=0.33
+ablate arachnid [mid]                      -> 'Eight<|im_end|>' P(Eight)=0.942 P(8)=0.037 win=Eight:0.94 spider_rank(last/any)=1/0 cos=0.33
+ablate arachnid [late]                     -> 'Eight<|im_end|>' P(Eight)=0.763 P(8)=0.117 win=Eight:0.76 spider_rank(last/any)=2/1 cos=0.33
+ablate arachnid [all]                      -> ''             P(Eight)=0.000 P(8)=0.000 win=Two:0.00 spider_rank(last/any)=333/13 cos=0.33
+swap arachnid->insect [early]              -> 'Eight<|im_end|>' P(Eight)=0.704 P(8)=0.157 win=Eight:0.70 spider_rank(last/any)=1/1 cos=0.611
+swap arachnid->insect [mid]                -> 'Eight<|im_end|>' P(Eight)=0.524 P(8)=0.133 win=Eight:0.52 spider_rank(last/any)=1/1 cos=0.611
+swap arachnid->insect [late]               -> 'Eight<|im_end|>' P(Eight)=0.628 P(8)=0.231 win=Eight:0.63 spider_rank(last/any)=2/1 cos=0.611
+swap arachnid->insect [all]                -> 'Eight<|im_end|>' P(Eight)=0.651 P(8)=0.100 win=Eight:0.65 spider_rank(last/any)=2/1 cos=0.611
+swap legs->wings [early]                   -> 'Eight<|im_end|>' P(Eight)=0.731 P(8)=0.144 win=Eight:0.73 spider_rank(last/any)=1/1 cos=0.43
+swap legs->wings [mid]                     -> 'Eight<|im_end|>' P(Eight)=0.723 P(8)=0.161 win=Eight:0.72 spider_rank(last/any)=1/1 cos=0.43
+swap legs->wings [late]                    -> 'Eight<|im_end|>' P(Eight)=0.669 P(8)=0.192 win=Eight:0.67 spider_rank(last/any)=1/0 cos=0.43
+swap legs->wings [all]                     -> 'Eight<|im_end|>' P(Eight)=0.751 P(8)=0.148 win=Eight:0.75 spider_rank(last/any)=1/1 cos=0.43
+swap eight->six + arachnid->insect [early] -> 'Eight<|im_end|>' P(Eight)=0.746 P(8)=0.114 win=Eight:0.75 spider_rank(last/any)=1/1 cos=0.611
+swap eight->six + arachnid->insect [mid]   -> 'Eight<|im_end|>' P(Eight)=0.620 P(8)=0.157 win=Eight:0.62 spider_rank(last/any)=1/1 cos=0.611
+swap eight->six + arachnid->insect [late]  -> 'Six<|im_end|>' P(Eight)=0.109 P(8)=0.096 win=Six:0.49 spider_rank(last/any)=1/1 cos=0.611
+swap eight->six + arachnid->insect [all]   -> 'Eight<|im_end|>' P(Eight)=0.534 P(8)=0.072 win=Eight:0.53 spider_rank(last/any)=1/1 cos=0.611
+steer +six a=0.05 [mid]                    -> 'Eight<|im_end|>' P(Eight)=0.371 P(8)=0.175 win=Eight:0.37 spider_rank(last/any)=1/1 cos=0.35
+steer +six a=0.05 [late]                   -> 'six<|im_end|>' P(Eight)=0.099 P(8)=0.019 win=Eight:0.10 spider_rank(last/any)=9/1 cos=0.35
+steer +six a=0.1 [mid]                     -> 'eight<|im_end|>' P(Eight)=0.056 P(8)=0.079 win=8:0.08 spider_rank(last/any)=20/0 cos=0.35
+steer +six a=0.1 [late]                    -> 'six<|im_end|>' P(Eight)=0.006 P(8)=0.003 win=Six:0.01 spider_rank(last/any)=46/1 cos=0.35
+steer +six a=0.2 [mid]                     -> 'six<|im_end|>' P(Eight)=0.000 P(8)=0.000 win=6:0.00 spider_rank(last/any)=2284/1 cos=0.35
+steer +six a=0.2 [late]                    -> 'six<|im_end|>' P(Eight)=0.000 P(8)=0.000 win=Six:0.00 spider_rank(last/any)=150/1 cos=0.35
+steer +insect a=0.05 [mid]                 -> 'Six<|im_end|>' P(Eight)=0.178 P(8)=0.058 win=Six:0.29 spider_rank(last/any)=4/1 cos=0.611
+steer +insect a=0.05 [late]                -> 'Eight<|im_end|>' P(Eight)=0.283 P(8)=0.220 win=Eight:0.28 spider_rank(last/any)=3/0 cos=0.611
+steer +insect a=0.1 [mid]                  -> 'six<|im_end|>' P(Eight)=0.010 P(8)=0.008 win=6:0.13 spider_rank(last/any)=12/0 cos=0.611
+steer +insect a=0.1 [late]                 -> 'insect<|im_end|>' P(Eight)=0.017 P(8)=0.065 win=8:0.07 spider_rank(last/any)=4/1 cos=0.611
+steer +insect a=0.2 [mid]                  -> '<|im_end|>'   P(Eight)=0.000 P(8)=0.002 win=6:0.02 spider_rank(last/any)=20/1 cos=0.611
+steer +insect a=0.2 [late]                 -> 'insect<|im_end|>' P(Eight)=0.000 P(8)=0.002 win=6:0.00 spider_rank(last/any)=4/1 cos=0.611
+steer +bird a=0.05 [mid]                   -> '2<|im_end|>'  P(Eight)=0.004 P(8)=0.003 win=Two:0.26 spider_rank(last/any)=104/1 cos=0.499
+steer +bird a=0.05 [late]                  -> '8<|im_end|>'  P(Eight)=0.232 P(8)=0.297 win=8:0.30 spider_rank(last/any)=1/0 cos=0.499
+steer +bird a=0.1 [mid]                    -> '2<|im_end|>'  P(Eight)=0.000 P(8)=0.002 win=Two:0.06 spider_rank(last/any)=244/1 cos=0.499
+steer +bird a=0.1 [late]                   -> 'four<|im_end|>' P(Eight)=0.010 P(8)=0.072 win=8:0.07 spider_rank(last/any)=7/1 cos=0.499
+steer +bird a=0.2 [mid]                    -> '<|im_end|>'   P(Eight)=0.000 P(8)=0.001 win=6:0.00 spider_rank(last/any)=401/1 cos=0.499
+steer +bird a=0.2 [late]                   -> 'bird<|im_end|>' P(Eight)=0.000 P(8)=0.002 win=6:0.00 spider_rank(last/any)=16/1 cos=0.499
+steer +four a=0.05 [mid]                   -> 'Four<|im_end|>' P(Eight)=0.227 P(8)=0.122 win=Eight:0.23 spider_rank(last/any)=12/1 cos=0.328
+steer +four a=0.05 [late]                  -> 'four<|im_end|>' P(Eight)=0.130 P(8)=0.023 win=Four:0.24 spider_rank(last/any)=12/1 cos=0.328
+steer +four a=0.1 [mid]                    -> 'four<|im_end|>' P(Eight)=0.020 P(8)=0.036 win=Four:0.06 spider_rank(last/any)=182/1 cos=0.328
+steer +four a=0.1 [late]                   -> 'four<|im_end|>' P(Eight)=0.011 P(8)=0.005 win=Four:0.04 spider_rank(last/any)=55/1 cos=0.328
+steer +four a=0.2 [mid]                    -> 'four<|im_end|>' P(Eight)=0.000 P(8)=0.000 win=6:0.00 spider_rank(last/any)=4988/1 cos=0.328
+steer +four a=0.2 [late]                   -> 'four<|im_end|>' P(Eight)=0.000 P(8)=0.000 win=Four:0.00 spider_rank(last/any)=171/1 cos=0.328
+steer -eight a=0.05 [mid]                  -> 'Eight<|im_end|>' P(Eight)=0.291 P(8)=0.177 win=Eight:0.29 spider_rank(last/any)=16/1 cos=0.341
+steer -eight a=0.05 [late]                 -> '4<|im_end|>'  P(Eight)=0.000 P(8)=0.000 win=6:0.02 spider_rank(last/any)=3/1 cos=0.341
+steer -eight a=0.1 [mid]                   -> 'Two<|im_end|>' P(Eight)=0.000 P(8)=0.000 win=Two:0.59 spider_rank(last/any)=19/1 cos=0.341
+steer -eight a=0.1 [late]                  -> '4<|im_end|>'  P(Eight)=0.000 P(8)=0.000 win=6:0.02 spider_rank(last/any)=3/1 cos=0.341
+steer -eight a=0.2 [mid]                   -> 'Buzzard<|im_end|>' P(Eight)=0.000 P(8)=0.000 win=Zero:0.00 spider_rank(last/any)=20390/1 cos=0.341
+steer -eight a=0.2 [late]                  -> '_4_<|im_end|>' P(Eight)=0.000 P(8)=0.000 win=6:0.00 spider_rank(last/any)=31/1 cos=0.341
+
+== Answer changed away from eight in 37 of 78 edits ==
+                                      run            answer      P_Eight  spider_rank_last_best  spider_rank_anypos_best  max_cos_with_spider
+              ablate eight/Eight/8 [late]       4<|im_end|> 3.145948e-06                      3                        1                0.341
+               ablate eight/Eight/8 [all]       4<|im_end|> 9.965409e-07                      3                        1                0.341
+                   swap eight->six [late]     Six<|im_end|> 1.170558e-01                      1                        1                0.350
+                  swap eight->four [late]    Four<|im_end|> 6.900117e-02                      1                        1                0.341
+                   swap eight->two [late]     Two<|im_end|> 2.382428e-02                      1                        1                0.341
+                    swap eight->two [all]    Four<|im_end|> 2.202840e-01                      1                        1                0.341
+                   swap eight->ten [late]     Ten<|im_end|> 2.759373e-02                      1                        1                0.351
+                    swap eight->ten [all]    Four<|im_end|> 2.105874e-01                      2                        1                0.351
+                    ablate web/webs [mid]    Four<|im_end|> 2.097789e-01                      7                        1                0.556
+                     swap web->hive [all]    Four<|im_end|> 1.751190e-01                      5                        1                0.556
+                    ablate arachnid [all]                   5.644011e-07                    333                       13                0.330
+swap eight->six + arachnid->insect [late]     Six<|im_end|> 1.090547e-01                      1                        1                0.611
+                 steer +six a=0.05 [late]     six<|im_end|> 9.873797e-02                      9                        1                0.350
+                  steer +six a=0.1 [late]     six<|im_end|> 6.132330e-03                     46                        1                0.350
+                   steer +six a=0.2 [mid]     six<|im_end|> 8.746719e-06                   2284                        1                0.350
+                  steer +six a=0.2 [late]     six<|im_end|> 2.160900e-05                    150                        1                0.350
+               steer +insect a=0.05 [mid]     Six<|im_end|> 1.775205e-01                      4                        1                0.611
+                steer +insect a=0.1 [mid]     six<|im_end|> 9.503319e-03                     12                        0                0.611
+               steer +insect a=0.1 [late]  insect<|im_end|> 1.671072e-02                      4                        1                0.611
+                steer +insect a=0.2 [mid]        <|im_end|> 1.656196e-04                     20                        1                0.611
+               steer +insect a=0.2 [late]  insect<|im_end|> 1.561980e-04                      4                        1                0.611
+                 steer +bird a=0.05 [mid]       2<|im_end|> 3.725704e-03                    104                        1                0.499
+                  steer +bird a=0.1 [mid]       2<|im_end|> 2.288689e-04                    244                        1                0.499
+                 steer +bird a=0.1 [late]    four<|im_end|> 9.703800e-03                      7                        1                0.499
+                  steer +bird a=0.2 [mid]        <|im_end|> 9.303994e-07                    401                        1                0.499
+                 steer +bird a=0.2 [late]    bird<|im_end|> 2.140146e-05                     16                        1                0.499
+                 steer +four a=0.05 [mid]    Four<|im_end|> 2.274325e-01                     12                        1                0.328
+                steer +four a=0.05 [late]    four<|im_end|> 1.303813e-01                     12                        1                0.328
+                  steer +four a=0.1 [mid]    four<|im_end|> 1.981858e-02                    182                        1                0.328
+                 steer +four a=0.1 [late]    four<|im_end|> 1.055367e-02                     55                        1                0.328
+                  steer +four a=0.2 [mid]    four<|im_end|> 1.022852e-05                   4988                        1                0.328
+                 steer +four a=0.2 [late]    four<|im_end|> 3.333083e-05                    171                        1                0.328
+               steer -eight a=0.05 [late]       4<|im_end|> 8.642953e-08                      3                        1                0.341
+                 steer -eight a=0.1 [mid]     Two<|im_end|> 2.035909e-05                     19                        1                0.341
+                steer -eight a=0.1 [late]       4<|im_end|> 1.036276e-08                      3                        1                0.341
+                 steer -eight a=0.2 [mid] Buzzard<|im_end|> 9.700153e-07                  20390                        1                0.341
+                steer -eight a=0.2 [late]     _4_<|im_end|> 3.597968e-07                     31                        1                0.341
+wrote results/spider_qwen35_4b
