@@ -179,7 +179,7 @@
 ### 4. From single good questions to question *types* (variant sets)
 
 **Trend questions (23 new question types, run Nov 7 with the trimmed card; `results/trend_*`, `results/swap2_summary/trend.csv`):** few are testable.
-- **4B:** 3 consulted bridges (World Cup wins of Brazil, states of Australia, and the designed-bad flag stars of the USA, which should have failed), plus 3 bystanders, 3 unclear, 1 spread out and 13 untestable (the model gets 11 wrong).
+- **4B:** 3 consulted bridges (World Cup wins of Brazil, states of Australia, and the designed-bad flag stars of the USA, which should have failed), plus 3 bystanders, 3 unclear, 1 spread out and 13 untestable (the model gets 10 wrong; in 3 the edit doesn't reach the bridge).
 - **27B:** 1 consulted bridge (federal states of Austria, quality 0.92), 1 category effect (Russia's dialling code), plus 2 bystanders, 2 unclear, 1 spread out and 16 untestable (in 13 the edit doesn't reach the bridge).
 - **So far,** the letter family stays the reliable type. The flag-stars control passing on the 4B needs a look (experiment 3).
 
