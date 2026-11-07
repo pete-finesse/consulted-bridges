@@ -1,0 +1,13 @@
+model,group,rule,questions,mean_follow,counts_yes,counts_no,not_checked,mean_follow_where_counts,source_everyday_follows,source_kind_follows
+Qwen3.5-4B,bank,A,12,0.736,8,1,3,0.812,0,1
+Qwen3.5-4B,bank,B,12,0.813,5,5,2,0.867,0,1
+Qwen3.5-4B,trend,A,3,0.694,2,1,0,0.666,0,0
+Qwen3.5-4B,trend,B,3,0.667,3,0,0,0.667,0,1
+Qwen3.5-4B,variants,A,24,0.684,23,1,0,0.681,0,0
+Qwen3.5-4B,variants,B,24,0.785,10,13,1,0.717,0,10
+Qwen3.6-27B,bank,A,12,0.688,10,0,2,0.65,0,0
+Qwen3.6-27B,bank,B,12,0.938,8,2,2,0.938,0,3
+Qwen3.6-27B,trend,A,2,1.0,0,1,1,,0,0
+Qwen3.6-27B,trend,B,2,1.0,0,0,2,,0,1
+Qwen3.6-27B,variants,A,20,0.712,19,0,1,0.724,0,0
+Qwen3.6-27B,variants,B,20,0.912,11,8,1,0.841,0,3
