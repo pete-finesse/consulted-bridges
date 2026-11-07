@@ -20,9 +20,13 @@ Gates (if one fails, the sentence is UNTESTABLE, and the card says which):
   G2 clean words   every edited word is a single token (no generic pieces like " F" for Funchal).
   G3 answer onset  removing the answer's own direction kills P in some window. Its first such window is
                    the ANSWER ONSET: from there on the model is writing the answer.
-  G4 edit reaches  in the one-hop question whose answer IS the bridge, removing the bridge's direction
-     the bridge    (in a window that ends before the answer onset) drops P(bridge) by >= 0.5.
   If the answer onset is in the first window, the answer is present from the start: "ANSWER FROM THE START".
+
+Reach check (was "gate 4"; not a gate: it only decides how to read a NULL result, see Verdicts):
+  the same question, asked to name the bridge first; removing the bridge's direction (in a window that ends
+  before the answer onset) drops P(bridge) by >= 0.5. A positive result (the bridge is needed, beats noise and
+  comes first) stands whatever the reach check says. Without a positive result, a failed reach check means the
+  edit may have missed the bridge: UNTESTABLE (reach), not bystander.
 
 Tests (all measured in windows that END BEFORE the answer onset, "early windows"):
   1 needed early    best drop from removing the bridge in an early window.
@@ -45,6 +49,8 @@ Verdicts:
                      (or no same-kind word available: "consulted (kind not checked)").
   CATEGORY EFFECT    as consulted, but words of its kind do the same (beats own kind < 0.3).
   TANGLED            beats noise >= 0.5, but it doesn't come first (it acts with the answer, not before).
+  -- below here only when there is no positive result --
+  UNTESTABLE         the reach check fails: the edit may have missed the bridge, so the null can't be read.
   SPREAD OUT         beats noise < 0.5, but removing over 16 or all layers drops >= 0.5.
   BYSTANDER          beats noise < 0.2 and the 16-layer and all-layer drops < 0.2.
   UNCLEAR            anything else.
@@ -259,7 +265,7 @@ class Card:
             return finish("ANSWER FROM THE START", f"removing the answer already kills it in {fmt_layers(self.wins[onset_i])}, "
                           "before any window where the bridge could act first")
 
-        # G4: edit reaches the bridge IN THIS PROMPT: same question, asked to name the bridge first
+        # reach check (not a gate): edit reaches the bridge IN THIS PROMPT: same question, asked to name the bridge first
         SP = (" {}", " **{}")
         tn = chat(h, S["user"] + S["name_ask"], S["name_prefill"])
         named = self.gen(tn)
@@ -267,7 +273,7 @@ class Card:
         vd = [(self.drop(nb, self.P(tn, S["name_forms"], self.rm(b, self.wins[i]), formats=SP)), i) for i in early]
         V, vi = max(vd)
         res.update(reach=round(V, 3), named_as=named)
-        test("g4", "Gate 4 · edit reaches the bridge",
+        test("reach", "Reach check · edit reaches the bridge",
              "Same question, asked to name the bridge first: does removing the bridge (before the answer onset) kill its name?",
              V, "pass" if V >= TH["gate"] else "fail",
              f"Ask {q(S['user'] + S['name_ask'])} with the reply starting {q(S['name_prefill'])} (model continues: {q(named)}). "

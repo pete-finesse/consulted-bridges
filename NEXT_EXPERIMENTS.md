@@ -205,17 +205,17 @@
 - **Why:** so far the deliberately bad questions were mostly caught by the gates. Only banana → Yellow reached scoring, and it isn't clearly bad.
 - **Test:** design shortcut or echo questions that the model answers correctly and where the edit reaches the bridge. Confirm their quality is low. Mozart's country (answer present from the start) is one existing example.
 
-### 3b. Fix gate 4 when the model barely says the bridge (found Nov 7)
+### 3b. Fix the reach check (was gate 4) when the model barely says the bridge (found Nov 7)
 
-- **The problem:** gate 4 asks the question with "First name the [kind]." and a started reply ("The sport is"), then checks that removing the bridge drops P(bridge's name) by at least 0.5. The drop is *relative* (1 − after ÷ before). When the model rarely says the bridge there, P starts near 0 and the gate passes or fails on noise.
+- **The problem:** the reach check asks the question with "First name the [kind]." and a started reply ("The sport is"), then checks that removing the bridge drops P(bridge's name) by at least 0.5. The drop is *relative* (1 − after ÷ before). When the model rarely says the bridge there, P starts near 0 and the gate passes or fails on noise.
 - **How often:** 10 of the 179 gate-4 checks in the bank (bank, variants and trend questions, both models) start below P = 0.1: 7 pass, 3 fail. Examples:
   - **Hockey, 27B:** the model says "ice hockey", so P("hockey") is 0.01 → 0.00, a "drop of 1.00" that passes;
   - **Christmas → next month, 4B:** the model skips straight to "January", P("December") 0.01 → 0.01, a fail.
 - **Fix to try** (free, re-scores saved runs only where the gate decides the verdict):
-  1. require P(bridge) ≥ 0.3 before the edit, else mark gate 4 "not readable" rather than pass or fail;
+  1. require P(bridge) ≥ 0.3 before the edit, else mark the reach check "not readable" rather than pass or fail;
   2. read P of the token the model actually writes there (its own continuation, "ice" for hockey), as gate 3 already does for the answer;
   3. report the absolute fall in P beside the relative drop.
-- **Why it matters:** gate 4 decides bystander versus untestable. A pass on noise turns "the edit missed" into "the model doesn't need it".
+- **Why it matters:** the reach check decides bystander versus untestable. A pass on noise turns "the edit missed" into "the model doesn't need it".
 
 ### 4. From single good questions to question *types* (variant sets)
 
@@ -235,10 +235,10 @@
 ### 5. J++ (the improved lens on Neuronpedia)
 
 - **Why:**
-  - in Qwen3.6-27B, the single J-lens direction fails to remove the bridge in 30 of 62 questions (gate 4);
+  - in Qwen3.6-27B, the single J-lens direction fails to remove the bridge in 30 of 62 questions (reach check);
   - J++ may hold the bridge better, giving more testable questions and cleaner edits.
 - **Test:** re-run the scorecard (and experiments 1–2) with J++ directions in place of J-lens ones. Compare:
-  - gate 4 pass rate;
+  - reach check pass rate;
   - quality;
   - verdicts on the same questions.
   Also compare against the plain logit lens as the simplest baseline.

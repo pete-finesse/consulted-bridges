@@ -11,7 +11,8 @@ This repository holds:
 
 ## The scorecard in brief
 
-- **Gates.** The model knows both hops. The edited words are single tokens. The answer's own direction has an onset layer. The edit reaches the bridge in the same prompt.
+- **Gates.** The model knows both hops. The edited words are single tokens. The answer's own direction has an onset layer.
+- **Reach check** (was gate 4; not a gate). The edit stops the model naming the bridge in the same prompt. It is read only when removing the bridge changes nothing: pass means bystander, fail means untestable. A positive result stands either way.
 - **Quality** = need × specificity × isolation, set to 0 unless the bridge acts before the answer:
   - **need:** how much removing the bridge, before the answer forms, drops P(answer), beyond a noise floor of 12 everyday words of matched strength;
   - **specificity:** the share of that drop still there when only the bridge's own part, not shared with words of the same kind, is removed;

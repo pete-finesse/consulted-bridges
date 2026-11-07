@@ -38,8 +38,10 @@ SETS = {"bank": "Question bank", "variant": "Close variant", "trend": "Trend que
 MODELS = {"qwen35_4b": "Qwen3.5-4B", "qwen36_27b": "Qwen3.6-27B"}
 SYM = {"pass": "✓", "fail": "✗"}
 SWAP_COLS = [f"swap{k}_{c}" for k in "AB" for c in ("follow", "n", "counts", "windows_counted", "windows")]
-# what each scorecard test is for (HANDOFF section 3): needed by gates / quality, reported only, or the old exchange swap
-ROLE = {"Gate": "Gate", "1 ": "Scored", "2 ": "Scored", "3 ": "Scored", "6 ": "Scored", "7 ": "Scored", "7b": "Scored",
+# what each scorecard test is for (HANDOFF section 3): needed by gates / quality, reported only, or the old exchange swap.
+# The reach check (saved runs call it "Gate 4") is not a gate: it only decides how a null result is read.
+REACH = "Reach check · edit reaches the bridge"
+ROLE = {"Gate": "Gate", "Reach check": "Reach check", "1 ": "Scored", "2 ": "Scored", "3 ": "Scored", "6 ": "Scored", "7 ": "Scored", "7b": "Scored",
         "Quality": "Scored", "4 ": "Reported only", "5 ": "Reported only", "8 ": "Old exchange swap", "9 ": "Old exchange swap"}
 
 
@@ -146,6 +148,7 @@ def main():
     on = load(["v4_27b/onset27b_qwen36_27b.csv"])
     cards = pd.concat([p[0] for p in parts if len(p[0])], ignore_index=True)
     tests = pd.concat([p[1] for p in parts if len(p[1])], ignore_index=True)
+    tests["test"] = tests.test.replace("Gate 4 · edit reaches the bridge", REACH)
     cards = cards.drop(columns=[c for c in SWAP_COLS if c in cards])
     head, summ, queued = swaps()
     cards = cards.merge(head, on=["sentence", "model"], how="left")
@@ -160,11 +163,15 @@ def main():
         gate = lambda g: (tt[tt.test.str.startswith(f"Gate {g}")].result.iloc[0]  # noqa: E731
                           if len(tt[tt.test.str.startswith(f"Gate {g}")]) else "not reached")
         t1 = tt[tt.test.str.startswith("1 ")]
-        fails = tt[(tt.result == "fail") & tt.test.str.startswith("Gate")]
+        fails = tt[(tt.result == "fail") & tt.test.str.startswith(("Gate", "Reach check"))]
         key = t1.what_happened.iloc[0] if len(t1) else (fails.what_happened.iloc[0] if len(fails) else "")
         v, why = verdict(c)
-        g = [gate(i) for i in range(1, 5)]
+        g = [gate(i) for i in range(1, 4)]
+        rr = tt[tt.test == REACH]
+        reach = rr.result.iloc[0] if len(rr) else "not reached"
         failed = next((f"G{i + 1}" for i, x in enumerate(g) if x == "fail"), "")
+        if not failed and v == "Untestable" and reach == "fail":
+            failed = "reach"
         if c["set"] == "variant":
             note = "Proposed: a close variant of a question-bank question. v4.1 scorecard, run Nov 6."
         elif c["set"] == "trend":
@@ -184,7 +191,7 @@ def main():
                          question=c.question, bridge=c.bridge, answer=c.answer, designed_bad=str(c.predicted).startswith("bad"),
                          verdict=v, why=why, gate_failed=failed, model_said=c.model_said,
                          p_answer=round(c.P_base, 2) if c.P_base == c.P_base else None,
-                         gate1=g[0], gate2=g[1], gate3=g[2], gate4=g[3], gates="".join(SYM.get(x, "·") for x in g),
+                         gate1=g[0], gate2=g[1], gate3=g[2], reach=reach, gates="".join(SYM.get(x, "·") for x in g),
                          need=c.get("need"), specificity=c.get("specificity"), isolation=c.get("isolation"),
                          lead=c.get("lead"), quality=c.get("quality"), swap=swap,
                          **{k: c.get(k) for k in SWAP_COLS}, key_result=key, note=note))
