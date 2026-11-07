@@ -15,6 +15,11 @@ chosen prompt positions, for every layer listed. Definitions (h = residual at on
                                by (1 + alpha); alpha = 1 doubles it, -1 removes it.
   swap    the coefficients of h on the two directions (a, b) are exchanged:
           c_a' = (1-s) c_a + s c_b,  c_b' = (1-s) c_b + s c_a      s = strength, 1 = exact swap.
+          The paper's swap. Nearly a no-op when the two directions are similar (Italy, Spain: cos 0.80).
+  move    h <- h + (h . a)(b - a)    a = source, b = target (unit directions): the source's component
+          is moved onto the target. Neuronpedia's "Swap J-Lens Readout"; equal to ablating a, then adding
+          the removed amount along b (docs/swap_replication.md). Neuronpedia's directions omit the final
+          norm's gain; ours keep it, as for every other edit (cosine 0.97-0.99, same results there).
 
 Neuronpedia's own ablate / swap may be defined differently; these are written out so they
 can be checked. Positions are prompt positions (absolute), so the same edit applies when
@@ -36,8 +41,8 @@ from .text import resolve_positions, word_tokens
 
 @dataclass
 class Edit:
-    kind: str                      # ablate | ablate_excl | steer | swap
-    words: list[str]               # ablate: 1+ words; steer: 1; swap: 2 (a, b)
+    kind: str                      # ablate | ablate_excl | steer | amplify | swap | move
+    words: list[str]               # ablate: 1+ words; steer: 1; swap, move: 2 (source, target)
     layers: list[int]
     positions: object = "last"     # see text.resolve_positions
     alpha: float = 0.0             # steer strength (fraction of |h|)
@@ -46,16 +51,16 @@ class Edit:
     label: str = ""
 
     def __post_init__(self):
-        if self.kind not in ("ablate", "ablate_excl", "steer", "amplify", "swap"):
+        if self.kind not in ("ablate", "ablate_excl", "steer", "amplify", "swap", "move"):
             raise ValueError(f"unknown edit {self.kind!r}")
-        if self.kind == "swap" and len(self.words) != 2:
-            raise ValueError("swap needs exactly two words")
+        if self.kind in ("swap", "move") and len(self.words) != 2:
+            raise ValueError(f"{self.kind} needs exactly two words")
         if self.kind == "ablate_excl" and len(self.words) < 2:
             raise ValueError("ablate_excl needs a word and at least one word to exclude")
         if self.kind in ("steer", "amplify") and len(self.words) != 1:
             raise ValueError("steer takes one word")
         if not self.label:
-            w = ("->".join(self.words) if self.kind == "swap" else
+            w = ("->".join(self.words) if self.kind in ("swap", "move") else
                  f"{self.words[0]} minus " + "+".join(self.words[1:]) if self.kind == "ablate_excl" else "+".join(self.words))
             extra = f" a={self.alpha:g}" if self.kind in ("steer", "amplify") else f" s={self.strength:g}" if self.kind == "swap" else ""
             self.label = f"{self.kind} {w}{extra} L{_layers_str(self.layers)}"
@@ -111,6 +116,8 @@ def _apply(H: torch.Tensor, edit: Edit, dirs: list[torch.Tensor]) -> torch.Tenso
         return H + edit.alpha * H.norm(dim=-1, keepdim=True) * d
     a = dirs[0].mean(0); a = a / a.norm()
     b = dirs[1].mean(0); b = b / b.norm()
+    if edit.kind == "move":
+        return H + (H @ a)[:, None] * (b - a)[None]
     A = torch.stack([a, b], 1)                              # [d, 2]
     C = torch.linalg.lstsq(A, H.T).solution.T               # [n, 2] coefficients on (a, b)
     s = edit.strength

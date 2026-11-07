@@ -70,6 +70,11 @@ def test_edit_math():
     sw = _apply(H, Edit("swap", ["x", "y"], [0], strength=1.0), [a, b])
     assert torch.allclose(coef(sw), coef(H).flip(1), atol=1e-4)
     assert torch.allclose(_apply(H, Edit("swap", ["x", "y"], [0], strength=0.0), [a, b]), H, atol=1e-5)
+    mv = _apply(H, Edit("move", ["x", "y"], [0]), [a, b])
+    assert torch.allclose(mv, H + (H @ a.T) * (b - a), atol=1e-5)             # Neuronpedia's formula
+    abl_a = H - (H @ a.T) * a
+    assert torch.allclose(mv, abl_a + (H @ a.T) * b, atol=1e-5)               # = ablate a, add its amount on b
+    assert torch.allclose(_apply(H, Edit("move", ["x", "x"], [0]), [a, a]), H, atol=1e-5)   # source = target: no-op
 
 
 def test_ablate_zeroes_jlens_logit(h, mozart):
