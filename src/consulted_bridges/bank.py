@@ -44,7 +44,7 @@ ROLE = {"Gate": "Gate", "1 ": "Scored", "2 ": "Scored", "3 ": "Scored", "6 ": "S
 
 
 def load(globs):
-    fs = [f for g in globs for f in sorted(glob.glob(str(R / g)))]
+    fs = [f for g in globs for f in sorted(glob.glob(str(R / g))) if Path(f).stat().st_size > 1]  # skip empty shards
     return pd.concat([pd.read_csv(f) for f in fs], ignore_index=True) if fs else pd.DataFrame()
 
 
