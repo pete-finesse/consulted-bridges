@@ -188,12 +188,6 @@
   .tf-dot.d2 { width: 9px; height: 9px; left: -12px; bottom: -26px; }
   .tf-say { position: relative; display: grid; gap: 4px; padding: 14px 22px; border: 1.5px solid var(--line); border-radius: 14px; background: var(--panel); font-family: var(--mono-real); font-size: 1.25rem; min-width: 6rem; }
   .tf-say::before { content: ""; position: absolute; left: -9px; bottom: 14px; width: 14px; height: 14px; background: var(--panel); border-left: 1.5px solid var(--line); border-bottom: 1.5px solid var(--line); transform: rotate(45deg); }
-  .edits { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
-  .edit { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 10px; background: var(--panel); }
-  .edit p { font-size: 0.9rem; color: var(--muted); }
-  .ed-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-  .ed-row .tf-pill { min-width: 0; }
-  .tf-pill.gone { border-style: dashed; color: var(--muted); font-style: italic; }
   .hops { display: grid; grid-template-columns: minmax(0, 1.4fr) auto minmax(0, 1fr) auto minmax(0, 0.7fr); gap: 12px 14px; align-items: center; }
   .hops .chip { justify-self: start; }
   .hh { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
@@ -454,7 +448,7 @@
   <!-- 1 CONTEXT -->
   <section class="chapter" id="context">
     <div class="ch-head">
-      <span class="ch-num">Chapter 1 · Context</span>
+      <span class="ch-num">1 · Context</span>
       <h2>How can you see what a model is thinking?</h2>
       <p>One recent way to look inside a model is the Jacobian lens, or <b>J-lens</b> (Gurnee et al., 2026). For each token in the vocabulary, it finds a <b>direction</b> at every layer that tracks how strongly the model is heading toward eventually saying that token. Reading the model's state along these directions as it runs shows which tokens are on its mind. The authors call this the <b>J-space</b>.</p>
       <p>The J-space lets you watch a model think through a question that takes more than one step. Take “The number of legs on the animal that spins webs is”. To answer, the model first has to work out which animal, a spider, and only then recall how many legs it has. “Spider” is never written, not in the prompt and not in the answer, yet it shows up in the J-space partway through: the model's intermediate step, made visible.</p>
@@ -502,16 +496,12 @@
       <h3>Editing the J-space</h3>
       <p>The swap is one kind of edit in the J-space: it puts one token's direction in place of another's. Another kind is <b>removal</b>, also called <b>ablation</b>: delete the token's direction from the model's state and put nothing in its place. Removal is the edit we use. Take the bridge away, and see whether the answer changes.</p>
     </div>
-    <div class="edits" aria-label="Two edits in the J-space: swap and removal">
-      <div class="edit"><span class="tag">Swap</span><div class="ed-row"><span class="tf-pill x">spider</span><span class="arrow">→</span><span class="tf-pill sw">ant</span></div><p>Replace one token with another.</p></div>
-      <div class="edit"><span class="tag">Removal (ablation)</span><div class="ed-row"><span class="tf-pill x">spider</span><span class="arrow">→</span><span class="tf-pill gone">nothing</span></div><p>Take the token out. This is what we do.</p></div>
-    </div>
   </section>
 
   <!-- 2 LIMITATION -->
   <section class="chapter" id="limitation">
     <div class="ch-head">
-      <span class="ch-num">Chapter 2 · The gap</span>
+      <span class="ch-num">2 · The gap</span>
       <h2>Seeing a thought is not the same as using it</h2>
       <p>The paper's method, in one line: after the agent gives in, check whether the bridge is in the J-lens top 100 more often than an unrelated city. That shows the bridge is <i>present</i>. It does not show the agent <i>used</i> it.</p>
     </div>
@@ -586,13 +576,9 @@
   <!-- 3 SOLUTION -->
   <section class="chapter" id="solution">
     <div class="ch-head">
-      <span class="ch-num">Chapter 3 · Our approach</span>
+      <span class="ch-num">3 · Our approach</span>
       <h2>Take the bridge out and see what breaks</h2>
-      <p>The J-lens gives the bridge a direction inside the model. We delete the model's state along that direction in a few layers (an <b>ablation</b>) and measure how the answer changes. If the answer depended on the bridge, it moves. If it was copied from the group, it doesn't.</p>
-    </div>
-    <div class="vs">
-      <div class="read"><span class="tag" style="color:var(--bridge)">Reading (the paper)</span><h4>Is the bridge there?</h4><p>Rank it with the J-lens. A high rank says the model has the word in mind. It says nothing about whether the answer depends on it.</p></div>
-      <div class="remove"><span class="tag" style="color:var(--answer)">Removing (this work)</span><h4>Does the answer need the bridge?</h4><p>Ablate its direction and re-read the answer. A change says the answer was built on the bridge. No change says it wasn't.</p></div>
+      <p>We remove the bridge in a few layers and measure how the answer changes.</p>
     </div>
     <div class="panel">
       <h3>Measuring the answer: probabilities, not just words</h3>
@@ -618,7 +604,7 @@
   <!-- 4 REQUIREMENTS -->
   <section class="chapter" id="requirements">
     <div class="ch-head">
-      <span class="ch-num">Chapter 4 · What a question must satisfy</span>
+      <span class="ch-num">4 · What a question must satisfy</span>
       <h2>Four requirements</h2>
       <p>The first three are about the model on its own. The fourth is about the group.</p>
     </div>
@@ -681,7 +667,7 @@
   <!-- 5 QUESTION TYPE -->
   <section class="chapter" id="type">
     <div class="ch-head">
-      <span class="ch-num">Chapter 5 · The question that follows</span>
+      <span class="ch-num">5 · The question that follows</span>
       <h2>Ask for the first letter of the hidden word</h2>
     </div>
     <div class="panel fmt">
@@ -709,7 +695,7 @@
   <!-- 6 CHECKS -->
   <section class="chapter" id="checks">
     <div class="ch-head">
-      <span class="ch-num">Chapter 6 · Checking the requirements</span>
+      <span class="ch-num">6 · Checking the requirements</span>
       <h2>Every question is tested before it is used</h2>
       <p>Requirement 4 holds by construction. Requirements 1 to 3 are measured on each question, alone, with one tool.</p>
     </div>
@@ -770,7 +756,7 @@
   <!-- 7 GROUP -->
   <section class="chapter" id="group">
     <div class="ch-head">
-      <span class="ch-num">Chapter 7 · The group</span>
+      <span class="ch-num">7 · The group</span>
       <h2>Same questions, now with other agents</h2>
       <p>Each question is asked alone, then with one, two or three peers who give the right letter, then with one, two or three peers who give the same wrong letter.</p>
     </div>
@@ -844,7 +830,7 @@ with one letter.</pre>
   <!-- 8 FINDINGS -->
   <section class="chapter" id="findings">
     <div class="ch-head">
-      <span class="ch-num">Chapter 8 · What we found</span>
+      <span class="ch-num">8 · What we found</span>
       <h2>Five findings</h2>
       <p>19 questions on Qwen3.6-27B and 20 on Qwen3.5-4B, excluding the six used to set the rules. Alone, the bridge is needed in all 19 on the 27B and 17 of 20 on the 4B (3 mixed).</p>
     </div>
@@ -970,7 +956,7 @@ with one letter.</pre>
   <!-- 9 MEANING -->
   <section class="chapter" id="meaning">
     <div class="ch-head">
-      <span class="ch-num">Chapter 9 · What it means</span>
+      <span class="ch-num">9 · What it means</span>
       <h2>Back to the question</h2>
       <p>Does an agent's answer in a group still come from its own reasoning? On these questions, it depends on what the group does.</p>
     </div>
