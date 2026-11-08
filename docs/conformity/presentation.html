@@ -152,6 +152,7 @@
   .assoc-links { width: 40px; height: 0; border-top: 2px dashed var(--muted); }
   .assoc-words { display: flex; gap: 6px; flex-wrap: wrap; }
   .story p { font-size: 0.95rem; }
+  .assoc-svg { width: 100%; max-width: 320px; height: auto; justify-self: center; }
   .punch { font-size: 1.15rem; font-weight: 600; }
   /* transcript */
   .transcript { display: grid; gap: 8px; font-size: 0.95rem; }
@@ -393,11 +394,22 @@
       <div class="whygrid">
         <div class="why">
           <h4>Words light up by association</h4>
-          <div class="assoc" aria-label="Reading Mozart brings related words to mind">
-            <span class="chip">Mozart</span>
-            <span class="assoc-links" aria-hidden="true"></span>
-            <span class="assoc-words"><span class="chip br">Salzburg</span><span class="chip">Vienna</span><span class="chip">piano</span></span>
-          </div>
+          <svg class="assoc-svg" viewBox="0 0 320 150" role="img" aria-label="Mozart in the middle, with related words around it: Salzburg, Vienna, piano and opera">
+            <g style="stroke: var(--line)" stroke-width="1.5">
+              <line x1="160" y1="75" x2="62" y2="30"/><line x1="160" y1="75" x2="262" y2="30"/>
+              <line x1="160" y1="75" x2="62" y2="122"/><line x1="160" y1="75" x2="262" y2="122"/>
+            </g>
+            <rect x="122" y="60" width="76" height="30" rx="8" style="fill: var(--panel); stroke: var(--ink)" stroke-width="1.2"/>
+            <text x="160" y="80" text-anchor="middle" font-size="14" font-weight="700" style="fill: var(--ink)">Mozart</text>
+            <rect x="20" y="16" width="86" height="28" rx="8" style="fill: var(--bridge-soft); stroke: var(--bridge)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <text x="63" y="35" text-anchor="middle" font-size="13" font-weight="700" style="fill: var(--bridge)">Salzburg</text>
+            <rect x="226" y="16" width="72" height="28" rx="8" style="fill: var(--panel); stroke: var(--line)" stroke-width="1.2"/>
+            <text x="262" y="35" text-anchor="middle" font-size="13" style="fill: var(--muted)">Vienna</text>
+            <rect x="30" y="108" width="64" height="28" rx="8" style="fill: var(--panel); stroke: var(--line)" stroke-width="1.2"/>
+            <text x="62" y="127" text-anchor="middle" font-size="13" style="fill: var(--muted)">piano</text>
+            <rect x="230" y="108" width="64" height="28" rx="8" style="fill: var(--panel); stroke: var(--line)" stroke-width="1.2"/>
+            <text x="262" y="127" text-anchor="middle" font-size="13" style="fill: var(--muted)">opera</text>
+          </svg>
           <p>Reading “Mozart” brings Salzburg to mind whether or not the model uses it to find the country. A word can be readable just because something related to it was read.</p>
         </div>
         <div class="why">
@@ -411,15 +423,17 @@
       </div>
       <div class="stories">
         <div class="story a-side">
-          <h4>If the agent worked out Austria and said France anyway</h4>
+          <span class="tag">Story A</span>
+          <h4>It worked out Austria, then said France anyway</h4>
           <p>Removing Salzburg would change its answer: the pull toward Austria goes away.</p>
         </div>
         <div class="story b-side">
-          <h4>If the agent just took France from the peers</h4>
+          <span class="tag">Story B</span>
+          <h4>It just took France from the peers</h4>
           <p>Removing Salzburg would change nothing.</p>
         </div>
       </div>
-      <p class="note">In both cases Salzburg can be readable.</p>
+      <p class="note">In both stories Salzburg can be readable.</p>
       <p class="punch">Reading can't tell these apart. <span class="a">Removing can.</span></p>
     </div>
   </section>
