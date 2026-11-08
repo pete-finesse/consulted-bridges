@@ -597,7 +597,7 @@
     </div>
     <div class="col">
       <h3>Measuring the answer: probabilities, not just the pick</h3>
-      <p>Silent Dissent looks only at which answer the agent gives. But a language model predicts its next token by putting a probability on every option, and the answer it writes is just the most likely one. We read those probabilities directly. We write P(“Austria”) for the chance that the next token is “Austria”. That way we can see the model become more or less sure even when its pick stays the same.</p>
+      <p>Silent Dissent looks only at which answer the agent gives. But a language model predicts its next token by putting a probability on every option, and the answer it writes is just the most likely one. We read those probabilities directly, which gives a much finer picture of how a removal affects the model than the written answer alone.</p>
     </div>
     <div class="col">
       <p>Back to the Mozart example. The two stories differ only in whether Salzburg is pulling, so we remove Salzburg and read the probabilities. If Salzburg was pulling, the chance of Austria falls, even though the agent still says France. If it wasn't, nothing moves.</p>
