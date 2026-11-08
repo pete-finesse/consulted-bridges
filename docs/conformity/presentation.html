@@ -450,7 +450,7 @@
     <div class="ch-head">
       <span class="ch-num">Chapter 1 · Context</span>
       <h2>How can you see what a model is thinking?</h2>
-      <p>There are many methods for inspecting a model's internals. A recent one, from this summer, is the Jacobian lens, or <b>J-lens</b> (Gurnee et al., 2026). For every token in the vocabulary, it finds a <b>direction</b> at each layer: roughly, how sensitive the model's eventual output of that token is to the state there. Reading the model's state along these directions while it runs shows which tokens are most active. The authors call this the <b>J-space</b>.</p>
+      <p>One recent way to look inside a model is the Jacobian lens, or <b>J-lens</b> (Gurnee et al., 2026). For each token in the vocabulary, it finds a <b>direction</b> at every layer that tracks how strongly the model is heading toward eventually saying that token. Reading the model's state along these directions as it runs shows which tokens are on its mind. The authors call this the <b>J-space</b>.</p>
       <p>The J-space lets you watch a model think through a question that takes more than one step. Take “The number of legs on the animal that spins webs is”. To answer, the model first has to work out which animal, a spider, and only then recall how many legs it has. “Spider” is never written, not in the prompt and not in the answer, yet it shows up in the J-space partway through: the model's intermediate step, made visible.</p>
       <p>Seeing a step is not the same as using it. To check that the model really answers from its J-space, the authors <b>swap</b> the token: replace “spider” with “ant” there, and the answer changes from 8 to 6.</p>
     </div>
