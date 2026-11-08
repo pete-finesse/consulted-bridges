@@ -168,15 +168,26 @@
   .ld-table td.a, .ld-table td.b, .ld-table td.ld-c { font-weight: 700; }
   .ld-c { color: var(--peer); }
 
-  .swapfig { gap: 16px; }
-  .swapprompt { display: grid; gap: 4px; padding: 12px 14px; border-radius: 8px; background: var(--bg); border: 1px solid var(--line); font-size: 1.05rem; }
-  .swaprows { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
-  .swaprow { display: grid; grid-template-columns: auto auto 1fr; gap: 8px 14px; align-items: end; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; }
-  .swaprow .tag { grid-column: 1 / -1; }
-  .swaprow .arrow { padding-bottom: 4px; }
-  .swapstep { display: grid; gap: 3px; justify-items: start; }
-  .slbl { font-size: 0.75rem; color: var(--muted); }
-  .chip.sw { border-color: var(--peer); color: var(--peer); background: var(--peer-soft); font-weight: 700; }
+  .thinkfig { gap: 0; padding: 0; overflow: hidden; }
+  .thinkfig figcaption { padding: 12px clamp(18px, 3vw, 30px) 18px; }
+  .tf-prompt { font-family: var(--mono-real); font-size: clamp(0.95rem, 2vw, 1.1rem); line-height: 1.6; padding: 18px clamp(18px, 3vw, 30px) 26px; border-bottom: 1px solid var(--line); }
+  .tf-k { color: var(--muted); }
+  .tf-tok { position: relative; border: 1.5px solid var(--bridge); background: var(--bridge-soft); border-radius: 5px; padding: 0 4px; }
+  .tf-tok::after { content: ""; position: absolute; left: 50%; top: 100%; height: 26px; border-left: 2px dashed var(--bridge); }
+  .tf-body { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px 28px; padding: 20px clamp(18px, 3vw, 30px) 6px; background: color-mix(in srgb, var(--bg) 55%, var(--panel)); }
+  .tf-case { display: grid; gap: 10px; }
+  .tf-row { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .tf-think { position: relative; display: grid; gap: 8px; justify-items: center; padding: 26px 22px 18px; min-width: 9.5rem; border: 2px dashed var(--bridge); border-radius: 18px; background: var(--bridge-soft); margin-bottom: 16px; }
+  .tf-lab { position: absolute; top: 5px; left: 0; right: 0; text-align: center; font-size: 0.75rem; color: var(--muted); }
+  .tf-pill { font-family: var(--mono-real); font-size: 1rem; padding: 3px 18px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--panel); min-width: 7rem; text-align: center; }
+  .tf-pill.br { border-color: var(--bridge); color: var(--bridge); font-weight: 700; }
+  .tf-pill.sw { border-color: var(--peer); color: var(--peer); font-weight: 700; }
+  .tf-pill.x, .tf-say .x { color: var(--muted); text-decoration: line-through; }
+  .tf-dot { position: absolute; border: 2px dashed var(--bridge); border-radius: 50%; background: var(--bridge-soft); }
+  .tf-dot.d1 { width: 16px; height: 16px; left: 2px; bottom: -14px; }
+  .tf-dot.d2 { width: 9px; height: 9px; left: -12px; bottom: -26px; }
+  .tf-say { position: relative; display: grid; gap: 4px; padding: 14px 22px; border: 1.5px solid var(--line); border-radius: 14px; background: var(--panel); font-family: var(--mono-real); font-size: 1.25rem; min-width: 6rem; }
+  .tf-say::before { content: ""; position: absolute; left: -9px; bottom: 14px; width: 14px; height: 14px; background: var(--panel); border-left: 1.5px solid var(--line); border-bottom: 1.5px solid var(--line); transform: rotate(45deg); }
   .hops { display: grid; grid-template-columns: minmax(0, 1.4fr) auto minmax(0, 1fr) auto minmax(0, 0.7fr); gap: 12px 14px; align-items: center; }
   .hops .chip { justify-self: start; }
   .hh { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
@@ -439,27 +450,30 @@
     <div class="ch-head">
       <span class="ch-num">Chapter 1 · Context</span>
       <h2>How can you see what a model is thinking?</h2>
-      <p>There are many methods for inspecting a model's internals. A recent one, from this summer, is the Jacobian lens, or <b>J-lens</b> (Gurnee et al., 2026). For every word in the vocabulary, it finds a <b>direction</b> at each layer: roughly, how sensitive the model's eventual output of that word is to the state there. Reading the model's state along these directions while it runs shows which words are most active. The authors call this the <b>J-space</b>, and show that models do part of their thinking in it.</p>
-      <p>Seeing a word there doesn't prove the model uses it, so they also <b>swap</b> it. In the prompt below, “spider” lights up partway through even though it is never written. Replace it with “ant”, and the answer changes from 8 to 6.</p>
+      <p>There are many methods for inspecting a model's internals. A recent one, from this summer, is the Jacobian lens, or <b>J-lens</b> (Gurnee et al., 2026). For every token in the vocabulary, it finds a <b>direction</b> at each layer: roughly, how sensitive the model's eventual output of that token is to the state there. Reading the model's state along these directions while it runs shows which tokens are most active. The authors call this the <b>J-space</b>.</p>
+      <p>The J-space lets you watch a model think through a question that takes more than one step. Take “The number of legs on the animal that spins webs is”. To answer, the model first has to work out which animal, a spider, and only then recall how many legs it has. “Spider” is never written, not in the prompt and not in the answer, yet it shows up in the J-space partway through: the model's intermediate step, made visible.</p>
+      <p>Seeing a step is not the same as using it. To check that the model really answers from its J-space, the authors <b>swap</b> the token: replace “spider” with “ant” there, and the answer changes from 8 to 6.</p>
     </div>
 
-    <figure class="panel swapfig" aria-label="Swapping spider for ant in the J-space changes the answer from 8 to 6">
-      <div class="swapprompt"><span class="tag">Prompt</span><span>The number of legs on the animal that spins webs is</span></div>
-      <div class="swaprows">
-        <div class="swaprow">
-          <span class="tag">As is</span>
-          <span class="swapstep"><span class="slbl">in the J-space</span><span class="chip br">spider</span></span>
-          <span class="arrow" aria-hidden="true">→</span>
-          <span class="swapstep"><span class="slbl">answer</span><span class="chip an">8</span></span>
+    <figure class="panel thinkfig" aria-label="The J-space holds spider and the model says 8; after swapping spider for ant, it says 6">
+      <div class="tf-prompt"><span class="tf-k">Prompt:</span> The number of legs on the animal that spins webs <span class="tf-tok">is</span></div>
+      <div class="tf-body">
+        <div class="tf-case">
+          <span class="tag">Reading</span>
+          <div class="tf-row">
+            <div class="tf-think"><span class="tf-lab">J-space</span><span class="tf-pill br">spider</span><i class="tf-dot d1"></i><i class="tf-dot d2"></i></div>
+            <div class="tf-say"><span class="a">“8”</span></div>
+          </div>
         </div>
-        <div class="swaprow">
-          <span class="tag">Swapped</span>
-          <span class="swapstep"><span class="slbl">in the J-space</span><span class="chip sw">ant</span></span>
-          <span class="arrow" aria-hidden="true">→</span>
-          <span class="swapstep"><span class="slbl">answer</span><span class="chip an">6</span></span>
+        <div class="tf-case">
+          <span class="tag">Swapping</span>
+          <div class="tf-row">
+            <div class="tf-think"><span class="tf-lab">J-space</span><span class="tf-pill x">spider</span><span class="tf-pill sw">ant</span><i class="tf-dot d1"></i><i class="tf-dot d2"></i></div>
+            <div class="tf-say"><span class="x">“8”</span><span class="a">“6”</span></div>
+          </div>
         </div>
       </div>
-      <figcaption>Example from the Jacobian lens paper (Gurnee et al., 2026). The answer follows the word in the J-space, so the model is using it, not just showing it.</figcaption>
+      <figcaption>After the Jacobian lens paper (Gurnee et al., 2026). Left: the hidden step shows up in the J-space. Right: change it, and the answer follows.</figcaption>
     </figure>
 
     <div class="col">
