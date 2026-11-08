@@ -97,6 +97,12 @@
   .fact span { font-size: 0.875rem; color: var(--muted); }
 
   .howfig { gap: 22px; }
+  .ldgrid { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 20px; align-items: stretch; }
+  .ld-note { display: grid; gap: 6px; max-width: 26ch; font-size: 0.95rem; }
+  .ld-note p { color: var(--muted); }
+  .ld-note.left { align-self: start; justify-self: end; text-align: right; padding-top: 14px; }
+  .ld-note.right { align-self: end; justify-self: start; padding-bottom: 30px; }
+  @media (max-width: 760px) { .ldgrid { grid-template-columns: 1fr; } .ld-note.left, .ld-note.right { justify-self: start; text-align: left; padding: 0; max-width: none; } }
   .lensdemo { display: grid; justify-items: center; gap: 0; padding-block: 6px; }
   .ld-prompt { font-family: var(--mono-real); font-size: clamp(1rem, 2.4vw, 1.25rem); line-height: 1.6; padding: 14px 18px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); max-width: 30ch; }
   .ld-tok { border: 1.5px solid var(--answer); background: var(--answer-soft); border-radius: 5px; padding: 0 4px; }
@@ -294,17 +300,27 @@
     </div>
     <div class="col"><h3>How can you see what a model is thinking?</h3></div>
     <figure class="panel howfig">
-      <div class="lensdemo">
-        <div class="ld-prompt">The color of the planet fourth from the sun <span class="ld-tok">is</span></div>
-        <span class="ld-line" aria-hidden="true"></span>
-        <table class="ld-table" aria-label="Top J-lens word at three layers">
-          <thead><tr><th>Layer</th><th>J-lens</th></tr></thead>
-          <tbody>
-            <tr><td>Final</td><td class="a">red</td></tr>
-            <tr><td>71</td><td class="b">Mars</td></tr>
-            <tr><td>50</td><td class="ld-c">color</td></tr>
-          </tbody>
-        </table>
+      <div class="ldgrid">
+        <div class="ld-note left">
+          <span class="tag">Two-hop question</span>
+          <p>Names one thing and asks about another, reachable only through a hidden middle step.</p>
+        </div>
+        <div class="lensdemo">
+          <div class="ld-prompt">The color of the planet fourth from the sun <span class="ld-tok">is</span></div>
+          <span class="ld-line" aria-hidden="true"></span>
+          <table class="ld-table" aria-label="Top J-lens word at three layers">
+            <thead><tr><th>Layer</th><th>J-lens</th></tr></thead>
+            <tbody>
+              <tr><td>Final</td><td class="a">red</td></tr>
+              <tr><td>71</td><td class="b">Mars</td></tr>
+              <tr><td>50</td><td class="ld-c">color</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ld-note right">
+          <span class="tag" style="color:var(--bridge)">J-lens</span>
+          <p>Reads the model's state, layer by layer, as the words it is heading toward saying: “color”, then “Mars”, then “red”.</p>
+        </div>
       </div>
       <div class="ghost" aria-label="The two hops">
         <span class="chip">planet fourth from the sun</span><span class="arrow">→</span>
@@ -312,8 +328,13 @@
         <span class="chip an">red</span>
         <span class="note"><span class="b">Mars</span> is the hidden middle step, the <b>bridge</b>: nobody writes it.</span>
       </div>
-      <figcaption>A <b>two-hop question</b> names one thing and asks about another that can only be reached through a hidden middle step. The <b>J-lens</b> reads the model's internal state, layer by layer, as the words it is heading toward saying: here “color”, then “Mars”, then the answer “red”. It also gives every word a <b>direction</b> inside the model, which we use later. Example from the Jacobian lens paper (Gurnee et al., 2026).</figcaption>
+      <figcaption>Example from the Jacobian lens paper (Gurnee et al., 2026).</figcaption>
     </figure>
+    <div class="col">
+      <h3>Why these two tools together</h3>
+      <p>The two-hop question supplies a word, the bridge, that has to come from the model rather than from the text. The J-lens reads words the model is moving toward saying later, not only the next word, which suits a word that is never said out loud. Together they let you ask: is the model's own middle step still there?</p>
+      <p>The J-lens also gives every word a <b>direction</b> inside the model. That is what we will remove later.</p>
+    </div>
   </section>
 
   <!-- 2 LIMITATION -->
