@@ -114,7 +114,7 @@
   .chain { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 0.85rem; }
   .chain .chip { padding: 1px 8px; white-space: nowrap; }
   .chain .x { color: var(--muted); text-decoration: line-through; }
-  .pr { display: grid; grid-template-columns: 6.6rem minmax(0, 1fr) 2.6rem; gap: 8px; align-items: center; font-size: 0.8rem; }
+  .pr { display: grid; grid-template-columns: 7.6rem minmax(0, 1fr) 2.6rem; gap: 8px; align-items: center; font-size: 0.8rem; }
   .pr .lab { color: var(--muted); line-height: 1.2; }
   .pr .tr { height: 9px; border-radius: 5px; background: color-mix(in srgb, var(--line) 85%, transparent); overflow: hidden; }
   .pr .tr i { display: block; height: 100%; width: calc(var(--v) * 100%); min-width: 2px; border-radius: 5px; background: var(--answer); }
@@ -342,6 +342,7 @@
     <span class="kicker">AI safety research · multi-agent LLMs · interpretability</span>
     <h1>Bridge Under Conformity</h1>
     <p class="lede">Multi-agent debate is increasingly used to reach consensus among language-model agents, yet agents often yield to a unanimous majority. When it is an agent's turn to answer, does its answer still come from its own reasoning, or does it blindly take the group's?</p>
+    <p class="thesis">Consider the following group decision:</p>
     <figure class="hero-q vote" aria-label="Agent 1's turn in two group votes: one where the other agents give the right answer and one where they all give the same wrong answer">
       <div class="votecol">
         <span class="tag">The group agrees</span>
@@ -368,6 +369,8 @@
       <p class="note" style="grid-column: 1 / -1">The model does not pick one word outright. Each possible next word gets a probability. These numbers are made up to show the idea; real ones come later.</p>
     </figure>
 
+    <p class="thesis">When the model yields there are two possible explanations. To find out which one it is, we edit the model's internal thinking and see how that changes its predicted answer.</p>
+
     <figure class="hstories" aria-label="Two stories for why Agent 1 yields, and what removing Mars would do in each">
       <span class="tag">When Agent 1 yields, two stories fit</span>
       <div class="storygrid">
@@ -376,17 +379,17 @@
         <div class="hd"><span class="tag">The group disagrees</span></div>
 
         <div class="st a-row"><h4>Story A · It works it out</h4><p>It finds <span class="b">Mars</span> on its own, and Mars leads it to <span class="a">red</span>.</p><div class="chain"><span class="chip">fourth from the sun</span><span class="arrow">→</span><span class="chip br">Mars</span><span class="arrow">→</span><span class="chip an">red</span></div></div>
-        <div><span class="mhd">The group agrees</span><div class="pr"><span class="lab">Chance of red</span><span class="tr"><i style="--v:.96"></i></span><span class="val">96%</span></div><div class="pr"><span class="lab">Mars removed</span><span class="tr"><i class="cut" style="--v:.40"></i></span><span class="val">40%</span></div><span class="verdict">Red came partly from Mars.</span></div>
-        <div><span class="mhd">The group disagrees</span><div class="pr"><span class="lab">Chance of red</span><span class="tr"><i style="--v:.35"></i></span><span class="val">35%</span></div><div class="pr"><span class="lab">Mars removed</span><span class="tr"><i class="cut" style="--v:.05"></i></span><span class="val">5%</span></div><span class="verdict">Mars was what kept red alive.</span></div>
+        <div><span class="mhd">The group agrees</span><div class="pr"><span class="lab">Original P(“red”)</span><span class="tr"><i style="--v:.96"></i></span><span class="val">96%</span></div><div class="pr"><span class="lab">Edited P(“red”)</span><span class="tr"><i class="cut" style="--v:.40"></i></span><span class="val">40%</span></div><span class="verdict">Red came partly from Mars.</span></div>
+        <div><span class="mhd">The group disagrees</span><div class="pr"><span class="lab">Original P(“red”)</span><span class="tr"><i style="--v:.35"></i></span><span class="val">35%</span></div><div class="pr"><span class="lab">Edited P(“red”)</span><span class="tr"><i class="cut" style="--v:.05"></i></span><span class="val">5%</span></div><span class="verdict">Mars was what kept red alive.</span></div>
 
         <div class="st b-row"><h4>Story B · It copies</h4><p>It takes the word the others said. <span class="b">Mars</span> plays no part in the answer.</p><div class="chain"><span class="chip pe">the group's word</span><span class="arrow">→</span><span class="chip">its answer</span></div></div>
-        <div><span class="mhd">The group agrees</span><div class="pr"><span class="lab">Chance of red</span><span class="tr"><i style="--v:.96"></i></span><span class="val">96%</span></div><div class="pr"><span class="lab">Mars removed</span><span class="tr"><i class="cut" style="--v:.96"></i></span><span class="val">96%</span></div><span class="verdict">Nothing changes.</span></div>
-        <div><span class="mhd">The group disagrees</span><div class="pr"><span class="lab">Chance of red</span><span class="tr"><i style="--v:.35"></i></span><span class="val">35%</span></div><div class="pr"><span class="lab">Mars removed</span><span class="tr"><i class="cut" style="--v:.35"></i></span><span class="val">35%</span></div><span class="verdict">Nothing changes.</span></div>
+        <div><span class="mhd">The group agrees</span><div class="pr"><span class="lab">Original P(“red”)</span><span class="tr"><i style="--v:.96"></i></span><span class="val">96%</span></div><div class="pr"><span class="lab">Edited P(“red”)</span><span class="tr"><i class="cut" style="--v:.96"></i></span><span class="val">96%</span></div><span class="verdict">Nothing changes.</span></div>
+        <div><span class="mhd">The group disagrees</span><div class="pr"><span class="lab">Original P(“red”)</span><span class="tr"><i style="--v:.35"></i></span><span class="val">35%</span></div><div class="pr"><span class="lab">Edited P(“red”)</span><span class="tr"><i class="cut" style="--v:.35"></i></span><span class="val">35%</span></div><span class="verdict">Nothing changes.</span></div>
       </div>
-      <p class="note">As the agent answers, both stories give the same word with the same probabilities. They differ only when <span class="b">Mars</span> is taken away.</p>
+      <p class="note">P(“red”) is the probability the model gives to “red” as its next word. <b>Original</b> is the model as it is; <b>edited</b> is the same model with <span class="b">Mars</span> removed from its internal thinking. Left alone, both stories give the same word with the same probabilities. They differ only once Mars is removed.</p>
     </figure>
 
-    <p class="thesis">We answer it from inside the model. We use questions with a hidden middle step that the model must work out for itself (here, <span class="b">Mars</span>). We find that step inside the model, <b>remove it</b>, and watch whether the probabilities behind the agent's answer change, first when it is alone and then when other agents agree or disagree with it.</p>
+    <p class="thesis">Here the thing we remove is <span class="b">Mars</span>, the hidden middle step the model has to work out for itself. We use questions built around such a step, and make the same edit when the agent answers alone and when other agents agree or disagree with it.</p>
     <div class="facts" aria-label="Study at a glance">
       <div class="fact"><b>2 models</b><span>Qwen3.6-27B and Qwen3.5-4B</span></div>
       <div class="fact"><b>49 questions</b><span>that pass four requirements</span></div>
