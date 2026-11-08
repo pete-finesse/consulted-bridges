@@ -56,7 +56,6 @@
   - **Is the bridge a backup route?** Remove the peers' letter (its direction on the peer lines) instead of the bridge. If the answer survives, another route still produces it. Then remove both: if only removing both kills the answer, the two routes are redundant (picture 2).
   - **Does the bridge route still work on its own?** Use "agree" prompts where the peers' letter is hidden or neutral (e.g. "Agent 2: (answer submitted)"), so copying can't supply it. Check whether the bridge becomes needed again.
 - **Until then,** the claim is only: *in a group, the bridge stops being necessary.* "Copying" is a hypothesis.
-- **Done (Nov 8, `docs/conformity/routes.html`).** The copy block (removing the peers' letter direction at their tokens) turned out too weak to block copying, so the backup question was answered with the swap test instead. On the 27B the bridge is mostly a backup route (swapping it still flips the answer); on the 4B with the deferential wording it is present but not used. Hiding the letters makes the bridge needed again. Still open: an edit that removes the copy route in place.
 
 ### 1c. Present but unused? Read out the bridge in every group prompt
 

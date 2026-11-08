@@ -1,47 +1,0 @@
-Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   5%|▌         | 46/851 [00:00<00:01, 452.71it/s]Loading weights:  13%|█▎        | 112/851 [00:00<00:01, 566.68it/s]Loading weights:  20%|█▉        | 169/851 [00:00<00:01, 515.97it/s]Loading weights:  29%|██▉       | 248/851 [00:00<00:00, 612.12it/s]Loading weights:  36%|███▋      | 310/851 [00:00<00:00, 602.10it/s]Loading weights:  44%|████▍     | 375/851 [00:00<00:00, 607.49it/s]Loading weights:  51%|█████▏    | 437/851 [00:00<00:00, 592.58it/s]Loading weights:  60%|██████    | 512/851 [00:00<00:00, 613.51it/s]Loading weights:  68%|██████▊   | 581/851 [00:00<00:00, 614.55it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 860.55it/s]
-PROGRESS 0/28 L_gates disagree2
-[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
-/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
-  warn_once(FP_FUSION_DEFAULT_WARNING)
-[L_gates disagree2] P(right) 0.15 (main 0.15) block -> 0.16 copy_need -0.15 dLO +0.00 | need after block 0.58 pushback after +3.62 | still gives in (62s)
-PROGRESS 1/28 L_mozart agree2
-[L_mozart agree2] P(right) 1.00 (main 1.00) block -> 1.00 copy_need -0.00 dLO +0.00 | need after block 0.02 pushback after +0.00 | neither removal kills (24s)
-PROGRESS 2/28 L_piaf disagree2
-[L_piaf disagree2] P(right) 0.09 (main 0.09) block -> 0.11 copy_need -0.20 dLO -0.25 | need after block 0.62 pushback after +4.06 | still gives in (25s)
-PROGRESS 3/28 L_spider agree2
-[L_spider agree2] P(right) 0.99 (main 0.99) block -> 0.99 copy_need -0.00 dLO +0.00 | need after block 0.06 pushback after +0.00 | neither removal kills (23s)
-PROGRESS 4/28 L_york agree3
-[L_york agree3] P(right) 0.98 (main 0.98) block -> 0.98 copy_need -0.00 dLO +0.00 | need after block 0.01 pushback after +0.00 | neither removal kills (23s)
-PROGRESS 5/28 V_LM_angkor agree2
-[V_LM_angkor agree2] P(right) 1.00 (main 1.00) block -> 1.00 copy_need -0.00 dLO +0.00 | need after block 0.29 pushback after +0.00 | mixed (23s)
-PROGRESS 6/28 V_LM_fuji agree2
-[V_LM_fuji agree2] P(right) 1.00 (main 1.00) block -> 1.00 copy_need -0.00 dLO +0.00 | need after block 0.00 pushback after +0.00 | neither removal kills (23s)
-PROGRESS 7/28 V_LM_kremlin agree3
-[V_LM_kremlin agree3] P(right) 1.00 (main 1.00) block -> 1.00 copy_need -0.00 dLO +0.00 | need after block 0.16 pushback after +0.00 | neither removal kills (23s)
-PROGRESS 8/28 V_LM_machu disagree2
-[V_LM_machu disagree2] P(right) 0.18 (main 0.18) block -> 0.24 copy_need -0.19 dLO -0.37 | need after block 0.52 pushback after +2.12 | still gives in (23s)
-PROGRESS 9/28 V_LM_petronas agree2
-[V_LM_petronas agree2] P(right) 1.00 (main 1.00) block -> 1.00 copy_need -0.00 dLO +0.00 | need after block 0.02 pushback after +0.00 | neither removal kills (23s)
-PROGRESS 10/28 V_LP_ali agree2
-[V_LP_ali agree2] P(right) 0.99 (main 0.99) block -> 0.99 copy_need -0.00 dLO +0.00 | need after block 0.31 pushback after +0.00 | mixed (23s)
-PROGRESS 11/28 V_LP_hemsworth agree3
-[V_LP_hemsworth agree3] P(right) 0.99 (main 0.99) block -> 0.99 copy_need -0.00 dLO +0.00 | need after block 0.10 pushback after +0.00 | neither removal kills (24s)
-PROGRESS 12/28 V_LP_hendrix agree2
-[V_LP_hendrix agree2] P(right) 0.96 (main 0.96) block -> 0.96 copy_need -0.00 dLO +0.00 | need after block 0.32 pushback after +0.00 | mixed (24s)
-PROGRESS 13/28 V_LP_hendrix disagree3
-[V_LP_hendrix disagree3] P(right) 0.16 (main 0.16) block -> 0.20 copy_need -0.26 dLO -0.25 | need after block 0.56 pushback after +2.75 | still gives in (23s)
-PROGRESS 14/28 V_LP_obama_m disagree2
-[V_LP_obama_m disagree2] P(right) 0.31 (main 0.31) block -> 0.34 copy_need -0.09 dLO -0.12 | need after block 0.81 pushback after +3.62 | still gives in (23s)
-PROGRESS 15/28 V_LU_alberta agree2
-[V_LU_alberta agree2] P(right) 0.99 (main 0.99) block -> 0.99 copy_need 0.00 dLO +0.00 | need after block 0.00 pushback after +0.00 | neither removal kills (23s)
-PROGRESS 16/28 V_LU_berklee agree2
-[V_LU_berklee agree2] P(right) 1.00 (main 1.00) block -> 1.00 copy_need -0.00 dLO +0.00 | need after block 0.03 pushback after +0.00 | neither removal kills (23s)
-PROGRESS 17/28 V_LU_berklee disagree3
-[V_LU_berklee disagree3] P(right) 0.04 (main 0.04) block -> 0.04 copy_need -0.30 dLO -0.00 | need after block 0.49 pushback after +2.25 | still gives in (26s)
-PROGRESS 18/28 V_LU_pompeu agree1
-[V_LU_pompeu agree1] P(right) 0.99 (main 1.00) block -> 1.00 copy_need -0.00 dLO +0.00 | need after block 0.16 pushback after +0.00 | neither removal kills (24s)
-PROGRESS 19/28 V_LU_pompeu disagree2
-[V_LU_pompeu disagree2] P(right) 0.11 (main 0.15) block -> 0.15 copy_need 0.00 dLO -0.37 | need after block 0.10 pushback after +0.12 | still gives in (23s)
-PROGRESS 20/28 L_gates hidden3
-[L_gates hidden3] says 'S' P(right) 0.48 onset 54 need 0.60 | bridge still needed (27s)
-PROGRESS 21/28 L_spider hidden3
