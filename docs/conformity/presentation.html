@@ -27,6 +27,7 @@
     --display: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     --body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     --mono: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono-real: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -96,6 +97,18 @@
   .fact span { font-size: 0.875rem; color: var(--muted); }
 
   .howfig { gap: 22px; }
+  .lensdemo { display: grid; justify-items: center; gap: 0; padding-block: 6px; }
+  .ld-prompt { font-family: var(--mono-real); font-size: clamp(1rem, 2.4vw, 1.25rem); line-height: 1.6; padding: 14px 18px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); max-width: 30ch; }
+  .ld-tok { border: 1.5px solid var(--answer); background: var(--answer-soft); border-radius: 5px; padding: 0 4px; }
+  .ld-line { width: 0; height: 40px; border-left: 2px dashed var(--answer); }
+  .ld-table { width: auto; min-width: 14rem; border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; font-family: var(--mono-real); background: var(--panel); }
+  .ld-table th { font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 6px 14px; border-bottom: 1px solid var(--line); }
+  .ld-table td { padding: 7px 14px; border-bottom: 1px solid var(--line); font-size: 1rem; }
+  .ld-table tr:last-child td { border-bottom: 0; }
+  .ld-table td:first-child { text-align: right; color: var(--muted); border-right: 1px solid var(--line); }
+  .ld-table td.a, .ld-table td.b, .ld-table td.ld-c { font-weight: 700; }
+  .ld-c { color: var(--peer); }
+
   .pipe { display: grid; grid-template-columns: minmax(0, 1.4fr) auto minmax(0, 1fr) auto minmax(0, 0.55fr); gap: 12px; align-items: center; }
   .pipe-box { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; background: var(--panel); min-height: 100%; }
   .pipe-box .pq { font-size: 1rem; line-height: 1.45; }
@@ -281,33 +294,25 @@
     </div>
     <div class="col"><h3>How can you see what a model is thinking?</h3></div>
     <figure class="panel howfig">
-      <div class="pipe">
-        <div class="pipe-box">
-          <span class="tag">1 · A two-hop question</span>
-          <p class="pq">“What letter does the name of the country where the Colosseum is located start with?”</p>
-        </div>
-        <span class="pipe-arrow" aria-hidden="true">→</span>
-        <div class="pipe-box model">
-          <span class="tag">Inside the model</span>
-          <div class="layers" aria-label="The model's layers, with the hidden step Italy in the middle">
-            <i></i><i></i><i class="hot"></i><i class="hot"></i><i class="hot"></i><i></i><i></i>
-            <span class="chip br">Italy</span>
-          </div>
-          <span class="note">the hidden step, never written</span>
-        </div>
-        <span class="pipe-arrow" aria-hidden="true">→</span>
-        <div class="pipe-box ans">
-          <span class="tag">Answer</span>
-          <span class="big a">I</span>
-        </div>
+      <div class="lensdemo">
+        <div class="ld-prompt">The color of the planet fourth from the sun <span class="ld-tok">is</span></div>
+        <span class="ld-line" aria-hidden="true"></span>
+        <table class="ld-table" aria-label="Top J-lens word at three layers">
+          <thead><tr><th>Layer</th><th>J-lens</th></tr></thead>
+          <tbody>
+            <tr><td>Final</td><td class="a">red</td></tr>
+            <tr><td>71</td><td class="b">Mars</td></tr>
+            <tr><td>50</td><td class="ld-c">color</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="lensrow">
-        <span class="tag" style="color:var(--bridge)">2 · The J-lens reads the model's state as a ranking of words</span>
-        <div class="rank"><span class="w b">Italy</span><span class="tr"><i style="--v:.94;background:var(--bridge)"></i></span><span class="r">rank 1</span></div>
-        <div class="rank"><span class="w">Spain</span><span class="tr"><i style="--v:.76;background:var(--noise)"></i></span><span class="r">rank 20</span></div>
-        <div class="rank"><span class="w">Tokyo</span><span class="tr"><i style="--v:.35;background:var(--noise)"></i></span><span class="r">rank 3,245</span></div>
+      <div class="ghost" aria-label="The two hops">
+        <span class="chip">planet fourth from the sun</span><span class="arrow">→</span>
+        <span class="chip br">Mars</span><span class="arrow">→</span>
+        <span class="chip an">red</span>
+        <span class="note"><span class="b">Mars</span> is the hidden middle step, the <b>bridge</b>: nobody writes it.</span>
       </div>
-      <figcaption>The question names the Colosseum and asks for a letter, so the middle step, <span class="b">Italy</span> (the <b>bridge</b>), can only come from the model itself. The J-lens finds it near the top of about 250,000 words (rank 0 is the top). It also gives every word a <b>direction</b> inside the model, which we use later. Qwen3.6-27B, last token before the answer, best rank over layers 52–55; bars on a log scale.</figcaption>
+      <figcaption>A <b>two-hop question</b> names one thing and asks about another that can only be reached through a hidden middle step. The <b>J-lens</b> reads the model's internal state, layer by layer, as the words it is heading toward saying: here “color”, then “Mars”, then the answer “red”. It also gives every word a <b>direction</b> inside the model, which we use later. Example from the Jacobian lens paper (Gurnee et al., 2026).</figcaption>
     </figure>
   </section>
 
