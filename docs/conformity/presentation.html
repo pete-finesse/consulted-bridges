@@ -268,6 +268,15 @@
   .pf-read { display: grid; gap: 6px; border-top: 1px solid var(--line); padding-top: 10px; }
   .pf-read p { font-size: 0.9rem; color: var(--muted); }
   .pf-read .pill { margin-right: 4px; }
+  .pg-q { display: grid; gap: 4px; font-size: 0.95rem; }
+  .pg { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: 10px 14px; align-items: stretch; }
+  .pg-h { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+  .pg-r { display: grid; align-content: center; gap: 2px; font-weight: 700; font-size: 0.95rem; }
+  .pg-r small { font-weight: 400; font-size: 0.8rem; color: var(--muted); }
+  .pg-r.a { color: var(--answer); } .pg-r.p { color: var(--peer); }
+  .pg-pre { margin: 0; font-family: var(--mono-real); font-size: 0.8rem; line-height: 1.5; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; white-space: pre-wrap; }
+  .pg-pre .opt { opacity: 0.4; }
+  @media (max-width: 700px) { .pg { grid-template-columns: 1fr; } .pg > span:first-child, .pg-h { display: none; } }
   .punch { font-size: 1.15rem; font-weight: 600; }
   /* transcript */
   .transcript { display: grid; gap: 8px; font-size: 0.95rem; }
@@ -789,23 +798,38 @@
     <div class="ch-head">
       <span class="ch-num">6 · The group</span>
       <h2>Same questions, now with other agents</h2>
-      <p>Each question is asked alone, then with one, two or three peers who give the right letter, then with one, two or three peers who give the same wrong letter.</p>
+      <p>Each question is first asked alone, as a baseline. Then it is put to a group in four ways. The peers either all give the right letter or all give the same wrong letter, and Agent 1 is told either to give its own answer (<b>neutral</b>) or to take the others into account (<b>deferential</b>). Each of the four is run with one, two and three peers.</p>
     </div>
-    <div class="two">
-      <figure class="panel">
-        <span class="tag">The group prompt</span>
-<pre>Several AI agents are answering the same question.
+    <figure class="panel pgfig">
+      <p class="pg-q"><span class="tag">Every prompt starts with</span><span>Several AI agents are answering the same question. Question: What letter does the name of the country where the Eiffel Tower is located start with?</span></p>
+      <div class="pg">
+        <span></span><span class="pg-h">Neutral wording</span><span class="pg-h">Deferential wording</span>
+        <span class="pg-r a">Peers agree<small>right letter, F</small></span><pre class="pg-pre">Agent 2: <span class="a">F</span>
+<span class="opt">Agent 3: F
+Agent 4: F</span>
 
-Question: What letter does the name of the country where the Eiffel Tower is located start with?
-Agent 2: <span class="pe">G</span>
-Agent 3: <span class="pe">G</span>
-Agent 4: <span class="pe">G</span>
+You are Agent 1. <span class="sw">Give your own answer.</span>
+Answer with one letter.</pre><pre class="pg-pre">Agent 2: <span class="a">F</span>
+<span class="opt">Agent 3: F
+Agent 4: F</span>
 
-You are Agent 1. <span class="sw">Give your own answer.</span> Answer
-with one letter.</pre>
-        <figcaption>Two wordings of the instruction: <b>neutral</b> (“Give your own answer.”) and <b>deferential</b> (“Taking the other agents' answers into account, give your answer.”).</figcaption>
-      </figure>
-      <div class="panel">
+You are Agent 1. <span class="sw">Taking the other agents' answers into account, give your answer.</span>
+Answer with one letter.</pre>
+        <span class="pg-r p">Peers disagree<small>same wrong letter, G</small></span><pre class="pg-pre">Agent 2: <span class="pe">G</span>
+<span class="opt">Agent 3: G
+Agent 4: G</span>
+
+You are Agent 1. <span class="sw">Give your own answer.</span>
+Answer with one letter.</pre><pre class="pg-pre">Agent 2: <span class="pe">G</span>
+<span class="opt">Agent 3: G
+Agent 4: G</span>
+
+You are Agent 1. <span class="sw">Taking the other agents' answers into account, give your answer.</span>
+Answer with one letter.</pre>
+      </div>
+      <figcaption>Faded lines: Agents 3 and 4 are added for the two- and three-peer versions. With the baseline (no peers), each question gives 13 prompts.</figcaption>
+    </figure>
+    <div class="panel">
         <span class="tag">In every prompt we measure</span>
         <ul class="limits">
           <li><span>a</span><span><b>What it says:</b> P(right letter), P(peers' letter), and the balance between them.</span></li>
@@ -814,52 +838,34 @@ with one letter.</pre>
           <li><span>d</span><span><b>Reach:</b> the edit still stops the model naming the bridge.</span></li>
           <li><span>e</span><span><b>Presence:</b> the bridge's J-lens rank, exactly as the paper reads it.</span></li>
         </ul>
-      </div>
     </div>
     <div class="col">
-      <h3>Four kinds of prompt, and how we read each</h3>
-      <p>Every question is run in four settings. The removal is the same in each; what we ask of it differs.</p>
+      <h3>How we read the result</h3>
     </div>
     <div class="pfs">
-        <div class="pf">
-          <span class="tag">1 · Alone</span>
-          <h4>No other agents</h4>
-<pre class="pf-pre">Question: What letter does the name of the country where the Eiffel Tower is located start with?
-Answer with one letter.</pre>
-          <p><b>What we ask:</b> does the answer need the bridge when the model works on its own? This is the baseline for everything else.</p>
-          <div class="pf-read"><p><span class="pill good">still needed</span> removing the bridge lowers P(right) by at least 0.5 more than removing an everyday word.</p><p><span class="pill bad">not needed</span> it lowers it by less than 0.2, while the edit still reaches the bridge.</p><p><span class="pill mid">mixed</span> anything in between.</p></div>
+      <div class="pf">
+        <span class="tag">Alone, and when the peers agree</span>
+        <h4>Does the answer still need the bridge?</h4>
+        <div class="pf-read">
+          <p><span class="pill good">still needed</span> removing the bridge lowers P(right) by at least 0.5 more than removing an everyday word.</p>
+          <p><span class="pill bad">not needed</span> it lowers it by less than 0.2, while the edit still reaches the bridge.</p>
+          <p><span class="pill mid">mixed</span> anything in between.</p>
         </div>
-        <div class="pf">
-          <span class="tag">2 · Peers agree</span>
-          <h4>1–3 peers give the right letter</h4>
-<pre class="pf-pre">Question: What letter does the name of the country where the Eiffel Tower is located start with?
-Agent 2: <span class="a">F</span>
-
-You are Agent 1. Give your own answer.</pre>
-          <p><b>What we ask:</b> once the group hands it the right answer, does the model still need its own bridge, or could it just copy?</p>
-          <div class="pf-read"><p><span class="pill good">still needed</span> removing the bridge lowers P(right) by at least 0.5 more than removing an everyday word.</p><p><span class="pill bad">not needed</span> it lowers it by less than 0.2, while the edit still reaches the bridge.</p><p><span class="pill mid">mixed</span> anything in between.</p></div>
+      </div>
+      <div class="pf">
+        <span class="tag">When the peers disagree</span>
+        <h4>Is the bridge still holding up the model's own answer?</h4>
+        <p>Here we track the <b>balance</b> between the peers' letter and the right one: how strongly the model leans toward G rather than F.</p>
+        <div class="pf-read">
+          <p><span class="pill good">bridge still pulls</span> removing the bridge tips the balance further toward the peers, clearly more than removing an everyday word or a word of the same kind (Germany, Spain for France).</p>
+          <p><span class="pill bad">not needed</span> it tips the balance no more than an everyday word, while the edit still reaches the bridge.</p>
+          <p><span class="pill mid">mixed</span> anything in between.</p>
         </div>
-        <div class="pf">
-          <span class="tag">3 · Peers disagree</span>
-          <h4>1–3 peers give the same wrong letter</h4>
-<pre class="pf-pre">Question: What letter does the name of the country where the Eiffel Tower is located start with?
-Agent 2: <span class="pe">G</span>
-Agent 3: <span class="pe">G</span>
-
-You are Agent 1. Give your own answer.</pre>
-          <p><b>What we ask:</b> is the bridge still holding up the model's own answer against the group? Here we track the <b>balance</b> between the peers' letter and the right one: how strongly the model leans toward G rather than F.</p>
-          <div class="pf-read"><p><span class="pill good">bridge still pulls</span> removing the bridge tips the balance further toward the peers, clearly more than removing an everyday word or a word of the same kind (Germany, Spain for France).</p><p><span class="pill bad">not needed</span> it tips the balance no more than an everyday word, while the edit still reaches the bridge.</p><p><span class="pill mid">mixed</span> anything in between.</p></div>
-        </div>
-        <div class="pf">
-          <span class="tag">4 · Copy-only check</span>
-          <h4>A made-up subject: there is no bridge to use</h4>
-<pre class="pf-pre">Question: What letter does the name of the country where the Varrenth Arch is located start with?
-Agent 2: <span class="pe">G</span>
-
-You are Agent 1. Give your own answer.</pre>
-          <p><b>What we ask:</b> can the measure read zero? The model knows nothing about the Varrenth Arch, so it can only copy, and removing a bridge should change nothing.</p>
-          <div class="pf-read"><p>The made-up subject stands in for the Colosseum. Removing Italy, the real question's bridge, moves the balance by at most 0.25 in all 20 such prompts, against 6–8 when the model holds its own answer on a real question. So a large effect really does come from the model's own bridge.</p></div>
-        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>A check that the measure can read zero</h3>
+      <p>The same group prompt about a made-up subject (“the country where the Varrenth Arch is located”, standing in for the Colosseum) gives the model no bridge of its own; it can only copy. Removing Italy there moves the balance by at most 0.25 in all 20 such prompts, against 6–8 when the model holds its own answer on the real question.</p>
     </div>
     <p class="note col">All thresholds were fixed on six pilot questions before the run.</p>
   </section>
