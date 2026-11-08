@@ -634,8 +634,8 @@
       <p class="note">Sketch numbers, to show the idea. Original is the model as it is; edited is the same model with Salzburg removed.</p>
     </figure>
     <div class="col">
-      <p>Removing a step sounds surgical, but the J-space is not a set of separate slots, one per token. Each token is a <b>direction</b>, and related tokens point in similar directions. Removing a direction removes everything that lies along it, not just the token we named. And removing one step only blocks the roads that run through it: if the model has another way to the answer, it simply takes that. So what a removal tells us depends on the step we pick, and Salzburg runs into both problems.</p>
-      <p><b>Removing Salzburg also removes part of Austria.</b> An Austrian city and Austria point almost the same way, so taking out Salzburg's direction takes most of Austria's with it. The answer drops even if the model never went through Salzburg.</p>
+      <p>Removing a step sounds surgical, but the J-space is not a set of separate slots, one per token. Each token is a <b>direction</b>, and related tokens point in similar directions. Removing a direction removes everything that lies along it, not just the token we named. And removing one step only blocks the roads that run through it: if the model has another way to the answer, it simply takes that. So what a removal tells us depends on the step we pick. Using Salzburg as an example, here are two ways a removal could mislead us.</p>
+      <p><b>The removal could take part of the answer with it.</b> If Salzburg and Austria point almost the same way, taking out Salzburg's direction takes much of Austria's too. The answer would drop even if the model never went through Salzburg.</p>
     </div>
     <figure class="panel lim">
       <span class="tag">The answer drops, but not because Salzburg was used</span>
@@ -646,7 +646,7 @@
       <p class="back">This is the <b>association</b> case from section 2: related words light up together, and they get removed together too.</p>
     </figure>
     <div class="col">
-      <p><b>The model has another road to Austria.</b> Mozart is famous for being Austrian, so the model has a direct road to Austria. Removing Salzburg closes one road but leaves the other open, and the answer doesn't move even if the model is still reasoning.</p>
+      <p><b>Or the model could have another road to the answer.</b> Mozart is famous for being Austrian, so the model might go straight from Mozart to Austria. Removing Salzburg would close one road but leave the other open, and the answer wouldn't move even if the model were still reasoning for itself.</p>
     </div>
     <figure class="panel lim">
       <span class="tag">Nothing changes, though the model can still reason</span>
