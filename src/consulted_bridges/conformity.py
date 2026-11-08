@@ -77,6 +77,20 @@ QUESTIONS = {
                   "V_LU_berklee", "V_LU_dalhousie", "V_LU_hopkins"],
 }
 QUESTIONS["tiny"] = ["L_colosseum", "L_gates"]
+# Every letter question the solo scorecard is run on before a new model's conformity run.
+LETTER = [k for k in SPECS if k.startswith(("L_", "V_L"))]
+
+
+def questions_for(cfg):
+    """The config's question list: fixed above for the Qwen models; for other models, the same rule applied to
+    that model's own trimmed solo scorecard (consulted_bridges.conformity_select writes the file)."""
+    if cfg in QUESTIONS:
+        return QUESTIONS[cfg]
+    f = Path(f"results/conformity_select_{cfg}.csv")
+    if not f.exists():
+        raise SystemExit(f"no question list for {cfg}: run the solo scorecard, then consulted_bridges.conformity_select")
+    t = pd.read_csv(f)
+    return t[t.selected].question.tolist()
 # The pilot's six questions: the reading thresholds were set on them, so they are reported separately.
 CALIBRATION = ["L_colosseum", "L_gates", "L_piaf", "L_mozart", "L_spider", "L_york"]
 PILOT_WRONG = {"L_colosseum": "F", "L_gates": "B", "L_piaf": "L", "L_mozart": "B", "L_spider": "A", "L_york": "M"}
@@ -270,7 +284,7 @@ def main():
     args = ap.parse_args()
     cfg = Path(args.config).stem
     i, n = map(int, args.shard.split("/"))
-    qs = args.questions or QUESTIONS[cfg]
+    qs = args.questions or questions_for(cfg)
     qs = qs[: args.limit] if args.limit else qs
     qs = [q for j, q in enumerate(qs) if j % n == i]
     out = Path(args.out or (f"results/conformity_{cfg}" if args.frame == "neutral" else f"results/conformity_{args.frame}_{cfg}")) / f"shard{i}"

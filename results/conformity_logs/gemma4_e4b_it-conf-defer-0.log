@@ -1,0 +1,58 @@
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  23%|██▎       | 468/2076 [00:00<00:00, 4678.68it/s]Loading weights:  45%|████▌     | 936/2076 [00:00<00:00, 3870.99it/s]Loading weights:  64%|██████▍   | 1332/2076 [00:00<00:00, 3302.07it/s]Loading weights:  89%|████████▉ | 1845/2076 [00:00<00:00, 3903.95it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 3849.16it/s]
+PROGRESS 0/28 V_LM_eiffel alone
+[V_LM_eiffel alone] says 'F<turn|><turn|><turn|><eos>' (right) P(right) 1.00 P(peer) 0.00 onset 36 | need 0.93 bridge dLO +13.42 noise +0.66 kind 7.572667995417454 | reach 0.99 rank 0 | bridge still needed (41s)
+PROGRESS 1/28 V_LM_eiffel agree1
+[V_LM_eiffel agree1] says 'F<turn|><|channel>thought' (right) P(right) 1.00 P(peer) 1.00 onset 36 | need 0.03 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.60 rank 0 | bridge not needed (33s)
+PROGRESS 2/28 V_LM_eiffel agree2
+[V_LM_eiffel agree2] says 'F<turn|><eos>' (right) P(right) 1.00 P(peer) 1.00 onset 36 | need 0.53 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.45 rank 0 | bridge still needed (35s)
+PROGRESS 3/28 V_LM_eiffel agree3
+[V_LM_eiffel agree3] says 'F<turn|><turn|><eos>' (right) P(right) 1.00 P(peer) 1.00 onset 36 | need 0.93 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.38 rank 0 | bridge still needed (37s)
+PROGRESS 4/28 V_LM_eiffel disagree1
+[V_LM_eiffel disagree1] says 'F<turn|><turn|><eos>' (holds) P(right) 1.00 P(peer) 0.00 onset None | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (3s)
+PROGRESS 5/28 V_LM_eiffel disagree2
+[V_LM_eiffel disagree2] says 'F<turn|><turn|><eos>' (holds) P(right) 1.00 P(peer) 0.00 onset 36 | need 0.90 bridge dLO +13.59 noise +4.46 kind 11.328167040910548 | reach 0.94 rank 0 | bridge still pulls (41s)
+PROGRESS 6/28 V_LM_eiffel disagree3
+[V_LM_eiffel disagree3] says 'F<turn|><turn|><eos>' (holds) P(right) 1.00 P(peer) 0.00 onset 36 | need 0.97 bridge dLO +14.39 noise +3.99 kind 10.473634424291554 | reach 0.99 rank 0 | bridge still pulls (41s)
+PROGRESS 7/28 V_LM_petronas alone
+[V_LM_petronas alone] says 'M<turn|><turn|><turn|><eos>' (right) P(right) 1.00 P(peer) 0.00 onset 32 | need 0.97 bridge dLO +17.58 noise +8.85 kind 17.980892376084757 | reach 1.00 rank 0 | bridge still needed (30s)
+PROGRESS 8/28 V_LM_petronas agree1
+[V_LM_petronas agree1] says 'M<turn|><|channel>thought' (right) P(right) 0.99 P(peer) 0.99 onset 32 | need 0.63 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (31s)
+PROGRESS 9/28 V_LM_petronas agree2
+[V_LM_petronas agree2] says 'M<turn|><|channel>thought' (right) P(right) 1.00 P(peer) 1.00 onset 32 | need 0.83 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.99 rank 0 | bridge still needed (32s)
+PROGRESS 10/28 V_LM_petronas agree3
+[V_LM_petronas agree3] says 'M<turn|><turn|><eos>' (right) P(right) 1.00 P(peer) 1.00 onset 32 | need 0.13 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.99 rank 0 | bridge not needed (32s)
+PROGRESS 11/28 V_LM_petronas disagree1
+[V_LM_petronas disagree1] says 'M<turn|><|channel>thought' (holds) P(right) 1.00 P(peer) 0.00 onset 32 | need 0.96 bridge dLO +11.09 noise +5.46 kind 9.343136159427054 | reach 1.00 rank 0 | bridge still pulls (34s)
+PROGRESS 12/28 V_LM_petronas disagree2
+[V_LM_petronas disagree2] says 'M<turn|>' (holds) P(right) 0.99 P(peer) 0.00 onset 32 | need 0.26 bridge dLO +11.75 noise +6.37 kind 9.749485601101252 | reach 1.00 rank 0 | bridge still pulls (33s)
+PROGRESS 13/28 V_LM_petronas disagree3
+[V_LM_petronas disagree3] says 'M<turn|>' (holds) P(right) 0.96 P(peer) 0.04 onset 32 | need 0.02 bridge dLO +11.12 noise +7.12 kind 11.367886316909484 | reach 1.00 rank 0 | mixed (31s)
+PROGRESS 14/28 V_LP_beyonce alone
+[V_LP_beyonce alone] says 'H<turn|><turn|><turn|><eos>' (right) P(right) 1.00 P(peer) 0.00 onset 32 | need 0.90 bridge dLO +8.47 noise +1.54 kind 2.1577376598121916 | reach 1.00 rank 0 | bridge still needed (33s)
+PROGRESS 15/28 V_LP_beyonce agree1
+[V_LP_beyonce agree1] says 'H<turn|><|channel>thought' (right) P(right) 1.00 P(peer) 1.00 onset 32 | need 0.92 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.70 rank 0 | bridge still needed (33s)
+PROGRESS 16/28 V_LP_beyonce agree2
+[V_LP_beyonce agree2] says 'H<turn|><|channel>thought' (right) P(right) 1.00 P(peer) 1.00 onset 32 | need -0.00 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.58 rank 0 | bridge not needed (30s)
+PROGRESS 17/28 V_LP_beyonce agree3
+[V_LP_beyonce agree3] says 'H<turn|><|channel>thought' (right) P(right) 1.00 P(peer) 1.00 onset 32 | need -0.01 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.62 rank 0 | bridge not needed (28s)
+PROGRESS 18/28 V_LP_beyonce disagree1
+[V_LP_beyonce disagree1] says 'H<turn|><|channel>thought' (holds) P(right) 1.00 P(peer) 0.00 onset 32 | need 0.23 bridge dLO +5.82 noise +2.52 kind 1.6528216412107817 | reach 0.98 rank 0 | bridge still pulls (32s)
+PROGRESS 19/28 V_LP_beyonce disagree2
+[V_LP_beyonce disagree2] says 'H<turn|>' (holds) P(right) 1.00 P(peer) 0.00 onset 32 | need 0.00 bridge dLO +15.92 noise +15.05 kind 11.856069525345685 | reach 0.98 rank 0 | bridge not needed (31s)
+PROGRESS 20/28 V_LP_beyonce disagree3
+[V_LP_beyonce disagree3] says 'H<turn|>' (holds) P(right) 1.00 P(peer) 0.00 onset 24 | need 0.00 bridge dLO +17.55 noise +14.71 kind 16.054336436952752 | reach 0.93 rank 0 | bridge still pulls (21s)
+PROGRESS 21/28 V_LU_berklee alone
+[V_LU_berklee alone] says 'B<turn|><turn|><turn|><turn|><eos>' (right) P(right) 0.99 P(peer) 0.00 onset 32 | need 0.96 bridge dLO +6.06 noise +1.12 kind 5.246030501336681 | reach 1.00 rank 0 | bridge still needed (20s)
+PROGRESS 22/28 V_LU_berklee agree1
+[V_LU_berklee agree1] says 'B<turn|><|channel>thought' (right) P(right) 0.99 P(peer) 0.99 onset 28 | need 0.41 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (14s)
+PROGRESS 23/28 V_LU_berklee agree2
+[V_LU_berklee agree2] says 'B<turn|><eos>' (right) P(right) 1.00 P(peer) 1.00 onset 36 | need 0.01 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (18s)
+PROGRESS 24/28 V_LU_berklee agree3
+[V_LU_berklee agree3] says 'B<turn|><turn|><eos>' (right) P(right) 1.00 P(peer) 1.00 onset 36 | need -0.00 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (18s)
+PROGRESS 25/28 V_LU_berklee disagree1
+[V_LU_berklee disagree1] says 'B<turn|><|channel>thought' (holds) P(right) 0.91 P(peer) 0.00 onset 28 | need 0.64 bridge dLO +5.06 noise +3.74 kind 2.8708062029957473 | reach 1.00 rank 0 | mixed (16s)
+PROGRESS 26/28 V_LU_berklee disagree2
+[V_LU_berklee disagree2] says 'B<turn|><turn|><eos>' (holds) P(right) 0.97 P(peer) 0.00 onset 32 | need 0.00 bridge dLO +13.62 noise +13.11 kind 9.121335012024563 | reach 1.00 rank 0 | bridge not needed (18s)
+PROGRESS 27/28 V_LU_berklee disagree3
+[V_LU_berklee disagree3] says 'B<turn|><turn|><eos>' (holds) P(right) 0.98 P(peer) 0.00 onset 24 | need -0.00 bridge dLO +11.75 noise +12.23 kind 7.874325976940393 | reach 1.00 rank 0 | bridge not needed (12s)
+PROGRESS ALLDONE

@@ -1,0 +1,7 @@
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  23%|██▎       | 484/2076 [00:00<00:00, 4767.19it/s]Loading weights:  46%|████▋     | 961/2076 [00:00<00:00, 4483.28it/s]Loading weights:  68%|██████▊   | 1411/2076 [00:00<00:00, 4246.94it/s]Loading weights:  91%|█████████ | 1881/2076 [00:00<00:00, 4415.22it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 4431.25it/s]
+Gemma4ForConditionalGeneration 42 [32, 34, 35, 36, 37, 38, 39, 40] cuda:0
+'<bos><|turn>user\nWhat letter does the name of the country where the Colosseum is located start with? Answer with one letter.<turn|>\n<|turn>model\n'
+[('I', 0.9999661445617676), ('**', 2.2827756765764207e-05), ('İ', 2.260253950225888e-06), ('R', 1.7602875459488132e-06), ('L', 1.3709134236705722e-06)]
+{'I': 0.0, 'R': 0.0}
+pieces [1, 1, 1, 1]
+band ranks [[0, 0, 0, 0, 0, 0, 0, 2], [5, 35, 39, 43, 45, 58, 65, 510], [466, 1497, 3038, 1633, 2326, 3133, 8715, 35960]]

@@ -1,0 +1,38 @@
+question,selected,verdict,verdict_reason,model_said,P_base,need,comes_first,lead,answer_onset,quality
+L_colosseum,False,UNTESTABLE,removing the answer's own direction doesn't kill it,I<turn|><turn|><eos>,1.0,,,,,
+L_federer,False,UNTESTABLE,removing the answer's own direction doesn't kill it,B<turn|><turn|><turn|><eos>,0.92,,,,,
+L_gates,False,UNTESTABLE,removing the answer's own direction doesn't kill it,S<turn|><turn|><turn|><eos>,0.914,,,,,
+L_maldini,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",M<turn|><turn|><turn|><eos>,0.893,0.0,True,4.0,32.0,0.0
+L_mishima,False,UNTESTABLE,the model gets the two-hop question and hop 1 wrong,O<turn|><turn|><turn|><eos>,0.148,,,,,
+L_mozart,False,UNTESTABLE,removing the answer's own direction doesn't kill it,S<turn|><turn|><eos>,0.987,,,,,
+L_piaf,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",P<turn|><turn|><turn|><eos>,0.466,0.454,True,20.0,32.0,0.397
+L_spider,False,UNTESTABLE,removing the answer's own direction doesn't kill it,S<turn|><turn|><turn|><eos>,1.0,,,,,
+L_york,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",T<turn|><|channel>thought,0.672,0.0,True,4.0,28.0,0.0
+V_LM_acropolis,False,UNTESTABLE,removing the answer's own direction doesn't kill it,G<turn|><turn|><|channel>thought,1.0,,,,,
+V_LM_angkor,False,UNTESTABLE,the model gets the two-hop question wrong,K<turn|><turn|><turn|><eos>,0.003,,,,,
+V_LM_brandenburg,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",G<turn|>่ง<turn|>,0.873,0.0,True,24.0,28.0,0.0
+V_LM_christ,False,UNTESTABLE,removing the answer's own direction doesn't kill it,B<turn|><turn|><turn|><eos>,1.0,,,,,
+V_LM_eiffel,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",F<turn|><turn|><turn|><eos>,1.0,0.94,True,24.0,36.0,0.043
+V_LM_fuji,False,UNTESTABLE,removing the answer's own direction doesn't kill it,J<turn|><turn|><turn|><eos>,1.0,,,,,
+V_LM_kremlin,False,UNTESTABLE,removing the answer's own direction doesn't kill it,R<turn|><turn|><turn|><eos>,1.0,,,,,
+V_LM_machu,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P<turn|><turn|><turn|><eos>,1.0,0.584,True,8.0,36.0,0.074
+V_LM_petronas,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M<turn|><turn|><turn|><eos>,1.0,0.949,True,24.0,32.0,0.943
+V_LM_pisa,False,UNTESTABLE,removing the answer's own direction doesn't kill it,I<turn|><turn|><turn|><eos>,1.0,,,,,
+V_LM_pyramids,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",E<turn|><turn|><|channel>thought,1.0,0.233,False,,36.0,0.0
+V_LM_sagrada,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S<turn|><turn|><turn|><eos>,0.987,0.532,True,28.0,36.0,0.531
+V_LM_sydney,False,UNTESTABLE,removing the answer's own direction doesn't kill it,A<turn|><turn|><turn|><eos>,1.0,,,,,
+V_LM_taj,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",I<turn|><turn|><turn|><eos>,1.0,0.012,False,,36.0,0.0
+V_LP_ali,False,UNTESTABLE,the model gets the two-hop question wrong,K<turn|><turn|><turn|><eos>,0.001,,,,,
+V_LP_beyonce,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",H<turn|><turn|><turn|><eos>,0.996,0.905,True,20.0,32.0,0.087
+V_LP_hemsworth,False,UNCLEAR,in between,M<turn|><turn|><turn|><turn|><eos>,0.338,0.0,False,0.0,32.0,0.0
+V_LP_hendrix,False,UNTESTABLE,the model gets the two-hop question wrong,C<turn|><turn|><turn|><eos>,0.092,,,,,
+V_LP_kapoor,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",M<turn|><turn|><turn|><turn|><eos>,0.485,0.312,True,8.0,32.0,0.278
+V_LP_obama_m,False,UNTESTABLE,the model gets the two-hop question wrong,H<turn|><turn|><turn|><eos>,0.028,,,,,
+V_LP_plummer,False,UNTESTABLE,the model gets the two-hop question and hop 1 wrong,H<turn|><turn|><turn|><eos>,0.051,,,,,
+V_LP_timberlake,False,UNTESTABLE,the model gets hop 1 wrong,M<turn|><turn|><turn|><turn|><eos>,0.28,,,,,
+V_LU_alberta,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E<turn|><turn|><turn|><eos>,0.909,0.567,True,12.0,20.0,0.502
+V_LU_berklee,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B<turn|><turn|><turn|><turn|><eos>,0.994,0.962,True,24.0,32.0,0.919
+V_LU_dalhousie,False,UNTESTABLE,the model gets hop 1 wrong,H<turn|><|channel>thought,0.949,,,,,
+V_LU_fudan,False,UNTESTABLE,removing the answer's own direction doesn't kill it,S<turn|><|channel>thought,1.0,,,,,
+V_LU_hopkins,False,UNTESTABLE,removing the answer's own direction doesn't kill it,B<turn|><turn|><turn|><eos>,1.0,,,,,
+V_LU_pompeu,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B<turn|><turn|><turn|><turn|><eos>,0.822,0.786,True,20.0,32.0,0.469

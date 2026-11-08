@@ -1,0 +1,18 @@
+== 10:31:41 lens
+gemma4_e4b_it: no lens to fit (uses a published lens)
+== 10:31:48 solo scorecard
+PROGRESS 19/19 ALLDONE
+PROGRESS 18/18 ALLDONE
+== 10:35:39 select
+verdict
+UNTESTABLE                      24
+CONSULTED (KIND NOT CHECKED)     8
+SPREAD OUT                       4
+UNCLEAR                          1
+8 of 37 letter questions selected: V_LM_eiffel V_LM_machu V_LM_petronas V_LM_sagrada V_LP_beyonce V_LU_alberta V_LU_berklee V_LU_pompeu
+== 10:35:49 conformity
+PROGRESS ALLDONE
+PROGRESS ALLDONE
+PROGRESS ALLDONE
+PROGRESS ALLDONE
+== 10:49:33 DONE gemma4_e4b_it

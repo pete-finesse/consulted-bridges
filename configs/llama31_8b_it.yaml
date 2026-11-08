@@ -1,0 +1,15 @@
+# One of the Silent Dissent paper's models: it gave in most (90% at 3 peers in the paper).
+# ~16 GB in bf16. Gated on the Hub (Meta's licence): the Hugging Face account needs access.
+model:
+  name: meta-llama/Llama-3.1-8B-Instruct
+  dtype: bfloat16
+  device: auto
+  size_note: "~16 GB"
+lens:
+  name: jlens
+  kwargs:
+    repo: neuronpedia/jacobian-lens
+    revision: qwen-n1000      # the paper's file (repos/silent-dissent/configs/llama31_8b_it_entity.yaml)
+    filename: llama3.1-8b-it/jlens/Salesforce-wikitext/Llama-3.1-8B-Instruct_jacobian_lens.pt
+  size_note: "~1 GB"
+band: [17, 23]             # the paper's layer band for this model (docs/results/paper/tables.md)

@@ -1,0 +1,18 @@
+# One of the Silent Dissent paper's models (gave in 25% at 3 peers). ~16 GB in bf16, not gated.
+# Lens: Neuronpedia's published Gemma 4 lens, which was fit on the BASE model (google/gemma-4-E4B). The paper's
+# primary lens was a 100-prompt refit on this chat model, and its review found the two read differently on test
+# (H1 0.24 refit vs 0.105 base). The refit is configs/gemma4_e4b_it_refit.yaml (not run: ~6 h of A100 time).
+model:
+  name: google/gemma-4-E4B-it
+  dtype: bfloat16
+  device: auto
+  chat_template_kwargs: {enable_thinking: false}
+  size_note: "~16 GB"
+lens:
+  name: jlens
+  kwargs:
+    repo: neuronpedia/jacobian-lens
+    revision: qwen-n1000
+    filename: gemma-4-e4b/jlens/Salesforce-wikitext/gemma-4-E4B_jacobian_lens.pt
+  size_note: "~0.5 GB"
+band: [32, 34, 35, 36, 37, 38, 39, 40]   # the paper's band for this model (layer 33 left out, as there)
