@@ -260,6 +260,14 @@
   .spill-out > div { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
   .slbl { font-size: 0.8rem; color: var(--muted); }
   .tf-pill.hit { border-color: var(--answer); color: var(--answer); background: repeating-linear-gradient(135deg, var(--answer-soft) 0 5px, transparent 5px 10px); opacity: 0.75; }
+  .pfs { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); }
+  .pf { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 10px; align-content: start; }
+  .pf h4 { font-size: 1.05rem; }
+  .pf > p { font-size: 0.95rem; }
+  .pf-pre { margin: 0; font-family: var(--mono-real); font-size: 0.78rem; line-height: 1.5; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; white-space: pre-wrap; }
+  .pf-read { display: grid; gap: 6px; border-top: 1px solid var(--line); padding-top: 10px; }
+  .pf-read p { font-size: 0.9rem; color: var(--muted); }
+  .pf-read .pill { margin-right: 4px; }
   .punch { font-size: 1.15rem; font-weight: 600; }
   /* transcript */
   .transcript { display: grid; gap: 8px; font-size: 0.95rem; }
@@ -751,6 +759,17 @@
     </div>
     <div class="col"><h3>Test results</h3></div>
     <div class="panel">
+      <p>Before settling on this format we tested 111 two-hop questions of 14 kinds on both models, leaving out questions built to fail on purpose. The letter format was the only kind that passed reliably.</p>
+      <div class="scroll-x">
+        <table>
+          <thead><tr><th>Kind of question</th><th class="n">Tested</th><th class="n">Pass on Qwen3.5-4B</th><th class="n">Pass on Qwen3.6-27B</th></tr></thead>
+          <tbody>
+            <tr><td>Letter of the hidden word</td><td class="n">37</td><td class="n"><b>22</b></td><td class="n"><b>21</b></td></tr>
+            <tr><td>13 other kinds (leg riddles, parts of objects, sequences, wordplay, science, culture, number facts about places…)</td><td class="n">74</td><td class="n">9</td><td class="n">3</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Most of the other questions could not be tested at all: the model got a step wrong, the answer was in place from the start, or the edit could not remove the bridge. A pass here also requires the overlap check to come out clean. The group runs use every letter question where the bridge is needed and acts first, which gives slightly more:</p>
       <div class="scroll-x">
         <table>
           <thead><tr><th>Model</th><th class="n">Questions that pass the tests</th><th class="n">Used to set the reading rules</th><th class="n">Used for the results</th></tr></thead>
@@ -777,8 +796,7 @@
         <span class="tag">The group prompt</span>
 <pre>Several AI agents are answering the same question.
 
-Question: What letter does the name of the country
-where the Eiffel Tower is located start with?
+Question: What letter does the name of the country where the Eiffel Tower is located start with?
 Agent 2: <span class="pe">G</span>
 Agent 3: <span class="pe">G</span>
 Agent 4: <span class="pe">G</span>
@@ -798,45 +816,52 @@ with one letter.</pre>
         </ul>
       </div>
     </div>
-    <div class="panel">
-      <h3>How we read a prompt where the peers are wrong</h3>
-      <div class="readrule">
-        <div class="outcome pull">
-          <svg viewBox="0 0 400 120" role="img" aria-label="Before: the model leans toward F with a pull from France. After removing France, it leans toward G.">
-            <text x="10" y="18" font-size="12" style="fill:var(--muted)">before</text>
-            <rect x="60" y="8" width="300" height="14" rx="7" style="fill:var(--line)"/>
-            <rect x="60" y="8" width="210" height="14" rx="7" style="fill:var(--answer)"/>
-            <text x="64" y="40" font-size="12" style="fill:var(--answer)">pull toward F (own answer)</text>
-            <text x="356" y="40" font-size="12" text-anchor="end" style="fill:var(--peer)">G (peers)</text>
-            <text x="10" y="80" font-size="12" style="fill:var(--muted)">France</text>
-            <text x="10" y="94" font-size="12" style="fill:var(--muted)">removed</text>
-            <rect x="60" y="78" width="300" height="14" rx="7" style="fill:var(--peer)"/>
-            <rect x="60" y="78" width="40" height="14" rx="7" style="fill:var(--answer)"/>
-            <text x="356" y="112" font-size="12" text-anchor="end" style="fill:var(--peer)">leans to the peers</text>
-          </svg>
-          <p><span class="pill good">bridge still pulls</span> Removing the bridge pushes the model <b>further toward the peers</b>, by at least 2 log-odds more than any everyday word and 1 more than any same-kind word. Its own reasoning was still pulling the other way.</p>
-        </div>
-        <div class="outcome none">
-          <svg viewBox="0 0 400 120" role="img" aria-label="Before and after removing France the balance is the same.">
-            <text x="10" y="18" font-size="12" style="fill:var(--muted)">before</text>
-            <rect x="60" y="8" width="300" height="14" rx="7" style="fill:var(--peer)"/>
-            <rect x="60" y="8" width="12" height="14" rx="6" style="fill:var(--answer)"/>
-            <text x="356" y="40" font-size="12" text-anchor="end" style="fill:var(--peer)">already says G</text>
-            <text x="10" y="80" font-size="12" style="fill:var(--muted)">France</text>
-            <text x="10" y="94" font-size="12" style="fill:var(--muted)">removed</text>
-            <rect x="60" y="78" width="300" height="14" rx="7" style="fill:var(--peer)"/>
-            <rect x="60" y="78" width="11" height="14" rx="6" style="fill:var(--answer)"/>
-            <text x="356" y="112" font-size="12" text-anchor="end" style="fill:var(--muted)">no change</text>
-          </svg>
-          <p><span class="pill bad">bridge not needed</span> Removing it does no more than removing an everyday word, while the edit still reaches it. Its own path plays no part. Anything in between is labelled <span class="pill mid">mixed</span>.</p>
-        </div>
-      </div>
-      <p class="note">When peers agree or the model is alone, the rule is the solo one: the bridge is <b>still needed</b> if removing it lowers P(right) by 0.5 more than noise, and <b>not needed</b> if by less than 0.2. All thresholds were fixed before the run.</p>
+    <div class="col">
+      <h3>Four kinds of prompt, and how we read each</h3>
+      <p>Every question is run in four settings. The removal is the same in each; what we ask of it differs.</p>
     </div>
-    <div class="panel">
-      <h3>A check that the measure can read zero</h3>
-      <p>The same group prompt about a made-up subject (“the country where the Varrenth Arch is located”) gives the model no bridge of its own; it can only copy. Removing Italy there moves the balance by at most 0.25 log-odds in all 20 such prompts, against 6–8 when the model holds its own answer on the real question.</p>
+    <div class="pfs">
+        <div class="pf">
+          <span class="tag">1 · Alone</span>
+          <h4>No other agents</h4>
+<pre class="pf-pre">Question: What letter does the name of the country where the Eiffel Tower is located start with?
+Answer with one letter.</pre>
+          <p><b>What we ask:</b> does the answer need the bridge when the model works on its own? This is the baseline for everything else.</p>
+          <div class="pf-read"><p><span class="pill good">still needed</span> removing the bridge lowers P(right) by at least 0.5 more than removing an everyday word.</p><p><span class="pill bad">not needed</span> it lowers it by less than 0.2, while the edit still reaches the bridge.</p><p><span class="pill mid">mixed</span> anything in between.</p></div>
+        </div>
+        <div class="pf">
+          <span class="tag">2 · Peers agree</span>
+          <h4>1–3 peers give the right letter</h4>
+<pre class="pf-pre">Question: What letter does the name of the country where the Eiffel Tower is located start with?
+Agent 2: <span class="a">F</span>
+
+You are Agent 1. Give your own answer.</pre>
+          <p><b>What we ask:</b> once the group hands it the right answer, does the model still need its own bridge, or could it just copy?</p>
+          <div class="pf-read"><p><span class="pill good">still needed</span> removing the bridge lowers P(right) by at least 0.5 more than removing an everyday word.</p><p><span class="pill bad">not needed</span> it lowers it by less than 0.2, while the edit still reaches the bridge.</p><p><span class="pill mid">mixed</span> anything in between.</p></div>
+        </div>
+        <div class="pf">
+          <span class="tag">3 · Peers disagree</span>
+          <h4>1–3 peers give the same wrong letter</h4>
+<pre class="pf-pre">Question: What letter does the name of the country where the Eiffel Tower is located start with?
+Agent 2: <span class="pe">G</span>
+Agent 3: <span class="pe">G</span>
+
+You are Agent 1. Give your own answer.</pre>
+          <p><b>What we ask:</b> is the bridge still holding up the model's own answer against the group? Here we track the <b>balance</b> between the peers' letter and the right one: how strongly the model leans toward G rather than F.</p>
+          <div class="pf-read"><p><span class="pill good">bridge still pulls</span> removing the bridge tips the balance further toward the peers, clearly more than removing an everyday word or a word of the same kind (Germany, Spain for France).</p><p><span class="pill bad">not needed</span> it tips the balance no more than an everyday word, while the edit still reaches the bridge.</p><p><span class="pill mid">mixed</span> anything in between.</p></div>
+        </div>
+        <div class="pf">
+          <span class="tag">4 · Copy-only check</span>
+          <h4>A made-up subject: there is no bridge to use</h4>
+<pre class="pf-pre">Question: What letter does the name of the country where the Varrenth Arch is located start with?
+Agent 2: <span class="pe">G</span>
+
+You are Agent 1. Give your own answer.</pre>
+          <p><b>What we ask:</b> can the measure read zero? The model knows nothing about the Varrenth Arch, so it can only copy, and removing a bridge should change nothing.</p>
+          <div class="pf-read"><p>The made-up subject stands in for the Colosseum. Removing Italy, the real question's bridge, moves the balance by at most 0.25 in all 20 such prompts, against 6–8 when the model holds its own answer on a real question. So a large effect really does come from the model's own bridge.</p></div>
+        </div>
     </div>
+    <p class="note col">All thresholds were fixed on six pilot questions before the run.</p>
   </section>
 
   <!-- 8 FINDINGS -->
@@ -844,7 +869,7 @@ with one letter.</pre>
     <div class="ch-head">
       <span class="ch-num">7 · What we found</span>
       <h2>Five findings</h2>
-      <p>19 questions on Qwen3.6-27B and 20 on Qwen3.5-4B, excluding the six used to set the rules. Alone, the bridge is needed in all 19 on the 27B and 17 of 20 on the 4B (3 mixed).</p>
+      <p>19 questions on Qwen3.6-27B and 20 on Qwen3.5-4B, excluding the questions used to set the rules. Alone, the bridge is needed in all 19 on the 27B and 17 of 20 on the 4B (3 mixed).</p>
     </div>
     <div class="findings">
 
