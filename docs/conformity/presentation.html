@@ -236,6 +236,12 @@
   .assoc-words { display: flex; gap: 6px; flex-wrap: wrap; }
   .story p { font-size: 0.95rem; }
   .assoc-svg { width: 100%; max-width: 320px; height: auto; justify-self: center; }
+  .inside { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 12px; align-items: center; padding: 12px; border-radius: 8px; background: var(--panel); }
+  .ins-l { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+  .ins-r { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .ins-r .chip { padding: 1px 9px; font-size: 0.9rem; }
+  .ins-chain { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+  .ins-n { font-size: 0.8rem; color: var(--muted); font-style: italic; }
   .punch { font-size: 1.15rem; font-weight: 600; }
   /* transcript */
   .transcript { display: grid; gap: 8px; font-size: 0.95rem; }
@@ -563,17 +569,27 @@
     <div class="panel">
       <div class="stories">
         <div class="story a-side">
-          <span class="tag">Story A</span>
-          <h4>It worked out Austria, then said France anyway</h4>
-          <p>Removing Salzburg would change its answer: the pull toward Austria goes away.</p>
+          <span class="tag">Story A · Silent dissent</span>
+          <h4>It still thinks Austria, but says France</h4>
+          <div class="inside" aria-label="Inside the model in Story A">
+            <span class="ins-l">Own thought</span><div class="ins-r"><span class="ins-chain"><span class="chip br">Salzburg</span><span class="arrow">→</span><span class="chip an">Austria</span></span><span class="ins-n">still pulling</span></div>
+            <span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">pulls harder</span></div>
+            <span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b></div>
+          </div>
+          <p><b>Remove Salzburg:</b> the pull toward Austria disappears. The answer changes.</p>
         </div>
         <div class="story b-side">
-          <span class="tag">Story B</span>
-          <h4>It just took France from the peers</h4>
-          <p>Removing Salzburg would change nothing.</p>
+          <span class="tag">Story B · Plain copying</span>
+          <h4>It has stopped thinking Austria</h4>
+          <div class="inside" aria-label="Inside the model in Story B">
+            <span class="ins-l">Own thought</span><div class="ins-r"><span class="chip br">Salzburg</span><span class="ins-n">lit up, but leads nowhere</span></div>
+            <span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">the only pull</span></div>
+            <span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b></div>
+          </div>
+          <p><b>Remove Salzburg:</b> nothing was resting on it. The answer stays the same.</p>
         </div>
       </div>
-      <p class="note">In both stories Salzburg can be readable.</p>
+      <p class="note">Both say France, and in both Salzburg is readable. The difference is whether anything inside still pulls toward Austria.</p>
       <p class="punch">Reading can't tell these apart. <span class="a">Removing can.</span></p>
     </div>
   </section>
