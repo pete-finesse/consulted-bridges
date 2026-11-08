@@ -449,6 +449,22 @@
       <div class="read"><span class="tag" style="color:var(--bridge)">Reading (the paper)</span><h4>Is the bridge there?</h4><p>Rank it with the J-lens. A high rank says the model has the word in mind. It says nothing about whether the answer depends on it.</p></div>
       <div class="remove"><span class="tag" style="color:var(--answer)">Removing (this work)</span><h4>Does the answer need the bridge?</h4><p>Ablate its direction and re-read the answer. A change says the answer was built on the bridge. No change says it wasn't.</p></div>
     </div>
+    <div class="panel">
+      <h3>Measuring the answer: probabilities, not just words</h3>
+      <p>The paper checks <b>which answer</b> the agent writes. We read <b>how sure</b> the model is of each possible answer: before it writes anything, it gives every word a probability of coming next. We write that as <span class="mono">P(“I”)</span>, the probability that the next word is “I”.</p>
+      <div class="two">
+        <div class="col">
+          <span class="tag">Qwen3.5-4B, the Colosseum letter question</span>
+          <div class="bars">
+            <div class="bar"><span class="lab">P(“I”), as normal</span><span class="tr"><i style="--v:.98"></i></span><span class="val">0.98</span></div>
+            <div class="bar"><span class="lab">P(“I”), Italy removed</span><span class="tr"><i style="--v:0"></i></span><span class="val">0.00</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <p class="note">Probabilities catch effects that words miss. Removing a word can halve the model's confidence (0.99 to 0.50 for Federer's birth-city letter on Qwen3.6-27B) without changing what it writes. In the group setting, they also let us weigh the pull toward the right answer against the pull toward the peers' answer.</p>
+        </div>
+      </div>
+    </div>
     <div class="col">
       <p>An ablation only means something if a change in the answer can come from nowhere but the bridge. A careless question gives other ways for the answer to move, or not move. So we choose questions that rule those out. That is what the four requirements are for.</p>
     </div>
