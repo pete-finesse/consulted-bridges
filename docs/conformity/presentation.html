@@ -721,11 +721,6 @@
         <p>Ask the model to name the bridge first (for example “First name the city.”). Removing the bridge must stop it naming it. This matters later: when removal changes nothing, it tells “the bridge isn't needed” apart from “the edit missed”.</p>
       </div>
     </div>
-    <div class="yield">
-      <b>25 questions</b><span>pass on Qwen3.6-27B</span>
-      <b>24 questions</b><span>pass on Qwen3.5-4B</span>
-      <span class="note">Six of them were used to set the reading rules below, so every number from here on leaves them out and they are reported on their own.</span>
-    </div>
   </section>
 
   <!-- 6 CHECKS -->
@@ -753,6 +748,19 @@
         <li><span>3</span><span><b>No lookalike.</b> A letter shares nothing with the meaning of a place, so removing the bridge can't remove part of the answer.</span></li>
         <li><span>4</span><span><b>Same-kind wrong answers.</b> Any other letter will do, and the first letter of a neighbouring place is believable.</span></li>
       </ul>
+    </div>
+    <div class="col"><h3>Test results</h3></div>
+    <div class="panel">
+      <div class="scroll-x">
+        <table>
+          <thead><tr><th>Model</th><th class="n">Questions that pass the tests</th><th class="n">Used to set the reading rules</th><th class="n">Used for the results</th></tr></thead>
+          <tbody>
+            <tr><td>Qwen3.6-27B</td><td class="n">25</td><td class="n">6</td><td class="n"><b>19</b></td></tr>
+            <tr><td>Qwen3.5-4B</td><td class="n">24</td><td class="n">4</td><td class="n"><b>20</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The questions used to set the reading rules (section 6) are reported on their own; every number from here on leaves them out.</p>
     </div>
     <p class="note col">The cost is scope: our results are about this question type, not about the city-to-country facts the paper uses.</p>
   </section>
