@@ -188,6 +188,12 @@
   .tf-dot.d2 { width: 9px; height: 9px; left: -12px; bottom: -26px; }
   .tf-say { position: relative; display: grid; gap: 4px; padding: 14px 22px; border: 1.5px solid var(--line); border-radius: 14px; background: var(--panel); font-family: var(--mono-real); font-size: 1.25rem; min-width: 6rem; }
   .tf-say::before { content: ""; position: absolute; left: -9px; bottom: 14px; width: 14px; height: 14px; background: var(--panel); border-left: 1.5px solid var(--line); border-bottom: 1.5px solid var(--line); transform: rotate(45deg); }
+  .edits { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+  .edit { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 10px; background: var(--panel); }
+  .edit p { font-size: 0.9rem; color: var(--muted); }
+  .ed-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .ed-row .tf-pill { min-width: 0; }
+  .tf-pill.gone { border-style: dashed; color: var(--muted); font-style: italic; }
   .hops { display: grid; grid-template-columns: minmax(0, 1.4fr) auto minmax(0, 1fr) auto minmax(0, 0.7fr); gap: 12px 14px; align-items: center; }
   .hops .chip { justify-self: start; }
   .hh { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
@@ -490,6 +496,15 @@
 
     <div class="col">
       <p>These questions are the key to our setup for telling whether an agent is thinking for itself. The Silent Dissent work uses them the same way: they claim that when the agent yields, if the bridge still shows up in the J-space, the model hasn't “changed its mind”; it has only “changed its statement”.</p>
+    </div>
+
+    <div class="col">
+      <h3>Editing the J-space</h3>
+      <p>The swap is one kind of edit in the J-space: it puts one token's direction in place of another's. Another kind is <b>removal</b>, also called <b>ablation</b>: delete the token's direction from the model's state and put nothing in its place. Removal is the edit we use. Take the bridge away, and see whether the answer changes.</p>
+    </div>
+    <div class="edits" aria-label="Two edits in the J-space: swap and removal">
+      <div class="edit"><span class="tag">Swap</span><div class="ed-row"><span class="tf-pill x">spider</span><span class="arrow">→</span><span class="tf-pill sw">ant</span></div><p>Replace one token with another.</p></div>
+      <div class="edit"><span class="tag">Removal (ablation)</span><div class="ed-row"><span class="tf-pill x">spider</span><span class="arrow">→</span><span class="tf-pill gone">nothing</span></div><p>Take the token out. This is what we do.</p></div>
     </div>
   </section>
 
