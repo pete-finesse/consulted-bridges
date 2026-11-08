@@ -246,6 +246,9 @@
   .ins-chain { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
   .ins-n { font-size: 0.8rem; color: var(--muted); font-style: italic; }
   .prs { display: grid; gap: 6px; padding: 10px 12px; border-radius: 8px; background: var(--panel); }
+  .lim { gap: 14px; }
+  .lim-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px 28px; align-items: center; }
+  .lim .back { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
   .why .back { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
   .spill-row { display: flex; align-items: center; gap: 14px 18px; flex-wrap: wrap; }
   .spill-out { display: grid; gap: 8px; }
@@ -626,32 +629,34 @@
       <p class="note">Sketch numbers, to show the idea. Original is the model as it is; edited is the same model with Salzburg removed.</p>
     </figure>
     <div class="col">
-      <p>Removals and probabilities give us a way to test whether a model really uses its internal thinking to reach its answer. But a removal can also mislead. Say we remove Salzburg and don't yet know what will happen. Two outcomes could fool us, one in each direction.</p>
+      <p>So removal plus probabilities is our test: take the step away and see whether the answer cares. The catch is that a removal is only as clean as the question it runs on. Say we remove Salzburg and don't yet know what will happen. Two outcomes could fool us, one in each direction.</p>
+      <p><b>The answer could drop even though the model never went through Salzburg.</b> Salzburg and Austria are so closely related that their directions overlap, so removing Salzburg takes part of Austria with it.</p>
     </div>
-    <figure class="panel">
-      <div class="whygrid">
-        <div class="why">
-          <span class="tag">The answer drops, but not because Salzburg was used</span>
-          <div class="spill-out">
-            <div><span class="tf-pill x">Salzburg</span><span class="slbl">removed</span></div>
-            <div><span class="tf-pill hit">Austria</span><span class="slbl">partly removed too</span></div>
-          </div>
-          <div class="prs"><div class="pr"><span class="lab">Original P(“Austria”)</span><span class="tr"><i style="--v:0.8"></i></span><span class="val">80%</span></div><div class="pr"><span class="lab">Edited P(“Austria”)</span><span class="tr"><i class="cut" style="--v:0.3"></i></span><span class="val">30%</span></div></div>
-          <p>Salzburg and Austria are so closely related that their directions overlap. Removing Salzburg takes part of Austria with it, so the answer drops even if the model never went through Salzburg.</p>
-          <p class="back">This is the <b>association</b> case from section 2: related words light up together, and they get removed together too.</p>
+    <figure class="panel lim">
+      <span class="tag">The answer drops, but not because Salzburg was used</span>
+      <div class="lim-row">
+        <div class="spill-out">
+          <div><span class="tf-pill x">Salzburg</span><span class="slbl">removed</span></div>
+          <div><span class="tf-pill hit">Austria</span><span class="slbl">partly removed too</span></div>
         </div>
-        <div class="why">
-          <span class="tag">Nothing changes, though the model can still reason</span>
-          <div class="routes" aria-label="With Salzburg removed, Mozart still leads straight to Austria">
-            <div class="route-long"><span class="chip">Mozart</span><span class="arrow">→</span><span class="chip x">Salzburg</span><span class="arrow">→</span><span class="chip an">Austria</span></div>
-            <div class="route-short"><span class="chip">Mozart</span><span class="shortline" aria-hidden="true"></span><span class="chip an">Austria</span></div>
-          </div>
-          <div class="prs"><div class="pr"><span class="lab">Original P(“Austria”)</span><span class="tr"><i style="--v:0.8"></i></span><span class="val">80%</span></div><div class="pr"><span class="lab">Edited P(“Austria”)</span><span class="tr"><i class="cut" style="--v:0.8"></i></span><span class="val">80%</span></div></div>
-          <p>Mozart is famous for being Austrian, so the model has a direct road to Austria. Removing Salzburg closes one road but leaves the other open, and the answer doesn't move.</p>
-          <p class="back">This is the <b>bridge-not-needed</b> case from section 2: the answer never had to go through Salzburg.</p>
-        </div>
+        <div class="prs"><div class="pr"><span class="lab">Original P(“Austria”)</span><span class="tr"><i style="--v:0.8"></i></span><span class="val">80%</span></div><div class="pr"><span class="lab">Edited P(“Austria”)</span><span class="tr"><i class="cut" style="--v:0.3"></i></span><span class="val">30%</span></div></div>
       </div>
-      <p class="note">Sketch numbers, to show the idea.</p>
+      <p class="back">This is the <b>association</b> case from section 2: related words light up together, and they get removed together too.</p>
+    </figure>
+    <div class="col">
+      <p><b>Or nothing could change even though the model is still reasoning.</b> Mozart is famous for being Austrian, so the model has a direct road to Austria. Removing Salzburg closes one road but leaves the other open, and the answer doesn't move.</p>
+    </div>
+    <figure class="panel lim">
+      <span class="tag">Nothing changes, though the model can still reason</span>
+      <div class="lim-row">
+        <div class="routes" aria-label="With Salzburg removed, Mozart still leads straight to Austria">
+          <div class="route-long"><span class="chip">Mozart</span><span class="arrow">→</span><span class="chip x">Salzburg</span><span class="arrow">→</span><span class="chip an">Austria</span></div>
+          <div class="route-short"><span class="chip">Mozart</span><span class="shortline" aria-hidden="true"></span><span class="chip an">Austria</span></div>
+        </div>
+        <div class="prs"><div class="pr"><span class="lab">Original P(“Austria”)</span><span class="tr"><i style="--v:0.8"></i></span><span class="val">80%</span></div><div class="pr"><span class="lab">Edited P(“Austria”)</span><span class="tr"><i class="cut" style="--v:0.8"></i></span><span class="val">80%</span></div></div>
+      </div>
+      <p class="back">This is the <b>bridge-not-needed</b> case from section 2: the answer never had to go through Salzburg.</p>
+      <p class="note">Sketch numbers, in both figures, to show the idea.</p>
     </figure>
     <div class="col">
       <p>So a removal is only a fair test if neither can happen. The next section sets out how we choose questions that rule both out.</p>
