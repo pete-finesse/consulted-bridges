@@ -1,0 +1,244 @@
+<title>Bridge Under Conformity Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+  /* Layout: the project's reference outline, read top to bottom: goal, the claim, stage 1 (single questions), stage 2 (groups), how each prompt is read, what we hope to find, status. Same colour code as the scorecard pages: bridge = teal, right answer = violet, peers = amber. */
+  :root {
+    --bg: #f4f6f5; --panel: #ffffff; --ink: #15191c; --muted: #59626a; --line: #dce1e3;
+    --bridge: #0b7068; --answer: #6247c4; --peer: #a35f00;
+    --ok: #1d7639; --bad: #b0352b; --warn: #8f6300;
+    --bridge-soft: color-mix(in srgb, var(--bridge) 11%, transparent);
+    --answer-soft: color-mix(in srgb, var(--answer) 11%, transparent);
+    --peer-soft: color-mix(in srgb, var(--peer) 12%, transparent);
+    --ok-soft: color-mix(in srgb, var(--ok) 9%, transparent);
+    --bad-soft: color-mix(in srgb, var(--bad) 9%, transparent);
+    --warn-soft: color-mix(in srgb, var(--warn) 10%, transparent);
+    --font: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121517; --panel: #1a1e21; --ink: #eaedef; --muted: #a0a8af; --line: #2d3236;
+      --bridge: #47c1b5; --answer: #a893ff; --peer: #e3a54a; --ok: #5cc87a; --bad: #ff7d70; --warn: #e2b44a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121517; --panel: #1a1e21; --ink: #eaedef; --muted: #a0a8af; --line: #2d3236;
+    --bridge: #47c1b5; --answer: #a893ff; --peer: #e3a54a; --ok: #5cc87a; --bad: #ff7d70; --warn: #e2b44a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 1rem; line-height: 1.55; font-variant-numeric: tabular-nums; }
+  .wrap { max-width: 980px; margin-inline: auto; padding-block: 40px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 56px; }
+  .col { max-width: 68ch; display: grid; gap: 12px; }
+  h1, h2, h3, h4 { margin: 0; text-wrap: balance; line-height: 1.2; }
+  h1 { font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 700; letter-spacing: -0.015em; }
+  h2 { font-size: 1.5rem; font-weight: 650; letter-spacing: -0.01em; }
+  h3 { font-size: 1.125rem; font-weight: 650; }
+  p { margin: 0; }
+  .lede { font-size: 1.0625rem; color: var(--muted); }
+  .note { font-size: 0.875rem; color: var(--muted); line-height: 1.5; }
+  .kicker { font-size: 0.875rem; font-weight: 650; color: var(--bridge); letter-spacing: 0.03em; }
+  .b { color: var(--bridge); font-weight: 600; } .a { color: var(--answer); font-weight: 600; } .p { color: var(--peer); font-weight: 600; }
+  .section { display: grid; gap: 20px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: clamp(16px, 3vw, 26px); display: grid; gap: 14px; min-width: 0; }
+  .two { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); align-items: start; }
+  .three { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+  .scroll-x { overflow-x: auto; min-width: 0; }
+  .tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; color: var(--muted); text-transform: uppercase; }
+  .claim { border-left: 4px solid var(--bridge); padding-left: 18px; display: grid; gap: 8px; max-width: 72ch; font-size: 1.0625rem; }
+  .claim .not { font-size: 0.9375rem; color: var(--muted); }
+  pre { margin: 0; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; font-family: var(--mono); font-size: 0.8125rem; line-height: 1.5; overflow-x: auto; white-space: pre; color: var(--ink); }
+  pre .b2 { color: var(--bridge); font-weight: 600; } pre .a2 { color: var(--answer); font-weight: 600; } pre .p2 { color: var(--peer); font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+  th { text-align: left; font-weight: 600; color: var(--muted); font-size: 0.8125rem; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: bottom; }
+  td { padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .pill { display: inline-block; padding: 0 8px; border-radius: 999px; border: 1px solid currentColor; font-size: 0.8125rem; font-weight: 600; white-space: nowrap; }
+  .pill.good { color: var(--ok); } .pill.mid { color: var(--warn); } .pill.bad { color: var(--bad); } .pill.none { color: var(--muted); }
+  .flow { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); counter-reset: f; }
+  .fstep { border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 12px 14px; display: grid; gap: 4px; align-content: start; }
+  .fstep::before { counter-increment: f; content: "Step " counter(f); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; color: var(--muted); text-transform: uppercase; }
+  .fstep b { font-size: 0.9375rem; }
+  .fstep span { font-size: 0.8125rem; color: var(--muted); }
+  .list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .list li { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: 8px; }
+  .list li > span:first-child { font-weight: 700; color: var(--bridge); }
+  .hyp { border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; background: var(--panel); border: 1px solid var(--line); }
+  .hyp h3 { font-size: 1rem; }
+  .hyp p { font-size: 0.9rem; color: var(--muted); }
+  .hyp p b { color: var(--ink); font-weight: 600; }
+  .status td:first-child { white-space: nowrap; }
+</style>
+
+<main class="wrap">
+  <header class="col">
+    <span class="kicker">Consulted bridges · project outline</span>
+    <h1>Bridge Under Conformity</h1>
+    <p class="lede">When an AI agent sees other agents' answers, does its own answer still come from its own reasoning, or does it take the group's answer? We test this on two-hop questions by removing the hidden middle step inside the model and watching what changes.</p>
+  </header>
+
+  <section class="panel" aria-label="Goal">
+    <h2>The goal in one paragraph</h2>
+    <p>Take “What letter does the name of the country where the Colosseum is located start with?”. To answer “I”, the model has to think of <span class="b">Italy</span>, a word that is never written: the <b>bridge</b>. Alone, removing Italy's direction inside the model destroys the answer, so the answer depends on the model's own path through Italy. Now show the same question with three other agents answering first. If they say <span class="a">I</span>, does the model still go through Italy, or does it just repeat them? If they say <span class="p">S</span> and the model gives in, is Italy still pulling it toward “I”? The paper we build on (Silent Dissent) says the bridge is still <i>present</i> when agents give in. We test whether it is still <i>used</i>.</p>
+  </section>
+
+  <section class="section" id="claim">
+    <div class="col"><span class="kicker">What we claim, and what we don't</span><h2>The claim</h2></div>
+    <div class="claim">
+      <p>On letter-type two-hop questions where Qwen's answer alone depends on the bridge, we measure whether removing that bridge still changes the answer when the model is in a group that agrees or disagrees with it, and we compare that with whether the bridge is still readable (the paper's measure).</p>
+      <p class="not"><b>Not claimed:</b> that the model reasons “through Italy” as a step; that the direction is Italy rather than a related signal; anything about other question types (the paper's own city-to-country facts are out of scope).</p>
+    </div>
+  </section>
+
+  <section class="section" id="flow">
+    <div class="col"><span class="kicker">The plan</span><h2>From single questions to groups</h2></div>
+    <div class="flow">
+      <div class="fstep"><b>Pick the questions</b><span>Letter questions where the solo scorecard already found the bridge needed and acting first.</span></div>
+      <div class="fstep"><b>Re-measure alone</b><span>Same question, same tool, in the new code: the baseline for each question.</span></div>
+      <div class="fstep"><b>Peers agree</b><span>1, 2 and 3 peers give the right letter.</span></div>
+      <div class="fstep"><b>Peers disagree</b><span>1, 2 and 3 peers give the same wrong letter.</span></div>
+      <div class="fstep"><b>Remove and read</b><span>In every prompt: remove the bridge and controls, check the edit reaches, read presence.</span></div>
+      <div class="fstep"><b>Label and compare</b><span>One label per prompt, then counts by condition and by how far the model gave in.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="stage1">
+    <div class="col"><span class="kicker">Stage 1 · single questions</span><h2>Which two-hop questions</h2><p>All questions whose answer is a <b>letter</b> and where the existing solo scorecard found the bridge needed early (beats 12 everyday words by 0.5) and acting before the answer forms. Questions built as controls to fail are left out. No new selection run: the lists come from the saved solo results.</p></div>
+    <div class="two">
+      <div class="panel">
+        <h3>Qwen3.6-27B · 25 questions (main model)</h3>
+        <p class="note">Letter of the country of a landmark (Colosseum, Eiffel Tower, Mount Fuji, Kremlin, Machu Picchu, Petronas Towers, Leaning Tower of Pisa, pyramids, Sagrada Família, Sydney Opera House, Angkor Wat); of a person's birth city (Bill Gates, Édith Piaf, Mozart, Muhammad Ali, Beyoncé, Chris Hemsworth, Jimi Hendrix, Michelle Obama); of a university's city (York, Alberta, Berklee, Fudan, Pompeu Fabra); and of the animals that spin webs.</p>
+      </div>
+      <div class="panel">
+        <h3>Qwen3.5-4B · 24 questions (replication)</h3>
+        <p class="note">The same families, with the questions this smaller model can answer and pass: 15 landmark countries, 5 birth cities, 4 university cities.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>The six calibration questions</h3>
+      <p>Colosseum, Gates, Piaf, Mozart, spider and York were used in the earlier pilot, and the reading thresholds below were set on their numbers. They are run with everything else, but <b>reported separately</b>: the headline comes from the other questions only.</p>
+    </div>
+  </section>
+
+  <section class="section" id="stage2">
+    <div class="col"><span class="kicker">Stage 2 · groups</span><h2>The prompts</h2><p>One user message in the model's chat template. The peers' lines come after the question. The instruction is neutral: it does not tell the model to take the peers into account.</p></div>
+    <div class="two">
+      <div class="panel">
+        <span class="tag">Alone</span>
+<pre>What letter does the name of the country where
+the Colosseum is located start with? Answer with
+one letter.</pre>
+        <p class="note">The model says <span class="a">I</span>.</p>
+      </div>
+      <div class="panel">
+        <span class="tag">Group (1, 2 or 3 peers)</span>
+<pre>Several AI agents are answering the same question.
+
+Question: What letter does the name of the country
+where the Colosseum is located start with?
+Agent 2: <span class="p2">F</span>
+Agent 3: <span class="p2">F</span>
+Agent 4: <span class="p2">F</span>
+
+You are Agent 1. Give your own answer. Answer with
+one letter.</pre>
+        <p class="note"><b>Agree:</b> the peers say <span class="a">I</span>. <b>Disagree:</b> they all say the same wrong letter, here <span class="p">F</span>. For the calibration questions the wrong letter is the pilot's; for the others it is the first letter of a same-kind word (Germany → G for the Eiffel Tower).</p>
+      </div>
+    </div>
+    <div class="panel">
+      <span class="tag">Copy-only control</span>
+      <p>The calibration questions with a made-up subject (“the country where the Varrenth Arch is located”) and three peers giving a letter. The model has no bridge of its own, so removing the original bridge must do nothing. This shows the measure reads zero when copying is the only option.</p>
+    </div>
+    <p class="note">Per model: 7 prompts per question (alone, agree × 3, disagree × 3) plus 6 copy-only prompts.</p>
+  </section>
+
+  <section class="section" id="measure">
+    <div class="col"><span class="kicker">In every prompt</span><h2>What we measure</h2></div>
+    <div class="panel scroll-x">
+      <table>
+        <thead><tr><th>Measurement</th><th>How</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><b>Baseline</b></td><td>P(right letter), P(peers' letter), the model's greedy answer, and the balance LO = log P(peers') − log P(right).</td><td>Sorts each disagree prompt into <i>holds</i> (answers right), <i>partial give-in</i> (gives the peers' letter, P(right) ≥ 0.3) or <i>full give-in</i>.</td></tr>
+          <tr><td><b>Answer onset</b></td><td>Remove the direction of the letter the model gives, window by window; the first window that drops it by 0.5 or more. The peers' letter tokens are left out of this edit, so removing the copy source can't fake an onset.</td><td>Only windows that end before it count as “early”, before the answer forms.</td></tr>
+          <tr><td><b>Remove the bridge</b></td><td>In every early window, from the question's first word to the end of the prompt (peers' lines included).</td><td>The core measurement: the drop in P(right), and the shift in LO.</td></tr>
+          <tr><td><b>Controls</b></td><td>The same removal for 12 everyday words of matched strength, for the two same-kind words (Spain, France for Italy), and for the right letter's own direction.</td><td>Everyday words give the noise floor; same-kind words show it isn't “any country”; the answer's direction shows the measure can move.</td></tr>
+          <tr><td><b>Reach check</b></td><td>The same prompt with “First name the country.” and the reply started for the model; removing the bridge must cut P(bridge name) by half. Read only if P(bridge name) starts at 0.3 or more.</td><td>Separates “the bridge isn't needed” from “the edit missed it”.</td></tr>
+          <tr><td><b>Presence</b></td><td>The bridge's J-lens rank at the last token, in the paper's layer band; also for a same-kind word and an unrelated word.</td><td>The paper's measure. Lets each prompt be placed as present and used, or present but unused.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="reading">
+    <div class="col"><span class="kicker">Fixed before the run</span><h2>How each prompt is read</h2></div>
+    <div class="two">
+      <div class="panel scroll-x">
+        <h3>Disagree prompts (peers wrong)</h3>
+        <table>
+          <thead><tr><th>Bridge's shift in LO, versus controls</th><th>Label</th></tr></thead>
+          <tbody>
+            <tr><td>≥ 2 above the everyday-word max <b>and</b> ≥ 1 above the same-kind max</td><td><span class="pill good">bridge still pulls</span></td></tr>
+            <tr><td>&lt; 1 above the everyday-word max, reach passing</td><td><span class="pill bad">bridge not needed</span></td></tr>
+            <tr><td>anything else, or reach not readable</td><td><span class="pill mid">mixed</span></td></tr>
+          </tbody>
+        </table>
+        <p class="note">Removing a bridge that still pulls toward the right answer pushes the model <i>further</i> toward the peers: LO goes up. 2 log-odds units is a factor of about 7.</p>
+      </div>
+      <div class="panel scroll-x">
+        <h3>Alone and agree prompts</h3>
+        <table>
+          <thead><tr><th>Bridge's drop in P(right), minus noise</th><th>Label</th></tr></thead>
+          <tbody>
+            <tr><td>≥ 0.5</td><td><span class="pill good">bridge still needed</span></td></tr>
+            <tr><td>&lt; 0.2, reach passing</td><td><span class="pill bad">bridge not needed</span></td></tr>
+            <tr><td>anything else, or reach not readable</td><td><span class="pill mid">mixed</span></td></tr>
+          </tbody>
+        </table>
+        <p class="note">“Bridge not needed” is not the same as “copied”: the model could also have a second route to the answer. Presence narrows it down; telling copying from a second route is a follow-up.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="hopes">
+    <div class="col"><span class="kicker">What we hope to find</span><h2>Expectations, and what each outcome means</h2><p>From the six-question pilot. Each one can come out either way.</p></div>
+    <div class="three">
+      <article class="hyp"><span class="tag">Peers disagree, model holds</span><h3>The bridge is what holds it</h3><p><b>Expect:</b> bridge still pulls. <b>If not:</b> the model resists for some other reason than its own answer.</p></article>
+      <article class="hyp"><span class="tag">Peers disagree, partial give-in</span><h3>Silent dissent, shown causally</h3><p><b>Expect:</b> bridge still pulls: the model's own answer is still pushing back while it gives in. <b>If not:</b> the paper's “silent dissent” isn't doing work even here.</p></article>
+      <article class="hyp"><span class="tag">Peers disagree, full give-in</span><h3>The pull fades</h3><p><b>Expect:</b> mixed or not needed. <b>If the bridge still pulls:</b> strong support for the paper's reading.</p></article>
+      <article class="hyp"><span class="tag">Peers agree</span><h3>The model stops using its own path</h3><p><b>Expect:</b> bridge not needed in most questions, even though the answer is right. <b>Meaning:</b> agreement short-circuits the model's own reasoning.</p></article>
+      <article class="hyp"><span class="tag">Presence × use</span><h3>Present but unused</h3><p><b>Expect:</b> in agree prompts and full give-ins, the bridge is still readable but no longer needed. <b>Meaning:</b> there, the paper's presence measure would overstate the model's own reasoning.</p></article>
+      <article class="hyp"><span class="tag">More peers</span><h3>A slide, not a switch</h3><p><b>Expect:</b> P(right) and the bridge's pull fall with each added peer. <b>Meaning:</b> how fast group pressure overrides the model's own answer.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="limits">
+    <div class="col"><span class="kicker">Stated up front</span><h2>Limits</h2></div>
+    <div class="panel">
+      <ul class="list">
+        <li><span>1</span><span>One question type (letters), two Qwen models, one wording of the group prompt.</span></li>
+        <li><span>2</span><span>We show whether the bridge's direction still feeds the answer, not what that direction is.</span></li>
+        <li><span>3</span><span>The reading thresholds were set on the six calibration questions; they stay fixed for the rest.</span></li>
+        <li><span>4</span><span>Full give-ins sit at the edge of what can be measured (P(right) near 0), which is why the balance LO is used.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="status">
+    <div class="col"><span class="kicker">Where it stands</span><h2>Steps</h2></div>
+    <div class="panel scroll-x status">
+      <table>
+        <thead><tr><th>Step</th><th>What</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Branches</td><td><code>archive/full-scorecard</code> keeps all earlier work; <code>conformity</code> holds this project.</td><td><span class="pill good">done</span></td></tr>
+          <tr><td>Outline</td><td>This page.</td><td><span class="pill good">done</span></td></tr>
+          <tr><td>Code</td><td>One script for all conditions and measurements, tested on a tiny model.</td><td><span class="pill none">next</span></td></tr>
+          <tr><td>Run</td><td>Qwen3.6-27B and Qwen3.5-4B on rented GPUs.</td><td><span class="pill none">to do</span></td></tr>
+          <tr><td>Report</td><td>Labels by condition, presence × use, the calibration questions separately.</td><td><span class="pill none">to do</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
