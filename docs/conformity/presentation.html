@@ -212,6 +212,11 @@
   .fit li { display: grid; grid-template-columns: 1.8rem minmax(0, 1fr); gap: 8px; font-size: 0.95rem; }
   .fit li > span:first-child { font-family: var(--display); font-weight: 800; color: var(--bridge); }
 
+  .fmt { gap: 22px; }
+  .fills td { vertical-align: middle; }
+  .fills td:first-child { font-weight: 600; white-space: nowrap; }
+  .fills .chip { padding: 2px 10px; }
+  .fit { grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 12px 24px; }
   /* tool diagrams */
   .strip { display: grid; grid-template-columns: repeat(32, minmax(0, 1fr)); gap: 2px; }
   .strip span { height: 22px; border-radius: 2px; background: var(--line); }
@@ -539,16 +544,23 @@
       <span class="ch-num">Chapter 5 · The question that follows</span>
       <h2>Ask for the first letter of the hidden word</h2>
     </div>
-    <div class="panel typecard">
-      <div class="col">
-        <p class="template">“What letter does the name of <span class="slot">the country where the Colosseum is located</span> start with?”</p>
-        <p class="note">The slot can be a landmark's country, a person's birth city or a university's city. Answers are single letters.</p>
+    <div class="panel fmt">
+      <p class="template">“What letter does the name of <span class="slot">[ hidden thing ]</span> start with?”</p>
+      <div class="scroll-x">
+        <table class="fills">
+          <thead><tr><th>The slot describes…</th><th>Example</th><th>Bridge</th><th>Answer</th></tr></thead>
+          <tbody>
+            <tr><td>a landmark's country</td><td>the country where the Colosseum is located</td><td><span class="chip br">Italy</span></td><td><span class="chip an">I</span></td></tr>
+            <tr><td>a person's birth city</td><td>the city where Bill Gates was born</td><td><span class="chip br">Seattle</span></td><td><span class="chip an">S</span></td></tr>
+            <tr><td>a university's city</td><td>the city where York University has its headquarters</td><td><span class="chip br">Toronto</span></td><td><span class="chip an">T</span></td></tr>
+          </tbody>
+        </table>
       </div>
       <ul class="fit">
         <li><span>1</span><span><b>Easy once the bridge is known.</b> Spelling the first letter of a famous name is trivial for these models.</span></li>
-        <li><span>2</span><span><b>No shortcut.</b> Nothing about the Colosseum says “I”. The only route is through the spelling of Italy.</span></li>
-        <li><span>3</span><span><b>No lookalike.</b> A letter shares nothing with a country's meaning, so removing Italy can't remove part of the answer.</span></li>
-        <li><span>4</span><span><b>Same-kind wrong answers.</b> Any other letter will do, and the first letter of a neighbouring place is plausible.</span></li>
+        <li><span>2</span><span><b>No shortcut.</b> Nothing in the description gives the letter away. The only route is through the spelling of the bridge.</span></li>
+        <li><span>3</span><span><b>No lookalike.</b> A letter shares nothing with the meaning of a place, so removing the bridge can't remove part of the answer.</span></li>
+        <li><span>4</span><span><b>Same-kind wrong answers.</b> Any other letter will do, and the first letter of a neighbouring place is believable.</span></li>
       </ul>
     </div>
     <p class="note col">The cost is scope: our results are about this question type, not about the city-to-country facts the paper uses.</p>
