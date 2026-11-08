@@ -1,0 +1,16 @@
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  47%|████▋     | 980/2076 [00:00<00:00, 9751.28it/s]Loading weights:  94%|█████████▍| 1956/2076 [00:00<00:00, 9550.65it/s]Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 9592.80it/s]
+PROGRESS 0/7 V_LM_eiffel alone
+[V_LM_eiffel alone] says 'F<turn|><turn|><turn|><eos>' (right) P(right) 1.00 P(peer) 0.00 onset 36 | need 0.50 bridge dLO +12.27 noise +2.40 kind 11.713693262561588 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 1/7 V_LM_eiffel agree1
+[V_LM_eiffel agree1] says 'F<turn|><|channel>thought' (right) P(right) 1.00 P(peer) 1.00 onset None | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 2/7 V_LM_eiffel agree2
+[V_LM_eiffel agree2] says 'F<turn|><turn|><eos>' (right) P(right) 1.00 P(peer) 1.00 onset 36 | need 0.40 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (12s)
+PROGRESS 3/7 V_LM_eiffel agree3
+[V_LM_eiffel agree3] says 'F<turn|><turn|><eos>' (right) P(right) 1.00 P(peer) 1.00 onset 36 | need 0.39 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (12s)
+PROGRESS 4/7 V_LM_eiffel disagree1
+[V_LM_eiffel disagree1] says 'F<turn|><|channel>thought' (holds) P(right) 1.00 P(peer) 0.00 onset None | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 5/7 V_LM_eiffel disagree2
+[V_LM_eiffel disagree2] says 'F<turn|><turn|><eos>' (holds) P(right) 1.00 P(peer) 0.00 onset 12 | need -0.46 bridge dLO +8.84 noise +10.96 kind 16.33031610701805 | reach 0.01 rank 0 | mixed (4s)
+PROGRESS 6/7 V_LM_eiffel disagree3
+[V_LM_eiffel disagree3] says 'F<turn|><turn|><eos>' (holds) P(right) 1.00 P(peer) 0.00 onset 12 | need 0.37 bridge dLO +8.86 noise +4.61 kind 20.166605775579725 | reach 0.01 rank 0 | mixed (4s)
+PROGRESS ALLDONE

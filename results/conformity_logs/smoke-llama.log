@@ -1,0 +1,8 @@
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 3747.41it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+LlamaForCausalLM 32 [17, 18, 19, 20, 21, 22, 23] cuda:0
+'t_header_id|>user<|end_header_id|>\n\nWhat letter does the name of the country where the Colosseum is located start with? Answer with one letter.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n'
+[('I', 0.9746969938278198), ('The', 0.01785220019519329), ('It', 0.005795760545879602), ('Italy', 0.0007843709317967296), ('R', 0.00028855379787273705)]
+{'I': 0.0, 'R': 0.0}
+pieces [1, 1, 1, 1]
+band ranks [[99, 32, 0, 0, 0, 0, 0], [4384, 1206, 430, 169, 34, 24, 11], [68920, 42231, 30232, 54508, 22328, 17294, 2692]]

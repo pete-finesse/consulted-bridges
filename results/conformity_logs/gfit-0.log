@@ -1,0 +1,21 @@
+Using the latest cached version of the dataset since Salesforce/wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+2026-11-08 11:12:04,609 Using the latest cached version of the dataset since Salesforce/wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /workspace/hf_cache/datasets/Salesforce___wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Sun Nov  8 10:18:44 2026).
+2026-11-08 11:12:04,615 Found the latest cached dataset configuration 'wikitext-103-raw-v1' at /workspace/hf_cache/datasets/Salesforce___wikitext/wikitext-103-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Sun Nov  8 10:18:44 2026).
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  21%|██        | 426/2076 [00:00<00:00, 4257.10it/s]Loading weights:  41%|████      | 852/2076 [00:01<00:02, 416.87it/s] Loading weights:  50%|█████     | 1043/2076 [00:02<00:02, 426.09it/s]Loading weights:  56%|█████▋    | 1168/2076 [00:02<00:02, 426.25it/s]Loading weights:  61%|██████    | 1260/2076 [00:02<00:01, 428.34it/s]Loading weights:  64%|██████▍   | 1335/2076 [00:02<00:01, 421.37it/s]Loading weights:  67%|██████▋   | 1398/2076 [00:03<00:01, 424.58it/s]Loading weights:  81%|████████  | 1679/2076 [00:03<00:00, 759.72it/s]Loading weights: 100%|██████████| 2076/2076 [00:03<00:00, 648.25it/s]
+2026-11-08 11:12:52,305 prompt 1/15  128 tokens  13.4s
+2026-11-08 11:13:05,402 prompt 2/15  128 tokens  13.1s
+2026-11-08 11:13:18,809 prompt 3/15  128 tokens  13.4s
+2026-11-08 11:13:32,012 prompt 4/15  128 tokens  13.2s
+2026-11-08 11:13:45,611 prompt 5/15  128 tokens  13.6s
+2026-11-08 11:13:58,318 prompt 6/15  128 tokens  12.7s
+2026-11-08 11:14:11,615 prompt 7/15  128 tokens  13.3s
+2026-11-08 11:14:24,802 prompt 8/15  128 tokens  13.1s
+2026-11-08 11:14:38,003 prompt 9/15  128 tokens  13.2s
+2026-11-08 11:14:50,307 prompt 10/15  128 tokens  12.3s
+2026-11-08 11:15:04,816 prompt 11/15  128 tokens  13.2s
+2026-11-08 11:15:17,308 prompt 12/15  128 tokens  12.4s
+2026-11-08 11:15:29,705 prompt 13/15  128 tokens  12.4s
+2026-11-08 11:15:41,800 prompt 14/15  128 tokens  12.1s
+2026-11-08 11:15:54,316 prompt 15/15  128 tokens  12.5s
+fitted on 15 prompts -> /workspace/lenses/gemma4_e4b_it_jlens_wiki100.pt.shard0of7

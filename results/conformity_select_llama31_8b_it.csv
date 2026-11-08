@@ -1,0 +1,38 @@
+question,selected,verdict,verdict_reason,model_said,P_base,need,comes_first,lead,answer_onset,quality
+L_colosseum,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I.<|eot_id|>,0.977,0.964,True,9.0,27.0,0.959
+L_federer,False,UNTESTABLE,the model gets the two-hop question wrong,Basel. The letter is,0.034,,,,,
+L_gates,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Bill Gates was,0.001,,,,,
+L_maldini,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Paolo Mald,0.081,,,,,
+L_mishima,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Yukio Mish,0.003,,,,,
+L_mozart,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Wolfgang Amade,0.269,,,,,
+L_piaf,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Édith,0.003,,,,,
+L_spider,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",S<|eot_id|>,0.482,0.312,True,21.0,21.0,0.254
+L_york,False,UNTESTABLE,the model gets the two-hop question wrong,The name of the city where,0.021,,,,,
+V_LM_acropolis,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",G.<|eot_id|>,0.931,0.957,True,9.0,27.0,0.953
+V_LM_angkor,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C.<|eot_id|>,0.946,0.923,True,6.0,24.0,0.615
+V_LM_brandenburg,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",G<|eot_id|>,0.982,0.971,True,9.0,24.0,0.967
+V_LM_christ,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B<|eot_id|>,0.959,0.932,True,9.0,24.0,0.376
+V_LM_eiffel,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",F<|eot_id|>,0.988,0.833,True,6.0,24.0,0.833
+V_LM_fuji,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",J.<|eot_id|>,0.947,0.0,True,3.0,24.0,0.0
+V_LM_kremlin,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",R.<|eot_id|>,0.941,0.918,True,6.0,24.0,0.871
+V_LM_machu,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P<|eot_id|>,0.97,0.931,True,6.0,24.0,0.716
+V_LM_petronas,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",M<|eot_id|>,0.897,0.0,True,3.0,24.0,0.0
+V_LM_pisa,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I.<|eot_id|>,0.965,0.943,True,9.0,27.0,0.943
+V_LM_pyramids,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E<|eot_id|>,0.858,0.896,True,6.0,24.0,0.876
+V_LM_sagrada,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S.<|eot_id|>,0.46,0.544,True,12.0,21.0,0.521
+V_LM_sydney,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",A.<|eot_id|>,0.985,0.97,True,9.0,27.0,0.969
+V_LM_taj,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I.<|eot_id|>,0.945,0.926,True,9.0,27.0,0.922
+V_LP_ali,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",L<|eot_id|>,0.55,0.637,True,12.0,24.0,0.623
+V_LP_beyonce,False,UNTESTABLE,the model gets the two-hop question wrong,Houston.,0.037,,,,,
+V_LP_hemsworth,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Chris Hemsworth,0.061,,,,,
+V_LP_hendrix,False,UNTESTABLE,the model gets the two-hop question wrong,Seattle. The letter is S,0.002,,,,,
+V_LP_kapoor,False,UNTESTABLE,the model gets the two-hop question and hop 1 wrong,Kareena Kapoor was born,0.004,,,,,
+V_LP_obama_m,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Michelle Obama was,0.003,,,,,
+V_LP_plummer,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Christopher Plummer,0.002,,,,,
+V_LP_timberlake,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Justin Timberlake,0.001,,,,,
+V_LU_alberta,False,UNTESTABLE,the model gets the two-hop question wrong,The city where the University of,0.06,,,,,
+V_LU_berklee,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B.<|eot_id|>,0.558,0.538,True,6.0,24.0,0.171
+V_LU_dalhousie,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Dalhous,0.124,,,,,
+V_LU_fudan,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Fudan,0.033,,,,,
+V_LU_hopkins,False,UNTESTABLE,the model gets the two-hop question wrong,Baltimore is the city where,0.609,,,,,
+V_LU_pompeu,False,UNTESTABLE,the model gets the two-hop question wrong,The city where Pompeu Fab,0.013,,,,,

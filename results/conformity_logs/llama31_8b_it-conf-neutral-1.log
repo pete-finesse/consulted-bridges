@@ -1,0 +1,101 @@
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 3562.04it/s]
+PROGRESS 0/49 V_LM_acropolis alone
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[V_LM_acropolis alone] says 'G.<|eot_id|>' (right) P(right) 0.93 P(peer) 0.00 onset 24 | need 0.95 bridge dLO +9.09 noise +0.90 kind 0.44259924890557656 | reach 1.00 rank 0 | bridge still needed (25s)
+PROGRESS 1/49 V_LM_acropolis agree1
+[V_LM_acropolis agree1] says 'The name of the country where' (wrong) P(right) 0.28 P(peer) 0.28 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (2s)
+PROGRESS 2/49 V_LM_acropolis agree2
+[V_LM_acropolis agree2] says 'Greece.<|eot_id|>' (wrong) P(right) 0.68 P(peer) 0.68 onset 24 | need 0.50 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (24s)
+PROGRESS 3/49 V_LM_acropolis agree3
+[V_LM_acropolis agree3] says 'G<|eot_id|>' (right) P(right) 0.78 P(peer) 0.78 onset 24 | need 0.68 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (25s)
+PROGRESS 4/49 V_LM_acropolis disagree1
+[V_LM_acropolis disagree1] says 'G<|eot_id|>' (holds) P(right) 0.83 P(peer) 0.01 onset 24 | need 0.80 bridge dLO +8.25 noise +1.00 kind 0.6249630535935662 | reach 1.00 rank 0 | bridge still pulls (28s)
+PROGRESS 5/49 V_LM_acropolis disagree2
+[V_LM_acropolis disagree2] says 'G<|eot_id|>' (holds) P(right) 0.97 P(peer) 0.00 onset 24 | need 0.97 bridge dLO +8.37 noise +0.87 kind 0.7498123581041796 | reach 1.00 rank 0 | bridge still pulls (30s)
+PROGRESS 6/49 V_LM_acropolis disagree3
+[V_LM_acropolis disagree3] says 'G<|eot_id|>' (holds) P(right) 0.96 P(peer) 0.02 onset 24 | need 0.96 bridge dLO +9.00 noise +0.62 kind 0.8749714006520808 | reach 1.00 rank 0 | bridge still pulls (35s)
+PROGRESS 7/49 V_LM_brandenburg alone
+[V_LM_brandenburg alone] says 'G<|eot_id|>' (right) P(right) 0.98 P(peer) 0.00 onset 24 | need 0.97 bridge dLO +7.13 noise +0.75 kind 0.12471497753474381 | reach 1.00 rank 0 | bridge still needed (31s)
+PROGRESS 8/49 V_LM_brandenburg agree1
+[V_LM_brandenburg agree1] says 'G<|eot_id|>' (right) P(right) 0.42 P(peer) 0.42 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 9/49 V_LM_brandenburg agree2
+[V_LM_brandenburg agree2] says 'G<|eot_id|>' (right) P(right) 0.55 P(peer) 0.55 onset 24 | need 0.47 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (27s)
+PROGRESS 10/49 V_LM_brandenburg agree3
+[V_LM_brandenburg agree3] says 'G<|eot_id|>' (right) P(right) 0.79 P(peer) 0.79 onset 24 | need 0.76 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (25s)
+PROGRESS 11/49 V_LM_brandenburg disagree1
+[V_LM_brandenburg disagree1] says 'G<|eot_id|>' (holds) P(right) 0.88 P(peer) 0.00 onset 21 | need 0.82 bridge dLO +7.75 noise +1.00 kind 2.38654631404819 | reach 0.92 rank 0 | bridge still pulls (24s)
+PROGRESS 12/49 V_LM_brandenburg disagree2
+[V_LM_brandenburg disagree2] says 'G<|eot_id|>' (holds) P(right) 0.98 P(peer) 0.00 onset 24 | need 0.96 bridge dLO +9.11 noise +0.50 kind -0.12379681735279657 | reach 1.00 rank 0 | bridge still pulls (27s)
+PROGRESS 13/49 V_LM_brandenburg disagree3
+[V_LM_brandenburg disagree3] says 'G<|eot_id|>' (holds) P(right) 0.96 P(peer) 0.01 onset 24 | need 0.98 bridge dLO +9.61 noise +0.50 kind -3.367254786112994e-07 | reach 1.00 rank 0 | bridge still pulls (33s)
+PROGRESS 14/49 V_LM_eiffel alone
+[V_LM_eiffel alone] says 'F<|eot_id|>' (right) P(right) 0.99 P(peer) 0.00 onset 24 | need 0.84 bridge dLO +5.63 noise +0.43 kind 0.0022264309816577565 | reach 1.00 rank 0 | bridge still needed (29s)
+PROGRESS 15/49 V_LM_eiffel agree1
+[V_LM_eiffel agree1] says 'F.<|eot_id|>' (right) P(right) 0.61 P(peer) 0.61 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (2s)
+PROGRESS 16/49 V_LM_eiffel agree2
+[V_LM_eiffel agree2] says 'F<|eot_id|>' (right) P(right) 0.85 P(peer) 0.85 onset 24 | need 0.74 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (28s)
+PROGRESS 17/49 V_LM_eiffel agree3
+[V_LM_eiffel agree3] says 'F<|eot_id|>' (right) P(right) 0.97 P(peer) 0.97 onset 24 | need 0.93 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (28s)
+PROGRESS 18/49 V_LM_eiffel disagree1
+[V_LM_eiffel disagree1] says 'F<|eot_id|>' (holds) P(right) 0.93 P(peer) 0.00 onset 24 | need 0.91 bridge dLO +8.85 noise +1.00 kind 0.4277336346378675 | reach 1.00 rank 0 | bridge still pulls (27s)
+PROGRESS 19/49 V_LM_eiffel disagree2
+[V_LM_eiffel disagree2] says 'F<|eot_id|>' (holds) P(right) 0.99 P(peer) 0.00 onset 24 | need 0.98 bridge dLO +8.66 noise +1.20 kind 0.41256443623523786 | reach 1.00 rank 0 | bridge still pulls (28s)
+PROGRESS 20/49 V_LM_eiffel disagree3
+[V_LM_eiffel disagree3] says 'F<|eot_id|>' (holds) P(right) 0.98 P(peer) 0.00 onset 24 | need 0.97 bridge dLO +8.96 noise +1.96 kind 0.48201996981250517 | reach 1.00 rank 0 | bridge still pulls (34s)
+PROGRESS 21/49 V_LM_machu alone
+[V_LM_machu alone] says 'P<|eot_id|>' (right) P(right) 0.97 P(peer) 0.00 onset 24 | need 0.94 bridge dLO +9.50 noise +0.46 kind 0.45441783367581223 | reach 1.00 rank 0 | bridge still needed (28s)
+PROGRESS 22/49 V_LM_machu agree1
+[V_LM_machu agree1] says 'P<|eot_id|>' (right) P(right) 0.80 P(peer) 0.80 onset 24 | need 0.65 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (28s)
+PROGRESS 23/49 V_LM_machu agree2
+[V_LM_machu agree2] says 'P<|eot_id|>' (right) P(right) 0.95 P(peer) 0.95 onset 24 | need 0.94 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (27s)
+PROGRESS 24/49 V_LM_machu agree3
+[V_LM_machu agree3] says 'P<|eot_id|>' (right) P(right) 0.98 P(peer) 0.98 onset 24 | need 0.92 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (26s)
+PROGRESS 25/49 V_LM_machu disagree1
+[V_LM_machu disagree1] says 'P<|eot_id|>' (holds) P(right) 0.92 P(peer) 0.00 onset 24 | need 0.80 bridge dLO +4.72 noise +1.23 kind 0.36508173767292185 | reach 1.00 rank 0 | bridge still pulls (28s)
+PROGRESS 26/49 V_LM_machu disagree2
+[V_LM_machu disagree2] says 'P<|eot_id|>' (holds) P(right) 0.98 P(peer) 0.00 onset 24 | need 0.75 bridge dLO +4.74 noise +1.12 kind 0.2486045409190787 | reach 1.00 rank 0 | bridge still pulls (28s)
+PROGRESS 27/49 V_LM_machu disagree3
+[V_LM_machu disagree3] says 'P<|eot_id|>' (holds) P(right) 0.98 P(peer) 0.00 onset 24 | need 0.85 bridge dLO +5.75 noise +1.00 kind 0.12496919035579968 | reach 1.00 rank 0 | bridge still pulls (33s)
+PROGRESS 28/49 V_LM_pyramids alone
+[V_LM_pyramids alone] says 'E<|eot_id|>' (right) P(right) 0.84 P(peer) 0.00 onset 24 | need 0.89 bridge dLO +13.60 noise +1.11 kind 0.2446800581229951 | reach 1.00 rank 0 | bridge still needed (29s)
+PROGRESS 29/49 V_LM_pyramids agree1
+[V_LM_pyramids agree1] says 'The country where the Pyramids' (wrong) P(right) 0.20 P(peer) 0.20 onset 24 | need 0.49 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (28s)
+PROGRESS 30/49 V_LM_pyramids agree2
+[V_LM_pyramids agree2] says 'E<|eot_id|>' (right) P(right) 0.59 P(peer) 0.59 onset 24 | need 0.49 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (26s)
+PROGRESS 31/49 V_LM_pyramids agree3
+[V_LM_pyramids agree3] says 'E<|eot_id|>' (right) P(right) 0.71 P(peer) 0.71 onset 24 | need 0.64 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (25s)
+PROGRESS 32/49 V_LM_pyramids disagree1
+[V_LM_pyramids disagree1] says 'E<|eot_id|>' (holds) P(right) 0.59 P(peer) 0.00 onset 24 | need 0.73 bridge dLO +8.56 noise +1.00 kind 0.05294398084143026 | reach 1.00 rank 0 | bridge still pulls (28s)
+PROGRESS 33/49 V_LM_pyramids disagree2
+[V_LM_pyramids disagree2] says 'E<|eot_id|>' (holds) P(right) 0.96 P(peer) 0.00 onset 24 | need 0.94 bridge dLO +9.58 noise +1.09 kind 0.00041916827991528294 | reach 1.00 rank 0 | bridge still pulls (30s)
+PROGRESS 34/49 V_LM_pyramids disagree3
+[V_LM_pyramids disagree3] says 'E<|eot_id|>' (holds) P(right) 0.96 P(peer) 0.00 onset 24 | need 0.96 bridge dLO +9.61 noise +0.87 kind 0.00018261433123889503 | reach 1.00 rank 0 | bridge still pulls (35s)
+PROGRESS 35/49 V_LM_sydney alone
+[V_LM_sydney alone] says 'A.<|eot_id|>' (right) P(right) 0.99 P(peer) 0.00 onset 27 | need 0.96 bridge dLO +16.39 noise +1.28 kind 0.38954094951171925 | reach 1.00 rank 0 | bridge still needed (31s)
+PROGRESS 36/49 V_LM_sydney agree1
+[V_LM_sydney agree1] says 'A.<|eot_id|>' (right) P(right) 0.88 P(peer) 0.88 onset 24 | need 0.83 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (27s)
+PROGRESS 37/49 V_LM_sydney agree2
+[V_LM_sydney agree2] says 'A<|eot_id|>' (right) P(right) 0.98 P(peer) 0.98 onset 27 | need 0.97 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (29s)
+PROGRESS 38/49 V_LM_sydney agree3
+[V_LM_sydney agree3] says 'A<|eot_id|>' (right) P(right) 0.98 P(peer) 0.98 onset 27 | need 0.93 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (29s)
+PROGRESS 39/49 V_LM_sydney disagree1
+[V_LM_sydney disagree1] says 'A' (holds) P(right) 0.82 P(peer) 0.02 onset 24 | need 0.76 bridge dLO +5.75 noise +0.87 kind 0.6249755858901724 | reach 0.99 rank 0 | bridge still pulls (27s)
+PROGRESS 40/49 V_LM_sydney disagree2
+[V_LM_sydney disagree2] says 'A.<|eot_id|>' (holds) P(right) 0.97 P(peer) 0.01 onset 27 | need 0.95 bridge dLO +6.37 noise +0.75 kind 0.4999242420428214 | reach 1.00 rank 0 | bridge still pulls (33s)
+PROGRESS 41/49 V_LM_sydney disagree3
+[V_LM_sydney disagree3] says 'A.<|eot_id|>' (holds) P(right) 0.92 P(peer) 0.04 onset 24 | need 0.93 bridge dLO +6.12 noise +0.37 kind 0.12499746432329628 | reach 1.00 rank 0 | bridge still pulls (34s)
+PROGRESS 42/49 V_LP_ali alone
+[V_LP_ali alone] says 'L<|eot_id|>' (right) P(right) 0.57 P(peer) 0.00 onset 24 | need 0.69 bridge dLO +4.71 noise +0.98 kind 0.1786081767802674 | reach 1.00 rank 0 | bridge still needed (28s)
+PROGRESS 43/49 V_LP_ali agree1
+[V_LP_ali agree1] says 'C<|eot_id|>' (wrong) P(right) 0.00 P(peer) 0.00 onset 6 | need -0.22 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.00 rank 1 | mixed (9s)
+PROGRESS 44/49 V_LP_ali agree2
+[V_LP_ali agree2] says 'C<|eot_id|>' (wrong) P(right) 0.00 P(peer) 0.00 onset 21 | need 0.22 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 4 | mixed (23s)
+PROGRESS 45/49 V_LP_ali agree3
+[V_LP_ali agree3] says 'K<|eot_id|>' (wrong) P(right) 0.16 P(peer) 0.16 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (2s)
+PROGRESS 46/49 V_LP_ali disagree1
+[V_LP_ali disagree1] says 'L<|eot_id|>' (holds) P(right) 0.51 P(peer) 0.00 onset 21 | need 0.69 bridge dLO +6.18 noise +1.42 kind 1.0028218768234822 | reach 1.00 rank 1 | bridge still pulls (24s)
+PROGRESS 47/49 V_LP_ali disagree2
+[V_LP_ali disagree2] says 'L<|eot_id|>' (holds) P(right) 0.85 P(peer) 0.00 onset 21 | need 0.87 bridge dLO +7.24 noise +1.37 kind 0.9970553636380792 | reach 1.00 rank 2 | bridge still pulls (25s)
+PROGRESS 48/49 V_LP_ali disagree3
+[V_LP_ali disagree3] says 'L<|eot_id|>' (holds) P(right) 0.92 P(peer) 0.00 onset 24 | need 0.91 bridge dLO +7.87 noise +1.25 kind 0.7492039870029892 | reach 1.00 rank 3 | bridge still pulls (33s)
+PROGRESS ALLDONE

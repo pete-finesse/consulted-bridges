@@ -1,0 +1,17 @@
+== 11:22:25 lens
+/workspace/lenses/gemma4_e4b_it_jlens_wiki100.pt exists: nothing to do
+== 11:22:31 solo scorecard
+PROGRESS 19/19 ALLDONE
+PROGRESS 18/18 ALLDONE
+== 11:25:13 select
+verdict
+UNTESTABLE                      24
+SPREAD OUT                      12
+CONSULTED (KIND NOT CHECKED)     1
+1 of 37 letter questions selected: V_LM_eiffel
+== 11:25:20 conformity
+PROGRESS ALLDONE
+PROGRESS ALLDONE
+PROGRESS ALLDONE
+PROGRESS ALLDONE
+== 11:27:12 DONE gemma4_e4b_it_refit

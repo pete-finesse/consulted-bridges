@@ -1,0 +1,39 @@
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 3416.38it/s]
+PROGRESS 0/18 starting v3_L_mishima
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[v3_L_mishima] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 1/18 starting v3_L_piaf
+[v3_L_piaf] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 2/18 starting v3_L_federer
+[v3_L_federer] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 3/18 starting v3_L_spider
+[v3_L_spider] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 4/18 starting V_LM_eiffel
+[V_LM_eiffel] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 5/18 starting V_LM_taj
+[V_LM_taj] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 6/18 starting V_LM_sydney
+[V_LM_sydney] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 7/18 starting V_LM_machu
+[V_LM_machu] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 8/18 starting V_LM_fuji
+[V_LM_fuji] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 9/18 starting V_LM_sagrada
+[V_LM_sagrada] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 10/18 starting V_LM_brandenburg
+[V_LM_brandenburg] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 11/18 starting V_LP_obama_m
+[V_LP_obama_m] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 12/18 starting V_LP_hemsworth
+[V_LP_hemsworth] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 13/18 starting V_LP_timberlake
+[V_LP_timberlake] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 14/18 starting V_LP_hendrix
+[V_LP_hendrix] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 15/18 starting V_LU_berklee
+[V_LU_berklee] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 16/18 starting V_LU_pompeu
+[V_LU_pompeu] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 17/18 starting V_LU_alberta
+[V_LU_alberta] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 18/18 ALLDONE

@@ -1,6 +1,6 @@
-# Gemma-4-E4B-it with the paper's PRIMARY lens: a refit on the chat model. NOT RUN YET: the fit takes ~220 s per
-# prompt on an A100 (~6 h, ~$11 for 100 prompts), so it waits for Peter's go-ahead. configs/gemma4_e4b_it.yaml
-# uses the published base-model lens instead.
+# Gemma-4-E4B-it with the paper's PRIMARY lens: a refit on the chat model. The fit takes ~220 s per prompt on an
+# A100 (~6 GPU-hours for 100 prompts), so it is split over pods: fit_lens.py --shard i/n, then --merge.
+# configs/gemma4_e4b_it.yaml is the same model with the published base-model lens.
 # The official Gemma 4 lens was fit on the BASE model (google/gemma-4-E4B), so, as in the paper, the lens is a
 # 100-prompt wikitext refit on this instruction-tuned model (repos/silent-dissent/configs/
 # gemma4_e4b_it_jlens_wiki100.yaml), made on the pod by scripts/pod/fit_lens.py into the shared volume.

@@ -1,0 +1,20 @@
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:   9%|▉         | 1/11 [00:00<00:01,  5.12it/s]Fetching 11 files:  45%|████▌     | 5/11 [00:00<00:00, 19.77it/s]Fetching 11 files:  73%|███████▎  | 8/11 [00:06<00:02,  1.07it/s]Fetching 11 files:  73%|███████▎  | 8/11 [00:19<00:02,  1.07it/s]Fetching 11 files:  82%|████████▏ | 9/11 [00:22<00:07,  3.79s/it]Fetching 11 files:  91%|█████████ | 10/11 [00:24<00:03,  3.46s/it]Fetching 11 files: 100%|██████████| 11/11 [00:24<00:00,  2.24s/it]
+model: /workspace/hf_cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659
+lens: /workspace/hf_cache/hub/models--neuronpedia--jacobian-lens/snapshots/16a01f309fcec900fdcec3f4cd5b64f3d00e4d5a/llama3.1-8b-it/jlens/Salesforce-wikitext/Llama-3.1-8B-Instruct_jacobian_lens.pt
+== 11:07:02 lens
+llama31_8b_it: no lens to fit (uses a published lens)
+== 11:07:09 solo scorecard
+PROGRESS 19/19 ALLDONE
+PROGRESS 18/18 ALLDONE
+== 11:09:44 select
+verdict
+UNTESTABLE                      19
+CONSULTED (KIND NOT CHECKED)    15
+SPREAD OUT                       3
+15 of 37 letter questions selected: L_colosseum V_LM_acropolis V_LM_angkor V_LM_brandenburg V_LM_christ V_LM_eiffel V_LM_kremlin V_LM_machu V_LM_pisa V_LM_pyramids V_LM_sagrada V_LM_sydney V_LM_taj V_LP_ali V_LU_berklee
+== 11:09:54 conformity
+PROGRESS ALLDONE
+PROGRESS ALLDONE
+PROGRESS ALLDONE
+PROGRESS ALLDONE
+== 11:34:32 DONE llama31_8b_it

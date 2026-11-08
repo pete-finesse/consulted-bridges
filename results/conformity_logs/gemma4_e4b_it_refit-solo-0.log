@@ -1,0 +1,40 @@
+Loading weights:   0%|          | 0/2076 [00:00<?, ?it/s]Loading weights:  49%|████▊     | 1010/2076 [00:00<00:00, 10085.80it/s]Loading weights:  97%|█████████▋| 2019/2076 [00:00<00:00, 9850.15it/s] Loading weights: 100%|██████████| 2076/2076 [00:00<00:00, 9900.08it/s]
+PROGRESS 0/19 starting v3_L_mozart
+[v3_L_mozart] UNTESTABLE: removing the answer's own direction doesn't kill it
+PROGRESS 1/19 starting v3_L_maldini
+[v3_L_maldini] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 2/19 starting v3_L_gates
+[v3_L_gates] UNTESTABLE: removing the answer's own direction doesn't kill it
+PROGRESS 3/19 starting v3_L_york
+[v3_L_york] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 4/19 starting v3_L_colosseum
+[v3_L_colosseum] UNTESTABLE: removing the answer's own direction doesn't kill it
+PROGRESS 5/19 starting V_LM_pisa
+[V_LM_pisa] UNTESTABLE: removing the answer's own direction doesn't kill it
+PROGRESS 6/19 starting V_LM_kremlin
+[V_LM_kremlin] UNTESTABLE: removing the answer's own direction doesn't kill it
+PROGRESS 7/19 starting V_LM_christ
+[V_LM_christ] UNTESTABLE: removing the answer's own direction doesn't kill it
+PROGRESS 8/19 starting V_LM_pyramids
+[V_LM_pyramids] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 9/19 starting V_LM_acropolis
+[V_LM_acropolis] UNTESTABLE: removing the answer's own direction doesn't kill it
+PROGRESS 10/19 starting V_LM_angkor
+[V_LM_angkor] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 11/19 starting V_LM_petronas
+[V_LM_petronas] UNTESTABLE: removing the answer's own direction doesn't kill it
+PROGRESS 12/19 starting V_LP_beyonce
+[V_LP_beyonce] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 13/19 starting V_LP_ali
+[V_LP_ali] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 14/19 starting V_LP_plummer
+[V_LP_plummer] UNTESTABLE: the model gets the two-hop question and hop 1 wrong
+PROGRESS 15/19 starting V_LP_kapoor
+[V_LP_kapoor] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 16/19 starting V_LU_fudan
+[V_LU_fudan] UNTESTABLE: removing the answer's own direction doesn't kill it
+PROGRESS 17/19 starting V_LU_hopkins
+[V_LU_hopkins] UNTESTABLE: removing the answer's own direction doesn't kill it
+PROGRESS 18/19 starting V_LU_dalhousie
+[V_LU_dalhousie] UNTESTABLE: the model gets hop 1 wrong
+PROGRESS 19/19 ALLDONE

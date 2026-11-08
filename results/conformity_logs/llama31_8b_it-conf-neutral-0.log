@@ -1,0 +1,117 @@
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 3854.30it/s]
+PROGRESS 0/57 L_colosseum alone
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[L_colosseum alone] says 'I.<|eot_id|>' (right) P(right) 0.97 P(peer) 0.00 onset 27 | need 0.95 bridge dLO +12.41 noise +0.57 kind 0.048193863123023206 | reach 1.00 rank 0 | bridge still needed (28s)
+PROGRESS 1/57 L_colosseum agree1
+[L_colosseum agree1] says 'R<|eot_id|>' (wrong) P(right) 0.08 P(peer) 0.08 onset 15 | need 0.60 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.00 rank 0 | bridge still needed (15s)
+PROGRESS 2/57 L_colosseum agree2
+[L_colosseum agree2] says 'R<|eot_id|>' (wrong) P(right) 0.04 P(peer) 0.04 onset 12 | need 0.31 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.00 rank 0 | mixed (13s)
+PROGRESS 3/57 L_colosseum agree3
+[L_colosseum agree3] says 'R<|eot_id|>' (wrong) P(right) 0.23 P(peer) 0.23 onset 15 | need 0.39 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.00 rank 0 | mixed (18s)
+PROGRESS 4/57 L_colosseum disagree1
+[L_colosseum disagree1] says 'R<|eot_id|>' (other) P(right) 0.31 P(peer) 0.00 onset 21 | need 0.86 bridge dLO +3.19 noise +0.94 kind 1.5357687455454982 | reach 0.91 rank 0 | bridge still pulls (25s)
+PROGRESS 5/57 L_colosseum disagree2
+[L_colosseum disagree2] says 'I is the correct answer.' (holds) P(right) 0.53 P(peer) 0.00 onset 24 | need 0.87 bridge dLO +4.06 noise +1.15 kind 0.9549709732339515 | reach 1.00 rank 0 | bridge still pulls (31s)
+PROGRESS 6/57 L_colosseum disagree3
+[L_colosseum disagree3] says 'I is the correct answer.' (holds) P(right) 0.81 P(peer) 0.00 onset 24 | need 0.83 bridge dLO +2.75 noise +1.24 kind 0.1313121333123597 | reach 1.00 rank 0 | mixed (36s)
+PROGRESS 7/57 L_colosseum copy3
+[L_colosseum copy3] says "I'll provide my answer." (holds) P(right) 0.45 P(peer) 0.21 onset 21 | need -0.19 bridge dLO -0.12 noise +0.62 kind 0.24999915310233123 | reach 1.00 rank 158 | mixed (31s)
+PROGRESS 8/57 V_LM_angkor alone
+[V_LM_angkor alone] says 'C.<|eot_id|>' (right) P(right) 0.95 P(peer) 0.00 onset 24 | need 0.91 bridge dLO +10.90 noise +0.76 kind 0.5393631470526472 | reach 0.99 rank 0 | bridge still needed (27s)
+PROGRESS 9/57 V_LM_angkor agree1
+[V_LM_angkor agree1] says 'K<|eot_id|>' (wrong) P(right) 0.30 P(peer) 0.30 onset 21 | need 0.34 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.08 rank 3 | mixed (22s)
+PROGRESS 10/57 V_LM_angkor agree2
+[V_LM_angkor agree2] says 'K<|eot_id|>' (wrong) P(right) 0.35 P(peer) 0.35 onset 21 | need 0.63 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.05 rank 1 | bridge still needed (22s)
+PROGRESS 11/57 V_LM_angkor agree3
+[V_LM_angkor agree3] says 'C<|eot_id|>' (right) P(right) 0.85 P(peer) 0.85 onset 24 | need 0.83 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 3 | bridge still needed (26s)
+PROGRESS 12/57 V_LM_angkor disagree1
+[V_LM_angkor disagree1] says 'C<|eot_id|>' (holds) P(right) 0.96 P(peer) 0.00 onset 24 | need 0.80 bridge dLO +5.63 noise +1.29 kind 0.5730151880593706 | reach 1.00 rank 1 | bridge still pulls (29s)
+PROGRESS 13/57 V_LM_angkor disagree2
+[V_LM_angkor disagree2] says 'C<|eot_id|>' (holds) P(right) 0.99 P(peer) 0.00 onset 24 | need 0.92 bridge dLO +6.70 noise +1.22 kind 0.11999460324119049 | reach 1.00 rank 1 | bridge still pulls (30s)
+PROGRESS 14/57 V_LM_angkor disagree3
+[V_LM_angkor disagree3] says 'C<|eot_id|>' (holds) P(right) 0.99 P(peer) 0.00 onset 24 | need 0.95 bridge dLO +8.12 noise +1.37 kind 0.12479891720198655 | reach 1.00 rank 3 | bridge still pulls (34s)
+PROGRESS 15/57 V_LM_christ alone
+[V_LM_christ alone] says 'B<|eot_id|>' (right) P(right) 0.96 P(peer) 0.00 onset 24 | need 0.93 bridge dLO +5.93 noise +1.08 kind 0.0003759486731897965 | reach 1.00 rank 0 | bridge still needed (28s)
+PROGRESS 16/57 V_LM_christ agree1
+[V_LM_christ agree1] says 'R<|eot_id|>' (wrong) P(right) 0.19 P(peer) 0.19 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (2s)
+PROGRESS 17/57 V_LM_christ agree2
+[V_LM_christ agree2] says 'B.<|eot_id|>' (right) P(right) 0.77 P(peer) 0.77 onset 24 | need 0.69 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.99 rank 0 | bridge still needed (26s)
+PROGRESS 18/57 V_LM_christ agree3
+[V_LM_christ agree3] says 'B.<|eot_id|>' (right) P(right) 0.95 P(peer) 0.95 onset 24 | need 0.89 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.99 rank 0 | bridge still needed (26s)
+PROGRESS 19/57 V_LM_christ disagree1
+[V_LM_christ disagree1] says 'B<|eot_id|>' (holds) P(right) 0.95 P(peer) 0.00 onset 24 | need 0.87 bridge dLO +4.87 noise +0.87 kind 1.7445665415685117 | reach 1.00 rank 0 | bridge still pulls (30s)
+PROGRESS 20/57 V_LM_christ disagree2
+[V_LM_christ disagree2] says 'B<|eot_id|>' (holds) P(right) 0.99 P(peer) 0.00 onset 24 | need 0.90 bridge dLO +4.87 noise +0.75 kind 0.9984155237887116 | reach 1.00 rank 0 | bridge still pulls (30s)
+PROGRESS 21/57 V_LM_christ disagree3
+[V_LM_christ disagree3] says 'B<|eot_id|>' (holds) P(right) 0.99 P(peer) 0.01 onset 24 | need 0.78 bridge dLO +4.12 noise +0.75 kind 0.4999520494532792 | reach 1.00 rank 0 | bridge still pulls (34s)
+PROGRESS 22/57 V_LM_kremlin alone
+[V_LM_kremlin alone] says 'R.<|eot_id|>' (right) P(right) 0.94 P(peer) 0.00 onset 24 | need 0.93 bridge dLO +8.62 noise +0.29 kind 0.08260389424967585 | reach 1.00 rank 0 | bridge still needed (28s)
+PROGRESS 23/57 V_LM_kremlin agree1
+[V_LM_kremlin agree1] says 'The name of the country where' (wrong) P(right) 0.05 P(peer) 0.05 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (2s)
+PROGRESS 24/57 V_LM_kremlin agree2
+[V_LM_kremlin agree2] says 'R.<|eot_id|>' (right) P(right) 0.30 P(peer) 0.30 onset 18 | need 0.26 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.00 rank 0 | mixed (20s)
+PROGRESS 25/57 V_LM_kremlin agree3
+[V_LM_kremlin agree3] says 'R.<|eot_id|>' (right) P(right) 0.64 P(peer) 0.64 onset 21 | need 0.60 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.01 rank 0 | bridge still needed (23s)
+PROGRESS 26/57 V_LM_kremlin disagree1
+[V_LM_kremlin disagree1] says 'R<|eot_id|>' (holds) P(right) 0.91 P(peer) 0.00 onset 24 | need 0.84 bridge dLO +9.67 noise +0.83 kind 3.179718386282522 | reach 0.98 rank 0 | bridge still pulls (28s)
+PROGRESS 27/57 V_LM_kremlin disagree2
+[V_LM_kremlin disagree2] says 'R<|eot_id|>' (holds) P(right) 0.99 P(peer) 0.00 onset 24 | need 0.98 bridge dLO +10.61 noise +0.96 kind 0.6943695844181281 | reach 0.98 rank 0 | bridge still pulls (29s)
+PROGRESS 28/57 V_LM_kremlin disagree3
+[V_LM_kremlin disagree3] says 'R<|eot_id|>' (holds) P(right) 0.99 P(peer) 0.00 onset 24 | need 0.98 bridge dLO +10.31 noise +1.12 kind 0.7686785641405471 | reach 0.97 rank 0 | bridge still pulls (33s)
+PROGRESS 29/57 V_LM_pisa alone
+[V_LM_pisa alone] says 'I.<|eot_id|>' (right) P(right) 0.96 P(peer) 0.00 onset 27 | need 0.96 bridge dLO +13.10 noise +0.54 kind 0.08965900913698555 | reach 1.00 rank 0 | bridge still needed (31s)
+PROGRESS 30/57 V_LM_pisa agree1
+[V_LM_pisa agree1] says 'I would say the answer is' (right) P(right) 0.49 P(peer) 0.49 onset 21 | need 0.52 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.01 rank 0 | bridge still needed (25s)
+PROGRESS 31/57 V_LM_pisa agree2
+[V_LM_pisa agree2] says 'I' (right) P(right) 0.30 P(peer) 0.30 onset 12 | need 0.06 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.00 rank 0 | mixed (15s)
+PROGRESS 32/57 V_LM_pisa agree3
+[V_LM_pisa agree3] says 'P<|eot_id|>' (wrong) P(right) 0.25 P(peer) 0.25 onset 12 | need 0.08 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.00 rank 0 | mixed (14s)
+PROGRESS 33/57 V_LM_pisa disagree1
+[V_LM_pisa disagree1] says 'I is the correct answer.' (holds) P(right) 0.71 P(peer) 0.00 onset 24 | need 0.61 bridge dLO +1.80 noise +1.34 kind 0.36894665210444444 | reach 1.00 rank 0 | bridge not needed (27s)
+PROGRESS 34/57 V_LM_pisa disagree2
+[V_LM_pisa disagree2] says 'I is the correct answer.' (holds) P(right) 0.70 P(peer) 0.00 onset 24 | need 0.55 bridge dLO +2.75 noise +1.49 kind 0.6243193580731958 | reach 1.00 rank 0 | mixed (33s)
+PROGRESS 35/57 V_LM_pisa disagree3
+[V_LM_pisa disagree3] says 'I.<|eot_id|>' (holds) P(right) 0.86 P(peer) 0.00 onset 24 | need 0.79 bridge dLO +1.55 noise +1.25 kind 0.7493079552348361 | reach 1.00 rank 0 | bridge not needed (35s)
+PROGRESS 36/57 V_LM_sagrada alone
+[V_LM_sagrada alone] says 'S.<|eot_id|>' (right) P(right) 0.49 P(peer) 0.00 onset 21 | need 0.57 bridge dLO +9.94 noise +0.50 kind 1.7949788722712512 | reach 0.96 rank 0 | bridge still needed (25s)
+PROGRESS 37/57 V_LM_sagrada agree1
+[V_LM_sagrada agree1] says 'C<|eot_id|>' (wrong) P(right) 0.00 P(peer) 0.00 onset 24 | need 0.35 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (27s)
+PROGRESS 38/57 V_LM_sagrada agree2
+[V_LM_sagrada agree2] says 'C<|eot_id|>' (wrong) P(right) 0.03 P(peer) 0.03 onset 24 | need 0.49 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (27s)
+PROGRESS 39/57 V_LM_sagrada agree3
+[V_LM_sagrada agree3] says 'C<|eot_id|>' (wrong) P(right) 0.53 P(peer) 0.53 onset 24 | need 0.68 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (25s)
+PROGRESS 40/57 V_LM_sagrada disagree1
+[V_LM_sagrada disagree1] says 'B<|eot_id|>' (other) P(right) 0.01 P(peer) 0.00 onset 15 | need 0.56 bridge dLO +2.81 noise +0.62 kind 2.3079028269623407 | reach 0.01 rank 0 | mixed (18s)
+PROGRESS 41/57 V_LM_sagrada disagree2
+[V_LM_sagrada disagree2] says 'C<|eot_id|>' (other) P(right) 0.15 P(peer) 0.00 onset 18 | need 0.65 bridge dLO +5.93 noise +1.11 kind 3.407560797242029 | reach 0.61 rank 0 | bridge still pulls (21s)
+PROGRESS 42/57 V_LM_sagrada disagree3
+[V_LM_sagrada disagree3] says 'S<|eot_id|>' (holds) P(right) 0.40 P(peer) 0.00 onset 21 | need 0.87 bridge dLO +7.48 noise +1.25 kind 3.7532068387197226 | reach 0.98 rank 0 | bridge still pulls (29s)
+PROGRESS 43/57 V_LM_taj alone
+[V_LM_taj alone] says 'I.<|eot_id|>' (right) P(right) 0.95 P(peer) 0.00 onset 27 | need 0.92 bridge dLO +11.00 noise +0.81 kind 0.11253385964081275 | reach 1.00 rank 0 | bridge still needed (32s)
+PROGRESS 44/57 V_LM_taj agree1
+[V_LM_taj agree1] says 'The name of the country where' (wrong) P(right) 0.33 P(peer) 0.33 onset 15 | need 0.06 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.00 rank 0 | mixed (19s)
+PROGRESS 45/57 V_LM_taj agree2
+[V_LM_taj agree2] says 'I.<|eot_id|>' (right) P(right) 0.43 P(peer) 0.43 onset 24 | need 0.71 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (27s)
+PROGRESS 46/57 V_LM_taj agree3
+[V_LM_taj agree3] says 'I<|eot_id|>' (right) P(right) 0.73 P(peer) 0.73 onset 24 | need 0.60 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (26s)
+PROGRESS 47/57 V_LM_taj disagree1
+[V_LM_taj disagree1] says 'I believe the country where the' (holds) P(right) 0.71 P(peer) 0.00 onset 24 | need 0.70 bridge dLO +1.35 noise +1.24 kind 0.19454982048373104 | reach 1.00 rank 0 | bridge not needed (28s)
+PROGRESS 48/57 V_LM_taj disagree2
+[V_LM_taj disagree2] says 'I is the correct answer.' (holds) P(right) 0.87 P(peer) 0.00 onset 24 | need 0.87 bridge dLO +3.36 noise +1.69 kind 0.47878374582004923 | reach 1.00 rank 0 | mixed (28s)
+PROGRESS 49/57 V_LM_taj disagree3
+[V_LM_taj disagree3] says 'I will provide my answer.' (holds) P(right) 0.92 P(peer) 0.00 onset 24 | need 0.82 bridge dLO +2.62 noise +1.74 kind 0.49681730300454774 | reach 1.00 rank 2 | bridge not needed (33s)
+PROGRESS 50/57 V_LU_berklee alone
+[V_LU_berklee alone] says 'B.<|eot_id|>' (right) P(right) 0.59 P(peer) 0.00 onset 24 | need 0.48 bridge dLO +2.00 noise +0.75 kind 0.49839664718038357 | reach 0.85 rank 0 | mixed (21s)
+PROGRESS 51/57 V_LU_berklee agree1
+[V_LU_berklee agree1] says 'B.<|eot_id|>' (right) P(right) 0.45 P(peer) 0.45 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 52/57 V_LU_berklee agree2
+[V_LU_berklee agree2] says 'B<|eot_id|>' (right) P(right) 0.81 P(peer) 0.81 onset 24 | need 0.52 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.92 rank 0 | bridge still needed (22s)
+PROGRESS 53/57 V_LU_berklee agree3
+[V_LU_berklee agree3] says 'B<|eot_id|>' (right) P(right) 0.97 P(peer) 0.97 onset 24 | need 0.08 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.88 rank 1 | bridge not needed (22s)
+PROGRESS 54/57 V_LU_berklee disagree1
+[V_LU_berklee disagree1] says 'B<|eot_id|>' (holds) P(right) 0.82 P(peer) 0.00 onset 24 | need 0.69 bridge dLO +3.25 noise +1.62 kind 0.2491902878822181 | reach 0.90 rank 0 | mixed (19s)
+PROGRESS 55/57 V_LU_berklee disagree2
+[V_LU_berklee disagree2] says 'B<|eot_id|>' (holds) P(right) 0.90 P(peer) 0.00 onset 24 | need 0.79 bridge dLO +3.50 noise +1.00 kind 1.3611020747816838e-05 | reach 0.94 rank 0 | bridge still pulls (14s)
+PROGRESS 56/57 V_LU_berklee disagree3
+[V_LU_berklee disagree3] says 'B<|eot_id|>' (holds) P(right) 0.85 P(peer) 0.05 onset 24 | need 0.80 bridge dLO +3.87 noise +0.75 kind 0.3749937769873175 | reach 0.93 rank 3 | bridge still pulls (16s)
+PROGRESS ALLDONE
