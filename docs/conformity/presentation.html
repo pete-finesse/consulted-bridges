@@ -629,8 +629,8 @@
       <p class="note">Sketch numbers, to show the idea. Original is the model as it is; edited is the same model with Salzburg removed.</p>
     </figure>
     <div class="col">
-      <p>So removal plus probabilities is our test: take the step away and see whether the answer cares. The catch is that a removal is only as clean as the question it runs on. Say we remove Salzburg and don't yet know what will happen. Two outcomes could fool us, one in each direction.</p>
-      <p><b>The answer could drop even though the model never went through Salzburg.</b> Salzburg and Austria are so closely related that their directions overlap, so removing Salzburg takes part of Austria with it.</p>
+      <p>This test is only as good as the bridge it removes. A <b>good bridge</b> can be removed cleanly, without taking anything else with it, and the answer has to pass through it. With a good bridge, a change in the answer means the bridge was used, and no change means it wasn't. With a <b>bad bridge</b>, the result can point the wrong way. Salzburg is a bad bridge, and it fails both ways.</p>
+      <p><b>It can't be removed cleanly.</b> Salzburg and Austria are so closely related that their directions overlap, so removing Salzburg takes part of Austria with it. The answer drops even if the model never went through Salzburg.</p>
     </div>
     <figure class="panel lim">
       <span class="tag">The answer drops, but not because Salzburg was used</span>
@@ -644,7 +644,7 @@
       <p class="back">This is the <b>association</b> case from section 2: related words light up together, and they get removed together too.</p>
     </figure>
     <div class="col">
-      <p><b>Or nothing could change even though the model is still reasoning.</b> Mozart is famous for being Austrian, so the model has a direct road to Austria. Removing Salzburg closes one road but leaves the other open, and the answer doesn't move.</p>
+      <p><b>The answer doesn't have to pass through it.</b> Mozart is famous for being Austrian, so the model has a direct road to Austria. Removing Salzburg closes one road but leaves the other open, and the answer doesn't move even if the model is still reasoning.</p>
     </div>
     <figure class="panel lim">
       <span class="tag">Nothing changes, though the model can still reason</span>
@@ -659,7 +659,7 @@
       <p class="note">Sketch numbers, in both figures, to show the idea.</p>
     </figure>
     <div class="col">
-      <p>So a removal is only a fair test if neither can happen. The next section sets out how we choose questions that rule both out.</p>
+      <p>So everything rests on finding good bridges: steps the answer must go through, and that share nothing else with it. The next sections show how we find them.</p>
     </div>
   </section>
 
