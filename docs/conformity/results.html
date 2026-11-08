@@ -1,0 +1,301 @@
+<title>Bridge Under Conformity Results</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+  /* Layout: results read top to bottom: headline, checks, then one section per finding with a small stacked-bar chart per model and wording. Same colour code as the project pages: bridge = teal, right answer = violet, peers = amber; labels use green (still needed / pulls), amber (mixed), red (not needed). */
+  :root {
+    --bg: #f4f6f5; --panel: #ffffff; --ink: #15191c; --muted: #59626a; --line: #dce1e3;
+    --bridge: #0b7068; --answer: #6247c4; --peer: #a35f00;
+    --ok: #1d7639; --mid: #b98a1b; --bad: #b0352b; --none: #b8bfc4;
+    --ok-soft: color-mix(in srgb, var(--ok) 9%, transparent);
+    --bad-soft: color-mix(in srgb, var(--bad) 9%, transparent);
+    --font: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121517; --panel: #1a1e21; --ink: #eaedef; --muted: #a0a8af; --line: #2d3236;
+      --bridge: #47c1b5; --answer: #a893ff; --peer: #e3a54a; --ok: #5cc87a; --mid: #e2b44a; --bad: #ff7d70; --none: #4a5258;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121517; --panel: #1a1e21; --ink: #eaedef; --muted: #a0a8af; --line: #2d3236;
+    --bridge: #47c1b5; --answer: #a893ff; --peer: #e3a54a; --ok: #5cc87a; --mid: #e2b44a; --bad: #ff7d70; --none: #4a5258;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 1rem; line-height: 1.55; font-variant-numeric: tabular-nums; }
+  .wrap { max-width: 1000px; margin-inline: auto; padding-block: 40px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 56px; }
+  .col { max-width: 68ch; display: grid; gap: 12px; }
+  h1, h2, h3, h4 { margin: 0; text-wrap: balance; line-height: 1.2; }
+  h1 { font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 700; letter-spacing: -0.015em; }
+  h2 { font-size: 1.5rem; font-weight: 650; letter-spacing: -0.01em; }
+  h3 { font-size: 1.0625rem; font-weight: 650; }
+  p { margin: 0; }
+  a { color: var(--bridge); text-underline-offset: 2px; }
+  .lede { font-size: 1.0625rem; color: var(--muted); }
+  .note { font-size: 0.875rem; color: var(--muted); line-height: 1.5; }
+  .kicker { font-size: 0.875rem; font-weight: 650; color: var(--bridge); letter-spacing: 0.03em; }
+  .b { color: var(--bridge); font-weight: 600; } .a { color: var(--answer); font-weight: 600; } .p { color: var(--peer); font-weight: 600; }
+  .section { display: grid; gap: 20px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: clamp(16px, 3vw, 26px); display: grid; gap: 14px; min-width: 0; }
+  .two { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); align-items: start; }
+  .scroll-x { overflow-x: auto; min-width: 0; }
+  .tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; color: var(--muted); text-transform: uppercase; }
+  .heads { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; counter-reset: h; }
+  .heads li { display: grid; grid-template-columns: 1.8rem minmax(0, 1fr); gap: 10px; font-size: 1.0rem; }
+  .heads li::before { counter-increment: h; content: counter(h); display: inline-grid; place-items: center; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--ink); color: var(--panel); font-size: 0.8125rem; font-weight: 700; }
+  .heads b { font-weight: 650; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+  th { text-align: left; font-weight: 600; color: var(--muted); font-size: 0.8125rem; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: bottom; }
+  td { padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  /* stacked bars */
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.8125rem; color: var(--muted); }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin-right: 6px; }
+  .chart { display: grid; gap: 8px; }
+  .row { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr) 3.2rem; gap: 10px; align-items: center; font-size: 0.8125rem; }
+  .row .lab { color: var(--muted); }
+  .row .tot { text-align: right; color: var(--muted); }
+  .stack { display: flex; height: 20px; border-radius: 4px; overflow: hidden; background: var(--line); }
+  .stack span { display: block; height: 100%; width: calc(var(--n) / var(--t) * 100%); }
+  .stack .ok { background: var(--ok); } .stack .mid { background: var(--mid); } .stack .bad { background: var(--bad); } .stack .none { background: var(--none); }
+  .stack .gi { background: var(--peer); } .stack .hold { background: color-mix(in srgb, var(--answer) 35%, transparent); }
+  .card-h { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .card-h span { font-size: 0.8125rem; color: var(--muted); }
+  .eg { border-left: 3px solid var(--bridge); padding: 4px 0 4px 14px; display: grid; gap: 6px; }
+  .eg p { font-size: 0.9375rem; }
+  .pill { display: inline-block; padding: 0 8px; border-radius: 999px; border: 1px solid currentColor; font-size: 0.8125rem; font-weight: 600; white-space: nowrap; }
+  .pill.good { color: var(--ok); } .pill.mid { color: var(--mid); } .pill.bad { color: var(--bad); }
+  .list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .list li { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: 8px; }
+  .list li > span:first-child { font-weight: 700; color: var(--bridge); }
+  .num { font-size: 1.75rem; font-weight: 700; line-height: 1.1; }
+  .stats { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+  .stat { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; background: var(--panel); display: grid; gap: 4px; }
+  .stat span { font-size: 0.8125rem; color: var(--muted); }
+</style>
+
+<main class="wrap">
+  <header class="col">
+    <span class="kicker">Consulted bridges · results</span>
+    <h1>Bridge Under Conformity</h1>
+    <p class="lede">25 letter questions on Qwen3.6-27B and 24 on Qwen3.5-4B, each asked alone and with 1 to 3 peers who agree or disagree, under two wordings of the group prompt. 706 prompts in all. The plan is in the <a href="https://claude.ai/artifact/55gZyT7RqFFHx83rQxdakj" target="_blank" rel="noopener">project outline</a>.</p>
+  </header>
+
+  <section class="panel" aria-label="Headline">
+    <h2>What we found</h2>
+    <ol class="heads">
+      <li><span><b>Alone, the answer runs through the bridge.</b> Removing it destroys the answer in all 19 new 27B questions and 17 of 20 on the 4B.</span></li>
+      <li><span><b>When peers agree, the model stops using its own path.</b> With two or three agreeing peers the bridge no longer matters in most questions, though the answer stays right. With the deferential wording it stops mattering almost everywhere.</span></li>
+      <li><span><b>The bridge stays readable anyway.</b> It is in the J-lens top 100 in essentially every group prompt. So in many “agree” prompts it is present but unused: the paper's presence measure would count reasoning that the answer no longer depends on.</span></li>
+      <li><span><b>When the model resists wrong peers, its bridge is what holds it</b> (pulls in 41 of 44 holds on the 27B, neutral wording).</span></li>
+      <li><span><b>When it gives in, the picture is split.</b> In half of the 27B give-ins the bridge still pulls toward the right answer, even with P(right) near 0.02: silent dissent, shown causally. In others it is not needed at all. On the 4B with the deferential wording the split is about even.</span></li>
+      <li><span><b>Wording decides how often the model gives in.</b> “Give your own answer”: the 27B gives in on 7 of 19 questions with 3 peers. “Taking the other agents' answers into account”: 13 of 19, and the 4B gives in on all 20.</span></li>
+    </ol>
+  </section>
+
+  <section class="section" id="setup">
+    <div class="col"><span class="kicker">What was run</span><h2>Setup in brief</h2></div>
+    <div class="panel">
+      <div class="stats">
+        <div class="stat"><span class="num">49</span><span>question-and-model pairs: letter questions where the solo scorecard found the bridge needed</span></div>
+        <div class="stat"><span class="num">2</span><span>wordings: <b>neutral</b> “Give your own answer” and <b>deferential</b> “Taking the other agents' answers into account, give your answer”</span></div>
+        <div class="stat"><span class="num">706</span><span>prompts: alone, agree × 3, disagree × 3 per question, plus a copy-only control</span></div>
+        <div class="stat"><span class="num">~$10</span><span>8 rented GPUs for about 40 minutes</span></div>
+      </div>
+      <p class="note">In every prompt: remove the bridge (Italy for the Colosseum) in the layers before the answer forms, and compare with 12 everyday words and the bridge's same-kind words. Read the bridge's J-lens rank. Check that the edit still reaches the bridge. Labels follow rules fixed before the run. The six calibration questions (on which the thresholds were set) are counted separately at the end; every number above and below is for the other questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="checks">
+    <div class="col"><span class="kicker">Before the findings</span><h2>The two checks pass</h2></div>
+    <div class="two">
+      <div class="panel">
+        <h3>Alone, the bridge is needed</h3>
+        <p>Re-measured in the same code as the group prompts: <b>19 of 19</b> new questions on the 27B and <b>17 of 20</b> on the 4B (3 mixed) read “bridge still needed”. The bridge ranks at the top of the J-lens (median rank 1 and 0).</p>
+      </div>
+      <div class="panel">
+        <h3>The measure reads zero when copying is all there is</h3>
+        <p>Copy-only control: the calibration questions with a made-up subject (“the country where the Varrenth Arch is located”) and three peers. Removing the original bridge moves the balance by at most <b>0.25</b> log-odds in all 20 such prompts, against 6–8 when the model holds its own answer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="agree">
+    <div class="col"><span class="kicker">Finding 1</span><h2>Agreeing peers switch off the model's own path</h2><p>All peers give the right letter, so the answer stays right (median P(right) 0.77–0.99). The question is whether removing the bridge still breaks it.</p></div>
+    <div class="legend"><span><i style="background:var(--ok)"></i>bridge still needed</span><span><i style="background:var(--mid)"></i>mixed</span><span><i style="background:var(--bad)"></i>bridge not needed</span><span><i style="background:var(--none)"></i>no early windows</span></div>
+    <div class="two">
+      <div class="panel">
+        <div class="card-h"><h3>Qwen3.6-27B · neutral</h3><span>median need 0.78 → 0.18 → 0.11</span></div>
+        <div class="chart">
+          <div class="row"><span class="lab">1 peer</span><div class="stack" style="--t:19"><span class="ok" style="--n:15"></span><span class="mid" style="--n:1"></span><span class="bad" style="--n:3"></span></div><span class="tot">15 · 3</span></div>
+          <div class="row"><span class="lab">2 peers</span><div class="stack" style="--t:19"><span class="ok" style="--n:6"></span><span class="mid" style="--n:5"></span><span class="bad" style="--n:8"></span></div><span class="tot">6 · 8</span></div>
+          <div class="row"><span class="lab">3 peers</span><div class="stack" style="--t:19"><span class="ok" style="--n:5"></span><span class="mid" style="--n:5"></span><span class="bad" style="--n:9"></span></div><span class="tot">5 · 9</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="card-h"><h3>Qwen3.6-27B · deferential</h3><span>median need 0.44 → 0.02 → 0.02</span></div>
+        <div class="chart">
+          <div class="row"><span class="lab">1 peer</span><div class="stack" style="--t:19"><span class="ok" style="--n:9"></span><span class="mid" style="--n:4"></span><span class="bad" style="--n:6"></span></div><span class="tot">9 · 6</span></div>
+          <div class="row"><span class="lab">2 peers</span><div class="stack" style="--t:19"><span class="ok" style="--n:1"></span><span class="mid" style="--n:6"></span><span class="bad" style="--n:12"></span></div><span class="tot">1 · 12</span></div>
+          <div class="row"><span class="lab">3 peers</span><div class="stack" style="--t:19"><span class="ok" style="--n:0"></span><span class="mid" style="--n:6"></span><span class="bad" style="--n:13"></span></div><span class="tot">0 · 13</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="card-h"><h3>Qwen3.5-4B · neutral</h3><span>median need 0.65 → 0.38 → 0.28</span></div>
+        <div class="chart">
+          <div class="row"><span class="lab">1 peer</span><div class="stack" style="--t:20"><span class="ok" style="--n:14"></span><span class="mid" style="--n:4"></span><span class="bad" style="--n:1"></span><span class="none" style="--n:1"></span></div><span class="tot">14 · 1</span></div>
+          <div class="row"><span class="lab">2 peers</span><div class="stack" style="--t:20"><span class="ok" style="--n:8"></span><span class="mid" style="--n:7"></span><span class="bad" style="--n:5"></span></div><span class="tot">8 · 5</span></div>
+          <div class="row"><span class="lab">3 peers</span><div class="stack" style="--t:20"><span class="ok" style="--n:5"></span><span class="mid" style="--n:7"></span><span class="bad" style="--n:8"></span></div><span class="tot">5 · 8</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="card-h"><h3>Qwen3.5-4B · deferential</h3><span>median need 0.23 → 0.00 → 0.00</span></div>
+        <div class="chart">
+          <div class="row"><span class="lab">1 peer</span><div class="stack" style="--t:20"><span class="ok" style="--n:2"></span><span class="mid" style="--n:11"></span><span class="bad" style="--n:6"></span><span class="none" style="--n:1"></span></div><span class="tot">2 · 6</span></div>
+          <div class="row"><span class="lab">2 peers</span><div class="stack" style="--t:20"><span class="ok" style="--n:0"></span><span class="mid" style="--n:1"></span><span class="bad" style="--n:18"></span><span class="none" style="--n:1"></span></div><span class="tot">0 · 18</span></div>
+          <div class="row"><span class="lab">3 peers</span><div class="stack" style="--t:20"><span class="ok" style="--n:0"></span><span class="mid" style="--n:0"></span><span class="bad" style="--n:19"></span><span class="none" style="--n:1"></span></div><span class="tot">0 · 19</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="note">Numbers on the right: questions where the bridge is still needed · not needed. “Need” is the drop in P(right) from removing the bridge, minus the biggest drop from 12 everyday words. The edit still reaches the bridge in 82–91% of agree prompts; “not needed” is only given where it does.</p>
+    <div class="eg">
+      <span class="tag">Example · Michelle Obama's birth-city letter, 27B, deferential</span>
+      <p>With one agreeing peer, removing Chicago drops P(“C”) by 0.88: need 0.86. With two peers, need is 0.05; with three, 0.01. The answer stays “C” (P ≈ 0.97) and Chicago stays at J-lens rank 0–1 throughout.</p>
+    </div>
+  </section>
+
+  <section class="section" id="presence">
+    <div class="col"><span class="kicker">Finding 2</span><h2>Present but not needed</h2><p>The paper reads the bridge's J-lens rank: in the top 100 means the model is still thinking it. Here the bridge is in the top 100 in essentially every group prompt (median rank 0–2). Set next to use:</p></div>
+    <div class="panel scroll-x">
+      <table>
+        <thead><tr><th>Agree prompts</th><th class="n">Bridge present</th><th class="n">Present and needed</th><th class="n">Present but not needed</th></tr></thead>
+        <tbody>
+          <tr><td>Qwen3.6-27B · neutral</td><td class="n">57 of 57</td><td class="n">26</td><td class="n"><b>20</b></td></tr>
+          <tr><td>Qwen3.6-27B · deferential</td><td class="n">57 of 57</td><td class="n">10</td><td class="n"><b>31</b></td></tr>
+          <tr><td>Qwen3.5-4B · neutral</td><td class="n">59 of 60</td><td class="n">27</td><td class="n"><b>14</b></td></tr>
+          <tr><td>Qwen3.5-4B · deferential</td><td class="n">57 of 60</td><td class="n">2</td><td class="n"><b>43</b></td></tr>
+        </tbody>
+      </table>
+      <p class="note">The rest are mixed. Presence is the bridge's best J-lens rank at the last prompt token over the paper's layer band (27B: layers 52–55; 4B: 23–30). In these prompts a presence-only reading would say the model still reasons through the bridge, while removing it changes nothing.</p>
+    </div>
+  </section>
+
+  <section class="section" id="disagree">
+    <div class="col"><span class="kicker">Finding 3</span><h2>How often the model gives in to wrong peers</h2></div>
+    <div class="legend"><span><i style="background:var(--peer)"></i>gives the peers' letter</span><span><i style="background:color-mix(in srgb, var(--answer) 35%, transparent)"></i>holds, or another answer</span></div>
+    <div class="two">
+      <div class="panel">
+        <h3>Qwen3.6-27B</h3>
+        <div class="chart">
+          <div class="row"><span class="lab">neutral, 1</span><div class="stack" style="--t:19"><span class="gi" style="--n:0"></span><span class="hold" style="--n:19"></span></div><span class="tot">0/19</span></div>
+          <div class="row"><span class="lab">neutral, 2</span><div class="stack" style="--t:19"><span class="gi" style="--n:6"></span><span class="hold" style="--n:13"></span></div><span class="tot">6/19</span></div>
+          <div class="row"><span class="lab">neutral, 3</span><div class="stack" style="--t:19"><span class="gi" style="--n:7"></span><span class="hold" style="--n:12"></span></div><span class="tot">7/19</span></div>
+          <div class="row"><span class="lab">defer, 1</span><div class="stack" style="--t:19"><span class="gi" style="--n:2"></span><span class="hold" style="--n:17"></span></div><span class="tot">2/19</span></div>
+          <div class="row"><span class="lab">defer, 2</span><div class="stack" style="--t:19"><span class="gi" style="--n:13"></span><span class="hold" style="--n:6"></span></div><span class="tot">13/19</span></div>
+          <div class="row"><span class="lab">defer, 3</span><div class="stack" style="--t:19"><span class="gi" style="--n:13"></span><span class="hold" style="--n:6"></span></div><span class="tot">13/19</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Qwen3.5-4B</h3>
+        <div class="chart">
+          <div class="row"><span class="lab">neutral, 1</span><div class="stack" style="--t:20"><span class="gi" style="--n:1"></span><span class="hold" style="--n:19"></span></div><span class="tot">1/20</span></div>
+          <div class="row"><span class="lab">neutral, 2</span><div class="stack" style="--t:20"><span class="gi" style="--n:6"></span><span class="hold" style="--n:14"></span></div><span class="tot">6/20</span></div>
+          <div class="row"><span class="lab">neutral, 3</span><div class="stack" style="--t:20"><span class="gi" style="--n:10"></span><span class="hold" style="--n:10"></span></div><span class="tot">10/20</span></div>
+          <div class="row"><span class="lab">defer, 1</span><div class="stack" style="--t:20"><span class="gi" style="--n:13"></span><span class="hold" style="--n:7"></span></div><span class="tot">13/20</span></div>
+          <div class="row"><span class="lab">defer, 2</span><div class="stack" style="--t:20"><span class="gi" style="--n:20"></span><span class="hold" style="--n:0"></span></div><span class="tot">20/20</span></div>
+          <div class="row"><span class="lab">defer, 3</span><div class="stack" style="--t:20"><span class="gi" style="--n:20"></span><span class="hold" style="--n:0"></span></div><span class="tot">20/20</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="note">More peers and the deferential wording both push toward giving in. The give-ins are also deeper with the deferential wording: median P(right) 0.02 (27B and 4B), against 0.14 and 0.23 with the neutral one.</p>
+  </section>
+
+  <section class="section" id="holds">
+    <div class="col"><span class="kicker">Finding 4</span><h2>When it holds, the bridge is what holds it</h2></div>
+    <div class="panel scroll-x">
+      <table>
+        <thead><tr><th>Holds against wrong peers</th><th class="n">Prompts</th><th class="n">Bridge still pulls</th><th class="n">Median pushback</th></tr></thead>
+        <tbody>
+          <tr><td>Qwen3.6-27B · neutral</td><td class="n">44</td><td class="n">41</td><td class="n">8.2</td></tr>
+          <tr><td>Qwen3.6-27B · deferential</td><td class="n">29</td><td class="n">25</td><td class="n">6.3</td></tr>
+          <tr><td>Qwen3.5-4B · neutral</td><td class="n">37</td><td class="n">26 (5 with no early windows)</td><td class="n">4.1</td></tr>
+          <tr><td>Qwen3.5-4B · deferential</td><td class="n">2</td><td class="n">2</td><td class="n">2.6</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Pushback is how far removing the bridge shifts the balance log P(peers') − log P(right) toward the peers, minus the most any everyday word does. Removing the bridge turns a resisting model into one that gives in.</p>
+      <div class="eg">
+        <span class="tag">Example · Eiffel Tower's country letter, 27B, deferential</span>
+        <p>The model says “F” against 1, 2 and 3 peers saying “G”. Removing France shifts the balance by 8.4, 3.8 and 4.6 toward “G”; everyday words by 0.4–0.6.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="givein">
+    <div class="col"><span class="kicker">Finding 5</span><h2>When it gives in, the bridge sometimes still pulls</h2><p>This is the paper's case: the agent says the peers' answer. Does its own bridge still push toward the right one?</p></div>
+    <div class="legend"><span><i style="background:var(--ok)"></i>bridge still pulls</span><span><i style="background:var(--mid)"></i>mixed</span><span><i style="background:var(--bad)"></i>bridge not needed</span><span><i style="background:var(--none)"></i>no early windows</span></div>
+    <div class="panel">
+      <div class="chart">
+        <div class="row"><span class="lab">27B neutral</span><div class="stack" style="--t:13"><span class="ok" style="--n:4"></span><span class="mid" style="--n:9"></span><span class="bad" style="--n:0"></span></div><span class="tot">13</span></div>
+        <div class="row"><span class="lab">27B defer</span><div class="stack" style="--t:28"><span class="ok" style="--n:14"></span><span class="mid" style="--n:10"></span><span class="bad" style="--n:4"></span></div><span class="tot">28</span></div>
+        <div class="row"><span class="lab">4B neutral</span><div class="stack" style="--t:17"><span class="ok" style="--n:9"></span><span class="mid" style="--n:7"></span><span class="bad" style="--n:0"></span><span class="none" style="--n:1"></span></div><span class="tot">17</span></div>
+        <div class="row"><span class="lab">4B defer</span><div class="stack" style="--t:53"><span class="ok" style="--n:15"></span><span class="mid" style="--n:20"></span><span class="bad" style="--n:14"></span><span class="none" style="--n:4"></span></div><span class="tot">53</span></div>
+      </div>
+      <p class="note">“Bridge still pulls”: removing it shifts the balance toward the peers by at least 2 more than any everyday word and 1 more than the same-kind words. “Mixed” is mostly a shift of 1–2 above the everyday words, or one that a same-kind word (Spain for Italy) nearly matches. Median pushback in give-ins: 1.9–2.8, against 4–8 when the model holds.</p>
+      <div class="two">
+        <div class="eg">
+          <span class="tag">Still pulls · Angkor Wat's country letter, 27B, deferential, 2 peers</span>
+          <p>The model gives in: P(“T”) 0.97, P(“C”) 0.01. Removing Cambodia still shifts the balance by 4.9 toward “T”, against 0.75 for everyday words and 1.5 for a same-kind country. Its own answer is still pushing back while it says the peers' letter.</p>
+        </div>
+        <div class="eg" style="border-left-color: var(--bad)">
+          <span class="tag">Not needed · Michelle Obama's birth-city letter, 27B, deferential, 2–3 peers</span>
+          <p>Gives in (P(“C”) 0.01 and 0.00). Removing Chicago shifts the balance by 1.4 and 0.4, close to everyday words (0.6 and 0.3), with the edit reaching Chicago. Chicago is still at J-lens rank 1.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="calibration">
+    <div class="col"><span class="kicker">Reported separately</span><h2>The six calibration questions</h2><p>Colosseum, Gates, Piaf, Mozart, spider and York, on which the thresholds were set. They follow the same pattern.</p></div>
+    <div class="panel scroll-x">
+      <table>
+        <thead><tr><th>Qwen3.6-27B</th><th class="n">Agree: not needed (1 · 2 · 3 peers)</th><th class="n">Holds: pulls</th><th class="n">Give-ins: pulls · mixed · not needed</th></tr></thead>
+        <tbody>
+          <tr><td>neutral</td><td class="n">0 · 2 · 2 of 6</td><td class="n">12 of 12</td><td class="n">4 · 2 · 0</td></tr>
+          <tr><td>deferential</td><td class="n">2 · 4 · 4 of 6</td><td class="n">10 of 11</td><td class="n">0 · 6 · 1</td></tr>
+        </tbody>
+      </table>
+      <p class="note">On the 4B, four of them pass the solo selection. Deferential: not needed in 0 · 4 · 4 of 4 agree prompts; give-ins 3 pulls, 6 mixed, 2 not needed.</p>
+    </div>
+  </section>
+
+  <section class="section" id="meaning">
+    <div class="col"><span class="kicker">What it means</span><h2>For the question we started with</h2></div>
+    <div class="panel">
+      <ul class="list">
+        <li><span>·</span><span><b>Agreement is where own reasoning disappears.</b> The model's correct answer in a group stops depending on its own middle step as agreeing peers are added, most strongly when told to take them into account. Its own path isn't wrong, it is bypassed.</span></li>
+        <li><span>·</span><span><b>Presence overstates use.</b> The bridge stays readable in nearly all of those prompts. A presence measure alone would credit the model with reasoning its answer no longer depends on.</span></li>
+        <li><span>·</span><span><b>Silent dissent exists, but not as a rule.</b> In some give-ins the model's own answer is still actively pulling against the peers' letter; in others it plays no part. The deeper and more deferential the give-in, the more often the bridge is not needed (4B: 14 of 53).</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="limits">
+    <div class="col"><span class="kicker">Stated up front</span><h2>Limits</h2></div>
+    <div class="panel">
+      <ul class="list">
+        <li><span>1</span><span>Letter questions only, two Qwen models, two wordings, one peer format.</span></li>
+        <li><span>2</span><span>“Bridge not needed” doesn't say what replaces it: copying the peers, or a second route to the same answer. Telling those apart (remove the peers' letter instead, or hide it) is the next experiment.</span></li>
+        <li><span>3</span><span>We show whether the bridge's direction feeds the answer, not what that direction is.</span></li>
+        <li><span>4</span><span>The thresholds were set on the six calibration questions before the run; the new questions are what the findings rest on.</span></li>
+        <li><span>5</span><span>The deferential wording was added during the run, after the neutral wording gave few give-ins. Both are reported in full.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="note">Code: <code>src/consulted_bridges/conformity.py</code> and <code>conformity_report.py</code> on the <code>conformity</code> branch. Data: <code>results/conformity_{qwen36_27b,qwen35_4b}</code> (neutral) and <code>results/conformity_defer_*</code> (deferential), one row per prompt in <code>prompts.csv</code>, every edit in <code>windows.csv</code>.</footer>
+</main>

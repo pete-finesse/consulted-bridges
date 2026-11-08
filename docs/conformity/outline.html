@@ -71,73 +71,151 @@
   .hyp p { font-size: 0.9rem; color: var(--muted); }
   .hyp p b { color: var(--ink); font-weight: 600; }
   .status td:first-child { white-space: nowrap; }
+  .req { gap: 10px; align-content: start; }
+  .req h3 { font-size: 1.0625rem; }
+  .req p { font-size: 0.9375rem; }
+  .req .ex { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 8px; font-size: 0.9rem; line-height: 1.45; }
+  .req .ex b { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding-top: 3px; }
+  .req .ex.for b { color: var(--ok); }
+  .req .ex.against b { color: var(--bad); }
+  .req .ex.check b { color: var(--muted); }
 </style>
 
 <main class="wrap">
   <header class="col">
-    <span class="kicker">Consulted bridges · project outline</span>
+    <span class="kicker">Consulted bridges</span>
     <h1>Bridge Under Conformity</h1>
-    <p class="lede">When an AI agent sees other agents' answers, does its own answer still come from its own reasoning, or does it take the group's answer? We test this on two-hop questions by removing the hidden middle step inside the model and watching what changes.</p>
+    <p class="lede">When an AI agent sees other agents' answers, does its own answer still come from its own reasoning, or does it take the group's? We test this on two-hop questions by removing the hidden middle step inside the model and watching what changes.</p>
   </header>
 
-  <section class="panel" aria-label="Goal">
-    <h2>The goal in one paragraph</h2>
-    <p>Take “What letter does the name of the country where the Colosseum is located start with?”. To answer “I”, the model has to think of <span class="b">Italy</span>, a word that is never written: the <b>bridge</b>. Alone, removing Italy's direction inside the model destroys the answer, so the answer depends on the model's own path through Italy. Now show the same question with three other agents answering first. If they say <span class="a">I</span>, does the model still go through Italy, or does it just repeat them? If they say <span class="p">S</span> and the model gives in, is Italy still pulling it toward “I”? The paper we build on (Silent Dissent) says the bridge is still <i>present</i> when agents give in. We test whether it is still <i>used</i>.</p>
-  </section>
-
-  <section class="section" id="testable">
-    <div class="col">
-      <span class="kicker">Why these questions</span>
-      <h2>The test decides the question type, not the other way round</h2>
-      <p>We did not set out to study letter questions. We set out to test whether an agent's answer in a group still comes from its own reasoning. That test only works on questions with certain properties, and the question format follows from those properties.</p>
+  <!-- 1 INTRODUCTION -->
+  <section class="section" id="intro">
+    <div class="col"><span class="kicker">1 · Introduction</span><h2>Seeing a step of reasoning</h2></div>
+    <div class="panel">
+      <h3>Two-hop questions and the bridge</h3>
+      <p>A two-hop question needs two facts, and the first one is never written down. “What letter does the name of the country where the Colosseum is located start with?” First hop: the Colosseum is in <span class="b">Italy</span>. Second hop: Italy starts with <span class="a">I</span>. The word Italy appears nowhere in the question and nowhere in the answer. We call it the <b>bridge</b>.</p>
+      <p>That is what makes two-hop questions useful. If the model answers “I”, it must have produced Italy somewhere inside itself on the way. A hidden step the model has to take is a piece of reasoning we can look for.</p>
     </div>
     <div class="panel">
-      <h3>What a question needs for the test to work</h3>
-      <ul class="list">
-        <li><span>1</span><span><b>Alone, the answer depends on the bridge.</b> Removing the bridge's direction must destroy the answer when the model answers by itself. Otherwise there is no “own reasoning” to look for in the group.</span></li>
-        <li><span>2</span><span><b>The bridge and the answer are different things inside the model.</b> If the answer is the bridge or close to it in meaning (York University → Toronto → <i>Canada</i>), Toronto's direction already contains part of “Canada”. Removing the bridge then also removes part of the answer, and we can't tell “the model used the bridge” from “we deleted the answer”. The answer has to be an arbitrary property of the bridge, one that shares nothing with its meaning.</span></li>
-        <li><span>3</span><span><b>The input can't give the answer without the bridge.</b> There must be no shortcut from the question's words straight to the answer, or the model could answer without its own middle step.</span></li>
-        <li><span>4</span><span><b>The peers dispute the answer, not the bridge.</b> The peers' wrong answer must be a plausible alternative of the same kind, so the model can either copy it or work out its own. The bridge then stays untouched as a probe of the model's own path.</span></li>
-        <li><span>5</span><span><b>One token per answer.</b> So the probabilities of the right answer and the peers' answer can be compared directly, and the peers' answer is a single, matched alternative.</span></li>
-      </ul>
-    </div>
-    <div class="two">
-      <div class="panel">
-        <h3>What fits</h3>
-        <p><b>The first letter of a named place or thing</b> meets all five. “What letter does the name of the country where the Colosseum is located start with?” needs Italy (1); a letter shares nothing with a country's meaning (2); nothing in “Colosseum” leads to “I” except through Italy's spelling (3); the peers can say another letter (4); the answer is one token (5).</p>
-        <p>Other arbitrary properties would fit too, such as a count (legs of the animals that spin webs) or a number fact about a place. Letter questions are simply the type that passes the solo test in large enough numbers on both models.</p>
-      </div>
-      <div class="panel">
-        <h3>What doesn't</h3>
-        <p><b>Answers that are the bridge's meaning or category</b> fail point 2: the country of a city (York University → Canada), an element's symbol (sodium → Na), a month after a holiday. There the bridge and the answer overlap inside the model, and removing one removes part of the other.</p>
-        <p><b>Answers the input already gives</b> fail point 3: “In which month do children go trick-or-treating?” reaches October without needing Halloween.</p>
-      </div>
-    </div>
-    <p class="note">So the narrow scope is a consequence of testability. The method gets clean results on questions whose answer is an arbitrary property of the bridge, and can't separate bridge from answer on the rest. We say so, and claim nothing about the other types.</p>
-  </section>
-
-  <section class="section" id="claim">
-    <div class="col"><span class="kicker">What we claim, and what we don't</span><h2>The claim</h2></div>
-    <div class="claim">
-      <p>On letter-type two-hop questions where Qwen's answer alone depends on the bridge, we measure whether removing that bridge still changes the answer when the model is in a group that agrees or disagrees with it, and we compare that with whether the bridge is still readable (the paper's measure).</p>
-      <p class="not"><b>Not claimed:</b> that the model reasons “through Italy” as a step; that the direction is Italy rather than a related signal; anything about other question types (the paper's own city-to-country facts are out of scope).</p>
+      <h3>Reading and removing the bridge with the J-lens</h3>
+      <p>A language model processes text through a stack of layers. At each layer, every word position holds a long list of numbers, the model's state there. The <b>J-lens</b> (Jacobian lens) gives, for each word in the vocabulary and each layer, a <b>direction</b> in that space: the way the state points when the model has that word in mind. With a direction for Italy we can do two things.</p>
+      <figure style="margin:0;display:grid;gap:6px">
+        <svg viewBox="0 0 740 150" role="img" aria-label="From the model's state at one layer, two operations: read how far it points along Italy's direction and rank Italy against every other word, which measures presence; or subtract the Italy part and let the model finish, which measures use." style="max-width:100%;height:auto;display:block">
+          <defs><marker id="j-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+          <g font-size="12" fill="currentColor">
+            <rect x="10" y="52" width="170" height="44" rx="6" fill="none" stroke="currentColor"/>
+            <text x="95" y="71" text-anchor="middle">the model's state</text><text x="95" y="87" text-anchor="middle" font-size="10" fill="var(--muted)">one layer, one word position</text>
+            <line x1="180" y1="62" x2="258" y2="36" stroke="currentColor" marker-end="url(#j-ar)"/>
+            <line x1="180" y1="86" x2="258" y2="112" stroke="currentColor" marker-end="url(#j-ar)"/>
+            <rect x="260" y="16" width="200" height="40" rx="6" fill="var(--bridge-soft)" stroke="var(--bridge)"/>
+            <text x="360" y="33" text-anchor="middle" fill="var(--bridge)" font-weight="600">Read along Italy's direction</text><text x="360" y="48" text-anchor="middle" font-size="10" fill="var(--muted)">rank Italy against every other word</text>
+            <rect x="260" y="92" width="200" height="40" rx="6" fill="var(--bridge-soft)" stroke="var(--bridge)" stroke-dasharray="5 3"/>
+            <text x="360" y="109" text-anchor="middle" fill="var(--bridge)" font-weight="600">Subtract the Italy part</text><text x="360" y="124" text-anchor="middle" font-size="10" fill="var(--muted)">then let the model finish answering</text>
+            <line x1="460" y1="36" x2="538" y2="36" stroke="currentColor" marker-end="url(#j-ar)"/>
+            <line x1="460" y1="112" x2="538" y2="112" stroke="currentColor" marker-end="url(#j-ar)"/>
+            <text x="546" y="31" font-weight="700">Presence</text><text x="546" y="46" font-size="11" fill="var(--muted)">Is Italy near the top of the list?</text>
+            <text x="546" y="107" font-weight="700">Use</text><text x="546" y="122" font-size="11" fill="var(--muted)">Does the answer survive without it?</text>
+          </g>
+        </svg>
+        <figcaption class="note"><b>Reading</b> says the bridge is there. <b>Removing</b> says whether the answer depends on it. A word can be present and unused, so the two can come apart.</figcaption>
+      </figure>
+      <p>The paper we build on, <i>Silent Dissent</i>, put a model in a group of agents who all give a wrong answer, and read the bridge. When the agent gave in to the group, the bridge was still readable, and the authors conclude that the agent still holds its original reasoning. Reading alone cannot tell “computed and overridden” from “lit up but unused”. Removing can. That is the step this project adds.</p>
     </div>
   </section>
 
-  <section class="section" id="flow">
-    <div class="col"><span class="kicker">The plan</span><h2>From single questions to groups</h2></div>
-    <div class="flow">
-      <div class="fstep"><b>Pick the questions</b><span>Letter questions where the solo scorecard already found the bridge needed and acting first.</span></div>
-      <div class="fstep"><b>Re-measure alone</b><span>Same question, same tool, in the new code: the baseline for each question.</span></div>
-      <div class="fstep"><b>Peers agree</b><span>1, 2 and 3 peers give the right letter.</span></div>
-      <div class="fstep"><b>Peers disagree</b><span>1, 2 and 3 peers give the same wrong letter.</span></div>
-      <div class="fstep"><b>Remove and read</b><span>In every prompt: remove the bridge and controls, check the edit reaches, read presence.</span></div>
-      <div class="fstep"><b>Label and compare</b><span>One label per prompt, then counts by condition and by how far the model gave in.</span></div>
-    </div>
+  <!-- 2 THE QUESTION -->
+  <section class="panel" id="goal" aria-label="The question we ask">
+    <span class="kicker">2 · The question we ask</span>
+    <h2>Does the bridge still matter when the group speaks?</h2>
+    <p>Alone, removing Italy destroys the answer <span class="a">I</span>. In a group, other agents answer first. We remove Italy again and ask whether the answer still changes. If it does, the model still answers from its own path. If not, it is taking the group's answer.</p>
+    <figure style="margin:0;display:grid;gap:6px">
+      <svg viewBox="0 0 740 165" role="img" aria-label="Alone: the question leads through the hidden word Italy to the answer I; removing Italy destroys the answer. In a group: agents 2 to 4 answer S first; we remove Italy again and ask whether the model's answer still changes." style="max-width:100%;height:auto;display:block">
+        <defs><marker id="g-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <g font-size="12" fill="currentColor">
+          <text x="10" y="18" font-weight="700">Alone</text>
+          <rect x="10" y="40" width="112" height="30" rx="5" fill="none" stroke="currentColor"/><text x="66" y="59" text-anchor="middle">the question</text>
+          <line x1="122" y1="55" x2="158" y2="55" stroke="currentColor" marker-end="url(#g-ar)"/>
+          <rect x="160" y="40" width="70" height="30" rx="5" fill="var(--bridge-soft)" stroke="var(--bridge)" stroke-dasharray="5 3"/><text x="195" y="59" text-anchor="middle" fill="var(--bridge)" font-weight="600">Italy</text>
+          <text x="195" y="32" text-anchor="middle" font-size="10" fill="var(--muted)">never written</text>
+          <line x1="230" y1="55" x2="266" y2="55" stroke="currentColor" marker-end="url(#g-ar)"/>
+          <rect x="268" y="40" width="44" height="30" rx="5" fill="var(--answer-soft)" stroke="var(--answer)"/><text x="290" y="59" text-anchor="middle" fill="var(--answer)" font-weight="600">I</text>
+          <text x="10" y="112" fill="var(--bad)">remove Italy → the answer is gone</text>
+
+          <text x="400" y="18" font-weight="700">In a group</text>
+          <rect x="400" y="40" width="112" height="30" rx="5" fill="none" stroke="currentColor"/><text x="456" y="59" text-anchor="middle">the question</text>
+          <line x1="512" y1="55" x2="548" y2="55" stroke="currentColor" marker-end="url(#g-ar)"/>
+          <rect x="550" y="40" width="70" height="30" rx="5" fill="var(--bridge-soft)" stroke="var(--bridge)" stroke-dasharray="5 3"/><text x="585" y="59" text-anchor="middle" fill="var(--bridge)" font-weight="600">Italy</text>
+          <line x1="620" y1="55" x2="656" y2="55" stroke="currentColor" marker-end="url(#g-ar)"/>
+          <rect x="658" y="40" width="72" height="30" rx="5" fill="none" stroke="currentColor"/><text x="694" y="59" text-anchor="middle">answer?</text>
+          <rect x="400" y="96" width="150" height="30" rx="5" fill="var(--peer-soft)" stroke="var(--peer)"/><text x="475" y="115" text-anchor="middle" fill="var(--peer)" font-weight="600">Agents 2–4: S S S</text>
+          <line x1="550" y1="111" x2="656" y2="72" stroke="var(--peer)" stroke-dasharray="4 3" marker-end="url(#g-ar)"/>
+          <text x="400" y="155" fill="var(--bad)">remove Italy → does the answer still change?</text>
+        </g>
+      </svg>
+      <figcaption class="note">Two group cases. If the agents say <span class="a">I</span>: does the model still go through Italy, or just repeat them? If they say <span class="p">S</span> and the model gives in: is Italy still pulling it toward I?</figcaption>
+    </figure>
   </section>
 
-  <section class="section" id="stage1">
-    <div class="col"><span class="kicker">Stage 1 · single questions</span><h2>Which two-hop questions</h2><p>All questions whose answer is a <b>letter</b> and where the existing solo scorecard found the bridge needed early (beats 12 everyday words by 0.5) and acting before the answer forms. Questions built as controls to fail are left out. No new selection run: the lists come from the saved solo results.</p></div>
+  <!-- 3 REQUIREMENTS -->
+  <section class="section" id="requirements">
+    <div class="col"><span class="kicker">3 · What a question has to satisfy</span><h2>Four requirements</h2><p>Removing the bridge only means something if the question has the right shape. Three requirements concern the question on its own. One concerns the group. How we check them, and which questions survived, comes in the next section.</p></div>
+
+    <p class="tag">On its own</p>
+    <article class="panel req">
+      <h3>1 · The model answers it correctly on its own</h3>
+      <p>Asked alone, the model gives the right answer. It also knows both pieces: where the Colosseum is, and what letter Italy starts with. Without this there is no answer of the model's own for a group to overturn.</p>
+      <div class="ex for"><b>For</b><span>“What letter does the name of the country where the Colosseum is located start with?” Alone, the model says I.</span></div>
+      <div class="ex against"><b>Against</b><span>“What species is Pikachu?” The model gets it wrong alone, so a group cannot change its mind about anything.</span></div>
+    </article>
+    <article class="panel req">
+      <h3>2 · The answer runs through the bridge, with no way round it</h3>
+      <p>Removing the bridge inside the model, before the answer forms, must wipe out the answer, and by much more than removing an unrelated word of the same strength does. This rules out shortcuts at the same time: if the model could get from the question's words to the answer directly, the answer would still stand after the bridge is gone. It is also the quantity the group test re-measures, so it has to be large alone first.</p>
+      <div class="ex for"><b>For</b><span>Colosseum: remove Italy and the probability of I falls from about 1 to about 0. Remove “bread” and nothing happens.</span></div>
+      <div class="ex against"><b>Against</b><span>“In which month do children go trick-or-treating?” Remove Halloween and the model still says October. It reaches the answer without the middle step, so there is nothing to test.</span></div>
+    </article>
+    <article class="panel req">
+      <h3>3 · The answer is a property of the bridge, not the bridge itself</h3>
+      <p>Inside the model, a word and its close relatives point in similar directions. If the answer is the bridge's own meaning, removing the bridge deletes part of the answer directly, and the test cannot tell “used the bridge” from “deleted the answer”. A first letter or a count shares nothing with the bridge's meaning, so removing the bridge can only act through the model's reasoning.</p>
+      <div class="ex for"><b>For</b><span>Italy → the letter I. “I” and “Italy” are unrelated directions inside the model.</span></div>
+      <div class="ex against"><b>Against</b><span>York University → Toronto → Canada. “Toronto” and “Canada” overlap inside the model, so removing Toronto removes part of Canada whether or not the model used Toronto.</span></div>
+    </article>
+
+    <p class="tag">In the group</p>
+    <article class="panel req">
+      <h3>4 · The group can offer a believable wrong answer of the same kind</h3>
+      <p>The other agents' answer must be a single word of the same kind as the right one, and it must not mention or hint at the bridge. Then the group disputes the output while the bridge stays untouched, as a probe of the model's own path.</p>
+      <div class="ex for"><b>For</b><span>Peers say S (Spain's letter) instead of I. A letter against a letter, and nothing about Italy.</span></div>
+      <div class="ex against"><b>Against</b><span>Peers say “Italy” or “Rome”: that hands the model the bridge. Or a wrong answer several words long, whose probability cannot be compared with the right one.</span></div>
+    </article>
+  </section>
+
+  <!-- 4 CHECKING -->
+  <section class="section" id="checking">
+    <div class="col"><span class="kicker">4 · Checking the requirements</span><h2>How we check them, and which questions passed</h2><p>Every check is made on the question asked alone, by removing directions and comparing against controls. Together these checks are our <b>bridge scorecard</b>.</p></div>
+    <div class="panel scroll-x">
+      <table>
+        <thead><tr><th>Requirement</th><th>How it is checked</th></tr></thead>
+        <tbody>
+          <tr><td><b>1 · Correct on its own</b></td><td>The model answers the question, and each of its two pieces asked separately, correctly when asked alone.</td></tr>
+          <tr><td><b>2 · Runs through the bridge</b></td><td>Removing the bridge's direction, in layers before the answer forms, drops the probability of the answer by at least 0.5 more than removing any of 12 everyday words of matched strength. The bridge's effect must also start before the answer's own direction becomes necessary, so the bridge acts first.</td></tr>
+          <tr><td><b>3 · Property, not the bridge itself</b></td><td>Removing only the part of the bridge's direction that it does not share with the answer's direction still produces the drop. Letter and count answers pass this by construction; answers that are the bridge's meaning fail it.</td></tr>
+          <tr><td><b>4 · A matched wrong answer</b></td><td>The answer is one token, and a wrong answer of the same kind exists. Set when the question is written.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel scroll-x">
+      <h3>Applied to the question bank</h3>
+      <table>
+        <thead><tr><th>Question family</th><th>Example</th><th>Requirement it fails</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>First letter of a place: a landmark's country, a person's birth city, a university's city</td><td>Colosseum → Italy → I</td><td>none</td><td><span class="pill good">in</span></td></tr>
+          <tr><td>Count of a thing</td><td>animals that spin webs → spider → eight</td><td>none (27B)</td><td><span class="pill good">in</span></td></tr>
+          <tr><td>Country of a city, symbol of an element</td><td>York University → Toronto → Canada; table salt → sodium → Na</td><td>3: the answer is the bridge's meaning</td><td><span class="pill bad">out</span></td></tr>
+          <tr><td>Answers reachable without the middle step</td><td>trick-or-treating → October</td><td>2: removing the bridge leaves the answer</td><td><span class="pill bad">out</span></td></tr>
+          <tr><td>Wordplay, rare facts</td><td>Pikachu's species, a turkey's legs</td><td>1: wrong alone on these models</td><td><span class="pill bad">out</span></td></tr>
+        </tbody>
+      </table>
+    </div>
     <div class="two">
       <div class="panel">
         <h3>Qwen3.6-27B · 25 questions (main model)</h3>
@@ -148,14 +226,19 @@
         <p class="note">The same families, with the questions this smaller model can answer and pass: 14 landmark countries, 6 birth cities, 4 university cities.</p>
       </div>
     </div>
-    <div class="panel">
-      <h3>The six calibration questions</h3>
-      <p>Colosseum, Gates, Piaf, Mozart, spider and York were used in the earlier pilot, and the reading thresholds below were set on their numbers. They are run with everything else, but <b>reported separately</b>: the headline comes from the other questions only.</p>
-    </div>
+    <p class="note">What passes is the letter family plus one count question. Other arbitrary properties of a bridge would qualify on the same terms if the model answered them reliably alone. Six of these questions (Colosseum, Gates, Piaf, Mozart, spider, York) were used in an earlier pilot, and the reading thresholds in section 7 were set on their numbers. They are run with the rest but reported separately, so the headline rests on the other questions.</p>
   </section>
 
-  <section class="section" id="stage2">
-    <div class="col"><span class="kicker">Stage 2 · groups</span><h2>The prompts</h2><p>One user message in the model's chat template. The peers' lines come after the question. The instruction is neutral: it does not tell the model to take the peers into account.</p></div>
+  <!-- 5 GROUP SETTING -->
+  <section class="section" id="group">
+    <div class="col"><span class="kicker">5 · The group setting</span><h2>Three conditions, one question</h2><p>Each question is shown alone, then with other agents answering first. One user message in the model's chat template, with the peers' lines after the question. The instruction is neutral: it does not tell the model to take the peers into account.</p></div>
+    <div class="flow">
+      <div class="fstep"><b>Alone</b><span>The question by itself: the baseline for that question.</span></div>
+      <div class="fstep"><b>Peers agree</b><span>1, 2 or 3 agents give the right letter first.</span></div>
+      <div class="fstep"><b>Peers disagree</b><span>1, 2 or 3 agents give the same wrong letter first.</span></div>
+      <div class="fstep"><b>Remove and read</b><span>In every prompt: remove the bridge and its controls, check the edit reached it, read its presence.</span></div>
+      <div class="fstep"><b>Label and compare</b><span>One label per prompt, then counts by condition and by how far the model gave in.</span></div>
+    </div>
     <div class="two">
       <div class="panel">
         <span class="tag">Alone</span>
@@ -176,35 +259,37 @@ Agent 4: <span class="p2">F</span>
 
 You are Agent 1. Give your own answer. Answer with
 one letter.</pre>
-        <p class="note"><b>Agree:</b> the peers say <span class="a">I</span>. <b>Disagree:</b> they all say the same wrong letter, here <span class="p">F</span>. For the calibration questions the wrong letter is the pilot's; for the others it is the first letter of a same-kind word (Germany → G for the Eiffel Tower).</p>
+        <p class="note"><b>Agree:</b> the peers say <span class="a">I</span>. <b>Disagree:</b> they all say the same wrong letter, here <span class="p">F</span>, the first letter of a same-kind word (France for Italy, Germany for the Eiffel Tower).</p>
       </div>
     </div>
     <div class="panel">
       <span class="tag">Copy-only control</span>
-      <p>The calibration questions with a made-up subject (“the country where the Varrenth Arch is located”) and three peers giving a letter. The model has no bridge of its own, so removing the original bridge must do nothing. This shows the measure reads zero when copying is the only option.</p>
+      <p>The six calibration questions with a made-up subject (“the country where the Varrenth Arch is located”) and three peers giving a letter. The model has no bridge of its own, so removing the original bridge must do nothing. This shows the measure reads zero when copying is the only option.</p>
     </div>
     <p class="note">Per model: 7 prompts per question (alone, agree × 3, disagree × 3) plus 6 copy-only prompts.</p>
   </section>
 
+  <!-- 6 MEASURE -->
   <section class="section" id="measure">
-    <div class="col"><span class="kicker">In every prompt</span><h2>What we measure</h2></div>
+    <div class="col"><span class="kicker">6 · In every prompt</span><h2>What we measure</h2></div>
     <div class="panel scroll-x">
       <table>
         <thead><tr><th>Measurement</th><th>How</th><th>Why</th></tr></thead>
         <tbody>
-          <tr><td><b>Baseline</b></td><td>P(right letter), P(peers' letter), the model's greedy answer, and the balance LO = log P(peers') − log P(right).</td><td>Sorts each disagree prompt into <i>holds</i> (answers right), <i>partial give-in</i> (gives the peers' letter, P(right) ≥ 0.3) or <i>full give-in</i>.</td></tr>
-          <tr><td><b>Answer onset</b></td><td>Remove the direction of the letter the model gives, window by window; the first window that drops it by 0.5 or more. The peers' letter tokens are left out of this edit, so removing the copy source can't fake an onset.</td><td>Only windows that end before it count as “early”, before the answer forms.</td></tr>
+          <tr><td><b>Baseline</b></td><td>P(right letter), P(peers' letter), the model's answer, and the balance LO = log P(peers') − log P(right).</td><td>Sorts each disagree prompt into <i>holds</i> (answers right), <i>partial give-in</i> (gives the peers' letter with P(right) still ≥ 0.3) or <i>full give-in</i>.</td></tr>
+          <tr><td><b>Answer onset</b></td><td>Remove the direction of the letter the model gives, window by window through the layers; the first window that drops it by 0.5 or more. The peers' letter tokens are left out of this edit, so removing the copy source cannot fake an onset.</td><td>Only windows that end before it count as “early”, before the answer forms.</td></tr>
           <tr><td><b>Remove the bridge</b></td><td>In every early window, from the question's first word to the end of the prompt (peers' lines included).</td><td>The core measurement: the drop in P(right), and the shift in LO.</td></tr>
-          <tr><td><b>Controls</b></td><td>The same removal for 12 everyday words of matched strength, for the two same-kind words (Spain, France for Italy), and for the right letter's own direction.</td><td>Everyday words give the noise floor; same-kind words show it isn't “any country”; the answer's direction shows the measure can move.</td></tr>
-          <tr><td><b>Reach check</b></td><td>The same prompt with “First name the country.” and the reply started for the model; removing the bridge must cut P(bridge name) by half. Read only if P(bridge name) starts at 0.3 or more.</td><td>Separates “the bridge isn't needed” from “the edit missed it”.</td></tr>
+          <tr><td><b>Controls</b></td><td>The same removal for 12 everyday words of matched strength, for two same-kind words (Spain, France for Italy), and for the right letter's own direction.</td><td>Everyday words give the noise floor; same-kind words show it is not “any country”; the answer's direction shows the measure can move.</td></tr>
+          <tr><td><b>Reach check</b></td><td>The same prompt with “First name the country.” and the reply started for the model; removing the bridge must cut P(bridge name) by half. Read only if P(bridge name) starts at 0.3 or more.</td><td>Separates “the bridge is not needed” from “the edit missed it”.</td></tr>
           <tr><td><b>Presence</b></td><td>The bridge's J-lens rank at the last token, in the paper's layer band; also for a same-kind word and an unrelated word.</td><td>The paper's measure. Lets each prompt be placed as present and used, or present but unused.</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
+  <!-- 7 READING -->
   <section class="section" id="reading">
-    <div class="col"><span class="kicker">Fixed before the run</span><h2>How each prompt is read</h2></div>
+    <div class="col"><span class="kicker">7 · Fixed before the run</span><h2>How each prompt is read</h2></div>
     <div class="two">
       <div class="panel scroll-x">
         <h3>Disagree prompts (peers wrong)</h3>
@@ -233,11 +318,12 @@ one letter.</pre>
     </div>
   </section>
 
+  <!-- 8 EXPECTATIONS -->
   <section class="section" id="hopes">
-    <div class="col"><span class="kicker">What we hope to find</span><h2>Expectations, and what each outcome means</h2><p>From the six-question pilot. Each one can come out either way.</p></div>
+    <div class="col"><span class="kicker">8 · What we expect</span><h2>Expectations, and what each outcome means</h2><p>Based on the six-question pilot. Each one can come out either way.</p></div>
     <div class="three">
       <article class="hyp"><span class="tag">Peers disagree, model holds</span><h3>The bridge is what holds it</h3><p><b>Expect:</b> bridge still pulls. <b>If not:</b> the model resists for some other reason than its own answer.</p></article>
-      <article class="hyp"><span class="tag">Peers disagree, partial give-in</span><h3>Silent dissent, shown causally</h3><p><b>Expect:</b> bridge still pulls: the model's own answer is still pushing back while it gives in. <b>If not:</b> the paper's “silent dissent” isn't doing work even here.</p></article>
+      <article class="hyp"><span class="tag">Peers disagree, partial give-in</span><h3>Silent dissent, shown causally</h3><p><b>Expect:</b> bridge still pulls: the model's own answer is still pushing back while it gives in. <b>If not:</b> the paper's “silent dissent” is not doing work even here.</p></article>
       <article class="hyp"><span class="tag">Peers disagree, full give-in</span><h3>The pull fades</h3><p><b>Expect:</b> mixed or not needed. <b>If the bridge still pulls:</b> strong support for the paper's reading.</p></article>
       <article class="hyp"><span class="tag">Peers agree</span><h3>The model stops using its own path</h3><p><b>Expect:</b> bridge not needed in most questions, even though the answer is right. <b>Meaning:</b> agreement short-circuits the model's own reasoning.</p></article>
       <article class="hyp"><span class="tag">Presence × use</span><h3>Present but unused</h3><p><b>Expect:</b> in agree prompts and full give-ins, the bridge is still readable but no longer needed. <b>Meaning:</b> there, the paper's presence measure would overstate the model's own reasoning.</p></article>
@@ -245,11 +331,12 @@ one letter.</pre>
     </div>
   </section>
 
+  <!-- 9 LIMITS -->
   <section class="section" id="limits">
-    <div class="col"><span class="kicker">Stated up front</span><h2>Limits</h2></div>
+    <div class="col"><span class="kicker">9 · Stated up front</span><h2>Limits</h2></div>
     <div class="panel">
       <ul class="list">
-        <li><span>1</span><span>One question type (letters), two Qwen models, one wording of the group prompt.</span></li>
+        <li><span>1</span><span>One question type (letters), two Qwen models, two wordings of the group prompt.</span></li>
         <li><span>2</span><span>We show whether the bridge's direction still feeds the answer, not what that direction is.</span></li>
         <li><span>3</span><span>The reading thresholds were set on the six calibration questions; they stay fixed for the rest.</span></li>
         <li><span>4</span><span>Full give-ins sit at the edge of what can be measured (P(right) near 0), which is why the balance LO is used.</span></li>
@@ -257,19 +344,8 @@ one letter.</pre>
     </div>
   </section>
 
+  <!-- 10 STATUS -->
   <section class="section" id="status">
-    <div class="col"><span class="kicker">Where it stands</span><h2>Steps</h2></div>
-    <div class="panel scroll-x status">
-      <table>
-        <thead><tr><th>Step</th><th>What</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr><td>Branches</td><td><code>archive/full-scorecard</code> keeps all earlier work; <code>conformity</code> holds this project.</td><td><span class="pill good">done</span></td></tr>
-          <tr><td>Outline</td><td>This page.</td><td><span class="pill good">done</span></td></tr>
-          <tr><td>Code</td><td>One script for all conditions and measurements (<code>src/consulted_bridges/conformity.py</code>), tested on a tiny model.</td><td><span class="pill good">done</span></td></tr>
-          <tr><td>Run</td><td>Qwen3.6-27B and Qwen3.5-4B on rented GPUs, about $14 in all.</td><td><span class="pill mid">running</span></td></tr>
-          <tr><td>Report</td><td>Labels by condition, presence × use, the calibration questions separately.</td><td><span class="pill none">to do</span></td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="col"><span class="kicker">10 · Where it stands</span><h2>Status</h2><p>Done. Both models ran with the neutral wording and, added during the run because the neutral wording produced few give-ins, with the pilot's deferential wording: 706 prompts. Results, with the six calibration questions shown separately: <a href="https://claude.ai/artifact/2MCmvah81rAzd8TBX2Pu4H" target="_blank" rel="noopener">Bridge Under Conformity Results</a>.</p></div>
   </section>
 </main>

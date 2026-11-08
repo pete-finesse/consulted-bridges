@@ -1,0 +1,178 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  15%|█▍        | 63/426 [00:00<00:00, 617.92it/s]Loading weights:  29%|██▉       | 125/426 [00:00<00:00, 594.02it/s]Loading weights:  43%|████▎     | 185/426 [00:00<00:00, 545.64it/s]Loading weights:  56%|█████▋    | 240/426 [00:00<00:00, 546.26it/s]Loading weights:  72%|███████▏  | 307/426 [00:00<00:00, 579.12it/s]Loading weights:  86%|████████▌ | 366/426 [00:00<00:00, 559.76it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 604.07it/s]
+PROGRESS 0/86 L_colosseum alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_colosseum alone] says 'I' (right) P(right) 0.98 P(peer) 0.00 onset 27 | need 0.95 bridge dLO +8.99 noise +0.93 kind 2.1865811953454397 | reach 0.96 rank 0 | bridge still needed (47s)
+PROGRESS 1/86 L_colosseum agree1
+[L_colosseum agree1] says 'I' (right) P(right) 0.46 P(peer) 0.46 onset 24 | need 0.73 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 1 | bridge still needed (8s)
+PROGRESS 2/86 L_colosseum agree2
+[L_colosseum agree2] says 'I' (right) P(right) 0.88 P(peer) 0.88 onset 27 | need 0.74 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 1 | bridge still needed (8s)
+PROGRESS 3/86 L_colosseum agree3
+[L_colosseum agree3] says 'I' (right) P(right) 0.91 P(peer) 0.91 onset 27 | need 0.46 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 1 | mixed (8s)
+PROGRESS 4/86 L_colosseum disagree1
+[L_colosseum disagree1] says 'I' (holds) P(right) 0.62 P(peer) 0.03 onset 24 | need 0.82 bridge dLO +4.50 noise +0.37 kind 2.125013938227154 | reach 1.00 rank 0 | bridge still pulls (7s)
+PROGRESS 5/86 L_colosseum disagree2
+[L_colosseum disagree2] says 'I' (holds) P(right) 0.45 P(peer) 0.28 onset 9 | need 0.17 bridge dLO +1.00 noise +0.50 kind 0.7499958621211211 | reach 0.01 rank 1 | mixed (3s)
+PROGRESS 6/86 L_colosseum disagree3
+[L_colosseum disagree3] says 'F' (partial give-in) P(right) 0.34 P(peer) 0.39 onset 24 | need 0.73 bridge dLO +4.25 noise +0.37 kind 2.8749633406031503 | reach 1.00 rank 1 | bridge still pulls (7s)
+PROGRESS 7/86 L_colosseum copy3
+[L_colosseum copy3] says 'F' (full give-in) P(right) 0.03 P(peer) 0.69 onset 24 | need -0.05 bridge dLO +0.25 noise +0.37 kind 0.1249979284349445 | reach 0.99 rank 183 | mixed (7s)
+PROGRESS 8/86 L_mozart alone
+[L_mozart alone] says 'S' (right) P(right) 0.84 P(peer) 0.00 onset 24 | need 0.66 bridge dLO +7.37 noise +1.50 kind 6.124792072361821 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 9/86 L_mozart agree1
+[L_mozart agree1] says 'V' (wrong) P(right) 0.16 P(peer) 0.16 onset 24 | need 0.25 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 1 | mixed (7s)
+PROGRESS 10/86 L_mozart agree2
+[L_mozart agree2] says 'V' (wrong) P(right) 0.20 P(peer) 0.20 onset 3 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 11/86 L_mozart agree3
+[L_mozart agree3] says 'S' (right) P(right) 0.47 P(peer) 0.47 onset 24 | need 0.51 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 2 | bridge still needed (7s)
+PROGRESS 12/86 L_mozart disagree1
+[L_mozart disagree1] says 'V' (other) P(right) 0.08 P(peer) 0.06 onset 3 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 13/86 L_mozart disagree2
+[L_mozart disagree2] says 'V' (other) P(right) 0.03 P(peer) 0.04 onset 9 | need -0.20 bridge dLO +1.87 noise +0.37 kind 0.37499692678861374 | reach 0.79 rank 0 | mixed (3s)
+PROGRESS 14/86 L_mozart disagree3
+[L_mozart disagree3] says 'V' (other) P(right) 0.04 P(peer) 0.12 onset 6 | need -0.25 bridge dLO +0.25 noise +0.13 kind 2.48441106842634e-06 | reach 0.08 rank 2 | mixed (2s)
+PROGRESS 15/86 L_mozart copy3
+[L_mozart copy3] says 'B' (full give-in) P(right) 0.02 P(peer) 0.49 onset 24 | need -0.03 bridge dLO +0.12 noise +0.25 kind 0.1249948960225451 | reach 0.99 rank 9427 | mixed (7s)
+PROGRESS 16/86 V_LM_acropolis alone
+[V_LM_acropolis alone] says 'G' (right) P(right) 0.97 P(peer) 0.00 onset 24 | need 0.94 bridge dLO +5.87 noise +1.12 kind 0.3737247786736084 | reach 0.64 rank 0 | bridge still needed (7s)
+PROGRESS 17/86 V_LM_acropolis agree1
+[V_LM_acropolis agree1] says 'G' (right) P(right) 0.79 P(peer) 0.79 onset 24 | need 0.73 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.90 rank 0 | bridge still needed (7s)
+PROGRESS 18/86 V_LM_acropolis agree2
+[V_LM_acropolis agree2] says 'G' (right) P(right) 0.78 P(peer) 0.78 onset 24 | need 0.28 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.50 rank 0 | mixed (7s)
+PROGRESS 19/86 V_LM_acropolis agree3
+[V_LM_acropolis agree3] says 'G' (right) P(right) 0.78 P(peer) 0.78 onset 24 | need 0.24 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.41 rank 0 | mixed (7s)
+PROGRESS 20/86 V_LM_acropolis disagree1
+[V_LM_acropolis disagree1] says 'G' (holds) P(right) 0.64 P(peer) 0.01 onset 24 | need 0.82 bridge dLO +6.31 noise +0.37 kind 1.8751750484664593 | reach 0.97 rank 0 | bridge still pulls (7s)
+PROGRESS 21/86 V_LM_acropolis disagree2
+[V_LM_acropolis disagree2] says 'G' (holds) P(right) 0.59 P(peer) 0.19 onset 24 | need 0.69 bridge dLO +7.81 noise +0.62 kind 4.37465379015391 | reach 0.99 rank 0 | bridge still pulls (7s)
+PROGRESS 22/86 V_LM_acropolis disagree3
+[V_LM_acropolis disagree3] says 'I' (partial give-in) P(right) 0.35 P(peer) 0.45 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 23/86 V_LM_brandenburg alone
+[V_LM_brandenburg alone] says 'G' (right) P(right) 0.85 P(peer) 0.00 onset 24 | need 0.86 bridge dLO +4.50 noise +0.62 kind 2.0006775850591283 | reach 0.93 rank 0 | bridge still needed (7s)
+PROGRESS 24/86 V_LM_brandenburg agree1
+[V_LM_brandenburg agree1] says 'G' (right) P(right) 0.47 P(peer) 0.47 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 25/86 V_LM_brandenburg agree2
+[V_LM_brandenburg agree2] says 'G' (right) P(right) 0.48 P(peer) 0.48 onset 15 | need 0.58 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.28 rank 0 | bridge still needed (5s)
+PROGRESS 26/86 V_LM_brandenburg agree3
+[V_LM_brandenburg agree3] says 'G' (right) P(right) 0.47 P(peer) 0.47 onset 24 | need 0.62 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.99 rank 0 | bridge still needed (7s)
+PROGRESS 27/86 V_LM_brandenburg disagree1
+[V_LM_brandenburg disagree1] says 'B' (other) P(right) 0.25 P(peer) 0.25 onset 21 | need 0.81 bridge dLO +3.25 noise +0.37 kind 1.9999450713632676 | reach 0.95 rank 0 | bridge still pulls (6s)
+PROGRESS 28/86 V_LM_brandenburg disagree2
+[V_LM_brandenburg disagree2] says 'A' (full give-in) P(right) 0.06 P(peer) 0.67 onset 24 | need 0.63 bridge dLO +3.62 noise +0.50 kind 2.1248849968822405 | reach 1.00 rank 1 | bridge still pulls (7s)
+PROGRESS 29/86 V_LM_brandenburg disagree3
+[V_LM_brandenburg disagree3] says 'A' (full give-in) P(right) 0.02 P(peer) 0.83 onset 24 | need 0.63 bridge dLO +2.75 noise +0.37 kind 1.3748579939703682 | reach 1.00 rank 1 | bridge still pulls (7s)
+PROGRESS 30/86 V_LM_eiffel alone
+[V_LM_eiffel alone] says 'F' (right) P(right) 0.97 P(peer) 0.00 onset 24 | need 0.80 bridge dLO +3.50 noise +0.50 kind 6.95471120781832e-06 | reach 0.37 rank 0 | bridge still needed (7s)
+PROGRESS 31/86 V_LM_eiffel agree1
+[V_LM_eiffel agree1] says 'F' (right) P(right) 0.86 P(peer) 0.86 onset 24 | need 0.33 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.14 rank 0 | mixed (7s)
+PROGRESS 32/86 V_LM_eiffel agree2
+[V_LM_eiffel agree2] says 'F' (right) P(right) 0.90 P(peer) 0.90 onset 27 | need 0.56 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.65 rank 0 | bridge still needed (8s)
+PROGRESS 33/86 V_LM_eiffel agree3
+[V_LM_eiffel agree3] says 'F' (right) P(right) 0.91 P(peer) 0.91 onset 27 | need 0.31 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.61 rank 0 | mixed (8s)
+PROGRESS 34/86 V_LM_eiffel disagree1
+[V_LM_eiffel disagree1] says 'F' (holds) P(right) 0.65 P(peer) 0.08 onset 24 | need 0.75 bridge dLO +4.87 noise +0.50 kind 1.0000025491346944 | reach 0.14 rank 0 | bridge still pulls (7s)
+PROGRESS 35/86 V_LM_eiffel disagree2
+[V_LM_eiffel disagree2] says 'F' (holds) P(right) 0.50 P(peer) 0.27 onset 24 | need 0.84 bridge dLO +5.50 noise +0.50 kind 2.4999769589046728 | reach 0.18 rank 0 | bridge still pulls (7s)
+PROGRESS 36/86 V_LM_eiffel disagree3
+[V_LM_eiffel disagree3] says 'G' (full give-in) P(right) 0.29 P(peer) 0.47 onset 24 | need 0.67 bridge dLO +5.12 noise +0.62 kind 2.3749590620104812 | reach 0.12 rank 0 | bridge still pulls (7s)
+PROGRESS 37/86 V_LM_kremlin alone
+[V_LM_kremlin alone] says 'R' (right) P(right) 0.90 P(peer) 0.00 onset 24 | need 0.88 bridge dLO +5.87 noise +0.81 kind 2.378245738465954 | reach 0.66 rank 0 | bridge still needed (7s)
+PROGRESS 38/86 V_LM_kremlin agree1
+[V_LM_kremlin agree1] says 'R' (right) P(right) 0.58 P(peer) 0.58 onset 24 | need 0.65 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.88 rank 0 | bridge still needed (8s)
+PROGRESS 39/86 V_LM_kremlin agree2
+[V_LM_kremlin agree2] says 'R' (right) P(right) 0.53 P(peer) 0.53 onset 24 | need 0.62 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.81 rank 0 | bridge still needed (8s)
+PROGRESS 40/86 V_LM_kremlin agree3
+[V_LM_kremlin agree3] says 'R' (right) P(right) 0.68 P(peer) 0.68 onset 24 | need 0.41 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.78 rank 0 | mixed (7s)
+PROGRESS 41/86 V_LM_kremlin disagree1
+[V_LM_kremlin disagree1] says 'M' (other) P(right) 0.35 P(peer) 0.02 onset 6 | need 0.08 bridge dLO +0.25 noise +0.62 kind 0.9999798169606784 | reach 0.00 rank 0 | mixed (2s)
+PROGRESS 42/86 V_LM_kremlin disagree2
+[V_LM_kremlin disagree2] says 'R' (holds) P(right) 0.36 P(peer) 0.13 onset 24 | need 0.63 bridge dLO +4.87 noise +0.87 kind 2.374944800920949 | reach 0.89 rank 0 | bridge still pulls (7s)
+PROGRESS 43/86 V_LM_kremlin disagree3
+[V_LM_kremlin disagree3] says 'P' (full give-in) P(right) 0.25 P(peer) 0.29 onset 24 | need 0.70 bridge dLO +4.25 noise +0.62 kind 1.9999522428557999 | reach 0.86 rank 0 | bridge still pulls (7s)
+PROGRESS 44/86 V_LM_petronas alone
+[V_LM_petronas alone] says 'M' (right) P(right) 0.91 P(peer) 0.00 onset 24 | need 0.87 bridge dLO +7.37 noise +1.25 kind 8.121111536372823 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 45/86 V_LM_petronas agree1
+[V_LM_petronas agree1] says 'M' (right) P(right) 0.53 P(peer) 0.53 onset 24 | need 0.68 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 46/86 V_LM_petronas agree2
+[V_LM_petronas agree2] says 'M' (right) P(right) 0.64 P(peer) 0.64 onset 24 | need 0.08 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 3 | bridge not needed (7s)
+PROGRESS 47/86 V_LM_petronas agree3
+[V_LM_petronas agree3] says 'M' (right) P(right) 0.71 P(peer) 0.71 onset 24 | need 0.04 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 4 | bridge not needed (7s)
+PROGRESS 48/86 V_LM_petronas disagree1
+[V_LM_petronas disagree1] says 'M' (holds) P(right) 0.46 P(peer) 0.05 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 49/86 V_LM_petronas disagree2
+[V_LM_petronas disagree2] says 'M' (holds) P(right) 0.32 P(peer) 0.25 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 50/86 V_LM_petronas disagree3
+[V_LM_petronas disagree3] says 'T' (full give-in) P(right) 0.24 P(peer) 0.40 onset 24 | need 0.55 bridge dLO +3.62 noise +0.75 kind 4.124857837475486 | reach 1.00 rank 3 | mixed (7s)
+PROGRESS 51/86 V_LM_pyramids alone
+[V_LM_pyramids alone] says 'E' (right) P(right) 0.96 P(peer) 0.00 onset 24 | need 0.92 bridge dLO +9.43 noise +0.50 kind 0.12456707664064304 | reach 0.97 rank 0 | bridge still needed (7s)
+PROGRESS 52/86 V_LM_pyramids agree1
+[V_LM_pyramids agree1] says 'E' (right) P(right) 0.67 P(peer) 0.67 onset 24 | need 0.71 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 53/86 V_LM_pyramids agree2
+[V_LM_pyramids agree2] says 'E' (right) P(right) 0.56 P(peer) 0.56 onset 24 | need 0.34 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (7s)
+PROGRESS 54/86 V_LM_pyramids agree3
+[V_LM_pyramids agree3] says 'E' (right) P(right) 0.67 P(peer) 0.67 onset 24 | need 0.14 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (7s)
+PROGRESS 55/86 V_LM_pyramids disagree1
+[V_LM_pyramids disagree1] says 'E' (holds) P(right) 0.81 P(peer) 0.00 onset 24 | need 0.85 bridge dLO +6.75 noise +0.50 kind 0.37496464659304873 | reach 1.00 rank 0 | bridge still pulls (7s)
+PROGRESS 56/86 V_LM_pyramids disagree2
+[V_LM_pyramids disagree2] says 'E' (holds) P(right) 0.54 P(peer) 0.06 onset 24 | need 0.86 bridge dLO +6.12 noise +0.62 kind 1.1249921440718615 | reach 1.00 rank 0 | bridge still pulls (7s)
+PROGRESS 57/86 V_LM_pyramids disagree3
+[V_LM_pyramids disagree3] says 'E' (holds) P(right) 0.51 P(peer) 0.15 onset 24 | need 0.73 bridge dLO +5.75 noise +0.75 kind 0.6250021799056729 | reach 1.00 rank 0 | bridge still pulls (7s)
+PROGRESS 58/86 V_LM_taj alone
+[V_LM_taj alone] says 'I' (right) P(right) 0.96 P(peer) 0.00 onset 27 | need 0.97 bridge dLO +7.12 noise +1.00 kind 0.6243519656966692 | reach 0.91 rank 0 | bridge still needed (8s)
+PROGRESS 59/86 V_LM_taj agree1
+[V_LM_taj agree1] says 'I' (right) P(right) 0.52 P(peer) 0.52 onset 24 | need 0.72 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.29 rank 0 | bridge still needed (7s)
+PROGRESS 60/86 V_LM_taj agree2
+[V_LM_taj agree2] says 'I' (right) P(right) 0.75 P(peer) 0.75 onset 27 | need 0.69 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.95 rank 0 | bridge still needed (8s)
+PROGRESS 61/86 V_LM_taj agree3
+[V_LM_taj agree3] says 'I' (right) P(right) 0.80 P(peer) 0.80 onset 27 | need 0.51 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.93 rank 0 | bridge still needed (8s)
+PROGRESS 62/86 V_LM_taj disagree1
+[V_LM_taj disagree1] says 'I' (holds) P(right) 0.38 P(peer) 0.16 onset 24 | need 0.79 bridge dLO +2.87 noise +0.37 kind 1.3749861290605825 | reach 0.29 rank 0 | bridge still pulls (7s)
+PROGRESS 63/86 V_LM_taj disagree2
+[V_LM_taj disagree2] says 'C' (full give-in) P(right) 0.25 P(peer) 0.42 onset 24 | need 0.63 bridge dLO +3.37 noise +0.62 kind 1.999962236842698 | reach 0.60 rank 0 | bridge still pulls (7s)
+PROGRESS 64/86 V_LM_taj disagree3
+[V_LM_taj disagree3] says 'C' (full give-in) P(right) 0.10 P(peer) 0.66 onset 24 | need 0.64 bridge dLO +2.37 noise +0.37 kind 1.4999530716799736 | reach 0.62 rank 0 | mixed (7s)
+PROGRESS 65/86 V_LP_beyonce alone
+[V_LP_beyonce alone] says 'H' (right) P(right) 0.54 P(peer) 0.00 onset 24 | need 0.45 bridge dLO +4.06 noise +2.81 kind 1.3750745189208784 | reach 1.00 rank 0 | mixed (7s)
+PROGRESS 66/86 V_LP_beyonce agree1
+[V_LP_beyonce agree1] says 'H' (right) P(right) 0.55 P(peer) 0.55 onset 24 | need 0.51 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 3 | bridge still needed (7s)
+PROGRESS 67/86 V_LP_beyonce agree2
+[V_LP_beyonce agree2] says 'H' (right) P(right) 0.78 P(peer) 0.78 onset 27 | need 0.63 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 2 | bridge still needed (8s)
+PROGRESS 68/86 V_LP_beyonce agree3
+[V_LP_beyonce agree3] says 'H' (right) P(right) 0.78 P(peer) 0.78 onset 27 | need 0.55 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 5 | bridge still needed (8s)
+PROGRESS 69/86 V_LP_beyonce disagree1
+[V_LP_beyonce disagree1] says 'H' (holds) P(right) 0.45 P(peer) 0.10 onset 24 | need 0.46 bridge dLO +4.25 noise +1.62 kind 2.7498848985181263 | reach 1.00 rank 4 | bridge still pulls (7s)
+PROGRESS 70/86 V_LP_beyonce disagree2
+[V_LP_beyonce disagree2] says 'H' (holds) P(right) 0.64 P(peer) 0.10 onset 24 | need 0.68 bridge dLO +5.62 noise +1.12 kind 4.87477680525452 | reach 1.00 rank 5 | mixed (7s)
+PROGRESS 71/86 V_LP_beyonce disagree3
+[V_LP_beyonce disagree3] says 'H' (holds) P(right) 0.52 P(peer) 0.19 onset 24 | need 0.60 bridge dLO +5.12 noise +1.00 kind 4.4997606102767085 | reach 1.00 rank 7 | mixed (7s)
+PROGRESS 72/86 V_LP_kapoor alone
+[V_LP_kapoor alone] says 'M' (right) P(right) 0.37 P(peer) 0.04 onset 24 | need 0.51 bridge dLO +3.62 noise +1.00 kind 2.749942526590013 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 73/86 V_LP_kapoor agree1
+[V_LP_kapoor agree1] says 'M' (right) P(right) 0.40 P(peer) 0.40 onset 24 | need 0.56 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 74/86 V_LP_kapoor agree2
+[V_LP_kapoor agree2] says 'M' (right) P(right) 0.49 P(peer) 0.49 onset 24 | need 0.59 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 75/86 V_LP_kapoor agree3
+[V_LP_kapoor agree3] says 'M' (right) P(right) 0.61 P(peer) 0.61 onset 24 | need 0.61 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 76/86 V_LP_kapoor disagree1
+[V_LP_kapoor disagree1] says 'M' (holds) P(right) 0.31 P(peer) 0.24 onset 24 | need 0.46 bridge dLO +5.12 noise +1.00 kind 4.624706599875768 | reach 1.00 rank 0 | mixed (7s)
+PROGRESS 77/86 V_LP_kapoor disagree2
+[V_LP_kapoor disagree2] says 'D' (full give-in) P(right) 0.30 P(peer) 0.38 onset 24 | need 0.54 bridge dLO +4.75 noise +0.75 kind 4.249683647352132 | reach 1.00 rank 0 | mixed (7s)
+PROGRESS 78/86 V_LP_kapoor disagree3
+[V_LP_kapoor disagree3] says 'D' (partial give-in) P(right) 0.35 P(peer) 0.31 onset 24 | need 0.53 bridge dLO +4.87 noise +0.87 kind 4.37471938839718 | reach 1.00 rank 0 | mixed (7s)
+PROGRESS 79/86 V_LU_dalhousie alone
+[V_LU_dalhousie alone] says 'H' (right) P(right) 0.96 P(peer) 0.00 onset 27 | need 0.93 bridge dLO +5.50 noise +1.00 kind 0.4997290016488787 | reach 0.30 rank 0 | bridge still needed (8s)
+PROGRESS 80/86 V_LU_dalhousie agree1
+[V_LU_dalhousie agree1] says 'H' (right) P(right) 0.92 P(peer) 0.92 onset 27 | need 0.76 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.96 rank 2 | bridge still needed (8s)
+PROGRESS 81/86 V_LU_dalhousie agree2
+[V_LU_dalhousie agree2] says 'H' (right) P(right) 0.91 P(peer) 0.91 onset 27 | need 0.32 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.90 rank 2 | mixed (8s)
+PROGRESS 82/86 V_LU_dalhousie agree3
+[V_LU_dalhousie agree3] says 'H' (right) P(right) 0.92 P(peer) 0.92 onset 27 | need 0.21 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.88 rank 3 | mixed (8s)
+PROGRESS 83/86 V_LU_dalhousie disagree1
+[V_LU_dalhousie disagree1] says 'H' (holds) P(right) 0.87 P(peer) 0.02 onset 24 | need 0.88 bridge dLO +4.12 noise +0.50 kind 0.49999212752722766 | reach 0.97 rank 2 | bridge still pulls (7s)
+PROGRESS 84/86 V_LU_dalhousie disagree2
+[V_LU_dalhousie disagree2] says 'H' (holds) P(right) 0.75 P(peer) 0.04 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 85/86 V_LU_dalhousie disagree3
+[V_LU_dalhousie disagree3] says 'H' (holds) P(right) 0.76 P(peer) 0.06 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS ALLDONE
+SHARD DONE qwen35_4b 0/2
