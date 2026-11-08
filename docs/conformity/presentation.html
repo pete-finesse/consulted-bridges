@@ -47,7 +47,7 @@
   .wrap { max-width: 1040px; margin-inline: auto; padding-block: 56px 96px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 96px; }
   .col { max-width: var(--measure); display: grid; gap: 14px; }
   h1, h2, h3, h4 { margin: 0; text-wrap: balance; line-height: 1.12; font-family: var(--display); }
-  h1 { max-width: 20ch; font-size: clamp(2.1rem, 5vw, 3.3rem); font-weight: 700; letter-spacing: -0.02em; }
+  h1 { font-size: clamp(2rem, 4.4vw, 2.9rem); font-weight: 700; letter-spacing: -0.02em; }
   h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 700; letter-spacing: -0.015em; }
   h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; }
   h4 { font-size: 1.05rem; font-weight: 700; }
@@ -70,6 +70,9 @@
   figure { margin: 0; display: grid; gap: 10px; }
   figcaption { font-size: 0.875rem; color: var(--muted); line-height: 1.5; max-width: 72ch; }
   svg text { font-family: var(--body); }
+
+  /* Prose sits in one centred reading column; figures and panels use the full width, so the gaps on both sides are even. */
+  .hero > h1, .hero > .kicker, .hero > .lede, .hero > .thesis, .chapter > .ch-head, .chapter > .col { width: 100%; max-width: var(--measure); justify-self: center; }
 
   /* hero */
   .hero { display: grid; gap: 28px; }
