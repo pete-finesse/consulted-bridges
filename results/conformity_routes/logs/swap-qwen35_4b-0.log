@@ -1,0 +1,587 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 5465.96it/s]
+PROGRESS 0/135 L_colosseum agree1
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_colosseum agree1] P(right) 0.47 (main 0.46) fallback R | follow 4/4 shift 8.750002495180198 | everyday through 0/2 source 0 | bridge still needed (3s)
+PROGRESS 1/135 L_colosseum agree2
+[L_colosseum agree2] P(right) 0.88 (main 0.88) fallback I | follow 4/4 shift 8.343743890608302 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 2/135 L_colosseum agree3
+[L_colosseum agree3] P(right) 0.90 (main 0.91) fallback I | follow 0/4 shift 6.874993379069636 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 3/135 L_colosseum alone0
+[L_colosseum alone0] P(right) 0.98 (main 0.98) fallback I | follow 4/4 shift 16.124979984682376 | everyday through 1/3 source 0 | bridge still needed (1s)
+PROGRESS 4/135 L_colosseum disagree3
+[L_colosseum disagree3] P(right) 0.35 (main 0.34) fallback F | follow 0/4 shift 6.937493795994245 | everyday through 0/3 source 0 | bridge still pulls (2s)
+PROGRESS 5/135 L_gates agree1
+[L_gates agree1] P(right) 0.37 (main 0.37) fallback B | follow 1/3 shift 5.874998679743013 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 6/135 L_gates agree2
+[L_gates agree2] P(right) 0.31 (main 0.31) fallback B | follow 1/3 shift 5.9999958617084195 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 7/135 L_gates agree3
+[L_gates agree3] P(right) 0.42 (main 0.42) fallback B | follow 1/3 shift 4.874998049152293 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 8/135 L_gates alone0
+[L_gates alone0] P(right) 0.76 (main 0.78) fallback B | follow 1/3 shift 7.937496950925766 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 9/135 L_mozart agree1
+[L_mozart agree1] P(right) 0.14 (main 0.16) fallback P | follow 2/3 shift 5.249999801047642 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 10/135 L_mozart agree3
+[L_mozart agree3] P(right) 0.43 (main 0.47) fallback P | follow 1/3 shift 4.749994704921744 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 11/135 L_mozart alone0
+[L_mozart alone0] P(right) 0.83 (main 0.84) fallback P | follow 1/3 shift 8.874995567618189 | everyday through 1/3 source 0 | bridge still needed (1s)
+PROGRESS 12/135 L_york agree1
+[L_york agree1] P(right) 0.71 (main 0.69) fallback W | follow 4/4 shift 8.968748499901583 | everyday through 0/2 source 0 | bridge still needed (1s)
+PROGRESS 13/135 L_york agree2
+[L_york agree2] P(right) 0.44 (main 0.47) fallback T | follow 4/4 shift 5.624999454189652 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 14/135 L_york agree3
+[L_york agree3] P(right) 0.45 (main 0.46) fallback T | follow 4/4 shift 5.249999784893625 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 15/135 L_york alone0
+[L_york alone0] P(right) 0.91 (main 0.91) fallback M | follow 3/3 shift 15.687495691944793 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 16/135 V_LM_acropolis agree1
+[V_LM_acropolis agree1] P(right) 0.79 (main 0.79) fallback G | follow 4/4 shift 8.812483897356536 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 17/135 V_LM_acropolis agree2
+[V_LM_acropolis agree2] P(right) 0.78 (main 0.78) fallback G | follow 2/4 shift 6.4374919360011305 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 18/135 V_LM_acropolis agree3
+[V_LM_acropolis agree3] P(right) 0.78 (main 0.78) fallback G | follow 1/4 shift 5.499995740334191 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 19/135 V_LM_acropolis alone0
+[V_LM_acropolis alone0] P(right) 0.97 (main 0.97) fallback G | follow 4/4 shift 15.4999877361642 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 20/135 V_LM_angkor agree1
+[V_LM_angkor agree1] P(right) 0.68 (main 0.67) fallback C | follow 4/4 shift 9.06248375561932 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 21/135 V_LM_angkor agree2
+[V_LM_angkor agree2] P(right) 0.56 (main 0.59) fallback C | follow 2/4 shift 7.843736606141435 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 22/135 V_LM_angkor agree3
+[V_LM_angkor agree3] P(right) 0.68 (main 0.68) fallback C | follow 1/4 shift 6.374991217169827 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 23/135 V_LM_angkor alone0
+[V_LM_angkor alone0] P(right) 0.54 (main 0.54) fallback S | follow 3/3 shift 15.68747342809492 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 24/135 V_LM_brandenburg agree2
+[V_LM_brandenburg agree2] P(right) 0.48 (main 0.48) fallback B | follow 1/3 shift 5.749992179383607 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 25/135 V_LM_brandenburg agree3
+[V_LM_brandenburg agree3] P(right) 0.47 (main 0.47) fallback B | follow 0/3 shift 4.99998918469224 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 26/135 V_LM_brandenburg alone0
+[V_LM_brandenburg alone0] P(right) 0.82 (main 0.85) fallback B | follow 3/3 shift 12.24997744292642 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 27/135 V_LM_brandenburg disagree2
+[V_LM_brandenburg disagree2] P(right) 0.05 (main 0.06) fallback A | follow 0/4 shift 5.812493857036577 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 28/135 V_LM_brandenburg disagree3
+[V_LM_brandenburg disagree3] P(right) 0.02 (main 0.02) fallback A | follow 0/4 shift 4.874995594670729 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 29/135 V_LM_christ agree1
+[V_LM_christ agree1] P(right) 0.75 (main 0.77) fallback B | follow 4/4 shift 6.9374803965353475 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 30/135 V_LM_christ agree2
+[V_LM_christ agree2] P(right) 0.83 (main 0.84) fallback B | follow 2/4 shift 5.499985975829061 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 31/135 V_LM_christ agree3
+[V_LM_christ agree3] P(right) 0.82 (main 0.81) fallback B | follow 2/4 shift 4.624995513149605 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 32/135 V_LM_christ alone0
+[V_LM_christ alone0] P(right) 0.98 (main 0.98) fallback B | follow 4/4 shift 14.06248045626685 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 33/135 V_LM_christ disagree2
+[V_LM_christ disagree2] P(right) 0.34 (main 0.31) fallback A | follow 0/4 shift 6.749994143342845 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 34/135 V_LM_christ disagree3
+[V_LM_christ disagree3] P(right) 0.12 (main 0.12) fallback A | follow 0/4 shift 5.062497265694139 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 35/135 V_LM_eiffel agree1
+[V_LM_eiffel agree1] P(right) 0.85 (main 0.86) fallback F | follow 4/4 shift 10.624981801528104 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 36/135 V_LM_eiffel agree2
+[V_LM_eiffel agree2] P(right) 0.90 (main 0.90) fallback F | follow 4/4 shift 8.99998836976691 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 37/135 V_LM_eiffel agree3
+[V_LM_eiffel agree3] P(right) 0.91 (main 0.91) fallback F | follow 4/4 shift 7.37498651722848 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 38/135 V_LM_eiffel alone0
+[V_LM_eiffel alone0] P(right) 0.97 (main 0.97) fallback F | follow 4/4 shift 16.249953114486072 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 39/135 V_LM_eiffel disagree3
+[V_LM_eiffel disagree3] P(right) 0.29 (main 0.29) fallback G | follow 3/4 shift 10.656212381904776 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 40/135 V_LM_fuji agree1
+[V_LM_fuji agree1] P(right) 0.81 (main 0.80) fallback J | follow 4/4 shift 8.49997773325017 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 41/135 V_LM_fuji agree2
+[V_LM_fuji agree2] P(right) 0.84 (main 0.83) fallback J | follow 4/4 shift 7.187484661590867 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 42/135 V_LM_fuji agree3
+[V_LM_fuji agree3] P(right) 0.78 (main 0.79) fallback J | follow 3/4 shift 5.937491385150657 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 43/135 V_LM_fuji alone0
+[V_LM_fuji alone0] P(right) 0.98 (main 0.98) fallback J | follow 4/4 shift 16.56243776808841 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 44/135 V_LM_kremlin agree1
+[V_LM_kremlin agree1] P(right) 0.58 (main 0.58) fallback R | follow 4/4 shift 7.999994026584311 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 45/135 V_LM_kremlin agree2
+[V_LM_kremlin agree2] P(right) 0.53 (main 0.53) fallback R | follow 4/4 shift 6.6249963692575635 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 46/135 V_LM_kremlin agree3
+[V_LM_kremlin agree3] P(right) 0.68 (main 0.68) fallback R | follow 3/4 shift 5.68750013778752 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 47/135 V_LM_kremlin alone0
+[V_LM_kremlin alone0] P(right) 0.89 (main 0.90) fallback R | follow 4/4 shift 13.468739211053876 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 48/135 V_LM_kremlin disagree3
+[V_LM_kremlin disagree3] P(right) 0.25 (main 0.25) fallback P | follow 3/4 shift 7.437496850353671 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 49/135 V_LM_machu agree1
+[V_LM_machu agree1] P(right) 0.45 (main 0.43) fallback P | follow 4/4 shift 9.249969565664806 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 50/135 V_LM_machu agree2
+[V_LM_machu agree2] P(right) 0.50 (main 0.50) fallback P | follow 4/4 shift 7.812479411165212 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 51/135 V_LM_machu agree3
+[V_LM_machu agree3] P(right) 0.51 (main 0.56) fallback P | follow 4/4 shift 6.874987214396015 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 52/135 V_LM_machu alone0
+[V_LM_machu alone0] P(right) 0.95 (main 0.95) fallback P | follow 4/4 shift 14.37496403697913 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 53/135 V_LM_machu disagree1
+[V_LM_machu disagree1] P(right) 0.25 (main 0.23) fallback C | follow 4/4 shift 10.093729537308857 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 54/135 V_LM_machu disagree2
+[V_LM_machu disagree2] P(right) 0.12 (main 0.14) fallback C | follow 1/4 shift 9.843731787109512 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 55/135 V_LM_machu disagree3
+[V_LM_machu disagree3] P(right) 0.05 (main 0.05) fallback C | follow 1/4 shift 8.874982420140263 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 56/135 V_LM_petronas agree1
+[V_LM_petronas agree1] P(right) 0.53 (main 0.53) fallback M | follow 4/4 shift 6.5624680513213125 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 57/135 V_LM_petronas agree2
+[V_LM_petronas agree2] P(right) 0.63 (main 0.64) fallback M | follow 2/4 shift 5.374990117260239 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 58/135 V_LM_petronas agree3
+[V_LM_petronas agree3] P(right) 0.73 (main 0.71) fallback M | follow 1/4 shift 4.499992728055678 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 59/135 V_LM_petronas alone0
+[V_LM_petronas alone0] P(right) 0.92 (main 0.91) fallback S | follow 3/3 shift 17.062434072172138 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 60/135 V_LM_petronas disagree3
+[V_LM_petronas disagree3] P(right) 0.22 (main 0.24) fallback T | follow 1/4 shift 6.3437436270522625 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 61/135 V_LM_pisa agree1
+[V_LM_pisa agree1] P(right) 0.88 (main 0.88) fallback I | follow 4/4 shift 11.843750496481046 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 62/135 V_LM_pisa agree2
+[V_LM_pisa agree2] P(right) 0.94 (main 0.94) fallback I | follow 4/4 shift 9.593745541008946 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 63/135 V_LM_pisa agree3
+[V_LM_pisa agree3] P(right) 0.96 (main 0.95) fallback I | follow 3/4 shift 8.718746240652285 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 64/135 V_LM_pisa alone0
+[V_LM_pisa alone0] P(right) 0.98 (main 0.98) fallback I | follow 4/4 shift 15.56248173724595 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 65/135 V_LM_pyramids agree1
+[V_LM_pyramids agree1] P(right) 0.67 (main 0.67) fallback E | follow 4/4 shift 9.156221654381948 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 66/135 V_LM_pyramids agree2
+[V_LM_pyramids agree2] P(right) 0.61 (main 0.56) fallback E | follow 4/4 shift 7.531213187073984 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 67/135 V_LM_pyramids agree3
+[V_LM_pyramids agree3] P(right) 0.68 (main 0.67) fallback E | follow 3/4 shift 5.99998747764679 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 68/135 V_LM_pyramids alone0
+[V_LM_pyramids alone0] P(right) 0.96 (main 0.96) fallback E | follow 3/4 shift 15.749917518208399 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 69/135 V_LM_sydney agree1
+[V_LM_sydney agree1] P(right) 0.69 (main 0.69) fallback A | follow 3/4 shift 6.312493357409524 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 70/135 V_LM_sydney agree2
+[V_LM_sydney agree2] P(right) 0.79 (main 0.79) fallback A | follow 1/4 shift 5.968745037989674 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 71/135 V_LM_sydney agree3
+[V_LM_sydney agree3] P(right) 0.89 (main 0.89) fallback A | follow 0/4 shift 4.656247857972358 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 72/135 V_LM_sydney alone0
+[V_LM_sydney alone0] P(right) 0.88 (main 0.87) fallback A | follow 4/4 shift 15.1874829379616 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 73/135 V_LM_taj agree1
+[V_LM_taj agree1] P(right) 0.55 (main 0.52) fallback I | follow 4/4 shift 9.625010488292855 | everyday through 1/3 source 0 | bridge still needed (1s)
+PROGRESS 74/135 V_LM_taj agree2
+[V_LM_taj agree2] P(right) 0.77 (main 0.75) fallback I | follow 4/4 shift 9.21873492276628 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 75/135 V_LM_taj agree3
+[V_LM_taj agree3] P(right) 0.82 (main 0.80) fallback I | follow 4/4 shift 8.656232347984858 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 76/135 V_LM_taj alone0
+[V_LM_taj alone0] P(right) 0.97 (main 0.96) fallback I | follow 4/4 shift 12.90620407549454 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 77/135 V_LM_taj disagree2
+[V_LM_taj disagree2] P(right) 0.22 (main 0.25) fallback C | follow 1/4 shift 7.999992983689349 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 78/135 V_LM_taj disagree3
+[V_LM_taj disagree3] P(right) 0.10 (main 0.10) fallback C | follow 0/4 shift 6.656243155510021 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 79/135 V_LP_ali agree1
+[V_LP_ali agree1] P(right) 0.89 (main 0.89) fallback L | follow 0/4 shift 2.3750010897122285 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 80/135 V_LP_ali agree2
+[V_LP_ali agree2] P(right) 0.85 (main 0.84) fallback L | follow 0/4 shift 1.3124998809358734 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 81/135 V_LP_ali agree3
+[V_LP_ali agree3] P(right) 0.81 (main 0.80) fallback L | follow 0/4 shift 1.0937502350047048 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 82/135 V_LP_ali alone0
+[V_LP_ali alone0] P(right) 0.95 (main 0.95) fallback L | follow 0/4 shift 5.187490890008772 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 83/135 V_LP_beyonce agree1
+[V_LP_beyonce agree1] P(right) 0.54 (main 0.55) fallback H | follow 1/4 shift 2.937500560545968 | everyday through 1/3 source 0 | bridge still needed (1s)
+PROGRESS 84/135 V_LP_beyonce agree2
+[V_LP_beyonce agree2] P(right) 0.77 (main 0.78) fallback H | follow 1/4 shift 2.5625001665735097 | everyday through 1/3 source 0 | bridge still needed (1s)
+PROGRESS 85/135 V_LP_beyonce agree3
+[V_LP_beyonce agree3] P(right) 0.78 (main 0.78) fallback H | follow 1/4 shift 2.1875020527213542 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 86/135 V_LP_beyonce alone0
+[V_LP_beyonce alone0] P(right) 0.53 (main 0.54) fallback H | follow 1/4 shift 6.062492185014614 | everyday through 1/3 source 0 | mixed (1s)
+PROGRESS 87/135 V_LP_hendrix agree1
+[V_LP_hendrix agree1] P(right) 0.51 (main 0.50) fallback L | follow 2/4 shift 4.124996634408753 | everyday through 0/2 source 0 | mixed (1s)
+PROGRESS 88/135 V_LP_hendrix agree2
+[V_LP_hendrix agree2] P(right) 0.56 (main 0.57) fallback S | follow 1/4 shift 3.7187459884976533 | everyday through 1/3 source 0 | mixed (1s)
+PROGRESS 89/135 V_LP_hendrix agree3
+[V_LP_hendrix agree3] P(right) 0.64 (main 0.67) fallback S | follow 1/4 shift 2.937497746636918 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 90/135 V_LP_hendrix alone0
+[V_LP_hendrix alone0] P(right) 0.77 (main 0.78) fallback L | follow 1/4 shift 6.374986931982661 | everyday through 1/2 source 0 | bridge still needed (1s)
+PROGRESS 91/135 V_LP_hendrix disagree2
+[V_LP_hendrix disagree2] P(right) 0.23 (main 0.23) fallback B | follow 0/4 shift 3.2812415474779653 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 92/135 V_LP_hendrix disagree3
+[V_LP_hendrix disagree3] P(right) 0.16 (main 0.16) fallback B | follow 0/4 shift 3.187491843833699 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 93/135 V_LP_kapoor agree1
+[V_LP_kapoor agree1] P(right) 0.40 (main 0.40) fallback B | follow 3/3 shift 6.74999870528074 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 94/135 V_LP_kapoor agree2
+[V_LP_kapoor agree2] P(right) 0.50 (main 0.49) fallback M | follow 4/4 shift 5.937495802250065 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 95/135 V_LP_kapoor agree3
+[V_LP_kapoor agree3] P(right) 0.61 (main 0.61) fallback M | follow 1/4 shift 4.562496312919301 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 96/135 V_LP_kapoor alone0
+[V_LP_kapoor alone0] P(right) 0.37 (main 0.37) fallback L | follow 4/4 shift 5.9999997454308005 | everyday through 0/2 source 0 | bridge still needed (1s)
+PROGRESS 97/135 V_LP_kapoor disagree2
+[V_LP_kapoor disagree2] P(right) 0.29 (main 0.30) fallback D | follow 3/4 shift 8.56249568410719 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 98/135 V_LP_kapoor disagree3
+[V_LP_kapoor disagree3] P(right) 0.30 (main 0.35) fallback D | follow 3/4 shift 8.249993967720902 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 99/135 V_LU_berklee agree1
+[V_LU_berklee agree1] P(right) 0.78 (main 0.79) fallback B | follow 3/4 shift 5.874998342814877 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 100/135 V_LU_berklee agree2
+[V_LU_berklee agree2] P(right) 0.82 (main 0.83) fallback B | follow 1/4 shift 5.593743616042615 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 101/135 V_LU_berklee agree3
+[V_LU_berklee agree3] P(right) 0.80 (main 0.82) fallback B | follow 1/4 shift 5.062494156510795 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 102/135 V_LU_berklee alone0
+[V_LU_berklee alone0] P(right) 0.90 (main 0.89) fallback B | follow 4/4 shift 12.156244041488659 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 103/135 V_LU_dalhousie agree1
+[V_LU_dalhousie agree1] P(right) 0.92 (main 0.92) fallback H | follow 0/4 shift 3.750000188790874 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 104/135 V_LU_dalhousie agree2
+[V_LU_dalhousie agree2] P(right) 0.91 (main 0.91) fallback H | follow 0/4 shift 3.0624987005893543 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 105/135 V_LU_dalhousie agree3
+[V_LU_dalhousie agree3] P(right) 0.92 (main 0.92) fallback H | follow 0/4 shift 2.749998041076464 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 106/135 V_LU_dalhousie alone0
+[V_LU_dalhousie alone0] P(right) 0.96 (main 0.96) fallback H | follow 1/4 shift 7.593743815972962 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 107/135 V_LU_hopkins agree1
+[V_LU_hopkins agree1] P(right) 0.85 (main 0.86) fallback B | follow 3/4 shift 6.749995067221109 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 108/135 V_LU_hopkins agree2
+[V_LU_hopkins agree2] P(right) 0.82 (main 0.82) fallback B | follow 3/4 shift 5.7499976912843085 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 109/135 V_LU_hopkins agree3
+[V_LU_hopkins agree3] P(right) 0.78 (main 0.76) fallback B | follow 3/4 shift 5.156246124517538 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 110/135 V_LU_hopkins alone0
+[V_LU_hopkins alone0] P(right) 0.98 (main 0.98) fallback B | follow 4/4 shift 13.906244214074581 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 111/135 L_colosseum hidden3
+[L_colosseum hidden3] says 'I' P(right) 0.84 onset 24 need 0.78 | bridge still needed (9s)
+PROGRESS 112/135 L_gates hidden3
+[L_gates hidden3] says 'W' P(right) 0.36 onset 24 need 0.59 | bridge still needed (9s)
+PROGRESS 113/135 L_mozart hidden3
+[L_mozart hidden3] says 'V' P(right) 0.06 onset 21 need 0.41 | mixed (8s)
+PROGRESS 114/135 L_york hidden3
+[L_york hidden3] says 'T' P(right) 0.75 onset 24 need 0.81 | bridge still needed (9s)
+PROGRESS 115/135 V_LM_acropolis hidden3
+[V_LM_acropolis hidden3] says 'G' P(right) 0.83 onset 24 need 0.88 | bridge still needed (8s)
+PROGRESS 116/135 V_LM_angkor hidden3
+[V_LM_angkor hidden3] says 'C' P(right) 0.70 onset 24 need 0.87 | bridge still needed (8s)
+PROGRESS 117/135 V_LM_brandenburg hidden3
+[V_LM_brandenburg hidden3] says 'B' P(right) 0.20 onset 15 need 0.82 | bridge still needed (5s)
+PROGRESS 118/135 V_LM_christ hidden3
+[V_LM_christ hidden3] says 'B' P(right) 0.95 onset 24 need 0.93 | bridge still needed (8s)
+PROGRESS 119/135 V_LM_eiffel hidden3
+[V_LM_eiffel hidden3] says 'F' P(right) 0.94 onset 24 need 0.43 | mixed (8s)
+PROGRESS 120/135 V_LM_fuji hidden3
+[V_LM_fuji hidden3] says 'J' P(right) 0.94 onset 24 need 0.92 | bridge still needed (8s)
+PROGRESS 121/135 V_LM_kremlin hidden3
+[V_LM_kremlin hidden3] says 'R' P(right) 0.78 onset 24 need 0.85 | bridge still needed (8s)
+PROGRESS 122/135 V_LM_machu hidden3
+[V_LM_machu hidden3] says 'P' P(right) 0.60 onset 24 need 0.46 | mixed (8s)
+PROGRESS 123/135 V_LM_petronas hidden3
+[V_LM_petronas hidden3] says 'M' P(right) 0.83 onset 24 need 0.79 | bridge still needed (8s)
+PROGRESS 124/135 V_LM_pisa hidden3
+[V_LM_pisa hidden3] says 'I' P(right) 0.92 onset 24 need 0.65 | bridge still needed (8s)
+PROGRESS 125/135 V_LM_pyramids hidden3
+[V_LM_pyramids hidden3] says 'E' P(right) 0.93 onset 24 need 0.95 | bridge still needed (8s)
+PROGRESS 126/135 V_LM_sydney hidden3
+[V_LM_sydney hidden3] says 'A' P(right) 0.63 onset 24 need 0.83 | bridge still needed (8s)
+PROGRESS 127/135 V_LM_taj hidden3
+[V_LM_taj hidden3] says 'I' P(right) 0.75 onset 24 need 0.72 | bridge still needed (8s)
+PROGRESS 128/135 V_LP_ali hidden3
+[V_LP_ali hidden3] says 'L' P(right) 0.85 onset 24 need 0.62 | bridge still needed (8s)
+PROGRESS 129/135 V_LP_beyonce hidden3
+[V_LP_beyonce hidden3] says 'H' P(right) 0.63 onset 24 need 0.54 | bridge still needed (8s)
+PROGRESS 130/135 V_LP_hendrix hidden3
+[V_LP_hendrix hidden3] says 'R' P(right) 0.24 onset 21 need 0.27 | mixed (7s)
+PROGRESS 131/135 V_LP_kapoor hidden3
+[V_LP_kapoor hidden3] says 'M' P(right) 0.55 onset 24 need 0.72 | bridge still needed (8s)
+PROGRESS 132/135 V_LU_berklee hidden3
+[V_LU_berklee hidden3] says 'B' P(right) 0.62 onset 24 need 0.73 | bridge still needed (8s)
+PROGRESS 133/135 V_LU_dalhousie hidden3
+[V_LU_dalhousie hidden3] says 'H' P(right) 0.85 onset 24 need 0.91 | bridge still needed (8s)
+PROGRESS 134/135 V_LU_hopkins hidden3
+[V_LU_hopkins hidden3] says 'B' P(right) 0.94 onset 24 need 0.93 | bridge still needed (8s)
+PROGRESS ALLDONE
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 5608.87it/s]
+PROGRESS 0/153 L_colosseum agree1
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_colosseum agree1] P(right) 0.29 (main 0.26) fallback I | follow 3/4 shift 4.312502042319607 | everyday through 1/3 source 0 | mixed (2s)
+PROGRESS 1/153 L_colosseum agree2
+[L_colosseum agree2] P(right) 0.98 (main 0.98) fallback I | follow 0/4 shift 3.81249715402238 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 2/153 L_colosseum agree3
+[L_colosseum agree3] P(right) 0.99 (main 0.99) fallback I | follow 0/4 shift 2.3749994153982135 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 3/153 L_colosseum disagree2
+[L_colosseum disagree2] P(right) 0.04 (main 0.04) fallback F | follow 0/4 shift 3.000005890618547 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 4/153 L_colosseum disagree3
+[L_colosseum disagree3] P(right) 0.03 (main 0.03) fallback F | follow 0/4 shift 2.2500028605760893 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 5/153 L_gates agree1
+[L_gates agree1] P(right) 0.51 (main 0.48) fallback B | follow 0/3 shift 2.750001485928722 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 6/153 L_gates agree2
+[L_gates agree2] P(right) 0.89 (main 0.88) fallback S | follow 0/4 shift 1.1249996299991365 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 7/153 L_gates agree3
+[L_gates agree3] P(right) 0.95 (main 0.96) fallback S | follow 0/4 shift 0.4687500327078662 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 8/153 L_gates disagree1
+[L_gates disagree1] P(right) 0.05 (main 0.04) fallback B | follow 0/4 shift 3.7187318190700083 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 9/153 L_gates disagree2
+[L_gates disagree2] P(right) 0.00 (main 0.00) fallback B | follow 0/4 shift 2.4687344910396627 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 10/153 L_gates disagree3
+[L_gates disagree3] P(right) 0.00 (main 0.00) fallback B | follow 0/4 shift 1.6874859200175054 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 11/153 L_mozart agree1
+[L_mozart agree1] P(right) 0.33 (main 0.35) fallback B | follow 0/3 shift 3.375000486966953 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 12/153 L_mozart agree2
+[L_mozart agree2] P(right) 0.90 (main 0.89) fallback S | follow 0/4 shift 2.062502138768945 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 13/153 L_mozart agree3
+[L_mozart agree3] P(right) 0.93 (main 0.94) fallback S | follow 0/4 shift 1.3750022972316456 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 14/153 L_mozart disagree1
+[L_mozart disagree1] P(right) 0.06 (main 0.08) fallback B | follow 0/4 shift 5.218743486502234 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 15/153 L_mozart disagree2
+[L_mozart disagree2] P(right) 0.01 (main 0.01) fallback B | follow 0/4 shift 4.406233131539733 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 16/153 L_mozart disagree3
+[L_mozart disagree3] P(right) 0.00 (main 0.00) fallback B | follow 0/4 shift 3.5937258890143675 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 17/153 L_york agree1
+[L_york agree1] P(right) 0.50 (main 0.48) fallback T | follow 0/4 shift 3.5000011221346945 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 18/153 L_york agree2
+[L_york agree2] P(right) 0.91 (main 0.91) fallback T | follow 0/4 shift 1.4062506546048676 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 19/153 L_york agree3
+[L_york agree3] P(right) 0.93 (main 0.93) fallback T | follow 0/4 shift 1.1875027552694521 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 20/153 L_york disagree1
+[L_york disagree1] P(right) 0.15 (main 0.15) fallback M | follow 0/4 shift 5.500000825572598 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 21/153 L_york disagree2
+[L_york disagree2] P(right) 0.00 (main 0.00) fallback M | follow 0/4 shift 1.1250050548121355 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 22/153 L_york disagree3
+[L_york disagree3] P(right) 0.00 (main 0.00) fallback M | follow 0/4 shift 1.031259128077227 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 23/153 V_LM_acropolis agree1
+[V_LM_acropolis agree1] P(right) 0.67 (main 0.67) fallback G | follow 1/4 shift 4.43749536941624 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 24/153 V_LM_acropolis agree2
+[V_LM_acropolis agree2] P(right) 0.92 (main 0.92) fallback G | follow 0/4 shift 2.37499861858159 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 25/153 V_LM_acropolis agree3
+[V_LM_acropolis agree3] P(right) 0.94 (main 0.94) fallback G | follow 0/4 shift 2.000000051801873 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 26/153 V_LM_angkor agree1
+[V_LM_angkor agree1] P(right) 0.64 (main 0.63) fallback C | follow 1/4 shift 3.874999205146438 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 27/153 V_LM_angkor agree2
+[V_LM_angkor agree2] P(right) 0.92 (main 0.92) fallback C | follow 0/4 shift 2.1250011472545625 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 28/153 V_LM_angkor agree3
+[V_LM_angkor agree3] P(right) 0.94 (main 0.94) fallback C | follow 0/4 shift 1.437501401784529 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 29/153 V_LM_angkor disagree2
+[V_LM_angkor disagree2] P(right) 0.10 (main 0.10) fallback T | follow 0/4 shift 5.656255292873554 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 30/153 V_LM_angkor disagree3
+[V_LM_angkor disagree3] P(right) 0.06 (main 0.05) fallback T | follow 0/4 shift 4.687502088992019 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 31/153 V_LM_brandenburg agree2
+[V_LM_brandenburg agree2] P(right) 0.86 (main 0.84) fallback G | follow 0/4 shift 1.9375030888031186 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 32/153 V_LM_brandenburg agree3
+[V_LM_brandenburg agree3] P(right) 0.86 (main 0.88) fallback G | follow 0/4 shift 1.6562531174947945 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 33/153 V_LM_brandenburg disagree1
+[V_LM_brandenburg disagree1] P(right) 0.04 (main 0.04) fallback A | follow 0/4 shift 3.374995745107464 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 34/153 V_LM_brandenburg disagree2
+[V_LM_brandenburg disagree2] P(right) 0.00 (main 0.00) fallback A | follow 0/4 shift 1.4687548749176562 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 35/153 V_LM_brandenburg disagree3
+[V_LM_brandenburg disagree3] P(right) 0.00 (main 0.00) fallback A | follow 0/4 shift 1.1875009480657948 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 36/153 V_LM_christ agree1
+[V_LM_christ agree1] P(right) 0.73 (main 0.70) fallback B | follow 2/4 shift 3.062501584146208 | everyday through 0/3 source 0 | bridge still needed (1s)
+PROGRESS 37/153 V_LM_christ agree2
+[V_LM_christ agree2] P(right) 0.92 (main 0.93) fallback B | follow 0/4 shift 0.5625196703660391 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 38/153 V_LM_christ agree3
+[V_LM_christ agree3] P(right) 0.95 (main 0.95) fallback B | follow 0/4 shift 0.4375077215875822 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 39/153 V_LM_christ disagree1
+[V_LM_christ disagree1] P(right) 0.22 (main 0.22) fallback A | follow 0/4 shift 2.9374944028284418 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 40/153 V_LM_christ disagree2
+[V_LM_christ disagree2] P(right) 0.01 (main 0.01) fallback A | follow 0/4 shift 1.1874988280424756 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 41/153 V_LM_christ disagree3
+[V_LM_christ disagree3] P(right) 0.00 (main 0.00) fallback A | follow 0/4 shift 0.8125024257068607 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 42/153 V_LM_eiffel agree1
+[V_LM_eiffel agree1] P(right) 0.84 (main 0.84) fallback F | follow 4/4 shift 6.499992019850848 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 43/153 V_LM_eiffel agree2
+[V_LM_eiffel agree2] P(right) 0.96 (main 0.96) fallback F | follow 0/4 shift 4.093750039015587 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 44/153 V_LM_eiffel agree3
+[V_LM_eiffel agree3] P(right) 0.97 (main 0.97) fallback F | follow 0/4 shift 3.812500940309741 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 45/153 V_LM_eiffel disagree2
+[V_LM_eiffel disagree2] P(right) 0.01 (main 0.01) fallback G | follow 0/4 shift 5.218741963800364 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 46/153 V_LM_eiffel disagree3
+[V_LM_eiffel disagree3] P(right) 0.00 (main 0.00) fallback G | follow 0/4 shift 4.124990448975298 | everyday through 0/3 source 0 | bridge still pulls (2s)
+PROGRESS 47/153 V_LM_fuji agree1
+[V_LM_fuji agree1] P(right) 0.69 (main 0.68) fallback J | follow 2/4 shift 3.937499770098202 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 48/153 V_LM_fuji agree2
+[V_LM_fuji agree2] P(right) 0.91 (main 0.92) fallback J | follow 0/4 shift 3.5625006334564877 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 49/153 V_LM_fuji agree3
+[V_LM_fuji agree3] P(right) 0.93 (main 0.93) fallback J | follow 0/4 shift 3.250000467750125 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 50/153 V_LM_fuji disagree1
+[V_LM_fuji disagree1] P(right) 0.24 (main 0.24) fallback C | follow 2/4 shift 7.687489751558841 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 51/153 V_LM_fuji disagree2
+[V_LM_fuji disagree2] P(right) 0.07 (main 0.07) fallback C | follow 0/4 shift 8.593733619434184 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 52/153 V_LM_fuji disagree3
+[V_LM_fuji disagree3] P(right) 0.04 (main 0.03) fallback C | follow 0/4 shift 8.156231538035403 | everyday through 0/3 source 0 | bridge still pulls (2s)
+PROGRESS 53/153 V_LM_kremlin agree1
+[V_LM_kremlin agree1] P(right) 0.74 (main 0.75) fallback R | follow 1/4 shift 4.124999386103553 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 54/153 V_LM_kremlin agree2
+[V_LM_kremlin agree2] P(right) 0.91 (main 0.92) fallback R | follow 0/4 shift 2.250005840313693 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 55/153 V_LM_kremlin agree3
+[V_LM_kremlin agree3] P(right) 0.94 (main 0.94) fallback R | follow 0/4 shift 1.8125077384708321 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 56/153 V_LM_kremlin disagree1
+[V_LM_kremlin disagree1] P(right) 0.15 (main 0.14) fallback P | follow 2/4 shift 6.062494080786541 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 57/153 V_LM_kremlin disagree2
+[V_LM_kremlin disagree2] P(right) 0.01 (main 0.01) fallback P | follow 0/4 shift 3.8750151944907705 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 58/153 V_LM_kremlin disagree3
+[V_LM_kremlin disagree3] P(right) 0.01 (main 0.01) fallback P | follow 0/4 shift 3.12502158461977 | everyday through 0/3 source 0 | bridge still pulls (2s)
+PROGRESS 59/153 V_LM_machu agree1
+[V_LM_machu agree1] P(right) 0.44 (main 0.42) fallback P | follow 3/4 shift 5.499995420550674 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 60/153 V_LM_machu agree2
+[V_LM_machu agree2] P(right) 0.92 (main 0.93) fallback P | follow 0/4 shift 3.5937546653090866 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 61/153 V_LM_machu agree3
+[V_LM_machu agree3] P(right) 0.94 (main 0.94) fallback P | follow 0/4 shift 3.2812563139278126 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 62/153 V_LM_machu disagree1
+[V_LM_machu disagree1] P(right) 0.03 (main 0.03) fallback C | follow 1/4 shift 6.812491691929685 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 63/153 V_LM_machu disagree2
+[V_LM_machu disagree2] P(right) 0.00 (main 0.00) fallback C | follow 0/4 shift 4.7812368722309895 | everyday through 0/3 source 0 | bridge still pulls (2s)
+PROGRESS 64/153 V_LM_machu disagree3
+[V_LM_machu disagree3] P(right) 0.00 (main 0.00) fallback C | follow 0/4 shift 4.0624845537699565 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 65/153 V_LM_petronas agree1
+[V_LM_petronas agree1] P(right) 0.55 (main 0.59) fallback M | follow 1/4 shift 2.124999526265868 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 66/153 V_LM_petronas agree2
+[V_LM_petronas agree2] P(right) 0.92 (main 0.93) fallback M | follow 0/4 shift 1.4687527141721617 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 67/153 V_LM_petronas agree3
+[V_LM_petronas agree3] P(right) 0.95 (main 0.95) fallback M | follow 0/4 shift 1.0937506526451801 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 68/153 V_LM_petronas disagree1
+[V_LM_petronas disagree1] P(right) 0.03 (main 0.03) fallback T | follow 0/4 shift 3.6250065548977606 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 69/153 V_LM_petronas disagree2
+[V_LM_petronas disagree2] P(right) 0.00 (main 0.00) fallback T | follow 0/4 shift 1.8125231560821997 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 70/153 V_LM_petronas disagree3
+[V_LM_petronas disagree3] P(right) 0.00 (main 0.00) fallback T | follow 0/4 shift 1.1250169516758577 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 71/153 V_LM_pisa agree1
+[V_LM_pisa agree1] P(right) 0.65 (main 0.62) fallback I | follow 4/4 shift 7.625007034790691 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 72/153 V_LM_pisa agree2
+[V_LM_pisa agree2] P(right) 0.96 (main 0.96) fallback I | follow 0/4 shift 4.9375021825296015 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 73/153 V_LM_pisa agree3
+[V_LM_pisa agree3] P(right) 0.99 (main 0.99) fallback I | follow 0/4 shift 4.187507078442282 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 74/153 V_LM_pisa disagree2
+[V_LM_pisa disagree2] P(right) 0.15 (main 0.17) fallback S | follow 0/4 shift 7.125000420628147 | everyday through 0/3 source 0 | bridge still pulls (2s)
+PROGRESS 75/153 V_LM_pisa disagree3
+[V_LM_pisa disagree3] P(right) 0.05 (main 0.05) fallback S | follow 0/4 shift 5.562505385263804 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 76/153 V_LM_pyramids agree1
+[V_LM_pyramids agree1] P(right) 0.39 (main 0.41) fallback E | follow 3/4 shift 4.624991845753327 | everyday through 0/3 source 1 | mixed (1s)
+PROGRESS 77/153 V_LM_pyramids agree2
+[V_LM_pyramids agree2] P(right) 0.88 (main 0.88) fallback E | follow 1/4 shift 4.31249250622329 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 78/153 V_LM_pyramids agree3
+[V_LM_pyramids agree3] P(right) 0.94 (main 0.93) fallback E | follow 0/4 shift 2.9374999434293683 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 79/153 V_LM_pyramids disagree2
+[V_LM_pyramids disagree2] P(right) 0.04 (main 0.04) fallback M | follow 0/4 shift 5.562486418279425 | everyday through 0/3 source 0 | bridge still pulls (2s)
+PROGRESS 80/153 V_LM_pyramids disagree3
+[V_LM_pyramids disagree3] P(right) 0.01 (main 0.01) fallback M | follow 0/4 shift 4.43748661030071 | everyday through 0/3 source 0 | bridge still pulls (2s)
+PROGRESS 81/153 V_LM_sydney agree1
+[V_LM_sydney agree1] P(right) 0.87 (main 0.87) fallback A | follow 0/4 shift 2.8124977728038627 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 82/153 V_LM_sydney agree2
+[V_LM_sydney agree2] P(right) 0.98 (main 0.98) fallback A | follow 0/4 shift 1.9375056511184157 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 83/153 V_LM_sydney agree3
+[V_LM_sydney agree3] P(right) 0.99 (main 0.99) fallback A | follow 0/4 shift 1.4375045873664782 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 84/153 V_LM_taj agree1
+[V_LM_taj agree1] P(right) 0.15 (main 0.16) fallback T | follow 3/4 shift 4.031273760039074 | everyday through 0/2 source 0 | mixed (1s)
+PROGRESS 85/153 V_LM_taj disagree1
+[V_LM_taj disagree1] P(right) 0.03 (main 0.03) fallback C | follow 0/4 shift 3.062505844463832 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 86/153 V_LM_taj disagree2
+[V_LM_taj disagree2] P(right) 0.01 (main 0.01) fallback C | follow 0/4 shift 1.7187553843643761 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 87/153 V_LM_taj disagree3
+[V_LM_taj disagree3] P(right) 0.01 (main 0.01) fallback C | follow 0/4 shift 1.4062545490326714 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 88/153 V_LP_ali agree1
+[V_LP_ali agree1] P(right) 0.85 (main 0.85) fallback L | follow 0/4 shift 1.187497671499138 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 89/153 V_LP_ali agree2
+[V_LP_ali agree2] P(right) 0.95 (main 0.95) fallback L | follow 0/4 shift 0.31249978346983953 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 90/153 V_LP_ali agree3
+[V_LP_ali agree3] P(right) 0.95 (main 0.96) fallback L | follow 0/4 shift 0.15625103106277471 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 91/153 V_LP_ali disagree2
+[V_LP_ali disagree2] P(right) 0.31 (main 0.29) fallback N | follow 0/4 shift 3.9374779982403187 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 92/153 V_LP_ali disagree3
+[V_LP_ali disagree3] P(right) 0.30 (main 0.26) fallback N | follow 0/4 shift 3.5624788205414353 | everyday through 0/3 source 0 | bridge still pulls (2s)
+PROGRESS 93/153 V_LP_beyonce agree1
+[V_LP_beyonce agree1] P(right) 0.73 (main 0.74) fallback H | follow 1/4 shift 1.9374995498924428 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 94/153 V_LP_beyonce agree2
+[V_LP_beyonce agree2] P(right) 0.93 (main 0.93) fallback H | follow 0/4 shift 0.8124980338824868 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 95/153 V_LP_beyonce agree3
+[V_LP_beyonce agree3] P(right) 0.96 (main 0.96) fallback H | follow 0/4 shift 0.6249955492705759 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 96/153 V_LP_beyonce disagree1
+[V_LP_beyonce disagree1] P(right) 0.08 (main 0.07) fallback D | follow 0/4 shift 5.124995086862379 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 97/153 V_LP_beyonce disagree2
+[V_LP_beyonce disagree2] P(right) 0.01 (main 0.01) fallback D | follow 0/4 shift 4.156240126710451 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 98/153 V_LP_beyonce disagree3
+[V_LP_beyonce disagree3] P(right) 0.00 (main 0.00) fallback D | follow 0/4 shift 3.031238145676286 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 99/153 V_LP_hendrix agree1
+[V_LP_hendrix agree1] P(right) 0.70 (main 0.73) fallback S | follow 1/4 shift 2.624996982437216 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 100/153 V_LP_hendrix agree2
+[V_LP_hendrix agree2] P(right) 0.95 (main 0.95) fallback S | follow 0/4 shift 1.6249988041837593 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 101/153 V_LP_hendrix agree3
+[V_LP_hendrix agree3] P(right) 0.97 (main 0.97) fallback S | follow 0/4 shift 1.1249995469716008 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 102/153 V_LP_hendrix disagree1
+[V_LP_hendrix disagree1] P(right) 0.05 (main 0.05) fallback B | follow 0/4 shift 2.6874948846904583 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 103/153 V_LP_hendrix disagree2
+[V_LP_hendrix disagree2] P(right) 0.01 (main 0.01) fallback B | follow 0/4 shift 1.8124943490609624 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 104/153 V_LP_hendrix disagree3
+[V_LP_hendrix disagree3] P(right) 0.00 (main 0.00) fallback B | follow 0/4 shift 1.187493656449294 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 105/153 V_LP_kapoor agree1
+[V_LP_kapoor agree1] P(right) 0.64 (main 0.65) fallback M | follow 0/4 shift 1.7500006751472543 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 106/153 V_LP_kapoor agree2
+[V_LP_kapoor agree2] P(right) 0.91 (main 0.91) fallback M | follow 0/4 shift 1.062498264998486 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 107/153 V_LP_kapoor agree3
+[V_LP_kapoor agree3] P(right) 0.96 (main 0.95) fallback M | follow 0/4 shift 0.8749982924053246 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 108/153 V_LP_kapoor disagree1
+[V_LP_kapoor disagree1] P(right) 0.07 (main 0.07) fallback D | follow 0/4 shift 3.4999988340344093 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 109/153 V_LP_kapoor disagree2
+[V_LP_kapoor disagree2] P(right) 0.01 (main 0.01) fallback D | follow 0/4 shift 2.6874956087480535 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 110/153 V_LP_kapoor disagree3
+[V_LP_kapoor disagree3] P(right) 0.00 (main 0.00) fallback D | follow 0/4 shift 2.56249462853106 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 111/153 V_LU_berklee agree1
+[V_LU_berklee agree1] P(right) 0.82 (main 0.84) fallback B | follow 0/4 shift 3.9999978593887455 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 112/153 V_LU_berklee agree2
+[V_LU_berklee agree2] P(right) 0.94 (main 0.95) fallback B | follow 0/4 shift 3.874996504501289 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 113/153 V_LU_berklee agree3
+[V_LU_berklee agree3] P(right) 0.97 (main 0.97) fallback B | follow 0/4 shift 3.3124924796775 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 114/153 V_LU_berklee disagree1
+[V_LU_berklee disagree1] P(right) 0.13 (main 0.13) fallback C | follow 0/4 shift 4.624998894027728 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 115/153 V_LU_berklee disagree2
+[V_LU_berklee disagree2] P(right) 0.04 (main 0.04) fallback C | follow 0/4 shift 4.499993088399636 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 116/153 V_LU_berklee disagree3
+[V_LU_berklee disagree3] P(right) 0.02 (main 0.02) fallback C | follow 0/4 shift 3.9999954501766797 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 117/153 V_LU_dalhousie agree1
+[V_LU_dalhousie agree1] P(right) 0.83 (main 0.83) fallback H | follow 0/4 shift 1.3749982818080215 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 118/153 V_LU_dalhousie agree2
+[V_LU_dalhousie agree2] P(right) 0.92 (main 0.92) fallback H | follow 0/4 shift 0.1874990698894532 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 119/153 V_LU_dalhousie agree3
+[V_LU_dalhousie agree3] P(right) 0.95 (main 0.95) fallback H | follow 0/4 shift 0.062499168218613566 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 120/153 V_LU_dalhousie disagree1
+[V_LU_dalhousie disagree1] P(right) 0.37 (main 0.32) fallback T | follow 0/4 shift 4.937496585976074 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 121/153 V_LU_dalhousie disagree2
+[V_LU_dalhousie disagree2] P(right) 0.01 (main 0.01) fallback T | follow 0/4 shift 2.999999696210981 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 122/153 V_LU_dalhousie disagree3
+[V_LU_dalhousie disagree3] P(right) 0.01 (main 0.01) fallback T | follow 0/4 shift 2.624996272799693 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 123/153 V_LU_hopkins agree1
+[V_LU_hopkins agree1] P(right) 0.77 (main 0.75) fallback B | follow 0/4 shift 3.9999978533611924 | everyday through 0/3 source 0 | mixed (1s)
+PROGRESS 124/153 V_LU_hopkins agree2
+[V_LU_hopkins agree2] P(right) 0.89 (main 0.88) fallback B | follow 0/4 shift 2.6874954512910216 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 125/153 V_LU_hopkins agree3
+[V_LU_hopkins agree3] P(right) 0.91 (main 0.92) fallback B | follow 0/4 shift 1.499995633913655 | everyday through 0/3 source 0 | bridge not needed (1s)
+PROGRESS 126/153 V_LU_hopkins disagree1
+[V_LU_hopkins disagree1] P(right) 0.31 (main 0.33) fallback C | follow 0/4 shift 5.749992974232174 | everyday through 0/3 source 0 | bridge still pulls (1s)
+PROGRESS 127/153 V_LU_hopkins disagree2
+[V_LU_hopkins disagree2] P(right) 0.02 (main 0.02) fallback C | follow 0/4 shift 3.593744292909417 | everyday through 0/3 source 0 | mixed (2s)
+PROGRESS 128/153 V_LU_hopkins disagree3
+[V_LU_hopkins disagree3] P(right) 0.01 (main 0.01) fallback C | follow 0/4 shift 2.156243902242964 | everyday through 0/3 source 0 | bridge not needed (2s)
+PROGRESS 129/153 L_colosseum hidden3
+[L_colosseum hidden3] says 'A' P(right) 0.40 onset 21 need 0.52 | bridge still needed (7s)
+PROGRESS 130/153 L_gates hidden3
+[L_gates hidden3] says 'W' P(right) 0.13 onset 18 need 0.51 | bridge still needed (6s)
+PROGRESS 131/153 L_mozart hidden3
+[L_mozart hidden3] says 'V' P(right) 0.09 onset 0 need nan | no early windows (1s)
+PROGRESS 132/153 L_york hidden3
+[L_york hidden3] says 'T' P(right) 0.35 onset 24 need 0.69 | bridge still needed (8s)
+PROGRESS 133/153 V_LM_acropolis hidden3
+[V_LM_acropolis hidden3] says 'A' P(right) 0.34 onset 18 need 0.66 | bridge still needed (6s)
+PROGRESS 134/153 V_LM_angkor hidden3
+[V_LM_angkor hidden3] says 'A' P(right) 0.33 onset 21 need 0.52 | bridge still needed (7s)
+PROGRESS 135/153 V_LM_brandenburg hidden3
+[V_LM_brandenburg hidden3] says 'B' P(right) 0.12 onset 18 need 0.76 | bridge still needed (6s)
+PROGRESS 136/153 V_LM_christ hidden3
+[V_LM_christ hidden3] says 'B' P(right) 0.46 onset 15 need 0.58 | bridge still needed (5s)
+PROGRESS 137/153 V_LM_eiffel hidden3
+[V_LM_eiffel hidden3] says 'F' P(right) 0.40 onset 3 need nan | no early windows (1s)
+PROGRESS 138/153 V_LM_fuji hidden3
+[V_LM_fuji hidden3] says 'J' P(right) 0.83 onset 24 need 0.90 | bridge still needed (8s)
+PROGRESS 139/153 V_LM_kremlin hidden3
+[V_LM_kremlin hidden3] says 'R' P(right) 0.33 onset 21 need 0.76 | bridge still needed (7s)
+PROGRESS 140/153 V_LM_machu hidden3
+[V_LM_machu hidden3] says 'C' P(right) 0.20 onset 3 need nan | no early windows (1s)
+PROGRESS 141/153 V_LM_petronas hidden3
+[V_LM_petronas hidden3] says 'A' P(right) 0.02 onset 6 need 0.14 | mixed (2s)
+PROGRESS 142/153 V_LM_pisa hidden3
+[V_LM_pisa hidden3] says 'I' P(right) 0.77 onset 24 need 0.64 | bridge still needed (8s)
+PROGRESS 143/153 V_LM_pyramids hidden3
+[V_LM_pyramids hidden3] says 'E' P(right) 0.62 onset 24 need 0.75 | bridge still needed (8s)
+PROGRESS 144/153 V_LM_sydney hidden3
+[V_LM_sydney hidden3] says 'A' P(right) 0.54 onset 21 need 0.49 | mixed (7s)
+PROGRESS 145/153 V_LM_taj hidden3
+[V_LM_taj hidden3] says 'A' P(right) 0.25 onset 3 need nan | no early windows (1s)
+PROGRESS 146/153 V_LP_ali hidden3
+[V_LP_ali hidden3] says 'L' P(right) 0.71 onset 24 need 0.79 | bridge still needed (8s)
+PROGRESS 147/153 V_LP_beyonce hidden3
+[V_LP_beyonce hidden3] says 'H' P(right) 0.46 onset 24 need 0.45 | mixed (8s)
+PROGRESS 148/153 V_LP_hendrix hidden3
+[V_LP_hendrix hidden3] says 'R' P(right) 0.11 onset 21 need 0.22 | mixed (7s)
+PROGRESS 149/153 V_LP_kapoor hidden3
+[V_LP_kapoor hidden3] says 'M' P(right) 0.38 onset 21 need 0.63 | bridge still needed (7s)
+PROGRESS 150/153 V_LU_berklee hidden3
+[V_LU_berklee hidden3] says 'B' P(right) 0.65 onset 24 need 0.54 | bridge still needed (8s)
+PROGRESS 151/153 V_LU_dalhousie hidden3
+[V_LU_dalhousie hidden3] says 'H' P(right) 0.49 onset 0 need nan | no early windows (1s)
+PROGRESS 152/153 V_LU_hopkins hidden3
+[V_LU_hopkins hidden3] says 'B' P(right) 0.75 onset 24 need 0.81 | bridge still needed (8s)
+PROGRESS ALLDONE
+SHARD DONE qwen35_4b 0/1
