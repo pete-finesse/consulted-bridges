@@ -209,3 +209,5 @@ ROUND2 = dict([
                  "Hugh Jackman", "Australia", "6", ["India", "Pakistan"]),
 ])
 SPECS.update(ROUND2)
+# Screened on Qwen3.6-27B (results/counts_r2_qwen36_27b/): all six Austria and all five Australia questions are
+# consulted (0.59-0.94); none of the others pass (mostly the edit never reaches the bridge).

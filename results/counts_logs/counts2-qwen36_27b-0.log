@@ -1,0 +1,32 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  54%|█████▎    | 457/851 [00:00<00:00, 4547.13it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 5876.95it/s]
+PROGRESS 0/13 starting N_BP_haydn
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[N_BP_haydn] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 1/13 starting N_BP_strauss
+[N_BP_strauss] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 2/13 starting N_BP_lamarr
+[N_BP_lamarr] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 3/13 starting N_BP_minogue
+[N_BP_minogue] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 4/13 starting N_BP_irwin
+[N_BP_irwin] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 5/13 starting N_BP_hemsworth
+[N_BP_hemsworth] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 6/13 starting N_BP_coelho
+[N_BP_coelho] ANSWER FROM THE START: removing the answer already kills it in layers 6–17, before any window where the bridge could act first
+PROGRESS 7/13 starting N_BP_francis
+[N_BP_francis] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 8/13 starting N_BP_malala
+[N_BP_malala] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 9/13 starting N_BP_herge_regions
+[N_BP_herge_regions] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 10/13 starting N_BP_corbusier
+[N_BP_corbusier] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 11/13 starting N_BP_srk
+[N_BP_srk] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 12/13 starting T_place_states_austria
+[T_place_states_austria] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 13/13 ALLDONE
+SHARD DONE qwen36_27b 0/2
