@@ -294,21 +294,21 @@
     <p class="lede">Multi-agent debate is increasingly used to reach consensus among language-model agents, yet agents often yield to a unanimous majority. When it is an agent's turn to answer, does its answer still come from its own reasoning, or does it take the group's?</p>
     <figure class="hero-q vote" aria-label="A group vote where three agents give the same wrong answer and the fourth goes along">
       <div class="transcript">
-        <div class="line"><span class="who">Question</span><span>What letter does the name of the country where the Colosseum is located start with?</span></div>
-        <div class="line peer"><span class="who">Agent 2</span><span class="p">F</span></div>
-        <div class="line peer"><span class="who">Agent 3</span><span class="p">F</span></div>
-        <div class="line peer"><span class="who">Agent 4</span><span class="p">F</span></div>
-        <div class="line me"><span class="who">Agent 1</span><span class="p">F</span></div>
+        <div class="line"><span class="who">Question</span><span>What color is the planet fourth from the sun?</span></div>
+        <div class="line peer"><span class="who">Agent 2</span><span class="p">orange</span></div>
+        <div class="line peer"><span class="who">Agent 3</span><span class="p">orange</span></div>
+        <div class="line peer"><span class="who">Agent 4</span><span class="p">orange</span></div>
+        <div class="line me"><span class="who">Agent 1</span><span class="p">orange</span></div>
         <p class="note">Agent 1 goes along with the group.</p>
       </div>
       <div class="insides">
         <span class="tag">Same answer, two possible stories inside Agent 1</span>
-        <div class="inside dissent"><h4>It reasoned, then yielded</h4><p>It worked out the right answer, <span class="a">I</span> for Italy, and said <span class="p">F</span> anyway. Its own reasoning is still there, pushing back.</p></div>
-        <div class="inside copy"><h4>It copied</h4><p>It took <span class="p">F</span> from the others. Its own reasoning played no part in the answer.</p></div>
+        <div class="inside dissent"><h4>It reasoned, then yielded</h4><p>It worked out the right answer, <span class="a">red</span> for Mars, and said <span class="p">orange</span> anyway. Its own reasoning is still there, pushing back.</p></div>
+        <div class="inside copy"><h4>It copied</h4><p>It took <span class="p">orange</span> from the others. Its own reasoning played no part in the answer.</p></div>
         <p class="note">From the outside the two look identical. This project asks which one is happening.</p>
       </div>
     </figure>
-    <p class="thesis">We answer it from inside the model. We use questions with a hidden middle step that the model must work out for itself (here, <span class="b">Italy</span>). We find that step inside the model, <b>remove it</b>, and watch whether the agent's answer changes, first when it is alone and then when other agents agree or disagree with it.</p>
+    <p class="thesis">We answer it from inside the model. We use questions with a hidden middle step that the model must work out for itself (here, <span class="b">Mars</span>). We find that step inside the model, <b>remove it</b>, and watch whether the agent's answer changes, first when it is alone and then when other agents agree or disagree with it.</p>
     <div class="facts" aria-label="Study at a glance">
       <div class="fact"><b>2 models</b><span>Qwen3.6-27B and Qwen3.5-4B</span></div>
       <div class="fact"><b>49 questions</b><span>that pass four requirements</span></div>
@@ -451,17 +451,17 @@
     </div>
     <div class="panel">
       <h3>Measuring the answer: probabilities, not just words</h3>
-      <p>The paper checks <b>which answer</b> the agent writes. We read <b>how sure</b> the model is of each possible answer: before it writes anything, it gives every word a probability of coming next. We write that as <span class="mono">P(“I”)</span>, the probability that the next word is “I”.</p>
+      <p>The paper checks <b>which answer</b> the agent writes. We read <b>how sure</b> the model is of each possible answer: before it writes anything, it gives every word a probability of coming next. We write that as <span class="mono">P(“red”)</span>, the probability that the next word is “red”.</p>
       <div class="two">
         <div class="col">
-          <span class="tag">Qwen3.5-4B, the Colosseum letter question</span>
+          <span class="tag">Sketch · the planet question</span>
           <div class="bars">
-            <div class="bar"><span class="lab">P(“I”), as normal</span><span class="tr"><i style="--v:.98"></i></span><span class="val">0.98</span></div>
-            <div class="bar"><span class="lab">P(“I”), Italy removed</span><span class="tr"><i style="--v:0"></i></span><span class="val">0.00</span></div>
+            <div class="bar"><span class="lab">P(“red”), as normal</span><span class="tr"><i style="--v:.95"></i></span><span class="val">high</span></div>
+            <div class="bar"><span class="lab">P(“red”), Mars removed</span><span class="tr"><i style="--v:.05"></i></span><span class="val">low</span></div>
           </div>
         </div>
         <div class="col">
-          <p class="note">Probabilities catch effects that words miss. Removing a word can halve the model's confidence (0.99 to 0.50 for Federer's birth-city letter on Qwen3.6-27B) without changing what it writes. In the group setting, they also let us weigh the pull toward the right answer against the pull toward the peers' answer.</p>
+          <p class="note">Probabilities show effects that the written answer hides. Removing a word can make the model much less sure of its answer while the word it writes stays the same. They also let us compare how strongly the model leans toward two different answers, which we need once other agents are involved.</p>
         </div>
       </div>
     </div>
@@ -481,65 +481,51 @@
       <article class="req">
         <div class="req-head"><span class="req-num">1</span><div><h3>The model gets it right on its own</h3><p>It knows both facts and can chain them. If it can't answer alone, there is no reasoning of its own to protect or abandon.</p></div></div>
         <div class="cases">
-          <div class="case pass"><span class="tag">Passes · Colosseum, 27B</span>
-            <div class="flow"><span class="chip">Colosseum?</span><span class="arrow">→</span><span class="chip br">Italy</span><span class="arrow">·</span><span class="chip">Italy's letter?</span><span class="arrow">→</span><span class="chip an">I</span></div>
-            <p class="res">Both single steps right, and the full question too (P = 1.00).</p></div>
-          <div class="case fail"><span class="tag">Fails · Mishima's birth-city letter, 4B</span>
-            <div class="flow"><span class="chip">Mishima's city?</span><span class="arrow">→</span><span class="chip br">Tokyo</span><span class="arrow">·</span><span class="chip">Tokyo's letter?</span><span class="arrow">→</span><span class="chip an">T</span></div>
-            <p class="res">Both steps right, but the full question gets “Y”. It knows the facts and can't chain them.</p></div>
+          <div class="case pass"><span class="tag">Passes · the planet question</span>
+            <div class="flow"><span class="chip">planet fourth from the sun?</span><span class="arrow">→</span><span class="chip br">Mars</span><span class="arrow">·</span><span class="chip">color of Mars?</span><span class="arrow">→</span><span class="chip an">red</span></div>
+            <p class="res">It knows each step, and puts them together to answer the full question.</p></div>
+          <div class="case fail"><span class="tag">Fails · spelling a hidden word backwards</span>
+            <p class="cq">“What word do you get when you spell the name of the animal that barks backwards?”</p>
+            <div class="flow"><span class="chip">animal that barks?</span><span class="arrow">→</span><span class="chip br">dog</span><span class="arrow">·</span><span class="chip">dog backwards?</span><span class="arrow">→</span><span class="chip an">god</span></div>
+            <p class="res">Each step on its own is easy, but the model can't do both in one go, so it never reaches “god”.</p></div>
         </div>
       </article>
 
       <article class="req">
         <div class="req-head"><span class="req-num">2</span><div><h3>The only road to the answer goes through the bridge</h3><p>If the question hands the model a shortcut, removing the bridge changes nothing and we learn nothing about the bridge.</p></div></div>
         <div class="cases">
-          <div class="case pass"><span class="tag">Passes · Colosseum, 4B</span>
-            <div class="flow"><span class="chip">the Colosseum</span><span class="arrow">→</span><span class="chip br cut">Italy</span><span class="arrow">→</span><span class="chip an">I ?</span></div>
-            <div class="bars">
-              <div class="bar"><span class="lab">P(“I”), no edit</span><span class="tr"><i style="--v:.98"></i></span><span class="val">0.98</span></div>
-              <div class="bar"><span class="lab">Italy removed</span><span class="tr"><i style="--v:0"></i></span><span class="val">0.00</span></div>
-            </div>
-            <p class="res">Without Italy there is no way to the letter.</p></div>
-          <div class="case fail"><span class="tag">Fails · trick-or-treat month, 4B</span>
+          <div class="case pass"><span class="tag">Passes · the planet question</span>
+            <div class="flow"><span class="chip">planet fourth from the sun</span><span class="arrow">→</span><span class="chip br cut">Mars</span><span class="arrow">→</span><span class="chip an">red ?</span></div>
+            <p class="res">Nothing in “planet fourth from the sun” says red. Without Mars there is no way to the answer.</p></div>
+          <div class="case fail"><span class="tag">Fails · a shortcut in the question</span>
             <p class="cq">“In which month is the holiday when children go trick-or-treating?”</p>
             <div class="flow"><span class="chip">trick-or-treating</span><span class="arrow">→</span><span class="chip br cut">Halloween</span><span class="arrow">→</span><span class="chip an">October</span><span class="short">↺ shortcut</span></div>
-            <div class="bars">
-              <div class="bar"><span class="lab">P(“October”), no edit</span><span class="tr"><i style="--v:.99"></i></span><span class="val">0.99</span></div>
-              <div class="bar"><span class="lab">Halloween removed</span><span class="tr"><i style="--v:.98"></i></span><span class="val">0.98</span></div>
-            </div>
-            <p class="res">“Trick-or-treating” already says October. The bridge is a bystander.</p></div>
+            <p class="res">“Trick-or-treating” already points to October, so removing Halloween would change nothing. The bridge is a bystander.</p></div>
         </div>
       </article>
 
       <article class="req">
-        <div class="req-head"><span class="req-num">3</span><div><h3>The answer must not be a lookalike of the bridge</h3><p>When the answer means nearly the same as the bridge (Salzburg and Austria, Toronto and Canada), their directions overlap. Removing the bridge then also removes part of the answer itself, and the answer drops even if the bridge was never used. The answer should share nothing with the bridge except the step that connects them.</p></div></div>
+        <div class="req-head"><span class="req-num">3</span><div><h3>The answer must not be a lookalike of the bridge</h3><p>When the answer is closely tied to the bridge (Salzburg and Austria, Mars and red), their directions overlap. Removing the bridge then also removes part of the answer itself, and the answer drops even if the bridge was never used. The answer should share nothing with the bridge except the step that connects them.</p></div></div>
         <div class="cases">
-          <div class="case pass"><span class="tag">Passes · Colosseum letter, 4B</span>
-            <p class="cq">Italy → <b>I</b>. A letter means nothing about countries.</p>
-            <div class="bars">
-              <div class="bar"><span class="lab">remove Italy</span><span class="tr"><i class="br" style="--v:1"></i></span><span class="val">1.00</span></div>
-              <div class="bar"><span class="lab">remove Italy, keep what it shares with “I”</span><span class="tr"><i class="br" style="--v:1"></i></span><span class="val">1.00</span></div>
-            </div>
-            <p class="res">The whole effect is Italy's own.</p></div>
-          <div class="case fail"><span class="tag">Fails · York University's country, 4B</span>
-            <p class="cq">York University → Toronto → <b>Canada</b>.</p>
-            <div class="bars">
-              <div class="bar"><span class="lab">remove Toronto</span><span class="tr"><i class="br" style="--v:.65"></i></span><span class="val">0.65</span></div>
-              <div class="bar"><span class="lab">remove Toronto, keep what it shares with “Canada”</span><span class="tr"><i class="br" style="--v:.01"></i></span><span class="val">0.01</span></div>
-            </div>
-            <p class="res">The whole effect came from the part Toronto shares with Canada. Mozart's country fails the same way on the 27B (0.00).</p></div>
+          <div class="case pass"><span class="tag">Passes · ask for the letter instead</span>
+            <p class="cq">“What letter does the name of the planet fourth from the sun start with?”</p>
+            <div class="flow"><span class="chip">planet fourth from the sun</span><span class="arrow">→</span><span class="chip br">Mars</span><span class="arrow">→</span><span class="chip an">M</span></div>
+            <p class="res">A letter means nothing about planets. If removing Mars changes the answer, it is because the model needed Mars.</p></div>
+          <div class="case fail"><span class="tag">Fails · the planet's color</span>
+            <div class="flow"><span class="chip">planet fourth from the sun</span><span class="arrow">→</span><span class="chip br">Mars</span><span class="arrow">→</span><span class="chip an">red</span></div>
+            <p class="res">Mars is “the Red Planet”. Inside the model, Mars and red sit close together, so removing Mars also removes part of “red” itself. The answer would drop even if Mars was never used.</p></div>
         </div>
       </article>
 
       <article class="req">
-        <div class="req-head"><span class="req-num">4</span><div><h3>The group can give a wrong answer of the same kind</h3><p>The peers' wrong answer has to be the same sort of thing as the right one: one letter in place of another. Then the “agree” and “disagree” prompts differ in a single token, and we can weigh the model's pull toward the right letter against its pull toward the peers' letter on the same scale. A plausible wrong letter (G, the first letter of neighbouring Germany, against France's F) also makes giving in a real option.</p></div></div>
+        <div class="req-head"><span class="req-num">4</span><div><h3>The group can give a wrong answer of the same kind</h3><p>The peers' wrong answer has to be the same sort of thing as the right one: one color in place of another, one letter in place of another. Then the “agree” and “disagree” prompts differ in a single word, and we can weigh the model's pull toward the right answer against its pull toward the peers' answer on the same scale. A plausible wrong answer also makes giving in a real option.</p></div></div>
         <div class="cases">
-          <div class="case pass"><span class="tag">Passes · letter question</span>
-            <div class="flow"><span class="chip">peers agree:</span><span class="chip an">F F F</span><span class="arrow">vs</span><span class="chip">peers disagree:</span><span class="chip pe">G G G</span></div>
-            <p class="res">One token changes. P(F) and P(G) are directly comparable.</p></div>
+          <div class="case pass"><span class="tag">Passes · another color</span>
+            <div class="flow"><span class="chip">peers agree:</span><span class="chip an">red red red</span><span class="arrow">vs</span><span class="chip">peers disagree:</span><span class="chip pe">orange orange orange</span></div>
+            <p class="res">One word changes. P(“red”) and P(“orange”) are directly comparable.</p></div>
           <div class="case fail"><span class="tag">Fails · a different kind of answer</span>
-            <div class="flow"><span class="chip">right:</span><span class="chip an">F</span><span class="arrow">vs</span><span class="chip">peers:</span><span class="chip pe">Paris</span></div>
-            <p class="res">A city against a letter: different forms and lengths, so there is no single number for which way the model leans, and copying “Paris” isn't a real option for a letter question.</p></div>
+            <div class="flow"><span class="chip">right:</span><span class="chip an">red</span><span class="arrow">vs</span><span class="chip">peers:</span><span class="chip pe">Jupiter</span></div>
+            <p class="res">A planet against a color: they aren't answers to the same question, so there is no single number for which way the model leans, and copying “Jupiter” isn't a real option.</p></div>
         </div>
       </article>
     </div>
