@@ -575,15 +575,15 @@
         <div class="story a-side">
           <span class="tag">Story A · Silent dissent</span>
           <h4>It still thinks Austria, but says France</h4>
-          <div class="inside" aria-label="Inside the model in Story A"><span class="ins-l">Own thought</span><div class="ins-r"><span class="ins-chain"><span class="chip br">Salzburg</span><span class="arrow">→</span><span class="chip an">Austria</span></span><span class="ins-n">still pulling</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">pulls harder</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b></div></div>
+          <div class="inside" aria-label="Inside the model in Story A"><span class="ins-l">Own thought</span><div class="ins-r"><span class="ins-chain"><span class="chip br">Salzburg</span><span class="arrow">→</span><span class="chip an">Austria</span></span><span class="ins-n">still weighs in for Austria</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">outweighs it</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b></div></div>
         </div>
         <div class="story b-side">
           <span class="tag">Story B · Plain copying</span>
           <h4>It has stopped thinking Austria</h4>
-          <div class="inside" aria-label="Inside the model in Story B"><span class="ins-l">Own thought</span><div class="ins-r"><span class="chip br">Salzburg</span><span class="ins-n">lit up, but leads nowhere</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">the only pull</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b></div></div>
+          <div class="inside" aria-label="Inside the model in Story B"><span class="ins-l">Own thought</span><div class="ins-r"><span class="chip br">Salzburg</span><span class="ins-n">lit up, but carries no weight</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">the only weight</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b></div></div>
         </div>
       </div>
-      <p class="note">Both say France, and in both Salzburg is readable. The difference is whether anything inside still pulls toward Austria.</p>
+      <p class="note">Both say France, and in both Salzburg is readable. The difference is whether Salzburg still carries any weight in the answer.</p>
       <p class="punch">Reading can't tell these apart.</p>
     </figure>
   </section>
@@ -600,19 +600,19 @@
       <p>Silent Dissent looks only at which answer the agent gives. But a language model predicts its next token by putting a probability on every option, and the answer it writes is just the most likely one. We read those probabilities directly, which gives a much finer picture of how a removal affects the model than the written answer alone.</p>
     </div>
     <div class="col">
-      <p>Back to the Mozart example. The two stories differ only in whether Salzburg is pulling, so we remove Salzburg and read the probabilities. If Salzburg was pulling, the chance of Austria falls, even though the agent still says France. If it wasn't, nothing moves.</p>
+      <p>Back to the Mozart example. The two stories differ only in whether Salzburg still carries weight in the answer, so we remove Salzburg and read the probabilities. If it did, the chance of Austria falls, even though the agent still says France. If it didn't, nothing moves.</p>
     </div>
     <figure class="panel">
       <div class="stories">
         <div class="story a-side">
           <span class="tag">Story A · Salzburg removed</span>
-          <div class="inside" aria-label="Story A after removal"><span class="ins-l">Own thought</span><div class="ins-r"><span class="ins-chain"><span class="chip x">Salzburg</span><span class="arrow">→</span><span class="chip x">Austria</span></span><span class="ins-n">pull gone</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">nothing pulls back</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b><span class="ins-n">still</span></div></div>
+          <div class="inside" aria-label="Story A after removal"><span class="ins-l">Own thought</span><div class="ins-r"><span class="ins-chain"><span class="chip x">Salzburg</span><span class="arrow">→</span><span class="chip x">Austria</span></span><span class="ins-n">its weight is gone</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">nothing weighs against it</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b><span class="ins-n">still</span></div></div>
           <div class="prs"><div class="pr"><span class="lab">Original P(“Austria”)</span><span class="tr"><i style="--v:0.3"></i></span><span class="val">30%</span></div><div class="pr"><span class="lab">Edited P(“Austria”)</span><span class="tr"><i class="cut" style="--v:0.05"></i></span><span class="val">5%</span></div></div>
           <p><b>Same written answer, but the probability moved.</b></p>
         </div>
         <div class="story b-side">
           <span class="tag">Story B · Salzburg removed</span>
-          <div class="inside" aria-label="Story B after removal"><span class="ins-l">Own thought</span><div class="ins-r"><span class="chip x">Salzburg</span><span class="ins-n">was not pulling anyway</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">the only pull</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b><span class="ins-n">still</span></div></div>
+          <div class="inside" aria-label="Story B after removal"><span class="ins-l">Own thought</span><div class="ins-r"><span class="chip x">Salzburg</span><span class="ins-n">carried no weight anyway</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">the only weight</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b><span class="ins-n">still</span></div></div>
           <div class="prs"><div class="pr"><span class="lab">Original P(“Austria”)</span><span class="tr"><i style="--v:0.3"></i></span><span class="val">30%</span></div><div class="pr"><span class="lab">Edited P(“Austria”)</span><span class="tr"><i class="cut" style="--v:0.3"></i></span><span class="val">30%</span></div></div>
           <p><b>Nothing moves.</b></p>
         </div>
