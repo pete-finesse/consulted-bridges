@@ -494,9 +494,10 @@
       <article class="req">
         <div class="req-head"><span class="req-num">2</span><div><h3>The only road to the answer goes through the bridge</h3><p>If the question hands the model a shortcut, removing the bridge changes nothing and we learn nothing about the bridge.</p></div></div>
         <div class="cases">
-          <div class="case pass"><span class="tag">Passes · the planet question</span>
-            <div class="flow"><span class="chip">planet fourth from the sun</span><span class="arrow">→</span><span class="chip br cut">Mars</span><span class="arrow">→</span><span class="chip an">red ?</span></div>
-            <p class="res">Nothing in “planet fourth from the sun” says red. Without Mars there is no way to the answer.</p></div>
+          <div class="case pass"><span class="tag">Passes · legs of the web spinners</span>
+            <p class="cq">“How many legs do the animals that spin webs have?”</p>
+            <div class="flow"><span class="chip">animals that spin webs</span><span class="arrow">→</span><span class="chip br cut">spider</span><span class="arrow">→</span><span class="chip an">eight ?</span></div>
+            <p class="res">Nothing about spinning webs says eight. Without “spider” there is no way to the answer.</p></div>
           <div class="case fail"><span class="tag">Fails · a shortcut in the question</span>
             <p class="cq">“In which month is the holiday when children go trick-or-treating?”</p>
             <div class="flow"><span class="chip">trick-or-treating</span><span class="arrow">→</span><span class="chip br cut">Halloween</span><span class="arrow">→</span><span class="chip an">October</span><span class="short">↺ shortcut</span></div>
@@ -518,14 +519,15 @@
       </article>
 
       <article class="req">
-        <div class="req-head"><span class="req-num">4</span><div><h3>The group can give a wrong answer of the same kind</h3><p>The peers' wrong answer has to be the same sort of thing as the right one: one color in place of another, one letter in place of another. Then the “agree” and “disagree” prompts differ in a single word, and we can weigh the model's pull toward the right answer against its pull toward the peers' answer on the same scale. A plausible wrong answer also makes giving in a real option.</p></div></div>
+        <div class="req-head"><span class="req-num">4</span><div><h3>The group can give a wrong answer of the same kind</h3><p>The peers' wrong answer has to be the same sort of thing as the right one: one number in place of another, one color in place of another. Then the “agree” and “disagree” prompts differ in a single word, and we can weigh the model's pull toward the right answer against its pull toward the peers' answer on the same scale. A plausible wrong answer also makes giving in a real option.</p></div></div>
         <div class="cases">
-          <div class="case pass"><span class="tag">Passes · another color</span>
-            <div class="flow"><span class="chip">peers agree:</span><span class="chip an">red red red</span><span class="arrow">vs</span><span class="chip">peers disagree:</span><span class="chip pe">orange orange orange</span></div>
-            <p class="res">One word changes. P(“red”) and P(“orange”) are directly comparable.</p></div>
+          <div class="case pass"><span class="tag">Passes · another number</span>
+            <p class="cq">Spider legs: peers agree with “eight”, or all say “six”.</p>
+            <div class="flow"><span class="chip">peers agree:</span><span class="chip an">eight eight eight</span><span class="arrow">vs</span><span class="chip">peers disagree:</span><span class="chip pe">six six six</span></div>
+            <p class="res">One word changes, and six is believable (insects have six). P(“eight”) and P(“six”) are directly comparable.</p></div>
           <div class="case fail"><span class="tag">Fails · a different kind of answer</span>
-            <div class="flow"><span class="chip">right:</span><span class="chip an">red</span><span class="arrow">vs</span><span class="chip">peers:</span><span class="chip pe">Jupiter</span></div>
-            <p class="res">A planet against a color: they aren't answers to the same question, so there is no single number for which way the model leans, and copying “Jupiter” isn't a real option.</p></div>
+            <div class="flow"><span class="chip">right:</span><span class="chip an">eight</span><span class="arrow">vs</span><span class="chip">peers:</span><span class="chip pe">insects</span></div>
+            <p class="res">A word against a number: they don't answer the question the same way, so there is no single number for which way the model leans, and copying “insects” isn't a real option.</p></div>
         </div>
       </article>
     </div>
