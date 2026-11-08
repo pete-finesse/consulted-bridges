@@ -463,7 +463,7 @@
     </div>
     <div class="facts" aria-label="Study at a glance">
       <div class="fact"><b>2 models</b><span>Qwen3.6-27B and Qwen3.5-4B</span></div>
-      <div class="fact"><b>49 questions</b><span>that pass four requirements</span></div>
+      <div class="fact"><b>49 questions</b><span>that pass our checks</span></div>
       <div class="fact"><b>706 prompts</b><span>alone, with agreeing peers, with disagreeing peers</span></div>
       <div class="fact"><b>One edit</b><span>remove the hidden step, measure the change</span></div>
     </div>
@@ -665,74 +665,74 @@
     </div>
   </section>
 
-  <!-- 4 REQUIREMENTS -->
-  <section class="chapter" id="requirements">
+
+  <!-- 5 QUESTION TYPE -->
+  <section class="chapter" id="checks">
     <div class="ch-head">
-      <span class="ch-num">4 · What a question must satisfy</span>
-      <h2>Four requirements</h2>
-      <p>The first three are about the model on its own. The fourth is about the group.</p>
+      <span class="ch-num">4 · Finding questions</span>
+      <h2>Every question is tested before it is used</h2>
+      <p>For what we see in the group setting to mean anything, we first need questions where we know the answer depends on the bridge, and where the bridge and the answer don't overlap. So every question is tested on its own, with one tool, before it goes anywhere near a group.</p>
     </div>
-    <div class="reqs">
-      <article class="req">
-        <div class="req-head"><span class="req-num">1</span><div><h3>The model gets it right on its own</h3><p>It knows both facts and can chain them. If it can't answer alone, there is no reasoning of its own to protect or abandon.</p></div></div>
-        <div class="cases">
-          <div class="case pass"><span class="tag">Passes · the planet question</span>
-            <div class="flow"><span class="chip">planet fourth from the sun?</span><span class="arrow">→</span><span class="chip br">Mars</span><span class="arrow">·</span><span class="chip">color of Mars?</span><span class="arrow">→</span><span class="chip an">red</span></div>
-            <p class="res">It knows each step, and puts them together to answer the full question.</p></div>
-          <div class="case fail"><span class="tag">Fails · spelling a hidden word backwards</span>
-            <p class="cq">“What word do you get when you spell the name of the animal that barks backwards?”</p>
-            <div class="flow"><span class="chip">animal that barks?</span><span class="arrow">→</span><span class="chip br">dog</span><span class="arrow">·</span><span class="chip">dog backwards?</span><span class="arrow">→</span><span class="chip an">god</span></div>
-            <p class="res">Each step on its own is easy, but the model can't do both in one go, so it never reaches “god”.</p></div>
+    <div class="panel">
+      <h3>The tool: remove one word's direction, a few layers at a time</h3>
+      <div class="two">
+        <div class="tl" style="display:grid;gap:6px">
+          <span class="tag">Which layers (Qwen3.5-4B has 32)</span>
+          <div class="strip" id="strip" role="img" aria-label="32 layers, layers 15 to 20 edited"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="win"></span><span class="win"></span><span class="win"></span><span class="win"></span><span class="win"></span><span class="win"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="axis"><span>layer 0</span><span>one window: layers 15–20</span><span>layer 31</span></div>
         </div>
-      </article>
-
-      <article class="req">
-        <div class="req-head"><span class="req-num">2</span><div><h3>The only road to the answer goes through the bridge</h3><p>If the question hands the model a shortcut, removing the bridge changes nothing and we learn nothing about the bridge.</p></div></div>
-        <div class="cases">
-          <div class="case pass"><span class="tag">Passes · legs of the web spinners</span>
-            <p class="cq">“How many legs do the animals that spin webs have?”</p>
-            <div class="flow"><span class="chip">animals that spin webs</span><span class="arrow">→</span><span class="chip br cut">spider</span><span class="arrow">→</span><span class="chip an">eight ?</span></div>
-            <p class="res">Nothing about spinning webs says eight. Without “spider” there is no way to the answer.</p></div>
-          <div class="case fail"><span class="tag">Fails · a shortcut in the question</span>
-            <p class="cq">“In which month is the holiday when children go trick-or-treating?”</p>
-            <div class="flow"><span class="chip">trick-or-treating</span><span class="arrow">→</span><span class="chip br cut">Halloween</span><span class="arrow">→</span><span class="chip an">October</span><span class="short">↺ shortcut</span></div>
-            <p class="res">“Trick-or-treating” already points to October, so removing Halloween would change nothing. The bridge is a bystander.</p></div>
+        <div class="col">
+          <p class="note">The edit deletes the state's component along the word's direction, from the question's first word to the end of the prompt, in one window of layers (6 wide on the 4B, 12 on the 27B). Sliding the window shows where in the network the word matters.</p>
         </div>
-      </article>
-
-      <article class="req">
-        <div class="req-head"><span class="req-num">3</span><div><h3>The answer must not be a lookalike of the bridge</h3><p>When the answer is closely tied to the bridge (Salzburg and Austria, Mars and red), their directions overlap. Removing the bridge then also removes part of the answer itself, and the answer drops even if the bridge was never used. The answer should share nothing with the bridge except the step that connects them.</p></div></div>
-        <div class="cases">
-          <div class="case pass"><span class="tag">Passes · ask for the letter instead</span>
-            <p class="cq">“What letter does the name of the planet fourth from the sun start with?”</p>
-            <div class="flow"><span class="chip">planet fourth from the sun</span><span class="arrow">→</span><span class="chip br">Mars</span><span class="arrow">→</span><span class="chip an">M</span></div>
-            <p class="res">A letter means nothing about planets. If removing Mars changes the answer, it is because the model needed Mars.</p></div>
-          <div class="case fail"><span class="tag">Fails · the planet's color</span>
-            <div class="flow"><span class="chip">planet fourth from the sun</span><span class="arrow">→</span><span class="chip br">Mars</span><span class="arrow">→</span><span class="chip an">red</span></div>
-            <p class="res">Mars is “the Red Planet”. Inside the model, Mars and red sit close together, so removing Mars also removes part of “red” itself. The answer would drop even if Mars was never used.</p></div>
+      </div>
+    </div>
+    <div class="panel checks">
+      <div class="check">
+        <h4><small>The basics</small>Knows it</h4>
+        <p>Ask the full question and both single steps separately. All three must come out right.</p>
+      </div>
+      <div class="check">
+        <h4><small>Sets up the next two</small>Where the answer forms</h4>
+        <div class="col">
+          <p>Remove the answer letter's own direction, window by window. The first window where that kills the answer is the <b>onset</b>: from there the model is writing the answer. Everything else is measured only in the layers before it, so the bridge has to act <i>before</i> the answer exists.</p>
+          <div class="tl" style="--L:32">
+            <div class="tl-track"><span class="tl-early" style="--on:27"></span><span class="tl-m" style="--x:9"></span></div>
+            <div class="tl-key"><span><span class="b">|</span> the bridge starts to matter: layer 9</span><span>dashed line: answer forms at layer 27</span><span>shaded: the layers we test</span></div>
+          </div>
         </div>
-      </article>
-
-      <article class="req">
-        <div class="req-head"><span class="req-num">4</span><div><h3>The group can give a wrong answer of the same kind</h3><p>The peers' wrong answer has to be the same sort of thing as the right one: one number in place of another, one color in place of another. Then the “agree” and “disagree” prompts differ in a single word, and we can weigh the model's pull toward the right answer against its pull toward the peers' answer on the same scale. A plausible wrong answer also makes giving in a real option.</p></div></div>
-        <div class="cases">
-          <div class="case pass"><span class="tag">Passes · another number</span>
-            <p class="cq">Spider legs: peers agree with “eight”, or all say “six”.</p>
-            <div class="flow"><span class="chip">peers agree:</span><span class="chip an">eight eight eight</span><span class="arrow">vs</span><span class="chip">peers disagree:</span><span class="chip pe">six six six</span></div>
-            <p class="res">One word changes, and six is believable (insects have six). P(“eight”) and P(“six”) are directly comparable.</p></div>
-          <div class="case fail"><span class="tag">Fails · a different kind of answer</span>
-            <div class="flow"><span class="chip">right:</span><span class="chip an">eight</span><span class="arrow">vs</span><span class="chip">peers:</span><span class="chip pe">insects</span></div>
-            <p class="res">A word against a number: they don't answer the question the same way, so there is no single number for which way the model leans, and copying “insects” isn't a real option.</p></div>
+      </div>
+      <div class="check">
+        <h4><small>Depends on the bridge</small>The bridge is needed</h4>
+        <div class="col">
+          <p>In those early layers, removing the bridge must lower P(right) by at least 0.5 more than removing any of 12 everyday words (table, cloud, river…) of the same strength. Removing anything large can damage a model a little; the everyday words measure that noise. (Numbers from one of our questions.)</p>
+          <div class="bars">
+            <div class="bar"><span class="lab">remove the bridge</span><span class="tr"><i class="br" style="--v:1"></i></span><span class="val">1.00</span></div>
+            <div class="bar"><span class="lab">worst everyday word</span><span class="tr"><i class="no" style="--v:.04"></i></span><span class="val">0.04</span></div>
+          </div>
         </div>
-      </article>
+      </div>
+      <div class="check">
+        <h4><small>No overlap</small>The answer isn't a lookalike</h4>
+        <p>Remove only the part of the bridge's direction that it does not share with the answer. Most of the drop must remain (at least half). For letter answers it stays near 100%.</p>
+      </div>
+      <div class="check">
+        <h4><small>For the group stage</small>The edit reaches the bridge</h4>
+        <p>Ask the model to name the bridge first (for example “First name the city.”). Removing the bridge must stop it naming it. This matters later: when removal changes nothing, it tells “the bridge isn't needed” apart from “the edit missed”.</p>
+      </div>
+    </div>
+    <div class="yield">
+      <b>25 questions</b><span>pass on Qwen3.6-27B</span>
+      <b>24 questions</b><span>pass on Qwen3.5-4B</span>
+      <span class="note">Six of them were used to set the reading rules below, so every number from here on leaves them out and they are reported on their own.</span>
     </div>
   </section>
 
-  <!-- 5 QUESTION TYPE -->
+  <!-- 6 CHECKS -->
   <section class="chapter" id="type">
     <div class="ch-head">
-      <span class="ch-num">5 · The question that follows</span>
+      <span class="ch-num">5 · The question format</span>
       <h2>Ask for the first letter of the hidden word</h2>
+      <p>Most kinds of two-hop question fail these checks. One format passes them reliably:</p>
     </div>
     <div class="panel fmt">
       <p class="template">“What letter does the name of <span class="slot">[ hidden thing ]</span> start with?”</p>
@@ -756,71 +756,10 @@
     <p class="note col">The cost is scope: our results are about this question type, not about the city-to-country facts the paper uses.</p>
   </section>
 
-  <!-- 6 CHECKS -->
-  <section class="chapter" id="checks">
-    <div class="ch-head">
-      <span class="ch-num">6 · Checking the requirements</span>
-      <h2>Every question is tested before it is used</h2>
-      <p>Requirement 4 holds by construction. Requirements 1 to 3 are measured on each question, alone, with one tool.</p>
-    </div>
-    <div class="panel">
-      <h3>The tool: remove one word's direction, a few layers at a time</h3>
-      <div class="two">
-        <div class="tl" style="display:grid;gap:6px">
-          <span class="tag">Which layers (Qwen3.5-4B has 32)</span>
-          <div class="strip" id="strip" role="img" aria-label="32 layers, layers 15 to 20 edited"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="win"></span><span class="win"></span><span class="win"></span><span class="win"></span><span class="win"></span><span class="win"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="axis"><span>layer 0</span><span>one window: layers 15–20</span><span>layer 31</span></div>
-        </div>
-        <div class="col">
-          <p class="note">The edit deletes the state's component along the word's direction, from the question's first word to the end of the prompt, in one window of layers (6 wide on the 4B, 12 on the 27B). Sliding the window shows where in the network the word matters.</p>
-        </div>
-      </div>
-    </div>
-    <div class="panel checks">
-      <div class="check">
-        <h4><small>Requirement 1</small>Knows it</h4>
-        <p>Ask the full question and both single steps separately. All three must come out right.</p>
-      </div>
-      <div class="check">
-        <h4><small>Sets up 2 and 3</small>Where the answer forms</h4>
-        <div class="col">
-          <p>Remove the answer letter's own direction, window by window. The first window where that kills the answer is the <b>onset</b>: from there the model is writing the answer. Everything else is measured only in the layers before it, so the bridge has to act <i>before</i> the answer exists.</p>
-          <div class="tl" style="--L:32">
-            <div class="tl-track"><span class="tl-early" style="--on:27"></span><span class="tl-m" style="--x:9"></span></div>
-            <div class="tl-key"><span><span class="b">|</span> Italy starts to matter: layer 9</span><span>dashed line: answer forms at layer 27</span><span>shaded: the layers we test</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="check">
-        <h4><small>Requirement 2</small>The bridge is needed</h4>
-        <div class="col">
-          <p>In those early layers, removing the bridge must lower P(right) by at least 0.5 more than removing any of 12 everyday words (table, cloud, river…) of the same strength. Removing anything large can damage a model a little; the everyday words measure that noise.</p>
-          <div class="bars">
-            <div class="bar"><span class="lab">remove Italy</span><span class="tr"><i class="br" style="--v:1"></i></span><span class="val">1.00</span></div>
-            <div class="bar"><span class="lab">worst everyday word</span><span class="tr"><i class="no" style="--v:.04"></i></span><span class="val">0.04</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="check">
-        <h4><small>Requirement 3</small>No lookalike</h4>
-        <p>Remove only the part of the bridge's direction that it does not share with the answer. Most of the drop must remain (at least half). For letter answers it stays near 100%.</p>
-      </div>
-      <div class="check">
-        <h4><small>For the group stage</small>The edit reaches the bridge</h4>
-        <p>Ask the model to name the bridge first (“First name the country.”). Removing the bridge must stop it naming it. This matters later: when removal changes nothing, it tells “the bridge isn't needed” apart from “the edit missed”.</p>
-      </div>
-    </div>
-    <div class="yield">
-      <b>25 questions</b><span>pass on Qwen3.6-27B</span>
-      <b>24 questions</b><span>pass on Qwen3.5-4B</span>
-      <span class="note">Six of them were used to set the reading rules below, so every number from here on leaves them out and they are reported on their own.</span>
-    </div>
-  </section>
-
   <!-- 7 GROUP -->
   <section class="chapter" id="group">
     <div class="ch-head">
-      <span class="ch-num">7 · The group</span>
+      <span class="ch-num">6 · The group</span>
       <h2>Same questions, now with other agents</h2>
       <p>Each question is asked alone, then with one, two or three peers who give the right letter, then with one, two or three peers who give the same wrong letter.</p>
     </div>
@@ -894,7 +833,7 @@ with one letter.</pre>
   <!-- 8 FINDINGS -->
   <section class="chapter" id="findings">
     <div class="ch-head">
-      <span class="ch-num">8 · What we found</span>
+      <span class="ch-num">7 · What we found</span>
       <h2>Five findings</h2>
       <p>19 questions on Qwen3.6-27B and 20 on Qwen3.5-4B, excluding the six used to set the rules. Alone, the bridge is needed in all 19 on the 27B and 17 of 20 on the 4B (3 mixed).</p>
     </div>
@@ -1020,7 +959,7 @@ with one letter.</pre>
   <!-- 9 MEANING -->
   <section class="chapter" id="meaning">
     <div class="ch-head">
-      <span class="ch-num">9 · What it means</span>
+      <span class="ch-num">8 · What it means</span>
       <h2>Back to the question</h2>
       <p>Does an agent's answer in a group still come from its own reasoning? On these questions, it depends on what the group does.</p>
     </div>
