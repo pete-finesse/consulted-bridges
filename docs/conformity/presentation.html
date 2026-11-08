@@ -242,6 +242,7 @@
   .ins-r .chip { padding: 1px 9px; font-size: 0.9rem; }
   .ins-chain { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
   .ins-n { font-size: 0.8rem; color: var(--muted); font-style: italic; }
+  .tug { width: 100%; height: auto; display: block; background: var(--panel); border-radius: 8px; padding: 6px 4px 0; }
   .punch { font-size: 1.15rem; font-weight: 600; }
   /* transcript */
   .transcript { display: grid; gap: 8px; font-size: 0.95rem; }
@@ -564,34 +565,41 @@
       </div>
     </div>
     <div class="col">
-      <p>So in the paper's Mozart example, when the agent yields to the group and says France, there can be two explanations:</p>
+      <p>So in the paper's Mozart example, when the agent yields to the group and says France, there can be two explanations. Think of the answer as a tug of war between Austria and France:</p>
     </div>
-    <div class="panel">
+    <figure class="panel">
       <div class="stories">
         <div class="story a-side">
           <span class="tag">Story A · Silent dissent</span>
-          <h4>It still thinks Austria, but says France</h4>
-          <div class="inside" aria-label="Inside the model in Story A">
-            <span class="ins-l">Own thought</span><div class="ins-r"><span class="ins-chain"><span class="chip br">Salzburg</span><span class="arrow">→</span><span class="chip an">Austria</span></span><span class="ins-n">still pulling</span></div>
-            <span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">pulls harder</span></div>
-            <span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b></div>
-          </div>
-          <p><b>Remove Salzburg:</b> the pull toward Austria disappears. The answer changes.</p>
+          <h4>It still thinks Austria, but the group pulls harder</h4>
+          <svg class="tug" viewBox="0 0 340 118" role="img" aria-label="Story A: Salzburg pulls toward Austria, the group pulls harder toward France, and the answer lands on the France side"><rect x="4" y="8" width="80" height="28" rx="8" style="fill: var(--answer-soft); stroke: var(--answer)" stroke-width="1.3"/><text x="44" y="27" text-anchor="middle" font-size="13" font-weight="700" style="fill: var(--answer)">Austria</text><rect x="256" y="8" width="80" height="28" rx="8" style="fill: var(--peer-soft); stroke: var(--peer)" stroke-width="1.3"/><text x="296" y="27" text-anchor="middle" font-size="13" font-weight="700" style="fill: var(--peer)">France</text><line x1="84" y1="22" x2="256" y2="22" style="stroke: var(--line)" stroke-width="2"/><line x1="172" y1="64" x2="238" y2="64" style="stroke: var(--peer)" stroke-width="9" stroke-linecap="round"/><polygon points="236,54 254,64 236,74" style="fill: var(--peer)"/><text x="212" y="96" text-anchor="middle" font-size="12" font-weight="600" style="fill: var(--peer)">the group</text><line x1="168" y1="64" x2="118" y2="64" style="stroke: var(--bridge)" stroke-width="6" stroke-linecap="round"/><polygon points="120,56 104,64 120,72" style="fill: var(--bridge)"/><text x="136" y="96" text-anchor="middle" font-size="12" font-weight="600" style="fill: var(--bridge)">Salzburg</text><line x1="170" y1="52" x2="170" y2="78" style="stroke: var(--ink)" stroke-width="1.5"/><circle cx="222" cy="22" r="7" style="fill: var(--ink)"/></svg>
         </div>
         <div class="story b-side">
           <span class="tag">Story B · Plain copying</span>
-          <h4>It has stopped thinking Austria</h4>
-          <div class="inside" aria-label="Inside the model in Story B">
-            <span class="ins-l">Own thought</span><div class="ins-r"><span class="chip br">Salzburg</span><span class="ins-n">lit up, but leads nowhere</span></div>
-            <span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">the only pull</span></div>
-            <span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b></div>
-          </div>
-          <p><b>Remove Salzburg:</b> nothing was resting on it. The answer stays the same.</p>
+          <h4>It has stopped thinking Austria; only the group pulls</h4>
+          <svg class="tug" viewBox="0 0 340 118" role="img" aria-label="Story B: Salzburg is lit up but not pulling, only the group pulls, and the answer lands on the France side"><rect x="4" y="8" width="80" height="28" rx="8" style="fill: var(--answer-soft); stroke: var(--answer)" stroke-width="1.3"/><text x="44" y="27" text-anchor="middle" font-size="13" font-weight="700" style="fill: var(--answer)">Austria</text><rect x="256" y="8" width="80" height="28" rx="8" style="fill: var(--peer-soft); stroke: var(--peer)" stroke-width="1.3"/><text x="296" y="27" text-anchor="middle" font-size="13" font-weight="700" style="fill: var(--peer)">France</text><line x1="84" y1="22" x2="256" y2="22" style="stroke: var(--line)" stroke-width="2"/><line x1="172" y1="64" x2="238" y2="64" style="stroke: var(--peer)" stroke-width="9" stroke-linecap="round"/><polygon points="236,54 254,64 236,74" style="fill: var(--peer)"/><text x="212" y="96" text-anchor="middle" font-size="12" font-weight="600" style="fill: var(--peer)">the group</text><rect x="76" y="50" width="70" height="26" rx="7" style="fill: var(--bridge-soft); stroke: var(--bridge)" stroke-width="1.2" stroke-dasharray="4 3"/><text x="111" y="68" text-anchor="middle" font-size="12" font-weight="700" style="fill: var(--bridge)">Salzburg</text><text x="111" y="96" text-anchor="middle" font-size="11" style="fill: var(--muted)">lit up, not pulling</text><line x1="170" y1="52" x2="170" y2="78" style="stroke: var(--ink)" stroke-width="1.5"/><circle cx="222" cy="22" r="7" style="fill: var(--ink)"/></svg>
         </div>
       </div>
-      <p class="note">Both say France, and in both Salzburg is readable. The difference is whether anything inside still pulls toward Austria.</p>
-      <p class="punch">Reading can't tell these apart. <span class="a">Removing can.</span></p>
+      <figcaption>The dot is where the answer lands. It lands in the same place in both stories, and Salzburg is readable in both.</figcaption>
+    </figure>
+    <div class="col">
+      <p>From the outside, and even to the paper's reading method, the two stories look identical. The only difference is whether Salzburg is pulling. So we test that directly: we <b>remove</b> Salzburg from the model's state and watch the answer. If Salzburg was pulling, taking it away lets the answer slide. If it wasn't, nothing moves.</p>
     </div>
+    <figure class="panel">
+      <div class="stories">
+        <div class="story a-side">
+          <span class="tag">Story A · Salzburg removed</span>
+          <svg class="tug" viewBox="0 0 340 118" role="img" aria-label="Story A after removal: the Austria pull is gone and the answer slides further toward France"><rect x="4" y="8" width="80" height="28" rx="8" style="fill: var(--answer-soft); stroke: var(--answer)" stroke-width="1.3"/><text x="44" y="27" text-anchor="middle" font-size="13" font-weight="700" style="fill: var(--answer)">Austria</text><rect x="256" y="8" width="80" height="28" rx="8" style="fill: var(--peer-soft); stroke: var(--peer)" stroke-width="1.3"/><text x="296" y="27" text-anchor="middle" font-size="13" font-weight="700" style="fill: var(--peer)">France</text><line x1="84" y1="22" x2="256" y2="22" style="stroke: var(--line)" stroke-width="2"/><line x1="172" y1="64" x2="238" y2="64" style="stroke: var(--peer)" stroke-width="9" stroke-linecap="round"/><polygon points="236,54 254,64 236,74" style="fill: var(--peer)"/><text x="212" y="96" text-anchor="middle" font-size="12" font-weight="600" style="fill: var(--peer)">the group</text><line x1="168" y1="64" x2="110" y2="64" style="stroke: var(--noise)" stroke-width="2" stroke-dasharray="4 4"/><text x="136" y="96" text-anchor="middle" font-size="12" style="fill: var(--noise)" text-decoration="line-through">Salzburg</text><line x1="170" y1="52" x2="170" y2="78" style="stroke: var(--ink)" stroke-width="1.5"/><circle cx="246" cy="22" r="7" style="fill: var(--ink)"/></svg>
+          <p><b>The answer moves.</b> With nothing pulling back, the model is even surer of France: its chance of saying Austria drops.</p>
+        </div>
+        <div class="story b-side">
+          <span class="tag">Story B · Salzburg removed</span>
+          <svg class="tug" viewBox="0 0 340 118" role="img" aria-label="Story B after removal: nothing changes and the answer stays where it was"><rect x="4" y="8" width="80" height="28" rx="8" style="fill: var(--answer-soft); stroke: var(--answer)" stroke-width="1.3"/><text x="44" y="27" text-anchor="middle" font-size="13" font-weight="700" style="fill: var(--answer)">Austria</text><rect x="256" y="8" width="80" height="28" rx="8" style="fill: var(--peer-soft); stroke: var(--peer)" stroke-width="1.3"/><text x="296" y="27" text-anchor="middle" font-size="13" font-weight="700" style="fill: var(--peer)">France</text><line x1="84" y1="22" x2="256" y2="22" style="stroke: var(--line)" stroke-width="2"/><line x1="172" y1="64" x2="238" y2="64" style="stroke: var(--peer)" stroke-width="9" stroke-linecap="round"/><polygon points="236,54 254,64 236,74" style="fill: var(--peer)"/><text x="212" y="96" text-anchor="middle" font-size="12" font-weight="600" style="fill: var(--peer)">the group</text><line x1="168" y1="64" x2="110" y2="64" style="stroke: var(--noise)" stroke-width="2" stroke-dasharray="4 4"/><text x="136" y="96" text-anchor="middle" font-size="12" style="fill: var(--noise)" text-decoration="line-through">Salzburg</text><line x1="170" y1="52" x2="170" y2="78" style="stroke: var(--ink)" stroke-width="1.5"/><circle cx="222" cy="22" r="7" style="fill: var(--ink)"/></svg>
+          <p><b>Nothing moves.</b> Nothing was resting on Salzburg, so the answer stays exactly where it was.</p>
+        </div>
+      </div>
+      <p class="punch">Reading can't tell these apart. <span class="a">Removing can.</span></p>
+    </figure>
   </section>
 
   <!-- 3 SOLUTION -->
