@@ -1,0 +1,70 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  18%|█▊        | 77/426 [00:00<00:00, 759.34it/s]Loading weights:  36%|███▌      | 153/426 [00:00<00:00, 680.26it/s]Loading weights:  57%|█████▋    | 241/426 [00:00<00:00, 752.30it/s]Loading weights:  74%|███████▍  | 317/426 [00:00<00:00, 725.20it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 849.79it/s]
+PROGRESS 0/32 starting N_LM_eiffel
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[N_LM_eiffel] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 1/32 starting N_LM_sagrada
+[N_LM_sagrada] UNTESTABLE: the model gets the two-hop question and hop 2 wrong
+PROGRESS 2/32 starting N_LM_brandenburg
+[N_LM_brandenburg] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 3/32 starting N_LM_christ
+[N_LM_christ] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 4/32 starting N_LM_colosseum
+[N_LM_colosseum] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 5/32 starting N_LM_bigben
+[N_LM_bigben] UNTESTABLE: the model gets hop 1 and hop 2 wrong
+PROGRESS 6/32 starting N_LM_fuji
+[N_LM_fuji] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 7/32 starting N_LM_taj
+[N_LM_taj] UNTESTABLE: the model gets the two-hop question and hop 2 wrong
+PROGRESS 8/32 starting N_BP_schwarzenegger
+[N_BP_schwarzenegger] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 9/32 starting N_BP_jackman
+[N_BP_jackman] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 10/32 starting N_BP_dion
+[N_BP_dion] UNTESTABLE: the model gets the two-hop question and hop 2 wrong
+PROGRESS 11/32 starting N_BP_joyce
+[N_BP_joyce] UNTESTABLE: the model gets hop 2 wrong
+PROGRESS 12/32 starting N_BP_kurosawa
+[N_BP_kurosawa] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 13/32 starting N_BP_herge
+[N_BP_herge] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 14/32 starting N_BP_picasso
+[N_BP_picasso] UNTESTABLE: the model gets hop 2 wrong
+PROGRESS 15/32 starting N_BP_monet
+[N_BP_monet] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 16/32 starting N_BP_beethoven
+[N_BP_beethoven] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 17/32 starting N_BP_borges
+[N_BP_borges] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 18/32 starting N_BP_gisele
+[N_BP_gisele] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 19/32 starting N_BB_bellamy
+[N_BB_bellamy] UNTESTABLE: the model gets the two-hop question and hop 2 wrong
+PROGRESS 20/32 starting N_BB_geddy
+[N_BB_geddy] UNTESTABLE: the model gets the two-hop question and hop 2 wrong
+PROGRESS 21/32 starting N_BB_sting
+[N_BB_sting] UNTESTABLE: the model gets the two-hop question and hop 1 and hop 2 wrong
+PROGRESS 22/32 starting N_BB_gallagher
+[N_BB_gallagher] UNTESTABLE: the model gets the two-hop question and hop 2 wrong
+PROGRESS 23/32 starting N_BB_jungkook
+[N_BB_jungkook] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 24/32 starting N_BB_mercury
+[N_BB_mercury] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 25/32 starting N_BB_albarn
+[N_BB_albarn] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 26/32 starting N_X_carlsen
+[N_X_carlsen] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 27/32 starting N_X_perlman
+[N_X_perlman] UNCLEAR: in between
+PROGRESS 28/32 starting N_X_mars
+[N_X_mars] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 29/32 starting T_place_states_austria
+[T_place_states_austria] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 30/32 starting T_place_states_australia
+[T_place_states_australia] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 31/32 starting V_T_basketball
+[V_T_basketball] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 32/32 ALLDONE
+SHARD DONE qwen35_4b 0/1

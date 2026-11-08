@@ -1,0 +1,122 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   7%|▋         | 59/851 [00:00<00:01, 507.35it/s]Loading weights:  15%|█▍        | 127/851 [00:00<00:01, 579.70it/s]Loading weights:  22%|██▏       | 186/851 [00:00<00:01, 547.55it/s]Loading weights:  28%|██▊       | 241/851 [00:00<00:01, 537.50it/s]Loading weights:  37%|███▋      | 319/851 [00:00<00:00, 606.10it/s]Loading weights:  47%|████▋     | 402/851 [00:00<00:00, 665.96it/s]Loading weights:  55%|█████▌    | 469/851 [00:00<00:00, 628.93it/s]Loading weights:  65%|██████▍   | 550/851 [00:00<00:00, 680.23it/s]Loading weights:  73%|███████▎  | 622/851 [00:00<00:00, 691.25it/s]Loading weights: 100%|██████████| 851/851 [00:01<00:00, 817.46it/s]
+PROGRESS 0/58 T_place_states_austria alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[T_place_states_austria alone] says '9' (right) P(right) 0.88 P(peer) 0.00 onset 54 | need 0.91 bridge dLO +7.28 noise +0.44 kind 1.5957662874644107 | reach 1.00 rank 0 | bridge still needed (55s)
+PROGRESS 1/58 T_place_states_austria agree1
+[T_place_states_austria agree1] says '9' (right) P(right) 0.96 P(peer) 0.96 onset 54 | need 0.90 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (18s)
+PROGRESS 2/58 T_place_states_austria agree2
+[T_place_states_austria agree2] says '9' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.43 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (18s)
+PROGRESS 3/58 T_place_states_austria agree3
+[T_place_states_austria agree3] says '9' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.42 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (18s)
+PROGRESS 4/58 T_place_states_austria disagree1
+[T_place_states_austria disagree1] says '9' (holds) P(right) 0.94 P(peer) 0.03 onset 54 | need 0.96 bridge dLO +8.29 noise +0.62 kind 3.633102082521091 | reach 1.00 rank 0 | bridge still pulls (21s)
+PROGRESS 5/58 T_place_states_austria disagree2
+[T_place_states_austria disagree2] says '9' (holds) P(right) 0.96 P(peer) 0.04 onset 54 | need 0.96 bridge dLO +7.93 noise +0.62 kind 1.7430235364635702 | reach 1.00 rank 0 | bridge still pulls (22s)
+PROGRESS 6/58 T_place_states_austria disagree3
+[T_place_states_austria disagree3] says '9' (holds) P(right) 0.97 P(peer) 0.03 onset 54 | need 0.97 bridge dLO +8.56 noise +0.62 kind 1.3714910343611724 | reach 1.00 rank 0 | bridge still pulls (23s)
+PROGRESS 7/58 N_BP_haydn alone
+[N_BP_haydn alone] says '9' (right) P(right) 0.91 P(peer) 0.00 onset 54 | need 0.92 bridge dLO +9.36 noise +0.30 kind 1.1972583803700276 | reach 0.99 rank 0 | bridge still needed (17s)
+PROGRESS 8/58 N_BP_haydn agree1
+[N_BP_haydn agree1] says '9' (right) P(right) 0.96 P(peer) 0.96 onset 54 | need 0.91 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (17s)
+PROGRESS 9/58 N_BP_haydn agree2
+[N_BP_haydn agree2] says '9' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.86 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (19s)
+PROGRESS 10/58 N_BP_haydn agree3
+[N_BP_haydn agree3] says '9' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.45 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (19s)
+PROGRESS 11/58 N_BP_haydn disagree1
+[N_BP_haydn disagree1] says '9' (holds) P(right) 0.96 P(peer) 0.01 onset 54 | need 0.98 bridge dLO +8.30 noise +0.62 kind 1.624808717127804 | reach 1.00 rank 0 | bridge still pulls (21s)
+PROGRESS 12/58 N_BP_haydn disagree2
+[N_BP_haydn disagree2] says '9' (holds) P(right) 0.94 P(peer) 0.05 onset 54 | need 0.97 bridge dLO +8.87 noise +0.37 kind 1.8707966994556249 | reach 1.00 rank 0 | bridge still pulls (23s)
+PROGRESS 13/58 N_BP_haydn disagree3
+[N_BP_haydn disagree3] says '9' (holds) P(right) 0.93 P(peer) 0.06 onset 54 | need 0.95 bridge dLO +8.30 noise +0.62 kind 1.4956460502997295 | reach 1.00 rank 0 | bridge still pulls (24s)
+PROGRESS 14/58 N_BP_haydn copy3
+[N_BP_haydn copy3] says '8' (full give-in) P(right) 0.04 P(peer) 0.44 onset 54 | need 0.47 bridge dLO +1.37 noise +0.37 kind 1.2498687894110279 | reach 1.00 rank 2 | mixed (23s)
+PROGRESS 15/58 N_BP_strauss alone
+[N_BP_strauss alone] says '9' (right) P(right) 0.79 P(peer) 0.00 onset 54 | need 0.90 bridge dLO +9.26 noise +0.48 kind 0.9755400309301345 | reach 0.63 rank 0 | bridge still needed (18s)
+PROGRESS 16/58 N_BP_strauss agree1
+[N_BP_strauss agree1] says '9' (right) P(right) 0.97 P(peer) 0.97 onset 54 | need 0.92 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.86 rank 0 | bridge still needed (19s)
+PROGRESS 17/58 N_BP_strauss agree2
+[N_BP_strauss agree2] says '9' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.95 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.86 rank 0 | bridge still needed (18s)
+PROGRESS 18/58 N_BP_strauss agree3
+[N_BP_strauss agree3] says '9' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.90 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.68 rank 0 | bridge still needed (19s)
+PROGRESS 19/58 N_BP_strauss disagree1
+[N_BP_strauss disagree1] says '9' (holds) P(right) 0.97 P(peer) 0.00 onset 54 | need 0.99 bridge dLO +9.11 noise +0.62 kind 1.2317968551535996 | reach 0.96 rank 0 | bridge still pulls (20s)
+PROGRESS 20/58 N_BP_strauss disagree2
+[N_BP_strauss disagree2] says '9' (holds) P(right) 0.99 P(peer) 0.01 onset 54 | need 0.99 bridge dLO +10.06 noise +0.50 kind 0.37330744270268656 | reach 0.84 rank 0 | bridge still pulls (21s)
+PROGRESS 21/58 N_BP_strauss disagree3
+[N_BP_strauss disagree3] says '9' (holds) P(right) 0.99 P(peer) 0.01 onset 54 | need 0.99 bridge dLO +9.62 noise +0.37 kind 0.12548189326249837 | reach 0.71 rank 0 | bridge still pulls (22s)
+PROGRESS 22/58 N_BP_lamarr alone
+[N_BP_lamarr alone] says '9' (right) P(right) 0.87 P(peer) 0.00 onset 54 | need 0.92 bridge dLO +8.10 noise +0.45 kind 6.1274699928025065 | reach 1.00 rank 0 | bridge still needed (17s)
+PROGRESS 23/58 N_BP_lamarr agree1
+[N_BP_lamarr agree1] says '9' (right) P(right) 0.96 P(peer) 0.96 onset 54 | need 0.79 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (18s)
+PROGRESS 24/58 N_BP_lamarr agree2
+[N_BP_lamarr agree2] says '9' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.58 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (18s)
+PROGRESS 25/58 N_BP_lamarr agree3
+[N_BP_lamarr agree3] says '9' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.44 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (18s)
+PROGRESS 26/58 N_BP_lamarr disagree1
+[N_BP_lamarr disagree1] says '9' (holds) P(right) 0.95 P(peer) 0.01 onset 54 | need 0.98 bridge dLO +7.99 noise +0.37 kind 1.6219897294718875 | reach 1.00 rank 0 | bridge still pulls (20s)
+PROGRESS 27/58 N_BP_lamarr disagree2
+[N_BP_lamarr disagree2] says '9' (holds) P(right) 0.94 P(peer) 0.05 onset 54 | need 0.98 bridge dLO +9.24 noise +0.25 kind 3.3706221213122607 | reach 1.00 rank 0 | bridge still pulls (22s)
+PROGRESS 28/58 N_BP_lamarr disagree3
+[N_BP_lamarr disagree3] says '9' (holds) P(right) 0.96 P(peer) 0.03 onset 54 | need 0.98 bridge dLO +9.43 noise +0.25 kind 3.3695220083510895 | reach 1.00 rank 0 | bridge still pulls (22s)
+PROGRESS 29/58 N_BP_jackman alone
+[N_BP_jackman alone] says '6' (right) P(right) 0.36 P(peer) 0.00 onset 54 | need 0.82 bridge dLO +4.35 noise +0.14 kind 0.6110264242807011 | reach 1.00 rank 0 | bridge still needed (18s)
+PROGRESS 30/58 N_BP_jackman agree1
+[N_BP_jackman agree1] says '6' (right) P(right) 0.61 P(peer) 0.61 onset 48 | need 0.91 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (16s)
+PROGRESS 31/58 N_BP_jackman agree2
+[N_BP_jackman agree2] says '6' (right) P(right) 0.96 P(peer) 0.96 onset 54 | need 0.95 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (18s)
+PROGRESS 32/58 N_BP_jackman agree3
+[N_BP_jackman agree3] says '6' (right) P(right) 0.95 P(peer) 0.95 onset 54 | need 0.90 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (19s)
+PROGRESS 33/58 N_BP_jackman disagree1
+[N_BP_jackman disagree1] says '6' (holds) P(right) 0.55 P(peer) 0.03 onset 42 | need 0.83 bridge dLO +5.72 noise +0.37 kind 0.36727214532696184 | reach 1.00 rank 0 | bridge still pulls (16s)
+PROGRESS 34/58 N_BP_jackman disagree2
+[N_BP_jackman disagree2] says '6' (holds) P(right) 0.81 P(peer) 0.14 onset 48 | need 0.87 bridge dLO +6.55 noise +0.62 kind 0.24959135096786977 | reach 1.00 rank 0 | bridge still pulls (19s)
+PROGRESS 35/58 N_BP_jackman disagree3
+[N_BP_jackman disagree3] says '6' (holds) P(right) 0.74 P(peer) 0.21 onset 48 | need 0.86 bridge dLO +6.87 noise +0.50 kind 0.3741979988517993 | reach 1.00 rank 0 | bridge still pulls (20s)
+PROGRESS 36/58 N_BP_robbie alone
+[N_BP_robbie alone] says '6' (right) P(right) 0.36 P(peer) 0.00 onset 48 | need 0.88 bridge dLO +5.42 noise +0.35 kind 0.39572486538114937 | reach 1.00 rank 0 | bridge still needed (17s)
+PROGRESS 37/58 N_BP_robbie agree1
+[N_BP_robbie agree1] says '6' (right) P(right) 0.85 P(peer) 0.85 onset 48 | need 0.93 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (16s)
+PROGRESS 38/58 N_BP_robbie agree2
+[N_BP_robbie agree2] says '6' (right) P(right) 0.94 P(peer) 0.94 onset 54 | need 0.16 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (18s)
+PROGRESS 39/58 N_BP_robbie agree3
+[N_BP_robbie agree3] says '6' (right) P(right) 0.92 P(peer) 0.92 onset 54 | need 0.23 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (20s)
+PROGRESS 40/58 N_BP_robbie disagree1
+[N_BP_robbie disagree1] says '6' (holds) P(right) 0.78 P(peer) 0.03 onset 48 | need 0.95 bridge dLO +5.23 noise +0.49 kind 0.24437848754751057 | reach 1.00 rank 0 | bridge still pulls (18s)
+PROGRESS 41/58 N_BP_robbie disagree2
+[N_BP_robbie disagree2] says '6' (holds) P(right) 0.78 P(peer) 0.17 onset 48 | need 0.73 bridge dLO +2.63 noise +0.37 kind 0.2529247512511641 | reach 0.99 rank 0 | bridge still pulls (19s)
+PROGRESS 42/58 N_BP_robbie disagree3
+[N_BP_robbie disagree3] says '6' (holds) P(right) 0.74 P(peer) 0.19 onset 48 | need 0.82 bridge dLO +3.63 noise +0.50 kind 0.2545788449211839 | reach 0.99 rank 0 | bridge still pulls (20s)
+PROGRESS 43/58 N_BP_robbie copy3
+[N_BP_robbie copy3] says '7' (full give-in) P(right) 0.01 P(peer) 0.75 onset 54 | need 0.04 bridge dLO +0.19 noise +0.19 kind 0.12539527933717398 | reach 1.00 rank 38 | mixed (22s)
+PROGRESS 44/58 N_BP_blanchett alone
+[N_BP_blanchett alone] says '6' (right) P(right) 0.47 P(peer) 0.00 onset 54 | need 0.58 bridge dLO +4.53 noise +0.26 kind 0.6679223688098395 | reach 0.85 rank 0 | bridge still needed (19s)
+PROGRESS 45/58 N_BP_blanchett agree1
+[N_BP_blanchett agree1] says '6' (right) P(right) 0.81 P(peer) 0.81 onset 54 | need 0.89 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (18s)
+PROGRESS 46/58 N_BP_blanchett agree2
+[N_BP_blanchett agree2] says '6' (right) P(right) 0.84 P(peer) 0.84 onset 54 | need 0.82 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (18s)
+PROGRESS 47/58 N_BP_blanchett agree3
+[N_BP_blanchett agree3] says '6' (right) P(right) 0.83 P(peer) 0.83 onset 54 | need 0.82 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (18s)
+PROGRESS 48/58 N_BP_blanchett disagree1
+[N_BP_blanchett disagree1] says '6' (holds) P(right) 0.77 P(peer) 0.05 onset 48 | need 0.95 bridge dLO +3.30 noise +0.60 kind -0.001398620622651947 | reach 0.99 rank 0 | bridge still pulls (18s)
+PROGRESS 49/58 N_BP_blanchett disagree2
+[N_BP_blanchett disagree2] says '6' (holds) P(right) 0.54 P(peer) 0.33 onset 42 | need 0.90 bridge dLO +3.74 noise +0.25 kind -0.001025376339791939 | reach 1.00 rank 0 | bridge still pulls (16s)
+PROGRESS 50/58 N_BP_blanchett disagree3
+[N_BP_blanchett disagree3] says '6' (holds) P(right) 0.51 P(peer) 0.40 onset 48 | need 0.88 bridge dLO +3.87 noise +0.25 kind 0.12950582362381613 | reach 1.00 rank 0 | bridge still pulls (20s)
+PROGRESS 51/58 N_LM_eiffel alone
+[N_LM_eiffel alone] says '2' (right) P(right) 0.73 P(peer) 0.04 onset 48 | need 0.81 bridge dLO +3.64 noise +0.46 kind -0.10012001298122186 | reach 0.03 rank 4 | bridge still needed (19s)
+PROGRESS 52/58 N_LM_eiffel agree1
+[N_LM_eiffel agree1] says '2' (right) P(right) 0.45 P(peer) 0.45 onset 30 | need 0.52 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.00 rank 2 | bridge still needed (12s)
+PROGRESS 53/58 N_LM_eiffel agree2
+[N_LM_eiffel agree2] says '2' (right) P(right) 0.94 P(peer) 0.94 onset 54 | need 0.76 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 4 | bridge still needed (20s)
+PROGRESS 54/58 N_LM_eiffel agree3
+[N_LM_eiffel agree3] says '2' (right) P(right) 0.92 P(peer) 0.92 onset 54 | need 0.76 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 4 | bridge still needed (21s)
+PROGRESS 55/58 N_LM_eiffel disagree1
+[N_LM_eiffel disagree1] says '2' (holds) P(right) 0.78 P(peer) 0.19 onset 42 | need 0.74 bridge dLO +3.49 noise +0.94 kind 0.11090938290568642 | reach 0.03 rank 3 | bridge still pulls (21s)
+PROGRESS 56/58 N_LM_eiffel disagree2
+[N_LM_eiffel disagree2] says '2' (holds) P(right) 0.84 P(peer) 0.15 onset 42 | need 0.90 bridge dLO +4.26 noise +0.50 kind -0.015098111541299808 | reach 0.06 rank 4 | bridge still pulls (24s)
+PROGRESS 57/58 N_LM_eiffel disagree3
+[N_LM_eiffel disagree3] says '2' (holds) P(right) 0.76 P(peer) 0.22 onset 42 | need 0.84 bridge dLO +4.73 noise +0.62 kind -0.3883833352316355 | reach 0.09 rank 4 | bridge still pulls (28s)
+PROGRESS ALLDONE
+SHARD DONE qwen36_27b 0/2 neutral

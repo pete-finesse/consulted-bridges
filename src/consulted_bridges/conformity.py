@@ -37,7 +37,10 @@ Labels (fixed before the run, docs/conformity/outline.html):
                   bridge not needed   if need < 0.2 and reach passes
                   mixed               otherwise
 
-  uv run python -m consulted_bridges.conformity --config qwen36_27b [--shard 0/3] [--limit N] [--out DIR]
+--set counts runs the count questions instead (COUNTS: "Answer in one word.", peers give the right count or one
+off it); results go to results/conformity_counts[_defer]_<config>.
+
+  uv run python -m consulted_bridges.conformity --config qwen36_27b [--set counts] [--shard 0/3] [--limit N] [--out DIR]
 """
 from __future__ import annotations
 
@@ -54,13 +57,16 @@ from consulted_bridges.legacy.bridge_card3 import FORMATS, SKIP
 from consulted_bridges.load import load
 from consulted_bridges.questions.core import SPECS as CORE
 from consulted_bridges.questions.proposed.similar import SPECS as VARIANTS
+from consulted_bridges.questions.proposed.trend import SPECS as TREND
+from consulted_bridges.questions.proposed.counts import SPECS as COUNT_SPECS
 from consulted_bridges.readout import readout
 from consulted_bridges.silent_dissent.giveup import Probe, lay
 from consulted_bridges.text import offsets, resolve_positions
 
-SPECS = {**CORE, **VARIANTS}
+SPECS = {**CORE, **VARIANTS, **TREND, **COUNT_SPECS}
 EPS = 1e-6
 SUFFIX = " Answer with one letter."
+ONE = " Answer in one word."
 
 # Letter questions where the saved solo scorecard found need >= 0.5 and the bridge acting first (controls
 # built to fail left out), from the question bank's results table.
@@ -91,6 +97,17 @@ def questions_for(cfg):
         raise SystemExit(f"no question list for {cfg}: run the solo scorecard, then consulted_bridges.conformity_select")
     t = pd.read_csv(f)
     return t[t.selected].question.tolist()
+
+
+# Count questions (--set counts): the 16 that the trimmed scorecard found consulted on Qwen3.6-27B
+# (results/counts_qwen36_27b, results/counts_r2_qwen36_27b). 14 rest on two facts: Austria 9, Australia 6.
+COUNTS = {"qwen36_27b": ["T_place_states_austria", "N_BP_schwarzenegger", "N_BP_haydn", "N_BP_schubert", "N_BP_strauss",
+                         "N_BP_lauda", "N_BP_lamarr", "N_BP_klimt",
+                         "N_BP_jackman", "N_BP_minogue", "N_BP_robbie", "N_BP_irwin", "N_BP_blanchett", "N_BP_hemsworth",
+                         "N_LM_eiffel", "N_BP_gisele"]}
+COUNTS["tiny"] = ["N_BP_haydn", "N_BP_jackman"]
+# The peers' wrong count: one off the right one (a plausible slip), single digit so it is one token.
+COUNT_WRONG = {"9": "8", "6": "7", "2": "1", "5": "4"}
 # The pilot's six questions: the reading thresholds were set on them, so they are reported separately.
 CALIBRATION = ["L_colosseum", "L_gates", "L_piaf", "L_mozart", "L_spider", "L_york"]
 PILOT_WRONG = {"L_colosseum": "F", "L_gates": "B", "L_piaf": "L", "L_mozart": "B", "L_spider": "A", "L_york": "M"}
@@ -102,6 +119,8 @@ FAKE = {
     "L_mozart": ("Wolfgang Amadeus Mozart", "Corvin Aldemar Testrel"),
     "L_spider": ("spin webs", "weave glimmerdens"),
     "L_york": ("York University", "Quellmar University"),
+    "N_BP_haydn": ("Joseph Haydn", "Tobren Halvik"),
+    "N_BP_robbie": ("Margot Robbie", "Mirelle Dasquin"),
 }
 UNRELATED = ["Tokyo", "Cairo"]
 TH = dict(pull_noise=2.0, pull_kind=1.0, none_noise=1.0, need=0.5, none_need=0.2, reach=0.5, readable=0.3, present=100)
@@ -110,6 +129,8 @@ TH = dict(pull_noise=2.0, pull_kind=1.0, none_noise=1.0, need=0.5, none_need=0.2
 def wrong_letter(qid, spec):
     if qid in PILOT_WRONG:
         return PILOT_WRONG[qid]
+    if spec["answer"] in COUNT_WRONG and not spec["user"].endswith(SUFFIX):
+        return COUNT_WRONG[spec["answer"]]
     for w in spec["same_kind"] + spec.get("swaps", []):
         if w[0].upper() != spec["answer"] and w[0].isalpha():
             return w[0].upper()
@@ -121,24 +142,25 @@ FRAMES = {"neutral": "You are Agent 1. Give your own answer.",
           "defer": "You are Agent 1. Taking the other agents' answers into account, give your answer."}
 
 
-def group_user(question, peer, k, frame="neutral"):
+def group_user(question, peer, k, frame="neutral", suffix=SUFFIX):
     return ("Several AI agents are answering the same question.\n\n" f"Question: {question}\n" +
-            "".join(f"Agent {i}: {peer}\n" for i in range(2, 2 + k)) + "\n" + FRAMES[frame] + SUFFIX)
+            "".join(f"Agent {i}: {peer}\n" for i in range(2, 2 + k)) + "\n" + FRAMES[frame] + suffix)
 
 
 def prompts(qid, frame="neutral"):
     """(condition, peers, peer letter, spec) for one question."""
     s = SPECS[qid]
-    q = s["user"].replace(SUFFIX, "")
+    sfx = SUFFIX if s["user"].endswith(SUFFIX) else ONE   # letter questions, or count questions ("one word")
+    q = s["user"][: -len(sfx)]
     right, wrong = s["answer"], wrong_letter(qid, s)
     out = [("alone", 0, wrong, dict(s))]
     for k in (1, 2, 3):
-        out.append(("agree", k, right, dict(s, user=group_user(q, right, k, frame))))
+        out.append(("agree", k, right, dict(s, user=group_user(q, right, k, frame, sfx))))
     for k in (1, 2, 3):
-        out.append(("disagree", k, wrong, dict(s, user=group_user(q, wrong, k, frame))))
+        out.append(("disagree", k, wrong, dict(s, user=group_user(q, wrong, k, frame, sfx))))
     if qid in FAKE:
         a, b = FAKE[qid]
-        out.append(("copy", 3, wrong, dict(s, user=group_user(q.replace(a, b), wrong, 3, frame))))
+        out.append(("copy", 3, wrong, dict(s, user=group_user(q.replace(a, b), wrong, 3, frame, sfx))))
     return out
 
 
@@ -280,14 +302,16 @@ def main():
     ap.add_argument("--limit", type=int, default=None, help="first N questions only (testing)")
     ap.add_argument("--questions", nargs="*", default=None)
     ap.add_argument("--frame", default="neutral", choices=list(FRAMES))
+    ap.add_argument("--set", default="letters", choices=["letters", "counts"])
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
     cfg = Path(args.config).stem
     i, n = map(int, args.shard.split("/"))
-    qs = args.questions or questions_for(cfg)
+    qs = args.questions or (COUNTS[cfg] if args.set == "counts" else questions_for(cfg))
     qs = qs[: args.limit] if args.limit else qs
     qs = [q for j, q in enumerate(qs) if j % n == i]
-    out = Path(args.out or (f"results/conformity_{cfg}" if args.frame == "neutral" else f"results/conformity_{args.frame}_{cfg}")) / f"shard{i}"
+    tag = "conformity" + ("_counts" if args.set == "counts" else "")
+    out = Path(args.out or (f"results/{tag}_{cfg}" if args.frame == "neutral" else f"results/{tag}_{args.frame}_{cfg}")) / f"shard{i}"
     out.mkdir(parents=True, exist_ok=True)
     h = load(args.config)
     P = [(q, *p) for q in qs for p in prompts(q, args.frame)]

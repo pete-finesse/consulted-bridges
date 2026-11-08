@@ -1,0 +1,32 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  59%|█████▊    | 499/851 [00:00<00:00, 4971.74it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 6075.49it/s]
+PROGRESS 0/13 starting N_BP_schubert
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[N_BP_schubert] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 1/13 starting N_BP_lauda
+[N_BP_lauda] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 2/13 starting N_BP_klimt
+[N_BP_klimt] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 3/13 starting N_BP_robbie
+[N_BP_robbie] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 4/13 starting N_BP_blanchett
+[N_BP_blanchett] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 5/13 starting N_BP_senna
+[N_BP_senna] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 6/13 starting N_BP_niemeyer
+[N_BP_niemeyer] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 7/13 starting N_BP_imran
+[N_BP_imran] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 8/13 starting N_BP_hepburn
+[N_BP_hepburn] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 9/13 starting N_BP_federer
+[N_BP_federer] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 10/13 starting N_BP_gandhi
+[N_BP_gandhi] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 11/13 starting N_BP_jackman_cricket
+[N_BP_jackman_cricket] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 12/13 starting N_BP_jackman
+[N_BP_jackman] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 13/13 ALLDONE
+SHARD DONE qwen36_27b 1/2
