@@ -147,6 +147,11 @@
   .checks2 { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; font-size: 0.92rem; align-items: center; }
   .checks2 b { font-size: 1.2rem; }
   .checks2 .y { color: var(--ok); } .checks2 .n { color: var(--bad); }
+  .assoc { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 0.9rem; }
+  .assoc .chip { padding: 2px 10px; }
+  .assoc-links { width: 40px; height: 0; border-top: 2px dashed var(--muted); }
+  .assoc-words { display: flex; gap: 6px; flex-wrap: wrap; }
+  .story p { font-size: 0.95rem; }
   .punch { font-size: 1.15rem; font-weight: 600; }
   /* transcript */
   .transcript { display: grid; gap: 8px; font-size: 0.95rem; }
@@ -387,15 +392,13 @@
       <h3>Why being readable doesn't mean being used</h3>
       <div class="whygrid">
         <div class="why">
-          <h4>The bridge shows up no matter what the agent does</h4>
-          <p>In the paper's own data, the J-lens finds Salzburg in the agent's state in every situation:</p>
-          <div class="always" aria-label="Salzburg is readable in every situation">
-            <div><span>the agent agreed with the peers</span><b>✓</b></div>
-            <div><span>the agent held its own answer</span><b>✓</b></div>
-            <div><span>the agent gave in to the peers</span><b>✓</b></div>
-            <div><span>the agent hadn't answered yet</span><b>✓</b></div>
+          <h4>Words light up by association</h4>
+          <div class="assoc" aria-label="Reading Mozart brings related words to mind">
+            <span class="chip">Mozart</span>
+            <span class="assoc-links" aria-hidden="true"></span>
+            <span class="assoc-words"><span class="chip br">Salzburg</span><span class="chip">Vienna</span><span class="chip">piano</span></span>
           </div>
-          <p>So finding Salzburg after the agent gives in doesn't show it is still holding on to Austria. It may only show that the model read the word “Mozart”.</p>
+          <p>Reading “Mozart” brings Salzburg to mind whether or not the model uses it to find the country. A word can be readable just because something related to it was read.</p>
         </div>
         <div class="why">
           <h4>The answer may not need the bridge at all</h4>
@@ -408,16 +411,15 @@
       </div>
       <div class="stories">
         <div class="story a-side">
-          <span class="tag">Story A</span>
-          <h4>Worked out Austria, said France anyway</h4>
-          <div class="checks2"><span>J-lens reads Salzburg</span><b class="y">✓</b><span>Remove Salzburg: answer moves</span><b class="y">✓</b></div>
+          <h4>If the agent worked out Austria and said France anyway</h4>
+          <p>Removing Salzburg would change its answer: the pull toward Austria goes away.</p>
         </div>
         <div class="story b-side">
-          <span class="tag">Story B</span>
-          <h4>Took France from the peers</h4>
-          <div class="checks2"><span>J-lens reads Salzburg</span><b class="y">✓</b><span>Remove Salzburg: answer moves</span><b class="n">✗</b></div>
+          <h4>If the agent just took France from the peers</h4>
+          <p>Removing Salzburg would change nothing.</p>
         </div>
       </div>
+      <p class="note">In both cases Salzburg can be readable.</p>
       <p class="punch">Reading can't tell these apart. <span class="a">Removing can.</span></p>
     </div>
   </section>
