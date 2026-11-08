@@ -136,6 +136,10 @@
   .chip.pe { border-color: var(--peer); color: var(--peer); background: var(--peer-soft); font-weight: 700; }
   .arrow { color: var(--muted); }
   .thesis { font-size: 1.15rem; max-width: 64ch; }
+  .tblock { display: grid; gap: 14px; }
+  .tblock h3 { margin-top: 6px; }
+  .tblock ul { margin: 0; padding-left: 1.2em; display: grid; gap: 10px; }
+  .tblock li::marker { color: var(--bridge); }
   .facts { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
   .fact { border-top: 2px solid var(--ink); padding-top: 10px; display: grid; gap: 4px; }
   .fact b { font-family: var(--display); font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; }
@@ -389,7 +393,16 @@
       <p class="note">P(“red”) is the probability the model gives to “red” as its next word. <b>Original</b> is the model as it is; <b>edited</b> is the same model with <span class="b">Mars</span> removed from its internal thinking. Left alone, both stories give the same word with the same probabilities. They differ only once Mars is removed.</p>
     </figure>
 
-    <p class="thesis">Here the thing we remove is <span class="b">Mars</span>, the hidden middle step the model has to work out for itself. We use questions built around such a step, and make the same edit when the agent answers alone and when other agents agree or disagree with it.</p>
+    <div class="thesis tblock">
+      <p>This work extends <i>Silent Dissent: LLM Agents That Yield to the Majority Still Represent Their Original Premise</i> (Ni and Zou, October 2026). They ask the same question: when an agent changes its answer, has it changed its mind or only what it says? Their test is to look inside the model: if the original reasoning is still there, the agent hasn’t changed its mind. We claim their method can only show that <span class="b">Mars</span> is <i>present</i>, not that the answer still <i>depends</i> on it. That’s the difference between Story A and Story B, which look the same from outside. So instead of looking for Mars, we <b>remove it</b> and see whether the answer changes.</p>
+      <h3>What we found</h3>
+      <ul>
+        <li><b>Their signal is on almost everywhere.</b> Mars is readable whether the group agrees, disagrees, or the agent answers alone.</li>
+        <li><b>When the agent resists, Mars is what holds it.</b></li>
+        <li><b>When it yields, both stories occur.</b> Sometimes Mars still pulls toward red: real silent dissent. Sometimes it doesn’t pull at all, yet it’s still readable, so their method would count that case as silent dissent too.</li>
+        <li><b>When the group agrees, Mars stops mattering but stays just as readable.</b> Whether the agent is copying or has a second route remains to be tested.</li>
+      </ul>
+    </div>
     <div class="facts" aria-label="Study at a glance">
       <div class="fact"><b>2 models</b><span>Qwen3.6-27B and Qwen3.5-4B</span></div>
       <div class="fact"><b>49 questions</b><span>that pass four requirements</span></div>
@@ -402,10 +415,8 @@
   <section class="chapter" id="context">
     <div class="ch-head">
       <span class="ch-num">Chapter 1 · Context</span>
-      <h2>Has the agent changed its mind, or only what it says?</h2>
-      <p>This work extends <i>Silent Dissent: LLM Agents That Yield to the Majority Still Represent Their Original Premise</i> (Ni and Zou, October 2026). They put a model in a group of scripted agents who all give the same wrong answer. When the model gives in, they look inside it. If its original reasoning is still there, it has changed only what it says: it thinks one thing and says another.</p>
+      <h2>How can you see what a model is thinking?</h2>
     </div>
-    <div class="col"><h3>How can you see what a model is thinking?</h3></div>
     <figure class="panel howfig">
       <div class="ldgrid">
         <div class="ld-note left">
