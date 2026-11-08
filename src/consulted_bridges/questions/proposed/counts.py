@@ -21,7 +21,11 @@ Families:
   N_X   one-off shapes: a game's board, an instrument's strings, a planet's moons
 
 Same-kind controls are words of the bridge's kind with a DIFFERENT answer (as Spain, one win, for France, two).
-Not run yet.
+
+Screened 2026-11-08 (trimmed scorecard, results/counts_<config>/):
+  Qwen3.6-27B consulted: N_BP_schwarzenegger 0.94, N_BP_jackman 0.80, N_LM_eiffel 0.78, N_BP_gisele 0.39 (weak
+    specificity). Most others fail knows-it (World Cup counts answered 0) or the edit never reaches the bridge.
+  Qwen3.5-4B consulted: N_LM_fuji 0.35 only.
 """
 from __future__ import annotations
 
