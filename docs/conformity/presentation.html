@@ -246,7 +246,11 @@
   .ins-chain { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
   .ins-n { font-size: 0.8rem; color: var(--muted); font-style: italic; }
   .prs { display: grid; gap: 6px; padding: 10px 12px; border-radius: 8px; background: var(--panel); }
-  .venn { width: 100%; max-width: 240px; height: auto; justify-self: center; }
+  .spill-row { display: flex; align-items: center; gap: 14px 18px; flex-wrap: wrap; }
+  .spill-out { display: grid; gap: 8px; }
+  .spill-out > div { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .slbl { font-size: 0.8rem; color: var(--muted); }
+  .tf-pill.hit { border-color: var(--answer); color: var(--answer); background: repeating-linear-gradient(135deg, var(--answer-soft) 0 5px, transparent 5px 10px); opacity: 0.75; }
   .punch { font-size: 1.15rem; font-weight: 600; }
   /* transcript */
   .transcript { display: grid; gap: 8px; font-size: 0.95rem; }
@@ -621,29 +625,22 @@
       <p class="note">Sketch numbers, to show the idea. Original is the model as it is; edited is the same model with Salzburg removed.</p>
     </figure>
     <div class="col">
-      <p>A removal only means something if the answer can move for no other reason than the bridge. And the Mozart question itself turns out to be a risky test: Salzburg is a poor bridge, for two reasons.</p>
+      <p>Removals and probabilities give us a way to test whether a model is really using its internal thinking to reach its answer. But editing the J-space along one direction can affect more than the token you are aiming at, because the directions of related tokens overlap.</p>
+      <p>Salzburg is an example. It is an Austrian city, so its direction shares a lot with Austria's. Removing Salzburg also removes part of Austria itself, and the chance of Austria drops even if the model never used Salzburg. A copier would look like a dissenter.</p>
     </div>
-    <figure class="panel">
-      <div class="whygrid">
-        <div class="why">
-          <span class="tag">A shortcut can hide real dissent</span>
-          <div class="routes" aria-label="Mozart can lead straight to Austria"><div class="route-short"><span class="chip">Mozart</span><span class="shortline" aria-hidden="true"></span><span class="chip an">Austria</span></div></div>
-          <p>Mozart is famous for being Austrian, so the model can reach Austria without Salzburg. Then removing Salzburg changes nothing, even if the agent still thinks Austria. <b>A dissenter would look like a copier.</b></p>
-        </div>
-        <div class="why">
-          <span class="tag">A lookalike can fake it</span>
-          <svg class="venn" viewBox="0 0 240 92" role="img" aria-label="The Salzburg and Austria directions overlap">
-            <circle cx="92" cy="46" r="44" style="fill: var(--bridge-soft); stroke: var(--bridge)" stroke-width="1.5" stroke-dasharray="4 3"/>
-            <circle cx="148" cy="46" r="44" style="fill: var(--answer-soft); stroke: var(--answer)" stroke-width="1.5"/>
-            <text x="72" y="50" text-anchor="middle" font-size="11.5" font-weight="700" style="fill: var(--bridge)">Salzburg</text>
-            <text x="170" y="50" text-anchor="middle" font-size="11.5" font-weight="700" style="fill: var(--answer)">Austria</text>
-          </svg>
-          <p>Salzburg is an Austrian city, so its direction overlaps with Austria's. Removing Salzburg also removes a bit of Austria, and the chance of Austria drops even if Salzburg played no part. <b>A copier would look like a dissenter.</b></p>
+    <figure class="panel spill" aria-label="Removing Salzburg also weakens Austria, but leaves France untouched">
+      <div class="spill-row">
+        <span class="tag">Remove</span><span class="tf-pill br">Salzburg</span>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div class="spill-out">
+          <div><span class="tf-pill x">Salzburg</span><span class="slbl">removed, as intended</span></div>
+          <div><span class="tf-pill hit">Austria</span><span class="slbl">partly removed too: overlaps with Salzburg</span></div>
+          <div><span class="tf-pill">France</span><span class="slbl">untouched</span></div>
         </div>
       </div>
     </figure>
     <div class="col">
-      <p>So we need questions without these problems. The next section sets out what such a question has to satisfy.</p>
+      <p>So the questions we test with have to avoid this, along with a few other traps. The next section sets out what a question has to satisfy.</p>
     </div>
   </section>
 
