@@ -82,7 +82,7 @@
   .votecol > .tag { font-size: 0.8125rem; color: var(--ink); }
   .turn { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 10px; align-items: center; padding: 11px 12px; border-radius: 8px; border: 2px solid var(--answer); background: var(--answer-soft); box-shadow: 0 0 0 4px color-mix(in srgb, var(--answer) 10%, transparent); }
   .turn .who { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--answer); text-transform: uppercase; letter-spacing: 0.04em; }
-  .turn .slot b { color: var(--answer); }
+  .turn .slot.dots { color: var(--answer); font-size: 1.3rem; font-weight: 700; line-height: 1; letter-spacing: 0.1em; }
   .turn .slot { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--muted); }
   .turn .caret { display: inline-block; width: 2px; height: 1.15em; background: var(--answer); animation: blink 1.1s steps(1) infinite; }
   @keyframes blink { 50% { opacity: 0; } }
@@ -347,8 +347,8 @@
         <span class="tag">The group agrees</span>
         <div class="line"><span class="who">Question</span><span>What color is the planet fourth from the sun?</span></div>
         <div class="line peer"><span class="who">Agent 2</span><span class="a">red</span></div><div class="line peer"><span class="who">Agent 3</span><span class="a">red</span></div><div class="line peer"><span class="who">Agent 4</span><span class="a">red</span></div>
-        <div class="turn" aria-label="Agent 1's turn, no answer yet"><span class="who">Agent 1</span><span class="slot"><b>Its turn</b><span class="caret" aria-hidden="true"></span>not answered yet</span></div>
-        <svg class="fork" viewBox="0 0 200 34" preserveAspectRatio="none" aria-hidden="true"><path d="M100 0 C100 18 50 14 50 34" stroke-width="7" vector-effect="non-scaling-stroke"/><path d="M100 0 C100 18 150 14 150 34" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
+        <div class="turn" aria-label="Agent 1, no answer yet"><span class="who">Agent 1</span><span class="slot dots">…</span></div>
+        <svg class="fork" viewBox="0 0 200 34" preserveAspectRatio="none" aria-hidden="true"><path d="M100 0 C100 18 50 14 50 34" stroke-width="2" vector-effect="non-scaling-stroke"/><path d="M100 0 C100 18 150 14 150 34" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
         <div class="branches">
           <div class="branch"><span class="bl">Yields</span><span class="bs">gives the group's answer</span><div class="bw"><b class="a">red</b><span>96%</span></div><div class="tr"><i style="--v:.96"></i></div></div>
           <div class="branch faint"><span class="bl">Resists</span><span class="bs">gives a different answer</span><div class="bw"><b class="mutedw">any other color</b><span>4%</span></div><div class="tr"><i class="no" style="--v:.04"></i></div></div>
@@ -358,14 +358,14 @@
         <span class="tag">The group disagrees</span>
         <div class="line"><span class="who">Question</span><span>What color is the planet fourth from the sun?</span></div>
         <div class="line peer"><span class="who">Agent 2</span><span class="p">blue</span></div><div class="line peer"><span class="who">Agent 3</span><span class="p">blue</span></div><div class="line peer"><span class="who">Agent 4</span><span class="p">blue</span></div>
-        <div class="turn" aria-label="Agent 1's turn, no answer yet"><span class="who">Agent 1</span><span class="slot"><b>Its turn</b><span class="caret" aria-hidden="true"></span>not answered yet</span></div>
-        <svg class="fork" viewBox="0 0 200 34" preserveAspectRatio="none" aria-hidden="true"><path d="M100 0 C100 18 50 14 50 34" stroke-width="5" vector-effect="non-scaling-stroke"/><path d="M100 0 C100 18 150 14 150 34" stroke-width="3.5" vector-effect="non-scaling-stroke"/></svg>
+        <div class="turn" aria-label="Agent 1, no answer yet"><span class="who">Agent 1</span><span class="slot dots">…</span></div>
+        <svg class="fork" viewBox="0 0 200 34" preserveAspectRatio="none" aria-hidden="true"><path d="M100 0 C100 18 50 14 50 34" stroke-width="2" vector-effect="non-scaling-stroke"/><path d="M100 0 C100 18 150 14 150 34" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
         <div class="branches">
           <div class="branch"><span class="bl">Yields</span><span class="bs">gives the group's answer</span><div class="bw"><b class="p">blue</b><span>62%</span></div><div class="tr"><i class="pe" style="--v:.62"></i></div></div>
           <div class="branch"><span class="bl">Resists</span><span class="bs">gives a different answer</span><div class="bw"><b class="a">red</b><span>35%</span></div><div class="tr"><i style="--v:.35"></i></div></div>
         </div>
       </div>
-      <p class="note" style="grid-column: 1 / -1">The model does not pick one word outright. Each next word gets a probability, and the thickness of each branch shows it. These numbers are made up to show the idea; real ones come later.</p>
+      <p class="note" style="grid-column: 1 / -1">The model does not pick one word outright. Each possible next word gets a probability. These numbers are made up to show the idea; real ones come later.</p>
     </figure>
 
     <figure class="hstories" aria-label="Two stories for why Agent 1 yields, and what removing Mars would do in each">
