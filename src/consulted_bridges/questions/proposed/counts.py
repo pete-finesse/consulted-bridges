@@ -143,3 +143,69 @@ SPECS = dict([
 
 # Reference questions already in the bank, re-run as anchors (they reproduce the saved results or the pod differs):
 #   T_place_states_austria (27B consulted 0.92), T_place_states_australia (4B consulted 0.57), V_T_basketball (4B 0.96)
+
+
+# ---- Round two (2026-11-08): more of the one shape that passed on Qwen3.6-27B, person -> birth country -> count.
+# Several people per country, so a pass is not one lucky subject; more countries and answers so it is not one fact.
+CRICKET = "How many times has {} won the men's cricket World Cup?"
+CRICKET_COUNTRIES = ["Australia", "India", "England", "Pakistan", "Bangladesh", "Afghanistan", "Ireland", "Kenya"]
+STATE_SWAPS = ["Germany", "Switzerland", "Brazil", "Mexico", "India", "Nigeria", "Malaysia", "Venezuela"]
+
+
+def cricket_born(name, predict, person, country, ans, same_kind):
+    return count(name, predict, f"How many times has the country where {person} was born won the men's cricket World Cup?",
+                 country, "country", ans, f"In which country was {person} born?", CRICKET.format(country), CRICKET,
+                 same_kind, CRICKET_COUNTRIES, "N_BP")
+
+
+def austria(name, person):
+    return born_count(name, "consulted (Austria: 9 federal states)", person, "Austria", "9", "federal states",
+                      ["Germany", "Switzerland"], STATE_SWAPS)
+
+
+def australia(name, person):
+    return born_count(name, "consulted (Australia: 6 states)", person, "Australia", "6", "states",
+                      ["Austria", "Germany"], ["Austria"] + STATE_SWAPS)
+
+
+ROUND2 = dict([
+    austria("N_BP_haydn", "Joseph Haydn"),
+    austria("N_BP_schubert", "Franz Schubert"),
+    austria("N_BP_strauss", "Johann Strauss II"),
+    austria("N_BP_lauda", "Niki Lauda"),
+    austria("N_BP_lamarr", "Hedy Lamarr"),
+    austria("N_BP_klimt", "Gustav Klimt"),
+    australia("N_BP_minogue", "Kylie Minogue"),
+    australia("N_BP_robbie", "Margot Robbie"),
+    australia("N_BP_irwin", "Steve Irwin"),
+    australia("N_BP_blanchett", "Cate Blanchett"),
+    australia("N_BP_hemsworth", "Chris Hemsworth"),
+    wc_born("N_BP_senna", "consulted (Brazil: 5 World Cups)", "Ayrton Senna", "Brazil", "5", ["Argentina", "Italy"]),
+    wc_born("N_BP_coelho", "consulted (Brazil: 5 World Cups)", "Paulo Coelho", "Brazil", "5", ["Argentina", "Italy"]),
+    wc_born("N_BP_niemeyer", "consulted (Brazil: 5 World Cups)", "Oscar Niemeyer", "Brazil", "5", ["Argentina", "Italy"]),
+    wc_born("N_BP_francis", "consulted (round one's Argentina question was answered 0)", "Pope Francis", "Argentina",
+            "3", ["Brazil", "Uruguay"]),
+    born_count("N_BP_imran", "consulted (Pakistan: 4 provinces)", "Imran Khan", "Pakistan", "4", "provinces",
+               ["India", "Canada"], ["India", "Canada", "Spain", "Italy", "Argentina", "Belgium", "Netherlands", "Finland"]),
+    born_count("N_BP_malala", "consulted (Pakistan: 4 provinces)", "Malala Yousafzai", "Pakistan", "4", "provinces",
+               ["India", "Canada"], ["India", "Canada", "Spain", "Italy", "Argentina", "Belgium", "Netherlands", "Finland"]),
+    born_count("N_BP_hepburn", "consulted (Belgium: 3 regions)", "Audrey Hepburn", "Belgium", "3", "regions",
+               ["Switzerland", "Netherlands"], ["Switzerland", "Netherlands", "France", "Italy", "Spain", "Germany",
+                                                "Denmark", "Finland"]),
+    born_count("N_BP_herge_regions", "consulted (Belgium: 3 regions; round one asked languages)", "Hergé", "Belgium",
+               "3", "regions", ["Switzerland", "Netherlands"],
+               ["Switzerland", "Netherlands", "France", "Italy", "Spain", "Germany", "Denmark", "Finland"]),
+    born_count("N_BP_federer", "consulted (Switzerland: 4 national languages)", "Roger Federer", "Switzerland", "4",
+               "national languages", ["Belgium", "Canada"],
+               ["Belgium", "Canada", "France", "Germany", "Netherlands", "Spain", "Italy", "Finland"]),
+    born_count("N_BP_corbusier", "consulted (Switzerland: 4 national languages)", "Le Corbusier", "Switzerland", "4",
+               "national languages", ["Belgium", "Canada"],
+               ["Belgium", "Canada", "France", "Germany", "Netherlands", "Spain", "Italy", "Finland"]),
+    cricket_born("N_BP_gandhi", "consulted (India: 2 cricket World Cups)", "Mahatma Gandhi", "India", "2",
+                 ["Pakistan", "England"]),
+    cricket_born("N_BP_srk", "consulted (India: 2 cricket World Cups)", "Shah Rukh Khan", "India", "2",
+                 ["Pakistan", "England"]),
+    cricket_born("N_BP_jackman_cricket", "consulted (same person and bridge as N_BP_jackman, another count)",
+                 "Hugh Jackman", "Australia", "6", ["India", "Pakistan"]),
+])
+SPECS.update(ROUND2)

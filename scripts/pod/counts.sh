@@ -8,8 +8,8 @@ cfg=${1:?config}; shard=${2:-0/1}
 source /workspace/env.sh
 export HF_HUB_OFFLINE=1 PYTHONPATH=/workspace/counts/src
 cd /workspace/counts
-ANCHORS="T_place_states_austria T_place_states_australia V_T_basketball"
-NEW=$(/workspace/consulted-bridges/.venv/bin/python -c "from consulted_bridges.questions.proposed.counts import SPECS; print(' '.join(SPECS))")
+ANCHORS="T_place_states_austria T_place_states_australia V_T_basketball"; [ "${ROUND:-1}" = 2 ] && ANCHORS="T_place_states_austria N_BP_jackman"
+NEW=$(/workspace/consulted-bridges/.venv/bin/python -c "from consulted_bridges.questions.proposed import counts as c; print(' '.join(c.ROUND2 if '${ROUND:-1}' == '2' else c.SPECS))")
 /workspace/consulted-bridges/.venv/bin/python -m consulted_bridges.scorecard --config "$cfg" --sets counts,trend,proposed \
-  --trim --spec $NEW $ANCHORS --shard "$shard" --out "results/counts_$cfg"
+  --trim --spec $NEW $ANCHORS --shard "$shard" --out "results/counts${ROUND:+_r$ROUND}_$cfg"
 echo "SHARD DONE $cfg $shard"
