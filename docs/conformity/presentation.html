@@ -168,6 +168,25 @@
   .ld-table td.a, .ld-table td.b, .ld-table td.ld-c { font-weight: 700; }
   .ld-c { color: var(--peer); }
 
+  .swapfig { gap: 16px; }
+  .swapprompt { display: grid; gap: 4px; padding: 12px 14px; border-radius: 8px; background: var(--bg); border: 1px solid var(--line); font-size: 1.05rem; }
+  .swaprows { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+  .swaprow { display: grid; grid-template-columns: auto auto 1fr; gap: 8px 14px; align-items: end; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; }
+  .swaprow .tag { grid-column: 1 / -1; }
+  .swaprow .arrow { padding-bottom: 4px; }
+  .swapstep { display: grid; gap: 3px; justify-items: start; }
+  .slbl { font-size: 0.75rem; color: var(--muted); }
+  .chip.sw { border-color: var(--peer); color: var(--peer); background: var(--peer-soft); font-weight: 700; }
+  .hops { display: grid; grid-template-columns: minmax(0, 1.4fr) auto minmax(0, 1fr) auto minmax(0, 0.7fr); gap: 12px 14px; align-items: center; }
+  .hops .chip { justify-self: start; }
+  .hh { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+  .hh.b { color: var(--bridge); } .hh.a { color: var(--answer); }
+  .hop { display: grid; justify-items: center; font-size: 0.75rem; color: var(--muted); line-height: 1.1; }
+  .hop i { font-style: normal; font-size: 1.2rem; }
+  @media (max-width: 600px) {
+    .hops { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto auto; gap: 10px 8px; font-size: 0.9rem; }
+    .hh { font-size: 0.65rem; }
+  }
   .pipe { display: grid; grid-template-columns: minmax(0, 1.4fr) auto minmax(0, 1fr) auto minmax(0, 0.55fr); gap: 12px; align-items: center; }
   .pipe-box { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; background: var(--panel); min-height: 100%; }
   .pipe-box .pq { font-size: 1rem; line-height: 1.45; }
@@ -420,42 +439,43 @@
     <div class="ch-head">
       <span class="ch-num">Chapter 1 · Context</span>
       <h2>How can you see what a model is thinking?</h2>
+      <p>There are many methods for inspecting a model's internals. A recent one, from this summer, is the Jacobian lens, or <b>J-lens</b> (Gurnee et al., 2026). For every word in the vocabulary, it finds a <b>direction</b> at each layer: roughly, how sensitive the model's eventual output of that word is to the state there. Reading the model's state along these directions while it runs shows which words are most active. The authors call this the <b>J-space</b>, and show that models do part of their thinking in it.</p>
+      <p>Seeing a word there doesn't prove the model uses it, so they also <b>swap</b> it. In the prompt below, “spider” lights up partway through even though it is never written. Replace it with “ant”, and the answer changes from 8 to 6.</p>
     </div>
-    <figure class="panel howfig">
-      <div class="ldgrid">
-        <div class="ld-note left">
-          <span class="tag">Two-hop question</span>
-          <p>Names one thing and asks about another, reachable only through a hidden middle step.</p>
+
+    <figure class="panel swapfig" aria-label="Swapping spider for ant in the J-space changes the answer from 8 to 6">
+      <div class="swapprompt"><span class="tag">Prompt</span><span>The number of legs on the animal that spins webs is</span></div>
+      <div class="swaprows">
+        <div class="swaprow">
+          <span class="tag">As is</span>
+          <span class="swapstep"><span class="slbl">in the J-space</span><span class="chip br">spider</span></span>
+          <span class="arrow" aria-hidden="true">→</span>
+          <span class="swapstep"><span class="slbl">answer</span><span class="chip an">8</span></span>
         </div>
-        <div class="lensdemo">
-          <div class="ld-prompt">The color of the planet fourth from the sun <span class="ld-tok">is</span></div>
-          <span class="ld-line" aria-hidden="true"></span>
-          <table class="ld-table" aria-label="Top J-lens word at three layers">
-            <thead><tr><th>Layer</th><th>J-lens</th></tr></thead>
-            <tbody>
-              <tr><td>Final</td><td class="a">red</td></tr>
-              <tr><td>71</td><td class="b">Mars</td></tr>
-              <tr><td>50</td><td class="ld-c">color</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="ld-note right">
-          <span class="tag" style="color:var(--bridge)">J-lens</span>
-          <p>Reads the model's state, layer by layer, as the words it is heading toward saying: “color”, then “Mars”, then “red”.</p>
+        <div class="swaprow">
+          <span class="tag">Swapped</span>
+          <span class="swapstep"><span class="slbl">in the J-space</span><span class="chip sw">ant</span></span>
+          <span class="arrow" aria-hidden="true">→</span>
+          <span class="swapstep"><span class="slbl">answer</span><span class="chip an">6</span></span>
         </div>
       </div>
-      <div class="ghost" aria-label="The two hops">
-        <span class="chip">planet fourth from the sun</span><span class="arrow">→</span>
-        <span class="chip br">Mars</span><span class="arrow">→</span>
-        <span class="chip an">red</span>
-        <span class="note"><span class="b">Mars</span> is the hidden middle step, the <b>bridge</b>: nobody writes it.</span>
-      </div>
-      <figcaption>Example from the Jacobian lens paper (Gurnee et al., 2026).</figcaption>
+      <figcaption>Example from the Jacobian lens paper (Gurnee et al., 2026). The answer follows the word in the J-space, so the model is using it, not just showing it.</figcaption>
     </figure>
+
     <div class="col">
-      <h3>Why these two tools together</h3>
-      <p>The two-hop question supplies a word, <b>the bridge</b>, that has to come from the model rather than from the text. The J-lens reads words the model is moving toward saying later, not only the next word, which suits a word that is never said out loud. Together they let you ask: is the model's own middle step still there?</p>
-      <p>The J-lens also gives every word a <b>direction</b> inside the model. That is what we will remove later.</p>
+      <p>This type of question is known as a <b>two-hop</b> reasoning problem. The question names one thing and asks about another, and the only way between them is a middle step the model has to supply itself: <b>the bridge</b>.</p>
+    </div>
+
+    <figure class="panel hopfig" aria-label="The structure of a two-hop question: what the question names, the hidden bridge, and the answer">
+      <div class="hops">
+        <span class="hh">What the question names</span><span></span><span class="hh b">The bridge · never written</span><span></span><span class="hh a">The answer</span>
+        <span class="chip">the animal that spins webs</span><span class="hop">hop 1<i>→</i></span><span class="chip br">spider</span><span class="hop">hop 2<i>→</i></span><span class="chip an">8</span>
+        <span class="chip">the planet fourth from the sun</span><span class="hop">hop 1<i>→</i></span><span class="chip br">Mars</span><span class="hop">hop 2<i>→</i></span><span class="chip an">red</span>
+      </div>
+    </figure>
+
+    <div class="col">
+      <p>These questions are the key to our setup for telling whether an agent is thinking for itself. The Silent Dissent work uses them the same way: they claim that when the agent yields, if the bridge still shows up in the J-space, the model hasn't “changed its mind”; it has only “changed its statement”.</p>
     </div>
   </section>
 
