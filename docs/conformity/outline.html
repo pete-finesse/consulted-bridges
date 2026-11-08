@@ -85,6 +85,37 @@
     <p>Take “What letter does the name of the country where the Colosseum is located start with?”. To answer “I”, the model has to think of <span class="b">Italy</span>, a word that is never written: the <b>bridge</b>. Alone, removing Italy's direction inside the model destroys the answer, so the answer depends on the model's own path through Italy. Now show the same question with three other agents answering first. If they say <span class="a">I</span>, does the model still go through Italy, or does it just repeat them? If they say <span class="p">S</span> and the model gives in, is Italy still pulling it toward “I”? The paper we build on (Silent Dissent) says the bridge is still <i>present</i> when agents give in. We test whether it is still <i>used</i>.</p>
   </section>
 
+  <section class="section" id="testable">
+    <div class="col">
+      <span class="kicker">Why these questions</span>
+      <h2>The test decides the question type, not the other way round</h2>
+      <p>We did not set out to study letter questions. We set out to test whether an agent's answer in a group still comes from its own reasoning. That test only works on questions with certain properties, and the question format follows from those properties.</p>
+    </div>
+    <div class="panel">
+      <h3>What a question needs for the test to work</h3>
+      <ul class="list">
+        <li><span>1</span><span><b>Alone, the answer depends on the bridge.</b> Removing the bridge's direction must destroy the answer when the model answers by itself. Otherwise there is no “own reasoning” to look for in the group.</span></li>
+        <li><span>2</span><span><b>The bridge and the answer are different things inside the model.</b> If the answer is the bridge or close to it in meaning (York University → Toronto → <i>Canada</i>), Toronto's direction already contains part of “Canada”. Removing the bridge then also removes part of the answer, and we can't tell “the model used the bridge” from “we deleted the answer”. The answer has to be an arbitrary property of the bridge, one that shares nothing with its meaning.</span></li>
+        <li><span>3</span><span><b>The input can't give the answer without the bridge.</b> There must be no shortcut from the question's words straight to the answer, or the model could answer without its own middle step.</span></li>
+        <li><span>4</span><span><b>The peers dispute the answer, not the bridge.</b> The peers' wrong answer must be a plausible alternative of the same kind, so the model can either copy it or work out its own. The bridge then stays untouched as a probe of the model's own path.</span></li>
+        <li><span>5</span><span><b>One token per answer.</b> So the probabilities of the right answer and the peers' answer can be compared directly, and the peers' answer is a single, matched alternative.</span></li>
+      </ul>
+    </div>
+    <div class="two">
+      <div class="panel">
+        <h3>What fits</h3>
+        <p><b>The first letter of a named place or thing</b> meets all five. “What letter does the name of the country where the Colosseum is located start with?” needs Italy (1); a letter shares nothing with a country's meaning (2); nothing in “Colosseum” leads to “I” except through Italy's spelling (3); the peers can say another letter (4); the answer is one token (5).</p>
+        <p>Other arbitrary properties would fit too, such as a count (legs of the animals that spin webs) or a number fact about a place. Letter questions are simply the type that passes the solo test in large enough numbers on both models.</p>
+      </div>
+      <div class="panel">
+        <h3>What doesn't</h3>
+        <p><b>Answers that are the bridge's meaning or category</b> fail point 2: the country of a city (York University → Canada), an element's symbol (sodium → Na), a month after a holiday. There the bridge and the answer overlap inside the model, and removing one removes part of the other.</p>
+        <p><b>Answers the input already gives</b> fail point 3: “In which month do children go trick-or-treating?” reaches October without needing Halloween.</p>
+      </div>
+    </div>
+    <p class="note">So the narrow scope is a consequence of testability. The method gets clean results on questions whose answer is an arbitrary property of the bridge, and can't separate bridge from answer on the rest. We say so, and claim nothing about the other types.</p>
+  </section>
+
   <section class="section" id="claim">
     <div class="col"><span class="kicker">What we claim, and what we don't</span><h2>The claim</h2></div>
     <div class="claim">
@@ -235,7 +266,7 @@ one letter.</pre>
           <tr><td>Branches</td><td><code>archive/full-scorecard</code> keeps all earlier work; <code>conformity</code> holds this project.</td><td><span class="pill good">done</span></td></tr>
           <tr><td>Outline</td><td>This page.</td><td><span class="pill good">done</span></td></tr>
           <tr><td>Code</td><td>One script for all conditions and measurements (<code>src/consulted_bridges/conformity.py</code>), tested on a tiny model.</td><td><span class="pill good">done</span></td></tr>
-          <tr><td>Run</td><td>Qwen3.6-27B and Qwen3.5-4B on rented GPUs, about $14 in all. Waiting on a RunPod top-up.</td><td><span class="pill mid">waiting</span></td></tr>
+          <tr><td>Run</td><td>Qwen3.6-27B and Qwen3.5-4B on rented GPUs, about $14 in all.</td><td><span class="pill mid">running</span></td></tr>
           <tr><td>Report</td><td>Labels by condition, presence × use, the calibration questions separately.</td><td><span class="pill none">to do</span></td></tr>
         </tbody>
       </table>
