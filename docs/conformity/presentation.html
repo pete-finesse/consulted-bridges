@@ -247,6 +247,11 @@
   .ins-n { font-size: 0.8rem; color: var(--muted); font-style: italic; }
   .prs { display: grid; gap: 6px; padding: 10px 12px; border-radius: 8px; background: var(--panel); }
   .lim { gap: 14px; }
+  .lim-col { display: grid; gap: 14px; }
+  .lim-col .prs { max-width: 460px; }
+  .vecs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 10px 28px; max-width: 640px; }
+  .vecs > div { display: grid; gap: 2px; }
+  .vec { width: 100%; height: auto; overflow: visible; }
   .lim-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px 28px; align-items: center; }
   .lim .back { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
   .why .back { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
@@ -629,22 +634,19 @@
       <p class="note">Sketch numbers, to show the idea. Original is the model as it is; edited is the same model with Salzburg removed.</p>
     </figure>
     <div class="col">
-      <p>This test is only as good as the bridge it removes. A <b>good bridge</b> can be removed cleanly, without taking anything else with it, and the answer has to pass through it. With a good bridge, a change in the answer means the bridge was used, and no change means it wasn't. With a <b>bad bridge</b>, the result can point the wrong way. Salzburg is a bad bridge, and it fails both ways.</p>
-      <p><b>It can't be removed cleanly.</b> Salzburg and Austria are so closely related that their directions overlap, so removing Salzburg takes part of Austria with it. The answer drops even if the model never went through Salzburg.</p>
+      <p>Removing a step sounds surgical, but the J-space is not a set of separate slots, one per token. Each token is a <b>direction</b>, and related tokens point in similar directions. Removing a direction removes everything that lies along it, not just the token we named. And removing one step only blocks the roads that run through it: if the model has another way to the answer, it simply takes that. So what a removal tells us depends on the step we pick, and Salzburg runs into both problems.</p>
+      <p><b>Removing Salzburg also removes part of Austria.</b> An Austrian city and Austria point almost the same way, so taking out Salzburg's direction takes most of Austria's with it. The answer drops even if the model never went through Salzburg.</p>
     </div>
     <figure class="panel lim">
       <span class="tag">The answer drops, but not because Salzburg was used</span>
-      <div class="lim-row">
-        <div class="spill-out">
-          <div><span class="tf-pill x">Salzburg</span><span class="slbl">removed</span></div>
-          <div><span class="tf-pill hit">Austria</span><span class="slbl">partly removed too</span></div>
-        </div>
+      <div class="lim-col">
+        <div class="vecs"><div><span class="slbl">Before</span><svg class="vec" viewBox="0 0 250 125" role="img" aria-label="Token directions: Salzburg and Austria point almost the same way, France points elsewhere"><circle cx="30" cy="112" r="2.5" style="fill: var(--muted)"/><g opacity="1"><line x1="30" y1="112" x2="7.7" y2="22.8" style="stroke: var(--peer)" stroke-width="2.2"/><polygon points="7.7,22.8 13.1,30.0 6.3,31.7" style="fill: var(--peer)"/><text x="13.7" y="26.8" font-size="12" font-weight="700" style="fill: var(--peer)">France</text></g><g opacity="1"><line x1="30" y1="112" x2="190.0" y2="72.0" style="stroke: var(--bridge)" stroke-width="2.2"/><polygon points="190.0,72.0 182.8,77.4 181.1,70.6" style="fill: var(--bridge)"/><text x="160.0" y="90.0" font-size="12" font-weight="700" style="fill: var(--bridge)">Salzburg</text></g><g opacity="1"><line x1="30" y1="112" x2="200.0" y2="42.0" style="stroke: var(--answer)" stroke-width="2.2"/><polygon points="200.0,42.0 193.7,48.4 191.0,41.9" style="fill: var(--answer)"/><text x="180.0" y="34.0" font-size="12" font-weight="700" style="fill: var(--answer)">Austria</text></g></svg></div><div><span class="slbl">Salzburg's direction removed</span><svg class="vec" viewBox="0 0 250 125" role="img" aria-label="After removing Salzburg's direction: Austria shrinks, France is unchanged"><circle cx="30" cy="112" r="2.5" style="fill: var(--muted)"/><g opacity="1"><line x1="30" y1="112" x2="7.7" y2="22.8" style="stroke: var(--peer)" stroke-width="2.2"/><polygon points="7.7,22.8 13.1,30.0 6.3,31.7" style="fill: var(--peer)"/><text x="13.7" y="26.8" font-size="12" font-weight="700" style="fill: var(--peer)">France</text></g><g opacity="1"><line x1="30" y1="112" x2="190.0" y2="72.0" style="stroke: var(--noise)" stroke-width="1.5" stroke-dasharray="5 4"/><text x="110.0" y="90.0" font-size="12" font-weight="700" style="fill: var(--noise)">Salzburg</text></g><g opacity="0.35"><line x1="30" y1="112" x2="200.0" y2="42.0" style="stroke: var(--answer)" stroke-width="1.5" stroke-dasharray="5 4"/></g><g opacity="1"><line x1="30" y1="112" x2="23.5" y2="86.1" style="stroke: var(--answer)" stroke-width="2.2"/><polygon points="23.5,86.1 28.9,93.3 22.1,95.0" style="fill: var(--answer)"/><text x="31.5" y="84.1" font-size="12" font-weight="700" style="fill: var(--answer)">Austria</text></g></svg></div></div>
         <div class="prs"><div class="pr"><span class="lab">Original P(“Austria”)</span><span class="tr"><i style="--v:0.8"></i></span><span class="val">80%</span></div><div class="pr"><span class="lab">Edited P(“Austria”)</span><span class="tr"><i class="cut" style="--v:0.3"></i></span><span class="val">30%</span></div></div>
       </div>
       <p class="back">This is the <b>association</b> case from section 2: related words light up together, and they get removed together too.</p>
     </figure>
     <div class="col">
-      <p><b>The answer doesn't have to pass through it.</b> Mozart is famous for being Austrian, so the model has a direct road to Austria. Removing Salzburg closes one road but leaves the other open, and the answer doesn't move even if the model is still reasoning.</p>
+      <p><b>The model has another road to Austria.</b> Mozart is famous for being Austrian, so the model has a direct road to Austria. Removing Salzburg closes one road but leaves the other open, and the answer doesn't move even if the model is still reasoning.</p>
     </div>
     <figure class="panel lim">
       <span class="tag">Nothing changes, though the model can still reason</span>
@@ -659,7 +661,7 @@
       <p class="note">Sketch numbers, in both figures, to show the idea.</p>
     </figure>
     <div class="col">
-      <p>So everything rests on finding good bridges: steps the answer must go through, and that share nothing else with it. The next sections show how we find them.</p>
+      <p>For a removal to mean something, we need a step that the answer can only be reached through, and whose direction shares nothing with the answer's. The next sections show how we find steps like that.</p>
     </div>
   </section>
 
