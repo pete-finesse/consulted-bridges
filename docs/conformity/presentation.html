@@ -245,6 +245,7 @@
   .ins-r .chip { padding: 1px 9px; font-size: 0.9rem; }
   .ins-chain { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
   .ins-n { font-size: 0.8rem; color: var(--muted); font-style: italic; }
+  .prs { display: grid; gap: 6px; padding: 10px 12px; border-radius: 8px; background: var(--panel); }
   .punch { font-size: 1.15rem; font-weight: 600; }
   /* transcript */
   .transcript { display: grid; gap: 8px; font-size: 0.95rem; }
@@ -583,24 +584,7 @@
         </div>
       </div>
       <p class="note">Both say France, and in both Salzburg is readable. The difference is whether anything inside still pulls toward Austria.</p>
-    </figure>
-    <div class="col">
-      <p>From the outside, and even to the paper's reading method, the two stories look identical. The only difference is whether Salzburg is pulling. So we test that directly: we <b>remove</b> Salzburg from the model's state and watch the answer. If Salzburg was pulling, taking it away lets the answer slide. If it wasn't, nothing moves.</p>
-    </div>
-    <figure class="panel">
-      <div class="stories">
-        <div class="story a-side">
-          <span class="tag">Story A · Salzburg removed</span>
-          <div class="inside" aria-label="Story A after removal"><span class="ins-l">Own thought</span><div class="ins-r"><span class="ins-chain"><span class="chip x">Salzburg</span><span class="arrow">→</span><span class="chip x">Austria</span></span><span class="ins-n">pull gone</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">nothing pulls back</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b><span class="ins-n">even surer; its chance of saying Austria drops</span></div></div>
-          <p><b>The answer moves.</b></p>
-        </div>
-        <div class="story b-side">
-          <span class="tag">Story B · Salzburg removed</span>
-          <div class="inside" aria-label="Story B after removal"><span class="ins-l">Own thought</span><div class="ins-r"><span class="chip x">Salzburg</span><span class="ins-n">was not pulling anyway</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">the only pull</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b><span class="ins-n">exactly as before</span></div></div>
-          <p><b>Nothing moves.</b></p>
-        </div>
-      </div>
-      <p class="punch">Reading can't tell these apart. <span class="a">Removing can.</span></p>
+      <p class="punch">Reading can't tell these apart.</p>
     </figure>
   </section>
 
@@ -609,7 +593,7 @@
     <div class="ch-head">
       <span class="ch-num">3 · Our approach</span>
       <h2>Take the bridge out and see what breaks</h2>
-      <p>We remove the bridge in a few layers and measure how the answer changes.</p>
+      <p>We remove the bridge in a few layers and measure how the answer changes. To see that change, we first need a finer way to read the answer.</p>
     </div>
     <div class="panel">
       <h3>Measuring the answer: probabilities, not just words</h3>
@@ -627,6 +611,27 @@
         </div>
       </div>
     </div>
+    <div class="col">
+      <p>Back to the Mozart example. The two stories differ only in whether Salzburg is pulling, so we remove Salzburg and read the probabilities. If Salzburg was pulling, the chance of Austria falls, even though the agent still says France. If it wasn't, nothing moves.</p>
+    </div>
+    <figure class="panel">
+      <div class="stories">
+        <div class="story a-side">
+          <span class="tag">Story A · Salzburg removed</span>
+          <div class="inside" aria-label="Story A after removal"><span class="ins-l">Own thought</span><div class="ins-r"><span class="ins-chain"><span class="chip x">Salzburg</span><span class="arrow">→</span><span class="chip x">Austria</span></span><span class="ins-n">pull gone</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">nothing pulls back</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b><span class="ins-n">still</span></div></div>
+          <div class="prs"><div class="pr"><span class="lab">Original P(“Austria”)</span><span class="tr"><i style="--v:0.3"></i></span><span class="val">30%</span></div><div class="pr"><span class="lab">Edited P(“Austria”)</span><span class="tr"><i class="cut" style="--v:0.05"></i></span><span class="val">5%</span></div></div>
+          <p><b>Same written answer, but the probability moved.</b></p>
+        </div>
+        <div class="story b-side">
+          <span class="tag">Story B · Salzburg removed</span>
+          <div class="inside" aria-label="Story B after removal"><span class="ins-l">Own thought</span><div class="ins-r"><span class="chip x">Salzburg</span><span class="ins-n">was not pulling anyway</span></div><span class="ins-l">Group</span><div class="ins-r"><span class="chip pe">France</span><span class="ins-n">the only pull</span></div><span class="ins-l">Says</span><div class="ins-r"><b class="p">France</b><span class="ins-n">still</span></div></div>
+          <div class="prs"><div class="pr"><span class="lab">Original P(“Austria”)</span><span class="tr"><i style="--v:0.3"></i></span><span class="val">30%</span></div><div class="pr"><span class="lab">Edited P(“Austria”)</span><span class="tr"><i class="cut" style="--v:0.3"></i></span><span class="val">30%</span></div></div>
+          <p><b>Nothing moves.</b></p>
+        </div>
+      </div>
+      <p class="note">Sketch numbers, to show the idea. Original is the model as it is; edited is the same model with Salzburg removed.</p>
+      <p class="punch">Reading can't tell these apart. <span class="a">Removing can.</span></p>
+    </figure>
     <div class="col">
       <p>An ablation only means something if a change in the answer can come from nowhere but the bridge. A careless question gives other ways for the answer to move, or not move. So we choose questions that rule those out. That is what the four requirements are for.</p>
     </div>
