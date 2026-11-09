@@ -52,7 +52,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from consulted_bridges.interventions import Edit, answer_probs
+from consulted_bridges.interventions import Edit, answer_probs, answer_probs_many
 from consulted_bridges.legacy.bridge_card3 import FORMATS, SKIP
 from consulted_bridges.load import load
 from consulted_bridges.questions.core import SPECS as CORE
@@ -66,6 +66,7 @@ from consulted_bridges.text import offsets, resolve_positions
 
 SPECS = {**CORE, **VARIANTS, **TREND, **COUNT_SPECS, **CANDIDATES}
 EPS = 1e-6
+BATCH = int(__import__('os').environ.get('CB_BATCH', '8'))   # edited copies of a prompt per forward pass
 SUFFIX = " Answer with one letter."
 ONE = " Answer in one word."
 
@@ -112,6 +113,19 @@ COUNTS = {"qwen36_27b": ["T_place_states_austria", "N_BP_schwarzenegger", "N_BP_
 COUNTS["tiny"] = ["N_BP_haydn", "N_BP_jackman"]
 # The peers' wrong count: one off the right one (a plausible slip), single digit so it is one token.
 COUNT_WRONG = {"9": "8", "6": "7", "2": "1", "5": "4"}
+COUNT_WRONG.update({"8": "7", "7": "6", "4": "3", "3": "2", "1": "2"})   # same rule for other models' counts (1 -> 2: no zero)
+
+
+def counts_for(cfg):
+    """A model's count questions: the fixed list above, else the ones its own trimmed count screen
+    (results/counts*_<config>/shard*/cards.csv) calls consulted, the rule that made the 27B list."""
+    if cfg in COUNTS:
+        return COUNTS[cfg]
+    fs = [f for f in sorted(Path("results").glob(f"counts*_{cfg}/shard*/cards.csv")) if f.stat().st_size > 1]
+    if not fs:
+        raise SystemExit(f"no count screen for {cfg}: run the scorecard on the count questions first")
+    t = pd.concat([pd.read_csv(f) for f in fs], ignore_index=True)
+    return sorted(set(t[t.verdict.fillna("").str.startswith("CONSULTED")].sentence))
 # The pilot's six questions: the reading thresholds were set on them, so they are reported separately.
 CALIBRATION = ["L_colosseum", "L_gates", "L_piaf", "L_mozart", "L_spider", "L_york"]
 PILOT_WRONG = {"L_colosseum": "F", "L_gates": "B", "L_piaf": "L", "L_mozart": "B", "L_spider": "A", "L_york": "M"}
@@ -193,7 +207,15 @@ class Prompt:
     def probs(self, edits=None):
         """P(right), P(peers'), LO in one forward pass."""
         cands = list(dict.fromkeys(self.rforms + self.pforms))
-        r = answer_probs(self.h, self.c.text, cands, edits, formats=FORMATS)["cands"]
+        return self._summ(answer_probs(self.h, self.c.text, cands, edits, formats=FORMATS)["cands"])
+
+    def probs_many(self, edit_sets):
+        """probs() for each list of edits, several per forward pass (answer_probs_many)."""
+        cands = list(dict.fromkeys(self.rforms + self.pforms))
+        return [self._summ(r["cands"]) for r in answer_probs_many(self.h, self.c.text, cands, edit_sets, formats=FORMATS,
+                                                                  chunk=BATCH)]
+
+    def _summ(self, r):
         tot = lambda forms: sum(r[f].get(f"p[{x}]", 0.0) for f in forms for x in FORMATS)  # noqa: E731
         pr, pw = tot(self.rforms), tot(self.pforms)
         return pr, pw, math.log(pw + EPS) - math.log(pr + EPS)
@@ -222,10 +244,8 @@ class Prompt:
         tgt, tforms = (self.peer, self.pforms) if (self.cond in ("disagree", "copy") and said_k == self.peer) else (self.right, self.rforms)
         tidx = 1 if tgt == self.peer and tgt != self.right else 0
         base_t = (pr0, pw0)[tidx]
-        onset_prof = []
-        for w in c.wins:
-            p = self.probs(self.rm(self.dirs(tgt, tforms), w, self.onpos))[tidx]
-            onset_prof.append(c.drop(base_t, p))
+        onset_prof = [c.drop(base_t, ps[tidx]) for ps in
+                      self.probs_many([self.rm(self.dirs(tgt, tforms), w, self.onpos) for w in c.wins])]
         oi = next((i for i, d in enumerate(onset_prof) if d >= 0.5), None)
         if oi is None and SKIP:   # testing on the tiny model only: pretend the answer forms mid-way
             oi = len(c.wins) - 1
@@ -247,18 +267,18 @@ class Prompt:
         for z in nulls:
             edits[f"noise: {z}"] = lambda w, z=z: self.rm([z], w, self.allpos)
         best = {}
-        for label, make in edits.items():
-            for i in early:
-                w = c.wins[i]
-                r, wr, lo = self.probs(make(w))
-                drop = c.drop(pr0, r)
-                rows.append(dict(question=self.qid, condition=self.cond, peers=self.k, edit=label, window=lay(w),
-                                 start=w[0], P_right=r, P_peer=wr, LO=lo, dLO=lo - lo0, drop_right=drop))
-                cur = best.setdefault(label, dict(dLO=-1e9, drop=-1.0))
-                if lo - lo0 > cur["dLO"]:
-                    cur.update(dLO=lo - lo0, dLO_window=lay(w))
-                if drop > cur["drop"]:
-                    cur.update(drop=drop, drop_window=lay(w), P_right_after=r)
+        jobs = [(label, make, i) for label, make in edits.items() for i in early]
+        res = self.probs_many([make(c.wins[i]) for _, make, i in jobs])
+        for (label, make, i), (r, wr, lo) in zip(jobs, res):
+            w = c.wins[i]
+            drop = c.drop(pr0, r)
+            rows.append(dict(question=self.qid, condition=self.cond, peers=self.k, edit=label, window=lay(w),
+                             start=w[0], P_right=r, P_peer=wr, LO=lo, dLO=lo - lo0, drop_right=drop))
+            cur = best.setdefault(label, dict(dLO=-1e9, drop=-1.0))
+            if lo - lo0 > cur["dLO"]:
+                cur.update(dLO=lo - lo0, dLO_window=lay(w))
+            if drop > cur["drop"]:
+                cur.update(drop=drop, drop_window=lay(w), P_right_after=r)
         gb = lambda pref, key: max((v[key] for k_, v in best.items() if k_.startswith(pref)), default=None)  # noqa: E731
         bd = best["bridge"]
         noise_dlo, noise_drop = gb("noise", "dLO"), gb("noise", "drop")
@@ -311,7 +331,7 @@ def main():
     args = ap.parse_args()
     cfg = Path(args.config).stem
     i, n = map(int, args.shard.split("/"))
-    qs = args.questions or (COUNTS[cfg] if args.set == "counts" else questions_for(cfg))
+    qs = args.questions or (counts_for(cfg) if args.set == "counts" else questions_for(cfg))
     qs = qs[: args.limit] if args.limit else qs
     qs = [q for j, q in enumerate(qs) if j % n == i]
     tag = "conformity" + ("_counts" if args.set == "counts" else "")

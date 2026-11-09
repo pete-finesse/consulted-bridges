@@ -47,7 +47,7 @@ uv run python -c "import torch; assert torch.cuda.is_available(), 'torch sees no
 echo "== Qwen3.5 speed kernels (optional: without them the model runs, only slower)"
 # flash-linear-attention: pure Triton, no compile. kernels: lets transformers fetch prebuilt
 # causal-conv1d / gated-delta-rule kernels from the HF Hub (kernels-community) instead of compiling.
-uv pip install flash-linear-attention kernels || echo "WARN: flash-linear-attention / kernels not installed"
+uv pip install flash-linear-attention "kernels>=0.17.2,<0.18" || echo "WARN: flash-linear-attention / kernels not installed"
 # causal-conv1d: only a prebuilt wheel (a source build needs nvcc and can take 20+ min)
 uv pip install --only-binary=:all: causal-conv1d 2>/dev/null || echo "note: no prebuilt causal-conv1d wheel; transformers uses the Hub kernel or the PyTorch fallback"
 

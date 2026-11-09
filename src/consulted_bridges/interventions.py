@@ -177,6 +177,11 @@ def answer_probs(h, text: str, candidates: list[str], edits: list[Edit] | None =
     mask = torch.tensor([[1] * len(r) + [0] * (L - len(r)) for r in rows], device=h.device)
     with applied(h, text, edits):
         logp = h.model(input_ids=ids, attention_mask=mask).logits.float().log_softmax(-1)
+    return _scored(h, logp, n, seqs, candidates, formats, top)
+
+
+def _scored(h, logp, n, seqs, candidates, formats, top) -> dict:
+    """answer_probs' result from the log-probs of its rows (row i = the prompt + seqs[i])."""
     first = logp[0, n - 1]
     out = {"top": [(h.tok.decode([int(t)]), float(first[t].exp())) for t in first.topk(top).indices]}
     probs = {c: {} for c in candidates}
@@ -193,6 +198,67 @@ def answer_probs(h, text: str, candidates: list[str], edits: list[Edit] | None =
     for c in candidates:
         probs[c]["p_share"] = probs[c]["p_full"] / tot
     out["cands"] = probs
+    return out
+
+
+@contextmanager
+def applied_rows(h, text: str, groups: list):
+    """Like `applied`, but each group (rows: slice of the batch, edits) edits only its own rows, so one
+    forward pass runs many differently edited copies of the prompt. Within a group, edits apply in
+    order, as `applied`'s hooks do."""
+    n = len(h.encode(text))
+    blocks = get_layers(h.model)
+    per_layer: dict[int, list] = {}
+    for rows, edits in groups:
+        for e in edits or []:
+            pos = resolve_positions(h, text, e.positions, n)
+            for layer in e.layers:
+                per_layer.setdefault(layer, []).append((rows, e, directions(h, e, layer), pos))
+    with ExitStack() as stack:
+        for layer, items in per_layer.items():
+
+            def hook(_m, _i, out, items=items):
+                x = layer_output(out).clone()
+                for rows, e, dirs, pos in items:
+                    idx = [p for p in pos if p < x.shape[1]]
+                    if idx:
+                        sel = x[rows, idx].float()          # [b, P, d] or [b, P, n_streams, d]
+                        ds = [D.to(x.device) for D in dirs]
+                        x[rows, idx] = _apply(sel.reshape(-1, sel.shape[-1]), e, ds).reshape(sel.shape).to(x.dtype)
+                return replace_layer_output(out, x)
+
+            handle = blocks[layer].register_forward_hook(hook)
+            stack.callback(handle.remove)
+        yield
+
+
+@torch.no_grad()
+def answer_probs_many(h, text: str, candidates: list[str], edit_sets: list, top: int = 5,
+                      formats: tuple[str, ...] = FORMATS, chunk: int = 8) -> list[dict]:
+    """answer_probs for each list of edits in `edit_sets`, `chunk` of them per forward pass (each gets
+    its own copy of the candidate rows). Same numbers as calling answer_probs once per set, up to
+    the GPU's batch-size rounding."""
+    prompt = h.encode(text)
+    n = len(prompt)
+    seqs = [(c, f, h.encode(f.format(c.strip()))) for c in candidates for f in formats]
+    rows1 = [prompt + t for _, _, t in seqs] or [prompt]
+    m = len(rows1)
+    L = max(len(r) for r in rows1)
+    pad = h.tok.pad_token_id or 0
+    ids1 = [r + [pad] * (L - len(r)) for r in rows1]
+    mask1 = [[1] * len(r) + [0] * (L - len(r)) for r in rows1]
+    out = []
+    for s0 in range(0, len(edit_sets), chunk):
+        sets = edit_sets[s0 : s0 + chunk]
+        ids = torch.tensor(ids1 * len(sets), device=h.device)
+        mask = torch.tensor(mask1 * len(sets), device=h.device)
+        groups = [(slice(j * m, (j + 1) * m), es) for j, es in enumerate(sets)]
+        with applied_rows(h, text, groups):
+            logits = h.model(input_ids=ids, attention_mask=mask).logits
+        for j in range(len(sets)):
+            logp = logits[j * m : (j + 1) * m].float().log_softmax(-1)
+            out.append(_scored(h, logp, n, seqs, candidates, formats, top))
+        del logits
     return out
 
 
