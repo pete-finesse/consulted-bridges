@@ -4,6 +4,42 @@
 and settles disagreements. The paper is filled in here:
 https://docs.google.com/document/d/1jG87fY_DJxMCtxkZ3t7jAh3VaMXYR49tqZlzh5sM918/edit*
 
+## Submission requirements and judging criteria (Apart Research, Swarm Alignment sprint; fetched 9 Nov 10:00 UTC)
+
+**Deadline: Sunday 8 November 11:59 PM Anywhere on Earth = Monday 9 November 11:59 UTC.** Resubmitting under the
+same title replaces the earlier submission, before the deadline only. Submit early, then replace.
+
+**Required:** a PDF report using the official template (the Google Doc above is the template copy); at most 8 pages
+not counting references and appendices (strong projects run 4 to 8); title and an abstract of 150 to 250 words;
+author names and affiliations; a required appendix titled "Limitations and Dual-Use / Ethical Considerations":
+state what the result does and does not establish, and note any way the setup or findings could make multi-agent
+operations easier to carry out or harder to detect. Optional: public GitHub repo, a 3 to 5 minute video, slides.
+
+**Recommended structure:** Introduction (the question and why it matters); Related Work; Methodology (enough to
+replicate: models, prompts, sampling, metrics); Results (quantitative, with variance and baselines); Discussion
+(implications, limitations, future work); the required appendix; References.
+
+**Prior work rule:** only the weekend's work is judged; previous work must be clearly stated, and code written before
+the sprint marked as pre-existing in the README and the report. For us: the solo scorecard and question bank
+(docs/scorecard v1 to v4, 6 Nov and earlier) are prior work; the conformity experiment, the log-odds re-analysis,
+the candidates, the peer block, patching and runs 1 to 3 are the weekend's. Say so in one paragraph.
+
+**Rubric, three dimensions each scored 1 to 5, no weights:**
+1. *Impact potential and innovation*: is this new to the field or a replication; a 5 has a clear theory of change
+   and opens a direction. Ours: presence versus use, and independence of agents in a group as a redundancy question.
+2. *Execution quality*: methodology, validation, results support conclusions; a 4 is "thorough methodology with
+   convincing validation". Ours: pre-registered rules, controls, the exact leak test, four validation rows, two
+   methods agreeing, intervals by question, a confirmation set. State these explicitly.
+3. *Presentation and clarity*: a 4 is "easy to follow, well-structured, appropriate level of detail"; judges may
+   decline to score a report too unclear to follow. Short sentences, defined terms, one message per figure.
+
+**AI use:** allowed for everything; the team is responsible for every statement; made-up results or references
+disqualify. Every number traces to a source line (checklist item 1) for exactly this reason.
+
+**Cutoff for run 3:** the paper is written on runs 1 and 2. Run 3 results go in only if they land by 11:15 UTC;
+otherwise the confirmation set is reported as "frozen and running at submission, results to follow" with the
+frozen id list and digest from `results/v2_run3_qwen36_27b/frozen.md`.
+
 ## Roles
 
 | | Codex (writer) | Claude (figures and critic) |
