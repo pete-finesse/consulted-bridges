@@ -28,7 +28,10 @@ Formats and relations:
   spelling  C_EO landmark -> country -> letter count -> Even/Odd (expected to fail knows-it, like last letter;
             four questions so the screen can say so)
 
-Dropped at a fact pass (8 Nov): Potala Palace (Tibet / China is an answer-changing alias).
+Dropped at the fact passes (8–9 Nov; see DROPPED below and docs/conformity/candidate-fact-check.md): Potala Palace
+(Tibet / China alias), Persepolis, National Taiwan University, Michael Jordan (Brooklyn), Suomenlinna. Nine same-kind
+controls that shared the bridge's letter were replaced and eight reordered so the run-time wrong peer (same_kind[0])
+is not a plausible alternative bridge's answer.
 Dropped at drafting: last letter (untestable in the ideas run), shapes -> sides (the name carries the number),
 capital / language / demonym (overlap with the bridge), sports and counts with two-digit answers.
 Dropped at the token check (Qwen3.5-4B tokenizer, 8 Nov): the whole currency family (every currency name is two
@@ -184,7 +187,7 @@ SPECS = dict([
     lm("C_LM_hagia", "Hagia Sophia", "Turkey", ["Greece", "Syria"]),
     lm("C_LM_watarun", "Wat Arun", "Thailand", ["Vietnam", "Cambodia"]),
     lm("C_LM_borobudur", "Borobudur", "Indonesia", ["Malaysia", "Thailand"]),
-    lm("C_LM_kilimanjaro", "Mount Kilimanjaro", "Tanzania", ["Kenya", "Uganda"], verb="stands"),
+    lm("C_LM_kilimanjaro", "Mount Kilimanjaro", "Tanzania", ["Uganda", "Kenya"], verb="stands"),
     lm("C_LM_moai", "the Moai statues of Easter Island", "Chile", ["Peru", "Argentina"]),
     lm("C_LM_blarney", "Blarney Castle", "Ireland", ["Scotland", "Wales"]),
     lm("C_LM_mermaid", "the Little Mermaid statue", "Denmark", ["Sweden", "Norway"]),
@@ -197,7 +200,7 @@ SPECS = dict([
     lm("C_LM_schonbrunn", "Schonbrunn Palace", "Austria", ["Germany", "Hungary"]),
     lm("C_LM_vasa", "the Vasa Museum", "Sweden", ["Norway", "Denmark"]),
     lm("C_LM_lalibela", "the rock-hewn churches of Lalibela", "Ethiopia", ["Kenya", "Sudan"]),
-    lm("C_LM_pashupatinath", "Pashupatinath Temple", "Nepal", ["India", "China"]),
+    lm("C_LM_pashupatinath", "Pashupatinath Temple", "Nepal", ["China", "India"]),
     lm("C_LM_bluelagoon", "the Blue Lagoon geothermal spa", "Iceland", ["Norway", "Denmark"]),
     lm("C_LM_bran", "Bran Castle", "Romania", ["Hungary", "Bulgaria"]),
     lm("C_LM_casarosada", "the Casa Rosada", "Argentina", ["Chile", "Uruguay"]),
@@ -214,7 +217,7 @@ SPECS = dict([
     lm("C_LM_rila", "Rila Monastery", "Bulgaria", ["Romania", "Greece"]),
     lm("C_LM_chocolatehills", "the Chocolate Hills", "Philippines", ["Indonesia", "Malaysia"]),
     lm("C_LM_persepolis", "the ruins of Persepolis", "Iran", ["Iraq", "Turkey"]),
-    lm("C_LM_babylon", "the ruins of Babylon", "Iraq", ["Iran", "Syria"]),
+    lm("C_LM_babylon", "the ruins of Babylon", "Iraq", ["Syria", "Jordan"]),
     lm("C_LM_baalbek", "the Roman temples of Baalbek", "Lebanon", ["Syria", "Jordan"]),
     lm("C_LM_masada", "the fortress of Masada", "Israel", ["Jordan", "Egypt"]),
     # ---- C_LP: person -> birth city -> first letter (cities not already a bridge) -----------------------------
@@ -222,36 +225,36 @@ SPECS = dict([
     lp("C_LP_beethoven", "Ludwig van Beethoven", "Bonn", ["Cologne", "Vienna"]),
     lp("C_LP_messi", "Lionel Messi", "Rosario", ["Mendoza", "Santiago"]),
     lp("C_LP_kobe", "Kobe Bryant", "Philadelphia", ["Boston", "Chicago"]),
-    lp("C_LP_lebron", "LeBron James", "Akron", ["Cleveland", "Columbus"]),
+    lp("C_LP_lebron", "LeBron James", "Akron", ["Columbus", "Cleveland"]),
     lp("C_LP_jordan", "Michael Jordan", "Brooklyn", ["Chicago", "Charlotte"]),
     lp("C_LP_hanks", "Tom Hanks", "Concord", ["Oakland", "Sacramento"]),
     lp("C_LP_buffett", "Warren Buffett", "Omaha", ["Lincoln", "Denver"]),
-    lp("C_LP_merkel", "Angela Merkel", "Hamburg", ["Berlin", "Munich"]),
+    lp("C_LP_merkel", "Angela Merkel", "Hamburg", ["Munich", "Berlin"]),
     lp("C_LP_portman", "Natalie Portman", "Jerusalem", ["Cairo", "Beirut"]),
     lp("C_LP_zidane", "Zinedine Zidane", "Marseille", ["Lyon", "Nice"]),
     lp("C_LP_kafka", "Franz Kafka", "Prague", ["Vienna", "Budapest"]),
     lp("C_LP_wilde", "Oscar Wilde", "Dublin", ["Cork", "Belfast"]),
     lp("C_LP_trudeau", "Justin Trudeau", "Ottawa", ["Montreal", "Toronto"]),
     lp("C_LP_reynolds", "Ryan Reynolds", "Vancouver", ["Calgary", "Toronto"]),
-    lp("C_LP_kanye", "Kanye West", "Atlanta", ["Chicago", "Memphis"]),
+    lp("C_LP_kanye", "Kanye West", "Atlanta", ["Memphis", "Chicago"]),
     lp("C_LP_shaq", "Shaquille O'Neal", "Newark", ["Camden", "Boston"]),
     lp("C_LP_magic", "Magic Johnson", "Lansing", ["Detroit", "Flint"]),
     lp("C_LP_tiger", "Tiger Woods", "Cypress", ["Anaheim", "Irvine"]),
     lp("C_LP_adele", "the singer Adele", "London", ["Manchester", "Birmingham"]),
-    lp("C_LP_lennon", "John Lennon", "Liverpool", ["Manchester", "Leeds"]),
+    lp("C_LP_lennon", "John Lennon", "Liverpool", ["Manchester", "Birmingham"]),
     lp("C_LP_galileo", "Galileo Galilei", "Pisa", ["Florence", "Rome"]),
     lp("C_LP_dante", "Dante Alighieri", "Florence", ["Rome", "Venice"]),
     lp("C_LP_marcopolo", "Marco Polo", "Venice", ["Rome", "Milan"], predict="consulted; risk: birthplace disputed (Korcula claim)"),
-    lp("C_LP_hawking", "Stephen Hawking", "Oxford", ["Cambridge", "London"]),
-    lp("C_LP_obama", "Barack Obama", "Honolulu", ["Chicago", "Seattle"]),
+    lp("C_LP_hawking", "Stephen Hawking", "Oxford", ["London", "Cambridge"]),
+    lp("C_LP_obama", "Barack Obama", "Honolulu", ["Seattle", "Chicago"]),
     lp("C_LP_sampras", "Pete Sampras", "Washington", ["Baltimore", "Chicago"]),
-    lp("C_LP_graf", "Steffi Graf", "Mannheim", ["Munich", "Berlin"]),
+    lp("C_LP_graf", "Steffi Graf", "Mannheim", ["Berlin", "Stuttgart"]),
     lp("C_LP_benzema", "Karim Benzema", "Lyon", ["Marseille", "Paris"]),
-    lp("C_LP_haaland", "Erling Haaland", "Leeds", ["Manchester", "Oslo"]),
+    lp("C_LP_haaland", "Erling Haaland", "Leeds", ["Oslo", "Manchester"]),
     # ---- C_LU: university -> city of its main campus -> first letter (name never carries the city) ------------
     lu("C_LU_humboldt", "Humboldt University", "Berlin", ["Munich", "Hamburg"]),
     lu("C_LU_tsinghua", "Tsinghua University", "Beijing", ["Shanghai", "Tokyo"]),
-    lu("C_LU_harvard", "Harvard University", "Cambridge", ["Boston", "Providence"]),
+    lu("C_LU_harvard", "Harvard University", "Cambridge", ["Providence", "Boston"]),
     lu("C_LU_mcgill", "McGill University", "Montreal", ["Toronto", "Quebec"]),
     lu("C_LU_sapienza", "Sapienza University", "Rome", ["Milan", "Naples"]),
     lu("C_LU_complutense", "the Complutense University", "Madrid", ["Barcelona", "Valencia"]),
@@ -266,10 +269,10 @@ SPECS = dict([
     lu("C_LU_vanderbilt", "Vanderbilt University", "Nashville", ["Memphis", "Atlanta"]),
     lu("C_LU_duke", "Duke University", "Durham", ["Raleigh", "Charlotte"]),
     lu("C_LU_georgetown", "Georgetown University", "Washington", ["Baltimore", "Richmond"]),
-    lu("C_LU_cmu", "Carnegie Mellon University", "Pittsburgh", ["Philadelphia", "Cleveland"]),
-    lu("C_LU_case", "Case Western Reserve University", "Cleveland", ["Columbus", "Cincinnati"]),
-    lu("C_LU_gonzaga", "Gonzaga University", "Spokane", ["Seattle", "Tacoma"]),
-    lu("C_LU_marquette", "Marquette University", "Milwaukee", ["Madison", "Chicago"]),
+    lu("C_LU_cmu", "Carnegie Mellon University", "Pittsburgh", ["Cleveland", "Baltimore"]),
+    lu("C_LU_case", "Case Western Reserve University", "Cleveland", ["Detroit", "Pittsburgh"]),
+    lu("C_LU_gonzaga", "Gonzaga University", "Spokane", ["Tacoma", "Portland"]),
+    lu("C_LU_marquette", "Marquette University", "Milwaukee", ["Chicago", "Detroit"]),
     lu("C_LU_strathclyde", "the University of Strathclyde", "Glasgow", ["Edinburgh", "Aberdeen"]),
     lu("C_LU_heriotwatt", "Heriot-Watt University", "Edinburgh", ["Glasgow", "London"]),
     lu("C_LU_goethe", "Goethe University", "Frankfurt", ["Munich", "Berlin"]),
@@ -368,18 +371,34 @@ def family(qid):
     return qid.rsplit("_", 1)[0]
 
 
+# Dropped at the fact pass (docs/conformity/candidate-fact-check.md, 9 Nov): the ids stay defined so runs already
+# reading the module keep their ids, but they are out of ACTIVE, the split and every report.
+DROPPED = {
+    "C_LM_persepolis": "same-kind Iraq shares the letter; 'Persia' (P) is Iran's historic name and the subject carries 'Pers-'",
+    "C_LU_ntu": "same-kind Tokyo shares the letter; the subject's 'Taiwan' shares 'Tai-' with Taipei",
+    "C_LP_jordan": "Brooklyn is a borough; 'New York' (N) is the likely answer to 'in which city'",
+    "C_LM_suomenlinna": "'Suomen-' means Finland's, so the subject carries the bridge",
+}
+ACTIVE = {k: v for k, v in SPECS.items() if k not in DROPPED}
+# Watch flags from the fact pass, not dropped: Marco Polo (Korcula claim), Blarney (Republic of Ireland -> R / No),
+# Georgetown (the neighbourhood's name), Gretzky ('hockey' may read as field hockey outside North America),
+# Chocolate Hills ('the Philippines').
+
+
 def split(seed="conformity-v2-candidates-2026-11-08", confirm_share=1 / 3):
     """Development / confirmation split, fixed by seed, keeping every question with the same bridge in one half
-    and stratified by family. Returns {"dev": [...], "confirm": [...]}."""
+    (across families: Washington and Atlanta appear as a person's and a university's city), stratified by the family
+    of the group's first id. Dropped ids are left out. Returns {"dev": [...], "confirm": [...]}."""
     rng = random.Random(seed)
+    groups = {}
+    for k in sorted(ACTIVE):
+        groups.setdefault(ACTIVE[k]["bridge"][0], []).append(k)
+    by_fam = {}
+    for b, ids in groups.items():
+        by_fam.setdefault(family(ids[0]), []).append(b)
     out = {"dev": [], "confirm": []}
-    fams = sorted({family(k) for k in SPECS})
-    for f in fams:
-        groups = {}
-        for k in sorted(SPECS):
-            if family(k) == f:
-                groups.setdefault(SPECS[k]["bridge"][0], []).append(k)
-        keys = sorted(groups)
+    for f in sorted(by_fam):
+        keys = sorted(by_fam[f])
         rng.shuffle(keys)
         n_conf = round(len(keys) * confirm_share)
         for i, b in enumerate(keys):
@@ -396,7 +415,7 @@ def digest():
 if __name__ == "__main__":
     import collections
     s = split()
-    print(len(SPECS), "candidates;", collections.Counter(family(k) for k in SPECS))
+    print(len(SPECS), "candidates,", len(ACTIVE), "active;", collections.Counter(family(k) for k in ACTIVE))
     print("dev", len(s["dev"]), "confirm", len(s["confirm"]))
     print("letters among first-letter questions:",
           collections.Counter(SPECS[k]["answer"] for k in SPECS if family(k) in ("C_LM", "C_LP", "C_LU")))

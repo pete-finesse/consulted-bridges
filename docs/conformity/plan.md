@@ -151,6 +151,8 @@ With SD 3, detecting a 2 log-odds difference at 80% power needs about 20 questio
 
 **Step 4a, before the screen: choose the lens.** The J++ lens passes 26 of 56 count questions against 16, halves the 4B's same-kind collateral and removes more of the bridge on the 27B with controls unchanged (`process.md` round 14). Proposed: J++ primary on the Qwen models, J-lens as replication on the development set; Llama and Gemma need a J++ fit. Pending Peter's decision.
 
+**Before any candidate enters a group run:** `conformity.wrong_letter` returns a letter for every family; the number and category candidates need a per-format wrong peer (a nearby number; the other continent / side / yes-no), and the 9 controls fixed at the fact pass need their same-kind screen values re-measured (`process.md` round 15b).
+
 **Step 4b, first in every run: the gate screen.** Run the four gate checks (§3.1) on every candidate for that model, solo prompt, both paraphrases. Record the funnel. Only questions that pass continue to steps 5 to 8, and the hidden prompt becomes the baseline for every "shrinks" comparison (§3.2).
 
 **Step 5. Does the tool work in the group layout?** (the go/no-go gate)

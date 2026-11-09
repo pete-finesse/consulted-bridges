@@ -61,11 +61,24 @@ def in_use_by_model(root=Path(__file__).resolve().parents[3]):
     for cfg, qs in COUNTS.items():
         out.setdefault(cfg, set()).update(qs)
     for f in sorted(glob.glob(str(root / "results" / "conformity_select_*.csv"))):
+        cfg = Path(f).stem[len("conformity_select_"):]
+        if cfg.endswith("_candidates"):      # a candidate screen's selection, not a run list (candidates_selected)
+            continue
         import pandas as pd
         t = pd.read_csv(f)
-        cfg = Path(f).stem[len("conformity_select_"):]
         out.setdefault(cfg, set()).update(t[t.selected].question)
     out.pop("tiny", None)
+    return out
+
+
+def candidates_selected(root=Path(__file__).resolve().parents[3]):
+    """Candidates that passed a model's gate screen (results/conformity_select_<config>_candidates.csv), by config.
+    They stay status "candidate" until a conformity run lists them."""
+    import pandas as pd
+    out = {}
+    for f in sorted(glob.glob(str(root / "results" / "conformity_select_*_candidates.csv"))):
+        t = pd.read_csv(f)
+        out[Path(f).stem[len("conformity_select_"):-len("_candidates")]] = set(t[t.selected].question)
     return out
 
 

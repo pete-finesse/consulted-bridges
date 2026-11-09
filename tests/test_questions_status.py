@@ -1,5 +1,5 @@
 """Every question has exactly one status, ids never collide across modules, and every in-use id exists."""
-from consulted_bridges.questions.status import MODULES, in_use_by_model, specs_by_module, status
+from consulted_bridges.questions.status import MODULES, candidates_selected, in_use_by_model, specs_by_module, status
 
 
 def test_ids_unique_across_modules():
@@ -30,3 +30,10 @@ def test_candidates_are_apart_from_the_screen_list():
     assert not set(CANDIDATE) & set(LETTER)
     assert all(k.startswith("C_") for k in CANDIDATE)
     assert len(MODULES) == 10
+
+
+def test_screened_candidates_stay_candidates():
+    st = status()
+    for cfg, qs in candidates_selected().items():
+        for q in qs:
+            assert st[q] == "candidate", (cfg, q, st[q])

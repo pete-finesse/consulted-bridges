@@ -255,6 +255,21 @@ The two things that keep the loop honest: the rule is written down before the ru
   `expandable_segments` against out-of-memory errors; (4) driving side, vowel class, element and planet leave the
   removal arm on the 4B by the stop rule.
 
+## Round 15b: fact pass on the candidates (9 Nov, separate session)
+
+- **Set:** check every candidate's first hop, second hop, aliases, and whether the subject carries the bridge; check
+  the same-kind controls against "same kind, different answer" and the run-time wrong peer (`same_kind[0]`) against
+  "not a plausible alternative bridge's answer". `docs/conformity/candidate-fact-check.md`.
+- **Found:** no bridge or answer is a wrong fact. 30 of 171 had an issue: 9 same-kind controls shared the bridge's
+  letter (a dead control, not a biased one), 16 ambiguities (mostly the wrong peer being a plausible alternative,
+  e.g. Kenya for Kilimanjaro, Cambridge for Hawking), 5 cosmetic.
+- **Changed:** 9 controls replaced, 8 reordered, 4 questions dropped (Persepolis, National Taiwan University, Michael
+  Jordan, Suomenlinna). Ids stay defined so the running screens keep theirs; `ACTIVE` and `split()` exclude the
+  drops; the split now groups a bridge across families (Washington, Atlanta). 167 active, 112 development / 55
+  confirmation, digest f35aa82d…. Two follow-ups for before any candidate enters a group run: the wrong-peer rule
+  returns a *letter* for the number and category families (needs a per-format rule in `conformity.wrong_letter`),
+  and the 4B screen's same-kind results for the 9 fixed controls were measured with the old controls.
+
 ---
 
 ## Pass rates so far (for forecasting the next draft)
