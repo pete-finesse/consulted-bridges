@@ -120,6 +120,20 @@ in that family, at most two further drafting rounds; drafting from screen result
 solo-only and cannot bias the group comparison. If even letters fail on a model, that model leaves the removal arm
 and stays in the behavioural and peer-block arms, which need no bridge. (8 Nov 2026)
 
+**Formats are pooled for reading (proposed 9 Nov, ~09:15 UTC, before run 2's funnel is read; pending Peter).**
+Letters are the main format, read on their own. Months, players per side, atomic numbers, planet positions and
+strings are one pooled second format, "number lookups" (about 37 distinct facts across them); continent is a third,
+small set. The stop rule's "20 gated per format" applies to the pooled format, not to each family. With a few
+questions per family no format *effect* can be read, so the claim is "the effect appears in every lookup format we
+tried", with one interval for each pooled format and a per-family table of counts without intervals. The unit stays
+the question (the fact), so pooling is statistically sound.
+
+**Every layout carries its own hidden twin (rule, 9 Nov).** A new prompt layout (wording, peer position, more
+peers, filler, peers supplying information, the three boxes) gets its own hidden-answer prompt run alongside, and
+every "not needed" or "shrinks" claim in that layout is read against it. Run 1 showed one sentence of wording moves
+the hidden baseline from P(right) ≈ 1 to ≈ 0.4.
+
+
 ## 8. What was tried and did not work (so it is not retried by accident)
 
 - **Last letter of the hidden word:** untestable in the ideas run (the model cannot do the second hop reliably).
@@ -207,6 +221,7 @@ working is the first L at which the effect is below half of P_all's. Reported, n
 | 2026-11-08 | A1 thresholds: need_LO ≥ 2 / < 1, ceiling 0.9, inconclusive at control drop 0.2, clean-subset rule | §7, fixed before computing |
 | 2026-11-08 | Finding 1 reworded per model and wording: "weakens" (27B neutral), "stops" (27B group-aware, 4B) | A1 result, process.md round 13 |
 | 2026-11-08 | Reach: edit positions inflate passes; fix after run 1, report value not pass/fail | §9 |
+| 2026-11-09 | Formats pooled for reading (letters; number lookups; continent); hidden twin per layout | §7, proposed before run 2's funnel is read |
 | 2026-11-08 | Lens: J++ proposed as primary on Qwen (pending) | process.md round 14 |
 | 2026-11-08 | Stop rule: ≥ 20 gated per format, ≥ 2 formats, on the 27B; at most two more drafting rounds | §7 |
 | 2026-11-08 | GPU run 1 pass marks for the hidden check, block validation, 2x2 and patch (§11) | fixed before the run |
