@@ -255,6 +255,38 @@ The two things that keep the loop honest: the rule is written down before the ru
   `expandable_segments` against out-of-memory errors; (4) driving side, vowel class, element and planet leave the
   removal arm on the 4B by the stop rule.
 
+## Round 17: GPU run 2, Qwen3.6-27B (9 Nov UTC, 14 pods, `results/v2_run2_qwen36_27b/summary.md`)
+
+- **Set, before the run:** the same protocol and pass marks as run 1 (`scope.md` §11), on the 25 development
+  questions (19 without calibration) with J++; the screen of the 171 candidates under both lenses, reported on the
+  167 active ones, the confirmation half as counts only. Wrong letters kept as in the earlier 27B runs.
+- **Ran:** leak test; 342 screen cards; 1,112 conformity prompts with every B1 variant and the own-part removal;
+  block, 2x2, dose-response and patch, both wordings. No prompt failed. CA-MTL-3 had no H200, so 3 A100s ran on
+  the volume and 11 H200s ran elsewhere with their own downloads, through a job queue on the volume
+  (`scripts/pod/v2_jobs.sh`). GPU work 08:37–09:17 UTC.
+- **Found, tools:** the leak test is exact (blocked difference 0.0; the same on the H200 install). All four
+  block validation rows pass in both wordings (copy-only 6/6, give-ins 19/19 and 36/38, hidden 96/100 and 90/100
+  within 1 log-odds, told to copy 25/25 with a median fall of 10.0). The answer-only block returns most plain
+  give-ins (15/19, 30/38; the 4B 10/64) but only 4/25 told-to-copy. The patch tracks the block (correlation
+  0.95–0.99), and patch plus removal collapses where D does (18/19, 17/19).
+- **Found, the hidden check:** passes the pre-registered rule in the neutral wording. In the group-aware wording
+  it misses by one question in four of six cells (11 or 10 of 19 needed against 11.25), all through inconclusive
+  labels. No hidden prompt is "not needed" or lacks an early window, and B collapses the answer in 17–19 of 19.
+  Unlike the 4B, the group-aware hidden prompt is a sound baseline (P(right) about 0.97, onset 54 as alone).
+- **Found, the 2x2:** neutral, three agreeing peers: both collapse in 14 of 19 (the 4B: only D in 15 of 20). The
+  27B keeps using the bridge while the peers are visible. Group-aware, three peers: only D 7, both 7, leaned on the
+  peers 4 (person questions and Fuji; the 4B leaned in 18 of 20). Disagree-D's move to the peers' letter (13 of 19)
+  is confounded by the same-kind wrong letter.
+- **Found, the screen:** selected J-lens 50, J++ 71 of 167 (development 34 / 47 of 112). The 27B knows 153 of 167;
+  the binding gate is reach (71 J-lens and 43 J++ untestable). Landmarks 22 / 29 of 38, universities 13 / 18 of 27,
+  persons 10 / 11 of 29, players per side 0 / 4 of 5; months 1 of 14, continent 0 of 12.
+- **Found, variants:** told to ignore the peers, 3 of 19 still give in fully (4B 11 of 20). A peer naming a wrong
+  country is followed in 2–4 of 19 (4B 13–20 of 20).
+- **Changed:** for the confirmation run, (1) the hidden-check reading from rounds 16–17 written into §11 first;
+  (2) confirmation questions picked with J++ plus reach, and the families that select nothing on the 27B dropped;
+  (3) the nine candidates with replaced controls re-screened; (4) wrong letters drawn from letters no same-kind
+  word starts with; (5) at most two 27B processes per H200.
+
 ## Round 15b: fact pass on the candidates (9 Nov, separate session)
 
 - **Set:** check every candidate's first hop, second hop, aliases, and whether the subject carries the bridge; check
