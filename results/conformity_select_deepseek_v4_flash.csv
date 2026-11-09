@@ -1,0 +1,38 @@
+question,selected,verdict,verdict_reason,model_said,P_base,need,comes_first,lead,answer_onset,quality
+L_colosseum,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I<｜end▁of▁sentence｜>,0.999,0.999,True,12.0,36.0,0.999
+L_federer,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",B<｜end▁of▁sentence｜>,0.996,0.0,True,4.0,32.0,0.0
+L_gates,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S<｜end▁of▁sentence｜>,0.999,0.996,True,8.0,36.0,0.99
+L_maldini,False,UNTESTABLE,the model gets the two-hop question wrong,P<｜end▁of▁sentence｜>,0.088,,,,,
+L_mishima,False,UNTESTABLE,the model gets the two-hop question wrong,Y<｜end▁of▁sentence｜>,0.222,,,,,
+L_mozart,False,UNTESTABLE,the bridge word is not a single token,S<｜end▁of▁sentence｜>,1.0,,,,,
+L_piaf,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",P<｜end▁of▁sentence｜>,0.964,0.0,False,0.0,24.0,0.0
+L_spider,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S<｜end▁of▁sentence｜>,1.0,0.996,True,12.0,36.0,0.246
+L_york,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",T<｜end▁of▁sentence｜>,0.941,0.543,True,8.0,32.0,0.238
+V_LM_acropolis,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",G<｜end▁of▁sentence｜>,0.999,0.999,True,8.0,36.0,0.999
+V_LM_angkor,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",C<｜end▁of▁sentence｜>,1.0,0.033,True,4.0,32.0,0.033
+V_LM_brandenburg,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",G<｜end▁of▁sentence｜>,0.997,0.994,True,12.0,36.0,0.994
+V_LM_christ,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B<｜end▁of▁sentence｜>,1.0,0.999,True,8.0,36.0,0.999
+V_LM_eiffel,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",F<｜end▁of▁sentence｜>,1.0,0.999,True,8.0,36.0,0.999
+V_LM_fuji,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",J<｜end▁of▁sentence｜>,1.0,1.0,True,12.0,36.0,1.0
+V_LM_kremlin,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",R<｜end▁of▁sentence｜>,1.0,0.996,True,8.0,36.0,0.996
+V_LM_machu,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P<｜end▁of▁sentence｜>,1.0,1.0,True,8.0,36.0,1.0
+V_LM_petronas,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M<｜end▁of▁sentence｜>,0.998,0.999,True,8.0,36.0,0.999
+V_LM_pisa,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I<｜end▁of▁sentence｜>,0.999,0.998,True,12.0,36.0,0.998
+V_LM_pyramids,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E<｜end▁of▁sentence｜>,1.0,0.999,True,8.0,36.0,0.818
+V_LM_sagrada,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S<｜end▁of▁sentence｜>,0.998,0.96,True,8.0,36.0,0.96
+V_LM_sydney,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",A<｜end▁of▁sentence｜>,1.0,0.999,True,12.0,36.0,0.999
+V_LM_taj,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I<｜end▁of▁sentence｜>,0.999,0.998,True,8.0,36.0,0.998
+V_LP_ali,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",L<｜end▁of▁sentence｜>,0.976,0.893,True,12.0,36.0,0.893
+V_LP_beyonce,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",H<｜end▁of▁sentence｜>,0.997,0.987,True,12.0,36.0,0.987
+V_LP_hemsworth,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",M<｜end▁of▁sentence｜>,0.995,0.478,True,8.0,32.0,0.002
+V_LP_hendrix,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",S<｜end▁of▁sentence｜>,0.499,0.0,False,-8.0,16.0,0.0
+V_LP_kapoor,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M<｜end▁of▁sentence｜>,0.914,1.0,True,12.0,32.0,0.999
+V_LP_obama_m,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C<｜end▁of▁sentence｜>,0.917,0.644,True,8.0,32.0,0.635
+V_LP_plummer,False,UNTESTABLE,the model gets the two-hop question wrong,C<｜end▁of▁sentence｜>,0.042,,,,,
+V_LP_timberlake,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M<｜end▁of▁sentence｜>,0.984,0.933,True,8.0,32.0,0.532
+V_LU_alberta,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E<｜end▁of▁sentence｜>,0.997,0.976,True,8.0,36.0,0.409
+V_LU_berklee,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",B<｜end▁of▁sentence｜>,0.997,0.001,False,,36.0,0.0
+V_LU_dalhousie,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",H<｜end▁of▁sentence｜>,0.992,0.931,True,8.0,36.0,0.931
+V_LU_fudan,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S<｜end▁of▁sentence｜>,0.997,0.983,True,8.0,36.0,0.981
+V_LU_hopkins,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",B<｜end▁of▁sentence｜>,0.992,0.002,True,4.0,32.0,0.002
+V_LU_pompeu,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B<｜end▁of▁sentence｜>,0.961,0.937,True,12.0,36.0,0.92

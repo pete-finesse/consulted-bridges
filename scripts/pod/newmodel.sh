@@ -17,6 +17,9 @@ echo "== $(date -u +%T) lens"
 $PY scripts/pod/fit_lens.py --config "$cfg" > $L/$cfg-fit.log 2>&1; tail -2 $L/$cfg-fit.log
 export HF_HUB_OFFLINE=${HF_HUB_OFFLINE:-1}   # 0 for models whose kernels transformers fetches at run time (DeepSeek-V4 FP8)
 
+if [ "${RESUME:-0}" = 1 ] && [ -s "results/conformity_select_$cfg.csv" ]; then
+  echo "== RESUME: solo scorecard and selection already done (results/conformity_select_$cfg.csv)"
+else
 echo "== $(date -u +%T) solo scorecard"
 specs=$($PY -c "from consulted_bridges.conformity import LETTER; print(' '.join(('v3_' + q) if q.startswith('L_') else q for q in LETTER))")
 for ((i = 0; i < n; i++)); do
@@ -28,6 +31,7 @@ grep -h "ALLDONE\|failed" $L/$cfg-solo-*.log
 
 echo "== $(date -u +%T) select"
 $PY -m consulted_bridges.conformity_select --config "$cfg" || { echo "SELECT FAILED"; exit 1; }
+fi
 
 echo "== $(date -u +%T) conformity"
 for frame in neutral defer; do
