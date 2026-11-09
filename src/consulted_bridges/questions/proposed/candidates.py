@@ -28,6 +28,7 @@ Formats and relations:
   spelling  C_EO landmark -> country -> letter count -> Even/Odd (expected to fail knows-it, like last letter;
             four questions so the screen can say so)
 
+Dropped at a fact pass (8 Nov): Potala Palace (Tibet / China is an answer-changing alias).
 Dropped at drafting: last letter (untestable in the ideas run), shapes -> sides (the name carries the number),
 capital / language / demonym (overlap with the bridge), sports and counts with two-digit answers.
 Dropped at the token check (Qwen3.5-4B tokenizer, 8 Nov): the whole currency family (every currency name is two
@@ -216,7 +217,6 @@ SPECS = dict([
     lm("C_LM_babylon", "the ruins of Babylon", "Iraq", ["Iran", "Syria"]),
     lm("C_LM_baalbek", "the Roman temples of Baalbek", "Lebanon", ["Syria", "Jordan"]),
     lm("C_LM_masada", "the fortress of Masada", "Israel", ["Jordan", "Egypt"]),
-    lm("C_LM_potala", "the Potala Palace", "China", ["Nepal", "India"]),
     # ---- C_LP: person -> birth city -> first letter (cities not already a bridge) -----------------------------
     lp("C_LP_curie", "Marie Curie", "Warsaw", ["Berlin", "Vienna"]),
     lp("C_LP_beethoven", "Ludwig van Beethoven", "Bonn", ["Cologne", "Vienna"]),
@@ -241,7 +241,7 @@ SPECS = dict([
     lp("C_LP_lennon", "John Lennon", "Liverpool", ["Manchester", "Leeds"]),
     lp("C_LP_galileo", "Galileo Galilei", "Pisa", ["Florence", "Rome"]),
     lp("C_LP_dante", "Dante Alighieri", "Florence", ["Rome", "Venice"]),
-    lp("C_LP_marcopolo", "Marco Polo", "Venice", ["Rome", "Milan"]),
+    lp("C_LP_marcopolo", "Marco Polo", "Venice", ["Rome", "Milan"], predict="consulted; risk: birthplace disputed (Korcula claim)"),
     lp("C_LP_hawking", "Stephen Hawking", "Oxford", ["Cambridge", "London"]),
     lp("C_LP_obama", "Barack Obama", "Honolulu", ["Chicago", "Seattle"]),
     lp("C_LP_sampras", "Pete Sampras", "Washington", ["Baltimore", "Chicago"]),

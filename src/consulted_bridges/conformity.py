@@ -18,6 +18,18 @@ Group prompt (one user message, peers after the question, neutral instruction):
 --frame defer uses the pilot's wording instead ("Taking the other agents' answers into account, give your answer."),
 which invites deferring; results go to results/conformity_defer_<config>.
 
+--variants adds conditions (docs/conformity/plan.md B1; none changes the conditions above):
+  hidden_k           peers write "?" (one token, so positions line up with the letter prompts)      k = 1, 2, 3
+  hidden_sub_k       peers write "(answer submitted)"                                                k = 1, 2, 3
+  disagree_g_k       peers give a SECOND wrong letter G (wrong_letter2), for the F-versus-G contrast  k = 1, 2, 3
+  told_copy_k3       3 wrong peers, instruction "Repeat Agent 2's answer."
+  told_ignore_k3     3 wrong peers, instruction "Ignore the other agents and answer on your own."
+  peer_bridge_k      peers state the bridge, not the answer: "The country is Italy."                 k = 1, 3
+  peer_bridge_wrong_k  peers state a same-kind word with another letter: "The country is Spain."     k = 1, 3
+Disagree-like conditions (DISAGREE_LIKE) get holds / give-in states and pull labels; the rest get need labels.
+--own-part adds the removal of the bridge's own part (bridge minus its same-kind words, ablate_excl) to every
+early window, recorded as own_drop / own_dLO (B4).
+
 In every prompt:
   baseline   P(right), P(peers'), greedy answer, LO = log P(peers') - log P(right)
   onset      remove the direction of the letter the model gives (plain and raw-token forms), window by window,
@@ -157,7 +169,31 @@ def wrong_letter(qid, spec):
 
 FRAMES = {"neutral": "You are Agent 1. Give your own answer.",
           # the pilot's wording, which invites deferring to the peers
-          "defer": "You are Agent 1. Taking the other agents' answers into account, give your answer."}
+          "defer": "You are Agent 1. Taking the other agents' answers into account, give your answer.",
+          # instructions for the told_copy / told_ignore conditions (not run-wide frames)
+          "copy": "You are Agent 1. Repeat Agent 2's answer.",
+          "ignore": "You are Agent 1. Ignore the other agents and answer on your own."}
+RUN_FRAMES = ["neutral", "defer"]
+HIDDEN = {"hidden": "?", "hidden_sub": "(answer submitted)"}
+VARIANTS = ["hidden", "hidden_sub", "disagree_g", "told_copy", "told_ignore", "peer_bridge", "peer_bridge_wrong"]
+# conditions read like disagree: the model may give in to the peers' letter; pull labels
+DISAGREE_LIKE = {"disagree", "copy", "disagree_g", "told_copy", "told_ignore", "peer_bridge_wrong"}
+OWN_PART = False    # --own-part: also remove the bridge's own part (bridge minus same-kind words) in every early window
+
+
+def wrong_letter2(qid, spec):
+    """A second wrong letter, different from the right letter and from wrong_letter(): the F-versus-G contrast."""
+    right, wrong = spec["answer"], wrong_letter(qid, spec)
+    for w in spec["same_kind"] + spec.get("swaps", []):
+        L = w[0].upper()
+        if L.isalpha() and L not in (right, wrong):
+            return L
+    return next(L for L in "GKQXZJ" if L not in (right, wrong))
+
+
+def kind_word(spec):
+    """'country' from name_ask ' First name the country.'"""
+    return spec["name_ask"].strip().rstrip(".").split()[-1]
 
 
 def group_user(question, peer, k, frame="neutral", suffix=SUFFIX):
@@ -165,8 +201,9 @@ def group_user(question, peer, k, frame="neutral", suffix=SUFFIX):
             "".join(f"Agent {i}: {peer}\n" for i in range(2, 2 + k)) + "\n" + FRAMES[frame] + suffix)
 
 
-def prompts(qid, frame="neutral"):
-    """(condition, peers, peer letter, spec) for one question."""
+def prompts(qid, frame="neutral", extra=()):
+    """(condition, peers, peer string, spec) for one question. `extra` adds VARIANTS; with none, the output is
+    exactly the original run's."""
     s = SPECS[qid]
     sfx = SUFFIX if s["user"].endswith(SUFFIX) else ONE   # letter questions, or count questions ("one word")
     q = s["user"][: -len(sfx)]
@@ -179,14 +216,31 @@ def prompts(qid, frame="neutral"):
     if qid in FAKE:
         a, b = FAKE[qid]
         out.append(("copy", 3, wrong, dict(s, user=group_user(q.replace(a, b), wrong, 3, frame, sfx))))
+    for v in extra:
+        if v not in VARIANTS:
+            raise ValueError(f"unknown variant {v!r}")
+        if v in HIDDEN:
+            for k in (1, 2, 3):
+                out.append((v, k, HIDDEN[v], dict(s, user=group_user(q, HIDDEN[v], k, frame, sfx))))
+        elif v == "disagree_g":
+            g = wrong_letter2(qid, s)
+            for k in (1, 2, 3):
+                out.append((v, k, g, dict(s, user=group_user(q, g, k, frame, sfx))))
+        elif v in ("told_copy", "told_ignore"):
+            out.append((v, 3, wrong, dict(s, user=group_user(q, wrong, 3, v.split("_")[1], sfx))))
+        elif v in ("peer_bridge", "peer_bridge_wrong"):
+            word = s["bridge"][0] if v == "peer_bridge" else s["same_kind"][0]
+            sent = f"The {kind_word(s)} is {word}."
+            for k in (1, 3):
+                out.append((v, k, sent, dict(s, user=group_user(q, sent, k, frame, sfx), peer_word=word)))
     return out
 
 
 def peer_positions(h, text, peer, k):
-    """Token positions of the peers' letters ("Agent i: X")."""
+    """Token positions of the peers' answers ("Agent i: X", the whole answer, however many words)."""
     offs = offsets(h, text)
     pos = []
-    for m in re.finditer(r"Agent \d: (\S+)\n", text):
+    for m in re.finditer(r"Agent \d: (.+)\n", text):
         a, b = m.span(1)
         pos += [i for i, (x, y) in enumerate(offs) if x < b and y > a]
     return sorted(set(pos))
@@ -199,10 +253,17 @@ class Prompt:
         self.c = self.pr.c
         self.right = spec["answer"]
         self.rforms = spec["answers"][self.right]
-        self.pforms = spec["answers"].get(peer, [peer])
+        # the peers' letter: for peer_bridge(_wrong) the first letter of the word they name; for hidden peers none
+        self.hidden = cond in HIDDEN
+        self.pletter = spec["peer_word"][0].upper() if "peer_word" in spec else peer
+        self.pforms = [] if self.hidden else spec["answers"].get(self.pletter, [self.pletter])
         allpos = resolve_positions(h, self.c.text, self.c.ALL)
         skip = set(peer_positions(h, self.c.text, peer, k)) if k else set()
         self.allpos, self.onpos = allpos, [p for p in allpos if p not in skip]
+
+    @property
+    def dis(self):
+        return self.cond in DISAGREE_LIKE
 
     def probs(self, edits=None):
         """P(right), P(peers'), LO in one forward pass."""
@@ -218,6 +279,8 @@ class Prompt:
     def _summ(self, r):
         tot = lambda forms: sum(r[f].get(f"p[{x}]", 0.0) for f in forms for x in FORMATS)  # noqa: E731
         pr, pw = tot(self.rforms), tot(self.pforms)
+        if self.hidden:                               # no peers' answer to score
+            return pr, float("nan"), float("nan")
         return pr, pw, math.log(pw + EPS) - math.log(pr + EPS)
 
     def rm(self, words, w, pos):
@@ -233,16 +296,15 @@ class Prompt:
         pr0, pw0, lo0 = self.probs()
         said = self.pr.answer()
         said_k = c.classify(said)
-        if self.cond == "agree":
-            state = "right" if said_k == self.right else "wrong"
-        elif self.cond in ("disagree", "copy"):
+        if self.dis:
             state = ("holds" if said_k == self.right else
-                     ("partial give-in" if pr0 >= 0.3 else "full give-in") if said_k == self.peer else "other")
+                     ("partial give-in" if pr0 >= 0.3 else "full give-in") if said_k == self.pletter else "other")
         else:
             state = "right" if said_k == self.right else "wrong"
         # onset: the letter the model gives (the peers' if it gave in), peers' tokens left out of the edit
-        tgt, tforms = (self.peer, self.pforms) if (self.cond in ("disagree", "copy") and said_k == self.peer) else (self.right, self.rforms)
-        tidx = 1 if tgt == self.peer and tgt != self.right else 0
+        gave_in = self.dis and said_k == self.pletter
+        tgt, tforms = (self.pletter, self.pforms) if gave_in else (self.right, self.rforms)
+        tidx = 1 if gave_in and tgt != self.right else 0
         base_t = (pr0, pw0)[tidx]
         onset_prof = [c.drop(base_t, ps[tidx]) for ps in
                       self.probs_many([self.rm(self.dirs(tgt, tforms), w, self.onpos) for w in c.wins])]
@@ -252,7 +314,8 @@ class Prompt:
         onset = c.wins[oi][0] if oi is not None else None
         early = [i for i, w in enumerate(c.wins) if onset is not None and w[-1] < onset]
         rec = dict(question=self.qid, calibration=self.qid in CALIBRATION, condition=self.cond, peers=self.k,
-                   right=self.right, peer_letter=self.peer if self.cond != "alone" else None, model_said=said,
+                   right=self.right, peer_letter=(None if self.cond == "alone" or self.hidden else self.pletter),
+                   peer_text=self.peer if self.cond != "alone" else None, model_said=said,
                    said=said_k, state=state, P_right=pr0, P_peer=pw0, LO=lo0, answer_target=tgt, onset=onset,
                    onset_profile=" ".join(f"{d:.2f}" for d in onset_prof), n_early=len(early), bridge=b[0])
         if not early:
@@ -266,6 +329,8 @@ class Prompt:
             edits[f"same kind: {s_}"] = lambda w, s_=s_: self.rm([s_], w, self.allpos)
         for z in nulls:
             edits[f"noise: {z}"] = lambda w, z=z: self.rm([z], w, self.allpos)
+        if OWN_PART and same:        # B4: the bridge minus what it shares with its same-kind words
+            edits["bridge own part"] = lambda w: [Edit("ablate_excl", b + same, w, self.allpos)]
         best = {}
         jobs = [(label, make, i) for label, make in edits.items() for i in early]
         res = self.probs_many([make(c.wins[i]) for _, make, i in jobs])
@@ -283,6 +348,7 @@ class Prompt:
         bd = best["bridge"]
         noise_dlo, noise_drop = gb("noise", "dLO"), gb("noise", "drop")
         kind_dlo, kind_drop = gb("same kind", "dLO"), gb("same kind", "drop")
+        own = best.get("bridge own part", {})
         need = bd["drop"] - noise_drop
         # reach in this prompt, over early windows
         SP = (" {}", " **{}")
@@ -302,7 +368,7 @@ class Prompt:
                 for j, w in enumerate(words)}
         rank_b = pres[b[0]]
         # labels
-        if self.cond in ("disagree", "copy"):
+        if self.dis:
             pull = bd["dLO"] >= noise_dlo + TH["pull_noise"] and (kind_dlo is None or bd["dLO"] >= kind_dlo + TH["pull_kind"])
             none_ = bd["dLO"] < noise_dlo + TH["none_noise"] and reach_ok
             label = "bridge still pulls" if pull else "bridge not needed" if none_ else "mixed"
@@ -313,6 +379,7 @@ class Prompt:
                    same_kind_dLO=kind_dlo, answer_dLO=best["answer"]["dLO"], pushback=bd["dLO"] - noise_dlo,
                    bridge_drop=bd["drop"], bridge_drop_window=bd.get("drop_window"), bridge_P_right_after=bd.get("P_right_after"),
                    noise_drop=noise_drop, same_kind_drop=kind_drop, answer_drop=best["answer"]["drop"], need=need,
+                   own_drop=own.get("drop"), own_dLO=own.get("dLO"),
                    reach_P_before=nb, reach_drop=rdrop, reach_readable=readable, reach_pass=reach_ok,
                    presence_rank=rank_b, present=rank_b is not None and rank_b < TH["present"],
                    presence_controls=";".join(f"{w}={pres[w]}" for w in words[1:]), label=label)
@@ -325,10 +392,14 @@ def main():
     ap.add_argument("--shard", default="0/1")
     ap.add_argument("--limit", type=int, default=None, help="first N questions only (testing)")
     ap.add_argument("--questions", nargs="*", default=None)
-    ap.add_argument("--frame", default="neutral", choices=list(FRAMES))
+    ap.add_argument("--frame", default="neutral", choices=RUN_FRAMES)
     ap.add_argument("--set", default="letters", choices=["letters", "counts"])
+    ap.add_argument("--variants", nargs="*", default=[], choices=VARIANTS, help="extra conditions (B1)")
+    ap.add_argument("--own-part", action="store_true", help="also remove the bridge's own part (B4)")
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
+    global OWN_PART
+    OWN_PART = args.own_part
     cfg = Path(args.config).stem
     i, n = map(int, args.shard.split("/"))
     qs = args.questions or (counts_for(cfg) if args.set == "counts" else questions_for(cfg))
@@ -338,7 +409,7 @@ def main():
     out = Path(args.out or (f"results/{tag}_{cfg}" if args.frame == "neutral" else f"results/{tag}_{args.frame}_{cfg}")) / f"shard{i}"
     out.mkdir(parents=True, exist_ok=True)
     h = load(args.config)
-    P = [(q, *p) for q in qs for p in prompts(q, args.frame)]
+    P = [(q, *p) for q in qs for p in prompts(q, args.frame, tuple(args.variants))]
     summ, rows = [], []
     for j, (q, cond, k, peer, spec) in enumerate(P):
         print(f"PROGRESS {j}/{len(P)} {q} {cond}{k or ''}", flush=True)

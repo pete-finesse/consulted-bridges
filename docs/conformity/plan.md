@@ -125,11 +125,11 @@ With SD 3, detecting a 2 log-odds difference at 80% power needs about 20 questio
 
 **A2. Pre-register.** Write each claim with the result that would support it and the result that would sink it. Fix every new threshold (log-odds "still needed" ≥ noise + 2, "not needed" < noise + 1, the block pass marks in step 6, the clean-subset rules). Commit before computing.
 
-**A3. Candidate questions (§3): drafted 8 Nov.** `questions/proposed/candidates.py` holds 172 candidates in 12 families (ids `C_`), none run: 99 first-letter questions in three relations (41 landmark → country, 30 person → birth city, 28 university → city), 14 month-number, 6 atomic-number, 5 planet-position, 5 players-per-side, 2 strings, 12 continent, 11 driving-side, 14 starts-with-a-vowel yes/no, and 4 even/odd letter-count controls expected to fail. Every edited word is one token on the Qwen tokenizer (checked; the currency family and 28 two-token bridges were dropped at that check). The module's seeded split gives 112 development and 60 confirmation questions, keeping each bridge's questions together and stratifying by family; `digest()` prints the sha256 of the table and split, to quote in the commit. The current sets stay as development. The gate screen (§3.1) is the first thing each GPU run does; Llama and Gemma tokenizers are checked on the pod before their screens.
+**A3. Candidate questions (§3): drafted 8 Nov.** `questions/proposed/candidates.py` holds 171 candidates in 12 families (ids `C_`), none run: 98 first-letter questions in three relations (40 landmark → country, 30 person → birth city, 28 university → city), 14 month-number, 6 atomic-number, 5 planet-position, 5 players-per-side, 2 strings, 12 continent, 11 driving-side, 14 starts-with-a-vowel yes/no, and 4 even/odd letter-count controls expected to fail. Every edited word is one token on the Qwen tokenizer (checked; the currency family and 28 two-token bridges were dropped at that check). The module's seeded split gives 114 development and 57 confirmation questions, keeping each bridge's questions together and stratifying by family; `digest()` prints the sha256 of the table and split, to quote in the commit. The current sets stay as development. The gate screen (§3.1) is the first thing each GPU run does; Llama and Gemma tokenizers are checked on the pod before their screens.
 
 **Output:** one table per model with label counts, need in probability and in log-odds, intervals by question, the clean-subset version, and the number of ceiling and inconclusive rows. If the 27B "not needed" share collapses under log-odds, the presentation's finding 1 is reworded now.
 
-### Phase B: code, tested on the tiny model
+### Phase B: code, tested on the tiny model (done 8 Nov; `process.md` round 15)
 
 **B1. Prompt variants** in `group_user` / `prompts()`:
 - hidden answers, same length: peers write "?" (check it is one token in every tokenizer);
@@ -146,6 +146,10 @@ With SD 3, detecting a 2 log-odds difference at 80% power needs about 20 questio
 **B4. Port from the scorecard:** own-part removal (`ablate_excl`) and answer-letter removal, inside group prompts. **B5.** A removal strength setting (0.25, 0.5, 0.75, 1).
 
 ### Phase C: GPU, 4B first (cheap, finds bugs), then 27B, then Llama and Gemma
+
+**Step 4 first: the leak test on the real model.** One forward pair (peers I, peers F) with the block at every layer; the logits must match. If they do not, hub kernels have replaced the GatedDeltaNet forward: set `USE_HUB_KERNELS=0` and rerun. Nothing in step 6 can be read without this.
+
+**Step 4a, before the screen: choose the lens.** The J++ lens passes 26 of 56 count questions against 16, halves the 4B's same-kind collateral and removes more of the bridge on the 27B with controls unchanged (`process.md` round 14). Proposed: J++ primary on the Qwen models, J-lens as replication on the development set; Llama and Gemma need a J++ fit. Pending Peter's decision.
 
 **Step 4b, first in every run: the gate screen.** Run the four gate checks (§3.1) on every candidate for that model, solo prompt, both paraphrases. Record the funnel. Only questions that pass continue to steps 5 to 8, and the hidden prompt becomes the baseline for every "shrinks" comparison (§3.2).
 

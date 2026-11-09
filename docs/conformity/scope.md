@@ -154,4 +154,5 @@ and stays in the behavioural and peer-block arms, which need no bridge. (8 Nov 2
 | 2026-11-08 | Currency family and 28 multi-token bridges dropped | token check, §8 |
 | 2026-11-08 | A1 thresholds: need_LO ≥ 2 / < 1, ceiling 0.9, inconclusive at control drop 0.2, clean-subset rule | §7, fixed before computing |
 | 2026-11-08 | Finding 1 reworded per model and wording: "weakens" (27B neutral), "stops" (27B group-aware, 4B) | A1 result, process.md round 13 |
+| 2026-11-08 | Lens: J++ proposed as primary on Qwen (pending) | process.md round 14 |
 | 2026-11-08 | Stop rule: ≥ 20 gated per format, ≥ 2 formats, on the 27B; at most two more drafting rounds | §7 |

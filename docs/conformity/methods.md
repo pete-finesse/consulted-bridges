@@ -62,8 +62,20 @@ made-up subject (the Varrenth Arch), so the model has no bridge of its own and c
 
 *The wrong answer:* fixed per pilot question; otherwise the first letter of a same-kind control or swap word with a
 different letter; for counts, one off the right count. **Planned:** never the answer of a plausible alternative
-bridge; a second wrong answer G for the F-versus-G behavioural contrast; hidden answers ("?" and "(answer submitted)");
-told-to-copy and told-to-ignore; peer supplies the bridge instead of the answer.
+bridge (today Spain's S is the second wrong letter for Colosseum).
+
+*Variant conditions* (**implemented** in `conformity.py --variants`, 8 Nov; **not yet run** on any model). Each is
+added to a question's conditions without changing the eight above: *hidden* (peers write "?", one token, so the
+prompt has the same length as the letter prompts) and *hidden_sub* ("(answer submitted)"), 1–3 peers; *disagree_g*
+(a second wrong letter from `wrong_letter2`, for the F-versus-G contrast), 1–3 peers; *told_copy* and *told_ignore*
+(3 wrong peers with "Repeat Agent 2's answer." or "Ignore the other agents and answer on your own." in place of the
+last line's first sentence); *peer_bridge* and *peer_bridge_wrong* (peers write "The country is Italy." or "The
+country is Spain." and the model is still asked for the letter), 1 and 3 peers. Disagree-like conditions (disagree,
+copy, disagree_g, told_copy, told_ignore, peer_bridge_wrong) get holds / give-in states and pull labels, with the
+peers' letter taken as the first letter of the word they name; the rest get need labels; hidden conditions record no
+P(peers'). Peer token positions now cover the peers' whole answer, however many words. `--own-part` adds the removal
+of the bridge's own part (bridge minus its single-token same-kind words) to every early window (`own_drop`,
+`own_dLO`).
 
 ## 4. Measurements in every prompt
 

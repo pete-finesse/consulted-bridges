@@ -175,6 +175,49 @@ The two things that keep the loop honest: the rule is written down before the ru
   "stops" on the 27B group-aware and on the 4B. Report log-odds beside probability everywhere. The 4B's same-kind
   overlap goes into the funnel as a probe limit. "No early window" becomes a reported category.
 
+## Round 14: the J++ lens against the J-lens (8 Nov, Peter's runs, both Qwen models)
+
+- **Set:** the same trimmed solo screen, selection rule and conformity run, with the J++ lens (`configs/*_jpp.yaml`)
+  in place of the J-lens; `scripts/jpp_compare.py` and `results/jpp_compare/`.
+- **Found, selection:** letters 27 of 37 (J++) against 25 (J-lens) on the 27B, 23 against 24 on the 4B: about the
+  same. **Counts: 26 of 56 consulted against 16.** The ten new passes include Christ the Redeemer → Brazil → 5,
+  Senna → Brazil → 5, Le Corbusier → Switzerland → 4, Mars → 2 moons; several of them still have reach near 0 under
+  either lens (Gandhi 0.015, Mars 0.003, Niemeyer 0.046), so the gate as written would hold them back.
+- **Found, probe quality (from the A1 tables):** alone, the 4B's same-kind drop falls from 0.38 to 0.10 on median and
+  the share of inconclusive alone prompts from 60% to 37%; the 27B's alone need in log-odds rises from 8.4 to 11.5
+  with the controls unchanged near 0. J++ removes more of the bridge with no more collateral.
+- **Found, the group result under J++ (27B neutral):** still needed at 1 / 2 / 3 peers 18 / 16 / 15 of 21 in
+  log-odds (J-lens: 14 / 12 / 10 of 19); group-aware 16 / 7 / 7 of 21. The "weakens, does not stop" reading gets
+  stronger with the better lens; the group-aware "stops" softens to "weakens" too.
+- **Implication:** the lens is a tool choice that belongs before the candidate screen. Proposed: J++ as the primary
+  lens for the screen and the Phase C runs on the Qwen models, J-lens kept as the replication on the development
+  set; Llama and Gemma need a J++ fit first (cost to be checked). Decision pending.
+
+## Round 15: Phase B built and tested on the tiny model (8 Nov, two forked agents in parallel)
+
+- **Set:** the Phase B list in `plan.md`; every piece gets an exact test on the 4-layer tiny Qwen3.5 (two
+  linear-attention and two full-attention layers, so the hybrid block can be tested for leaks).
+- **Built:** `peerblock.py` with `Block` (attention mask on full-attention layers; mixer input zeroed and beta and
+  log-decay set to 0 at the peer positions on linear-attention layers), `Patch` (the peer positions' residual from
+  the "?" prompt written into the letter prompt), and `two_by_two`; `interventions.applied` takes Edit, Block and
+  Patch in one list; ablate takes a strength for the dose-response sweep; `conformity.prompts` takes `extra=`
+  variants: hidden "?", hidden "(answer submitted)", a second wrong letter G, told-to-copy, told-to-ignore, peer
+  supplies the bridge (right and wrong); the own-part removal behind `--own-part`; the peer regex matches a whole
+  answer line.
+- **Found (tests, 38 passing):** the leak test is exact: with the block at every layer the last-position logits are
+  invariant to the peers' letter; a block on only the full-attention layers leaks, and so does one on only the linear
+  layers, so both paths are needed. The identity patch is a no-op; the "?"-into-"I" patch changes the output; a patch
+  at the last layer only is a no-op, as it must be. The original eight conditions per question are byte-identical.
+  " ?", " I" and " F" are each two tokens on Qwen (space, then the character), with equal lengths across variants, so
+  positions line up for patching.
+- **To watch on the real models:** run the leak test as the first step of each GPU run. transformers 5.22.1 may
+  replace the GatedDeltaNet forward with a hub kernel when the `kernels` package is present, which would bypass the
+  beta/g zeroing; if the leak test fails, set `USE_HUB_KERNELS=0` before loading. In bf16 compare the two prompts'
+  logits after casting to float32, or expect bit-identical outputs since every non-peer input is identical.
+- **Decided along the way:** `from_query` applies to full-attention layers only. Hidden prompts record P(peers') as
+  NaN. `disagree_g` for Colosseum is S, a plausible alternative bridge's letter, because the existing wrong letter has
+  the same property; the candidates module enforces the rule at drafting time instead.
+
 ---
 
 ## Pass rates so far (for forecasting the next draft)
@@ -201,6 +244,7 @@ The two things that keep the loop honest: the rule is written down before the ru
 4. Country bridges often fail reach on the 4B; cities pass more; the 27B is kinder to both.
 5. Single-token check before anything else: it removed a whole family and a quarter of the letter drafts at no cost.
 6. Pass rates differ by model more than by family; forecast per model.
+7. The lens is part of the probe: J++ passes ten more count questions and halves the 4B's collateral; fix the lens before a screen, not after.
 
 ## Template for the next entry
 

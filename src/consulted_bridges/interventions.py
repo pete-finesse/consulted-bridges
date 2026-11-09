@@ -5,8 +5,9 @@ J_l^T (gain * unembedding row), for the logit lens the unembedding row itself
 (silent_dissent.lenses.*.direction). Each edit acts on the residual stream after block l, at
 chosen prompt positions, for every layer listed. Definitions (h = residual at one position):
 
-  ablate  h <- h - P h         P projects onto the span of the word(s)' piece directions.
-                               Adds nothing back: the lens's logit for the word goes to ~0.
+  ablate  h <- h - s P h       P projects onto the span of the word(s)' piece directions; s = strength
+                               (1 = full removal, the default; 0.25-0.75 for a dose-response sweep).
+                               Adds nothing back: at s = 1 the lens's logit for the word goes to ~0.
   steer   h <- h + alpha * |h| * d          d = unit direction (the authors' convention:
                                alpha is a fraction of the residual norm; negative pushes away).
   ablate_excl  like ablate, but only the part of words[0]'s direction(s) that is not shared with
@@ -62,7 +63,8 @@ class Edit:
         if not self.label:
             w = ("->".join(self.words) if self.kind in ("swap", "move") else
                  f"{self.words[0]} minus " + "+".join(self.words[1:]) if self.kind == "ablate_excl" else "+".join(self.words))
-            extra = f" a={self.alpha:g}" if self.kind in ("steer", "amplify") else f" s={self.strength:g}" if self.kind == "swap" else ""
+            extra = (f" a={self.alpha:g}" if self.kind in ("steer", "amplify") else
+                     f" s={self.strength:g}" if self.kind == "swap" or self.strength != 1.0 else "")
             self.label = f"{self.kind} {w}{extra} L{_layers_str(self.layers)}"
 
 
@@ -103,7 +105,7 @@ def _apply(H: torch.Tensor, edit: Edit, dirs: list[torch.Tensor]) -> torch.Tenso
     """H [n, d] float32 -> edited H."""
     if edit.kind in ("ablate", "ablate_excl"):
         Q, _ = torch.linalg.qr(torch.cat(dirs).T)          # [d, k] orthonormal basis of the span
-        return H - (H @ Q) @ Q.T
+        return H - edit.strength * (H @ Q) @ Q.T           # strength < 1: partial removal (dose-response)
     if edit.kind == "amplify":
         # scale the component the residual ALREADY has along the word's direction by (1 + alpha):
         # strengthens what is there, adds nothing where the word is absent
@@ -126,14 +128,27 @@ def _apply(H: torch.Tensor, edit: Edit, dirs: list[torch.Tensor]) -> torch.Tenso
 
 
 @contextmanager
-def applied(h, text: str, edits: list[Edit]):
+def applied(h, text: str, edits: list):
     """Register forward hooks that apply `edits` while the prompt `text` (possibly with tokens
-    appended) runs. Register before any capture hooks so captures see the edited residual."""
+    appended) runs. Register before any capture hooks so captures see the edited residual.
+    `edits` may also hold peerblock.Block and peerblock.Patch objects: Edit hooks run first, then the
+    block, then the patch (patch sources are captured unedited before anything is registered)."""
+    from .peerblock import Block, Patch, _check_patch, _register_patch, blocked, capture
     edits = edits or []
+    plain = [e for e in edits if isinstance(e, Edit)]
+    blocks = [e for e in edits if isinstance(e, Block)]
+    patches = [e for e in edits if isinstance(e, Patch)]
+    for e in edits:
+        if not isinstance(e, (Edit, Block, Patch)):
+            raise TypeError(f"unknown intervention {e!r}")
+    stores = []
+    for pt in patches:                       # captured first, on the unedited model
+        _check_patch(h, text, pt)
+        stores.append(capture(h, pt.source_text, pt.positions, pt.layers))
     n = len(h.encode(text))
-    blocks = get_layers(h.model)
+    layers_ = get_layers(h.model)
     with ExitStack() as stack:
-        for e in edits:
+        for e in plain:
             pos = resolve_positions(h, text, e.positions, n)
             for layer in e.layers:
                 dirs = directions(h, e, layer)
@@ -149,8 +164,12 @@ def applied(h, text: str, edits: list[Edit]):
                         x[:, idx] = _apply(sel.reshape(-1, sel.shape[-1]), e, ds).reshape(sel.shape).to(x.dtype)
                     return replace_layer_output(out, x)
 
-                handle = blocks[layer].register_forward_hook(hook)
+                handle = layers_[layer].register_forward_hook(hook)
                 stack.callback(handle.remove)
+        if blocks:
+            stack.enter_context(blocked(h, text, blocks))
+        for pt, st in zip(patches, stores):
+            _register_patch(h, stack, pt, st)
         yield
 
 
@@ -211,6 +230,8 @@ def applied_rows(h, text: str, groups: list):
     per_layer: dict[int, list] = {}
     for rows, edits in groups:
         for e in edits or []:
+            if not isinstance(e, Edit):
+                raise NotImplementedError(f"applied_rows takes Edit objects only; {type(e).__name__} needs applied()")
             pos = resolve_positions(h, text, e.positions, n)
             for layer in e.layers:
                 per_layer.setdefault(layer, []).append((rows, e, directions(h, e, layer), pos))
