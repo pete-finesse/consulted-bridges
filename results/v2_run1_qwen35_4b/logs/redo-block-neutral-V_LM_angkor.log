@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 9194.49it/s]
+PROGRESS 0/1 V_LM_angkor
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[V_LM_angkor alone] A 0.56 B 0.00 (1s)
+[V_LM_angkor agree1] A 0.67 B 0.17 C 0.61 C_late 0.79 D 0.00 D_late 0.26 (0s)
+[V_LM_angkor agree2] A 0.56 B 0.68 C 0.63 C_late 0.69 D 0.65 D_late 0.76 (0s)
+[V_LM_angkor agree3] A 0.68 B 0.79 C 0.61 C_late 0.64 D 0.64 D_late 0.74 (1s)
+[V_LM_angkor disagree1] A 0.55 B 0.01 C 0.61 C_late 0.61 D 0.00 D_late 0.01 (0s)
+[V_LM_angkor disagree2] A 0.27 B 0.02 C 0.63 C_late 0.35 D 0.01 D_late 0.04 (0s)
+[V_LM_angkor disagree3] A 0.31 B 0.02 C 0.58 C_late 0.39 D 0.01 D_late 0.05 (0s)
+[V_LM_angkor hidden1] A 0.62 B 0.00 C 0.61 C_late 0.63 D 0.00 D_late 0.00 (0s)
+[V_LM_angkor hidden2] A 0.59 B 0.00 C 0.63 C_late 0.59 D 0.01 D_late 0.01 (0s)
+[V_LM_angkor hidden3] A 0.62 B 0.00 C 0.61 C_late 0.62 D 0.00 D_late 0.00 (0s)
+[V_LM_angkor hidden_sub3] A 0.70 B 0.00 C 0.67 C_late 0.70 D 0.01 D_late 0.00 (0s)
+[V_LM_angkor told_copy3] A 0.00 B 0.00 C 0.08 C_late 0.00 D 0.02 D_late 0.00 (0s)
+[V_LM_angkor patch] P_all 0.62 (4s)
+PROGRESS ALLDONE

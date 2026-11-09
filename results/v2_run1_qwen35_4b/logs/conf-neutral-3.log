@@ -1,0 +1,95 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 61/426 [00:00<00:00, 590.61it/s]Loading weights:  35%|███▌      | 150/426 [00:00<00:00, 719.81it/s]Loading weights:  54%|█████▍    | 231/426 [00:00<00:00, 753.42it/s]Loading weights:  72%|███████▏  | 307/426 [00:00<00:00, 702.57it/s]Loading weights:  89%|████████▊ | 378/426 [00:00<00:00, 676.06it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 728.61it/s]
+PROGRESS 0/45 L_york alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_york alone] says 'T' (right) P(right) 0.91 P(peer) 0.00 onset 24 | need 0.92 bridge dLO +10.75 noise +0.56 kind 4.371803898917219 | reach 1.00 rank 0 | bridge still needed (104s)
+PROGRESS 1/45 L_york agree1
+[L_york agree1] says 'T' (right) P(right) 0.72 P(peer) 0.72 onset 24 | need 0.45 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (24s)
+PROGRESS 2/45 L_york agree2
+[L_york agree2] says 'T' (right) P(right) 0.44 P(peer) 0.44 onset 24 | need 0.55 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (15s)
+PROGRESS 3/45 L_york agree3
+[L_york agree3] says 'T' (right) P(right) 0.47 P(peer) 0.47 onset 24 | need 0.46 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (18s)
+PROGRESS 4/45 L_york disagree1
+[L_york disagree1] says 'T' (holds) P(right) 0.72 P(peer) 0.02 onset 24 | need 0.54 bridge dLO +7.12 noise +1.37 kind 2.749953251344383 | reach 1.00 rank 0 | bridge still pulls (21s)
+PROGRESS 5/45 L_york disagree2
+[L_york disagree2] says 'O' (other) P(right) 0.25 P(peer) 0.13 onset 24 | need 0.62 bridge dLO +4.00 noise +1.12 kind 2.4999756709999357 | reach 1.00 rank 0 | bridge still pulls (19s)
+PROGRESS 6/45 L_york disagree3
+[L_york disagree3] says 'O' (other) P(right) 0.25 P(peer) 0.15 onset 24 | need 0.62 bridge dLO +4.12 noise +1.00 kind 2.749958620157177 | reach 1.00 rank 0 | bridge still pulls (20s)
+PROGRESS 7/45 L_york copy3
+[L_york copy3] says 'M' (full give-in) P(right) 0.01 P(peer) 0.64 onset 24 | need -0.07 bridge dLO +0.37 noise +0.50 kind 0.49994594908806 | reach 0.90 rank 1237 | mixed (18s)
+PROGRESS 8/45 L_york hidden1
+[L_york hidden1] says 'T' (right) P(right) 0.72 P(peer) nan onset 24 | need 0.89 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (14s)
+PROGRESS 9/45 L_york hidden2
+[L_york hidden2] says 'T' (right) P(right) 0.64 P(peer) nan onset 24 | need 0.61 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (14s)
+PROGRESS 10/45 L_york hidden3
+[L_york hidden3] says 'T' (right) P(right) 0.67 P(peer) nan onset 24 | need 0.80 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (15s)
+PROGRESS 11/45 L_york hidden_sub1
+[L_york hidden_sub1] says 'T' (right) P(right) 0.72 P(peer) nan onset 24 | need 0.90 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (15s)
+PROGRESS 12/45 L_york hidden_sub2
+[L_york hidden_sub2] says 'T' (right) P(right) 0.76 P(peer) nan onset 24 | need 0.85 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (15s)
+PROGRESS 13/45 L_york hidden_sub3
+[L_york hidden_sub3] says 'T' (right) P(right) 0.72 P(peer) nan onset 24 | need 0.90 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (17s)
+PROGRESS 14/45 L_york disagree_g1
+[L_york disagree_g1] says 'T' (holds) P(right) 0.61 P(peer) 0.05 onset 24 | need 0.55 bridge dLO +6.00 noise +1.00 kind 1.9999845716884013 | reach 1.00 rank 0 | bridge still pulls (17s)
+PROGRESS 15/45 L_york disagree_g2
+[L_york disagree_g2] says 'O' (other) P(right) 0.22 P(peer) 0.22 onset 24 | need 0.51 bridge dLO +4.00 noise +1.12 kind 2.9999585476377666 | reach 1.00 rank 0 | mixed (18s)
+PROGRESS 16/45 L_york disagree_g3
+[L_york disagree_g3] says 'O' (other) P(right) 0.28 P(peer) 0.22 onset 6 | need 0.46 bridge dLO +2.62 noise +1.12 kind 2.3749797991205246 | reach 0.32 rank 0 | mixed (7s)
+PROGRESS 17/45 L_york told_copy3
+[L_york told_copy3] says 'M' (full give-in) P(right) 0.00 P(peer) 0.99 onset 27 | need 0.00 bridge dLO +0.24 noise +0.24 kind 0.24117332019384108 | reach 1.00 rank 38706 | bridge not needed (21s)
+PROGRESS 18/45 L_york told_ignore3
+[L_york told_ignore3] says 'O' (other) P(right) 0.23 P(peer) 0.16 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (2s)
+PROGRESS 19/45 L_york peer_bridge1
+[L_york peer_bridge1] says 'T' (right) P(right) 0.97 P(peer) 0.97 onset 27 | need 0.89 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.99 rank 0 | bridge still needed (17s)
+PROGRESS 20/45 L_york peer_bridge3
+[L_york peer_bridge3] says 'T' (right) P(right) 0.98 P(peer) 0.98 onset 27 | need 0.47 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.77 rank 0 | mixed (16s)
+PROGRESS 21/45 L_york peer_bridge_wrong1
+[L_york peer_bridge_wrong1] says 'T' (holds) P(right) 0.62 P(peer) 0.00 onset 24 | need 0.71 bridge dLO +4.75 noise +0.62 kind 1.624840163227789 | reach 1.00 rank 0 | bridge still pulls (16s)
+PROGRESS 22/45 L_york peer_bridge_wrong3
+[L_york peer_bridge_wrong3] says 'V' (full give-in) P(right) 0.02 P(peer) 0.60 onset 24 | need 0.07 bridge dLO +1.56 noise +1.62 kind 1.2498716522903521 | reach 1.00 rank 0 | bridge not needed (17s)
+PROGRESS 23/45 V_LM_sydney alone
+[V_LM_sydney alone] says 'A' (right) P(right) 0.87 P(peer) 0.00 onset 27 | need 0.96 bridge dLO +9.24 noise +0.50 kind 0.37336909502902316 | reach 1.00 rank 0 | bridge still needed (17s)
+PROGRESS 24/45 V_LM_sydney agree1
+[V_LM_sydney agree1] says 'A' (right) P(right) 0.69 P(peer) 0.69 onset 21 | need 0.07 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (14s)
+PROGRESS 25/45 V_LM_sydney agree2
+[V_LM_sydney agree2] says 'A' (right) P(right) 0.78 P(peer) 0.78 onset 24 | need 0.04 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (16s)
+PROGRESS 26/45 V_LM_sydney agree3
+[V_LM_sydney agree3] says 'A' (right) P(right) 0.89 P(peer) 0.89 onset 24 | need 0.07 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 1 | bridge not needed (16s)
+PROGRESS 27/45 V_LM_sydney disagree1
+[V_LM_sydney disagree1] says 'A' (holds) P(right) 0.47 P(peer) 0.00 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 28/45 V_LM_sydney disagree2
+[V_LM_sydney disagree2] says 'O' (other) P(right) 0.29 P(peer) 0.02 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 29/45 V_LM_sydney disagree3
+[V_LM_sydney disagree3] says 'O' (other) P(right) 0.29 P(peer) 0.07 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 30/45 V_LM_sydney hidden1
+[V_LM_sydney hidden1] says 'A' (right) P(right) 0.62 P(peer) nan onset 21 | need 0.67 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (14s)
+PROGRESS 31/45 V_LM_sydney hidden2
+[V_LM_sydney hidden2] says 'A' (right) P(right) 0.52 P(peer) nan onset 9 | need 0.61 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 32/45 V_LM_sydney hidden3
+[V_LM_sydney hidden3] says 'A' (right) P(right) 0.58 P(peer) nan onset 9 | need 0.63 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 33/45 V_LM_sydney hidden_sub1
+[V_LM_sydney hidden_sub1] says 'A' (right) P(right) 0.63 P(peer) nan onset 21 | need 0.59 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (14s)
+PROGRESS 34/45 V_LM_sydney hidden_sub2
+[V_LM_sydney hidden_sub2] says 'A' (right) P(right) 0.60 P(peer) nan onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 35/45 V_LM_sydney hidden_sub3
+[V_LM_sydney hidden_sub3] says 'A' (right) P(right) 0.63 P(peer) nan onset 3 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 36/45 V_LM_sydney disagree_g1
+[V_LM_sydney disagree_g1] says 'A' (holds) P(right) 0.48 P(peer) 0.00 onset 9 | need 0.44 bridge dLO +4.00 noise +1.37 kind 0.8748649373816928 | reach 1.00 rank 0 | bridge still pulls (9s)
+PROGRESS 37/45 V_LM_sydney disagree_g2
+[V_LM_sydney disagree_g2] says 'O' (other) P(right) 0.33 P(peer) 0.04 onset 9 | need 0.67 bridge dLO +3.12 noise +0.75 kind 1.1249817421285306 | reach 1.00 rank 0 | bridge still pulls (9s)
+PROGRESS 38/45 V_LM_sydney disagree_g3
+[V_LM_sydney disagree_g3] says 'A' (holds) P(right) 0.31 P(peer) 0.09 onset 21 | need 0.67 bridge dLO +2.62 noise +0.50 kind 0.9999902235430471 | reach 1.00 rank 0 | bridge still pulls (17s)
+PROGRESS 39/45 V_LM_sydney told_copy3
+[V_LM_sydney told_copy3] says 'I' (full give-in) P(right) 0.00 P(peer) 0.99 onset 27 | need -0.13 bridge dLO +1.12 noise +1.62 kind 0.37471993766385836 | reach 1.00 rank 25099 | bridge not needed (18s)
+PROGRESS 40/45 V_LM_sydney told_ignore3
+[V_LM_sydney told_ignore3] says 'O' (other) P(right) 0.23 P(peer) 0.13 onset 3 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 41/45 V_LM_sydney peer_bridge1
+[V_LM_sydney peer_bridge1] says 'A' (right) P(right) 0.94 P(peer) 0.94 onset 24 | need 0.88 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 42/45 V_LM_sydney peer_bridge3
+[V_LM_sydney peer_bridge3] says 'A' (right) P(right) 0.96 P(peer) 0.96 onset 24 | need 0.13 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.99 rank 0 | bridge not needed (14s)
+PROGRESS 43/45 V_LM_sydney peer_bridge_wrong1
+[V_LM_sydney peer_bridge_wrong1] says 'A' (holds) P(right) 0.59 P(peer) 0.00 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 44/45 V_LM_sydney peer_bridge_wrong3
+[V_LM_sydney peer_bridge_wrong3] says 'A' (holds) P(right) 0.61 P(peer) 0.04 onset 24 | need 0.70 bridge dLO +5.50 noise +1.75 kind 1.3749813314187784 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS ALLDONE

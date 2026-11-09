@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_kremlin,defer,alone,0,R,,right,layers 21–26,own,0,0.25,0.11360774285815498,0.002509776899518038,-2.05440791785399
+V_LM_kremlin,defer,alone,0,R,,right,layers 21–26,own,0,0.5,0.00847467970428451,0.00582061809223242,-4.762161625449519
+V_LM_kremlin,defer,alone,0,R,,right,layers 21–26,own,0,0.75,0.0046296448159419395,0.006732028831461013,-5.370634732632637
+V_LM_kremlin,defer,agree,3,R,R,right,layers 3–8,own,3,0.25,0.9050109077421187,0.9050109077421187,2.254184929710695
+V_LM_kremlin,defer,agree,3,R,R,right,layers 3–8,own,3,0.5,0.8895299756481299,0.8895299756481299,2.085948994650938
+V_LM_kremlin,defer,agree,3,R,R,right,layers 3–8,own,3,0.75,0.857412787231446,0.857412787231446,1.7939656360855196
+V_LM_kremlin,defer,hidden,3,R,,right,layers 21–26,alone,3,0.25,0.015338730458685296,,-4.1619166609139455
+V_LM_kremlin,defer,hidden,3,R,,right,layers 21–26,alone,3,0.5,0.0021224049611783665,,-6.153080757156731
+V_LM_kremlin,defer,hidden,3,R,,right,layers 21–26,alone,3,0.75,0.0012869938563371893,,-6.65415830126613
+V_LU_dalhousie,defer,alone,0,H,,right,layers 21–26,own,0,0.25,0.7355471946217956,0.008171163292315313,1.0229518988959592
+V_LU_dalhousie,defer,alone,0,H,,right,layers 21–26,own,0,0.5,0.08669871779114675,0.013295291062750715,-2.3546267229785043
+V_LU_dalhousie,defer,alone,0,H,,right,layers 21–26,own,0,0.75,0.019493945224009587,0.008125905783503494,-3.917964904788234
+V_LU_dalhousie,defer,agree,3,H,H,right,layers 21–26,own,3,0.25,0.9404043466975298,0.9404043466975298,2.758727298589566
+V_LU_dalhousie,defer,agree,3,H,H,right,layers 21–26,own,3,0.5,0.9346340786756807,0.9346340786756807,2.6601540509967965
+V_LU_dalhousie,defer,agree,3,H,H,right,layers 21–26,own,3,0.75,0.9376596703498005,0.9376596703498005,2.7107784961168635
+V_LU_dalhousie,defer,hidden,3,H,,right,layers 21–26,alone,3,0.25,0.044669472408717964,,-3.0627670583604414
+V_LU_dalhousie,defer,hidden,3,H,,right,layers 21–26,alone,3,0.5,0.002682653545921681,,-5.918262586929315
+V_LU_dalhousie,defer,hidden,3,H,,right,layers 21–26,alone,3,0.75,0.0013501140681105859,,-6.606215168911288

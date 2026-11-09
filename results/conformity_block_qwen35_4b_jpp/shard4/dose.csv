@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_acropolis,neutral,alone,0,G,,right,layers 21–26,own,0,0.25,0.5531286006700692,0.00614460578672908,0.21331966945470762
+V_LM_acropolis,neutral,alone,0,G,,right,layers 21–26,own,0,0.5,0.0031077874696304334,0.07950814063923044,-5.770731603859815
+V_LM_acropolis,neutral,alone,0,G,,right,layers 21–26,own,0,0.75,0.0010952082050523328,0.1597613513045088,-6.815714983804179
+V_LM_acropolis,neutral,agree,3,G,G,right,layers 3–8,own,3,0.25,0.7282172922316642,0.7282172922316642,0.9855966034693388
+V_LM_acropolis,neutral,agree,3,G,G,right,layers 3–8,own,3,0.5,0.7428929684594865,0.7428929684594865,1.0610595177878483
+V_LM_acropolis,neutral,agree,3,G,G,right,layers 3–8,own,3,0.75,0.7008528919175612,0.7008528919175612,0.851362557726898
+V_LM_acropolis,neutral,hidden,3,G,,right,layers 18–23,own,3,0.25,0.5875937660781921,,0.35402696688771074
+V_LM_acropolis,neutral,hidden,3,G,,right,layers 18–23,own,3,0.5,0.2727979718074771,,-0.980472840684658
+V_LM_acropolis,neutral,hidden,3,G,,right,layers 18–23,own,3,0.75,0.12410252350067888,,-1.9541410217104438
+V_LM_taj,neutral,alone,0,I,,right,layers 21–26,own,0,0.25,0.2187748950752855,0.0031205113621813906,-1.2728200100257703
+V_LM_taj,neutral,alone,0,I,,right,layers 21–26,own,0,0.5,0.007192061176329202,0.0020594759599047506,-4.927559426959337
+V_LM_taj,neutral,alone,0,I,,right,layers 21–26,own,0,0.75,0.003576694923606695,0.001688659777799747,-5.629733004092985
+V_LM_taj,neutral,agree,3,I,I,right,layers 21–26,alone,3,0.25,0.48718545696113325,0.48718545696113325,-0.051269399558333456
+V_LM_taj,neutral,agree,3,I,I,right,layers 21–26,alone,3,0.5,0.31327245702716083,0.31327245702716083,-0.784864342364301
+V_LM_taj,neutral,agree,3,I,I,right,layers 21–26,alone,3,0.75,0.26338748666464346,0.26338748666464346,-1.0284357106193847
+V_LM_taj,neutral,hidden,3,I,,right,layers 0–5,own,3,0.25,0.47635820487086417,,-0.09463775101714766
+V_LM_taj,neutral,hidden,3,I,,right,layers 0–5,own,3,0.5,0.4160294392898642,,-0.33909454653362286
+V_LM_taj,neutral,hidden,3,I,,right,layers 0–5,own,3,0.75,0.3788599003535369,,-0.49439017910079996

@@ -1,0 +1,53 @@
+       config   split family  drafted  knows it  single token  onset  need >= 0.5  reach  selected  sel + reach
+    qwen35_4b confirm   C_CT        4         4             4      4            1      1         1            1
+    qwen35_4b confirm   C_DS        4         4             4      4            0      0         0            0
+    qwen35_4b confirm   C_EL        2         2             2      2            1      1         1            1
+    qwen35_4b confirm   C_EO        1         1             1      1            0      0         0            0
+    qwen35_4b confirm   C_IN        1         1             1      1            1      0         1            0
+    qwen35_4b confirm   C_LM       13        12            12     12           11     11        11           11
+    qwen35_4b confirm   C_LP       10         6             6      6            5      5         5            5
+    qwen35_4b confirm   C_LU        9         7             7      7            5      5         5            5
+    qwen35_4b confirm   C_MN        4         3             3      3            2      2         2            2
+    qwen35_4b confirm   C_PL        2         2             2      1            1      0         1            0
+    qwen35_4b confirm   C_SP        2         2             2      2            2      2         2            2
+    qwen35_4b confirm   C_VC        5         2             2      2            0      0         0            0
+    qwen35_4b confirm    all       57        46            46     45           29     27        29           27
+    qwen35_4b     dev   C_CT        8         8             8      8            3      3         3            3
+    qwen35_4b     dev   C_DS        7         4             4      4            0      0         0            0
+    qwen35_4b     dev   C_EL        4         1             1      1            0      0         0            0
+    qwen35_4b     dev   C_EO        3         1             1      1            0      0         0            0
+    qwen35_4b     dev   C_IN        1         1             1      1            0      0         0            0
+    qwen35_4b     dev   C_LM       27        26            26     26           25     25        25           25
+    qwen35_4b     dev   C_LP       20         9             9      9            5      5         5            5
+    qwen35_4b     dev   C_LU       19        19            19     19           18     17        18           17
+    qwen35_4b     dev   C_MN       10        10            10     10            5      5         5            5
+    qwen35_4b     dev   C_PL        3         0             0      0            0      0         0            0
+    qwen35_4b     dev   C_SP        3         3             3      3            1      1         1            1
+    qwen35_4b     dev   C_VC        9         5             5      5            0      0         0            0
+    qwen35_4b     dev    all      114        87            87     87           57     56        57           56
+qwen35_4b_jpp confirm   C_CT        4         4             4      4            0      0         0            0
+qwen35_4b_jpp confirm   C_DS        4         4             4      4            0      0         0            0
+qwen35_4b_jpp confirm   C_EL        2         2             2      2            1      0         1            0
+qwen35_4b_jpp confirm   C_EO        1         1             1      1            0      0         0            0
+qwen35_4b_jpp confirm   C_IN        1         1             1      1            1      1         1            1
+qwen35_4b_jpp confirm   C_LM       13        12            12     12           11     11        11           11
+qwen35_4b_jpp confirm   C_LP       10         6             6      6            4      4         4            4
+qwen35_4b_jpp confirm   C_LU        9         7             7      7            4      4         4            4
+qwen35_4b_jpp confirm   C_MN        4         3             3      3            3      3         3            3
+qwen35_4b_jpp confirm   C_PL        2         2             2      2            1      1         1            1
+qwen35_4b_jpp confirm   C_SP        2         2             2      2            2      2         2            2
+qwen35_4b_jpp confirm   C_VC        5         2             2      2            0      0         0            0
+qwen35_4b_jpp confirm    all       57        46            46     46           27     26        27           26
+qwen35_4b_jpp     dev   C_CT        8         8             8      8            5      4         5            4
+qwen35_4b_jpp     dev   C_DS        7         4             4      4            0      0         0            0
+qwen35_4b_jpp     dev   C_EL        4         1             1      1            0      0         0            0
+qwen35_4b_jpp     dev   C_EO        3         1             1      1            0      0         0            0
+qwen35_4b_jpp     dev   C_IN        1         1             1      1            0      0         0            0
+qwen35_4b_jpp     dev   C_LM       27        26            26     26           21     20        21           20
+qwen35_4b_jpp     dev   C_LP       20         9             9      9            4      4         4            4
+qwen35_4b_jpp     dev   C_LU       19        19            19     19           17     16        17           16
+qwen35_4b_jpp     dev   C_MN       10        10            10     10            6      4         6            4
+qwen35_4b_jpp     dev   C_PL        3         0             0      0            0      0         0            0
+qwen35_4b_jpp     dev   C_SP        3         3             3      3            1      1         1            1
+qwen35_4b_jpp     dev   C_VC        9         5             5      5            0      0         0            0
+qwen35_4b_jpp     dev    all      114        87            87     87           54     49        54           49

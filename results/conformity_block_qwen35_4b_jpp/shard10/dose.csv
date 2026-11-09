@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_kremlin,neutral,alone,0,R,,right,layers 21–26,own,0,0.25,0.11360774285815498,0.002509776899518038,-2.05440791785399
+V_LM_kremlin,neutral,alone,0,R,,right,layers 21–26,own,0,0.5,0.00847467970428451,0.00582061809223242,-4.762161625449519
+V_LM_kremlin,neutral,alone,0,R,,right,layers 21–26,own,0,0.75,0.0046296448159419395,0.006732028831461013,-5.370634732632637
+V_LM_kremlin,neutral,agree,3,R,R,right,layers 3–8,own,3,0.25,0.4916922187228108,0.4916922187228108,-0.03323418373096671
+V_LM_kremlin,neutral,agree,3,R,R,right,layers 3–8,own,3,0.5,0.456684225594083,0.456684225594083,-0.17369850794527492
+V_LM_kremlin,neutral,agree,3,R,R,right,layers 3–8,own,3,0.75,0.33449718941287826,0.33449718941287826,-0.6879143839178019
+V_LM_kremlin,neutral,hidden,3,R,,right,layers 21–26,alone,3,0.25,0.13093505644580808,,-1.8927164081839087
+V_LM_kremlin,neutral,hidden,3,R,,right,layers 21–26,alone,3,0.5,0.00955071012206221,,-4.641543158279999
+V_LM_kremlin,neutral,hidden,3,R,,right,layers 21–26,alone,3,0.75,0.0033747392241343242,,-5.688056778065502
+V_LU_dalhousie,neutral,alone,0,H,,right,layers 21–26,own,0,0.25,0.7355471946217956,0.008171163292315313,1.0229518988959592
+V_LU_dalhousie,neutral,alone,0,H,,right,layers 21–26,own,0,0.5,0.08669871779114675,0.013295291062750715,-2.3546267229785043
+V_LU_dalhousie,neutral,alone,0,H,,right,layers 21–26,own,0,0.75,0.019493945224009587,0.008125905783503494,-3.917964904788234
+V_LU_dalhousie,neutral,agree,3,H,H,right,layers 21–26,own,3,0.25,0.8618332974705352,0.8618332974705352,1.8306009160868708
+V_LU_dalhousie,neutral,agree,3,H,H,right,layers 21–26,own,3,0.5,0.7671961311935304,0.7671961311935304,1.1925461464915261
+V_LU_dalhousie,neutral,agree,3,H,H,right,layers 21–26,own,3,0.75,0.7057480849743255,0.7057480849743255,0.8748220993902743
+V_LU_dalhousie,neutral,hidden,3,H,,right,layers 6–11,own,3,0.25,0.28086847949077653,,-0.9401577471745148
+V_LU_dalhousie,neutral,hidden,3,H,,right,layers 6–11,own,3,0.5,0.07564962143499789,,-2.5029787612877192
+V_LU_dalhousie,neutral,hidden,3,H,,right,layers 6–11,own,3,0.75,0.02814106564570986,,-3.5419807442656093

@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_brandenburg,defer,alone,0,G,,right,layers 18–23,own,0,0.25,0.323910459178338,0.004620327061770151,-0.7358584070710827
+V_LM_brandenburg,defer,alone,0,G,,right,layers 18–23,own,0,0.5,0.028591935481441438,0.004384588383568481,-3.525621929941965
+V_LM_brandenburg,defer,alone,0,G,,right,layers 18–23,own,0,0.75,0.009946847145838971,0.006835884044044409,-4.600503000247328
+V_LM_brandenburg,defer,agree,3,G,G,right,layers 3–8,own,3,0.25,0.8399289470822858,0.8399289470822858,1.657699504058018
+V_LM_brandenburg,defer,agree,3,G,G,right,layers 3–8,own,3,0.5,0.8200981985816115,0.8200981985816115,1.5170129331068225
+V_LM_brandenburg,defer,agree,3,G,G,right,layers 3–8,own,3,0.75,0.8174181014037546,0.8174181014037546,1.4989518841921439
+V_LM_brandenburg,defer,hidden,3,G,,wrong,layers 18–23,alone,3,0.25,0.008510785964705793,,-4.757873773368978
+V_LM_brandenburg,defer,hidden,3,G,,wrong,layers 18–23,alone,3,0.5,0.0049167988382376945,,-5.3101686768109255
+V_LM_brandenburg,defer,hidden,3,G,,wrong,layers 18–23,alone,3,0.75,0.004443046536739492,,-5.411962034710727
+V_LP_beyonce,defer,alone,0,H,,right,layers 18–23,own,0,0.25,0.40324499593490365,0.0032773929700050134,-0.39196234312245354
+V_LP_beyonce,defer,alone,0,H,,right,layers 18–23,own,0,0.5,0.3046360699417092,0.003179177128281458,-0.825317498028902
+V_LP_beyonce,defer,alone,0,H,,right,layers 18–23,own,0,0.75,0.21129652795233592,0.0034153005430320365,-1.3171279299878806
+V_LP_beyonce,defer,agree,3,H,H,right,layers 6–11,own,3,0.25,0.9494250197207256,0.9494250197207256,2.9323995658388116
+V_LP_beyonce,defer,agree,3,H,H,right,layers 6–11,own,3,0.5,0.9411248662794239,0.9411248662794239,2.7716570024879528
+V_LP_beyonce,defer,agree,3,H,H,right,layers 6–11,own,3,0.75,0.9371278504390492,0.9371278504390492,2.7017164271260525
+V_LP_beyonce,defer,hidden,3,H,,right,layers 18–23,alone,3,0.25,0.11816427539688501,,-2.009929964691372
+V_LP_beyonce,defer,hidden,3,H,,right,layers 18–23,alone,3,0.5,0.0383347523752734,,-3.222309557170765
+V_LP_beyonce,defer,hidden,3,H,,right,layers 18–23,alone,3,0.75,0.013379452723026822,,-4.300565363683129

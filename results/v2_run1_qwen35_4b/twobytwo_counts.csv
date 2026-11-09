@@ -1,0 +1,58 @@
+frame,condition,peers,reading,n
+defer,agree,1,C well below A (leaned on the peers),4
+defer,agree,1,both collapse (bridge needed either way),1
+defer,agree,1,neither collapses,1
+defer,agree,1,only D collapses (peers the backup),14
+defer,agree,2,C well below A (leaned on the peers),17
+defer,agree,2,only D collapses (peers the backup),3
+defer,agree,3,C well below A (leaned on the peers),18
+defer,agree,3,only D collapses (peers the backup),2
+defer,disagree,1,both collapse (bridge needed either way),6
+defer,disagree,1,neither collapses,7
+defer,disagree,1,only B collapses,6
+defer,disagree,1,only D collapses (peers the backup),1
+defer,disagree,2,both collapse (bridge needed either way),5
+defer,disagree,2,neither collapses,6
+defer,disagree,2,only B collapses,9
+defer,disagree,3,both collapse (bridge needed either way),1
+defer,disagree,3,neither collapses,9
+defer,disagree,3,only B collapses,10
+defer,hidden,1,both collapse (bridge needed either way),11
+defer,hidden,1,neither collapses,5
+defer,hidden,1,only B collapses,3
+defer,hidden,1,only D collapses (peers the backup),1
+defer,hidden,2,both collapse (bridge needed either way),11
+defer,hidden,2,neither collapses,8
+defer,hidden,2,only B collapses,1
+defer,hidden,3,both collapse (bridge needed either way),11
+defer,hidden,3,neither collapses,7
+defer,hidden,3,only B collapses,1
+defer,hidden,3,only D collapses (peers the backup),1
+neutral,agree,1,both collapse (bridge needed either way),14
+neutral,agree,1,neither collapses,2
+neutral,agree,1,only B collapses,1
+neutral,agree,1,only D collapses (peers the backup),3
+neutral,agree,2,both collapse (bridge needed either way),8
+neutral,agree,2,neither collapses,2
+neutral,agree,2,only D collapses (peers the backup),10
+neutral,agree,3,C well below A (leaned on the peers),1
+neutral,agree,3,both collapse (bridge needed either way),3
+neutral,agree,3,neither collapses,1
+neutral,agree,3,only D collapses (peers the backup),15
+neutral,disagree,1,both collapse (bridge needed either way),13
+neutral,disagree,1,neither collapses,3
+neutral,disagree,1,only B collapses,4
+neutral,disagree,2,both collapse (bridge needed either way),17
+neutral,disagree,2,neither collapses,1
+neutral,disagree,2,only B collapses,2
+neutral,disagree,3,both collapse (bridge needed either way),15
+neutral,disagree,3,neither collapses,2
+neutral,disagree,3,only B collapses,3
+neutral,hidden,1,both collapse (bridge needed either way),18
+neutral,hidden,1,only B collapses,1
+neutral,hidden,1,only D collapses (peers the backup),1
+neutral,hidden,2,both collapse (bridge needed either way),18
+neutral,hidden,2,neither collapses,2
+neutral,hidden,3,both collapse (bridge needed either way),17
+neutral,hidden,3,neither collapses,2
+neutral,hidden,3,only B collapses,1

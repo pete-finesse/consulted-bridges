@@ -1,0 +1,21 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 8734.55it/s]
+PROGRESS 0/1 L_mozart
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_mozart alone] A 0.81 B 0.03 (1s)
+[L_mozart agree1] A 0.16 B 0.11 C 0.04 C_late 0.23 D 0.06 D_late 0.15 (0s)
+[L_mozart agree2] A 0.20 B 0.04 C 0.03 C_late 0.21 D 0.01 D_late 0.02 (0s)
+[L_mozart agree3] A 0.45 B 0.09 C 0.04 C_late 0.39 D 0.01 D_late 0.03 (1s)
+[L_mozart disagree1] A 0.08 B 0.01 C 0.05 C_late 0.10 D 0.01 D_late 0.01 (0s)
+[L_mozart disagree2] A 0.03 B 0.01 C 0.04 C_late 0.06 D 0.02 D_late 0.01 (0s)
+[L_mozart disagree3] A 0.04 B 0.03 C 0.05 C_late 0.07 D 0.03 D_late 0.03 (0s)
+[L_mozart copy3] A 0.03 B 0.02 C 0.09 C_late 0.03 D 0.09 D_late 0.03 (0s)
+[L_mozart hidden1] A 0.08 B 0.01 C 0.04 C_late 0.08 D 0.01 D_late 0.01 (0s)
+[L_mozart hidden2] A 0.16 B 0.01 C 0.03 C_late 0.12 D 0.01 D_late 0.01 (0s)
+[L_mozart hidden3] A 0.12 B 0.01 C 0.04 C_late 0.12 D 0.01 D_late 0.01 (0s)
+[L_mozart hidden_sub3] A 0.07 B 0.01 C 0.04 C_late 0.07 D 0.01 D_late 0.01 (0s)
+[L_mozart told_copy3] A 0.00 B 0.00 C 0.06 C_late 0.00 D 0.02 D_late 0.00 (1s)
+[L_mozart copy_alone] A 0.05 B 0.05 (0s)
+[L_mozart patch] P_all 0.17 (4s)
+PROGRESS ALLDONE

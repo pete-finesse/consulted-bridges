@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_angkor,neutral,alone,0,C,,right,layers 15–20,own,0,0.25,0.24000999772112172,0.04726245573188842,-1.1526246986519417
+V_LM_angkor,neutral,alone,0,C,,right,layers 15–20,own,0,0.5,0.012161614115758624,0.03305958188602031,-4.397234499815786
+V_LM_angkor,neutral,alone,0,C,,right,layers 15–20,own,0,0.75,0.003681663043665909,0.00779435804436305,-5.6007022577983845
+V_LM_angkor,neutral,agree,3,C,C,right,layers 0–5,own,3,0.25,0.6970211099611955,0.6970211099611955,0.8331525639468735
+V_LM_angkor,neutral,agree,3,C,C,right,layers 0–5,own,3,0.5,0.7571354850742333,0.7571354850742333,1.13703847763813
+V_LM_angkor,neutral,agree,3,C,C,right,layers 0–5,own,3,0.75,0.7712997615682783,0.7712997615682783,1.2156649502296875
+V_LM_angkor,neutral,hidden,3,C,,right,layers 15–20,alone,3,0.25,0.27356605473144,,-0.9766044479293183
+V_LM_angkor,neutral,hidden,3,C,,right,layers 15–20,alone,3,0.5,0.014271067312157585,,-4.235147177851804
+V_LM_angkor,neutral,hidden,3,C,,right,layers 15–20,alone,3,0.75,0.005992150491188451,,-5.1112947422641355

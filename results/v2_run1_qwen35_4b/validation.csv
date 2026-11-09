@@ -1,0 +1,17 @@
+frame,row,cell,prompts,eligible,passing,median,passed
+defer,copy-only: P(peers') back toward the no-peer level,C,4,4,4,0.9985749263183183,True
+defer,copy-only: P(peers') back toward the no-peer level,C_late,4,4,4,0.6206739470728353,
+defer,give-ins under disagree: back to the right letter,C,64,64,58,3.0223540401356015,True
+defer,give-ins under disagree: back to the right letter,C_late,64,64,10,1.8687841754285202,
+defer,hidden prompts: almost no change,C,96,96,84,0.44928796987078046,True
+defer,hidden prompts: almost no change,C_late,96,96,96,0.1107640647243669,
+defer,told to copy: P(peers') drops,C,24,24,24,8.434303670440263,True
+defer,told to copy: P(peers') drops,C_late,24,24,0,0.9703346297401811,
+neutral,copy-only: P(peers') back toward the no-peer level,C,4,4,4,1.0132551368880347,True
+neutral,copy-only: P(peers') back toward the no-peer level,C_late,4,4,3,0.6015977733117035,
+neutral,give-ins under disagree: back to the right letter,C,19,19,19,1.6895558782731819,True
+neutral,give-ins under disagree: back to the right letter,C_late,19,19,10,0.36844271354538427,
+neutral,hidden prompts: almost no change,C,96,96,84,0.377190542282193,True
+neutral,hidden prompts: almost no change,C_late,96,96,96,0.060685347572588644,
+neutral,told to copy: P(peers') drops,C,24,24,24,8.434303670440263,True
+neutral,told to copy: P(peers') drops,C_late,24,24,0,0.9703346297401811,

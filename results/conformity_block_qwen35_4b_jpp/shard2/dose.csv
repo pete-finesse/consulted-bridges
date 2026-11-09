@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_pyramids,neutral,alone,0,E,,right,layers 18–23,own,0,0.25,0.941448140029983,0.0007576281296171386,2.77750640754955
+V_LM_pyramids,neutral,alone,0,E,,right,layers 18–23,own,0,0.5,0.6176152309377392,0.021133308233202423,0.4794383093730183
+V_LM_pyramids,neutral,alone,0,E,,right,layers 18–23,own,0,0.75,0.058371783222301375,0.08490317842307667,-2.7807779132671415
+V_LM_pyramids,neutral,agree,3,E,E,right,layers 3–8,own,3,0.25,0.6436355484527796,0.6436355484527796,0.5911786998719489
+V_LM_pyramids,neutral,agree,3,E,E,right,layers 3–8,own,3,0.5,0.6341835874488095,0.6341835874488095,0.550206880124351
+V_LM_pyramids,neutral,agree,3,E,E,right,layers 3–8,own,3,0.75,0.48067420660554744,0.48067420660554744,-0.07734170368820807
+V_LM_pyramids,neutral,hidden,3,E,,right,layers 6–11,own,3,0.25,0.9122774083952849,,2.341764652523583
+V_LM_pyramids,neutral,hidden,3,E,,right,layers 6–11,own,3,0.5,0.15611308110873828,,-1.6874378797093068
+V_LM_pyramids,neutral,hidden,3,E,,right,layers 6–11,own,3,0.75,0.007374876751353602,,-4.9022738829743515

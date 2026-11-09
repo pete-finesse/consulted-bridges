@@ -218,6 +218,43 @@ The two things that keep the loop honest: the rule is written down before the ru
   NaN. `disagree_g` for Colosseum is S, a plausible alternative bridge's letter, because the existing wrong letter has
   the same property; the candidates module enforces the rule at drafting time instead.
 
+## Round 16: GPU run 1, Qwen3.5-4B (9 Nov UTC, 4 pods, `results/v2_run1_qwen35_4b/summary.md`)
+
+- **Set, before the run:** pass marks for the hidden check, block validation, 2x2 and patch fixed in `scope.md` §11
+  and committed first (c290a5f). Selection rule unchanged (need >= 0.5, comes first). The confirmation half of the
+  candidates screened like the rest, reported as counts only. Group steps on the 24 development questions with J++.
+- **Ran:** leak test; trimmed solo screen of the 171 candidates under both lenses (342 cards); conformity with every
+  B1 variant and the own-part removal, both wordings (1,064 prompts; 9 lost to CUDA out-of-memory errors, three
+  questions re-run whole); block, 2x2, dose-response and patch on both wordings. One A100, then 2 H200 and another
+  A100 for the group steps; GPU work 07:58–08:40 UTC.
+- **Found, tools:** the leak test is exact on the real model (blocked logit difference 0.0, unblocked up to 7.75).
+  All four block validation rows pass in both wordings: copy-only back to the no-peer level (4/4), give-ins back to
+  the right letter (19/19 neutral, 58/64 group-aware), hidden prompts barely move (84/96 within 1 log-odds), told to
+  copy falls by a median 8.4 log-odds (24/24). The answer-only block (full-attention layers, reply queries) catches
+  0/24 told-to-copy: the peers reach the answer through the linear-attention layers. Patching "?" into the agree
+  prompt agrees with the block (correlation 0.85–0.90; patch plus removal collapses exactly where D does, 39/40).
+- **Found, the hidden check:** fails the pre-registered rule in both wordings (hidden "needed" 20–30% neutral, 0–20%
+  group-aware, against 55% alone; the rule asked for about 41%). But no hidden prompt comes out "not needed" (0 of
+  120 per wording); the shortfall is no-early-window and control-moved labels. In the neutral wording removal still
+  drops P(right) by about 0.9 (alone 1.0), and B collapses the answer in 17–18 of 20 hidden prompts. The group-aware
+  "?" prompt is not neutral: P(right) about 0.4, answer formed by layer 13 or earlier.
+- **Found, the 2x2:** with three agreeing peers and neutral wording, only D collapses in 15 of 20 questions (the
+  bridge is not needed while the peers are visible, and is needed again once they are blocked): the peers are the
+  backup, the route is still there. Group-aware, 2–3 agreeing peers: blocking the peers alone drops P(right) by
+  >= 2 log-odds in 17–18 of 20, so the model leans on the peers from the start. Agree versus hidden, three peers:
+  the bridge's effect weakens by >= 2 log-odds in 10 of 13 assessable questions (neutral).
+- **Found, the screen:** selected J-lens 86 of 171, J++ 81 (development 57 / 54 of 114). Letters: landmark 36 / 32
+  of 40, university 23 / 21 of 28, person 10 / 8 of 30 (half fail knows-it). Months 7 / 9 of 14, players per side
+  3 of 5, continent 4 / 5 of 12; element, planet, strings one each; driving side, starts-with-a-vowel and even/odd 0.
+- **Found, variants:** told to ignore the peers, 11 of 20 still give in fully; a peer naming a wrong country is
+  followed in 13 of 20 (neutral) and 20 of 20 (group-aware).
+- **Changed:** for the 27B run, (1) the hidden check judged on assessed prompts and on hidden "not needed" plus B's
+  collapse rate, with inconclusive and no-early-window counted apart (fix before the run); (2) wrong letters drawn
+  from letters no same-kind word starts with, so the disagree D cell can be read (35 of 60 move to the peers' letter
+  with the peers invisible, the alternative country's letter); (3) at most 6 processes per 80 GB and
+  `expandable_segments` against out-of-memory errors; (4) driving side, vowel class, element and planet leave the
+  removal arm on the 4B by the stop rule.
+
 ---
 
 ## Pass rates so far (for forecasting the next draft)
@@ -234,6 +271,10 @@ The two things that keep the loop honest: the rule is written down before the ru
 | Counts | Qwen3.5-4B | ~32 | 1 | 0.03 | knows-it |
 | Creative ideas (4 sets) | Qwen3.5-4B | 44 | 0 usable | 0 | gate 1 (23 of 44) |
 | Trend set | both Qwen | 23 | few | low | untestable |
+| v2 candidates, letters (landmark / university / person) | Qwen3.5-4B, J-lens / J++ | 40 / 28 / 30 | 36 / 23 / 10 and 32 / 21 / 8 | 0.9 / 0.8 / 0.3 | knows-it (person) |
+| v2 candidates, months | Qwen3.5-4B, J-lens / J++ | 14 | 7 / 9 | 0.5 / 0.6 | need below 0.5 |
+| v2 candidates, other numbers (element, planet, strings, sports) | Qwen3.5-4B | 18 | 6 / 6 | 0.33 | knows-it |
+| v2 candidates, continent / driving side / vowel class / even-odd | Qwen3.5-4B | 12 / 11 / 14 / 4 | 4–5 / 0 / 0 / 0 | low | need (overlap), knows-it |
 
 ## Lessons that now shape drafting
 

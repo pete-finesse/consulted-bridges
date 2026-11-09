@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_machu,neutral,alone,0,P,,right,layers 18–23,own,0,0.25,0.5925278972400562,0.24699831319097254,0.3744254849976742
+V_LM_machu,neutral,alone,0,P,,right,layers 18–23,own,0,0.5,0.05970029909278281,0.4998182379193633,-2.756861624885318
+V_LM_machu,neutral,alone,0,P,,right,layers 18–23,own,0,0.75,0.014029052727821333,0.36178037786264716,-4.252496514710242
+V_LM_machu,neutral,agree,3,P,P,right,layers 18–23,own,3,0.25,0.5840154832177098,0.5840154832177098,0.33927945454060465
+V_LM_machu,neutral,agree,3,P,P,right,layers 18–23,own,3,0.5,0.5819305090864956,0.5819305090864956,0.3307033754956988
+V_LM_machu,neutral,agree,3,P,P,right,layers 18–23,own,3,0.75,0.5954296242596263,0.5954296242596263,0.3864574991484135
+V_LM_machu,neutral,hidden,3,P,,right,layers 15–20,own,3,0.25,0.28644166418013944,,-0.9127292936633432
+V_LM_machu,neutral,hidden,3,P,,right,layers 15–20,own,3,0.5,0.209760067312802,,-1.3263722706928722
+V_LM_machu,neutral,hidden,3,P,,right,layers 15–20,own,3,0.75,0.15425470346252348,,-1.7016130915692762
+V_LU_hopkins,neutral,alone,0,B,,right,layers 21–26,own,0,0.25,0.9730121969194306,0.0021284551025447735,3.5850115912985814
+V_LU_hopkins,neutral,alone,0,B,,right,layers 21–26,own,0,0.5,0.7976701060181055,0.008861281425187915,1.3717956071913724
+V_LU_hopkins,neutral,alone,0,B,,right,layers 21–26,own,0,0.75,0.5452079281463083,0.014529140528597084,0.18132691187311217
+V_LU_hopkins,neutral,agree,3,B,B,right,layers 21–26,own,3,0.25,0.4890558652800333,0.4890558652800333,-0.043783531950027724
+V_LU_hopkins,neutral,agree,3,B,B,right,layers 21–26,own,3,0.5,0.34393905981495504,0.34393905981495504,-0.6457891912735388
+V_LU_hopkins,neutral,agree,3,B,B,right,layers 21–26,own,3,0.75,0.3163860510588368,0.3163860510588368,-0.770430207646529
+V_LU_hopkins,neutral,hidden,3,B,,right,layers 21–26,own,3,0.25,0.8164911128390482,,1.4927529301753695
+V_LU_hopkins,neutral,hidden,3,B,,right,layers 21–26,own,3,0.5,0.3810381617192946,,-0.4851440880837985
+V_LU_hopkins,neutral,hidden,3,B,,right,layers 21–26,own,3,0.75,0.183850953880924,,-1.490471596743562

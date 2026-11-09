@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_brandenburg,neutral,alone,0,G,,right,layers 18–23,own,0,0.25,0.323910459178338,0.004620327061770151,-0.7358584070710827
+V_LM_brandenburg,neutral,alone,0,G,,right,layers 18–23,own,0,0.5,0.028591935481441438,0.004384588383568481,-3.525621929941965
+V_LM_brandenburg,neutral,alone,0,G,,right,layers 18–23,own,0,0.75,0.009946847145838971,0.006835884044044409,-4.600503000247328
+V_LM_brandenburg,neutral,agree,3,G,G,right,layers 18–23,alone,3,0.25,0.25965184916924766,0.25965184916924766,-1.0477788576142006
+V_LM_brandenburg,neutral,agree,3,G,G,right,layers 18–23,alone,3,0.5,0.22490203416146143,0.22490203416146143,-1.23732452523633
+V_LM_brandenburg,neutral,agree,3,G,G,right,layers 18–23,alone,3,0.75,0.22736700977052024,0.22736700977052024,-1.223238654567039
+V_LM_brandenburg,neutral,hidden,3,G,,wrong,layers 18–23,alone,3,0.25,0.005635570710078527,,-5.1730053466485115
+V_LM_brandenburg,neutral,hidden,3,G,,wrong,layers 18–23,alone,3,0.5,0.002022398852165441,,-6.201446474910315
+V_LM_brandenburg,neutral,hidden,3,G,,wrong,layers 18–23,alone,3,0.75,0.0018838018790856116,,-6.272577689613296
+V_LP_beyonce,neutral,alone,0,H,,right,layers 18–23,own,0,0.25,0.40324499593490365,0.0032773929700050134,-0.39196234312245354
+V_LP_beyonce,neutral,alone,0,H,,right,layers 18–23,own,0,0.5,0.3046360699417092,0.003179177128281458,-0.825317498028902
+V_LP_beyonce,neutral,alone,0,H,,right,layers 18–23,own,0,0.75,0.21129652795233592,0.0034153005430320365,-1.3171279299878806
+V_LP_beyonce,neutral,agree,3,H,H,right,layers 15–20,own,3,0.25,0.6365253181858568,0.6365253181858568,0.5603145509857751
+V_LP_beyonce,neutral,agree,3,H,H,right,layers 15–20,own,3,0.5,0.5155383639474157,0.5155383639474157,0.06217347589473633
+V_LP_beyonce,neutral,agree,3,H,H,right,layers 15–20,own,3,0.75,0.4364304901388291,0.4364304901388291,-0.2556615607324413
+V_LP_beyonce,neutral,hidden,3,H,,right,layers 18–23,alone,3,0.25,0.28070631174341626,,-0.9409607731519223
+V_LP_beyonce,neutral,hidden,3,H,,right,layers 18–23,alone,3,0.5,0.10176301899948428,,-2.1777871651587692
+V_LP_beyonce,neutral,hidden,3,H,,right,layers 18–23,alone,3,0.75,0.04988150795907527,,-2.946936353188228

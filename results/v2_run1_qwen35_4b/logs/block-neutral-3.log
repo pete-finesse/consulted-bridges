@@ -1,0 +1,35 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 8572.33it/s]
+PROGRESS 0/2 L_york
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_york alone] A 0.91 B 0.00 (2s)
+[L_york agree1] A 0.72 B 0.02 C 0.72 C_late 0.71 D 0.00 D_late 0.01 (1s)
+[L_york agree2] A 0.44 B 0.17 C 0.52 C_late 0.39 D 0.00 D_late 0.10 (1s)
+[L_york agree3] A 0.47 B 0.16 C 0.60 C_late 0.37 D 0.00 D_late 0.09 (1s)
+[L_york disagree1] A 0.72 B 0.00 C 0.72 C_late 0.68 D 0.00 D_late 0.00 (1s)
+[L_york disagree2] A 0.25 B 0.01 C 0.52 C_late 0.13 D 0.00 D_late 0.01 (1s)
+[L_york disagree3] A 0.25 B 0.00 C 0.63 C_late 0.17 D 0.00 D_late 0.01 (1s)
+[L_york copy3] A 0.01 B 0.01 C 0.05 C_late 0.02 D 0.05 D_late 0.02 (1s)
+[L_york hidden1] A 0.72 B 0.00 C 0.72 C_late 0.72 D 0.00 D_late 0.00 (1s)
+[L_york hidden2] A 0.64 B 0.00 C 0.52 C_late 0.64 D 0.00 D_late 0.00 (1s)
+[L_york hidden3] A 0.67 B 0.00 C 0.60 C_late 0.67 D 0.00 D_late 0.00 (1s)
+[L_york hidden_sub3] A 0.72 B 0.01 C 0.58 C_late 0.74 D 0.00 D_late 0.01 (1s)
+[L_york told_copy3] A 0.00 B 0.00 C 0.09 C_late 0.00 D 0.02 D_late 0.00 (1s)
+[L_york copy_alone] A 0.01 B 0.01 (0s)
+[L_york patch] P_all 0.57 (5s)
+PROGRESS 1/2 V_LM_sydney
+[V_LM_sydney alone] A 0.87 B 0.00 (0s)
+[V_LM_sydney agree1] A 0.69 B 0.45 C 0.56 C_late 0.69 D 0.01 D_late 0.34 (1s)
+[V_LM_sydney agree2] A 0.78 B 0.63 C 0.51 C_late 0.62 D 0.02 D_late 0.24 (1s)
+[V_LM_sydney agree3] A 0.89 B 0.74 C 0.55 C_late 0.68 D 0.03 D_late 0.34 (1s)
+[V_LM_sydney disagree1] A 0.47 B 0.02 C 0.56 C_late 0.47 D 0.01 D_late 0.03 (1s)
+[V_LM_sydney disagree2] A 0.29 B 0.01 C 0.51 C_late 0.32 D 0.02 D_late 0.01 (1s)
+[V_LM_sydney disagree3] A 0.29 B 0.01 C 0.55 C_late 0.31 D 0.03 D_late 0.01 (1s)
+[V_LM_sydney hidden1] A 0.62 B 0.01 C 0.56 C_late 0.63 D 0.01 D_late 0.01 (1s)
+[V_LM_sydney hidden2] A 0.52 B 0.03 C 0.51 C_late 0.57 D 0.02 D_late 0.03 (1s)
+[V_LM_sydney hidden3] A 0.58 B 0.03 C 0.55 C_late 0.61 D 0.02 D_late 0.02 (1s)
+[V_LM_sydney hidden_sub3] A 0.63 B 0.01 C 0.55 C_late 0.63 D 0.02 D_late 0.01 (1s)
+[V_LM_sydney told_copy3] A 0.00 B 0.00 C 0.28 C_late 0.00 D 0.19 D_late 0.00 (1s)
+[V_LM_sydney patch] P_all 0.55 (5s)
+PROGRESS ALLDONE

@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_christ,neutral,alone,0,B,,right,layers 21–26,own,0,0.25,0.4197206510020611,0.00411476825162029,-0.3239202504668801
+V_LM_christ,neutral,alone,0,B,,right,layers 21–26,own,0,0.5,0.005909890227431076,0.006688666979297095,-5.125200599035741
+V_LM_christ,neutral,alone,0,B,,right,layers 21–26,own,0,0.75,0.004103474527440867,0.007653084029665693,-5.491809301551693
+V_LM_christ,neutral,agree,3,B,B,right,layers 21–26,own,3,0.25,0.5944824996233162,0.5944824996233162,0.3825272484127406
+V_LM_christ,neutral,agree,3,B,B,right,layers 21–26,own,3,0.5,0.4889088011332545,0.4889088011332545,-0.04437207431162563
+V_LM_christ,neutral,agree,3,B,B,right,layers 21–26,own,3,0.75,0.4615045418437839,0.4615045418437839,-0.1542871669344445
+V_LM_christ,neutral,hidden,3,B,,right,layers 0–5,own,3,0.25,0.8723227947063611,,1.921654287728188
+V_LM_christ,neutral,hidden,3,B,,right,layers 0–5,own,3,0.5,0.8405099731703719,,1.6620274259811625
+V_LM_christ,neutral,hidden,3,B,,right,layers 0–5,own,3,0.75,0.8099739258440142,,1.449840761687426
+V_LP_hendrix,neutral,alone,0,S,,right,layers 15–20,own,0,0.25,0.301985787903712,0.01703703108800989,-0.8378595073785204
+V_LP_hendrix,neutral,alone,0,S,,right,layers 15–20,own,0,0.5,0.1604160608014075,0.021710126634367877,-1.6551356385483809
+V_LP_hendrix,neutral,alone,0,S,,right,layers 15–20,own,0,0.75,0.11112423261511334,0.024795361802677766,-2.079308693315351
+V_LP_hendrix,neutral,agree,3,S,S,right,layers 21–26,own,3,0.25,0.45047940142891785,0.45047940142891785,-0.19873390696187648
+V_LP_hendrix,neutral,agree,3,S,S,right,layers 21–26,own,3,0.5,0.39176222426866275,0.39176222426866275,-0.43991079901159225
+V_LP_hendrix,neutral,agree,3,S,S,right,layers 21–26,own,3,0.75,0.3989207557496548,0.3989207557496548,-0.409963989816022
+V_LP_hendrix,neutral,hidden,3,S,,wrong,layers 15–20,alone,3,0.25,0.06408172112440332,,-2.68136900237789
+V_LP_hendrix,neutral,hidden,3,S,,wrong,layers 15–20,alone,3,0.5,0.04770082212035376,,-2.9939306149265628
+V_LP_hendrix,neutral,hidden,3,S,,wrong,layers 15–20,alone,3,0.75,0.049253514737370586,,-2.960266719698998

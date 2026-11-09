@@ -1,0 +1,206 @@
+    wording   condition  peers  n  needed  not_needed  mixed  inconclusive  unassessed  need_lo_median  need_prob_median  own_drop_median  ceiling  needed_share  alone_needed_share tool_works
+deferential       agree      1 20       0           6      1            11           2        0.575206          0.197368         0.351397        0          0.00                0.55        NaN
+deferential       agree      2 20       0          18      0             1           1        0.122035          0.012379         0.040470        7          0.00                0.55        NaN
+deferential       agree      3 20       0          18      0             1           1       -0.060993         -0.002440         0.014295       15          0.00                0.55        NaN
+deferential       alone      0 20      11           0      0             9           0        7.220319          0.959107         0.983028        0          0.55                0.55        NaN
+deferential      hidden      1 20       0           0      1            13           6        1.592591          0.430900         0.798443        0          0.00                0.55      False
+deferential      hidden      2 20       4           0      3             8           5        2.021332          0.543456         0.701483        0          0.20                0.55      False
+deferential      hidden      3 20       4           0      4             7           5        1.937771          0.584178         0.673859        0          0.20                0.55      False
+deferential  hidden_sub      1 20       2           0      1             9           8        2.515569          0.533447         0.909484        0          0.10                0.55      False
+deferential  hidden_sub      2 20       3           0      0             4          13        2.395579          0.617316         0.898167        0          0.15                0.55      False
+deferential  hidden_sub      3 20       3           0      1             4          12        2.573922          0.679342         0.868317        0          0.15                0.55      False
+deferential peer_bridge      1 20       6           3     10             1           0        1.140803          0.132622         0.073117        6          0.30                0.55        NaN
+deferential peer_bridge      3 20       2           2     15             1           0        0.246272          0.028198         0.046312        8          0.10                0.55        NaN
+deferential told_ignore      3 20       0           3      4             0           0        2.244881          0.489689         0.882060        0          0.00                0.55        NaN
+    neutral       agree      1 20       4           0      1            13           2        1.715240          0.494077         0.710943        0          0.20                0.55        NaN
+    neutral       agree      2 20       2           4      4             8           2        0.993212          0.327330         0.418665        0          0.10                0.55        NaN
+    neutral       agree      3 20       0           7      4             7           2        0.828132          0.241051         0.298598        0          0.00                0.55        NaN
+    neutral       alone      0 20      11           0      0             9           0        7.220319          0.959107         0.983028        0          0.55                0.55        NaN
+    neutral      hidden      1 20       5           0      1            11           3        3.996875          0.751035         0.923528        0          0.25                0.55      False
+    neutral      hidden      2 20       4           0      2             9           5        3.242001          0.691679         0.841709        0          0.20                0.55      False
+    neutral      hidden      3 20       5           0      1             8           6        3.423388          0.666695         0.881569        0          0.25                0.55      False
+    neutral  hidden_sub      1 20       6           0      1            10           3        4.289976          0.845585         0.937698        0          0.30                0.55      False
+    neutral  hidden_sub      2 20       5           0      0             7           8        5.034211          0.791518         0.941461        0          0.25                0.55      False
+    neutral  hidden_sub      3 20       5           0      1             7           7        5.227835          0.748053         0.948234        0          0.25                0.55      False
+    neutral peer_bridge      1 20      10           3      6             1           0        2.356483          0.325120         0.121925        7          0.50                0.55        NaN
+    neutral peer_bridge      3 20       4           6      9             1           0        0.737287          0.040194         0.044817       12          0.20                0.55        NaN
+    neutral told_ignore      3 20       0           3      4             0           0        2.244881          0.489689         0.882060        0          0.00                0.55        NaN
+                             sum  count
+wording     baseline   peers           
+deferential hidden     1       3     13
+                       2       8     14
+                       3       8     14
+            hidden_sub 1       5     11
+                       2       6      7
+                       3       6      8
+neutral     hidden     1       8     16
+                       2      11     14
+                       3      10     13
+            hidden_sub 1      10     16
+                       2      10     12
+                       3      10     13
+  frame                                                row   cell  prompts  eligible  passing   median passed
+  defer copy-only: P(peers') back toward the no-peer level      C        4         4        4 0.998575   True
+  defer copy-only: P(peers') back toward the no-peer level C_late        4         4        4 0.620674   None
+  defer  give-ins under disagree: back to the right letter      C       64        64       58 3.022354   True
+  defer  give-ins under disagree: back to the right letter C_late       64        64       10 1.868784   None
+  defer                   hidden prompts: almost no change      C       96        96       84 0.449288   True
+  defer                   hidden prompts: almost no change C_late       96        96       96 0.110764   None
+  defer                      told to copy: P(peers') drops      C       24        24       24 8.434304   True
+  defer                      told to copy: P(peers') drops C_late       24        24        0 0.970335   None
+neutral copy-only: P(peers') back toward the no-peer level      C        4         4        4 1.013255   True
+neutral copy-only: P(peers') back toward the no-peer level C_late        4         4        3 0.601598   None
+neutral  give-ins under disagree: back to the right letter      C       19        19       19 1.689556   True
+neutral  give-ins under disagree: back to the right letter C_late       19        19       10 0.368443   None
+neutral                   hidden prompts: almost no change      C       96        96       84 0.377191   True
+neutral                   hidden prompts: almost no change C_late       96        96       96 0.060685   None
+neutral                      told to copy: P(peers') drops      C       24        24       24 8.434304   True
+neutral                      told to copy: P(peers') drops C_late       24        24        0 0.970335   None
+  frame condition  peers                                  reading  n
+  defer     agree      1     C well below A (leaned on the peers)  4
+  defer     agree      1 both collapse (bridge needed either way)  1
+  defer     agree      1                        neither collapses  1
+  defer     agree      1      only D collapses (peers the backup) 14
+  defer     agree      2     C well below A (leaned on the peers) 17
+  defer     agree      2      only D collapses (peers the backup)  3
+  defer     agree      3     C well below A (leaned on the peers) 18
+  defer     agree      3      only D collapses (peers the backup)  2
+  defer  disagree      1 both collapse (bridge needed either way)  6
+  defer  disagree      1                        neither collapses  7
+  defer  disagree      1                         only B collapses  6
+  defer  disagree      1      only D collapses (peers the backup)  1
+  defer  disagree      2 both collapse (bridge needed either way)  5
+  defer  disagree      2                        neither collapses  6
+  defer  disagree      2                         only B collapses  9
+  defer  disagree      3 both collapse (bridge needed either way)  1
+  defer  disagree      3                        neither collapses  9
+  defer  disagree      3                         only B collapses 10
+  defer    hidden      1 both collapse (bridge needed either way) 11
+  defer    hidden      1                        neither collapses  5
+  defer    hidden      1                         only B collapses  3
+  defer    hidden      1      only D collapses (peers the backup)  1
+  defer    hidden      2 both collapse (bridge needed either way) 11
+  defer    hidden      2                        neither collapses  8
+  defer    hidden      2                         only B collapses  1
+  defer    hidden      3 both collapse (bridge needed either way) 11
+  defer    hidden      3                        neither collapses  7
+  defer    hidden      3                         only B collapses  1
+  defer    hidden      3      only D collapses (peers the backup)  1
+neutral     agree      1 both collapse (bridge needed either way) 14
+neutral     agree      1                        neither collapses  2
+neutral     agree      1                         only B collapses  1
+neutral     agree      1      only D collapses (peers the backup)  3
+neutral     agree      2 both collapse (bridge needed either way)  8
+neutral     agree      2                        neither collapses  2
+neutral     agree      2      only D collapses (peers the backup) 10
+neutral     agree      3     C well below A (leaned on the peers)  1
+neutral     agree      3 both collapse (bridge needed either way)  3
+neutral     agree      3                        neither collapses  1
+neutral     agree      3      only D collapses (peers the backup) 15
+neutral  disagree      1 both collapse (bridge needed either way) 13
+neutral  disagree      1                        neither collapses  3
+neutral  disagree      1                         only B collapses  4
+neutral  disagree      2 both collapse (bridge needed either way) 17
+neutral  disagree      2                        neither collapses  1
+neutral  disagree      2                         only B collapses  2
+neutral  disagree      3 both collapse (bridge needed either way) 15
+neutral  disagree      3                        neither collapses  2
+neutral  disagree      3                         only B collapses  3
+neutral    hidden      1 both collapse (bridge needed either way) 18
+neutral    hidden      1                         only B collapses  1
+neutral    hidden      1      only D collapses (peers the backup)  1
+neutral    hidden      2 both collapse (bridge needed either way) 18
+neutral    hidden      2                        neither collapses  2
+neutral    hidden      3 both collapse (bridge needed either way) 17
+neutral    hidden      3                        neither collapses  2
+neutral    hidden      3                         only B collapses  1
+strength           0.25  0.50  0.75  1.00
+frame   condition                        
+defer   agree      0.16  0.24  0.26  0.33
+        alone      2.28  5.48  7.12  7.56
+        hidden     0.52  1.23  2.15  2.76
+neutral agree      0.71  1.14  1.32  1.36
+        alone      2.28  5.48  7.12  7.56
+        hidden     1.22  2.79  3.85  4.53
+  frame         question  PB_all  P_all  lo_right_A  lo_right_B  lo_right_C  lo_right_D patch_source
+  defer   V_LM_acropolis   -2.87  -0.42        2.87        2.29       -1.69       -3.78            ?
+  defer      V_LM_angkor   -4.99  -1.45        2.94        2.75       -1.69       -4.17            ?
+  defer V_LM_brandenburg   -3.84  -1.82        1.98        1.54       -1.33       -3.88            ?
+  defer      V_LM_christ    0.16   0.45        3.02        2.85       -0.21       -0.17            ?
+  defer      V_LM_eiffel   -4.23  -1.40        3.54        2.42       -2.42       -4.49            ?
+  defer        V_LM_fuji   -2.65   1.90        2.61        1.34        1.08       -3.29            ?
+  defer     V_LM_kremlin   -5.75  -0.65        2.74        1.77       -1.00       -5.43            ?
+  defer       V_LM_machu   -1.24  -0.85        2.81        2.53       -2.49       -2.30            ?
+  defer    V_LM_petronas   -7.87  -3.81        3.02        2.91       -4.35       -7.07            ?
+  defer        V_LM_pisa   -3.91   0.98        4.37        3.82        0.65       -3.78            ?
+  defer    V_LM_pyramids   -4.71   0.86        2.65        1.62        0.04       -4.83            ?
+  defer      V_LM_sydney   -0.87   0.43        4.62        4.20       -0.14       -0.83            ?
+  defer         V_LM_taj   -4.18  -1.25        2.60        2.30       -2.03       -3.83            ?
+  defer         V_LP_ali   -1.29   0.63        3.10        2.90        0.02       -1.68            ?
+  defer     V_LP_beyonce   -4.66   0.94        3.12        2.57       -0.51       -3.57            ?
+  defer     V_LP_hendrix   -4.01  -2.79        3.51        3.15       -2.66       -3.58            ?
+  defer      V_LP_kapoor   -2.37  -1.05        3.04        2.79       -0.32       -1.48            ?
+  defer     V_LU_berklee    0.16   0.16        3.51        3.49        0.89        0.42            ?
+  defer   V_LU_dalhousie   -6.84  -0.43        2.92        2.70       -0.96       -6.45            ?
+  defer     V_LU_hopkins   -0.94   1.52        2.46        2.43        0.52       -1.09            ?
+neutral   V_LM_acropolis   -1.14   1.47        1.24        0.43        0.98       -4.77            ?
+neutral      V_LM_angkor    0.51   0.48        0.77        1.35        0.46        0.57            ?
+neutral V_LM_brandenburg   -6.61  -0.87       -0.11       -1.26       -1.11       -5.67            ?
+neutral      V_LM_christ   -4.19   2.57        1.50       -0.04        0.77       -5.36            ?
+neutral      V_LM_eiffel   -2.42   1.88        2.35        0.84        1.92       -1.12            ?
+neutral        V_LM_fuji   -6.51   2.92        1.33       -0.72        2.20       -6.34            ?
+neutral     V_LM_kremlin   -5.86   0.97        0.74       -0.95        0.82       -5.93            ?
+neutral       V_LM_machu   -4.15   0.32        0.23        0.31       -0.17       -4.73            ?
+neutral    V_LM_petronas   -5.21   1.69        0.96        0.11        1.27       -3.77            ?
+neutral        V_LM_pisa   -4.82   2.32        3.05        0.47        1.79       -5.23            ?
+neutral    V_LM_pyramids   -4.36   2.47        0.72       -0.36        2.24       -4.42            ?
+neutral      V_LM_sydney   -3.83   0.20        2.05        1.04        0.20       -3.60            ?
+neutral         V_LM_taj   -5.78   0.35        1.40       -1.24        0.12       -5.42            ?
+neutral         V_LP_ali   -0.88   1.63        1.38        0.42        0.78       -1.27            ?
+neutral     V_LP_beyonce   -3.76   1.47        1.36       -0.37        0.71       -3.96            ?
+neutral     V_LP_hendrix   -3.84  -1.58        0.71       -0.47       -1.36       -3.40            ?
+neutral      V_LP_kapoor   -4.04  -0.07        0.43       -1.17        0.46       -4.27            ?
+neutral     V_LU_berklee   -3.51   0.96        1.48        0.29        1.66       -2.29            ?
+neutral   V_LU_dalhousie   -6.87   1.44        2.48        0.94        1.77       -5.57            ?
+neutral     V_LU_hopkins   -1.90   3.22        1.15       -0.76        1.86       -2.62            ?
+  frame         question  full_effect  stops_at
+  defer   V_LM_acropolis     3.290225      23.0
+  defer      V_LM_angkor     4.388662      23.0
+  defer V_LM_brandenburg     3.798786      19.0
+  defer      V_LM_christ     2.573215      23.0
+  defer      V_LM_eiffel     4.936531      23.0
+  defer        V_LM_fuji     0.712504       NaN
+  defer     V_LM_kremlin     3.398408      23.0
+  defer       V_LM_machu     3.663214      23.0
+  defer    V_LM_petronas     6.829180      19.0
+  defer        V_LM_pisa     3.386443       7.0
+  defer    V_LM_pyramids     1.789127      23.0
+  defer      V_LM_sydney     4.185274      19.0
+  defer         V_LM_taj     3.844270       7.0
+  defer         V_LP_ali     2.466189      23.0
+  defer     V_LP_beyonce     2.188493      23.0
+  defer     V_LP_hendrix     6.298568      19.0
+  defer      V_LP_kapoor     4.087611      23.0
+  defer     V_LU_berklee     3.357595      19.0
+  defer   V_LU_dalhousie     3.358385      23.0
+  defer     V_LU_hopkins     0.944778       NaN
+neutral   V_LM_acropolis    -0.230270       NaN
+neutral      V_LM_angkor     0.288055       NaN
+neutral V_LM_brandenburg     0.761342       NaN
+neutral      V_LM_christ    -1.064752       6.0
+neutral      V_LM_eiffel     0.473013       NaN
+neutral        V_LM_fuji    -1.588837       6.0
+neutral     V_LM_kremlin    -0.224947       NaN
+neutral       V_LM_machu    -0.090620       NaN
+neutral    V_LM_petronas    -0.732307       NaN
+neutral        V_LM_pisa     0.726086       NaN
+neutral    V_LM_pyramids    -1.750327      10.0
+neutral      V_LM_sydney     1.851280      20.0
+neutral         V_LM_taj     1.048675       7.0
+neutral         V_LP_ali    -0.249221       NaN
+neutral     V_LP_beyonce    -0.107316       NaN
+neutral     V_LP_hendrix     2.286045      19.0
+neutral      V_LP_kapoor     0.498760       NaN
+neutral     V_LU_berklee     0.525663       NaN
+neutral   V_LU_dalhousie     1.032684      20.0
+neutral     V_LU_hopkins    -2.073184       6.0

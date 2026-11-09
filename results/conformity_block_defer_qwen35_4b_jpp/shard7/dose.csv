@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_christ,defer,alone,0,B,,right,layers 21–26,own,0,0.25,0.4197206510020611,0.00411476825162029,-0.3239202504668801
+V_LM_christ,defer,alone,0,B,,right,layers 21–26,own,0,0.5,0.005909890227431076,0.006688666979297095,-5.125200599035741
+V_LM_christ,defer,alone,0,B,,right,layers 21–26,own,0,0.75,0.004103474527440867,0.007653084029665693,-5.491809301551693
+V_LM_christ,defer,agree,3,B,B,right,layers 0–5,own,3,0.25,0.950985047602378,0.950985047602378,2.965372937072784
+V_LM_christ,defer,agree,3,B,B,right,layers 0–5,own,3,0.5,0.952811765357709,0.952811765357709,3.005272770690834
+V_LM_christ,defer,agree,3,B,B,right,layers 0–5,own,3,0.75,0.9548165952079593,0.9548165952079593,3.0507894063313743
+V_LM_christ,defer,hidden,3,B,,right,layers 0–5,own,3,0.25,0.4052559331751538,,-0.38361237193251135
+V_LM_christ,defer,hidden,3,B,,right,layers 0–5,own,3,0.5,0.4330449629826775,,-0.26943843757220254
+V_LM_christ,defer,hidden,3,B,,right,layers 0–5,own,3,0.75,0.472375988572195,,-0.1106086760369914
+V_LP_hendrix,defer,alone,0,S,,right,layers 15–20,own,0,0.25,0.301985787903712,0.01703703108800989,-0.8378595073785204
+V_LP_hendrix,defer,alone,0,S,,right,layers 15–20,own,0,0.5,0.1604160608014075,0.021710126634367877,-1.6551356385483809
+V_LP_hendrix,defer,alone,0,S,,right,layers 15–20,own,0,0.75,0.11112423261511334,0.024795361802677766,-2.079308693315351
+V_LP_hendrix,defer,agree,3,S,S,right,layers 15–20,own,3,0.25,0.964571375890126,0.964571375890126,3.304163748523385
+V_LP_hendrix,defer,agree,3,S,S,right,layers 15–20,own,3,0.5,0.9639337191382528,0.9639337191382528,3.2856641554730985
+V_LP_hendrix,defer,agree,3,S,S,right,layers 15–20,own,3,0.75,0.9625461015091139,0.9625461015091139,3.2464711595863034
+V_LP_hendrix,defer,hidden,3,S,,wrong,layers 15–20,alone,3,0.25,0.029056960069447052,,-3.509009761414424
+V_LP_hendrix,defer,hidden,3,S,,wrong,layers 15–20,alone,3,0.5,0.021853253811204447,,-3.8013098797073326
+V_LP_hendrix,defer,hidden,3,S,,wrong,layers 15–20,alone,3,0.75,0.019945859118496077,,-3.894586257127035

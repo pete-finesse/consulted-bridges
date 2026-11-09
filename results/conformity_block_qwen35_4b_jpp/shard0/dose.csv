@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+L_colosseum,neutral,alone,0,I,,right,layers 18–23,own,0,0.25,0.6157229753704858,0.000816935583797818,0.47143343627695805
+L_colosseum,neutral,alone,0,I,,right,layers 18–23,own,0,0.5,0.03110275393420828,0.0008288310130479021,-3.438862198852268
+L_colosseum,neutral,alone,0,I,,right,layers 18–23,own,0,0.75,0.004334380468923725,0.0006646405159236968,-5.436832791578243
+L_colosseum,neutral,agree,3,I,I,right,layers 18–23,own,3,0.25,0.7881868356800558,0.7881868356800558,1.3140305771497773
+L_colosseum,neutral,agree,3,I,I,right,layers 18–23,own,3,0.5,0.6956728383841382,0.6956728383841382,0.826776177773502
+L_colosseum,neutral,agree,3,I,I,right,layers 18–23,own,3,0.75,0.6101574392576607,0.6101574392576607,0.44797405379519856
+L_colosseum,neutral,hidden,3,I,,right,layers 18–23,own,3,0.25,0.3273694241839702,,-0.7201069866210014
+L_colosseum,neutral,hidden,3,I,,right,layers 18–23,own,3,0.5,0.07819547813117507,,-2.4671213642816694
+L_colosseum,neutral,hidden,3,I,,right,layers 18–23,own,3,0.75,0.023358149507916478,,-3.7331740654161605
+V_LM_petronas,neutral,alone,0,M,,right,layers 18–23,own,0,0.25,0.04194564807777235,0.003443288293210674,-3.128529824309571
+V_LM_petronas,neutral,alone,0,M,,right,layers 18–23,own,0,0.5,0.0034604073092690296,0.003921114773539236,-5.662902569032267
+V_LM_petronas,neutral,alone,0,M,,right,layers 18–23,own,0,0.75,0.002378838189846477,0.004444180424550263,-6.038761393891529
+V_LM_petronas,neutral,agree,3,M,M,right,layers 3–8,own,3,0.25,0.6495203181635173,0.6495203181635173,0.6169313826865521
+V_LM_petronas,neutral,agree,3,M,M,right,layers 3–8,own,3,0.5,0.5445547110806647,0.5445547110806647,0.17869281946826923
+V_LM_petronas,neutral,agree,3,M,M,right,layers 3–8,own,3,0.75,0.5166778265000056,0.5166778265000056,0.06673606351975137
+V_LM_petronas,neutral,hidden,3,M,,right,layers 18–23,alone,3,0.25,0.17186878076521384,,-1.5724403360383514
+V_LM_petronas,neutral,hidden,3,M,,right,layers 18–23,alone,3,0.5,0.009270903039057187,,-4.671560343600857
+V_LM_petronas,neutral,hidden,3,M,,right,layers 18–23,alone,3,0.75,0.003807109757169826,,-5.567070596394448

@@ -1,0 +1,106 @@
+
+=== results/conformity_v2_qwen35_4b_jpp: 24 questions, 532 prompts ===
+
+--- new questions (20) ---
+
+Alone: labels
+label
+bridge still needed    19
+bridge not needed       1
+
+Peers agree: label by number of peers
+label  bridge not needed  bridge still needed  mixed  no early windows
+peers                                                                 
+1                      1                    9      8                 2
+2                      5                    3     10                 2
+3                      8                    2      8                 2
+
+Peers agree: median need by peers
+peers
+1    0.49
+2    0.33
+3    0.24
+
+Peers disagree: state by number of peers
+state  full give-in  holds  other  partial give-in
+peers                                             
+1                 2     16      2                0
+2                 5     11      3                1
+3                 8      8      2                2
+
+Peers disagree: label by state
+label            bridge not needed  bridge still pulls  mixed  no early windows
+state                                                                          
+full give-in                     1                   3      9                 2
+holds                            1                  17      8                 9
+other                            0                   4      0                 3
+partial give-in                  0                   1      1                 1
+
+Peers disagree: median pushback (bridge dLO - noise) by state
+state
+full give-in       1.87
+holds              3.50
+other              3.25
+partial give-in    3.00
+
+Presence x use (agree and disagree)
+label                 bridge not needed  bridge still needed  bridge still pulls  mixed  no early windows
+condition cell                                                                                           
+agree     no reading                  0                    0                   0      0                 6
+          present                    14                   14                   0     26                 0
+disagree  no reading                  0                    0                   0      0                15
+          present                     2                    0                  25     18                 0
+
+--- calibration questions (4) ---
+
+Alone: labels
+label
+bridge still needed    4
+
+Peers agree: label by number of peers
+label  bridge not needed  bridge still needed  mixed  no early windows
+peers                                                                 
+1                      1                    0      2                 1
+2                      0                    2      2                 0
+3                      0                    1      3                 0
+
+Peers agree: median need by peers
+peers
+1    0.45
+2    0.45
+3    0.41
+
+Peers disagree: state by number of peers
+state  holds  other  partial give-in
+peers                               
+1          2      2                0
+2          1      3                0
+3          0      3                1
+
+Peers disagree: label by state
+label            bridge not needed  bridge still pulls  mixed  no early windows
+state                                                                          
+holds                            0                   1      2                 0
+other                            1                   5      0                 2
+partial give-in                  0                   1      0                 0
+
+Peers disagree: median pushback (bridge dLO - noise) by state
+state
+holds              0.00
+other              2.12
+partial give-in    3.00
+
+Presence x use (agree and disagree)
+label                 bridge not needed  bridge still needed  bridge still pulls  mixed  no early windows
+condition cell                                                                                           
+agree     no reading                  0                    0                   0      0                 1
+          present                     1                    3                   0      7                 0
+disagree  no reading                  0                    0                   0      0                 2
+          present                     1                    0                   7      2                 0
+
+Copy-only control: pushback
+   question said  pushback label
+L_colosseum    F -0.124998 mixed
+    L_gates    B -0.374988 mixed
+     L_york    M -0.124987 mixed
+   L_mozart    B -0.374988 mixed

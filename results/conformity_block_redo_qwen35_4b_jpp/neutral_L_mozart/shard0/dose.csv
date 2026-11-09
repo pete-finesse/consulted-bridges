@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+L_mozart,neutral,alone,0,S,,right,layers 9–14,own,0,0.25,0.06023504314940372,0.26995508405061264,-2.7473755030241596
+L_mozart,neutral,alone,0,S,,right,layers 9–14,own,0,0.5,0.03129609944885744,0.18009597326446675,-3.4324655214741866
+L_mozart,neutral,alone,0,S,,right,layers 9–14,own,0,0.75,0.033381452430741816,0.14960530834465743,-3.3658035183983257
+L_mozart,neutral,agree,3,S,S,right,layers 18–23,own,3,0.25,0.2011312629411452,0.2011312629411452,-1.3792389038652015
+L_mozart,neutral,agree,3,S,S,right,layers 18–23,own,3,0.5,0.1302616989391154,0.1302616989391154,-1.8986468673096524
+L_mozart,neutral,agree,3,S,S,right,layers 18–23,own,3,0.75,0.11212229531413688,0.11212229531413688,-2.069243815530516
+L_mozart,neutral,hidden,3,S,,wrong,layers 9–14,alone,3,0.25,0.021148606346684348,,-3.8348058274400967
+L_mozart,neutral,hidden,3,S,,wrong,layers 9–14,alone,3,0.5,0.013948676635383045,,-4.258323766421578
+L_mozart,neutral,hidden,3,S,,wrong,layers 9–14,alone,3,0.75,0.014428274253270822,,-4.224032133750762

@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_eiffel,neutral,alone,0,F,,right,layers 21–26,own,0,0.25,0.6505510945444736,0.006377697563378475,0.6214624837127058
+V_LM_eiffel,neutral,alone,0,F,,right,layers 21–26,own,0,0.5,0.0034766442534922217,0.008319229124455691,-5.658205043575541
+V_LM_eiffel,neutral,alone,0,F,,right,layers 21–26,own,0,0.75,0.0007850186655427169,0.005760485761246013,-7.149017735749082
+V_LM_eiffel,neutral,agree,3,F,F,right,layers 3–8,own,3,0.25,0.8523852087530236,0.8523852087530236,1.7534324287561924
+V_LM_eiffel,neutral,agree,3,F,F,right,layers 3–8,own,3,0.5,0.8375751610607768,0.8375751610607768,1.6402956390574022
+V_LM_eiffel,neutral,agree,3,F,F,right,layers 3–8,own,3,0.75,0.7588136636234963,0.7588136636234963,1.146186430056144
+V_LM_eiffel,neutral,hidden,3,F,,right,layers 18–23,own,3,0.25,0.7223256004741244,,0.9560268048782313
+V_LM_eiffel,neutral,hidden,3,F,,right,layers 18–23,own,3,0.5,0.5390617801772783,,0.15656616371926363
+V_LM_eiffel,neutral,hidden,3,F,,right,layers 18–23,own,3,0.75,0.26518350483606057,,-1.0191987441791375
+V_LP_kapoor,neutral,alone,0,M,,right,layers 18–23,own,0,0.25,0.03356401355887531,0.055337800811433885,-3.3601605961340604
+V_LP_kapoor,neutral,alone,0,M,,right,layers 18–23,own,0,0.5,0.014508151942729893,0.04468832960851316,-4.218430160276951
+V_LP_kapoor,neutral,alone,0,M,,right,layers 18–23,own,0,0.75,0.012763763646511859,0.044549997440591176,-4.348299167621546
+V_LP_kapoor,neutral,agree,3,M,M,right,layers 18–23,own,3,0.25,0.35321285691438165,0.35321285691438165,-0.604946380480382
+V_LP_kapoor,neutral,agree,3,M,M,right,layers 18–23,own,3,0.5,0.2828088570639851,0.2828088570639851,-0.9305711394395556
+V_LP_kapoor,neutral,agree,3,M,M,right,layers 18–23,own,3,0.75,0.2566463557672009,0.2566463557672009,-1.0634728098188904
+V_LP_kapoor,neutral,hidden,3,M,,right,layers 18–23,own,3,0.25,0.03168907769437608,,-3.4195811671480225
+V_LP_kapoor,neutral,hidden,3,M,,right,layers 18–23,own,3,0.5,0.01280280299073233,,-4.345205683209767
+V_LP_kapoor,neutral,hidden,3,M,,right,layers 18–23,own,3,0.75,0.009499781259689723,,-4.646941313931265
