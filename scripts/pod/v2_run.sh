@@ -16,6 +16,8 @@
 #   nohup bash scripts/pod/v2_run.sh > /workspace/v2run/results/v2_run1_qwen35_4b/logs/v2.log 2>&1 &
 # Local smoke test on the tiny model (CPU, every gate skipped, a few candidates):
 #   TOY=1 ROOT=<scratch dir with src/ linked> bash scripts/pod/v2_run.sh
+# Run 2 (Qwen3.6-27B): MODEL=qwen36_27b ROOT=/workspace/v2run27 (results/v2_run2_qwen36_27b); there step a runs here
+# and the rest through the job queue in v2_jobs.sh, one or two 27B processes per pod.
 # Knobs: NS (screen shards per lens, 3), NC (conformity shards per wording, 3), NB (block shards per wording, 2),
 # STEPS (default "a b c e"; any subset, in that order). Step s (with N and SHARDS) is c and e chained per shard, for
 # spreading the group steps over several pods: N=12 SHARDS="0 1" STEPS=s bash scripts/pod/v2_run.sh
@@ -28,12 +30,14 @@ else
   source /workspace/env.sh
   ROOT=${ROOT:-/workspace/v2run}; PY=/workspace/consulted-bridges/.venv/bin/python
   export HF_HUB_OFFLINE=1
-  CFGS="qwen35_4b qwen35_4b_jpp"; CFG=qwen35_4b_jpp; QCFG=qwen35_4b
+  MODEL=${MODEL:-qwen35_4b}   # model switch: qwen35_4b (run 1, default) or qwen36_27b (run 2, ROOT=/workspace/v2run27)
+  CFGS="$MODEL ${MODEL}_jpp"; CFG=${MODEL}_jpp; QCFG=$MODEL
 fi
 cd "$ROOT" || exit 1
 export PYTHONPATH=$ROOT/src
 NS=${NS:-3}; NC=${NC:-3}; NB=${NB:-2}; STEPS=${STEPS:-a b c e}
-OUT=results/v2_run1_qwen35_4b; L=$OUT/logs; mkdir -p $L
+RUN=${RUN:-v2_run1_qwen35_4b}; [ "${MODEL:-}" = qwen36_27b ] && RUN=v2_run2_qwen36_27b
+OUT=results/$RUN; L=$OUT/logs; mkdir -p $L
 has() { [[ " $STEPS " == *" $1 "* ]]; }
 t() { echo "== $(date -u +%T) $*"; }
 gpu() { command -v nvidia-smi >/dev/null && nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total --format=csv,noheader; }
