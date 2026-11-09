@@ -1,0 +1,273 @@
+question,case,wording,layer,top
+L_colosseum,alone,,17,答案 |  Bf | HideInInspector | _letter | (answer | answer | hazi | _answer | _letters | ElementException | ScreenState | 'gc
+L_colosseum,alone,,19,Italy |  Italy | Italian |  Italian | answer |  Rome | ROME | 答案 | _letter |  Naples | ITAL | (answer
+L_colosseum,alone,,21, Italy | Italy |  Rome | ROME | rome |  Italian |  ​​​ | Italian |  Naples |  Italia |  italian |  italia
+L_colosseum,alone,,23, Italy | Italy |  Rome | ROME |  Italian |  Naples | Italian | rome |  Italia |  Italians | ITAL |  France
+L_colosseum,agree3,neutral,17, Bf | ElementException | 答案 | spb | लब | cobra | answer | _answer | HideInInspector | @brief | (answer | rray
+L_colosseum,agree3,neutral,19,"Italy |  Italy | _
+
+ |  ​​​ | ElementException | linkplain | ​
+
+ | ._
+
+ | 	ROM | !</ | answer | (answer"
+L_colosseum,agree3,neutral,21," Italy | Italy | ROME | rome |  Rome | [/ |  ​​​ |  France |  
+
+ |  italia | reece | 	ROM"
+L_colosseum,agree3,neutral,23, Italy | Italy |  France |  Rome |  Spain | France |  Switzerland | ROME |  Greece |  Germany |  Portugal |  Italian
+L_colosseum,disagree3,neutral,17," Bf | ElementException | लब | cobra | ossible | _
+
+ | spb |  likely | @brief | мовір |  Likely | rray"
+L_colosseum,disagree3,neutral,19,"Italy |  Italy | _
+
+ | ElementException | answer |  ​​​ | @brief | 答案 | ,</ |  answer | linkplain | !</"
+L_colosseum,disagree3,neutral,21," Italy | Italy | [/ | ROME |  ​​​ |  
+
+ | rome | .'</ | :</ | ;</ | ,</ |  Rome"
+L_colosseum,disagree3,neutral,23, Italy | Italy |  Rome | ROME |  Based | Based |  based | rome |  Italian |  Switzerland | based | Italian
+L_colosseum,agree3,defer,17, likely |  Likely |  referencing | लब | Considering |  Bf | likely |  considering | ElementException | rahim | olik | Based
+L_colosseum,agree3,defer,19, considering | Considering |  Considering | Given |  Given |  given | given | Based | 考虑 | _given | because |  because
+L_colosseum,agree3,defer,21, considering |  Considering | Considering |  based |  given | Based |  Based | based |  Given | 考虑 | Given | given
+L_colosseum,agree3,defer,23, considering |  based |  Based | Based | based |  Considering | Considering |  given |  Given | Given | _based | 考虑
+L_colosseum,disagree3,defer,17, likely |  Likely |  referencing | likely |  Bf | लब | Considering | Based | olik | umably |  considering | ossible
+L_colosseum,disagree3,defer,19, considering | Considering |  Considering | Given |  Given |  given | Based | given |  Based | 考虑 |  referencing |  based
+L_colosseum,disagree3,defer,21, considering | Considering |  Considering |  based | Based |  Based | based |  given | Given |  Given | 考虑 | given
+L_colosseum,disagree3,defer,23, based |  Based |  considering | Based | based |  Considering | Considering | _based |  Given |  given |  dựa | Given
+L_colosseum,agree3,defer_own,17, likely |  Likely | Considering | लब |  referencing | likely |  considering | spb |  Bf | Based | olik | ElementException
+L_colosseum,agree3,defer_own,19, considering | Considering |  Considering |  Given | Given |  given | given | 考虑 | Based | _given |  Based | due
+L_colosseum,agree3,defer_own,21, considering |  Considering | Considering |  given |  based | Based | 考虑 |  Given |  Based | Given | based | given
+L_colosseum,agree3,defer_own,23, considering |  based |  Based |  Considering | Based | based | Considering |  given |  Given | Given | 考虑 | given
+L_colosseum,disagree3,defer_own,17, likely |  Likely | likely | Considering |  referencing |  considering | Based | लब |  Bf | spb |  Considering | ossible
+L_colosseum,disagree3,defer_own,19, considering |  Considering | Considering |  Given | Given |  given | given | Based | 考虑 |  Based | _given |  based
+L_colosseum,disagree3,defer_own,21, considering |  Considering | Considering |  based | Based |  given |  Based | based | 考虑 | Given |  Given | given
+L_colosseum,disagree3,defer_own,23, based |  considering |  Based | Based | based |  Considering | Considering |  given |  Given | Given | _based |  dựa
+L_colosseum,agree3,consider,17, likely |  referencing |  Likely | लब | umably | likely | Considering |  considering | 既然 | spb |  Bf | Based
+L_colosseum,agree3,consider,19, considering | Considering |  Considering |  given |  Given | Given | given | 考虑 |  seeing | _given | Based |  noticing
+L_colosseum,agree3,consider,21, considering |  Considering | Considering |  given |  based | 考虑 | consider | Based |  consideration | based | given |  Given
+L_colosseum,agree3,consider,23, considering |  based |  Based |  Considering | Based | based | Considering |  given |  Given | Given | consider |  consideration
+L_colosseum,disagree3,consider,17, likely |  Likely |  referencing | umably | likely | लब | Considering |  considering | spb | linkplain | 既然 | Based
+L_colosseum,disagree3,consider,19, considering |  Considering | Considering |  Given | Given |  given | given | 考虑 | Based |  seeing |  noticing |  referencing
+L_colosseum,disagree3,consider,21, considering |  Considering | Considering |  based |  given | 考虑 | Based | based |  Based | consider |  consideration | Given
+L_colosseum,disagree3,consider,23, considering |  based |  Based | Based | based |  Considering | Considering |  given |  Given | Given | _based | 考虑
+L_colosseum,agree3,plain,17," Bf | answer | 答案 | _none | _answer | ElementException | HideInInspector | लब | шин | _
+
+ | (answer |  역시"
+L_colosseum,agree3,plain,19,"Italy |  Italy | answer |  ​​​ | _
+
+ | ElementException |  answer | linkplain | ilogy | (answer | !</ | _answer"
+L_colosseum,agree3,plain,21," Italy | Italy | ROME | rome | [/ |  italia |  
+
+ |  ​​​ |  Rome |  Italia |  ит | ]]>"
+L_colosseum,agree3,plain,23, Italy | Italy |  France |  Rome | ROME | France |  Spain |  Italia |  Italian |  Greece |  Switzerland | Italian
+L_colosseum,disagree3,plain,17," Bf | _
+
+ | ossible | ElementException | लब |  Likely |  역시 | umably | HideInInspector | _none | <|eot_id|> |  likely"
+L_colosseum,disagree3,plain,19," answer | answer |  Answer | _
+
+ | ElementException | 答案 |  ​​​ | Answer | _answer | (answer | ,</ | !</"
+L_colosseum,disagree3,plain,21,"[/ |  Italy |  
+
+ | :</ | Italy |  ​​​ | ,</ | .'</ | >,</ | ]]> | ;</ | </"
+L_colosseum,disagree3,plain,23," Italy | Italy | ROME |  Rome | rome |  Based | Italian | Based | answer |  France |  
+
+ |  Italian"
+L_colosseum,agree3,no_agent,17, likely | Based |  Likely | लब |  referencing | likely | Considering |  Based |  Bf | Shared |  considering | consistent
+L_colosseum,agree3,no_agent,19, considering | Considering |  Considering | Based | Given |  Given |  given |  Based | based |  based | given | consistent
+L_colosseum,agree3,no_agent,21, considering |  based | based | Based |  Based | Considering |  Considering |  given |  dựa | Given |  according |  Given
+L_colosseum,agree3,no_agent,23, based |  Based | based | Based |  considering | _based |  Considering |  dựa | Considering | -Based | -based |  given
+L_colosseum,disagree3,no_agent,17, likely | Based |  Likely | लब | likely |  Based |  referencing |  Bf | Considering | �n | ossible |  considering
+L_colosseum,disagree3,no_agent,19, considering | Considering |  Considering | Based |  Based | Given |  based | based |  Given |  given |  referencing | consistent
+L_colosseum,disagree3,no_agent,21, considering |  based | Based | based |  Based | Considering |  Considering |  dựa |  given |  according | Given | given
+L_colosseum,disagree3,no_agent,23, based |  Based | Based | based |  considering | _based |  dựa | -Based | -based |  Considering | Considering | 基于
+V_LM_acropolis,alone,,17,"HideInInspector | 答案 | _letter |  Bf | (answer | answer | hazi | _answer | ElementException | 'gc | _letters | _
+
+"
+V_LM_acropolis,alone,,19, Greece |  Athens | _letter |  Greek | answer | Greek | -letter | letter | 答案 | (answer | Letter | _answer
+V_LM_acropolis,alone,,21, Greece |  Greek |  Athens | Greek |  Greeks | reece |  Yunan |  Macedonia | akis |  ​​​ | GREE |  Albania
+V_LM_acropolis,alone,,23, Greece |  Athens |  Greek | Greek |  Greeks | reece |  Macedonia |  Albania |  Italy |  Aristotle |  Bulgaria |  Athen
+V_LM_acropolis,agree3,neutral,17," Bf | ElementException | _
+
+ | लब | cobra | spb | @brief | 答案 | ossible | rray | мовір | (answer"
+V_LM_acropolis,agree3,neutral,19,"ElementException | _
+
+ | answer | (answer | _answer | !</ |  ​​​ | 答案 | terdam | ,</ |  [
+
+ |  answer"
+V_LM_acropolis,agree3,neutral,21," Greece | reece |  Greek |  Athens | Greek |  
+
+ |  ​​​ | [/ |  my | :</ |  Greeks | Based"
+V_LM_acropolis,agree3,neutral,23, Greece |  Athens |  Based | Based |  Greek |  based | based | reece | Greek |  Italy |  Serbia |  Greeks
+V_LM_acropolis,disagree3,neutral,17," Bf | ElementException | लब | spb | 答案 | _
+
+ | cobra | @brief | HideInInspector | _answer | answer | rray"
+V_LM_acropolis,disagree3,neutral,19,"_
+
+ | ElementException |  ​​​ | (answer | ​
+
+ |  [
+
+ | !</ | ._
+
+ | phinx |  Greece | =<?= | reece"
+V_LM_acropolis,disagree3,neutral,21," Greece | reece |  Greek | Greek |  Greeks |  Athens | [/ |  ​​​ |  Serbia |  
+
+ |  Macedonia |  Albania"
+V_LM_acropolis,disagree3,neutral,23, Greece |  Athens |  Greek | reece |  Italy |  Greeks |  Serbia |  Yugoslavia |  France | Greek |  Albania |  Switzerland
+V_LM_acropolis,agree3,defer,17, likely |  Likely |  referencing | लब | likely |  Bf | Considering |  considering | Based | spb | olik | ossible
+V_LM_acropolis,agree3,defer,19, considering | Considering |  Considering | Given |  Given |  given | Based | 考虑 | given |  Based |  referencing |  based
+V_LM_acropolis,agree3,defer,21, considering | Considering |  Considering |  based | Based | based |  Based |  given | 考虑 | Given |  Given |  assuming
+V_LM_acropolis,agree3,defer,23, considering |  based |  Based | Based | based |  Considering | Considering |  Given |  given | Given | _based |  dựa
+V_LM_acropolis,disagree3,defer,17, likely |  Likely |  referencing | लब | Considering | likely |  Bf |  considering | ElementException | rahim | olik | HideInInspector
+V_LM_acropolis,disagree3,defer,19, considering | Considering |  Considering | Given |  Given |  given | given | 考虑 | Based | _given | because |  because
+V_LM_acropolis,disagree3,defer,21, considering |  Considering | Considering |  based |  given | Based |  Based | based | 考虑 |  Given | Given | given
+V_LM_acropolis,disagree3,defer,23, considering |  based |  Based | Based |  Considering | based | Considering |  given |  Given | Given | 考虑 | consider
+V_LM_acropolis,agree3,defer_own,17, likely |  Likely | Considering | likely |  referencing | लब |  considering | spb | Based |  Bf |  Considering | linkplain
+V_LM_acropolis,agree3,defer_own,19, considering | Considering |  Considering | Given |  Given |  given | 考虑 | given | Based | _given |  Based |  based
+V_LM_acropolis,agree3,defer_own,21, considering | Considering |  Considering |  based |  given | Based | 考虑 |  Based | based | Given | consider |  Given
+V_LM_acropolis,agree3,defer_own,23, considering |  based |  Based |  Considering | Based | based | Considering |  given |  Given | Given | 考虑 | consider
+V_LM_acropolis,disagree3,defer_own,17, likely |  Likely | Considering | लब |  referencing | likely | spb |  considering |  Bf | Based | ElementException | olik
+V_LM_acropolis,disagree3,defer_own,19, considering | Considering |  Considering | Given |  Given |  given | given | 考虑 | _given | Based | due |  Based
+V_LM_acropolis,disagree3,defer_own,21, considering |  Considering | Considering |  given |  based | 考虑 | Based |  Given | Given |  Based | given | based
+V_LM_acropolis,disagree3,defer_own,23, considering |  based |  Based |  Considering | Based | Considering | based |  given |  Given | Given | 考虑 | given
+V_LM_acropolis,agree3,consider,17, likely |  Likely |  referencing | likely |  considering | umably | लब | Considering | spb | Based | 既然 | linkplain
+V_LM_acropolis,agree3,consider,19, considering | Considering |  Considering |  Given | Given |  given | 考虑 | given |  seeing | Based |  noticing | _given
+V_LM_acropolis,agree3,consider,21, considering |  Considering | Considering |  based | 考虑 |  given | consider | Based | based |  consideration |  Based | Given
+V_LM_acropolis,agree3,consider,23, considering |  based |  Based |  Considering | Based | based | Considering |  given |  Given | consider | 考虑 |  consideration
+V_LM_acropolis,disagree3,consider,17, likely |  referencing |  Likely | umably | लब |  considering | Considering | likely | 既然 | spb | Based |  Bf
+V_LM_acropolis,disagree3,consider,19, considering | Considering |  Considering |  given | Given |  Given | given | 考虑 |  seeing | _given |  noticing | Based
+V_LM_acropolis,disagree3,consider,21, considering |  Considering | Considering |  given | 考虑 |  based | consider |  consideration | Based | given | based | Given
+V_LM_acropolis,disagree3,consider,23, considering |  based |  Considering |  Based | based | Based | Considering |  given |  Given | consider | Given |  consideration
+V_LM_acropolis,agree3,plain,17,"_
+
+ |  Bf | लब | ElementException | ossible | _none | answer | _answer | 答案 | HideInInspector | <|eot_id|> | (answer"
+V_LM_acropolis,agree3,plain,19,"answer |  answer | (answer |  Answer | _answer | _
+
+ | .answer | ElementException | !</ | Answer | 答案 |  ​​​"
+V_LM_acropolis,agree3,plain,21," Greece |  Greek | Greek |  Athens | reece |  Greeks | [/ |  
+
+ | :</ | ![ | ]]> |  ​​​"
+V_LM_acropolis,agree3,plain,23, Greece |  Greek |  Athens | Greek |  Greeks | reece |  Macedonia |  Aristotle | gree |  Albania |  Serbia | Based
+V_LM_acropolis,disagree3,plain,17," Bf | _
+
+ | answer | लब | _none | 答案 | _answer | ElementException | HideInInspector | @brief | шин | (answer"
+V_LM_acropolis,disagree3,plain,19,"answer | _
+
+ |  ​​​ | ElementException | (answer | !</ |  answer | _answer |  Answer | ilogy |  [
+
+ | .answer"
+V_LM_acropolis,disagree3,plain,21," Greece | reece |  Greek |  Greeks | Greek | [/ |  Athens |  
+
+ |  ​​​ | :</ |  Serbia | !["
+V_LM_acropolis,disagree3,plain,23, Greece |  Greek | reece |  Athens |  Greeks |  Italy | Greek |  Albania |  Serbia |  Yugoslavia |  Macedonia | Italy
+V_LM_acropolis,agree3,no_agent,17, likely | Based |  Likely | लब | likely |  Based | Considering |  Bf |  referencing |  considering | �n | Shared
+V_LM_acropolis,agree3,no_agent,19, considering | Considering |  Considering | Based |  Based | Given |  based |  Given | based |  given |  referencing |  due
+V_LM_acropolis,agree3,no_agent,21, considering |  based | based | Based |  Based | Considering |  Considering |  given |  dựa |  according | Given |  Given
+V_LM_acropolis,agree3,no_agent,23, based |  Based | Based | based |  considering | _based |  dựa |  Considering | -Based | -based | Considering | 基于
+V_LM_acropolis,disagree3,no_agent,17,Based |  likely |  Likely | लब | Considering | likely |  referencing |  Bf | Shared |  considering |  Based | �n
+V_LM_acropolis,disagree3,no_agent,19, considering | Considering |  Considering | Given | Based |  Given |  given | based |  Based |  based | given | consistent
+V_LM_acropolis,disagree3,no_agent,21, considering |  based | based | Based |  Based | Considering |  Considering |  given | Given |  dựa | given |  Given
+V_LM_acropolis,disagree3,no_agent,23, based |  Based | based | Based |  considering |  Considering | _based |  dựa | Considering | -Based | -based |  given
+V_LM_angkor,alone,,17,答案 | HideInInspector | _letter |  Bf | ElementException | (answer | answer | _letters | cobra | iteDatabase | irut | GLuint
+V_LM_angkor,alone,,19, Cambodia | _letter | answer | 答案 |  Laos | Letter |  ฿ | letter | -letter |  Myanmar | Camb |  Indonesia
+V_LM_angkor,alone,,21, Thailand |  Cambodia |  Indonesia |  Laos |  ​​​ |  Bangkok |  Malaysia | Singapore |  Thai | Thai |  Mongolia |  Nepal
+V_LM_angkor,alone,,23, Cambodia |  Thailand |  Laos |  Bangkok |  Indonesia |  Mongolia |  Malaysia | Camb |  Vietnam |  Thai | Thai |  Nepal
+V_LM_angkor,agree3,neutral,17," Bf | लब | ElementException | cobra | _
+
+ | ossible | мовір | rray | pNet | 答案 |  Likely | @brief"
+V_LM_angkor,agree3,neutral,19,"ElementException | _
+
+ |  ฿ | answer | linkplain | =<?= |  ​​​ | rray | ​
+
+ | 答案 | ,</ |  [
+
+"
+V_LM_angkor,agree3,neutral,21," 
+
+ | [/ |  ​​​ |  ฿ |  my |  Thailand |  Nicaragua | ,</ | .'</ | :</ |  
+
+ | φορά"
+V_LM_angkor,agree3,neutral,23," Thailand |  Based | Based |  based |  Cambodia |  Indonesia | based |  Laos |  Mongolia |  Korea | ailand |  
+
+"
+V_LM_angkor,disagree3,neutral,17,"लब |  Bf | ElementException | cobra | ossible | rray | мовір | _
+
+ | pNet |  Likely |  likely | @brief"
+V_LM_angkor,disagree3,neutral,19,"ElementException |  ​​​ | _
+
+ | ​
+
+ | rray |  ฿ | linkplain | @brief |  [
+
+ | мовір | ilogy | terdam"
+V_LM_angkor,disagree3,neutral,21," ​​​ |  
+
+ | [/ |  ฿ |  my | .'</ |  
+
+ |  Thailand |  Wait | my |  Nicaragua | >,</"
+V_LM_angkor,disagree3,neutral,23, Thailand |  Based | Based |  Cambodia |  Laos |  Indonesia |  based |  Mongolia | based | Thai |  Thai | ailand
+V_LM_angkor,agree3,defer,17, likely |  Likely |  referencing | Considering | likely | लब | ossible |  considering |  Bf | spb |  Kč | olik
+V_LM_angkor,agree3,defer,19, considering |  Considering | Considering |  Given | Given |  given | Based | given | 考虑 |  Based |  referencing | _given
+V_LM_angkor,agree3,defer,21, considering | Considering |  Considering |  based | Based |  Based | based |  given | 考虑 | Given |  Given | given
+V_LM_angkor,agree3,defer,23, based |  Based |  considering | Based | based |  Considering | Considering |  given | _based |  Given |  dựa | Given
+V_LM_angkor,disagree3,defer,17, likely |  Likely |  referencing | likely | Considering | लब | olik | turnstile | لیل |  Bf | spb | ElementException
+V_LM_angkor,disagree3,defer,19, considering | Considering |  Considering |  Given | Given |  given | Based | given |  referencing |  Based | 考虑 |  based
+V_LM_angkor,disagree3,defer,21, considering | Considering |  Considering |  based | Based |  Based | based |  given | 考虑 | Given |  Given | given
+V_LM_angkor,disagree3,defer,23, based |  Based |  considering | Based | based |  Considering | Considering |  Given |  given | _based |  dựa | Given
+V_LM_angkor,agree3,defer_own,17, likely |  Likely |  referencing | Considering | likely |  considering | spb | लब | ossible |  Considering |  Bf | olik
+V_LM_angkor,agree3,defer_own,19, considering |  Considering | Considering |  Given | Given |  given | given | 考虑 | Based | _given |  Based |  based
+V_LM_angkor,agree3,defer_own,21, considering |  Considering | Considering |  based |  given | Based |  Based | based | 考虑 | Given |  Given | given
+V_LM_angkor,agree3,defer_own,23, considering |  based |  Based | Based | based |  Considering | Considering |  given |  Given | Given | _based | given
+V_LM_angkor,disagree3,defer_own,17, likely |  Likely | likely |  referencing | Considering | spb | लब | Based | ossible |  Bf | olik | 既然
+V_LM_angkor,disagree3,defer_own,19, considering | Considering |  Considering |  Given | Given |  given | given | Based | 考虑 |  Based | _given |  based
+V_LM_angkor,disagree3,defer_own,21, considering | Considering |  Considering |  based | Based |  given |  Based | based | 考虑 |  Given | Given | given
+V_LM_angkor,disagree3,defer_own,23, based |  considering |  Based | Based | based |  Considering | Considering |  given |  Given | Given | _based |  dựa
+V_LM_angkor,agree3,consider,17, likely |  Likely |  referencing | umably | likely | Considering |  considering | लब | spb | 既然 | linkplain |  Considering
+V_LM_angkor,agree3,consider,19, considering |  Considering | Considering |  given |  Given | Given | given | 考虑 |  seeing | Based | _given |  noticing
+V_LM_angkor,agree3,consider,21, considering |  Considering | Considering | 考虑 |  based |  given | consider |  consideration | Based | based |  Based | Given
+V_LM_angkor,agree3,consider,23, considering |  based |  Based |  Considering | Based | based | Considering |  given |  Given | consider | 考虑 |  consideration
+V_LM_angkor,disagree3,consider,17, likely |  Likely |  referencing | likely | umably | 既然 | Considering |  considering | लब | spb | Based | turnstile
+V_LM_angkor,disagree3,consider,19, considering | Considering |  Considering |  given |  Given | Given | given | 考虑 | Based |  seeing | _given |  based
+V_LM_angkor,disagree3,consider,21, considering | Considering |  Considering |  based |  given | 考虑 | Based | based | consider |  consideration |  Based | given
+V_LM_angkor,disagree3,consider,23, considering |  based |  Based |  Considering | Based | based | Considering |  given |  Given | consider | 考虑 | _based
+V_LM_angkor,agree3,plain,17,"_
+
+ | ossible | लब | ElementException |  Bf |  Likely | umably | шин |  역시 | cobra | HideInInspector | <|eot_id|>"
+V_LM_angkor,agree3,plain,19,"answer | ElementException |  answer |  Answer | _
+
+ | linkplain | Answer | ,</ | .answer | =<?= | 答案 |  ฿"
+V_LM_angkor,agree3,plain,21,"[/ |  
+
+ | :</ |  ​​​ | ]]> | ,</ | >,</ |  
+
+ | .'</ |  ฿ | ;</ | ##"
+V_LM_angkor,agree3,plain,23," C |  
+
+ |  Thailand | argout | Based | rray |  Vác |  nguyện | ailand |  Cambodia |  ฿ |  Mongolia"
+V_LM_angkor,disagree3,plain,17,"ossible | _
+
+ | लब |  Bf | ElementException |  Likely |  역시 | umably | шин | <|eot_id|> |  likely | rray"
+V_LM_angkor,disagree3,plain,19,"ElementException |  ​​​ | answer |  Answer | linkplain |  answer | _
+
+ |  [
+
+ | ​
+
+ |  ฿ | ilogy | ,</"
+V_LM_angkor,disagree3,plain,21,"[/ |  
+
+ |  ​​​ |  
+
+ | :</ | .'</ | ]]> | >,</ | ,</ |  ฿ | ',[' | !["
+V_LM_angkor,disagree3,plain,23," Thailand |  
+
+ | .tie | rray |  ฿ | ailand | ascus | argout | Based |  Based | <T | >T"
+V_LM_angkor,agree3,no_agent,17, likely |  Likely | Based | लब | likely | Considering |  referencing | �n |  Based | ossible |  Bf | consistent
+V_LM_angkor,agree3,no_agent,19, considering | Considering |  Considering | Based | Given |  Based |  Given |  based | based |  given | consistent | given
+V_LM_angkor,agree3,no_agent,21, considering |  based | Based | based |  Based | Considering |  Considering |  given |  dựa |  according | Given | given
+V_LM_angkor,agree3,no_agent,23, based |  Based | Based | based |  considering | _based |  dựa | -Based | -based |  Considering | Considering | 基于
+V_LM_angkor,disagree3,no_agent,17," likely | Based |  Likely | लब | likely |  referencing | Considering |  Bf | ossible |  Based | _
+
+ | Shared"
+V_LM_angkor,disagree3,no_agent,19, considering | Considering |  Considering | Based | Given |  Based |  Given | based |  based |  given |  referencing | given
+V_LM_angkor,disagree3,no_agent,21, considering |  based | based | Based |  Based | Considering |  Considering |  given |  dựa | Given |  according | given
+V_LM_angkor,disagree3,no_agent,23, based |  Based | Based | based |  considering | _based |  dựa | -Based | -based |  Considering | Considering | 基于

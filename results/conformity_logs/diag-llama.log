@@ -1,0 +1,42 @@
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:  18%|█▊        | 52/291 [00:00<00:00, 518.69it/s]Loading weights:  36%|███▌      | 104/291 [00:00<00:00, 310.11it/s]Loading weights:  54%|█████▎    | 156/291 [00:00<00:00, 367.86it/s]Loading weights:  68%|██████▊   | 197/291 [00:00<00:00, 371.47it/s]Loading weights:  81%|████████▏ | 237/291 [00:00<00:00, 342.62it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 387.46it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[L_colosseum alone None] bridge rank last 0 | best over question 0
+[L_colosseum agree3 neutral] bridge rank last 0 | best over question 0
+[L_colosseum disagree3 neutral] bridge rank last 0 | best over question 0
+[L_colosseum agree3 defer] bridge rank last 5356 | best over question 0
+[L_colosseum disagree3 defer] bridge rank last 23451 | best over question 0
+[L_colosseum agree3 defer_own] bridge rank last 2224 | best over question 0
+[L_colosseum disagree3 defer_own] bridge rank last 17167 | best over question 0
+[L_colosseum agree3 consider] bridge rank last 12155 | best over question 0
+[L_colosseum disagree3 consider] bridge rank last 35522 | best over question 0
+[L_colosseum agree3 plain] bridge rank last 0 | best over question 0
+[L_colosseum disagree3 plain] bridge rank last 0 | best over question 0
+[L_colosseum agree3 no_agent] bridge rank last 13441 | best over question 0
+[L_colosseum disagree3 no_agent] bridge rank last 41204 | best over question 0
+[V_LM_acropolis alone None] bridge rank last 0 | best over question 0
+[V_LM_acropolis agree3 neutral] bridge rank last 0 | best over question 0
+[V_LM_acropolis disagree3 neutral] bridge rank last 0 | best over question 0
+[V_LM_acropolis agree3 defer] bridge rank last 9583 | best over question 0
+[V_LM_acropolis disagree3 defer] bridge rank last 26098 | best over question 0
+[V_LM_acropolis agree3 defer_own] bridge rank last 13112 | best over question 0
+[V_LM_acropolis disagree3 defer_own] bridge rank last 16716 | best over question 0
+[V_LM_acropolis agree3 consider] bridge rank last 32077 | best over question 0
+[V_LM_acropolis disagree3 consider] bridge rank last 50434 | best over question 0
+[V_LM_acropolis agree3 plain] bridge rank last 0 | best over question 0
+[V_LM_acropolis disagree3 plain] bridge rank last 0 | best over question 0
+[V_LM_acropolis agree3 no_agent] bridge rank last 34601 | best over question 0
+[V_LM_acropolis disagree3 no_agent] bridge rank last 49168 | best over question 0
+[V_LM_angkor alone None] bridge rank last 0 | best over question 0
+[V_LM_angkor agree3 neutral] bridge rank last 3 | best over question 0
+[V_LM_angkor disagree3 neutral] bridge rank last 3 | best over question 0
+[V_LM_angkor agree3 defer] bridge rank last 24812 | best over question 0
+[V_LM_angkor disagree3 defer] bridge rank last 77977 | best over question 0
+[V_LM_angkor agree3 defer_own] bridge rank last 23896 | best over question 0
+[V_LM_angkor disagree3 defer_own] bridge rank last 73528 | best over question 0
+[V_LM_angkor agree3 consider] bridge rank last 41715 | best over question 0
+[V_LM_angkor disagree3 consider] bridge rank last 72893 | best over question 0
+[V_LM_angkor agree3 plain] bridge rank last 8 | best over question 0
+[V_LM_angkor disagree3 plain] bridge rank last 80 | best over question 0
+[V_LM_angkor agree3 no_agent] bridge rank last 37018 | best over question 0
+[V_LM_angkor disagree3 no_agent] bridge rank last 81752 | best over question 0
+wrote results/diag_readout_llama31_8b_it
