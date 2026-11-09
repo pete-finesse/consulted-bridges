@@ -1,0 +1,11 @@
+{#- DeepSeek-V4 chat format, written from the release's encoding/encoding_dsv4.py (no Jinja template ships with it).
+    Chat mode (thinking off, the default): the reply starts after "</think>". thinking=true opens "<think>" instead.
+    Covers system, user and plain assistant turns only (no tools). -#}
+<｜begin▁of▁sentence｜>
+{%- for m in messages -%}
+{%- if m.role == 'system' -%}{{ m.content }}
+{%- elif m.role == 'user' -%}<｜User｜>{{ m.content }}
+{%- elif m.role == 'assistant' -%}<｜Assistant｜></think>{{ m.content }}<｜end▁of▁sentence｜>
+{%- endif -%}
+{%- endfor -%}
+{%- if add_generation_prompt -%}<｜Assistant｜>{{ '<think>' if thinking else '</think>' }}{%- endif -%}

@@ -35,6 +35,11 @@ class Harness:
         return next(self.model.parameters()).device
 
     @property
+    def out_device(self):
+        """Where the unembedding (and so the lenses' maps) live; captured residuals go here."""
+        return self.model.get_output_embeddings().weight.device
+
+    @property
     def n_layers(self) -> int:
         return len(get_layers(self.model))
 
@@ -111,9 +116,14 @@ def load(config: str | dict = "tiny", allow_download: bool = False, device: str 
                              ". Ask Peter first, then rerun with --allow-download (allow_download=True).")
     from silent_dissent.model import load_model
 
-    dev = _pick_device(device or m.get("device"))
-    model, tok = load_model(m["name"], m.get("dtype", "bfloat16"), None, m.get("chat_template_kwargs"))
-    model = model.to(dev)
+    if m.get("device_map"):     # too big for one GPU: let accelerate spread the blocks over all of them
+        model, tok = load_model(m["name"], m.get("dtype", "bfloat16"), m["device_map"], m.get("chat_template_kwargs"))
+    else:
+        dev = _pick_device(device or m.get("device"))
+        model, tok = load_model(m["name"], m.get("dtype", "bfloat16"), None, m.get("chat_template_kwargs"))
+        model = model.to(dev)
+    if m.get("chat_template"):  # a model released without one (DeepSeek-V4): a file in configs/
+        tok.chat_template = (CONFIGS / m["chat_template"]).read_text()
     lc = cfg.get("lens", {"name": "jlens", "kwargs": {}})
     lenses = {"jlens": build_lens(model, lc.get("name", "jlens"), **lc.get("kwargs", {})), "logit": LogitLens(model)}
     return Harness(model, tok, lenses, cfg)

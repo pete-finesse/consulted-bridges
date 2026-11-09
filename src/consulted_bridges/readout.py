@@ -14,9 +14,10 @@ import pandas as pd
 import torch
 
 from silent_dissent.lens_eval import token_ranks
-from silent_dissent.model import get_layers, layer_output
+from silent_dissent.model import get_layers
 
 from .interventions import Edit, applied
+from .streams import read
 from .text import piece_strings, word_tokens
 
 
@@ -101,10 +102,9 @@ def readout(h, text: str, words: list[str], lenses: list[str] | None = None, lay
     blocks = get_layers(h.model)
     layers = list(range(len(blocks))) if layers is None else layers
     store: dict[int, torch.Tensor] = {}
-    pos_t = torch.tensor(positions, device=h.device)
     with applied(h, text, edits):
         handles = [blocks[l].register_forward_hook(
-            lambda _m, _i, out, l=l: store.__setitem__(l, layer_output(out)[0, pos_t].detach())) for l in layers]
+            lambda _m, _i, out, l=l: store.__setitem__(l, read(out)[0, positions].detach().to(h.out_device))) for l in layers]
         try:
             h.model(input_ids=torch.tensor([ids], device=h.device))
         finally:

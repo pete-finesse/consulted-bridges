@@ -25,7 +25,8 @@ from consulted_bridges.conformity import FRAMES, ONE, SPECS, SUFFIX, UNRELATED, 
 from consulted_bridges.load import load
 from consulted_bridges.readout import readout
 from consulted_bridges.text import chat, resolve_positions
-from silent_dissent.model import get_layers, layer_output
+from consulted_bridges.streams import read
+from silent_dissent.model import get_layers
 
 VARIANTS = dict(FRAMES, **{
     "defer_own": "You are Agent 1. Taking the other agents' answers into account, give your own answer.",
@@ -40,7 +41,7 @@ def norms(h, text, layers):
     ids = h.encode(text)
     store = {}
     blocks = get_layers(h.model)
-    hs = [blocks[l].register_forward_hook(lambda _m, _i, o, l=l: store.__setitem__(l, layer_output(o)[0, -1].float().norm().item()))
+    hs = [blocks[l].register_forward_hook(lambda _m, _i, o, l=l: store.__setitem__(l, read(o)[0, -1].float().norm().item()))
           for l in layers]
     try:
         h.model(input_ids=torch.tensor([ids], device=h.device))
@@ -55,7 +56,7 @@ def top_words(h, text, layers, k=12):
     ids = h.encode(text)
     store = {}
     blocks = get_layers(h.model)
-    hs = [blocks[l].register_forward_hook(lambda _m, _i, o, l=l: store.__setitem__(l, layer_output(o)[0, -1:].detach()))
+    hs = [blocks[l].register_forward_hook(lambda _m, _i, o, l=l: store.__setitem__(l, read(o)[0, -1:].detach().to(h.out_device)))
           for l in layers]
     try:
         h.model(input_ids=torch.tensor([ids], device=h.device))

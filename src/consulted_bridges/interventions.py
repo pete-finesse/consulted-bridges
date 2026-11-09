@@ -136,16 +136,17 @@ def applied(h, text: str, edits: list[Edit]):
         for e in edits:
             pos = resolve_positions(h, text, e.positions, n)
             for layer in e.layers:
-                dirs = [D.to(h.device) for D in directions(h, e, layer)]
+                dirs = directions(h, e, layer)
 
                 def hook(_m, _i, out, e=e, dirs=dirs, pos=pos):
                     x = layer_output(out)
                     x = x.clone()
                     idx = [p for p in pos if p < x.shape[1]]
                     if idx:
-                        sel = x[:, idx, :].float()
-                        B, P, d = sel.shape
-                        x[:, idx, :] = _apply(sel.reshape(-1, d), e, dirs).reshape(B, P, d).to(x.dtype)
+                        # [B, P, d], or [B, P, n_streams, d] (DeepSeek-V4): each stream is edited (streams.py)
+                        sel = x[:, idx].float()
+                        ds = [D.to(x.device) for D in dirs]     # blocks may sit on different GPUs
+                        x[:, idx] = _apply(sel.reshape(-1, sel.shape[-1]), e, ds).reshape(sel.shape).to(x.dtype)
                     return replace_layer_output(out, x)
 
                 handle = blocks[layer].register_forward_hook(hook)

@@ -81,7 +81,8 @@ from consulted_bridges.interventions import Edit, answer_probs, directions, gene
 from consulted_bridges.load import load  # noqa: E402
 from consulted_bridges.swaptest import headline, swap_test  # noqa: E402
 from consulted_bridges.text import chat, resolve_positions  # noqa: E402
-from silent_dissent.model import get_layers, layer_output  # noqa: E402
+from consulted_bridges.streams import read  # noqa: E402
+from silent_dissent.model import get_layers  # noqa: E402
 
 FORMATS = ("{}", "**{}")
 NULL_POOL = ("table river window garden pencil cloud bottle chair mountain jacket candle ladder carpet button "
@@ -160,7 +161,7 @@ class Card:
     @torch.no_grad()
     def capture(self):
         store = {}
-        hs = [b.register_forward_hook(lambda _m, _i, o, l=l: store.__setitem__(l, layer_output(o)[0].detach()))
+        hs = [b.register_forward_hook(lambda _m, _i, o, l=l: store.__setitem__(l, read(o)[0].detach().to(self.h.out_device)))
               for l, b in enumerate(get_layers(self.h.model))]
         try:
             self.h.model(input_ids=torch.tensor([self.h.encode(self.text)], device=self.h.device))

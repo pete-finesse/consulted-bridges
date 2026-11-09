@@ -1,0 +1,23 @@
+# DeepSeek-V4-Flash: 284B-parameter mixture of experts, 13B active per token, 43 layers, d = 4096. MIT licence, not gated.
+# Weights ship in FP8 with FP4 experts (~160 GB, Hub revision 60d8d707); transformers runs them natively on GPUs of
+# compute capability >= 8.9 (RTX PRO 6000, H100/H200, B200/B300). On older GPUs it would dequantize to bf16 (~570 GB).
+# Too big for one 96 or 141 GB GPU, so device_map spreads the blocks over all GPUs of the pod.
+# Four residual streams per layer (hyper-connections): reads take their mean, edits act on each (streams.py).
+# No chat template ships with the model; configs/templates/deepseek_v4_chat.jinja follows its encoding_dsv4.py.
+# Lens: Neuronpedia's deepseek-v4-flash J-lens (fit by Camila Blank on 25 pile-10k prompts, target layer 41, on the
+# mean of the four streams; MIT). Far fewer prompts than the Qwen lenses' 1000.
+model:
+  name: deepseek-ai/DeepSeek-V4-Flash
+  dtype: bfloat16
+  device_map: auto
+  chat_template: templates/deepseek_v4_chat.jinja
+  chat_template_kwargs: {thinking: false}
+  size_note: "~160 GB (FP8 + FP4 experts)"
+lens:
+  name: jlens
+  kwargs:
+    repo: neuronpedia/jacobian-lens
+    revision: d2527c3cdbaa60dd4b65cbca1604921f044e989a   # main, Nov 2026
+    filename: deepseek-v4-flash/jlens/NeelNanda-pile-10k/deepseek-v4-flash_jacobian_lens_cblank.pt
+  size_note: "~1.4 GB"
+band: null          # no pre-registered band: the default, layers 30-41
