@@ -26,7 +26,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from consulted_bridges.conformity import CALIBRATION, SPECS, TH
+from consulted_bridges.conformity import CALIBRATION, DISAGREE_LIKE, SPECS, TH
 
 RUNS = [  # (model, question type, wording, folder, drop the six calibration questions as in the main report)
     ("Qwen3.6-27B", "letters", "neutral", "conformity_qwen36_27b", True),
@@ -43,6 +43,9 @@ RUNS = [  # (model, question type, wording, folder, drop the six calibration que
     ("Qwen3.6-27B J++", "letters", "deferential", "conformity_defer_qwen36_27b_jpp", True),
     ("Qwen3.5-4B J++", "letters", "neutral", "conformity_qwen35_4b_jpp", True),
     ("Qwen3.5-4B J++", "letters", "deferential", "conformity_defer_qwen35_4b_jpp", True),
+    # GPU run 1 (plan.md Phase C): same lens and questions plus the B1 variants (hidden answers, told to copy...)
+    ("Qwen3.5-4B J++ v2", "letters", "neutral", "conformity_v2_qwen35_4b_jpp", True),
+    ("Qwen3.5-4B J++ v2", "letters", "deferential", "conformity_v2_defer_qwen35_4b_jpp", True),
 ]
 SCALES = [0.5, 0.75, 1.0, 1.5, 2.0]
 B = 2000
@@ -76,7 +79,7 @@ def reanalyse(folder, p):
     p = p.join(best.add_prefix("fall_"), on=key)
     p["need_lo"] = p.fall_bridge - p.fall_noise
     reach = p.reach_pass.fillna(False).astype(bool)
-    ag = p.condition.isin(["alone", "agree"])
+    ag = ~p.condition.isin(DISAGREE_LIKE)       # need-type prompts: alone, agree, and the B1 hidden / ignore / bridge ones
     p["label_lo"] = np.where(~ag, p.label.str.replace("bridge ", "", regex=False),
                              np.where(p.need_lo >= LO_TH["need"], "needed",
                                       np.where((p.need_lo < LO_TH["none_need"]) & reach, "not needed", "mixed")))
@@ -110,7 +113,7 @@ def relabel(p, k=1.0):
     need = p.need >= t["need"]
     none_ag = (p.need < t["none_need"]) & p.reach_pass.fillna(False).astype(bool)
     ag = np.where(need, "needed", np.where(none_ag, "not needed", "mixed"))
-    return pd.Series(np.where(p.condition.isin(["disagree", "copy"]), dis, ag), index=p.index)
+    return pd.Series(np.where(p.condition.isin(DISAGREE_LIKE), dis, ag), index=p.index)
 
 
 def shares(p, lab):

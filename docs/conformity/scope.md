@@ -143,6 +143,47 @@ and stays in the behavioural and peer-block arms, which need no bridge. (8 Nov 2
   method; agreement between block and patch is the check.
 - Why presence fails on Llama with the group-aware wording (the diagnostic says the wording fills the last token).
 
+## 11. GPU run 1 pass marks (A2 for steps 5 to 7), fixed 8 Nov 2026 before the run
+
+Written into `conformity_v2_report.py` (`T`) before any GPU result. Unit: the prompt, counted per wording; the four
+calibration questions are kept for the validation rows (the made-up-subject prompts exist only for them) and left
+out of the 2x2 counts, as in every other table. Log-odds are of P(right), P clipped to [1e-6, 1 - 1e-6].
+
+**The tool in the group layout (step 5).** Need in log-odds as in §7, in the hidden-answer prompts ("?" and
+"(answer submitted)", 1 to 3 peers). The tool works in the layout if, for every hidden condition and both wordings,
+the share of questions labelled "needed" is at least three quarters of the alone share. If it fails, every "not
+needed" with agreeing peers is unreadable. *Weakens* (§7) is counted per question against the hidden prompt with the
+same number of peers: need_lo(hidden k) - need_lo(agree k) >= 2.
+
+**Dose-response.** Removal strength 0.25 / 0.5 / 0.75 / 1 in the prompt's best early window, alone, hidden 3,
+agree 3. Reported as the median log-odds fall per strength; a working tool rises with strength in alone and
+hidden; "shifted right" means agree's median fall is at or below hidden's at every strength. Reported, no pass mark.
+
+**Block validation (step 6).** C = the block at every layer over the peers' answer tokens. Each row passes when at
+least three quarters of its eligible prompts pass:
+
+| Row | Prompt passes when | Eligible |
+|---|---|---|
+| Copy-only (made-up subject, 3 wrong peers) | P(peers') under C closes at least half the log-odds gap between A and the made-up subject asked alone | the peers raised P(peers') by >= 1 log-odds over that alone level |
+| Give-ins under disagree (1 to 3 peers) | under C the right letter beats the peers' letter | the model gave in (partial or full) in the conformity run |
+| Hidden prompts ("?" 1 to 3, "(answer submitted)" 3) | P(right) moves by <= 1 log-odds under C; and the row's median move <= 0.5 | all |
+| Told to copy (3 wrong peers) | P(peers') falls by >= 2 log-odds under C | all |
+
+C_late (the full-attention layers blocked only for the reply's queries; the linear-attention layers open) is
+reported next to C, without a pass mark: the hybrid model has no per-query block in its linear layers.
+
+**The 2x2 (step 6).** dB = LO(A) - LO(B), dC = LO(A) - LO(C), dD = LO(A) - LO(D). A cell *collapses* when its fall
+is >= 2 log-odds. Readings, in order: dC >= 2, *C well below A* (the model leaned on the peers from the start);
+else B holds and D collapses, *only D collapses* (the peers were the backup); both collapse, *bridge needed either
+way*; neither, *neither collapses* (a second route or a weak tool; step 5 decides which); B collapses and D does
+not, *only B collapses*. Disagree prompts also count how often D moves to the peers' letter (P(peers') > P(right)):
+"lost its route" predicts the drop, not that destination.
+
+**Patch (step 7, agree 3).** P_all = the hidden prompt's residual at the peer positions written in at every layer
+(where the right letter is one token, " ..." replaces "?" so positions line up). Reported next to A and C. The
+sweep patches from layer L upward; where P_all moves P(right) by >= 1 log-odds, the layer where patching stops
+working is the first L at which the effect is below half of P_all's. Reported, no pass mark.
+
 ## 10. Decision log
 
 | Date | Decision | Why |
@@ -156,3 +197,4 @@ and stays in the behavioural and peer-block arms, which need no bridge. (8 Nov 2
 | 2026-11-08 | Finding 1 reworded per model and wording: "weakens" (27B neutral), "stops" (27B group-aware, 4B) | A1 result, process.md round 13 |
 | 2026-11-08 | Lens: J++ proposed as primary on Qwen (pending) | process.md round 14 |
 | 2026-11-08 | Stop rule: ≥ 20 gated per format, ≥ 2 formats, on the 27B; at most two more drafting rounds | §7 |
+| 2026-11-08 | GPU run 1 pass marks for the hidden check, block validation, 2x2 and patch (§11) | fixed before the run |
