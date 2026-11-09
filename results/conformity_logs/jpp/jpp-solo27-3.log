@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  39%|███▉      | 331/851 [00:00<00:00, 3302.62it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 6605.89it/s]
+PROGRESS 0/6 starting v3_L_piaf
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[v3_L_piaf] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 1/6 starting V_LM_eiffel
+[V_LM_eiffel] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 2/6 starting V_LM_machu
+[V_LM_machu] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 3/6 starting V_LM_brandenburg
+[V_LM_brandenburg] BYSTANDER: the edit reaches the bridge, but removing it doesn't change the answer
+PROGRESS 4/6 starting V_LP_timberlake
+[V_LP_timberlake] BYSTANDER: the edit reaches the bridge, but removing it doesn't change the answer
+PROGRESS 5/6 starting V_LU_pompeu
+[V_LU_pompeu] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 6/6 ALLDONE
+STEP DONE solo qwen36_27b_jpp 3/6

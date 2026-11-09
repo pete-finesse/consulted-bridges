@@ -34,6 +34,10 @@ RUNS = [  # (model, question type, wording, folder, drop the six calibration que
     ("Llama-3.1-8B", "letters", "deferential", "conformity_defer_llama31_8b_it", False),
     ("Gemma-4-E4B base lens", "letters", "neutral", "conformity_gemma4_e4b_it", False),
     ("Gemma-4-E4B base lens", "letters", "deferential", "conformity_defer_gemma4_e4b_it", False),
+    ("Qwen3.6-27B J++", "letters", "neutral", "conformity_qwen36_27b_jpp", True),
+    ("Qwen3.6-27B J++", "letters", "deferential", "conformity_defer_qwen36_27b_jpp", True),
+    ("Qwen3.5-4B J++", "letters", "neutral", "conformity_qwen35_4b_jpp", True),
+    ("Qwen3.5-4B J++", "letters", "deferential", "conformity_defer_qwen35_4b_jpp", True),
 ]
 SCALES = [0.5, 0.75, 1.0, 1.5, 2.0]
 B = 2000

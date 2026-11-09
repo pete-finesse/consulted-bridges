@@ -1,0 +1,17 @@
+# Qwen3.5-4B with Neuronpedia's J++ lens (Ayonrinde & Lindsey, "J++ Lens: Jacobian Filtering Enables More
+# Faithful Workspace Lenses", 2026; fitted by bubskee on 64 wikitext prompts, converted by Neuronpedia).
+# Same model, band and readout as configs/qwen35_4b.yaml; only the lens file differs (NEXT_EXPERIMENTS 5).
+model:
+  name: Qwen/Qwen3.5-4B
+  dtype: bfloat16
+  device: auto
+  chat_template_kwargs: {enable_thinking: false}
+  size_note: "~9-10 GB"
+lens:
+  name: jlens
+  kwargs:
+    repo: neuronpedia/jacobian-lens
+    revision: main
+    filename: qwen3.5-4b/jpp/Salesforce-wikitext/Qwen3.5-4B_jpp_lens.pt
+  size_note: "~0.4 GB"
+band: [23, 30]             # kept from qwen35_4b.yaml so the two lenses are compared on the same layers

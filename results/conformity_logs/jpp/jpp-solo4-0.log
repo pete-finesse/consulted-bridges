@@ -1,0 +1,44 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:  90%|█████████ | 384/426 [00:00<00:00, 3807.78it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 3894.11it/s]
+PROGRESS 0/19 starting v3_L_mozart
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[v3_L_mozart] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 1/19 starting v3_L_maldini
+[v3_L_maldini] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 2/19 starting v3_L_gates
+[v3_L_gates] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 3/19 starting v3_L_york
+[v3_L_york] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 4/19 starting v3_L_colosseum
+[v3_L_colosseum] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 5/19 starting V_LM_pisa
+[V_LM_pisa] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 6/19 starting V_LM_kremlin
+[V_LM_kremlin] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 7/19 starting V_LM_christ
+[V_LM_christ] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 8/19 starting V_LM_pyramids
+[V_LM_pyramids] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 9/19 starting V_LM_acropolis
+[V_LM_acropolis] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 10/19 starting V_LM_angkor
+[V_LM_angkor] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 11/19 starting V_LM_petronas
+[V_LM_petronas] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 12/19 starting V_LP_beyonce
+[V_LP_beyonce] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 13/19 starting V_LP_ali
+[V_LP_ali] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 14/19 starting V_LP_plummer
+[V_LP_plummer] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 15/19 starting V_LP_kapoor
+[V_LP_kapoor] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 16/19 starting V_LU_fudan
+[V_LU_fudan] UNCLEAR: in between
+PROGRESS 17/19 starting V_LU_hopkins
+[V_LU_hopkins] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 18/19 starting V_LU_dalhousie
+[V_LU_dalhousie] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 19/19 ALLDONE
+STEP DONE solo qwen35_4b_jpp 0/2

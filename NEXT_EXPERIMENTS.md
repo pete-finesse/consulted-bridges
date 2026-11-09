@@ -244,6 +244,8 @@
   Also compare against the plain logit lens as the simplest baseline.
 - **First step:** check which models have J++ files available, and how to load them in the harness.
 
+**Status: conformity part done (Nov 9), on both Qwen models.** J++ files exist for Qwen3.5-4B and Qwen3.6-27B (`main` branch, `jpp/`), load with the J-lens loader unchanged (`configs/*_jpp.yaml`). Reach check on the 27B: 33 of 35 against 28 of 35. Conformity on the 27B agrees with the J-lens; on the 4B the bridge looks weaker under peers with J++. Comparison: `scripts/jpp_compare.py`, `scripts/jpp_conformity_compare.py`, `results/jpp_compare/`. **Not done:** the full scorecard (specificity, isolation, swaps) with J++, the count questions, and the logit-lens baseline.
+
 ### 6. Other models (later)
 
 - The paper's other models: Gemma-4-E4B and Llama-3.1-8B. Run the same scorecard and group pilot to see whether the reliable question types carry over.

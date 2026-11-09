@@ -1,0 +1,75 @@
+model,question,jl_verdict,jpp_verdict,jl_need,jpp_need,jl_reach,jpp_reach,jl_selected,jpp_selected
+Qwen3.5-4B,L_mozart,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.67,0.706,pass,1.0,True,True
+Qwen3.5-4B,L_mishima,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.5-4B,L_maldini,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.5-4B,L_piaf,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.5-4B,L_gates,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.8,0.772,pass,0.939,True,True
+Qwen3.5-4B,L_federer,Bystander,BYSTANDER,0.0,0.0,pass,0.954,False,False
+Qwen3.5-4B,L_york,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.91,0.915,pass,0.996,True,True
+Qwen3.5-4B,L_spider,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.5-4B,L_colosseum,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.95,0.966,pass,0.921,True,True
+Qwen3.5-4B,V_LM_eiffel,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.95,0.983,pass,0.593,True,True
+Qwen3.5-4B,V_LM_pisa,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.97,0.989,pass,0.995,True,True
+Qwen3.5-4B,V_LM_taj,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.96,0.978,pass,0.955,True,True
+Qwen3.5-4B,V_LM_kremlin,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.89,0.933,pass,0.999,True,True
+Qwen3.5-4B,V_LM_sydney,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.92,0.949,pass,1.0,True,True
+Qwen3.5-4B,V_LM_christ,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.98,0.99,pass,0.824,True,True
+Qwen3.5-4B,V_LM_machu,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.95,0.97,fail,0.858,True,True
+Qwen3.5-4B,V_LM_pyramids,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.94,0.982,pass,0.999,True,True
+Qwen3.5-4B,V_LM_fuji,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.96,0.993,pass,1.0,True,True
+Qwen3.5-4B,V_LM_acropolis,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.95,0.982,pass,0.999,True,True
+Qwen3.5-4B,V_LM_sagrada,Spread out,UNCLEAR,0.44,0.0,pass,0.535,False,False
+Qwen3.5-4B,V_LM_angkor,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.92,0.816,pass,0.999,True,True
+Qwen3.5-4B,V_LM_brandenburg,Category effect,CONSULTED (KIND NOT CHECKED),0.82,0.779,pass,0.954,True,True
+Qwen3.5-4B,V_LM_petronas,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.87,0.971,pass,1.0,True,True
+Qwen3.5-4B,V_LP_obama_m,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.5-4B,V_LP_beyonce,Consulted bridge,SPREAD OUT,0.51,0.194,pass,0.995,True,False
+Qwen3.5-4B,V_LP_hemsworth,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.5-4B,V_LP_ali,Category effect,CONSULTED (KIND NOT CHECKED),0.76,0.598,pass,1.0,True,True
+Qwen3.5-4B,V_LP_timberlake,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.5-4B,V_LP_plummer,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.5-4B,V_LP_hendrix,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.54,0.662,pass,0.999,True,True
+Qwen3.5-4B,V_LP_kapoor,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.51,0.534,pass,0.998,True,True
+Qwen3.5-4B,V_LU_berklee,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.83,0.557,pass,0.99,True,True
+Qwen3.5-4B,V_LU_fudan,Unclear,UNCLEAR,0.17,0.192,pass,0.913,False,False
+Qwen3.5-4B,V_LU_pompeu,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.5-4B,V_LU_hopkins,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.82,0.533,pass,0.831,True,True
+Qwen3.5-4B,V_LU_alberta,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.5-4B,V_LU_dalhousie,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.94,0.956,fail,0.628,True,True
+Qwen3.6-27B,L_mozart,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.56,0.98,pass,0.998,True,True
+Qwen3.6-27B,L_mishima,Untestable,CONSULTED (KIND NOT CHECKED),0.47,0.982,fail,0.98,False,True
+Qwen3.6-27B,L_maldini,Spread out,CONSULTED (KIND NOT CHECKED),0.22,0.788,pass,0.996,False,True
+Qwen3.6-27B,L_piaf,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.98,0.959,pass,0.951,True,True
+Qwen3.6-27B,L_gates,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.97,0.978,pass,1.0,True,True
+Qwen3.6-27B,L_federer,Spread out,UNCLEAR,0.48,0.386,pass,0.863,False,False
+Qwen3.6-27B,L_york,Category effect,CONSULTED (KIND NOT CHECKED),0.94,0.949,pass,0.983,True,True
+Qwen3.6-27B,L_spider,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.51,0.57,fail,0.133,True,True
+Qwen3.6-27B,L_colosseum,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.98,0.985,pass,0.969,True,True
+Qwen3.6-27B,V_LM_eiffel,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.99,0.997,fail,0.998,True,True
+Qwen3.6-27B,V_LM_pisa,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.77,0.994,pass,1.0,True,True
+Qwen3.6-27B,V_LM_taj,Spread out,SPREAD OUT,0.05,0.005,pass,0.537,False,False
+Qwen3.6-27B,V_LM_kremlin,Consulted bridge,CONSULTED (KIND NOT CHECKED),1.0,0.998,pass,1.0,True,True
+Qwen3.6-27B,V_LM_sydney,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.99,0.997,pass,1.0,True,True
+Qwen3.6-27B,V_LM_christ,Untestable,UNTESTABLE,0.01,0.409,fail,0.226,False,False
+Qwen3.6-27B,V_LM_machu,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.98,0.997,pass,0.962,True,True
+Qwen3.6-27B,V_LM_pyramids,Consulted bridge,CONSULTED (KIND NOT CHECKED),1.0,0.999,pass,1.0,True,True
+Qwen3.6-27B,V_LM_fuji,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.99,0.995,pass,1.0,True,True
+Qwen3.6-27B,V_LM_acropolis,Untestable,CONSULTED (KIND NOT CHECKED),0.02,0.891,fail,1.0,False,True
+Qwen3.6-27B,V_LM_sagrada,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.76,0.739,pass,0.721,True,True
+Qwen3.6-27B,V_LM_angkor,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.98,0.994,pass,0.995,True,True
+Qwen3.6-27B,V_LM_brandenburg,Spread out,BYSTANDER,0.46,0.067,pass,0.99,False,False
+Qwen3.6-27B,V_LM_petronas,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.97,0.998,pass,0.999,True,True
+Qwen3.6-27B,V_LP_obama_m,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.98,0.961,pass,1.0,True,True
+Qwen3.6-27B,V_LP_beyonce,Category effect,CONSULTED (KIND NOT CHECKED),0.98,0.973,pass,0.971,True,True
+Qwen3.6-27B,V_LP_hemsworth,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.87,0.805,pass,0.984,True,True
+Qwen3.6-27B,V_LP_ali,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.98,0.945,pass,1.0,True,True
+Qwen3.6-27B,V_LP_timberlake,Bystander,BYSTANDER,0.03,0.025,pass,0.994,False,False
+Qwen3.6-27B,V_LP_plummer,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.6-27B,V_LP_hendrix,Consulted bridge,SPREAD OUT,0.92,0.464,pass,0.769,True,False
+Qwen3.6-27B,V_LP_kapoor,Untestable,UNTESTABLE,,,not reached,,False,False
+Qwen3.6-27B,V_LU_berklee,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.54,1.0,pass,1.0,True,True
+Qwen3.6-27B,V_LU_fudan,Consulted bridge,CONSULTED (KIND NOT CHECKED),0.95,0.994,pass,0.788,True,True
+Qwen3.6-27B,V_LU_pompeu,Category effect,SPREAD OUT,0.71,0.268,pass,0.795,True,False
+Qwen3.6-27B,V_LU_hopkins,Bystander,SPREAD OUT,0.0,0.11,pass,0.574,False,False
+Qwen3.6-27B,V_LU_alberta,Category effect,CONSULTED (KIND NOT CHECKED),0.9,0.996,fail,1.0,True,True
+Qwen3.6-27B,V_LU_dalhousie,Untestable,CONSULTED (KIND NOT CHECKED),0.02,0.997,fail,0.878,False,True

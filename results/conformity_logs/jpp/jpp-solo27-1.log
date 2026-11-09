@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   7%|▋         | 63/851 [00:00<00:01, 608.90it/s]Loading weights:  16%|█▌        | 135/851 [00:00<00:01, 640.73it/s]Loading weights:  24%|██▍       | 205/851 [00:00<00:00, 664.44it/s]Loading weights:  32%|███▏      | 273/851 [00:00<00:00, 649.74it/s]Loading weights:  40%|███▉      | 339/851 [00:00<00:00, 599.77it/s]Loading weights:  47%|████▋     | 403/851 [00:00<00:00, 598.66it/s]Loading weights:  55%|█████▍    | 464/851 [00:00<00:00, 601.59it/s]Loading weights:  63%|██████▎   | 540/851 [00:00<00:00, 642.38it/s]Loading weights:  71%|███████   | 605/851 [00:00<00:00, 574.03it/s]Loading weights:  78%|███████▊  | 668/851 [00:01<00:00, 588.82it/s]Loading weights: 100%|██████████| 851/851 [00:01<00:00, 725.15it/s]
+PROGRESS 0/6 starting v3_L_mishima
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[v3_L_mishima] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 1/6 starting v3_L_spider
+[v3_L_spider] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 2/6 starting V_LM_sydney
+[V_LM_sydney] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 3/6 starting V_LM_sagrada
+[V_LM_sagrada] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 4/6 starting V_LP_hemsworth
+[V_LP_hemsworth] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 5/6 starting V_LU_berklee
+[V_LU_berklee] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 6/6 ALLDONE
+STEP DONE solo qwen36_27b_jpp 1/6

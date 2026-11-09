@@ -1,0 +1,16 @@
+# Qwen3.6-27B with Neuronpedia's J++ lens (Ayonrinde & Lindsey 2026; fitted by koayon on 64 wikitext prompts,
+# converted by Neuronpedia). Same model, band and readout as configs/qwen36_27b.yaml; only the lens file differs.
+model:
+  name: Qwen/Qwen3.6-27B
+  dtype: bfloat16
+  device: auto
+  chat_template_kwargs: {enable_thinking: false}
+  size_note: "~54 GB"
+lens:
+  name: jlens
+  kwargs:
+    repo: neuronpedia/jacobian-lens
+    revision: main
+    filename: qwen3.6-27b/jpp/Salesforce-wikitext/Qwen3.6-27B_jpp_lens.pt
+  size_note: "~3.3 GB"
+band: [52, 55]             # kept from qwen36_27b.yaml

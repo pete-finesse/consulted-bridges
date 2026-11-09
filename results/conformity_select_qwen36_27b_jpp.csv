@@ -1,0 +1,38 @@
+question,selected,verdict,verdict_reason,model_said,P_base,need,comes_first,lead,answer_onset,quality
+L_colosseum,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.995,0.985,True,18.0,54.0,0.972
+L_federer,False,UNCLEAR,in between,B,0.99,0.386,True,6.0,54.0,0.093
+L_gates,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.94,0.978,True,54.0,54.0,0.978
+L_maldini,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.993,0.788,True,12.0,54.0,0.788
+L_mishima,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",T,0.975,0.982,True,30.0,54.0,0.971
+L_mozart,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,1.0,0.98,True,18.0,54.0,0.98
+L_piaf,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.963,0.959,True,54.0,54.0,0.944
+L_spider,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.987,0.57,True,12.0,54.0,0.171
+L_york,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",T,0.933,0.949,True,54.0,54.0,0.625
+V_LM_acropolis,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",G,0.998,0.891,True,24.0,54.0,0.768
+V_LM_angkor,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C,0.996,0.994,True,24.0,54.0,0.876
+V_LM_brandenburg,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",G,0.991,0.067,False,0.0,54.0,0.0
+V_LM_christ,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",B,0.998,0.409,False,,54.0,0.0
+V_LM_eiffel,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",F,0.997,0.997,True,36.0,54.0,0.997
+V_LM_fuji,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",J,0.995,0.995,True,24.0,54.0,0.994
+V_LM_kremlin,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",R,0.995,0.998,True,30.0,54.0,0.997
+V_LM_machu,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.997,0.997,True,24.0,54.0,0.997
+V_LM_petronas,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.999,0.998,True,24.0,54.0,0.995
+V_LM_pisa,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.993,0.994,True,24.0,54.0,0.994
+V_LM_pyramids,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E,0.998,0.999,True,30.0,54.0,0.998
+V_LM_sagrada,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.97,0.739,True,18.0,54.0,0.735
+V_LM_sydney,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",A,0.997,0.997,True,24.0,54.0,0.997
+V_LM_taj,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",I,0.997,0.005,True,6.0,54.0,0.005
+V_LP_ali,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",L,0.973,0.945,True,42.0,54.0,0.912
+V_LP_beyonce,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",H,0.992,0.973,True,48.0,54.0,0.453
+V_LP_hemsworth,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.888,0.805,True,42.0,54.0,0.803
+V_LP_hendrix,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",S,0.953,0.464,True,6.0,54.0,0.36
+V_LP_kapoor,False,UNTESTABLE,the model gets the two-hop question wrong,B,0.117,,,,,
+V_LP_obama_m,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C,0.93,0.961,True,42.0,54.0,0.96
+V_LP_plummer,False,UNTESTABLE,the model gets the two-hop question wrong,W,0.335,,,,,
+V_LP_timberlake,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",M,0.994,0.025,False,,54.0,0.0
+V_LU_alberta,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E,0.998,0.996,True,30.0,54.0,0.008
+V_LU_berklee,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.999,1.0,True,48.0,54.0,0.999
+V_LU_dalhousie,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",H,0.996,0.997,True,42.0,54.0,0.951
+V_LU_fudan,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.998,0.994,True,24.0,54.0,0.988
+V_LU_hopkins,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",B,0.999,0.11,False,,54.0,0.0
+V_LU_pompeu,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",B,0.996,0.268,True,6.0,54.0,0.268

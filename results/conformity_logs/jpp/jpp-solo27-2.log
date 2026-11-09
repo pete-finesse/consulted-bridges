@@ -1,0 +1,18 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   6%|▋         | 54/851 [00:00<00:01, 536.61it/s]Loading weights:  13%|█▎        | 111/851 [00:00<00:01, 554.16it/s]Loading weights:  20%|█▉        | 167/851 [00:00<00:01, 494.07it/s]Loading weights:  26%|██▌       | 218/851 [00:00<00:01, 464.48it/s]Loading weights:  32%|███▏      | 270/851 [00:00<00:01, 477.70it/s]Loading weights:  37%|███▋      | 319/851 [00:00<00:01, 467.95it/s]Loading weights:  44%|████▍     | 375/851 [00:00<00:00, 483.04it/s]Loading weights:  53%|█████▎    | 447/851 [00:00<00:00, 542.64it/s]Loading weights:  60%|█████▉    | 510/851 [00:00<00:00, 561.05it/s]Loading weights:  67%|██████▋   | 567/851 [00:01<00:00, 530.13it/s]Loading weights:  73%|███████▎  | 622/851 [00:01<00:00, 528.07it/s]Loading weights:  79%|███████▉  | 676/851 [00:01<00:00, 520.59it/s]Loading weights: 100%|██████████| 851/851 [00:01<00:00, 643.11it/s]
+PROGRESS 0/6 starting v3_L_maldini
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[v3_L_maldini] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 1/6 starting v3_L_colosseum
+[v3_L_colosseum] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 2/6 starting V_LM_christ
+[V_LM_christ] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 3/6 starting V_LM_angkor
+[V_LM_angkor] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 4/6 starting V_LP_ali
+[V_LP_ali] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 5/6 starting V_LU_fudan
+[V_LU_fudan] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 6/6 ALLDONE
+STEP DONE solo qwen36_27b_jpp 2/6
