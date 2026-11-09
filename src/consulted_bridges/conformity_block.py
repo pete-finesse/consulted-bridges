@@ -65,7 +65,10 @@ def parse_window(w):
 
 
 def windows_table(d):
-    fs = [f for f in sorted(glob.glob(f"{d}/shard*/prompts.csv")) if Path(f).stat().st_size > 1]
+    # a run folder (every shard) or one shard folder (its own rows only, so a chained shard never reads a file
+    # another shard is still writing)
+    pat = f"{d}/prompts.csv" if Path(d, "prompts.csv").exists() else f"{d}/shard*/prompts.csv"
+    fs = [f for f in sorted(glob.glob(pat)) if Path(f).stat().st_size > 1]
     if not fs:
         raise SystemExit(f"no prompts tables under {d}: run the conformity step first")
     p = pd.concat([pd.read_csv(f) for f in fs], ignore_index=True)

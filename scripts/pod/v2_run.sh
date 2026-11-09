@@ -17,7 +17,8 @@
 # Local smoke test on the tiny model (CPU, every gate skipped, a few candidates):
 #   TOY=1 ROOT=<scratch dir with src/ linked> bash scripts/pod/v2_run.sh
 # Knobs: NS (screen shards per lens, 3), NC (conformity shards per wording, 3), NB (block shards per wording, 2),
-# STEPS (default "a b c e"; any subset, in that order).
+# STEPS (default "a b c e"; any subset, in that order). Step s (with N and SHARDS) is c and e chained per shard, for
+# spreading the group steps over several pods: N=12 SHARDS="0 1" STEPS=s bash scripts/pod/v2_run.sh
 set -uo pipefail
 TOY=${TOY:-0}
 if [ "$TOY" = 1 ]; then
@@ -103,5 +104,23 @@ if has e; then
   done
   wait
   grep -h "ALLDONE" $L/block-*.log | sort | uniq -c; grep -h "!!" $L/block-*.log | head
+fi
+if has s; then   # chained shards: conformity shard i/N, then the block on that shard's own rows, both wordings at once
+  qs=$($PY -c "from consulted_bridges.conformity import QUESTIONS; print(' '.join(QUESTIONS['$QCFG']))")
+  N=${N:?N}; SHARDS=${SHARDS:?SHARDS}
+  t "s: chained conformity + block, shards $SHARDS of $N, both wordings"
+  for i in $SHARDS; do
+    for frame in neutral defer; do
+      w=results/conformity_v2_${CFG}; o=results/conformity_block_${CFG}
+      [ $frame = defer ] && { w=results/conformity_v2_defer_${CFG}; o=results/conformity_block_defer_${CFG}; }
+      ( $PY -m consulted_bridges.conformity --config $CFG --questions $qs --frame $frame --own-part \
+          --variants hidden hidden_sub disagree_g told_copy told_ignore peer_bridge peer_bridge_wrong \
+          --shard "$i/$N" --out $w > $L/conf-$frame-$i.log 2>&1 &&
+        $PY -m consulted_bridges.conformity_block --config $CFG --frame $frame --windows $w/shard$i --questions $qs \
+          --patch --shard "$i/$N" --out $o > $L/block-$frame-$i.log 2>&1 ) &
+    done
+  done
+  sleep 60; gpu; wait
+  grep -h "ALLDONE" $L/conf-*.log $L/block-*.log | sort | uniq -c; grep -h "failed:\|!!" $L/conf-*.log $L/block-*.log | head
 fi
 t "V2RUN DONE"
