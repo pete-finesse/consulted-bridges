@@ -1,0 +1,62 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   8%|▊         | 66/851 [00:00<00:01, 634.77it/s]Loading weights:  15%|█▌        | 130/851 [00:00<00:01, 557.31it/s]Loading weights:  22%|██▏       | 187/851 [00:00<00:01, 441.57it/s]Loading weights:  27%|██▋       | 234/851 [00:00<00:01, 440.58it/s]Loading weights:  35%|███▍      | 296/851 [00:00<00:01, 485.77it/s]Loading weights:  43%|████▎     | 367/851 [00:00<00:00, 551.51it/s]Loading weights:  50%|████▉     | 424/851 [00:00<00:00, 523.34it/s]Loading weights:  57%|█████▋    | 483/851 [00:00<00:00, 532.49it/s]Loading weights:  63%|██████▎   | 538/851 [00:01<00:00, 506.70it/s]Loading weights:  69%|██████▉   | 590/851 [00:01<00:00, 476.57it/s]Loading weights:  75%|███████▌  | 639/851 [00:01<00:00, 399.99it/s]Loading weights:  80%|████████  | 682/851 [00:01<00:00, 394.93it/s]Loading weights: 100%|██████████| 851/851 [00:01<00:00, 576.94it/s]
+PROGRESS 0/28 starting N_LM_eiffel
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[N_LM_eiffel] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 1/28 starting N_LM_brandenburg
+[N_LM_brandenburg] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 2/28 starting N_LM_colosseum
+[N_LM_colosseum] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 3/28 starting N_LM_fuji
+[N_LM_fuji] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 4/28 starting N_BP_schwarzenegger
+[N_BP_schwarzenegger] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 5/28 starting N_BP_dion
+[N_BP_dion] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 6/28 starting N_BP_kurosawa
+[N_BP_kurosawa] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 7/28 starting N_BP_picasso
+[N_BP_picasso] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 8/28 starting N_BP_beethoven
+[N_BP_beethoven] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 9/28 starting N_BP_gisele
+[N_BP_gisele] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 10/28 starting N_BB_geddy
+[N_BB_geddy] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 11/28 starting N_BB_gallagher
+[N_BB_gallagher] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 12/28 starting N_BB_mercury
+[N_BB_mercury] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 13/28 starting N_X_carlsen
+[N_X_carlsen] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 14/28 starting N_X_mars
+[N_X_mars] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 15/28 starting N_BP_schubert
+[N_BP_schubert] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 16/28 starting N_BP_lauda
+[N_BP_lauda] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 17/28 starting N_BP_klimt
+[N_BP_klimt] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 18/28 starting N_BP_robbie
+[N_BP_robbie] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 19/28 starting N_BP_blanchett
+[N_BP_blanchett] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 20/28 starting N_BP_senna
+[N_BP_senna] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 21/28 starting N_BP_niemeyer
+[N_BP_niemeyer] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 22/28 starting N_BP_imran
+[N_BP_imran] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 23/28 starting N_BP_hepburn
+[N_BP_hepburn] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 24/28 starting N_BP_federer
+[N_BP_federer] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 25/28 starting N_BP_gandhi
+[N_BP_gandhi] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 26/28 starting N_BP_jackman_cricket
+[N_BP_jackman_cricket] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 27/28 starting T_place_states_australia
+[T_place_states_australia] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 28/28 ALLDONE
+STEP DONE counts qwen36_27b_jpp 0/2

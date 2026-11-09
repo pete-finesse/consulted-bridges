@@ -244,7 +244,7 @@
   Also compare against the plain logit lens as the simplest baseline.
 - **First step:** check which models have J++ files available, and how to load them in the harness.
 
-**Status: conformity part done (Nov 9), on both Qwen models.** J++ files exist for Qwen3.5-4B and Qwen3.6-27B (`main` branch, `jpp/`), load with the J-lens loader unchanged (`configs/*_jpp.yaml`). Reach check on the 27B: 33 of 35 against 28 of 35. Conformity on the 27B agrees with the J-lens; on the 4B the bridge looks weaker under peers with J++. Comparison: `scripts/jpp_compare.py`, `scripts/jpp_conformity_compare.py`, `results/jpp_compare/`. **Not done:** the full scorecard (specificity, isolation, swaps) with J++, the count questions, and the logit-lens baseline.
+**Status: conformity part done (Nov 9), on both Qwen models.** J++ files exist for Qwen3.5-4B and Qwen3.6-27B (`main` branch, `jpp/`), load with the J-lens loader unchanged (`configs/*_jpp.yaml`). Reach check on the 27B: 33 of 35 against 28 of 35. Conformity on the 27B agrees with the J-lens; on the 4B the bridge looks weaker under peers with J++. Comparison: `scripts/jpp_compare.py`, `scripts/jpp_conformity_compare.py`, `results/jpp_compare/`. **Count questions (27B):** J++ finds 26 consulted against 16 with the J-lens, none lost, on 8 facts instead of 4 (`scripts/jpp_counts_compare.py`, `results/jpp_compare/counts.csv`). **Not done:** the full scorecard (specificity, isolation, swaps) with J++, needed above all for the 10 new count questions before they enter a conformity run (four have reach below 0.2); the logit-lens baseline.
 
 ### 6. Other models (later)
 
