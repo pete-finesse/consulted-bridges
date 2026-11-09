@@ -5,6 +5,7 @@
 #   bash scripts/pod/jpp.sh lens                         download both J++ files into the volume's HF cache (one pod)
 #   bash scripts/pod/jpp.sh smoke  qwen36_27b_jpp        load, answer and lens ranks for the Colosseum question
 #   bash scripts/pod/jpp.sh solo   qwen36_27b_jpp 0/6    trimmed solo scorecard on the 37 letter questions, one shard
+#   bash scripts/pod/jpp.sh counts qwen36_27b_jpp 0/2    trimmed scorecard on the 53 count questions + 3 anchors, one shard
 #   bash scripts/pod/jpp.sh select qwen36_27b_jpp        same rule as before (need >= 0.5, comes first)
 #   bash scripts/pod/jpp.sh conf   qwen36_27b_jpp 0/6    conformity, neutral then deferential wording, one shard
 # Results under /workspace/jpp/results/; each shard writes only its own folder.
@@ -27,6 +28,10 @@ case $step in
     specs=$($PY -c "from consulted_bridges.conformity import LETTER; print(' '.join(('v3_' + q) if q.startswith('L_') else q for q in LETTER))")
     $PY -m consulted_bridges.scorecard --config "$cfg" --sets card3,proposed --spec $specs --trim \
       --shard "$shard" --out "results/solo_$cfg" ;;
+  counts)   # the count-question screen (all 53 count questions, both rounds, plus the 3 anchors), trimmed scorecard
+    new=$($PY -c "from consulted_bridges.questions.proposed import counts as c; print(' '.join(c.SPECS))")
+    $PY -m consulted_bridges.scorecard --config "$cfg" --sets counts,trend,proposed --trim \
+      --spec $new T_place_states_austria T_place_states_australia V_T_basketball --shard "$shard" --out "results/counts_$cfg" ;;
   select)
     $PY -m consulted_bridges.conformity_select --config "$cfg" ;;
   conf)
