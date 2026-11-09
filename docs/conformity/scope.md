@@ -98,6 +98,19 @@ above 0.9 while the log-odds still fall by about 2. Report both, and flag ceilin
 about 20 questions per contrast; three formats read separately need about 60 gated questions per model; with a pass
 rate of about two thirds, about 90 to 100 candidates per model. (8 Nov 2026)
 
+**Re-analysis thresholds (A1), fixed 8 Nov 2026 before computing.** All on the saved runs, no new data.
+- *Log-odds fall* of a removal = logit P(right) before − logit P(right) after, P clipped to [1e-6, 1 − 1e-6].
+  *Need in log-odds* = the largest early-window bridge fall − the largest early-window everyday-word fall.
+- Labels in log-odds (alone and agree): **needed** if need_LO ≥ 2; **not needed** if need_LO < 1 and reach passes;
+  **mixed** otherwise. Disagree prompts keep the existing pushback rule.
+- **Ceiling flag:** P(right) after the best bridge removal still ≥ 0.9.
+- **Inconclusive** replaces any label when the controls also move: alone/agree if the everyday-word drop ≥ 0.2 or the
+  same-kind drop ≥ 0.2; disagree if the everyday-word ΔLO ≥ 2.
+- **Clean subset:** reach passes, bridge present (rank < 100), same-kind drop < 0.2, and the prompt's answer onset
+  within one window step of the alone prompt's.
+- **Unassessed** = prompts with no early window or no need value; reported with the assessed so the two add to the
+  selected cohort; an empty subgroup is written "no cases".
+
 **Stop rule, fixed before the screens.** "Enough" means at least 20 gated questions per format for at least two
 formats on the main model (Qwen3.6-27B). Past pass rates forecast about 65 of 99 first-letter candidates and about
 10 of 32 number candidates on the 27B, and almost no number questions on the 4B. If a format passes below one in
@@ -139,4 +152,6 @@ and stays in the behavioural and peer-block arms, which need no bridge. (8 Nov 2
 | 2026-11-08 | Gate is four checks, not the scorecard | §3 |
 | 2026-11-08 | Candidates drafted and split before any screen; digest committed | §6 |
 | 2026-11-08 | Currency family and 28 multi-token bridges dropped | token check, §8 |
+| 2026-11-08 | A1 thresholds: need_LO ≥ 2 / < 1, ceiling 0.9, inconclusive at control drop 0.2, clean-subset rule | §7, fixed before computing |
+| 2026-11-08 | Finding 1 reworded per model and wording: "weakens" (27B neutral), "stops" (27B group-aware, 4B) | A1 result, process.md round 13 |
 | 2026-11-08 | Stop rule: ≥ 20 gated per format, ≥ 2 formats, on the 27B; at most two more drafting rounds | §7 |

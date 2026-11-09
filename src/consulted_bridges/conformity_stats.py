@@ -11,8 +11,13 @@ independent, and 14 of the 16 count questions share two facts. So for each run t
                    facts), so prompts from one question move together
   sensitivity.csv  the same shares with every threshold scaled by 0.5, 0.75, 1, 1.5, 2
 
+  prompts_lo.csv   every prompt with the re-analysis columns (docs/conformity/scope.md §7, thresholds fixed first):
+                   need_lo (log-odds need), label_lo, ceiling (P(right) after the best bridge removal >= 0.9),
+                   inconclusive (a control also moved), clean (reach, present, same-kind quiet, onset near alone)
+  summary.csv      old label, log-odds label and clean-subset shares side by side, with assessed / unassessed counts
+
     python -m consulted_bridges.conformity_stats            # all runs found under results/
-Writes results/conformity_stats/.
+Writes results/conformity_stats_v2/ (the earlier results/conformity_stats/ is kept as it was).
 """
 from __future__ import annotations
 
@@ -41,6 +46,50 @@ RUNS = [  # (model, question type, wording, folder, drop the six calibration que
 ]
 SCALES = [0.5, 0.75, 1.0, 1.5, 2.0]
 B = 2000
+LO_TH = dict(need=2.0, none_need=1.0, ceiling=0.9, control_drop=0.2, control_dlo=2.0)   # scope.md §7, fixed 8 Nov
+EPS = 1e-6
+
+
+def logit(x):
+    x = np.clip(np.asarray(x, float), EPS, 1 - EPS)
+    return np.log(x / (1 - x))
+
+
+def window_end(label):
+    return int(str(label).split("–")[-1])
+
+
+def reanalyse(folder, p):
+    """Add the A1 columns to a run's prompts table from its windows.csv (scope.md §7)."""
+    fs = [f for f in sorted(Path("results", folder).glob("shard*/windows.csv")) if f.stat().st_size > 1]
+    w = pd.concat([pd.read_csv(f) for f in fs], ignore_index=True)
+    w["end"] = w.window.map(window_end)
+    key = ["question", "condition", "peers"]
+    base = p.set_index(key)[["P_right", "onset"]].rename(columns={"P_right": "P_right_base"})
+    w = w.join(base, on=key)
+    w = w[w.end < w.onset]                                      # early windows only, as the pipeline
+    w["fall"] = logit(w.P_right_base) - logit(w.P_right)
+    kind = np.where(w.edit == "bridge", "bridge", np.where(w.edit.str.startswith("noise"), "noise",
+                    np.where(w.edit == "answer", "answer", "kind")))
+    w["kind"] = kind
+    best = w.groupby(key + ["kind"]).fall.max().unstack("kind")
+    p = p.join(best.add_prefix("fall_"), on=key)
+    p["need_lo"] = p.fall_bridge - p.fall_noise
+    reach = p.reach_pass.fillna(False).astype(bool)
+    ag = p.condition.isin(["alone", "agree"])
+    p["label_lo"] = np.where(~ag, p.label.str.replace("bridge ", "", regex=False),
+                             np.where(p.need_lo >= LO_TH["need"], "needed",
+                                      np.where((p.need_lo < LO_TH["none_need"]) & reach, "not needed", "mixed")))
+    p.loc[p.need_lo.isna() & ag, "label_lo"] = "unassessed"
+    p["ceiling"] = ag & (p.bridge_P_right_after >= LO_TH["ceiling"])
+    p["inconclusive"] = np.where(ag, (p.noise_drop >= LO_TH["control_drop"]) | (p.same_kind_drop >= LO_TH["control_drop"]),
+                                 p.noise_dLO >= LO_TH["control_dlo"])
+    p.loc[p.inconclusive.fillna(False).astype(bool), "label_lo"] = "inconclusive"
+    step = int(np.diff(sorted({int(str(x).split()[1].split("–")[0]) for x in w.window.unique()}))[0])
+    alone_onset = p[p.condition == "alone"].set_index("question").onset
+    p["clean"] = (reach & p.present.fillna(False).astype(bool) & (p.same_kind_drop < LO_TH["control_drop"])
+                  & ((p.onset - p.question.map(alone_onset)).abs() <= step))
+    return p
 
 
 def cluster_of(qid):
@@ -83,6 +132,22 @@ def shares(p, lab):
     return out
 
 
+def shares_lo(p):
+    """The agree headline under the log-odds labels, on all prompts and on the clean subset."""
+    out = {}
+    for name, d in (("all", p), ("clean", p[p.clean.fillna(False).astype(bool)])):
+        g = d.condition == "agree"
+        for k in (1, 2, 3):
+            gk = g & (d.peers == k)
+            out[f"[LO {name}] agree {k} peer(s): still needed"] = ((gk & (d.label_lo == "needed")).sum(), gk.sum())
+        out[f"[LO {name}] agree: not needed"] = ((g & (d.label_lo == "not needed")).sum(), g.sum())
+        out[f"[LO {name}] agree: inconclusive"] = ((g & (d.label_lo == "inconclusive")).sum(), g.sum())
+        out[f"[LO {name}] agree: at ceiling"] = ((g & d.ceiling.fillna(False).astype(bool)).sum(), g.sum())
+        a = d.condition == "alone"
+        out[f"[LO {name}] alone: bridge needed"] = ((a & (d.label_lo == "needed")).sum(), a.sum())
+    return out
+
+
 def auc(p):
     """P(a needed bridge ranks better than a not-needed one) under the J-lens, alone and agree prompts."""
     q = p[p.condition.isin(["alone", "agree"]) & p.presence_rank.notna()]
@@ -101,7 +166,7 @@ def bootstrap(p, rng):
     draws = {}
     for _ in range(B):
         d = pd.concat([groups[c] for c in rng.choice(keys, len(keys))], ignore_index=True)
-        sh = shares(d, relabel(d))
+        sh = {**shares(d, relabel(d)), **shares_lo(d)}
         for name, (x, n) in sh.items():
             draws.setdefault(name, []).append(x / n if n else np.nan)
         draws.setdefault("presence AUC, needed vs not needed", []).append(auc(d))
@@ -122,11 +187,34 @@ def values(p):
     return pd.DataFrame(rows)
 
 
+def summary(allp, I):
+    """Old label, log-odds label and clean-subset shares side by side, per run, plus assessed / unassessed counts."""
+    rows = []
+    for (model, qt, wd), p in allp.groupby(["model", "questions", "wording"], sort=False):
+        ag = p[p.condition == "agree"]
+        base = dict(model=model, questions=qt, wording=wd, questions_n=p.question.nunique(), agree_prompts=len(ag),
+                    unassessed=int((ag.label_lo == "unassessed").sum()), clean_agree=int(ag.clean.fillna(False).astype(bool).sum()))
+        for k in (1, 2, 3):
+            g = ag[ag.peers == k]
+            gc = g[g.clean.fillna(False).astype(bool)]
+            rows.append(dict(base, peers=k, n=len(g),
+                             old_still_needed=int((g.label == "bridge still needed").sum()),
+                             old_not_needed=int((g.label == "bridge not needed").sum()),
+                             lo_still_needed=int((g.label_lo == "needed").sum()),
+                             lo_not_needed=int((g.label_lo == "not needed").sum()),
+                             lo_inconclusive=int((g.label_lo == "inconclusive").sum()),
+                             at_ceiling=int(g.ceiling.fillna(False).astype(bool).sum()),
+                             clean_n=len(gc), clean_still_needed=int((gc.label_lo == "needed").sum()),
+                             clean_not_needed=int((gc.label_lo == "not needed").sum()),
+                             need_lo_median=g.need_lo.median()))
+    return pd.DataFrame(rows)
+
+
 def main():
     rng = np.random.default_rng(0)
-    out = Path("results/conformity_stats")
+    out = Path("results/conformity_stats_v2")
     out.mkdir(parents=True, exist_ok=True)
-    V, I, S = [], [], []
+    V, I, S, P = [], [], [], []
     for model, qt, wd, folder, drop_cal in RUNS:
         f = Path("results") / folder / "prompts_all.csv"
         if not f.exists():
@@ -135,12 +223,14 @@ def main():
         p = pd.read_csv(f)
         if drop_cal:
             p = p[~p.question.isin(CALIBRATION)]
+        p = reanalyse(folder, p)
         tag = dict(model=model, questions=qt, wording=wd)
+        P.append(p.assign(**tag))
         V += [dict(tag, **r) for r in values(p).to_dict("records")]
         ci, nclus = bootstrap(p, rng)
         lab = relabel(p)
         assert ((lab == "needed") == (p.label == "bridge still needed"))[p.condition.isin(["alone", "agree"])].all(), folder
-        for name, (x, n) in shares(p, lab).items():
+        for name, (x, n) in {**shares(p, lab), **shares_lo(p)}.items():
             lo, hi = ci[name]
             I.append(dict(tag, share=name, n=int(n), count=int(x), value=x / n if n else np.nan, lo=lo, hi=hi, clusters=nclus))
         lo, hi = ci["presence AUC, needed vs not needed"]
@@ -150,6 +240,9 @@ def main():
                 S.append(dict(tag, share=name, scale=k, value=x / n if n else np.nan))
         print(f"{model} {qt} {wd}: {p.question.nunique()} questions, {nclus} clusters", flush=True)
     pd.DataFrame(V).to_csv(out / "values.csv", index=False)
+    allp = pd.concat(P, ignore_index=True)
+    allp.to_csv(out / "prompts_lo.csv", index=False)
+    summary(allp, pd.DataFrame(I)).to_csv(out / "summary.csv", index=False)
     pd.DataFrame(I).to_csv(out / "intervals.csv", index=False)
     s = pd.DataFrame(S).pivot_table(index=["model", "questions", "wording", "share"], columns="scale", values="value")
     s.reset_index().to_csv(out / "sensitivity.csv", index=False)

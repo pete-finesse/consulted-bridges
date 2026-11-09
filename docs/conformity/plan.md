@@ -38,6 +38,8 @@ The quotable claim is "when peers agree, the model stops using its bridge". A ch
 
 Both fixes are free and may change the headline, so they come before any GPU spend.
 
+**Done 8 Nov (A1, `results/conformity_stats_v2/`, `process.md` round 13).** It did change the headline on the 27B neutral wording: 10 of 19 still need the bridge with three agreeing peers in log-odds (5 of 19 by probability); the group-aware wording and the 4B keep the old reading. The 4B's same-kind control moves even alone, so its specificity is a probe limit, and Llama's controls start moving when peers appear.
+
 ---
 
 ## 3. Question design and selection
@@ -113,7 +115,7 @@ With SD 3, detecting a 2 log-odds difference at 80% power needs about 20 questio
 
 ### Phase A: free, now
 
-**A1. Re-analysis in `conformity_stats.py`** (new output directory; keep the old summaries).
+**A1. Re-analysis in `conformity_stats.py` (done 8 Nov; see §2)** (new output directory; keep the old summaries).
 - Log-odds of P(right) per window from `windows.csv`; need in log-odds = largest early bridge fall − largest early everyday-word fall. Report next to need in probability.
 - A **ceiling flag**: P(right) after removal still ≥ 0.9.
 - An **inconclusive** label when the everyday-word or same-kind control also drops (threshold fixed before running, e.g. noise drop ≥ 0.2), replacing "not needed" in those rows.

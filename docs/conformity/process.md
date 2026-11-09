@@ -149,6 +149,32 @@ The two things that keep the loop honest: the rule is written down before the ru
 - **Forecast, to check against the screen:** about 65 of 99 letters pass on each Qwen model; about 10 of 32 number
   questions on the 27B and almost none on the 4B; the category and yes/no families unknown.
 
+## Round 13: the log-odds re-analysis, A1 (8 Nov, all saved runs, no GPU)
+
+- **Set, before computing (scope.md §7):** need in log-odds = largest early bridge fall − largest early everyday-word
+  fall; needed if ≥ 2, not needed if < 1 with reach; ceiling flag at P(right) after removal ≥ 0.9; inconclusive if
+  an everyday-word or same-kind drop ≥ 0.2; clean subset = reach, present, same-kind quiet, onset within one step of
+  alone. Output to `results/conformity_stats_v2/` (`summary.csv`, `prompts_lo.csv`); the old tables untouched.
+- **Found, Qwen3.6-27B neutral:** the headline moves. With three agreeing peers the bridge was "still needed" in 5 of
+  19 by probability; in log-odds it is 10 of 19 (interval 0.32–0.74), and 9 of 15 on the clean subset. 7 of the 19
+  sit at the ceiling. Need in log-odds falls from 8.4 alone to 5.9, 3.0 and 2.2 with 1, 2, 3 peers: agreeing peers
+  **weaken** the bridge's effect on the neutral wording; they do not switch it off.
+- **Found, Qwen3.6-27B group-aware:** the old reading holds. 2 of 19 still needed at three peers in log-odds, 10 not
+  needed, need median 0.55, 14 of 19 at the ceiling: here removal really does nothing.
+- **Found, Qwen3.5-4B:** the inconclusive rule flags 12 of 20 *alone* prompts, because same-kind words drop 0.38 on
+  median even alone on this model. That is a statement about the probe's specificity on the 4B, not about peers.
+  Ignoring that rule, need in log-odds still falls from 6.3 alone to 2.1 / 1.5 / 1.2 at 1 / 2 / 3 peers (needed: 13,
+  6, 1 of 20), and under the group-aware wording to about 0 (not needed 18–19 of 20): on the 4B the old reading
+  survives in log-odds. No 4B prompt is at the ceiling.
+- **Found, Llama-3.1-8B neutral:** 9 of 90 agree prompts have no early window: the answer forms in the first layer
+  window once peers are present (also 4 of 120 on the 4B, 10 of 114 with the J++ lens, 11 and 24 of the disagree
+  prompts). Those prompts are unassessable by removal and are themselves evidence for a copy route that is fast.
+  Llama also has 8–13 of 15 agree prompts inconclusive while its alone prompts are quiet: the controls start moving
+  when peers appear, which needs a look before Llama's group numbers are quoted.
+- **Changed:** the presentation's finding 1 is reworded per model and wording: "weakens" on the 27B neutral,
+  "stops" on the 27B group-aware and on the 4B. Report log-odds beside probability everywhere. The 4B's same-kind
+  overlap goes into the funnel as a probe limit. "No early window" becomes a reported category.
+
 ---
 
 ## Pass rates so far (for forecasting the next draft)
