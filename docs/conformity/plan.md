@@ -173,6 +173,8 @@ Then on each agree prompt, four runs on the identical text, scored in log-odds o
 
 **Step 7. Patching.** Patch "?" states into the letter prompt at every layer (should agree with step 6: triangulation by two methods). Layer sweep from L upward: the earliest layer where patching stops working is where the peers were read, before or after the bridge acts. Share of effect: A−B against A−C against both. For the F/G pair, patch F-run activations into the G run and the reverse; narrow broad regions to components before any pathway claim.
 
+**Step 7b. Swap toward another bridge, in the group prompt (added 9 Nov for run 3).** Use the `move` edit (Neuronpedia's formula, docs/swap_replication.md: edit the question's words only, where about 7 in 10 solo swaps follow) to replace the bridge's direction with a same-kind word's (Italy → Spain) inside agree and disagree prompts, and read whether the answer moves to the swapped word's letter (S) while the peers say I or F. If it does, the letter is produced by the model's own bridge, not copied: the positive counterpart of the removal null. Controls: an everyday word swapped in must not produce its letter; the swap under the peer block should follow at least as often. Report follow rates per condition next to the 2×2.
+
 **Step 8. Known-answer cases and breadth.** Told-to-copy and told-to-ignore give a hit rate. Held-back questions: one confirmation run on the 27B. Llama and Gemma letters (counts need the counts screen first). Gemma copy-only control. Find out why presence fails on Llama group-aware before using it. If budget allows: group sizes 5, 8, 12 and mixed groups (NEXT 1d), with same-length neutral filler to separate more peers from more text.
 
 ### Phase D: later, as its own project
@@ -224,5 +226,5 @@ If the answer follows both rows and columns, the model combined the two sources.
 2. Phase B: code, local, tiny model.
 3. GPU run 1, Qwen3.5-4B: gate screen on all candidates, then steps 5–6 on the development set, plus the peer-supplies-bridge variant. Read, fix. The screen also tells us which new formats survive the overlap check.
 4. GPU run 2, Qwen3.6-27B: gate screen, steps 5–7 on development, then the confirmation set once, frozen.
-5. GPU run 3, Llama and Gemma: gate screen, steps 5–6, Gemma copy-only control.
+5. GPU run 3, Qwen3.6-27B confirmation: the confirmation half of the candidates that passed the 27B gate (batch 2 if screened first), run once with every choice frozen, plus the swap toward another bridge (7b). Llama and Gemma move to Phase D unless time allows.
 6. Phase D as a separate project, starting with the three boxes.
