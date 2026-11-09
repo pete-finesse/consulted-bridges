@@ -6,6 +6,7 @@
 #   bash scripts/pod/jpp.sh smoke  qwen36_27b_jpp        load, answer and lens ranks for the Colosseum question
 #   bash scripts/pod/jpp.sh solo   qwen36_27b_jpp 0/6    trimmed solo scorecard on the 37 letter questions, one shard
 #   bash scripts/pod/jpp.sh counts qwen36_27b_jpp 0/2    trimmed scorecard on the 53 count questions + 3 anchors, one shard
+#   bash scripts/pod/jpp.sh card   qwen36_27b_jpp 0/2 Q..  full scorecard with the swap test on the named questions, one shard
 #   bash scripts/pod/jpp.sh select qwen36_27b_jpp        same rule as before (need >= 0.5, comes first)
 #   bash scripts/pod/jpp.sh conf   qwen36_27b_jpp 0/6    conformity, neutral then deferential wording, one shard
 # Results under /workspace/jpp/results/; each shard writes only its own folder.
@@ -32,6 +33,10 @@ case $step in
     new=$($PY -c "from consulted_bridges.questions.proposed import counts as c; print(' '.join(c.SPECS))")
     $PY -m consulted_bridges.scorecard --config "$cfg" --sets counts,trend,proposed --trim \
       --spec $new T_place_states_austria T_place_states_australia V_T_basketball --shard "$shard" --out "results/counts_$cfg" ;;
+  card)     # the full scorecard with the swap test on named questions: jpp.sh card CFG i/n Q1 Q2 ...
+    shift 3
+    $PY -m consulted_bridges.scorecard --config "$cfg" --sets counts,trend,proposed --swaps \
+      --spec "$@" --shard "$shard" --out "results/fullcard_counts_$cfg" ;;
   select)
     $PY -m consulted_bridges.conformity_select --config "$cfg" ;;
   conf)
