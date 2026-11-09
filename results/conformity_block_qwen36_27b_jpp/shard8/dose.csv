@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_fuji,neutral,alone,0,J,,right,layers 30–41,own,0,0.25,0.9683002698064795,0.00017387061950982215,3.419234065655191
+V_LM_fuji,neutral,alone,0,J,,right,layers 30–41,own,0,0.5,0.00958417685708354,0.002423272222757847,-4.638011383748878
+V_LM_fuji,neutral,alone,0,J,,right,layers 30–41,own,0,0.75,0.0007920397364411926,0.0031325884773405364,-7.1401066415685674
+V_LM_fuji,neutral,agree,3,J,J,right,layers 18–29,own,3,0.25,0.9989150939785684,0.9989150939785684,6.82517641697519
+V_LM_fuji,neutral,agree,3,J,J,right,layers 18–29,own,3,0.5,0.9960737088260009,0.9960737088260009,5.536126001024928
+V_LM_fuji,neutral,agree,3,J,J,right,layers 18–29,own,3,0.75,0.9934152635334746,0.9934152635334746,5.016394453372389
+V_LM_fuji,neutral,hidden,3,J,,right,layers 30–41,own,3,0.25,0.980697824743909,,3.9280465872017727
+V_LM_fuji,neutral,hidden,3,J,,right,layers 30–41,own,3,0.5,0.007059672422238242,,-4.946271917853474
+V_LM_fuji,neutral,hidden,3,J,,right,layers 30–41,own,3,0.75,0.0012162145874629474,,-6.710795086277432
+V_LU_alberta,neutral,alone,0,E,,right,layers 30–41,own,0,0.25,0.9767938758242868,0.0008907230597801275,3.7398594362171
+V_LU_alberta,neutral,alone,0,E,,right,layers 30–41,own,0,0.5,0.004168053413976624,0.08371759320329275,-5.476129395398627
+V_LU_alberta,neutral,alone,0,E,,right,layers 30–41,own,0,0.75,0.0033407832264455376,0.1420537092538888,-5.698203624445722
+V_LU_alberta,neutral,agree,3,E,E,right,layers 30–41,own,3,0.25,0.9907742084103267,0.9907742084103267,4.676483670776951
+V_LU_alberta,neutral,agree,3,E,E,right,layers 30–41,own,3,0.5,0.6836605146801336,0.6836605146801336,0.7706455132962113
+V_LU_alberta,neutral,agree,3,E,E,right,layers 30–41,own,3,0.75,0.551304108735286,0.551304108735286,0.20594122241625365
+V_LU_alberta,neutral,hidden,3,E,,right,layers 30–41,own,3,0.25,0.9833204064898635,,4.07674898789908
+V_LU_alberta,neutral,hidden,3,E,,right,layers 30–41,own,3,0.5,0.004814546078554085,,-5.33128733720219
+V_LU_alberta,neutral,hidden,3,E,,right,layers 30–41,own,3,0.75,0.003178920639569769,,-5.7480295771839

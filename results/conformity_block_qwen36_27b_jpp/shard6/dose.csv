@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_angkor,neutral,alone,0,C,,right,layers 42–53,own,0,0.25,0.9717594488821929,0.0011378184989414525,3.5383493653204923
+V_LM_angkor,neutral,alone,0,C,,right,layers 42–53,own,0,0.5,0.004532817664862643,0.003530158604449555,-5.3918684097430605
+V_LM_angkor,neutral,alone,0,C,,right,layers 42–53,own,0,0.75,0.001020407309440341,0.0024478241334130006,-6.886532480134023
+V_LM_angkor,neutral,agree,3,C,C,right,layers 30–41,own,3,0.25,0.9952468892609979,0.9952468892609979,5.3441915401704305
+V_LM_angkor,neutral,agree,3,C,C,right,layers 30–41,own,3,0.5,0.9833693685463353,0.9833693685463353,4.0797385427341215
+V_LM_angkor,neutral,agree,3,C,C,right,layers 30–41,own,3,0.75,0.9649383598864206,0.9649383598864206,3.314956564941181
+V_LM_angkor,neutral,hidden,3,C,,right,layers 42–53,own,3,0.25,0.15809476485232044,,-1.67247282979922
+V_LM_angkor,neutral,hidden,3,C,,right,layers 42–53,own,3,0.5,0.010138215507197512,,-4.581253324566299
+V_LM_angkor,neutral,hidden,3,C,,right,layers 42–53,own,3,0.75,0.004171829461327934,,-5.475220063817653
+V_LP_hendrix,neutral,alone,0,S,,right,layers 18–29,own,0,0.25,0.6288436652688786,0.007916005689256073,0.5272593196613828
+V_LP_hendrix,neutral,alone,0,S,,right,layers 18–29,own,0,0.5,0.5094147838025285,0.00823395923702688,0.03766358687213208
+V_LP_hendrix,neutral,alone,0,S,,right,layers 18–29,own,0,0.75,0.48952179044989386,0.00791241093054231,-0.041918975459052855
+V_LP_hendrix,neutral,agree,3,S,S,right,layers 36–47,own,3,0.25,0.8409336889329339,0.8409336889329339,1.665191642969297
+V_LP_hendrix,neutral,agree,3,S,S,right,layers 36–47,own,3,0.5,0.8332099939548324,0.8332099939548324,1.608550131646561
+V_LP_hendrix,neutral,agree,3,S,S,right,layers 36–47,own,3,0.75,0.8339858942131843,0.8339858942131843,1.6141437294364884
+V_LP_hendrix,neutral,hidden,3,S,,right,layers 36–47,own,3,0.25,0.23188151366054335,,-1.1977174761101563
+V_LP_hendrix,neutral,hidden,3,S,,right,layers 36–47,own,3,0.5,0.2178741450716162,,-1.2780980875093204
+V_LP_hendrix,neutral,hidden,3,S,,right,layers 36–47,own,3,0.75,0.22993127591284152,,-1.2086992990317282

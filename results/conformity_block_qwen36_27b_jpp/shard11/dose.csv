@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_petronas,neutral,alone,0,M,,right,layers 36–47,own,0,0.25,0.9412859779827482,0.00035781181389347343,2.774568427763571
+V_LM_petronas,neutral,alone,0,M,,right,layers 36–47,own,0,0.5,0.0008881490556476366,0.0021305602870063524,-7.0254824299055025
+V_LM_petronas,neutral,alone,0,M,,right,layers 36–47,own,0,0.75,0.00032550862265236973,0.0018731711287157846,-8.029796044570963
+V_LM_petronas,neutral,agree,3,M,M,right,layers 30–41,own,3,0.25,0.9585876437055691,0.9585876437055691,3.1418816991858804
+V_LM_petronas,neutral,agree,3,M,M,right,layers 30–41,own,3,0.5,0.7129112426302074,0.7129112426302074,0.9095655011987893
+V_LM_petronas,neutral,agree,3,M,M,right,layers 30–41,own,3,0.75,0.5977806548672921,0.5977806548672921,0.39622631431001826
+V_LM_petronas,neutral,hidden,3,M,,right,layers 30–41,own,3,0.25,0.9759109924508458,,3.701615767844418
+V_LM_petronas,neutral,hidden,3,M,,right,layers 30–41,own,3,0.5,0.008727131109432164,,-4.732553151949073
+V_LM_petronas,neutral,hidden,3,M,,right,layers 30–41,own,3,0.75,0.0011502932623324129,,-6.766587403035437
+V_LU_pompeu,neutral,alone,0,B,,right,layers 42–53,own,0,0.25,0.9846475356425258,0.0007923796186510866,4.16100773969182
+V_LU_pompeu,neutral,alone,0,B,,right,layers 42–53,own,0,0.5,0.9373157254099431,0.0015968311132475304,2.7049095667655143
+V_LU_pompeu,neutral,alone,0,B,,right,layers 42–53,own,0,0.75,0.8551238387740484,0.002401869238103892,1.775366982127336
+V_LU_pompeu,neutral,agree,3,B,B,right,layers 36–47,own,3,0.25,0.9858207953761154,0.9858207953761154,4.241698160846494
+V_LU_pompeu,neutral,agree,3,B,B,right,layers 36–47,own,3,0.5,0.9506762223241414,0.9506762223241414,2.9587672737737325
+V_LU_pompeu,neutral,agree,3,B,B,right,layers 36–47,own,3,0.75,0.9343190417002423,0.9343190417002423,2.655008910831784
+V_LU_pompeu,neutral,hidden,3,B,,right,layers 36–47,own,3,0.25,0.9324985348738415,,2.625718277120229
+V_LU_pompeu,neutral,hidden,3,B,,right,layers 36–47,own,3,0.5,0.6473347284738488,,0.6073441476254432
+V_LU_pompeu,neutral,hidden,3,B,,right,layers 36–47,own,3,0.75,0.4449276561218738,,-0.22118675614407696

@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_eiffel,neutral,alone,0,F,,right,layers 30–41,own,0,0.25,0.5044253038603965,0.44515383654660406,0.017701677661263526
+V_LM_eiffel,neutral,alone,0,F,,right,layers 30–41,own,0,0.5,0.0020228048984739836,0.8160521078384156,-6.201245313599547
+V_LM_eiffel,neutral,alone,0,F,,right,layers 30–41,own,0,0.75,0.0009013213026093388,0.7697740911519639,-7.010747029518458
+V_LM_eiffel,neutral,agree,3,F,F,right,layers 30–41,own,3,0.25,0.28064240741904495,0.28064240741904495,-0.9412772937426859
+V_LM_eiffel,neutral,agree,3,F,F,right,layers 30–41,own,3,0.5,0.04986452471562629,0.04986452471562629,-2.9472947576037862
+V_LM_eiffel,neutral,agree,3,F,F,right,layers 30–41,own,3,0.75,0.04413058478050606,0.04413058478050606,-3.0754682342546777
+V_LM_eiffel,neutral,hidden,3,F,,right,layers 42–53,own,3,0.25,0.025683422769121212,,-3.6358905234482055
+V_LM_eiffel,neutral,hidden,3,F,,right,layers 42–53,own,3,0.5,0.0011380624208549787,,-6.77728938291022
+V_LM_eiffel,neutral,hidden,3,F,,right,layers 42–53,own,3,0.75,0.0008788597491934605,,-7.036005984068417
+V_LP_obama_m,neutral,alone,0,C,,right,layers 42–53,own,0,0.25,0.022052158453352205,0.028315504503014646,-3.792045850717783
+V_LP_obama_m,neutral,alone,0,C,,right,layers 42–53,own,0,0.5,0.013574408979023077,0.03256327869874199,-4.285901567955683
+V_LP_obama_m,neutral,alone,0,C,,right,layers 42–53,own,0,0.75,0.012395053865066275,0.02624031680570296,-4.3779852545085856
+V_LP_obama_m,neutral,agree,3,C,C,right,layers 6–17,own,3,0.25,0.8242008527740211,0.8242008527740211,1.5450721191528982
+V_LP_obama_m,neutral,agree,3,C,C,right,layers 6–17,own,3,0.5,0.8086241484316736,0.8086241484316736,1.4410949175525256
+V_LP_obama_m,neutral,agree,3,C,C,right,layers 6–17,own,3,0.75,0.8259042118725142,0.8259042118725142,1.5568731463191066
+V_LP_obama_m,neutral,hidden,3,C,,right,layers 12–23,own,3,0.25,0.03314428411317902,,-3.373178999521104
+V_LP_obama_m,neutral,hidden,3,C,,right,layers 12–23,own,3,0.5,0.020165369408496645,,-3.8834170656830937
+V_LP_obama_m,neutral,hidden,3,C,,right,layers 12–23,own,3,0.75,0.01783720704781959,,-4.008470512271775

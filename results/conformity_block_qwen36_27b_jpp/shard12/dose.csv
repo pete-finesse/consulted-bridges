@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_pisa,neutral,alone,0,I,,right,layers 36–47,own,0,0.25,0.5834567733389784,0.4010035849538644,0.3369801255789493
+V_LM_pisa,neutral,alone,0,I,,right,layers 36–47,own,0,0.5,0.0013103129700410075,0.9875867254865668,-6.636178089694181
+V_LM_pisa,neutral,alone,0,I,,right,layers 36–47,own,0,0.75,0.0006202792979144594,0.9897104806470844,-7.38472022910312
+V_LM_pisa,neutral,agree,3,I,I,right,layers 42–53,own,3,0.25,0.9170657729095194,0.9170657729095194,2.4031313469136255
+V_LM_pisa,neutral,agree,3,I,I,right,layers 42–53,own,3,0.5,0.495759767887969,0.495759767887969,-0.016961335065900106
+V_LM_pisa,neutral,agree,3,I,I,right,layers 42–53,own,3,0.75,0.32155265396479893,0.32155265396479893,-0.7466455665701484
+V_LM_pisa,neutral,hidden,3,I,,right,layers 42–53,own,3,0.25,0.2892191331333941,,-0.899179531247484
+V_LM_pisa,neutral,hidden,3,I,,right,layers 42–53,own,3,0.5,0.003547838466683725,,-5.637862596592388
+V_LM_pisa,neutral,hidden,3,I,,right,layers 42–53,own,3,0.75,0.001020319866494606,,-6.886618265496763

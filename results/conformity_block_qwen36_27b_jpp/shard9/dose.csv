@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+V_LM_kremlin,neutral,alone,0,R,,right,layers 30–41,own,0,0.25,0.04661336780145465,0.0005178290006281862,-3.0181331587970472
+V_LM_kremlin,neutral,alone,0,R,,right,layers 30–41,own,0,0.5,0.0007691176574640117,0.0009277327409631437,-7.16949718597844
+V_LM_kremlin,neutral,alone,0,R,,right,layers 30–41,own,0,0.75,0.0005246295574182983,0.0008125618650542332,-7.552293382122835
+V_LM_kremlin,neutral,agree,3,R,R,right,layers 30–41,own,3,0.25,0.12237696883351876,0.12237696883351876,-1.9701109627210653
+V_LM_kremlin,neutral,agree,3,R,R,right,layers 30–41,own,3,0.5,0.02415315017329671,0.02415315017329671,-3.6988908443890742
+V_LM_kremlin,neutral,agree,3,R,R,right,layers 30–41,own,3,0.75,0.0219858470381014,0.0219858470381014,-3.7951252113697307
+V_LM_kremlin,neutral,hidden,3,R,,right,layers 30–41,own,3,0.25,0.00413379385888796,,-5.484417322168425
+V_LM_kremlin,neutral,hidden,3,R,,right,layers 30–41,own,3,0.5,0.00028098293554100853,,-8.17693559566795
+V_LM_kremlin,neutral,hidden,3,R,,right,layers 30–41,own,3,0.75,0.0003444577063476343,,-7.973194726223337
+V_LU_berklee,neutral,alone,0,B,,right,layers 30–41,own,0,0.25,0.023772413384421508,0.08297388345408048,-3.715169935333071
+V_LU_berklee,neutral,alone,0,B,,right,layers 30–41,own,0,0.5,0.00012296425645999127,0.0031712879387680313,-9.00349387089267
+V_LU_berklee,neutral,alone,0,B,,right,layers 30–41,own,0,0.75,9.58335660226555e-05,0.002471579362128734,-9.252801720177082
+V_LU_berklee,neutral,agree,3,B,B,right,layers 30–41,own,3,0.25,0.6875829368233337,0.6875829368233337,0.788843421526708
+V_LU_berklee,neutral,agree,3,B,B,right,layers 30–41,own,3,0.5,0.1313213753529803,0.1313213753529803,-1.8893256689514626
+V_LU_berklee,neutral,agree,3,B,B,right,layers 30–41,own,3,0.75,0.09482348332369966,0.09482348332369966,-2.2561128777622277
+V_LU_berklee,neutral,hidden,3,B,,right,layers 30–41,own,3,0.25,0.04886138540650041,,-2.96867238855142
+V_LU_berklee,neutral,hidden,3,B,,right,layers 30–41,own,3,0.5,0.0007067396036698477,,-7.25414128209021
+V_LU_berklee,neutral,hidden,3,B,,right,layers 30–41,own,3,0.75,0.0005513299868290775,,-7.502625558880511

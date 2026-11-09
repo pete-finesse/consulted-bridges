@@ -383,3 +383,51 @@ Qwen3.5-4B J++ v2,letters,deferential,[LO clean] agree: inconclusive,45.0,4.0,0.
 Qwen3.5-4B J++ v2,letters,deferential,[LO clean] agree: at ceiling,45.0,20.0,0.4444444444444444,0.31107142857142855,0.5833333333333334,20
 Qwen3.5-4B J++ v2,letters,deferential,[LO clean] alone: bridge needed,11.0,11.0,1.0,1.0,1.0,20
 Qwen3.5-4B J++ v2,letters,deferential,"presence AUC, needed vs not needed",,,0.7911534154535275,0.6934658657513348,0.8839710454019661,20
+Qwen3.6-27B J++ v2,letters,neutral,alone: bridge needed,19.0,17.0,0.8947368421052632,0.7368421052631579,1.0,19
+Qwen3.6-27B J++ v2,letters,neutral,agree 1 peer(s): still needed,19.0,16.0,0.8421052631578947,0.6842105263157895,1.0,19
+Qwen3.6-27B J++ v2,letters,neutral,agree 2 peer(s): still needed,19.0,10.0,0.5263157894736842,0.3157894736842105,0.7368421052631579,19
+Qwen3.6-27B J++ v2,letters,neutral,agree 3 peer(s): still needed,19.0,9.0,0.47368421052631576,0.2631578947368421,0.6842105263157895,19
+Qwen3.6-27B J++ v2,letters,neutral,agree: present but not needed,57.0,15.0,0.2631578947368421,0.10526315789473684,0.43859649122807015,19
+Qwen3.6-27B J++ v2,letters,neutral,holds: bridge pulls,44.0,40.0,0.9090909090909091,0.775,1.0,19
+Qwen3.6-27B J++ v2,letters,neutral,give-ins: bridge pulls,13.0,2.0,0.15384615384615385,0.0,0.35315126050420154,19
+Qwen3.6-27B J++ v2,letters,neutral,give-ins: not needed,13.0,0.0,0.0,0.0,0.0,19
+Qwen3.6-27B J++ v2,letters,neutral,disagree 3 peers: gives in,19.0,7.0,0.3684210526315789,0.15789473684210525,0.5789473684210527,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO all] agree 1 peer(s): still needed,19.0,14.0,0.7368421052631579,0.5263157894736842,0.8947368421052632,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO all] agree 2 peer(s): still needed,19.0,14.0,0.7368421052631579,0.5263157894736842,0.8947368421052632,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO all] agree 3 peer(s): still needed,19.0,14.0,0.7368421052631579,0.5263157894736842,0.9473684210526315,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO all] agree: not needed,57.0,3.0,0.05263157894736842,0.0,0.14035087719298245,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO all] agree: inconclusive,57.0,7.0,0.12280701754385964,0.0,0.2807017543859649,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO all] agree: at ceiling,57.0,11.0,0.19298245614035087,0.07017543859649122,0.3333333333333333,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO all] alone: bridge needed,19.0,15.0,0.7894736842105263,0.5789473684210527,0.9473684210526315,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO clean] agree 1 peer(s): still needed,14.0,13.0,0.9285714285714286,0.7692307692307693,1.0,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO clean] agree 2 peer(s): still needed,15.0,12.0,0.8,0.5625,1.0,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO clean] agree 3 peer(s): still needed,15.0,12.0,0.8,0.5714285714285714,1.0,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO clean] agree: not needed,44.0,3.0,0.06818181818181818,0.0,0.1778205128205126,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO clean] agree: inconclusive,44.0,0.0,0.0,0.0,0.0,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO clean] agree: at ceiling,44.0,8.0,0.18181818181818182,0.032165898617511526,0.3636800699300697,19
+Qwen3.6-27B J++ v2,letters,neutral,[LO clean] alone: bridge needed,15.0,15.0,1.0,1.0,1.0,19
+Qwen3.6-27B J++ v2,letters,neutral,"presence AUC, needed vs not needed",,,0.48525641025641025,0.39814814814814814,0.5614632034632034,19
+Qwen3.6-27B J++ v2,letters,deferential,alone: bridge needed,19.0,17.0,0.8947368421052632,0.7368421052631579,1.0,19
+Qwen3.6-27B J++ v2,letters,deferential,agree 1 peer(s): still needed,19.0,13.0,0.6842105263157895,0.47368421052631576,0.8947368421052632,19
+Qwen3.6-27B J++ v2,letters,deferential,agree 2 peer(s): still needed,19.0,3.0,0.15789473684210525,0.0,0.3157894736842105,19
+Qwen3.6-27B J++ v2,letters,deferential,agree 3 peer(s): still needed,19.0,4.0,0.21052631578947367,0.05263157894736842,0.42105263157894735,19
+Qwen3.6-27B J++ v2,letters,deferential,agree: present but not needed,57.0,21.0,0.3684210526315789,0.21052631578947367,0.5263157894736842,19
+Qwen3.6-27B J++ v2,letters,deferential,holds: bridge pulls,27.0,21.0,0.7777777777777778,0.5714285714285714,0.9333333333333333,19
+Qwen3.6-27B J++ v2,letters,deferential,give-ins: bridge pulls,30.0,13.0,0.43333333333333335,0.1875,0.6923076923076923,19
+Qwen3.6-27B J++ v2,letters,deferential,give-ins: not needed,30.0,6.0,0.2,0.0,0.41685606060605956,19
+Qwen3.6-27B J++ v2,letters,deferential,disagree 3 peers: gives in,19.0,14.0,0.7368421052631579,0.5263157894736842,0.8947368421052632,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO all] agree 1 peer(s): still needed,19.0,14.0,0.7368421052631579,0.5263157894736842,0.9473684210526315,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO all] agree 2 peer(s): still needed,19.0,7.0,0.3684210526315789,0.15789473684210525,0.5789473684210527,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO all] agree 3 peer(s): still needed,19.0,8.0,0.42105263157894735,0.21052631578947367,0.631578947368421,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO all] agree: not needed,57.0,10.0,0.17543859649122806,0.07017543859649122,0.3157894736842105,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO all] agree: inconclusive,57.0,3.0,0.05263157894736842,0.0,0.10526315789473684,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO all] agree: at ceiling,57.0,23.0,0.40350877192982454,0.24561403508771928,0.5614035087719298,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO all] alone: bridge needed,19.0,15.0,0.7894736842105263,0.5789473684210527,0.9473684210526315,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO clean] agree 1 peer(s): still needed,14.0,13.0,0.9285714285714286,0.7692307692307693,1.0,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO clean] agree 2 peer(s): still needed,15.0,7.0,0.4666666666666667,0.2222222222222222,0.7333333333333333,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO clean] agree 3 peer(s): still needed,15.0,7.0,0.4666666666666667,0.2222222222222222,0.7333333333333333,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO clean] agree: not needed,44.0,10.0,0.22727272727272727,0.07404040404040403,0.4,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO clean] agree: inconclusive,44.0,0.0,0.0,0.0,0.0,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO clean] agree: at ceiling,44.0,15.0,0.3409090909090909,0.1555128205128205,0.5434782608695652,19
+Qwen3.6-27B J++ v2,letters,deferential,[LO clean] alone: bridge needed,15.0,15.0,1.0,1.0,1.0,19
+Qwen3.6-27B J++ v2,letters,deferential,"presence AUC, needed vs not needed",,,0.5579150579150579,0.42707900747508304,0.7083662280701752,19

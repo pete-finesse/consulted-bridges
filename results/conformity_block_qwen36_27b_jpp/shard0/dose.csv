@@ -1,0 +1,19 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+L_colosseum,neutral,alone,0,I,,right,layers 42–53,own,0,0.25,0.9634612610633667,0.0008785721408559095,3.272159242078976
+L_colosseum,neutral,alone,0,I,,right,layers 42–53,own,0,0.5,0.04882542796069221,0.010894444633774817,-2.969446370591939
+L_colosseum,neutral,alone,0,I,,right,layers 42–53,own,0,0.75,0.015966219038603496,0.007541907847573092,-4.121185046513071
+L_colosseum,neutral,agree,3,I,I,right,layers 42–53,own,3,0.25,0.3018910164730222,0.3018910164730222,-0.838309147793622
+L_colosseum,neutral,agree,3,I,I,right,layers 42–53,own,3,0.5,0.03974659277955821,0.03974659277955821,-3.1846730942946873
+L_colosseum,neutral,agree,3,I,I,right,layers 42–53,own,3,0.75,0.030112431520078767,0.030112431520078767,-3.4722420621935273
+L_colosseum,neutral,hidden,3,I,,right,layers 42–53,own,3,0.25,0.08358909479762447,,-2.3945517839773025
+L_colosseum,neutral,hidden,3,I,,right,layers 42–53,own,3,0.5,0.003299282224420372,,-5.710745605062442
+L_colosseum,neutral,hidden,3,I,,right,layers 42–53,own,3,0.75,0.00205039949983693,,-6.187668122402126
+V_LM_pyramids,neutral,alone,0,E,,right,layers 30–41,own,0,0.25,0.004594126223121847,0.000798337464074466,-5.3783719877918035
+V_LM_pyramids,neutral,alone,0,E,,right,layers 30–41,own,0,0.5,9.582928522024606e-05,0.0006248811767835987,-9.252846394590064
+V_LM_pyramids,neutral,alone,0,E,,right,layers 30–41,own,0,0.75,8.454058117004762e-05,0.0008020932440511059,-9.37819434419649
+V_LM_pyramids,neutral,agree,3,E,E,right,layers 30–41,own,3,0.25,0.03674526503098041,0.03674526503098041,-3.2663085244486636
+V_LM_pyramids,neutral,agree,3,E,E,right,layers 30–41,own,3,0.5,0.0019167700600108558,0.0019167700600108558,-6.255195160527911
+V_LM_pyramids,neutral,agree,3,E,E,right,layers 30–41,own,3,0.75,0.0019160301685449829,0.0019160301685449829,-6.255581985867862
+V_LM_pyramids,neutral,hidden,3,E,,right,layers 36–47,own,3,0.25,0.0014939558442040122,,-6.504832675218344
+V_LM_pyramids,neutral,hidden,3,E,,right,layers 36–47,own,3,0.5,0.0002598383094270127,,-8.255191135146495
+V_LM_pyramids,neutral,hidden,3,E,,right,layers 36–47,own,3,0.75,0.0002941980364016874,,-8.130963182863518

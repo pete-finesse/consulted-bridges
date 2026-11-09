@@ -46,6 +46,9 @@ RUNS = [  # (model, question type, wording, folder, drop the six calibration que
     # GPU run 1 (plan.md Phase C): same lens and questions plus the B1 variants (hidden answers, told to copy...)
     ("Qwen3.5-4B J++ v2", "letters", "neutral", "conformity_v2_qwen35_4b_jpp", True),
     ("Qwen3.5-4B J++ v2", "letters", "deferential", "conformity_v2_defer_qwen35_4b_jpp", True),
+    # GPU run 2: the same on Qwen3.6-27B
+    ("Qwen3.6-27B J++ v2", "letters", "neutral", "conformity_v2_qwen36_27b_jpp", True),
+    ("Qwen3.6-27B J++ v2", "letters", "deferential", "conformity_v2_defer_qwen36_27b_jpp", True),
 ]
 SCALES = [0.5, 0.75, 1.0, 1.5, 2.0]
 B = 2000
