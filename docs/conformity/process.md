@@ -287,6 +287,33 @@ The two things that keep the loop honest: the rule is written down before the ru
   (3) the nine candidates with replaced controls re-screened; (4) wrong letters drawn from letters no same-kind
   word starts with; (5) at most two 27B processes per H200.
 
+## Round 18: GPU run 3, Qwen3.6-27B confirmation (9 Nov UTC, 19 pods, `results/v2_run3_qwen36_27b/summary.md`)
+
+- **Set, before the run (commit 6e5cfa3):** the fixes from round 17: free wrong letters (no same-kind or swap
+  initial; a nearby digit for numbers), the old rule behind `--wrong-rule kind`; reach on the positions the naming
+  prompt shares with the original prompt; P(same-kind answer) in every 2x2 cell; the swap driver (`conformity_swap`);
+  the run-3 readings in `scope.md` §11 (hidden check on assessed prompts, replication = inside run 2's 95% interval,
+  swap follow rule). Frozen set: confirmation half x 27B J++ selection x reach >= 0.5 = 20 (16 letters, 4 numbers);
+  C_LU_case re-screened with its new controls first (kept).
+- **Ran:** 560 conformity prompts, block / 2x2 / dose / patch and the swap, both wordings, J++. 12 off-volume H200s,
+  2 volume H200s (hung on the network volume, jobs moved, deleted), the 3 A100s; 40 jobs through a queue, 09:46–10:17.
+  Eight number-question prompts hit CUDA OOM with two 27B processes per H200; those two jobs re-run whole on one
+  process per H200 (10:28–10:40). Leak test exact on all 15 installs.
+- **Found, tools:** the hidden check passes the §11 reading in both wordings (0 hidden prompts "not needed"; B
+  collapses in 60/60 per wording). Block validation passes every row with cases (copy-only has none: no calibration
+  questions). Patch tracks the block in the neutral wording (0.93) and less in the group-aware (0.55, small effects).
+  Reach on shared positions is weak (median 0.13–0.29 in agree prompts against 0.89–0.95 with q→end): most low-need
+  nulls become "mixed".
+- **Found, the 2x2:** replicates. Three agreeing peers: neutral both collapse 17/20 (run 2 14/19); group-aware only D
+  10/20 (7/19), both 6, leaned 2. 61 of 72 shares inside run 2's intervals; 8 of the 11 misses are against
+  zero-width development intervals.
+- **Found, disagree:** with free letters D lands on the peers' letter in 3/20 and 2/20 at three peers (run 2: 13/19,
+  the same-kind confound). Full give-ins fall: neutral 0/20 (6/19), group-aware 8/20 (12/19).
+- **Found, swap:** follows 18/20 alone and 16–19/20 under the peer block; with peers visible 15–18/20 neutral, 6–7/20
+  group-aware (the peers' letter wins); the everyday control never gets through.
+- **Changed:** nothing in the method. For the write-up: the 2x2 headline is confirmed; the swap supplies the positive
+  test; the run-2 disagree-destination sentence goes; give-in rates are quoted with the wrong-letter rule.
+
 ## Round 15b: fact pass on the candidates (9 Nov, separate session)
 
 - **Set:** check every candidate's first hop, second hop, aliases, and whether the subject carries the bridge; check
