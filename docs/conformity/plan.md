@@ -1,6 +1,6 @@
 # Conformity, next steps: one plan from three
 
-*Written 8 November 2026. Combines the v2 plan ("does the answer come from the model's own step, or from the peers?"), the broader research plan drafted the same day (audit, frozen benchmark, peer localisation, real groups), the narrow "Bridge Under Conformity" proposal, and NEXT_EXPERIMENTS 1b–1f. Ordered by value per unit of cost. Each GPU run needs Peter's yes first. Scope decisions and their justifications live in `scope.md`; the candidate questions in `src/consulted_bridges/questions/proposed/candidates.py`.*
+*Written 8 November 2026. Combines the v2 plan ("does the answer come from the model's own step, or from the peers?"), the broader research plan drafted the same day (audit, frozen benchmark, peer localisation, real groups), the narrow "Bridge Under Conformity" proposal, and NEXT_EXPERIMENTS 1b–1f. Ordered by value per unit of cost. Each GPU run needs Peter's yes first. Scope decisions and their justifications live in `scope.md`, the method as currently run in `methods.md`, the round-by-round process in `process.md`; the candidate questions in `src/consulted_bridges/questions/proposed/candidates.py`.*
 
 ---
 

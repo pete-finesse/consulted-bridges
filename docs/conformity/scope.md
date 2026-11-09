@@ -2,7 +2,8 @@
 
 *A living reference for write-ups. Each entry records a decision, the reason, and what it costs. Add to it when a
 scope or method question is settled; date the entry. Started 8 November 2026 from the planning discussion. The plan
-itself is `plan.md`; the candidate questions are `src/consulted_bridges/questions/proposed/candidates.py`.*
+itself is `plan.md`, the method as run is `methods.md`, the rounds are in `process.md`, and the candidate questions are
+`src/consulted_bridges/questions/proposed/candidates.py`.*
 
 ---
 
@@ -97,6 +98,15 @@ above 0.9 while the log-odds still fall by about 2. Report both, and flag ceilin
 about 20 questions per contrast; three formats read separately need about 60 gated questions per model; with a pass
 rate of about two thirds, about 90 to 100 candidates per model. (8 Nov 2026)
 
+**Stop rule, fixed before the screens.** "Enough" means at least 20 gated questions per format for at least two
+formats on the main model (Qwen3.6-27B). Past pass rates forecast about 65 of 99 first-letter candidates and about
+10 of 32 number candidates on the 27B, and almost no number questions on the 4B. If a format passes below one in
+five it is out for the removal arm on that model and the claim is scoped to the formats that pass; this is a finding
+about the probe, reported in the funnel. If a family passes at a decent rate but too few made it, more are drafted
+in that family, at most two further drafting rounds; drafting from screen results is allowed because the screen is
+solo-only and cannot bias the group comparison. If even letters fail on a model, that model leaves the removal arm
+and stays in the behavioural and peer-block arms, which need no bridge. (8 Nov 2026)
+
 ## 8. What was tried and did not work (so it is not retried by accident)
 
 - **Last letter of the hidden word:** untestable in the ideas run (the model cannot do the second hop reliably).
@@ -129,3 +139,4 @@ rate of about two thirds, about 90 to 100 candidates per model. (8 Nov 2026)
 | 2026-11-08 | Gate is four checks, not the scorecard | §3 |
 | 2026-11-08 | Candidates drafted and split before any screen; digest committed | §6 |
 | 2026-11-08 | Currency family and 28 multi-token bridges dropped | token check, §8 |
+| 2026-11-08 | Stop rule: ≥ 20 gated per format, ≥ 2 formats, on the 27B; at most two more drafting rounds | §7 |
