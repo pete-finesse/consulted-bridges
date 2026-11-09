@@ -263,7 +263,7 @@ no pass mark.
 | 2026-11-08 | A1 thresholds: need_LO ≥ 2 / < 1, ceiling 0.9, inconclusive at control drop 0.2, clean-subset rule | §7, fixed before computing |
 | 2026-11-08 | Finding 1 reworded per model and wording: "weakens" (27B neutral), "stops" (27B group-aware, 4B) | A1 result, process.md round 13 |
 | 2026-11-08 | Reach: edit positions inflate passes; fix after run 1, report value not pass/fail | §9 |
-| 2026-11-09 | Swap wording: the claim stays "depends on"; the swap paragraph may say "is read from" with the follow counts, never "produced from"; swap figure in the body, replication in the appendix | §1, run 3 |
+| 2026-11-09 | Swap wording: the claim stays "depends on"; the swap paragraph may say "is read from" with the follow counts (alone 18 of 20; peers blocked 16 to 19 of 20; peers visible under the group-aware wording the peers' letter wins in 12 of 20 agree, 11 of 19 disagree), never "produced from"; swap figure in the body, replication in the appendix | §1, run 3 |
 | 2026-11-09 | Formats pooled for reading (letters; number lookups; continent); hidden twin per layout | §7, decided before run 2's funnel is read |
 | 2026-11-08 | Lens: J++ proposed as primary on Qwen (pending) | process.md round 14 |
 | 2026-11-08 | Stop rule: ≥ 20 gated per format, ≥ 2 formats, on the 27B; at most two more drafting rounds | §7 |
