@@ -141,6 +141,17 @@ and stays in the behavioural and peer-block arms, which need no bridge. (8 Nov 2
   submitted)" is the second version, and agreement between them is the check.
 - Whether the attention block misses information already copied elsewhere in the model. Patching is the second
   method; agreement between block and patch is the check.
+- **Reach is weaker than it looks (found 8 Nov, walkthrough session, discussing with Peter).** Reach is the positive
+  control for a null: the same removal must stop the model *naming* the bridge when asked. Two problems. (1) As coded
+  (`Prompt.run`, the reach edit runs from the question's start to the end of the reach prompt), the edit also covers
+  the added instruction "First name the country." and the started reply, the very positions where "Italy" is being
+  produced; the J-lens direction is built from the word's output row, so removing it there lowers P(Italy) partly by
+  construction and a pass is easier than it should be. (2) It tests "can the model still retrieve the word", not
+  "does the second hop still read the bridge": round 14 has count questions where removal clearly changes the answer
+  while reach is near zero (Gandhi 0.015, Mars 0.003, Niemeyer 0.046). Fix, when `conformity.py` is free: apply the
+  reach edit only to positions the reach prompt shares with the original prompt, and report the reach value next to
+  each null instead of pass/fail. The hidden-answer prompt and the strength sweep are cleaner positive controls and
+  are already in Phase C; the block and patch do not depend on reach at all.
 - Why presence fails on Llama with the group-aware wording (the diagnostic says the wording fills the last token).
 
 ## 11. GPU run 1 pass marks (A2 for steps 5 to 7), fixed 8 Nov 2026 before the run
@@ -195,6 +206,7 @@ working is the first L at which the effect is below half of P_all's. Reported, n
 | 2026-11-08 | Currency family and 28 multi-token bridges dropped | token check, §8 |
 | 2026-11-08 | A1 thresholds: need_LO ≥ 2 / < 1, ceiling 0.9, inconclusive at control drop 0.2, clean-subset rule | §7, fixed before computing |
 | 2026-11-08 | Finding 1 reworded per model and wording: "weakens" (27B neutral), "stops" (27B group-aware, 4B) | A1 result, process.md round 13 |
+| 2026-11-08 | Reach: edit positions inflate passes; fix after run 1, report value not pass/fail | §9 |
 | 2026-11-08 | Lens: J++ proposed as primary on Qwen (pending) | process.md round 14 |
 | 2026-11-08 | Stop rule: ≥ 20 gated per format, ≥ 2 formats, on the 27B; at most two more drafting rounds | §7 |
 | 2026-11-08 | GPU run 1 pass marks for the hidden check, block validation, 2x2 and patch (§11) | fixed before the run |
