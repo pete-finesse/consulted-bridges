@@ -59,11 +59,12 @@ from consulted_bridges.questions.core import SPECS as CORE
 from consulted_bridges.questions.proposed.similar import SPECS as VARIANTS
 from consulted_bridges.questions.proposed.trend import SPECS as TREND
 from consulted_bridges.questions.proposed.counts import SPECS as COUNT_SPECS
+from consulted_bridges.questions.proposed.candidates import SPECS as CANDIDATES
 from consulted_bridges.readout import readout
 from consulted_bridges.silent_dissent.giveup import Probe, lay
 from consulted_bridges.text import offsets, resolve_positions
 
-SPECS = {**CORE, **VARIANTS, **TREND, **COUNT_SPECS}
+SPECS = {**CORE, **VARIANTS, **TREND, **COUNT_SPECS, **CANDIDATES}
 EPS = 1e-6
 SUFFIX = " Answer with one letter."
 ONE = " Answer in one word."
@@ -85,6 +86,9 @@ QUESTIONS = {
 QUESTIONS["tiny"] = ["L_colosseum", "L_gates"]
 # Every letter question the solo scorecard is run on before a new model's conformity run.
 LETTER = [k for k in SPECS if k.startswith(("L_", "V_L"))]
+# The v2 candidates (questions/proposed/candidates.py), unscreened. Kept apart from LETTER so the existing screens
+# and conformity_select keep their 37-question list; the candidate screen runs them with `--sets candidates`.
+CANDIDATE = sorted(CANDIDATES)
 
 
 def questions_for(cfg):

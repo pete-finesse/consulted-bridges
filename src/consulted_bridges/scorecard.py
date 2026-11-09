@@ -500,6 +500,8 @@ def load_sets(sets):
         out.update(importlib.import_module("consulted_bridges.questions.proposed.counts").SPECS)
     if "trend" in sets:      # PROPOSED trend questions (questions/proposed/trend.py), ids already T_...
         out.update(importlib.import_module("consulted_bridges.questions.proposed.trend").SPECS)
+    if "candidates" in sets:  # v2 CANDIDATES (questions/proposed/candidates.py), ids C_..., unscreened
+        out.update(importlib.import_module("consulted_bridges.questions.proposed.candidates").SPECS)
     if "ideas" in sets:
         for m in ("consulted_bridges.questions.ideas.sequence", "consulted_bridges.questions.ideas.language", "consulted_bridges.questions.ideas.science", "consulted_bridges.questions.ideas.culture"):
             out.update({f"i_{k}": v for k, v in importlib.import_module(m).SPECS.items()})
@@ -519,7 +521,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--spec", nargs="+", default=None)
     ap.add_argument("--ideas", action="store_true", help="run the question sets in questions/ideas/")
-    ap.add_argument("--sets", default=None, help="comma list of: card2,card3,ideas,proposed (default card3)")
+    ap.add_argument("--sets", default=None, help="comma list of: card2,card3,ideas,proposed,counts,trend,candidates (default card3)")
     ap.add_argument("--all", action="store_true", help="round-3 questions plus the idea sets")
     ap.add_argument("--config", default="qwen35_4b")
     ap.add_argument("--shard", default="0/1")
