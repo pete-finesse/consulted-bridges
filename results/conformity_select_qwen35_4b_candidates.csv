@@ -1,0 +1,172 @@
+question,family,split,selected,verdict,verdict_reason,model_said,P_base,need,comes_first,lead,answer_onset,quality
+C_CT_atomium,C_CT,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",Europe,0.986,0.951,True,9.0,15.0,0.147
+C_CT_borobudur,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Asia,0.997,0.003,False,,18.0,0.0
+C_CT_halong,C_CT,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Asia,0.998,0.025,False,,18.0,0.0
+C_CT_hassan,C_CT,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",Africa,0.988,0.973,True,12.0,21.0,0.0
+C_CT_kilimanjaro,C_CT,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",Africa,0.994,0.849,True,6.0,21.0,0.0
+C_CT_lalibela,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Africa,0.99,0.102,False,,18.0,0.0
+C_CT_neuschwanstein,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Europe,0.997,0.003,False,,18.0,0.0
+C_CT_persepolis,C_CT,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",Asia,0.989,0.88,True,6.0,15.0,0.011
+C_CT_petra,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Asia,0.913,0.107,False,,9.0,0.0
+C_CT_timbuktu,C_CT,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Africa,0.99,0.014,False,,18.0,0.0
+C_CT_watarun,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Asia,0.998,0.007,False,,18.0,0.0
+C_CT_wawel,C_CT,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Europe,0.999,0.0,False,,18.0,0.0
+C_DS_blarney,C_DS,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Left,0.408,0.343,True,12.0,18.0,0.319
+C_DS_borobudur,C_DS,dev,False,UNTESTABLE,the model gets hop 2 wrong,Left,0.283,,,,,
+C_DS_chichen,C_DS,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Right,0.513,0.061,False,,18.0,0.0
+C_DS_dunns,C_DS,dev,False,UNTESTABLE,the model gets the two-hop question and hop 2 wrong,Right,0.183,,,,,
+C_DS_hagia,C_DS,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Right,0.515,0.078,False,,18.0,0.0
+C_DS_halong,C_DS,dev,False,UNTESTABLE,the model gets the two-hop question wrong,Left,0.207,,,,,
+C_DS_maasai,C_DS,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",Left,0.447,0.339,True,9.0,18.0,0.134
+C_DS_moai,C_DS,dev,False,UNCLEAR,in between,Right,0.549,0.064,False,,18.0,0.0
+C_DS_neuschwanstein,C_DS,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Right,0.75,0.008,False,,18.0,0.0
+C_DS_petra,C_DS,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Right,0.635,0.032,False,,18.0,0.0
+C_DS_watarun,C_DS,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Left,0.361,0.099,False,-3.0,18.0,0.0
+C_EL_carbon,C_EL,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",6,0.999,0.06,False,,27.0,0.0
+C_EL_helium,C_EL,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",2,0.277,0.215,True,21.0,24.0,0.198
+C_EL_hydrogen,C_EL,dev,False,UNTESTABLE,the model gets the two-hop question wrong,6,0.291,,,,,
+C_EL_lithium,C_EL,dev,False,UNTESTABLE,the model gets the two-hop question wrong,29,0.19,,,,,
+C_EL_nitrogen,C_EL,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",7,0.914,0.833,True,18.0,24.0,0.225
+C_EL_oxygen,C_EL,dev,False,UNTESTABLE,the model gets the two-hop question wrong,7,0.001,,,,,
+C_EO_colosseum,C_EO,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Odd,0.643,0.0,False,,18.0,0.0
+C_EO_eiffel,C_EO,dev,False,UNTESTABLE,the model gets the two-hop question wrong,Odd,0.396,,,,,
+C_EO_fuji,C_EO,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Odd,0.638,0.0,False,,18.0,0.0
+C_EO_machu,C_EO,dev,False,UNTESTABLE,the model gets the two-hop question wrong,Odd,0.323,,,,,
+C_IN_hendrix,C_IN,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",6,0.838,0.777,True,15.0,24.0,0.604
+C_IN_perlman,C_IN,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",4,0.924,0.126,False,,24.0,0.0
+C_LM_alhambra,C_LM,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",S,0.904,0.178,True,3.0,24.0,0.151
+C_LM_angelfalls,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",V,0.963,0.87,True,18.0,24.0,0.847
+C_LM_atomium,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.959,0.889,True,12.0,27.0,0.889
+C_LM_baalbek,C_LM,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",L,0.904,0.455,True,6.0,24.0,0.431
+C_LM_babylon,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.453,0.679,True,21.0,24.0,0.036
+C_LM_bastion,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",H,0.442,0.821,True,21.0,24.0,0.809
+C_LM_belem,C_LM,confirm,False,UNTESTABLE,the model gets the two-hop question wrong,B,0.24,,,,,
+C_LM_blarney,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.96,0.966,True,9.0,27.0,0.958
+C_LM_bled,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.991,0.953,True,6.0,27.0,0.616
+C_LM_bluelagoon,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.993,0.973,True,6.0,27.0,0.34
+C_LM_borobudur,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.978,0.97,True,9.0,27.0,0.96
+C_LM_bran,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",R,0.973,0.967,True,6.0,27.0,0.907
+C_LM_casarosada,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",A,0.968,0.968,True,18.0,27.0,0.967
+C_LM_chichen,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.975,0.958,True,6.0,27.0,0.586
+C_LM_chocolatehills,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.67,0.501,True,9.0,24.0,0.408
+C_LM_diocletian,C_LM,dev,False,UNTESTABLE,the model gets the two-hop question wrong,S,0.184,,,,,
+C_LM_galapagos,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E,0.978,0.964,True,12.0,27.0,0.931
+C_LM_geiranger,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",N,0.985,0.983,True,6.0,27.0,0.905
+C_LM_hagia,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",T,0.91,0.934,True,12.0,24.0,0.603
+C_LM_halong,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",V,0.972,0.969,True,9.0,27.0,0.968
+C_LM_hassan,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.946,0.962,True,21.0,27.0,0.878
+C_LM_kilimanjaro,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",T,0.989,0.969,True,9.0,27.0,0.963
+C_LM_lalibela,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E,0.979,0.977,True,6.0,27.0,0.786
+C_LM_marinabay,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.994,0.983,True,24.0,27.0,0.957
+C_LM_masada,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.906,0.967,True,6.0,27.0,0.956
+C_LM_mermaid,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",D,0.38,0.722,True,21.0,24.0,0.674
+C_LM_moai,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C,0.671,0.738,True,6.0,9.0,0.361
+C_LM_neuschwanstein,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",G,0.859,0.959,True,9.0,24.0,0.253
+C_LM_pashupatinath,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",N,0.947,0.882,True,18.0,27.0,0.88
+C_LM_persepolis,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.861,0.945,True,18.0,27.0,0.816
+C_LM_petra,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",J,0.954,0.964,True,6.0,27.0,0.908
+C_LM_rila,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.964,0.956,True,9.0,27.0,0.912
+C_LM_salar,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.965,0.952,True,12.0,24.0,0.938
+C_LM_schonbrunn,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",A,0.968,0.97,True,12.0,27.0,0.969
+C_LM_suomenlinna,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",F,0.978,0.976,True,6.0,27.0,0.617
+C_LM_tikal,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",G,0.801,0.675,True,21.0,24.0,0.669
+C_LM_timbuktu,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.949,0.884,True,6.0,27.0,0.112
+C_LM_vasa,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.98,0.603,True,6.0,27.0,0.412
+C_LM_watarun,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",T,0.836,0.864,True,12.0,24.0,0.629
+C_LM_wawel,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.973,0.956,True,9.0,27.0,0.894
+C_LP_adele,C_LP,dev,False,UNTESTABLE,the model gets the two-hop question wrong,M,0.176,,,,,
+C_LP_beethoven,C_LP,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.944,0.827,True,18.0,24.0,0.271
+C_LP_benzema,C_LP,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",L,0.643,0.09,True,6.0,24.0,0.084
+C_LP_buffett,C_LP,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",O,0.903,0.885,True,18.0,24.0,0.552
+C_LP_curie,C_LP,dev,False,UNTESTABLE,the model gets the two-hop question wrong,P,0.198,,,,,
+C_LP_dante,C_LP,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",F,0.885,0.84,True,9.0,27.0,0.833
+C_LP_galileo,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.976,0.738,True,6.0,27.0,0.251
+C_LP_graf,C_LP,confirm,False,UNTESTABLE,the model gets hop 1 wrong,M,0.865,,,,,
+C_LP_haaland,C_LP,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",L,0.948,0.0,False,,24.0,0.0
+C_LP_hanks,C_LP,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",C,0.782,0.0,False,,24.0,0.0
+C_LP_hawking,C_LP,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",O,0.861,0.716,True,15.0,24.0,0.381
+C_LP_jordan,C_LP,dev,False,UNTESTABLE,the model gets hop 1 wrong,B,0.881,,,,,
+C_LP_kafka,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.693,0.751,True,18.0,24.0,0.746
+C_LP_kanye,C_LP,confirm,False,UNTESTABLE,the model gets the two-hop question and hop 1 wrong,S,0.009,,,,,
+C_LP_kobe,C_LP,dev,False,UNTESTABLE,the model gets the two-hop question wrong,J,0.023,,,,,
+C_LP_lebron,C_LP,dev,False,UNTESTABLE,the model gets the two-hop question wrong,S,0.078,,,,,
+C_LP_lennon,C_LP,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",L,0.889,0.818,True,21.0,24.0,0.066
+C_LP_magic,C_LP,dev,False,UNTESTABLE,the model gets hop 1 wrong,L,0.318,,,,,
+C_LP_marcopolo,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",V,0.425,0.684,True,24.0,24.0,0.607
+C_LP_merkel,C_LP,dev,False,UNTESTABLE,the model gets the two-hop question and hop 1 wrong,M,0.017,,,,,
+C_LP_messi,C_LP,confirm,False,UNTESTABLE,the model gets the two-hop question wrong,B,0.388,,,,,
+C_LP_obama,C_LP,dev,False,UNTESTABLE,the model gets hop 1 wrong,H,0.989,,,,,
+C_LP_portman,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",J,0.665,0.812,True,21.0,24.0,0.328
+C_LP_reynolds,C_LP,dev,False,UNTESTABLE,the model gets the two-hop question wrong,B,0.206,,,,,
+C_LP_sampras,C_LP,dev,False,UNTESTABLE,the model gets the two-hop question and hop 1 wrong,B,0.017,,,,,
+C_LP_shaq,C_LP,dev,False,UNTESTABLE,the model gets the two-hop question and hop 1 wrong,L,0.01,,,,,
+C_LP_tiger,C_LP,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",C,0.876,0.0,False,-3.0,24.0,0.0
+C_LP_trudeau,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",O,0.54,0.655,True,15.0,24.0,0.294
+C_LP_wilde,C_LP,confirm,False,UNTESTABLE,the model gets the two-hop question wrong,Oscar Wilde was born in,0.155,,,,,
+C_LP_zidane,C_LP,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",M,0.883,0.484,True,27.0,27.0,0.482
+C_LU_ainshams,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C,0.86,0.668,True,6.0,24.0,0.245
+C_LU_bohr,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C,0.841,0.823,True,24.0,24.0,0.718
+C_LU_case,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C,0.974,0.566,True,6.0,27.0,0.006
+C_LU_cmu,C_LU,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.963,0.961,True,21.0,27.0,0.493
+C_LU_complutense,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.909,0.889,True,21.0,24.0,0.814
+C_LU_duke,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",D,0.938,0.608,True,21.0,24.0,0.217
+C_LU_emory,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",A,0.974,0.963,True,12.0,27.0,0.912
+C_LU_erasmus,C_LU,confirm,False,UNTESTABLE,the model gets the two-hop question wrong,A,0.109,,,,,
+C_LU_eth,C_LU,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",Z,0.976,0.939,True,9.0,24.0,0.832
+C_LU_georgetown,C_LU,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",W,0.785,0.879,True,24.0,24.0,0.808
+C_LU_goethe,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",F,0.92,0.944,True,21.0,24.0,0.924
+C_LU_gonzaga,C_LU,confirm,False,UNTESTABLE,the model gets the two-hop question and hop 1 wrong,M,0.03,,,,,
+C_LU_harvard,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C,0.658,0.716,True,6.0,24.0,0.659
+C_LU_heriotwatt,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E,0.923,0.928,True,6.0,24.0,0.414
+C_LU_humboldt,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.948,0.961,True,12.0,27.0,0.949
+C_LU_karolinska,C_LU,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",S,0.872,0.182,True,3.0,24.0,0.088
+C_LU_lomonosov,C_LU,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.929,0.957,True,21.0,24.0,0.526
+C_LU_marquette,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.901,0.851,True,21.0,24.0,0.501
+C_LU_mcgill,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.951,0.95,True,15.0,27.0,0.909
+C_LU_ntu,C_LU,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",T,0.922,0.553,True,6.0,24.0,0.212
+C_LU_puc,C_LU,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",S,0.974,0.06,True,3.0,27.0,0.014
+C_LU_sapienza,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",R,0.98,0.977,True,9.0,27.0,0.975
+C_LU_strathclyde,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",G,0.963,0.975,True,21.0,27.0,0.962
+C_LU_tsinghua,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.941,0.941,True,6.0,24.0,0.644
+C_LU_unsw,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.877,0.862,True,21.0,24.0,0.624
+C_LU_vanderbilt,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",N,0.986,0.98,True,9.0,27.0,0.96
+C_LU_wits,C_LU,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",J,0.925,0.414,True,3.0,24.0,0.056
+C_LU_yonsei,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.946,0.811,True,6.0,27.0,0.551
+C_MN_bastille,C_MN,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",7,0.965,0.934,True,6.0,27.0,0.551
+C_MN_dday,C_MN,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",6,0.973,0.792,True,6.0,27.0,0.195
+C_MN_derby,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",5,0.917,0.027,False,0.0,24.0,0.0
+C_MN_earthday,C_MN,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",4,0.929,0.964,True,15.0,24.0,0.334
+C_MN_fathers,C_MN,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",6,0.72,0.667,True,9.0,24.0,0.406
+C_MN_fringe,C_MN,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",8,0.845,0.603,True,6.0,27.0,0.163
+C_MN_india,C_MN,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",8,0.58,0.878,True,9.0,24.0,0.005
+C_MN_labor,C_MN,confirm,False,UNTESTABLE,the model gets the two-hop question wrong,1,0.098,,,,,
+C_MN_memorial,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",5,0.981,0.0,False,,27.0,0.0
+C_MN_patrick,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",3,0.887,0.316,True,3.0,24.0,0.011
+C_MN_titanic,C_MN,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",4,0.959,0.927,True,9.0,27.0,0.766
+C_MN_tour,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",7,0.888,0.305,True,3.0,24.0,0.065
+C_MN_valentine,C_MN,confirm,False,UNCLEAR,in between,2,0.989,0.103,False,,27.0,0.0
+C_MN_woodstock,C_MN,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",8,0.528,0.288,True,9.0,24.0,0.051
+C_PL_jupiter,C_PL,dev,False,UNTESTABLE,the model gets the two-hop question wrong,8,0.001,,,,,
+C_PL_mars,C_PL,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",4,0.981,0.964,True,9.0,24.0,0.218
+C_PL_neptune,C_PL,confirm,False,ANSWER FROM THE START,"removing the answer already kills it in layers 0–5, before any window where the bridge could act first",8,0.592,,,,0.0,
+C_PL_saturn,C_PL,dev,False,UNTESTABLE,the model gets the two-hop question wrong,7,0.246,,,,,
+C_PL_venus,C_PL,dev,False,UNTESTABLE,the model gets the two-hop question wrong,4,0.008,,,,,
+C_SP_bird,C_SP,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",5,0.988,0.168,False,,24.0,0.0
+C_SP_gretzky,C_SP,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",6,0.78,0.337,True,12.0,18.0,0.299
+C_SP_jeter,C_SP,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",9,0.984,0.97,True,12.0,24.0,0.69
+C_SP_lebron,C_SP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",5,0.963,0.87,True,9.0,24.0,0.056
+C_SP_ruth,C_SP,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",9,0.991,0.936,True,18.0,24.0,0.154
+C_VC_acropolis,C_VC,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",No,0.677,0.0,False,,24.0,0.0
+C_VC_angkor,C_VC,confirm,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",No,0.677,0.002,False,,24.0,0.0
+C_VC_blarney,C_VC,dev,False,UNTESTABLE,the model gets the two-hop question and hop 2 wrong,No,0.432,,,,,
+C_VC_borobudur,C_VC,dev,False,UNTESTABLE,the model gets the two-hop question and hop 2 wrong,No,0.466,,,,,
+C_VC_colosseum,C_VC,dev,False,UNTESTABLE,the model gets the two-hop question and hop 2 wrong,No,0.241,,,,,
+C_VC_eiffel,C_VC,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",No,0.811,0.019,False,,24.0,0.0
+C_VC_fuji,C_VC,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",No,0.714,0.002,False,,24.0,0.0
+C_VC_kremlin,C_VC,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",No,0.773,0.0,False,,24.0,0.0
+C_VC_machu,C_VC,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",No,0.747,0.0,False,,24.0,0.0
+C_VC_opera,C_VC,dev,False,UNTESTABLE,the model gets the two-hop question and hop 2 wrong,No,0.317,,,,,
+C_VC_petra,C_VC,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",No,0.583,0.0,False,,24.0,0.0
+C_VC_pyramids,C_VC,confirm,False,UNTESTABLE,the model gets the two-hop question and hop 2 wrong,No,0.132,,,,,
+C_VC_schonbrunn,C_VC,confirm,False,UNTESTABLE,the model gets the two-hop question and hop 2 wrong,No,0.268,,,,,
+C_VC_taj,C_VC,confirm,False,UNTESTABLE,the model gets the two-hop question and hop 2 wrong,No,0.244,,,,,

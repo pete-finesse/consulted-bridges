@@ -1,0 +1,119 @@
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights: 100%|██████████| 426/426 [00:00<00:00, 4306.51it/s]
+PROGRESS 0/57 starting C_CT_halong
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_CT_halong] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 1/57 starting C_CT_lalibela
+[C_CT_lalibela] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 2/57 starting C_CT_petra
+[C_CT_petra] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 3/57 starting C_CT_wawel
+[C_CT_wawel] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 4/57 starting C_DS_chichen
+[C_DS_chichen] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 5/57 starting C_DS_halong
+[C_DS_halong] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 6/57 starting C_DS_neuschwanstein
+[C_DS_neuschwanstein] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 7/57 starting C_EL_carbon
+[C_EL_carbon] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 8/57 starting C_EL_lithium
+[C_EL_lithium] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 9/57 starting C_EO_colosseum
+[C_EO_colosseum] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 10/57 starting C_EO_machu
+[C_EO_machu] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 11/57 starting C_LM_alhambra
+[C_LM_alhambra] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 12/57 starting C_LM_baalbek
+[C_LM_baalbek] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 13/57 starting C_LM_belem
+[C_LM_belem] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 14/57 starting C_LM_bluelagoon
+[C_LM_bluelagoon] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 15/57 starting C_LM_casarosada
+[C_LM_casarosada] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 16/57 starting C_LM_diocletian
+[C_LM_diocletian] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 17/57 starting C_LM_hagia
+[C_LM_hagia] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 18/57 starting C_LM_kilimanjaro
+[C_LM_kilimanjaro] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 19/57 starting C_LM_masada
+[C_LM_masada] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 20/57 starting C_LM_neuschwanstein
+[C_LM_neuschwanstein] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 21/57 starting C_LM_petra
+[C_LM_petra] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 22/57 starting C_LM_schonbrunn
+[C_LM_schonbrunn] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 23/57 starting C_LM_timbuktu
+[C_LM_timbuktu] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 24/57 starting C_LM_wawel
+[C_LM_wawel] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 25/57 starting C_LP_benzema
+[C_LP_benzema] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 26/57 starting C_LP_dante
+[C_LP_dante] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 27/57 starting C_LP_haaland
+[C_LP_haaland] BYSTANDER: the edit reaches the bridge, but removing it doesn't change the answer
+PROGRESS 28/57 starting C_LP_jordan
+[C_LP_jordan] UNTESTABLE: the model gets hop 1 wrong
+PROGRESS 29/57 starting C_LP_kobe
+[C_LP_kobe] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 30/57 starting C_LP_magic
+[C_LP_magic] UNTESTABLE: the model gets hop 1 wrong
+PROGRESS 31/57 starting C_LP_messi
+[C_LP_messi] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 32/57 starting C_LP_reynolds
+[C_LP_reynolds] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 33/57 starting C_LP_tiger
+[C_LP_tiger] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 34/57 starting C_LP_zidane
+[C_LP_zidane] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 35/57 starting C_LU_case
+[C_LU_case] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 36/57 starting C_LU_duke
+[C_LU_duke] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 37/57 starting C_LU_eth
+[C_LU_eth] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 38/57 starting C_LU_gonzaga
+[C_LU_gonzaga] UNTESTABLE: the model gets the two-hop question and hop 1 wrong
+PROGRESS 39/57 starting C_LU_humboldt
+[C_LU_humboldt] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 40/57 starting C_LU_marquette
+[C_LU_marquette] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 41/57 starting C_LU_puc
+[C_LU_puc] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 42/57 starting C_LU_tsinghua
+[C_LU_tsinghua] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 43/57 starting C_LU_wits
+[C_LU_wits] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 44/57 starting C_MN_dday
+[C_MN_dday] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 45/57 starting C_MN_fathers
+[C_MN_fathers] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 46/57 starting C_MN_labor
+[C_MN_labor] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 47/57 starting C_MN_titanic
+[C_MN_titanic] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 48/57 starting C_MN_woodstock
+[C_MN_woodstock] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 49/57 starting C_PL_neptune
+[C_PL_neptune] ANSWER FROM THE START: removing the answer already kills it in layers 0–5, before any window where the bridge could act first
+PROGRESS 50/57 starting C_SP_bird
+[C_SP_bird] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 51/57 starting C_SP_lebron
+[C_SP_lebron] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 52/57 starting C_VC_angkor
+[C_VC_angkor] BYSTANDER: the edit reaches the bridge, but removing it doesn't change the answer
+PROGRESS 53/57 starting C_VC_colosseum
+[C_VC_colosseum] UNTESTABLE: the model gets the two-hop question and hop 2 wrong
+PROGRESS 54/57 starting C_VC_kremlin
+[C_VC_kremlin] BYSTANDER: the edit reaches the bridge, but removing it doesn't change the answer
+PROGRESS 55/57 starting C_VC_petra
+[C_VC_petra] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 56/57 starting C_VC_taj
+[C_VC_taj] UNTESTABLE: the model gets the two-hop question and hop 2 wrong
+PROGRESS 57/57 ALLDONE
