@@ -1,0 +1,91 @@
+sentence,rule,layers,whole,n_layers,positions,fallback,right,targets,everyday,n_informative,n_follow,follow_share,n_everyday_readable,n_everyday_through,counts,source_everyday_follows,source_kind_follows
+N_BP_senna,A,0-11,False,12,3-29,0,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,0,0,,False,False
+N_BP_senna,A,6-17,False,12,3-29,0,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,0,0,,False,False
+N_BP_senna,A,12-23,False,12,3-29,0,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,0,0,,False,False
+N_BP_senna,A,18-29,False,12,3-29,0,5,"Germany, Argentina, France, England","table, river, garden",4,2,0.5,0,0,,False,False
+N_BP_senna,A,24-35,False,12,3-29,0,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,0,0,,False,False
+N_BP_senna,A,30-41,False,12,3-29,0,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,0,0,,False,False
+N_BP_senna,A,36-47,False,12,3-29,0,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,0,0,,False,False
+N_BP_senna,A,whole,True,48,3-29,0,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,0,0,,False,False
+N_BP_senna,B,0-11,False,12,3-38,0,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,0,0,,False,False
+N_BP_senna,B,6-17,False,12,3-38,0,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,0,0,,False,False
+N_BP_senna,B,12-23,False,12,3-38,0,5,"Germany, Argentina, France, England","table, river, garden",4,2,0.5,0,0,,False,False
+N_BP_senna,B,18-29,False,12,3-38,0,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,0,0,,False,False
+N_BP_senna,B,24-35,False,12,3-38,0,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,0,0,,False,False
+N_BP_senna,B,30-41,False,12,3-38,0,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,0,0,,False,False
+N_BP_senna,B,36-47,False,12,3-38,0,5,"Germany, Argentina, France, England","table, river, garden",4,3,0.75,0,0,,False,False
+N_BP_senna,B,whole,True,48,3-38,0,5,"Germany, Argentina, France, England","table, river, garden",4,2,0.5,0,0,,False,False
+T_place_states_australia,A,0-11,False,12,3-21,0,6,"Austria, America, Germany, India","table, river, garden",4,2,0.5,2,0,True,False,False
+T_place_states_australia,A,6-17,False,12,3-21,6,6,"Austria, America, Germany, India","table, river, garden",4,2,0.5,3,0,True,False,False
+T_place_states_australia,A,12-23,False,12,3-21,0,6,"Austria, America, Germany, India","table, river, garden",4,3,0.75,2,0,True,False,False
+T_place_states_australia,A,18-29,False,12,3-21,0,6,"Austria, America, Germany, India","table, river, garden",4,4,1.0,2,0,True,False,False
+T_place_states_australia,A,24-35,False,12,3-21,0,6,"Austria, America, Germany, India","table, river, garden",4,4,1.0,2,0,True,False,False
+T_place_states_australia,A,30-41,False,12,3-21,6,6,"Austria, America, Germany, India","table, river, garden",4,4,1.0,3,0,True,False,False
+T_place_states_australia,A,36-47,False,12,3-21,6,6,"Austria, America, Germany, India","table, river, garden",4,1,0.25,3,0,True,False,False
+T_place_states_australia,A,42-53,False,12,3-21,6,6,"Austria, America, Germany, India","table, river, garden",4,0,0.0,3,0,True,False,False
+T_place_states_australia,A,whole,True,54,3-21,0,6,"Austria, America, Germany, India","table, river, garden",4,3,0.75,2,0,True,False,False
+T_place_states_australia,B,0-11,False,12,3-30,6,6,"Austria, America, Germany, India","table, river, garden",4,2,0.5,3,1,False,False,False
+T_place_states_australia,B,6-17,False,12,3-30,6,6,"Austria, America, Germany, India","table, river, garden",4,2,0.5,3,0,True,False,False
+T_place_states_australia,B,12-23,False,12,3-30,0,6,"Austria, America, Germany, India","table, river, garden",4,4,1.0,2,0,True,False,False
+T_place_states_australia,B,18-29,False,12,3-30,0,6,"Austria, America, Germany, India","table, river, garden",4,4,1.0,2,0,True,False,False
+T_place_states_australia,B,24-35,False,12,3-30,0,6,"Austria, America, Germany, India","table, river, garden",4,4,1.0,2,0,True,False,False
+T_place_states_australia,B,30-41,False,12,3-30,0,6,"Austria, America, Germany, India","table, river, garden",4,4,1.0,2,0,True,False,False
+T_place_states_australia,B,36-47,False,12,3-30,0,6,"Austria, America, Germany, India","table, river, garden",4,3,0.75,2,0,True,False,False
+T_place_states_australia,B,42-53,False,12,3-30,6,6,"Austria, America, Germany, India","table, river, garden",4,2,0.5,3,0,True,False,False
+T_place_states_australia,B,whole,True,54,3-30,0,6,"Austria, America, Germany, India","table, river, garden",4,3,0.75,2,0,True,False,False
+N_BP_federer,A,0-11,False,12,3-22,4,4,"Belgium, Canada, Germany","table, river, garden",3,1,0.333,3,0,True,False,False
+N_BP_federer,A,6-17,False,12,3-22,4,4,"Belgium, Canada, Germany","table, river, garden",3,3,1.0,3,0,True,False,False
+N_BP_federer,A,12-23,False,12,3-22,4,4,"Belgium, Canada, Germany","table, river, garden",3,3,1.0,3,0,True,False,False
+N_BP_federer,A,18-29,False,12,3-22,4,4,"Belgium, Canada, Germany","table, river, garden",3,3,1.0,3,0,True,False,False
+N_BP_federer,A,24-35,False,12,3-22,4,4,"Belgium, Canada, Germany","table, river, garden",3,3,1.0,3,0,True,False,False
+N_BP_federer,A,whole,True,36,3-22,4,4,"Belgium, Canada, Germany","table, river, garden",3,3,1.0,3,0,True,False,False
+N_BP_federer,B,0-11,False,12,3-31,4,4,"Belgium, Canada, Germany","table, river, garden",3,1,0.333,3,0,True,False,False
+N_BP_federer,B,6-17,False,12,3-31,4,4,"Belgium, Canada, Germany","table, river, garden",3,3,1.0,3,0,True,False,False
+N_BP_federer,B,12-23,False,12,3-31,4,4,"Belgium, Canada, Germany","table, river, garden",3,3,1.0,3,0,True,False,False
+N_BP_federer,B,18-29,False,12,3-31,3,4,"Belgium, Canada, Germany","table, river, garden",2,2,1.0,3,0,True,False,False
+N_BP_federer,B,24-35,False,12,3-31,3,4,"Belgium, Canada, Germany","table, river, garden",2,2,1.0,3,0,True,False,False
+N_BP_federer,B,whole,True,36,3-31,3,4,"Belgium, Canada, Germany","table, river, garden",2,2,1.0,3,0,True,False,False
+N_BP_gandhi,A,0-11,False,12,3-28,2,2,"Australia, England, Bangladesh","table, river, garden",3,0,0.0,3,0,True,False,False
+N_BP_gandhi,A,6-17,False,12,3-28,2,2,"Australia, England, Bangladesh","table, river, garden",3,0,0.0,3,0,True,False,False
+N_BP_gandhi,A,12-23,False,12,3-28,2,2,"Australia, England, Bangladesh","table, river, garden",3,2,0.667,3,1,False,False,False
+N_BP_gandhi,A,18-29,False,12,3-28,2,2,"Australia, England, Bangladesh","table, river, garden",3,1,0.333,3,3,False,False,False
+N_BP_gandhi,A,whole,True,30,3-28,0,2,"Australia, England, Bangladesh","table, river, garden",2,1,0.5,0,0,,False,True
+N_BP_gandhi,B,0-11,False,12,3-37,2,2,"Australia, England, Bangladesh","table, river, garden",3,0,0.0,3,0,True,False,False
+N_BP_gandhi,B,6-17,False,12,3-37,2,2,"Australia, England, Bangladesh","table, river, garden",3,2,0.667,3,0,True,False,False
+N_BP_gandhi,B,12-23,False,12,3-37,0,2,"Australia, England, Bangladesh","table, river, garden",2,1,0.5,0,0,,False,False
+N_BP_gandhi,B,18-29,False,12,3-37,0,2,"Australia, England, Bangladesh","table, river, garden",2,1,0.5,0,0,,False,True
+N_BP_gandhi,B,whole,True,30,3-37,0,2,"Australia, England, Bangladesh","table, river, garden",2,1,0.5,0,0,,False,True
+N_LM_christ,A,0-11,False,12,3-30,5,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,3,0,True,False,False
+N_LM_christ,A,6-17,False,12,3-30,5,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,3,0,True,False,False
+N_LM_christ,A,12-23,False,12,3-30,5,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,3,0,True,False,False
+N_LM_christ,A,18-29,False,12,3-30,5,5,"Germany, Argentina, France, England","table, river, garden",4,3,0.75,3,2,False,False,False
+N_LM_christ,A,24-35,False,12,3-30,5,5,"Germany, Argentina, France, England","table, river, garden",4,2,0.5,3,3,False,False,False
+N_LM_christ,A,30-41,False,12,3-30,5,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,3,0,True,False,False
+N_LM_christ,A,36-47,False,12,3-30,5,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,3,0,True,False,False
+N_LM_christ,A,42-53,False,12,3-30,5,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,3,0,True,False,False
+N_LM_christ,A,whole,True,54,3-30,0,5,"Germany, Argentina, France, England","table, river, garden",4,2,0.5,0,0,,False,False
+N_LM_christ,B,0-11,False,12,3-39,5,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,3,0,True,False,False
+N_LM_christ,B,6-17,False,12,3-39,5,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,3,0,True,False,False
+N_LM_christ,B,12-23,False,12,3-39,5,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,3,0,True,False,False
+N_LM_christ,B,18-29,False,12,3-39,0,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,0,0,,False,False
+N_LM_christ,B,24-35,False,12,3-39,0,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,0,0,,False,False
+N_LM_christ,B,30-41,False,12,3-39,5,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,3,0,True,False,False
+N_LM_christ,B,36-47,False,12,3-39,5,5,"Germany, Argentina, France, England","table, river, garden",4,2,0.5,3,0,True,False,False
+N_LM_christ,B,42-53,False,12,3-39,5,5,"Germany, Argentina, France, England","table, river, garden",4,0,0.0,3,0,True,False,False
+N_LM_christ,B,whole,True,54,3-39,0,5,"Germany, Argentina, France, England","table, river, garden",4,1,0.25,0,0,,False,False
+N_BP_jackman,A,0-11,False,12,3-21,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,A,6-17,False,12,3-21,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,A,12-23,False,12,3-21,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,A,18-29,False,12,3-21,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,A,24-35,False,12,3-21,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,A,30-41,False,12,3-21,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,A,36-47,False,12,3-21,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,A,whole,True,48,3-21,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,B,0-11,False,12,3-30,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,B,6-17,False,12,3-30,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,B,12-23,False,12,3-30,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,B,18-29,False,12,3-30,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False
+N_BP_jackman,B,24-35,False,12,3-30,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,2,0.5,3,0,True,False,False
+N_BP_jackman,B,30-41,False,12,3-30,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,3,0.75,3,0,True,False,False
+N_BP_jackman,B,36-47,False,12,3-30,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,3,0.75,3,0,True,False,False
+N_BP_jackman,B,whole,True,48,3-30,50,6,"Austria, Germany, Brazil, Mexico","table, river, garden",4,0,0.0,3,0,True,False,False

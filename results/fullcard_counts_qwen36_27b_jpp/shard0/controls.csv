@@ -1,0 +1,85 @@
+key,sentence,word,kind,strength,early_drop
+N_BP_corbusier|null|mountain,N_BP_corbusier,mountain,everyday word (noise),0.055,0.143
+N_BP_corbusier|null|brick,N_BP_corbusier,brick,everyday word (noise),0.045,0.028
+N_BP_corbusier|null|chair,N_BP_corbusier,chair,everyday word (noise),0.045,0.082
+N_BP_corbusier|null|table,N_BP_corbusier,table,everyday word (noise),0.042,0.016
+N_BP_corbusier|null|pencil,N_BP_corbusier,pencil,everyday word (noise),0.041,0.054
+N_BP_corbusier|null|window,N_BP_corbusier,window,everyday word (noise),0.04,0.043
+N_BP_corbusier|null|jacket,N_BP_corbusier,jacket,everyday word (noise),0.04,0.074
+N_BP_corbusier|null|river,N_BP_corbusier,river,everyday word (noise),0.038,0.034
+N_BP_corbusier|null|carpet,N_BP_corbusier,carpet,everyday word (noise),0.037,0.087
+N_BP_corbusier|null|spoon,N_BP_corbusier,spoon,everyday word (noise),0.037,0.079
+N_BP_corbusier|null|door,N_BP_corbusier,door,everyday word (noise),0.037,0.043
+N_BP_corbusier|null|garden,N_BP_corbusier,garden,everyday word (noise),0.036,0.054
+N_BP_corbusier|kind|Belgium,N_BP_corbusier,Belgium,"same kind as Switzerland, same answer",,0.678
+N_BP_corbusier|kind|Canada,N_BP_corbusier,Canada,"same kind as Switzerland, same answer",,0.016
+N_BP_coelho|null|ticket,N_BP_coelho,ticket,everyday word (noise),0.051,0.24
+N_BP_coelho|null|helmet,N_BP_coelho,helmet,everyday word (noise),0.048,0.215
+N_BP_coelho|null|table,N_BP_coelho,table,everyday word (noise),0.046,0.021
+N_BP_coelho|null|pencil,N_BP_coelho,pencil,everyday word (noise),0.046,0.013
+N_BP_coelho|null|river,N_BP_coelho,river,everyday word (noise),0.044,0.084
+N_BP_coelho|null|jacket,N_BP_coelho,jacket,everyday word (noise),0.042,0.178
+N_BP_coelho|null|button,N_BP_coelho,button,everyday word (noise),0.04,0.058
+N_BP_coelho|null|kettle,N_BP_coelho,kettle,everyday word (noise),0.037,0.023
+N_BP_coelho|null|blanket,N_BP_coelho,blanket,everyday word (noise),0.037,0.063
+N_BP_coelho|null|door,N_BP_coelho,door,everyday word (noise),0.036,0.073
+N_BP_coelho|null|shoe,N_BP_coelho,shoe,everyday word (noise),0.036,0.23
+N_BP_coelho|null|window,N_BP_coelho,window,everyday word (noise),0.036,0.163
+N_BP_coelho|kind|Argentina,N_BP_coelho,Argentina,"same kind as Brazil, same answer",,0.925
+N_BP_coelho|kind|Italy,N_BP_coelho,Italy,"same kind as Brazil, same answer",,0.471
+N_BP_niemeyer|null|ticket,N_BP_niemeyer,ticket,everyday word (noise),0.053,0.166
+N_BP_niemeyer|null|chair,N_BP_niemeyer,chair,everyday word (noise),0.05,0.149
+N_BP_niemeyer|null|helmet,N_BP_niemeyer,helmet,everyday word (noise),0.047,0.058
+N_BP_niemeyer|null|pencil,N_BP_niemeyer,pencil,everyday word (noise),0.046,0.065
+N_BP_niemeyer|null|table,N_BP_niemeyer,table,everyday word (noise),0.046,0.065
+N_BP_niemeyer|null|river,N_BP_niemeyer,river,everyday word (noise),0.044,0.047
+N_BP_niemeyer|null|brick,N_BP_niemeyer,brick,everyday word (noise),0.043,0.0
+N_BP_niemeyer|null|jacket,N_BP_niemeyer,jacket,everyday word (noise),0.042,0.088
+N_BP_niemeyer|null|kettle,N_BP_niemeyer,kettle,everyday word (noise),0.037,0.042
+N_BP_niemeyer|null|lantern,N_BP_niemeyer,lantern,everyday word (noise),0.037,0.026
+N_BP_niemeyer|null|door,N_BP_niemeyer,door,everyday word (noise),0.037,0.256
+N_BP_niemeyer|null|window,N_BP_niemeyer,window,everyday word (noise),0.036,0.316
+N_BP_niemeyer|kind|Argentina,N_BP_niemeyer,Argentina,"same kind as Brazil, same answer",,0.172
+N_BP_niemeyer|kind|Italy,N_BP_niemeyer,Italy,"same kind as Brazil, same answer",,0.123
+N_BP_herge|null|pencil,N_BP_herge,pencil,everyday word (noise),0.049,0.022
+N_BP_herge|null|ticket,N_BP_herge,ticket,everyday word (noise),0.044,0.001
+N_BP_herge|null|table,N_BP_herge,table,everyday word (noise),0.041,0.014
+N_BP_herge|null|jacket,N_BP_herge,jacket,everyday word (noise),0.039,0.062
+N_BP_herge|null|chair,N_BP_herge,chair,everyday word (noise),0.038,0.0
+N_BP_herge|null|mountain,N_BP_herge,mountain,everyday word (noise),0.037,0.0
+N_BP_herge|null|river,N_BP_herge,river,everyday word (noise),0.037,0.0
+N_BP_herge|null|door,N_BP_herge,door,everyday word (noise),0.036,0.096
+N_BP_herge|null|saddle,N_BP_herge,saddle,everyday word (noise),0.035,0.0
+N_BP_herge|null|button,N_BP_herge,button,everyday word (noise),0.035,0.0
+N_BP_herge|null|hammer,N_BP_herge,hammer,everyday word (noise),0.033,0.0
+N_BP_herge|null|window,N_BP_herge,window,everyday word (noise),0.032,0.109
+N_BP_herge|kind|Switzerland,N_BP_herge,Switzerland,"same kind as Belgium, same answer",,0.0
+N_BP_herge|kind|Canada,N_BP_herge,Canada,"same kind as Belgium, same answer",,0.029
+N_X_mars|null|helmet,N_X_mars,helmet,everyday word (noise),0.062,0.106
+N_X_mars|null|rocket,N_X_mars,rocket,everyday word (noise),0.057,0.071
+N_X_mars|null|cloud,N_X_mars,cloud,everyday word (noise),0.044,0.003
+N_X_mars|null|pencil,N_X_mars,pencil,everyday word (noise),0.043,0.04
+N_X_mars|null|hammer,N_X_mars,hammer,everyday word (noise),0.041,0.115
+N_X_mars|null|mountain,N_X_mars,mountain,everyday word (noise),0.04,0.073
+N_X_mars|null|table,N_X_mars,table,everyday word (noise),0.04,0.045
+N_X_mars|null|jacket,N_X_mars,jacket,everyday word (noise),0.038,0.135
+N_X_mars|null|button,N_X_mars,button,everyday word (noise),0.035,0.067
+N_X_mars|null|mirror,N_X_mars,mirror,everyday word (noise),0.034,0.058
+N_X_mars|null|ticket,N_X_mars,ticket,everyday word (noise),0.034,0.087
+N_X_mars|null|blanket,N_X_mars,blanket,everyday word (noise),0.033,0.05
+N_X_mars|kind|Earth,N_X_mars,Earth,"same kind as Mars, same answer",,0.644
+N_X_mars|kind|Venus,N_X_mars,Venus,"same kind as Mars, same answer",,0.572
+N_BP_haydn|null|jacket,N_BP_haydn,jacket,everyday word (noise),0.043,0.023
+N_BP_haydn|null|mountain,N_BP_haydn,mountain,everyday word (noise),0.042,0.029
+N_BP_haydn|null|table,N_BP_haydn,table,everyday word (noise),0.04,0.03
+N_BP_haydn|null|river,N_BP_haydn,river,everyday word (noise),0.04,0.006
+N_BP_haydn|null|pencil,N_BP_haydn,pencil,everyday word (noise),0.04,0.002
+N_BP_haydn|null|lantern,N_BP_haydn,lantern,everyday word (noise),0.039,0.0
+N_BP_haydn|null|carpet,N_BP_haydn,carpet,everyday word (noise),0.037,0.013
+N_BP_haydn|null|ticket,N_BP_haydn,ticket,everyday word (noise),0.036,0.013
+N_BP_haydn|null|chair,N_BP_haydn,chair,everyday word (noise),0.036,0.005
+N_BP_haydn|null|cloud,N_BP_haydn,cloud,everyday word (noise),0.034,0.006
+N_BP_haydn|null|barrel,N_BP_haydn,barrel,everyday word (noise),0.034,0.005
+N_BP_haydn|null|button,N_BP_haydn,button,everyday word (noise),0.033,0.02
+N_BP_haydn|kind|Germany,N_BP_haydn,Germany,"same kind as Austria, same answer",,0.058
+N_BP_haydn|kind|Switzerland,N_BP_haydn,Switzerland,"same kind as Austria, same answer",,0.213

@@ -1,0 +1,46 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+N_BP_corbusier|Belgium,N_BP_corbusier,Belgium,layers 12–35,Three,4,didn't follow
+N_BP_corbusier|Canada,N_BP_corbusier,Canada,layers 12–35,Two,4,didn't follow
+N_BP_corbusier|France,N_BP_corbusier,France,layers 12–35,24,4,no usable belief
+N_BP_corbusier|Germany,N_BP_corbusier,Germany,layers 12–35,One,1,"gave it, but it's also the fallback"
+N_BP_corbusier|Netherlands,N_BP_corbusier,Netherlands,layers 12–35,One,4,didn't follow
+N_BP_corbusier|Spain,N_BP_corbusier,Spain,layers 12–35,Four,2,lost the answer
+N_BP_corbusier|Italy,N_BP_corbusier,Italy,layers 12–35,1,4,didn't follow
+N_BP_corbusier|Finland,N_BP_corbusier,Finland,layers 12–35,Two,2,followed the swap
+N_BP_coelho|Germany,N_BP_coelho,Germany,layers 12–29,Four,0,didn't follow
+N_BP_coelho|Italy,N_BP_coelho,Italy,layers 12–29,Four,0,didn't follow
+N_BP_coelho|Argentina,N_BP_coelho,Argentina,layers 12–29,Three,0,didn't follow
+N_BP_coelho|France,N_BP_coelho,France,layers 12–29,Two,0,didn't follow
+N_BP_coelho|Uruguay,N_BP_coelho,Uruguay,layers 12–29,Two,0,didn't follow
+N_BP_coelho|England,N_BP_coelho,England,layers 12–29,Once,0,didn't follow
+N_BP_coelho|Spain,N_BP_coelho,Spain,layers 12–29,One,0,didn't follow
+N_BP_niemeyer|Germany,N_BP_niemeyer,Germany,layers 12–35,Four,0,didn't follow
+N_BP_niemeyer|Italy,N_BP_niemeyer,Italy,layers 12–35,Four,Five,didn't follow
+N_BP_niemeyer|Argentina,N_BP_niemeyer,Argentina,layers 12–35,Three,Five,didn't follow
+N_BP_niemeyer|France,N_BP_niemeyer,France,layers 12–35,Two,0,didn't follow
+N_BP_niemeyer|Uruguay,N_BP_niemeyer,Uruguay,layers 12–35,Two,Five,didn't follow
+N_BP_niemeyer|England,N_BP_niemeyer,England,layers 12–35,Once,0,didn't follow
+N_BP_niemeyer|Spain,N_BP_niemeyer,Spain,layers 12–35,One,0,didn't follow
+N_BP_herge|Switzerland,N_BP_herge,Switzerland,layers 12–35,Four,4,followed the swap
+N_BP_herge|Canada,N_BP_herge,Canada,layers 12–35,Two,3,didn't follow
+N_BP_herge|France,N_BP_herge,France,layers 12–35,One,Three,didn't follow
+N_BP_herge|Germany,N_BP_herge,Germany,layers 12–35,One,4,didn't follow
+N_BP_herge|Netherlands,N_BP_herge,Netherlands,layers 12–35,One,3,didn't follow
+N_BP_herge|Spain,N_BP_herge,Spain,layers 12–35,Five,4,didn't follow
+N_BP_herge|Italy,N_BP_herge,Italy,layers 12–35,One,4,didn't follow
+N_BP_herge|Finland,N_BP_herge,Finland,layers 12–35,Two,3,didn't follow
+N_X_mars|Earth,N_X_mars,Earth,layers 12–47,One,Two,didn't follow
+N_X_mars|Venus,N_X_mars,Venus,layers 12–47,Zero,Two,didn't follow
+N_X_mars|Mercury,N_X_mars,Mercury,layers 12–47,Zero,Two,didn't follow
+N_X_mars|Jupiter,N_X_mars,Jupiter,layers 12–47,95,Two,no usable belief
+N_X_mars|Saturn,N_X_mars,Saturn,layers 12–47,146,2,no usable belief
+N_X_mars|Neptune,N_X_mars,Neptune,layers 12–47,14,95,didn't follow
+N_X_mars|Pluto,N_X_mars,Pluto,layers 12–47,Five,92,didn't follow
+N_BP_haydn|Germany,N_BP_haydn,Germany,layers 12–53,16,16,"gave it, but it's also the fallback"
+N_BP_haydn|Switzerland,N_BP_haydn,Switzerland,layers 12–53,26,26,followed the swap
+N_BP_haydn|Brazil,N_BP_haydn,Brazil,layers 12–53,26,16,didn't follow
+N_BP_haydn|Mexico,N_BP_haydn,Mexico,layers 12–53,32,16,didn't follow
+N_BP_haydn|India,N_BP_haydn,India,layers 12–53,28,16,didn't follow
+N_BP_haydn|Nigeria,N_BP_haydn,Nigeria,layers 12–53,36,16,no usable belief
+N_BP_haydn|Malaysia,N_BP_haydn,Malaysia,layers 12–53,13,16,didn't follow
+N_BP_haydn|Venezuela,N_BP_haydn,Venezuela,layers 12–53,23,16,no usable belief

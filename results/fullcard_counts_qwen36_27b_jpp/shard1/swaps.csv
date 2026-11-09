@@ -1,0 +1,45 @@
+key,sentence,swapped_in,layers,model_says_its_answer,model_answered,outcome
+N_BP_senna|Germany,N_BP_senna,Germany,layers 12–47,Four,0,didn't follow
+N_BP_senna|Italy,N_BP_senna,Italy,layers 12–47,Four,0,didn't follow
+N_BP_senna|Argentina,N_BP_senna,Argentina,layers 12–47,Three,0,didn't follow
+N_BP_senna|France,N_BP_senna,France,layers 12–47,Two,0,didn't follow
+N_BP_senna|Uruguay,N_BP_senna,Uruguay,layers 12–47,Two,0,didn't follow
+N_BP_senna|England,N_BP_senna,England,layers 12–47,Once,0,didn't follow
+N_BP_senna|Spain,N_BP_senna,Spain,layers 12–47,One,0,didn't follow
+T_place_states_australia|Austria,T_place_states_australia,Austria,layers 12–53,9,None,didn't follow
+T_place_states_australia|America,T_place_states_australia,America,layers 12–53,50,50,followed the swap
+T_place_states_australia|Germany,T_place_states_australia,Germany,layers 12–53,16,Six,didn't follow
+T_place_states_australia|India,T_place_states_australia,India,layers 12–53,28,28,followed the swap
+T_place_states_australia|Brazil,T_place_states_australia,Brazil,layers 12–53,26,6,didn't follow
+T_place_states_australia|Mexico,T_place_states_australia,Mexico,layers 12–53,32,6,didn't follow
+T_place_states_australia|Malaysia,T_place_states_australia,Malaysia,layers 12–53,13,None,didn't follow
+N_BP_federer|Belgium,N_BP_federer,Belgium,layers 12–35,Three,4,didn't follow
+N_BP_federer|Canada,N_BP_federer,Canada,layers 12–35,Two,4,didn't follow
+N_BP_federer|France,N_BP_federer,France,layers 12–35,24,4,no usable belief
+N_BP_federer|Germany,N_BP_federer,Germany,layers 12–35,One,4,didn't follow
+N_BP_federer|Netherlands,N_BP_federer,Netherlands,layers 12–35,One,4,didn't follow
+N_BP_federer|Spain,N_BP_federer,Spain,layers 12–35,Four,4,kept the answer
+N_BP_federer|Italy,N_BP_federer,Italy,layers 12–35,1,4,didn't follow
+N_BP_federer|Finland,N_BP_federer,Finland,layers 12–35,Two,4,didn't follow
+N_BP_gandhi|Australia,N_BP_gandhi,Australia,layers 12–29,Six,Two,didn't follow
+N_BP_gandhi|England,N_BP_gandhi,England,layers 12–29,1,Two,didn't follow
+N_BP_gandhi|Pakistan,N_BP_gandhi,Pakistan,layers 12–29,1,Two,didn't follow
+N_BP_gandhi|Bangladesh,N_BP_gandhi,Bangladesh,layers 12–29,Zero,Two,didn't follow
+N_BP_gandhi|Afghanistan,N_BP_gandhi,Afghanistan,layers 12–29,Zero,Two,didn't follow
+N_BP_gandhi|Ireland,N_BP_gandhi,Ireland,layers 12–29,Zero,0,"gave it, but it's also the fallback"
+N_BP_gandhi|Kenya,N_BP_gandhi,Kenya,layers 12–29,Zero,Two,didn't follow
+N_LM_christ|Germany,N_LM_christ,Germany,layers 12–53,Four,5,didn't follow
+N_LM_christ|Italy,N_LM_christ,Italy,layers 12–53,Four,Five,didn't follow
+N_LM_christ|Argentina,N_LM_christ,Argentina,layers 12–53,Three,5,didn't follow
+N_LM_christ|France,N_LM_christ,France,layers 12–53,Two,Five,didn't follow
+N_LM_christ|Uruguay,N_LM_christ,Uruguay,layers 12–53,Two,Five,didn't follow
+N_LM_christ|England,N_LM_christ,England,layers 12–53,Once,Five,didn't follow
+N_LM_christ|Spain,N_LM_christ,Spain,layers 12–53,One,5,didn't follow
+N_BP_jackman|Austria,N_BP_jackman,Austria,layers 12–47,9,50,didn't follow
+N_BP_jackman|Germany,N_BP_jackman,Germany,layers 12–47,16,50,didn't follow
+N_BP_jackman|Brazil,N_BP_jackman,Brazil,layers 12–47,26,50,didn't follow
+N_BP_jackman|Mexico,N_BP_jackman,Mexico,layers 12–47,32,50,didn't follow
+N_BP_jackman|India,N_BP_jackman,India,layers 12–47,28,50,didn't follow
+N_BP_jackman|Nigeria,N_BP_jackman,Nigeria,layers 12–47,36,50,no usable belief
+N_BP_jackman|Malaysia,N_BP_jackman,Malaysia,layers 12–47,13,50,didn't follow
+N_BP_jackman|Venezuela,N_BP_jackman,Venezuela,layers 12–47,23,50,no usable belief

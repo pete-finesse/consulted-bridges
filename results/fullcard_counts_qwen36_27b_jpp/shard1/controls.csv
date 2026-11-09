@@ -1,0 +1,85 @@
+key,sentence,word,kind,strength,early_drop
+N_BP_senna|null|helmet,N_BP_senna,helmet,everyday word (noise),0.066,0.048
+N_BP_senna|null|ticket,N_BP_senna,ticket,everyday word (noise),0.052,0.183
+N_BP_senna|null|pencil,N_BP_senna,pencil,everyday word (noise),0.046,0.071
+N_BP_senna|null|table,N_BP_senna,table,everyday word (noise),0.046,0.128
+N_BP_senna|null|river,N_BP_senna,river,everyday word (noise),0.044,0.094
+N_BP_senna|null|jacket,N_BP_senna,jacket,everyday word (noise),0.043,0.168
+N_BP_senna|null|rocket,N_BP_senna,rocket,everyday word (noise),0.041,0.109
+N_BP_senna|null|kettle,N_BP_senna,kettle,everyday word (noise),0.039,0.075
+N_BP_senna|null|barrel,N_BP_senna,barrel,everyday word (noise),0.038,0.144
+N_BP_senna|null|shoe,N_BP_senna,shoe,everyday word (noise),0.038,0.145
+N_BP_senna|null|brick,N_BP_senna,brick,everyday word (noise),0.038,0.039
+N_BP_senna|null|window,N_BP_senna,window,everyday word (noise),0.038,0.303
+N_BP_senna|kind|Argentina,N_BP_senna,Argentina,"same kind as Brazil, same answer",,0.852
+N_BP_senna|kind|Italy,N_BP_senna,Italy,"same kind as Brazil, same answer",,0.271
+T_place_states_australia|null|ticket,T_place_states_australia,ticket,everyday word (noise),0.071,0.137
+T_place_states_australia|null|river,T_place_states_australia,river,everyday word (noise),0.052,0.0
+T_place_states_australia|null|table,T_place_states_australia,table,everyday word (noise),0.046,0.128
+T_place_states_australia|null|mountain,T_place_states_australia,mountain,everyday word (noise),0.044,0.068
+T_place_states_australia|null|pencil,T_place_states_australia,pencil,everyday word (noise),0.042,0.0
+T_place_states_australia|null|jacket,T_place_states_australia,jacket,everyday word (noise),0.04,0.153
+T_place_states_australia|null|button,T_place_states_australia,button,everyday word (noise),0.04,0.147
+T_place_states_australia|null|door,T_place_states_australia,door,everyday word (noise),0.04,0.257
+T_place_states_australia|null|hammer,T_place_states_australia,hammer,everyday word (noise),0.038,0.0
+T_place_states_australia|null|window,T_place_states_australia,window,everyday word (noise),0.038,0.198
+T_place_states_australia|null|brick,T_place_states_australia,brick,everyday word (noise),0.037,0.066
+T_place_states_australia|null|rocket,T_place_states_australia,rocket,everyday word (noise),0.035,0.024
+T_place_states_australia|kind|Canada,T_place_states_australia,Canada,"same kind as Australia, same answer",,0.128
+T_place_states_australia|kind|Brazil,T_place_states_australia,Brazil,"same kind as Australia, same answer",,0.094
+N_BP_federer|null|mountain,N_BP_federer,mountain,everyday word (noise),0.046,0.011
+N_BP_federer|null|lantern,N_BP_federer,lantern,everyday word (noise),0.044,0.024
+N_BP_federer|null|table,N_BP_federer,table,everyday word (noise),0.042,0.029
+N_BP_federer|null|pencil,N_BP_federer,pencil,everyday word (noise),0.041,0.071
+N_BP_federer|null|river,N_BP_federer,river,everyday word (noise),0.041,0.0
+N_BP_federer|null|jacket,N_BP_federer,jacket,everyday word (noise),0.041,0.074
+N_BP_federer|null|rocket,N_BP_federer,rocket,everyday word (noise),0.04,0.019
+N_BP_federer|null|ticket,N_BP_federer,ticket,everyday word (noise),0.038,0.047
+N_BP_federer|null|helmet,N_BP_federer,helmet,everyday word (noise),0.037,0.003
+N_BP_federer|null|shoe,N_BP_federer,shoe,everyday word (noise),0.035,0.034
+N_BP_federer|null|bottle,N_BP_federer,bottle,everyday word (noise),0.035,0.034
+N_BP_federer|null|door,N_BP_federer,door,everyday word (noise),0.034,0.067
+N_BP_federer|kind|Belgium,N_BP_federer,Belgium,"same kind as Switzerland, same answer",,0.029
+N_BP_federer|kind|Canada,N_BP_federer,Canada,"same kind as Switzerland, same answer",,0.046
+N_BP_gandhi|null|ticket,N_BP_gandhi,ticket,everyday word (noise),0.052,0.098
+N_BP_gandhi|null|helmet,N_BP_gandhi,helmet,everyday word (noise),0.052,0.087
+N_BP_gandhi|null|barrel,N_BP_gandhi,barrel,everyday word (noise),0.05,0.086
+N_BP_gandhi|null|table,N_BP_gandhi,table,everyday word (noise),0.046,0.029
+N_BP_gandhi|null|river,N_BP_gandhi,river,everyday word (noise),0.044,0.047
+N_BP_gandhi|null|pencil,N_BP_gandhi,pencil,everyday word (noise),0.042,0.035
+N_BP_gandhi|null|saddle,N_BP_gandhi,saddle,everyday word (noise),0.041,0.048
+N_BP_gandhi|null|jacket,N_BP_gandhi,jacket,everyday word (noise),0.04,0.05
+N_BP_gandhi|null|hammer,N_BP_gandhi,hammer,everyday word (noise),0.04,0.093
+N_BP_gandhi|null|bread,N_BP_gandhi,bread,everyday word (noise),0.038,0.048
+N_BP_gandhi|null|chair,N_BP_gandhi,chair,everyday word (noise),0.038,0.048
+N_BP_gandhi|null|kettle,N_BP_gandhi,kettle,everyday word (noise),0.037,0.042
+N_BP_gandhi|kind|Pakistan,N_BP_gandhi,Pakistan,"same kind as India, same answer",,0.104
+N_BP_gandhi|kind|England,N_BP_gandhi,England,"same kind as India, same answer",,0.004
+N_LM_christ|null|kitchen,N_LM_christ,kitchen,everyday word (noise),0.057,0.088
+N_LM_christ|null|ticket,N_LM_christ,ticket,everyday word (noise),0.05,0.128
+N_LM_christ|null|helmet,N_LM_christ,helmet,everyday word (noise),0.048,0.013
+N_LM_christ|null|mountain,N_LM_christ,mountain,everyday word (noise),0.048,0.072
+N_LM_christ|null|brick,N_LM_christ,brick,everyday word (noise),0.046,0.002
+N_LM_christ|null|pencil,N_LM_christ,pencil,everyday word (noise),0.046,0.017
+N_LM_christ|null|table,N_LM_christ,table,everyday word (noise),0.046,0.061
+N_LM_christ|null|river,N_LM_christ,river,everyday word (noise),0.045,0.0
+N_LM_christ|null|jacket,N_LM_christ,jacket,everyday word (noise),0.043,0.101
+N_LM_christ|null|cloud,N_LM_christ,cloud,everyday word (noise),0.041,0.015
+N_LM_christ|null|chair,N_LM_christ,chair,everyday word (noise),0.039,0.056
+N_LM_christ|null|door,N_LM_christ,door,everyday word (noise),0.039,0.185
+N_LM_christ|kind|Argentina,N_LM_christ,Argentina,"same kind as Brazil, same answer",,0.037
+N_LM_christ|kind|France,N_LM_christ,France,"same kind as Brazil, same answer",,0.033
+N_BP_jackman|null|river,N_BP_jackman,river,everyday word (noise),0.052,0.003
+N_BP_jackman|null|jacket,N_BP_jackman,jacket,everyday word (noise),0.048,0.039
+N_BP_jackman|null|table,N_BP_jackman,table,everyday word (noise),0.046,0.067
+N_BP_jackman|null|mountain,N_BP_jackman,mountain,everyday word (noise),0.045,0.0
+N_BP_jackman|null|ticket,N_BP_jackman,ticket,everyday word (noise),0.043,0.044
+N_BP_jackman|null|pencil,N_BP_jackman,pencil,everyday word (noise),0.043,0.126
+N_BP_jackman|null|button,N_BP_jackman,button,everyday word (noise),0.041,0.066
+N_BP_jackman|null|basket,N_BP_jackman,basket,everyday word (noise),0.039,0.087
+N_BP_jackman|null|door,N_BP_jackman,door,everyday word (noise),0.036,0.163
+N_BP_jackman|null|window,N_BP_jackman,window,everyday word (noise),0.035,0.102
+N_BP_jackman|null|cloud,N_BP_jackman,cloud,everyday word (noise),0.033,0.12
+N_BP_jackman|null|rocket,N_BP_jackman,rocket,everyday word (noise),0.033,0.054
+N_BP_jackman|kind|Austria,N_BP_jackman,Austria,"same kind as Australia, same answer",,0.289
+N_BP_jackman|kind|Germany,N_BP_jackman,Germany,"same kind as Australia, same answer",,0.172

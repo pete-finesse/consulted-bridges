@@ -1,0 +1,24 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   8%|▊         | 69/851 [00:00<00:01, 673.80it/s]Loading weights:  16%|█▌        | 137/851 [00:00<00:01, 480.31it/s]Loading weights:  23%|██▎       | 192/851 [00:00<00:01, 504.27it/s]Loading weights:  29%|██▉       | 245/851 [00:00<00:01, 491.04it/s]Loading weights:  35%|███▌      | 299/851 [00:00<00:01, 501.32it/s]Loading weights:  41%|████      | 351/851 [00:00<00:01, 458.54it/s]Loading weights:  49%|████▉     | 419/851 [00:00<00:00, 520.77it/s]Loading weights:  57%|█████▋    | 481/851 [00:00<00:00, 540.41it/s]Loading weights:  63%|██████▎   | 537/851 [00:01<00:00, 480.39it/s]Loading weights:  70%|███████   | 599/851 [00:01<00:00, 517.55it/s]Loading weights:  77%|███████▋  | 653/851 [00:01<00:00, 458.26it/s]Loading weights: 100%|██████████| 851/851 [00:01<00:00, 606.94it/s]
+PROGRESS 0/6 starting N_BP_senna
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[N_BP_senna] swap test: swapA_follow 0.25, swapA_n 4, swapA_counts None, swapB_follow 0.5, swapB_n 4, swapB_counts None, swapA_windows_counted 0, swapA_windows 7, swapB_windows_counted 0, swapB_windows 7
+[N_BP_senna] CATEGORY EFFECT: needed and first, but removing “Argentina” does about the same
+PROGRESS 1/6 starting T_place_states_australia
+[T_place_states_australia] swap test: swapA_follow 0.75, swapA_n 4, swapA_counts True, swapB_follow 0.75, swapB_n 4, swapB_counts True, swapA_windows_counted 8, swapA_windows 8, swapB_windows_counted 7, swapB_windows 8
+[T_place_states_australia] CONSULTED BRIDGE: needed early, beats noise, comes first, beats its own kind, no collateral
+PROGRESS 2/6 starting N_BP_federer
+[N_BP_federer] swap test: swapA_follow 1.0, swapA_n 3, swapA_counts True, swapB_follow 1.0, swapB_n 2, swapB_counts True, swapA_windows_counted 5, swapA_windows 5, swapB_windows_counted 5, swapB_windows 5
+[N_BP_federer] CONSULTED BRIDGE: needed early, beats noise, comes first, beats its own kind, no collateral
+PROGRESS 3/6 starting N_BP_gandhi
+[N_BP_gandhi] swap test: swapA_follow 0.5, swapA_n 2, swapA_counts None, swapB_follow 0.5, swapB_n 2, swapB_counts None, swapA_windows_counted 2, swapA_windows 4, swapB_windows_counted 2, swapB_windows 4
+[N_BP_gandhi] CONSULTED BRIDGE: needed early, beats noise, comes first, beats its own kind, no collateral
+PROGRESS 4/6 starting N_LM_christ
+[N_LM_christ] swap test: swapA_follow 0.5, swapA_n 4, swapA_counts None, swapB_follow 0.25, swapB_n 4, swapB_counts None, swapA_windows_counted 6, swapA_windows 8, swapB_windows_counted 6, swapB_windows 8
+[N_LM_christ] CONSULTED BRIDGE: needed early, beats noise, comes first, beats its own kind, no collateral
+PROGRESS 5/6 starting N_BP_jackman
+[N_BP_jackman] swap test: swapA_follow 0.0, swapA_n 4, swapA_counts True, swapB_follow 0.0, swapB_n 4, swapB_counts True, swapA_windows_counted 7, swapA_windows 7, swapB_windows_counted 7, swapB_windows 7
+[N_BP_jackman] CONSULTED BRIDGE: needed early, beats noise, comes first, beats its own kind, no collateral
+PROGRESS 6/6 ALLDONE
+STEP DONE card qwen36_27b_jpp 1/2
