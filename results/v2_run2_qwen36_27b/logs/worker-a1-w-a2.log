@@ -1,0 +1,5 @@
+== 08:40:54 [a2] worker up on 5a48d44a5230, NVIDIA A100 80GB PCIe
+== 08:40:54 [a2] start: chain neutral 0 13
+== 09:03:18 [a2] done (1344s): chain neutral 0 13
+== 09:03:18 [a2] start: chain defer 1 13
+a2 duplicate of chain defer 1 stopped 09:12; x1 ran it

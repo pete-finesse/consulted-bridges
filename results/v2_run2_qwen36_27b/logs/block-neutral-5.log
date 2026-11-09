@@ -1,0 +1,35 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 9264.57it/s]
+PROGRESS 0/2 L_york
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_york alone] A 0.94 B 0.01 (1s)
+[L_york agree1] A 0.92 B 0.38 C 0.92 C_late 0.94 D 0.08 D_late 0.26 (1s)
+[L_york agree2] A 0.98 B 0.94 C 0.89 C_late 0.96 D 0.13 D_late 0.69 (1s)
+[L_york agree3] A 0.98 B 0.96 C 0.87 C_late 0.96 D 0.20 D_late 0.93 (1s)
+[L_york disagree1] A 0.90 B 0.02 C 0.92 C_late 0.92 D 0.07 D_late 0.02 (1s)
+[L_york disagree2] A 0.31 B 0.02 C 0.88 C_late 0.64 D 0.23 D_late 0.03 (1s)
+[L_york disagree3] A 0.29 B 0.02 C 0.86 C_late 0.62 D 0.24 D_late 0.02 (1s)
+[L_york copy3] A 0.00 B 0.00 C 0.05 C_late 0.01 D 0.05 D_late 0.01 (1s)
+[L_york hidden1] A 0.92 B 0.03 C 0.92 C_late 0.93 D 0.05 D_late 0.04 (1s)
+[L_york hidden2] A 0.87 B 0.12 C 0.89 C_late 0.87 D 0.13 D_late 0.13 (1s)
+[L_york hidden3] A 0.83 B 0.13 C 0.87 C_late 0.83 D 0.14 D_late 0.13 (1s)
+[L_york hidden_sub3] A 0.83 B 0.15 C 0.86 C_late 0.83 D 0.18 D_late 0.15 (1s)
+[L_york told_copy3] A 0.00 B 0.00 C 0.70 C_late 0.00 D 0.06 D_late 0.00 (1s)
+[L_york copy_alone] A 0.05 B 0.05 (0s)
+[L_york patch] P_all 0.83 (14s)
+PROGRESS 1/2 V_LP_hemsworth
+[V_LP_hemsworth alone] A 0.89 B 0.00 (0s)
+[V_LP_hemsworth agree1] A 0.98 B 0.44 C 0.97 C_late 0.92 D 0.03 D_late 0.03 (1s)
+[V_LP_hemsworth agree2] A 0.99 B 0.83 C 0.85 C_late 0.98 D 0.01 D_late 0.20 (1s)
+[V_LP_hemsworth agree3] A 0.99 B 0.88 C 0.82 C_late 0.98 D 0.01 D_late 0.34 (1s)
+[V_LP_hemsworth disagree1] A 0.78 B 0.01 C 0.97 C_late 0.90 D 0.01 D_late 0.02 (1s)
+[V_LP_hemsworth disagree2] A 0.19 B 0.00 C 0.86 C_late 0.75 D 0.01 D_late 0.01 (1s)
+[V_LP_hemsworth disagree3] A 0.18 B 0.00 C 0.81 C_late 0.54 D 0.01 D_late 0.00 (1s)
+[V_LP_hemsworth hidden1] A 0.96 B 0.01 C 0.97 C_late 0.95 D 0.01 D_late 0.01 (1s)
+[V_LP_hemsworth hidden2] A 0.85 B 0.01 C 0.85 C_late 0.84 D 0.01 D_late 0.01 (1s)
+[V_LP_hemsworth hidden3] A 0.90 B 0.01 C 0.82 C_late 0.89 D 0.01 D_late 0.01 (1s)
+[V_LP_hemsworth hidden_sub3] A 0.88 B 0.01 C 0.75 C_late 0.87 D 0.01 D_late 0.01 (1s)
+[V_LP_hemsworth told_copy3] A 0.00 B 0.00 C 0.19 C_late 0.00 D 0.01 D_late 0.00 (1s)
+[V_LP_hemsworth patch] P_all 0.89 (13s)
+PROGRESS ALLDONE

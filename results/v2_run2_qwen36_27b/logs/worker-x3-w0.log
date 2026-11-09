@@ -1,0 +1,6 @@
+== 08:48:04 [x3-0] worker up on ce7d7ab59e1c, NVIDIA H200
+== 08:48:04 [x3-0] start: chain neutral 6 13
+== 09:00:02 [x3-0] done (718s): chain neutral 6 13
+== 09:00:02 [x3-0] start: screen qwen36_27b 1 12
+== 09:04:27 [x3-0] done (265s): screen qwen36_27b 1 12
+== 09:04:27 [x3-0] queue empty: WORKER DONE

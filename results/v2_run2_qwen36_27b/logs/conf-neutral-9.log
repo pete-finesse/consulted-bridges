@@ -1,0 +1,93 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 8896.51it/s]
+PROGRESS 0/44 V_LM_kremlin alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[V_LM_kremlin alone] says 'R' (right) P(right) 1.00 P(peer) 0.00 onset 54 | need 1.00 bridge dLO +10.29 noise +0.18 kind 0.1227538888267059 | reach 1.00 rank 0 | bridge still needed (12s)
+PROGRESS 1/44 V_LM_kremlin agree1
+[V_LM_kremlin agree1] says 'R' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.99 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (9s)
+PROGRESS 2/44 V_LM_kremlin agree2
+[V_LM_kremlin agree2] says 'R' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.98 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (11s)
+PROGRESS 3/44 V_LM_kremlin agree3
+[V_LM_kremlin agree3] says 'R' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.98 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 4/44 V_LM_kremlin disagree1
+[V_LM_kremlin disagree1] says 'R' (holds) P(right) 1.00 P(peer) 0.00 onset 54 | need 1.00 bridge dLO +9.31 noise +1.00 kind 0.3744986455268995 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS 5/44 V_LM_kremlin disagree2
+[V_LM_kremlin disagree2] says 'R' (holds) P(right) 0.77 P(peer) 0.22 onset 48 | need 0.91 bridge dLO +8.62 noise +0.37 kind 0.37499846135021386 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS 6/44 V_LM_kremlin disagree3
+[V_LM_kremlin disagree3] says 'R' (holds) P(right) 0.79 P(peer) 0.20 onset 54 | need 0.85 bridge dLO +8.62 noise +0.62 kind 0.3749985097899876 | reach 1.00 rank 0 | bridge still pulls (17s)
+PROGRESS 7/44 V_LM_kremlin hidden1
+[V_LM_kremlin hidden1] says 'R' (right) P(right) 0.99 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (11s)
+PROGRESS 8/44 V_LM_kremlin hidden2
+[V_LM_kremlin hidden2] says 'R' (right) P(right) 0.99 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (11s)
+PROGRESS 9/44 V_LM_kremlin hidden3
+[V_LM_kremlin hidden3] says 'R' (right) P(right) 1.00 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (11s)
+PROGRESS 10/44 V_LM_kremlin hidden_sub1
+[V_LM_kremlin hidden_sub1] says 'R' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (11s)
+PROGRESS 11/44 V_LM_kremlin hidden_sub2
+[V_LM_kremlin hidden_sub2] says 'R' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (11s)
+PROGRESS 12/44 V_LM_kremlin hidden_sub3
+[V_LM_kremlin hidden_sub3] says 'R' (right) P(right) 0.99 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 13/44 V_LM_kremlin disagree_g1
+[V_LM_kremlin disagree_g1] says 'R' (holds) P(right) 0.94 P(peer) 0.05 onset 54 | need 0.74 bridge dLO +10.50 noise +2.00 kind 0.4999925930167026 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS 14/44 V_LM_kremlin disagree_g2
+[V_LM_kremlin disagree_g2] says 'C' (full give-in) P(right) 0.12 P(peer) 0.88 onset 18 | need -0.36 bridge dLO -0.75 noise +0.50 kind 0.2499977900801822 | reach 0.00 rank 0 | mixed (7s)
+PROGRESS 15/44 V_LM_kremlin disagree_g3
+[V_LM_kremlin disagree_g3] says 'C' (full give-in) P(right) 0.06 P(peer) 0.94 onset 18 | need -0.21 bridge dLO -1.25 noise +0.25 kind 0.3749926135567687 | reach 0.00 rank 0 | mixed (6s)
+PROGRESS 16/44 V_LM_kremlin told_copy3
+[V_LM_kremlin told_copy3] says 'P' (full give-in) P(right) 0.01 P(peer) 0.98 onset 54 | need 0.68 bridge dLO +4.62 noise +0.37 kind 0.24997761787558836 | reach 1.00 rank 0 | bridge still pulls (18s)
+PROGRESS 17/44 V_LM_kremlin told_ignore3
+[V_LM_kremlin told_ignore3] says 'R' (holds) P(right) 0.94 P(peer) 0.06 onset 54 | need 0.96 bridge dLO +9.37 noise +0.50 kind 0.3749947558071032 | reach 1.00 rank 0 | bridge still pulls (18s)
+PROGRESS 18/44 V_LM_kremlin peer_bridge1
+[V_LM_kremlin peer_bridge1] says 'R' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.05 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.76 rank 0 | bridge not needed (11s)
+PROGRESS 19/44 V_LM_kremlin peer_bridge3
+[V_LM_kremlin peer_bridge3] says 'R' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.02 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.31 rank 0 | mixed (12s)
+PROGRESS 20/44 V_LM_kremlin peer_bridge_wrong1
+[V_LM_kremlin peer_bridge_wrong1] says 'R' (holds) P(right) 0.99 P(peer) 0.00 onset 54 | need 1.00 bridge dLO +14.75 noise +0.12 kind 0.24975473480732013 | reach 1.00 rank 0 | bridge still pulls (16s)
+PROGRESS 21/44 V_LM_kremlin peer_bridge_wrong3
+[V_LM_kremlin peer_bridge_wrong3] says 'R' (holds) P(right) 0.97 P(peer) 0.00 onset 54 | need 0.99 bridge dLO +13.75 noise +0.37 kind 0.49943625843915296 | reach 1.00 rank 0 | bridge still pulls (30s)
+PROGRESS 22/44 V_LU_berklee alone
+[V_LU_berklee alone] says 'B' (right) P(right) 1.00 P(peer) 0.00 onset 54 | need 1.00 bridge dLO +15.74 noise +0.37 kind 0.37364469582339943 | reach 1.00 rank 0 | bridge still needed (11s)
+PROGRESS 23/44 V_LU_berklee agree1
+[V_LU_berklee agree1] says 'B' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 1.00 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (11s)
+PROGRESS 24/44 V_LU_berklee agree2
+[V_LU_berklee agree2] says 'B' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.98 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (11s)
+PROGRESS 25/44 V_LU_berklee agree3
+[V_LU_berklee agree3] says 'B' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.91 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (12s)
+PROGRESS 26/44 V_LU_berklee disagree1
+[V_LU_berklee disagree1] says 'B' (holds) P(right) 0.90 P(peer) 0.10 onset 54 | need 0.83 bridge dLO +8.50 noise +1.12 kind 1.2499925296845595 | reach 1.00 rank 0 | bridge still pulls (16s)
+PROGRESS 27/44 V_LU_berklee disagree2
+[V_LU_berklee disagree2] says 'C' (full give-in) P(right) 0.05 P(peer) 0.95 onset 18 | need 0.34 bridge dLO +3.37 noise +1.00 kind 0.3749905881554927 | reach 1.00 rank 0 | bridge still pulls (7s)
+PROGRESS 28/44 V_LU_berklee disagree3
+[V_LU_berklee disagree3] says 'C' (full give-in) P(right) 0.04 P(peer) 0.96 onset 18 | need 0.36 bridge dLO +2.75 noise +0.87 kind 0.249992721120333 | reach 1.00 rank 0 | mixed (7s)
+PROGRESS 29/44 V_LU_berklee hidden1
+[V_LU_berklee hidden1] says 'B' (right) P(right) 0.99 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (14s)
+PROGRESS 30/44 V_LU_berklee hidden2
+[V_LU_berklee hidden2] says 'B' (right) P(right) 1.00 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (11s)
+PROGRESS 31/44 V_LU_berklee hidden3
+[V_LU_berklee hidden3] says 'B' (right) P(right) 1.00 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (12s)
+PROGRESS 32/44 V_LU_berklee hidden_sub1
+[V_LU_berklee hidden_sub1] says 'B' (right) P(right) 1.00 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (12s)
+PROGRESS 33/44 V_LU_berklee hidden_sub2
+[V_LU_berklee hidden_sub2] says 'B' (right) P(right) 1.00 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (12s)
+PROGRESS 34/44 V_LU_berklee hidden_sub3
+[V_LU_berklee hidden_sub3] says 'B' (right) P(right) 0.99 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 35/44 V_LU_berklee disagree_g1
+[V_LU_berklee disagree_g1] says 'B' (holds) P(right) 1.00 P(peer) 0.00 onset 54 | need 1.00 bridge dLO +8.12 noise +0.25 kind 0.12493056943731773 | reach 1.00 rank 0 | bridge still pulls (16s)
+PROGRESS 36/44 V_LU_berklee disagree_g2
+[V_LU_berklee disagree_g2] says 'B' (holds) P(right) 0.73 P(peer) 0.27 onset 24 | need 0.76 bridge dLO +6.50 noise +0.75 kind 0.24999918494877926 | reach 1.00 rank 0 | bridge still pulls (10s)
+PROGRESS 37/44 V_LU_berklee disagree_g3
+[V_LU_berklee disagree_g3] says 'D' (partial give-in) P(right) 0.44 P(peer) 0.56 onset 6 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 38/44 V_LU_berklee told_copy3
+[V_LU_berklee told_copy3] says 'C' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need 0.22 bridge dLO +1.37 noise +0.75 kind 0.37450154808262237 | reach 1.00 rank 265 | bridge not needed (18s)
+PROGRESS 39/44 V_LU_berklee told_ignore3
+[V_LU_berklee told_ignore3] says 'B' (holds) P(right) 0.59 P(peer) 0.41 onset 36 | need 0.68 bridge dLO +7.00 noise +0.75 kind 0.6249985857087528 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS 40/44 V_LU_berklee peer_bridge1
+[V_LU_berklee peer_bridge1] says 'B' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.99 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 1 | bridge still needed (14s)
+PROGRESS 41/44 V_LU_berklee peer_bridge3
+[V_LU_berklee peer_bridge3] says 'B' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.99 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 3 | bridge still needed (14s)
+PROGRESS 42/44 V_LU_berklee peer_bridge_wrong1
+[V_LU_berklee peer_bridge_wrong1] says 'B' (holds) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.99 bridge dLO +12.37 noise +0.12 kind 2.7585722035539106e-06 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS 43/44 V_LU_berklee peer_bridge_wrong3
+[V_LU_berklee peer_bridge_wrong3] says 'B' (holds) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.99 bridge dLO +11.12 noise +0.25 kind -0.1249337764730134 | reach 1.00 rank 0 | bridge still pulls (17s)
+PROGRESS ALLDONE

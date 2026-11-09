@@ -1,0 +1,4 @@
+== 08:41:56 [a1] worker up on f630d2c717ac, NVIDIA A100 80GB PCIe
+== 08:41:57 [a1] start: chain defer 0 13
+== 09:05:36 [a1] done (1419s): chain defer 0 13
+== 09:05:37 [a1] queue empty: WORKER DONE

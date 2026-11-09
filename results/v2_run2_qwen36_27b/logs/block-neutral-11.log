@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 12941.21it/s]
+PROGRESS 0/2 V_LM_petronas
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[V_LM_petronas alone] A 1.00 B 0.00 (4s)
+[V_LM_petronas agree1] A 1.00 B 0.01 C 1.00 C_late 1.00 D 0.00 D_late 0.28 (1s)
+[V_LM_petronas agree2] A 1.00 B 0.68 C 1.00 C_late 1.00 D 0.00 D_late 0.59 (1s)
+[V_LM_petronas agree3] A 1.00 B 0.58 C 1.00 C_late 1.00 D 0.00 D_late 0.57 (1s)
+[V_LM_petronas disagree1] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_petronas disagree2] A 0.98 B 0.00 C 1.00 C_late 0.99 D 0.03 D_late 0.00 (1s)
+[V_LM_petronas disagree3] A 0.97 B 0.00 C 1.00 C_late 0.99 D 0.03 D_late 0.00 (1s)
+[V_LM_petronas hidden1] A 0.99 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LM_petronas hidden2] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_petronas hidden3] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_petronas hidden_sub3] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_petronas told_copy3] A 0.02 B 0.00 C 0.89 C_late 0.01 D 0.00 D_late 0.00 (1s)
+[V_LM_petronas patch] P_all 1.00 (15s)
+PROGRESS 1/2 V_LU_pompeu
+[V_LU_pompeu alone] A 1.00 B 0.71 (0s)
+[V_LU_pompeu agree1] A 1.00 B 0.85 C 1.00 C_late 1.00 D 0.58 D_late 0.87 (1s)
+[V_LU_pompeu agree2] A 1.00 B 0.93 C 0.99 C_late 0.99 D 0.59 D_late 0.92 (1s)
+[V_LU_pompeu agree3] A 1.00 B 0.91 C 0.99 C_late 0.99 D 0.37 D_late 0.91 (1s)
+[V_LU_pompeu disagree1] A 0.98 B 0.43 C 1.00 C_late 0.99 D 0.79 D_late 0.72 (1s)
+[V_LU_pompeu disagree2] A 0.12 B 0.40 C 0.99 C_late 0.92 D 0.92 D_late 0.78 (1s)
+[V_LU_pompeu disagree3] A 0.08 B 0.36 C 0.99 C_late 0.75 D 0.91 D_late 0.65 (1s)
+[V_LU_pompeu hidden1] A 1.00 B 0.57 C 1.00 C_late 0.99 D 0.48 D_late 0.55 (1s)
+[V_LU_pompeu hidden2] A 0.99 B 0.45 C 0.99 C_late 0.99 D 0.59 D_late 0.45 (1s)
+[V_LU_pompeu hidden3] A 0.99 B 0.34 C 0.99 C_late 0.99 D 0.37 D_late 0.30 (1s)
+[V_LU_pompeu hidden_sub3] A 0.99 B 0.28 C 0.99 C_late 0.99 D 0.50 D_late 0.35 (1s)
+[V_LU_pompeu told_copy3] A 0.00 B 0.00 C 0.90 C_late 0.00 D 0.83 D_late 0.00 (1s)
+[V_LU_pompeu patch] P_all 0.99 (15s)
+PROGRESS ALLDONE

@@ -1,0 +1,95 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 118/851 [00:00<00:00, 1169.59it/s]Loading weights:  28%|██▊       | 235/851 [00:00<00:00, 1029.73it/s]Loading weights:  40%|███▉      | 340/851 [00:00<00:00, 890.20it/s] Loading weights:  58%|█████▊    | 494/851 [00:00<00:00, 1111.79it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 1560.38it/s]
+PROGRESS 0/45 L_piaf alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_piaf alone] says 'P' (right) P(right) 0.96 P(peer) 0.00 onset 54 | need 0.97 bridge dLO +7.62 noise +0.25 kind 3.380447125245212e-05 | reach 0.96 rank 0 | bridge still needed (57s)
+PROGRESS 1/45 L_piaf agree1
+[L_piaf agree1] says 'P' (right) P(right) 0.49 P(peer) 0.49 onset 54 | need 0.52 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.94 rank 0 | bridge still needed (9s)
+PROGRESS 2/45 L_piaf agree2
+[L_piaf agree2] says 'P' (right) P(right) 0.93 P(peer) 0.93 onset 54 | need 0.50 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.97 rank 0 | mixed (6s)
+PROGRESS 3/45 L_piaf agree3
+[L_piaf agree3] says 'P' (right) P(right) 0.96 P(peer) 0.96 onset 54 | need 0.53 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.98 rank 0 | bridge still needed (7s)
+PROGRESS 4/45 L_piaf disagree1
+[L_piaf disagree1] says 'P' (holds) P(right) 0.68 P(peer) 0.25 onset 54 | need 0.57 bridge dLO +6.62 noise +1.25 kind 0.7499979787959147 | reach 0.99 rank 0 | bridge still pulls (17s)
+PROGRESS 5/45 L_piaf disagree2
+[L_piaf disagree2] says 'L' (full give-in) P(right) 0.08 P(peer) 0.88 onset 54 | need 0.30 bridge dLO +5.06 noise +1.25 kind 0.49999263752585765 | reach 0.98 rank 0 | bridge still pulls (8s)
+PROGRESS 6/45 L_piaf disagree3
+[L_piaf disagree3] says 'L' (full give-in) P(right) 0.13 P(peer) 0.84 onset 54 | need 0.45 bridge dLO +5.87 noise +0.87 kind 0.4999954508129214 | reach 0.98 rank 0 | bridge still pulls (9s)
+PROGRESS 7/45 L_piaf copy3
+[L_piaf copy3] says 'L' (full give-in) P(right) 0.01 P(peer) 0.89 onset 54 | need 0.10 bridge dLO +0.37 noise +0.25 kind 0.4999058538271255 | reach 0.99 rank 1 | mixed (9s)
+PROGRESS 8/45 L_piaf hidden1
+[L_piaf hidden1] says 'N' (wrong) P(right) 0.34 P(peer) nan onset 54 | need 0.43 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.98 rank 0 | mixed (6s)
+PROGRESS 9/45 L_piaf hidden2
+[L_piaf hidden2] says 'P' (right) P(right) 0.32 P(peer) nan onset 54 | need 0.39 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.98 rank 0 | mixed (6s)
+PROGRESS 10/45 L_piaf hidden3
+[L_piaf hidden3] says 'P' (right) P(right) 0.91 P(peer) nan onset 54 | need 0.79 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.96 rank 0 | bridge still needed (6s)
+PROGRESS 11/45 L_piaf hidden_sub1
+[L_piaf hidden_sub1] says 'N' (wrong) P(right) 0.32 P(peer) nan onset 54 | need 0.34 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.91 rank 0 | mixed (6s)
+PROGRESS 12/45 L_piaf hidden_sub2
+[L_piaf hidden_sub2] says 'P' (right) P(right) 0.63 P(peer) nan onset 54 | need 0.49 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.94 rank 0 | mixed (6s)
+PROGRESS 13/45 L_piaf hidden_sub3
+[L_piaf hidden_sub3] says 'P' (right) P(right) 0.87 P(peer) nan onset 54 | need 0.55 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.96 rank 0 | bridge still needed (7s)
+PROGRESS 14/45 L_piaf disagree_g1
+[L_piaf disagree_g1] says 'M' (partial give-in) P(right) 0.38 P(peer) 0.38 onset 54 | need 0.20 bridge dLO +6.25 noise +1.87 kind 0.9999964652833438 | reach 0.95 rank 0 | bridge still pulls (13s)
+PROGRESS 15/45 L_piaf disagree_g2
+[L_piaf disagree_g2] says 'M' (full give-in) P(right) 0.09 P(peer) 0.84 onset 54 | need 0.38 bridge dLO +4.81 noise +1.00 kind 0.7499888009469036 | reach 0.98 rank 0 | bridge still pulls (14s)
+PROGRESS 16/45 L_piaf disagree_g3
+[L_piaf disagree_g3] says 'M' (full give-in) P(right) 0.09 P(peer) 0.86 onset 54 | need 0.44 bridge dLO +5.56 noise +0.87 kind 0.3749951922886603 | reach 0.98 rank 0 | bridge still pulls (16s)
+PROGRESS 17/45 L_piaf told_copy3
+[L_piaf told_copy3] says 'L' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need 0.14 bridge dLO +0.59 noise +0.38 kind 0.16579029186452665 | reach 0.95 rank 37 | bridge not needed (17s)
+PROGRESS 18/45 L_piaf told_ignore3
+[L_piaf told_ignore3] says 'L' (partial give-in) P(right) 0.39 P(peer) 0.57 onset 48 | need 0.64 bridge dLO +6.37 noise +0.62 kind 0.7499977441526853 | reach 0.99 rank 0 | bridge still pulls (17s)
+PROGRESS 19/45 L_piaf peer_bridge1
+[L_piaf peer_bridge1] says 'P' (right) P(right) 0.93 P(peer) 0.93 onset 54 | need 0.93 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.98 rank 0 | bridge still needed (13s)
+PROGRESS 20/45 L_piaf peer_bridge3
+[L_piaf peer_bridge3] says 'P' (right) P(right) 0.93 P(peer) 0.93 onset 54 | need 0.91 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.91 rank 0 | bridge still needed (15s)
+PROGRESS 21/45 L_piaf peer_bridge_wrong1
+[L_piaf peer_bridge_wrong1] says 'P' (holds) P(right) 0.59 P(peer) 0.22 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (1s)
+PROGRESS 22/45 L_piaf peer_bridge_wrong3
+[L_piaf peer_bridge_wrong3] says 'P' (holds) P(right) 0.50 P(peer) 0.24 onset 54 | need 0.59 bridge dLO +6.37 noise +0.87 kind -0.37499839940539126 | reach 0.96 rank 0 | bridge still pulls (30s)
+PROGRESS 23/45 V_LP_ali alone
+[V_LP_ali alone] says 'L' (right) P(right) 0.97 P(peer) 0.00 onset 54 | need 0.94 bridge dLO +8.37 noise +1.00 kind 2.372963049969269 | reach 1.00 rank 0 | bridge still needed (12s)
+PROGRESS 24/45 V_LP_ali agree1
+[V_LP_ali agree1] says 'L' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.68 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (12s)
+PROGRESS 25/45 V_LP_ali agree2
+[V_LP_ali agree2] says 'L' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.18 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (12s)
+PROGRESS 26/45 V_LP_ali agree3
+[V_LP_ali agree3] says 'L' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.07 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (13s)
+PROGRESS 27/45 V_LP_ali disagree1
+[V_LP_ali disagree1] says 'L' (holds) P(right) 0.98 P(peer) 0.01 onset 54 | need 0.96 bridge dLO +8.12 noise +1.12 kind 3.1248326097918047 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS 28/45 V_LP_ali disagree2
+[V_LP_ali disagree2] says 'L' (holds) P(right) 0.83 P(peer) 0.14 onset 54 | need 0.81 bridge dLO +7.12 noise +0.87 kind 1.9999917587140743 | reach 1.00 rank 0 | bridge still pulls (17s)
+PROGRESS 29/45 V_LP_ali disagree3
+[V_LP_ali disagree3] says 'L' (holds) P(right) 0.76 P(peer) 0.22 onset 54 | need 0.75 bridge dLO +6.62 noise +0.87 kind 1.4999949516549218 | reach 1.00 rank 0 | bridge still pulls (18s)
+PROGRESS 30/45 V_LP_ali hidden1
+[V_LP_ali hidden1] says 'L' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.93 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 1 | bridge still needed (14s)
+PROGRESS 31/45 V_LP_ali hidden2
+[V_LP_ali hidden2] says 'L' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.93 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (15s)
+PROGRESS 32/45 V_LP_ali hidden3
+[V_LP_ali hidden3] says 'L' (right) P(right) 0.97 P(peer) nan onset 54 | need 0.89 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 33/45 V_LP_ali hidden_sub1
+[V_LP_ali hidden_sub1] says 'L' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.93 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 1 | bridge still needed (12s)
+PROGRESS 34/45 V_LP_ali hidden_sub2
+[V_LP_ali hidden_sub2] says 'L' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.91 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 35/45 V_LP_ali hidden_sub3
+[V_LP_ali hidden_sub3] says 'L' (right) P(right) 0.97 P(peer) nan onset 54 | need 0.86 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 36/45 V_LP_ali disagree_g1
+[V_LP_ali disagree_g1] says 'L' (holds) P(right) 0.98 P(peer) 0.01 onset 54 | need 0.96 bridge dLO +7.75 noise +0.87 kind 3.124851679279812 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS 37/45 V_LP_ali disagree_g2
+[V_LP_ali disagree_g2] says 'L' (holds) P(right) 0.89 P(peer) 0.07 onset 54 | need 0.86 bridge dLO +7.12 noise +0.87 kind 2.4999856096919526 | reach 1.00 rank 0 | bridge still pulls (17s)
+PROGRESS 38/45 V_LP_ali disagree_g3
+[V_LP_ali disagree_g3] says 'L' (holds) P(right) 0.79 P(peer) 0.18 onset 54 | need 0.78 bridge dLO +6.37 noise +0.87 kind 1.7499938216839013 | reach 1.00 rank 0 | bridge still pulls (18s)
+PROGRESS 39/45 V_LP_ali told_copy3
+[V_LP_ali told_copy3] says 'N' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need 0.24 bridge dLO +2.35 noise +1.11 kind 0.4941092050714957 | reach 1.00 rank 170 | mixed (15s)
+PROGRESS 40/45 V_LP_ali told_ignore3
+[V_LP_ali told_ignore3] says 'L' (holds) P(right) 0.95 P(peer) 0.04 onset 54 | need 0.93 bridge dLO +6.50 noise +0.37 kind 1.4999771158353874 | reach 1.00 rank 1 | bridge still pulls (16s)
+PROGRESS 41/45 V_LP_ali peer_bridge1
+[V_LP_ali peer_bridge1] says 'L' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.91 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.75 rank 0 | bridge still needed (11s)
+PROGRESS 42/45 V_LP_ali peer_bridge3
+[V_LP_ali peer_bridge3] says 'L' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.77 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.50 rank 6 | bridge still needed (13s)
+PROGRESS 43/45 V_LP_ali peer_bridge_wrong1
+[V_LP_ali peer_bridge_wrong1] says 'L' (holds) P(right) 0.85 P(peer) 0.07 onset 54 | need 0.54 bridge dLO +6.00 noise +2.50 kind 2.7499814735868204 | reach 1.00 rank 1 | bridge still pulls (17s)
+PROGRESS 44/45 V_LP_ali peer_bridge_wrong3
+[V_LP_ali peer_bridge_wrong3] says 'L' (holds) P(right) 0.42 P(peer) 0.42 onset 54 | need 0.42 bridge dLO +6.19 noise +1.25 kind 2.749984051395196 | reach 1.00 rank 1 | bridge still pulls (19s)
+PROGRESS ALLDONE

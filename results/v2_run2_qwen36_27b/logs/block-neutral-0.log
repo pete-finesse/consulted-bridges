@@ -1,0 +1,35 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:   5%|▌         | 46/851 [00:00<00:01, 421.92it/s]Loading weights:  13%|█▎        | 108/851 [00:00<00:01, 531.74it/s]Loading weights:  19%|█▉        | 162/851 [00:00<00:01, 474.99it/s]Loading weights:  28%|██▊       | 236/851 [00:00<00:01, 568.04it/s]Loading weights:  35%|███▌      | 298/851 [00:00<00:00, 556.74it/s]Loading weights:  42%|████▏     | 361/851 [00:00<00:00, 579.75it/s]Loading weights:  51%|█████     | 431/851 [00:00<00:00, 601.98it/s]Loading weights:  58%|█████▊    | 492/851 [00:00<00:00, 579.93it/s]Loading weights:  65%|██████▍   | 551/851 [00:01<00:00, 537.14it/s]Loading weights:  71%|███████   | 606/851 [00:01<00:00, 536.63it/s]Loading weights:  78%|███████▊  | 661/851 [00:01<00:00, 535.21it/s]Loading weights: 100%|██████████| 851/851 [00:01<00:00, 697.48it/s]
+PROGRESS 0/2 L_colosseum
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_colosseum alone] A 1.00 B 0.01 (5s)
+[L_colosseum agree1] A 0.99 B 0.72 C 0.99 C_late 0.99 D 0.00 D_late 0.78 (1s)
+[L_colosseum agree2] A 0.99 B 0.06 C 0.99 C_late 0.99 D 0.00 D_late 0.03 (1s)
+[L_colosseum agree3] A 0.99 B 0.03 C 0.99 C_late 0.99 D 0.01 D_late 0.02 (2s)
+[L_colosseum disagree1] A 1.00 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[L_colosseum disagree2] A 0.98 B 0.00 C 0.99 C_late 0.97 D 0.00 D_late 0.00 (1s)
+[L_colosseum disagree3] A 0.99 B 0.00 C 0.99 C_late 0.97 D 0.00 D_late 0.00 (1s)
+[L_colosseum copy3] A 0.00 B 0.00 C 0.10 C_late 0.00 D 0.07 D_late 0.00 (1s)
+[L_colosseum hidden1] A 0.99 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[L_colosseum hidden2] A 0.99 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[L_colosseum hidden3] A 1.00 B 0.00 C 0.99 C_late 1.00 D 0.01 D_late 0.00 (1s)
+[L_colosseum hidden_sub3] A 0.99 B 0.00 C 0.99 C_late 0.99 D 0.01 D_late 0.00 (1s)
+[L_colosseum told_copy3] A 0.01 B 0.00 C 0.76 C_late 0.00 D 0.04 D_late 0.00 (1s)
+[L_colosseum copy_alone] A 0.14 B 0.09 (0s)
+[L_colosseum patch] P_all 1.00 (22s)
+PROGRESS 1/2 V_LM_pyramids
+[V_LM_pyramids alone] A 1.00 B 0.00 (1s)
+[V_LM_pyramids agree1] A 0.99 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids agree2] A 0.99 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids agree3] A 0.99 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids disagree1] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids disagree2] A 0.98 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids disagree3] A 0.96 B 0.00 C 1.00 C_late 0.98 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids hidden1] A 0.99 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids hidden2] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids hidden3] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids hidden_sub3] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids told_copy3] A 0.03 B 0.00 C 0.78 C_late 0.02 D 0.00 D_late 0.00 (1s)
+[V_LM_pyramids patch] P_all 1.00 (22s)
+PROGRESS ALLDONE

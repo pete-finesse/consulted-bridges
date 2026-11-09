@@ -1,0 +1,95 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  33%|███▎      | 282/851 [00:00<00:00, 2755.09it/s]Loading weights:  66%|██████▌   | 558/851 [00:00<00:00, 1609.72it/s]Loading weights:  88%|████████▊ | 745/851 [00:00<00:00, 1114.91it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 1234.63it/s]
+PROGRESS 0/45 L_spider alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_spider alone] says 'S' (right) P(right) 0.99 P(peer) 0.01 onset 54 | need 0.47 bridge dLO +1.37 noise +0.12 kind 4.111433682396637e-08 | reach 0.14 rank 0 | mixed (14s)
+PROGRESS 1/45 L_spider agree1
+[L_spider agree1] says 'S' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.09 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.41 rank 0 | mixed (14s)
+PROGRESS 2/45 L_spider agree2
+[L_spider agree2] says 'S' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.23 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.52 rank 0 | mixed (14s)
+PROGRESS 3/45 L_spider agree3
+[L_spider agree3] says 'S' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.26 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.49 rank 0 | mixed (15s)
+PROGRESS 4/45 L_spider disagree1
+[L_spider disagree1] says 'S' (holds) P(right) 0.94 P(peer) 0.05 onset 54 | need 0.90 bridge dLO +4.75 noise +0.25 kind 0.24999561667863812 | reach 0.44 rank 0 | bridge still pulls (17s)
+PROGRESS 5/45 L_spider disagree2
+[L_spider disagree2] says 'S' (holds) P(right) 0.51 P(peer) 0.45 onset 54 | need 0.91 bridge dLO +4.62 noise +0.12 kind 0.24999935296030107 | reach 0.75 rank 0 | bridge still pulls (17s)
+PROGRESS 6/45 L_spider disagree3
+[L_spider disagree3] says 'A' (partial give-in) P(right) 0.36 P(peer) 0.59 onset 48 | need 0.75 bridge dLO +2.62 noise +0.25 kind -1.2232491131136669e-08 | reach 0.46 rank 0 | bridge still pulls (14s)
+PROGRESS 7/45 L_spider copy3
+[L_spider copy3] says 'A' (full give-in) P(right) 0.00 P(peer) 0.92 onset 54 | need 0.09 bridge dLO +0.31 noise +0.19 kind 0.3116689359777869 | reach 0.99 rank 118 | mixed (19s)
+PROGRESS 8/45 L_spider hidden1
+[L_spider hidden1] says 'S' (right) P(right) 0.95 P(peer) nan onset 54 | need 0.57 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.28 rank 0 | bridge still needed (12s)
+PROGRESS 9/45 L_spider hidden2
+[L_spider hidden2] says 'S' (right) P(right) 0.94 P(peer) nan onset 54 | need 0.74 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.21 rank 0 | bridge still needed (11s)
+PROGRESS 10/45 L_spider hidden3
+[L_spider hidden3] says 'S' (right) P(right) 0.94 P(peer) nan onset 54 | need 0.66 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.19 rank 0 | bridge still needed (13s)
+PROGRESS 11/45 L_spider hidden_sub1
+[L_spider hidden_sub1] says 'S' (right) P(right) 0.96 P(peer) nan onset 54 | need 0.59 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.18 rank 0 | bridge still needed (12s)
+PROGRESS 12/45 L_spider hidden_sub2
+[L_spider hidden_sub2] says 'S' (right) P(right) 0.93 P(peer) nan onset 54 | need 0.60 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.16 rank 0 | bridge still needed (14s)
+PROGRESS 13/45 L_spider hidden_sub3
+[L_spider hidden_sub3] says 'S' (right) P(right) 0.95 P(peer) nan onset 54 | need 0.64 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.16 rank 0 | bridge still needed (15s)
+PROGRESS 14/45 L_spider disagree_g1
+[L_spider disagree_g1] says 'S' (holds) P(right) 0.91 P(peer) 0.07 onset 54 | need 0.96 bridge dLO +6.75 noise +0.25 kind 0.3749953650787927 | reach 0.97 rank 0 | bridge still pulls (18s)
+PROGRESS 15/45 L_spider disagree_g2
+[L_spider disagree_g2] says 'S' (holds) P(right) 0.63 P(peer) 0.33 onset 54 | need 0.90 bridge dLO +6.87 noise +0.25 kind 0.3749990481344091 | reach 0.99 rank 0 | bridge still pulls (17s)
+PROGRESS 16/45 L_spider disagree_g3
+[L_spider disagree_g3] says 'S' (holds) P(right) 0.53 P(peer) 0.41 onset 54 | need 0.72 bridge dLO +6.62 noise +0.62 kind 0.3749991107916202 | reach 1.00 rank 0 | bridge still pulls (17s)
+PROGRESS 17/45 L_spider told_copy3
+[L_spider told_copy3] says 'A' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need 0.45 bridge dLO +2.42 noise +0.62 kind 0.2494181614749209 | reach 0.76 rank 0 | mixed (16s)
+PROGRESS 18/45 L_spider told_ignore3
+[L_spider told_ignore3] says 'S' (holds) P(right) 0.64 P(peer) 0.34 onset 54 | need 0.87 bridge dLO +4.25 noise +0.25 kind 0.24999929261969367 | reach 0.36 rank 0 | bridge still pulls (17s)
+PROGRESS 19/45 L_spider peer_bridge1
+[L_spider peer_bridge1] says 'S' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.10 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.04 rank 6 | mixed (13s)
+PROGRESS 20/45 L_spider peer_bridge3
+[L_spider peer_bridge3] says 'S' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.06 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.01 rank 1 | mixed (15s)
+PROGRESS 21/45 L_spider peer_bridge_wrong1
+[L_spider peer_bridge_wrong1] says 'S' (holds) P(right) 0.95 P(peer) 0.04 onset 54 | need 0.93 bridge dLO +5.37 noise +0.37 kind 0.7499815286253013 | reach 0.90 rank 0 | bridge still pulls (18s)
+PROGRESS 22/45 L_spider peer_bridge_wrong3
+[L_spider peer_bridge_wrong3] says 'S' (holds) P(right) 0.74 P(peer) 0.15 onset 54 | need 0.79 bridge dLO +3.62 noise +0.62 kind 0.12499959459952215 | reach 0.97 rank 0 | bridge still pulls (20s)
+PROGRESS 23/45 V_LP_beyonce alone
+[V_LP_beyonce alone] says 'H' (right) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.97 bridge dLO +9.50 noise +0.87 kind 3.62202748804129 | reach 0.97 rank 0 | bridge still needed (13s)
+PROGRESS 24/45 V_LP_beyonce agree1
+[V_LP_beyonce agree1] says 'H' (right) P(right) 0.95 P(peer) 0.95 onset 54 | need 0.42 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.76 rank 0 | mixed (13s)
+PROGRESS 25/45 V_LP_beyonce agree2
+[V_LP_beyonce agree2] says 'H' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.01 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.21 rank 0 | mixed (13s)
+PROGRESS 26/45 V_LP_beyonce agree3
+[V_LP_beyonce agree3] says 'H' (right) P(right) 0.96 P(peer) 0.96 onset 54 | need -0.01 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.15 rank 0 | mixed (12s)
+PROGRESS 27/45 V_LP_beyonce disagree1
+[V_LP_beyonce disagree1] says 'H' (holds) P(right) 0.91 P(peer) 0.04 onset 54 | need 0.76 bridge dLO +7.50 noise +0.62 kind 3.6249632292553082 | reach 0.94 rank 0 | bridge still pulls (16s)
+PROGRESS 28/45 V_LP_beyonce disagree2
+[V_LP_beyonce disagree2] says 'D' (full give-in) P(right) 0.11 P(peer) 0.81 onset 48 | need 0.24 bridge dLO +5.75 noise +1.50 kind 4.124479225623224 | reach 0.96 rank 0 | bridge still pulls (16s)
+PROGRESS 29/45 V_LP_beyonce disagree3
+[V_LP_beyonce disagree3] says 'D' (full give-in) P(right) 0.03 P(peer) 0.88 onset 54 | need 0.32 bridge dLO +4.75 noise +1.12 kind 3.249269144151496 | reach 0.95 rank 0 | bridge still pulls (16s)
+PROGRESS 30/45 V_LP_beyonce hidden1
+[V_LP_beyonce hidden1] says 'H' (right) P(right) 0.46 P(peer) nan onset 54 | need 0.53 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.98 rank 0 | bridge still needed (6s)
+PROGRESS 31/45 V_LP_beyonce hidden2
+[V_LP_beyonce hidden2] says 'H' (right) P(right) 0.71 P(peer) nan onset 54 | need 0.50 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 0 | bridge still needed (6s)
+PROGRESS 32/45 V_LP_beyonce hidden3
+[V_LP_beyonce hidden3] says 'H' (right) P(right) 0.75 P(peer) nan onset 54 | need 0.51 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.98 rank 1 | bridge still needed (6s)
+PROGRESS 33/45 V_LP_beyonce hidden_sub1
+[V_LP_beyonce hidden_sub1] says 'H' (right) P(right) 0.61 P(peer) nan onset 54 | need 0.27 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.96 rank 0 | mixed (6s)
+PROGRESS 34/45 V_LP_beyonce hidden_sub2
+[V_LP_beyonce hidden_sub2] says 'H' (right) P(right) 0.76 P(peer) nan onset 54 | need 0.70 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 4 | bridge still needed (6s)
+PROGRESS 35/45 V_LP_beyonce hidden_sub3
+[V_LP_beyonce hidden_sub3] says 'H' (right) P(right) 0.74 P(peer) nan onset 54 | need 0.53 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 14 | bridge still needed (12s)
+PROGRESS 36/45 V_LP_beyonce disagree_g1
+[V_LP_beyonce disagree_g1] says 'H' (holds) P(right) 0.89 P(peer) 0.02 onset 54 | need 0.56 bridge dLO +6.87 noise +0.50 kind 3.2499907766227376 | reach 0.95 rank 0 | bridge still pulls (13s)
+PROGRESS 37/45 V_LP_beyonce disagree_g2
+[V_LP_beyonce disagree_g2] says 'A' (full give-in) P(right) 0.11 P(peer) 0.79 onset 54 | need 0.22 bridge dLO +6.00 noise +1.50 kind 4.998729069696951 | reach 0.98 rank 2 | mixed (13s)
+PROGRESS 38/45 V_LP_beyonce disagree_g3
+[V_LP_beyonce disagree_g3] says 'A' (full give-in) P(right) 0.05 P(peer) 0.85 onset 54 | need 0.28 bridge dLO +5.43 noise +1.25 kind 4.373605594359869 | reach 0.98 rank 2 | bridge still pulls (15s)
+PROGRESS 39/45 V_LP_beyonce told_copy3
+[V_LP_beyonce told_copy3] says 'D' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need 0.37 bridge dLO +2.91 noise +0.87 kind 2.089389128468447 | reach 0.98 rank 160 | mixed (14s)
+PROGRESS 40/45 V_LP_beyonce told_ignore3
+[V_LP_beyonce told_ignore3] says 'H' (holds) P(right) 0.93 P(peer) 0.05 onset 54 | need 0.71 bridge dLO +9.81 noise +1.25 kind 6.124871704869953 | reach 0.95 rank 0 | bridge still pulls (15s)
+PROGRESS 41/45 V_LP_beyonce peer_bridge1
+[V_LP_beyonce peer_bridge1] says 'H' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.99 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.17 rank 1 | bridge still needed (6s)
+PROGRESS 42/45 V_LP_beyonce peer_bridge3
+[V_LP_beyonce peer_bridge3] says 'H' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 1.00 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.07 rank 4 | bridge still needed (7s)
+PROGRESS 43/45 V_LP_beyonce peer_bridge_wrong1
+[V_LP_beyonce peer_bridge_wrong1] says 'D' (full give-in) P(right) 0.01 P(peer) 0.95 onset 54 | need 0.20 bridge dLO +3.87 noise +1.50 kind 2.80933143355743 | reach 1.00 rank 89 | bridge still pulls (8s)
+PROGRESS 44/45 V_LP_beyonce peer_bridge_wrong3
+[V_LP_beyonce peer_bridge_wrong3] says 'D' (full give-in) P(right) 0.00 P(peer) 0.95 onset 54 | need 0.41 bridge dLO +2.08 noise +0.62 kind 1.4802179145701277 | reach 1.00 rank 1628 | mixed (10s)
+PROGRESS ALLDONE

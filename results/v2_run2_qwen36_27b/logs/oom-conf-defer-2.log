@@ -1,0 +1,34 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  62%|██████▏   | 524/851 [00:00<00:00, 5224.70it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 5264.33it/s]
+[W1109 09:03:56.978188828 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 18808832, total: 150111977472).
+[W1109 09:03:56.978588803 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 18808832, total: 150111977472).
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 435, in <module>
+    main()
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 411, in main
+    h = load(args.config)
+        ^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/load.py", line 124, in load
+    model = model.to(dev)
+            ^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 3710, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1392, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 966, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1374, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 60.00 MiB. GPU 0 has a total capacity of 139.80 GiB of which 57.94 MiB is free. Process 4474 has 58.49 GiB memory in use. Process 4540 has 58.50 GiB memory in use. Including non-PyTorch memory, this process has 22.73 GiB memory in use. Of the allocated memory 22.21 GiB is allocated by PyTorch, and 15.01 MiB is reserved by PyTorch but unallocated. expandable_segments is enabled. If instead the process is running out of virtual address space (VSZ), expandable segments may be over-reserving VA (each segment reserves ~9/8 of device memory, times the number of streams); reduce it via PYTORCH_CUDA_ALLOC_CONF expandable_segments_reserve / expandable_segments_reserve_by_class.

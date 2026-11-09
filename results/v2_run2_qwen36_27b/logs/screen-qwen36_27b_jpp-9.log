@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 11770.64it/s]
+PROGRESS 0/14 starting C_CT_timbuktu
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_CT_timbuktu] BYSTANDER: the edit reaches the bridge, but removing it doesn't change the answer
+PROGRESS 1/14 starting C_DS_petra
+[C_DS_petra] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 2/14 starting C_IN_hendrix
+[C_IN_hendrix] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 3/14 starting C_LM_borobudur
+[C_LM_borobudur] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 4/14 starting C_LM_lalibela
+[C_LM_lalibela] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 5/14 starting C_LM_suomenlinna
+[C_LM_suomenlinna] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 6/14 starting C_LP_galileo
+[C_LP_galileo] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 7/14 starting C_LP_marcopolo
+[C_LP_marcopolo] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 8/14 starting C_LU_ainshams
+[C_LU_ainshams] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 9/14 starting C_LU_harvard
+[C_LU_harvard] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 10/14 starting C_LU_unsw
+[C_LU_unsw] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 11/14 starting C_MN_memorial
+[C_MN_memorial] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 12/14 starting C_SP_gretzky
+[C_SP_gretzky] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 13/14 starting C_VC_machu
+[C_VC_machu] BYSTANDER: the edit reaches the bridge, but removing it doesn't change the answer
+PROGRESS 14/14 ALLDONE

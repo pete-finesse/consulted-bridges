@@ -1,0 +1,35 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 13052.89it/s]
+PROGRESS 0/15 starting C_CT_halong
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_CT_halong] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 1/15 starting C_DS_chichen
+[C_DS_chichen] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 2/15 starting C_EL_lithium
+[C_EL_lithium] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 3/15 starting C_LM_baalbek
+[C_LM_baalbek] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 4/15 starting C_LM_diocletian
+[C_LM_diocletian] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 5/15 starting C_LM_neuschwanstein
+[C_LM_neuschwanstein] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 6/15 starting C_LM_wawel
+[C_LM_wawel] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 7/15 starting C_LP_jordan
+[C_LP_jordan] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 8/15 starting C_LP_reynolds
+[C_LP_reynolds] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 9/15 starting C_LU_duke
+[C_LU_duke] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 10/15 starting C_LU_marquette
+[C_LU_marquette] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 11/15 starting C_MN_dday
+[C_MN_dday] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 12/15 starting C_MN_woodstock
+[C_MN_woodstock] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 13/15 starting C_VC_angkor
+[C_VC_angkor] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 14/15 starting C_VC_taj
+[C_VC_taj] UNTESTABLE: the model gets the two-hop question and hop 2 wrong
+PROGRESS 15/15 ALLDONE

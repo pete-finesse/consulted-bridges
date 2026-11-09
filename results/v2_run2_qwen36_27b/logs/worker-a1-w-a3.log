@@ -1,0 +1,4 @@
+== 08:42:47 [a3] worker up on bd7273c38bbf, NVIDIA A100 80GB PCIe
+== 08:42:47 [a3] start: chain neutral 1 13
+== 09:05:36 [a3] done (1369s): chain neutral 1 13
+== 09:05:36 [a3] queue empty: WORKER DONE

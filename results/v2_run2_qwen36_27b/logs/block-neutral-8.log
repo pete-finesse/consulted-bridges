@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  66%|██████▌   | 560/851 [00:00<00:00, 5599.08it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 5540.59it/s]
+PROGRESS 0/2 V_LM_fuji
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[V_LM_fuji alone] A 1.00 B 0.00 (2s)
+[V_LM_fuji agree1] A 1.00 B 0.99 C 1.00 C_late 1.00 D 1.00 D_late 1.00 (1s)
+[V_LM_fuji agree2] A 1.00 B 0.99 C 1.00 C_late 1.00 D 1.00 D_late 0.99 (1s)
+[V_LM_fuji agree3] A 1.00 B 0.99 C 1.00 C_late 1.00 D 1.00 D_late 0.99 (1s)
+[V_LM_fuji disagree1] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_fuji disagree2] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_fuji disagree3] A 0.99 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LM_fuji hidden1] A 0.99 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LM_fuji hidden2] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_fuji hidden3] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_fuji hidden_sub3] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LM_fuji told_copy3] A 0.07 B 0.00 C 0.92 C_late 0.03 D 0.00 D_late 0.00 (1s)
+[V_LM_fuji patch] P_all 1.00 (14s)
+PROGRESS 1/2 V_LU_alberta
+[V_LU_alberta alone] A 1.00 B 0.00 (0s)
+[V_LU_alberta agree1] A 0.99 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LU_alberta agree2] A 1.00 B 0.41 C 0.99 C_late 0.99 D 0.00 D_late 0.02 (1s)
+[V_LU_alberta agree3] A 0.99 B 0.41 C 0.99 C_late 0.99 D 0.00 D_late 0.02 (1s)
+[V_LU_alberta disagree1] A 0.99 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LU_alberta disagree2] A 0.86 B 0.00 C 0.99 C_late 0.98 D 0.00 D_late 0.00 (1s)
+[V_LU_alberta disagree3] A 0.35 B 0.00 C 0.99 C_late 0.92 D 0.00 D_late 0.00 (1s)
+[V_LU_alberta hidden1] A 0.98 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LU_alberta hidden2] A 0.99 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LU_alberta hidden3] A 1.00 B 0.00 C 0.99 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[V_LU_alberta hidden_sub3] A 0.99 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LU_alberta told_copy3] A 0.00 B 0.00 C 0.34 C_late 0.00 D 0.00 D_late 0.00 (1s)
+[V_LU_alberta patch] P_all 1.00 (14s)
+PROGRESS ALLDONE

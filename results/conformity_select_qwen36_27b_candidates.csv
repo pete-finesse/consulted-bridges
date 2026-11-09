@@ -1,0 +1,172 @@
+question,family,split,selected,verdict,verdict_reason,model_said,P_base,need,comes_first,lead,answer_onset,quality
+C_CT_atomium,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Europe,0.817,0.0,False,,42.0,0.0
+C_CT_borobudur,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Asia,0.851,0.0,False,,42.0,0.0
+C_CT_halong,C_CT,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Asia,0.904,0.0,False,,42.0,0.0
+C_CT_hassan,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Africa,0.731,0.0,False,,42.0,0.0
+C_CT_kilimanjaro,C_CT,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",Africa,0.924,0.22,True,6.0,48.0,0.001
+C_CT_lalibela,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Africa,0.798,0.0,False,0.0,42.0,0.0
+C_CT_neuschwanstein,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Europe,0.881,0.0,False,,42.0,0.0
+C_CT_persepolis,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Asia,0.932,0.0,False,,48.0,0.0
+C_CT_petra,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Asia,0.879,0.0,False,,36.0,0.0
+C_CT_timbuktu,C_CT,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Africa,0.932,0.0,False,,42.0,0.0
+C_CT_watarun,C_CT,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Asia,0.932,0.0,False,,42.0,0.0
+C_CT_wawel,C_CT,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Europe,0.915,0.0,False,,42.0,0.0
+C_DS_blarney,C_DS,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Left,0.897,0.054,False,,48.0,0.0
+C_DS_borobudur,C_DS,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Left,0.838,0.0,True,6.0,24.0,0.0
+C_DS_chichen,C_DS,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Right,0.885,0.0,False,,48.0,0.0
+C_DS_dunns,C_DS,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Left,0.65,0.0,True,48.0,48.0,0.0
+C_DS_hagia,C_DS,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Right,0.917,0.0,False,,48.0,0.0
+C_DS_halong,C_DS,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Right,0.89,0.0,False,,48.0,0.0
+C_DS_maasai,C_DS,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Left,0.757,0.0,False,,42.0,0.0
+C_DS_moai,C_DS,confirm,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",Right,0.824,0.0,False,,42.0,0.0
+C_DS_neuschwanstein,C_DS,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Right,0.86,0.0,False,,48.0,0.0
+C_DS_petra,C_DS,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Right,0.944,0.0,False,,48.0,0.0
+C_DS_watarun,C_DS,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Left,0.666,0.105,True,12.0,42.0,0.105
+C_EL_carbon,C_EL,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",6,1.0,0.0,False,,54.0,0.0
+C_EL_helium,C_EL,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",2,0.995,0.564,True,24.0,54.0,0.025
+C_EL_hydrogen,C_EL,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",1,0.999,0.0,False,,54.0,0.0
+C_EL_lithium,C_EL,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",3,0.671,0.354,True,36.0,54.0,0.354
+C_EL_nitrogen,C_EL,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",7,0.998,0.994,True,24.0,54.0,0.976
+C_EL_oxygen,C_EL,confirm,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",8,0.999,0.005,False,,54.0,0.0
+C_EO_colosseum,C_EO,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Odd,0.495,0.0,False,,48.0,0.0
+C_EO_eiffel,C_EO,dev,False,UNTESTABLE,the model gets the two-hop question wrong,Odd,0.358,,,,,
+C_EO_fuji,C_EO,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",Odd,0.44,0.0,False,,48.0,0.0
+C_EO_machu,C_EO,dev,False,UNTESTABLE,the model gets the two-hop question wrong,Odd,0.401,,,,,
+C_IN_hendrix,C_IN,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",6,0.997,0.903,True,12.0,54.0,0.601
+C_IN_perlman,C_IN,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",4,1.0,0.0,False,,54.0,0.0
+C_LM_alhambra,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.996,0.94,True,18.0,54.0,0.795
+C_LM_angelfalls,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",V,0.997,0.992,True,12.0,54.0,0.349
+C_LM_atomium,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.999,0.819,True,18.0,54.0,0.819
+C_LM_baalbek,C_LM,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",L,0.997,0.0,True,6.0,54.0,0.0
+C_LM_babylon,C_LM,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",I,0.998,0.104,True,6.0,54.0,0.0
+C_LM_bastion,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",H,0.99,0.983,True,12.0,54.0,0.208
+C_LM_belem,C_LM,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",P,0.998,0.164,False,,54.0,0.0
+C_LM_blarney,C_LM,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",I,0.999,0.121,True,6.0,54.0,0.018
+C_LM_bled,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.999,0.905,True,12.0,54.0,0.905
+C_LM_bluelagoon,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.998,0.863,True,12.0,54.0,0.523
+C_LM_borobudur,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.994,0.563,True,12.0,54.0,0.563
+C_LM_bran,C_LM,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",R,0.998,0.386,True,6.0,54.0,0.003
+C_LM_casarosada,C_LM,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",A,0.999,0.007,True,6.0,54.0,0.007
+C_LM_chichen,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.996,0.731,True,12.0,54.0,0.331
+C_LM_chocolatehills,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.997,0.972,True,12.0,54.0,0.002
+C_LM_diocletian,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C,0.996,0.992,True,24.0,54.0,0.966
+C_LM_galapagos,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E,0.999,0.997,True,24.0,54.0,0.562
+C_LM_geiranger,C_LM,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",N,0.999,0.112,True,6.0,54.0,0.112
+C_LM_hagia,C_LM,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",T,0.998,0.026,True,6.0,54.0,0.026
+C_LM_halong,C_LM,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",V,0.993,0.42,True,6.0,54.0,0.001
+C_LM_hassan,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.999,0.998,True,12.0,54.0,0.752
+C_LM_kilimanjaro,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",T,0.999,0.936,True,12.0,54.0,0.936
+C_LM_lalibela,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E,0.996,0.985,True,24.0,54.0,0.0
+C_LM_marinabay,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.998,0.851,True,24.0,54.0,0.851
+C_LM_masada,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.995,0.813,True,12.0,54.0,0.813
+C_LM_mermaid,C_LM,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",D,0.999,0.055,True,6.0,54.0,0.055
+C_LM_moai,C_LM,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",C,0.997,0.999,True,24.0,54.0,0.008
+C_LM_neuschwanstein,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",G,0.994,0.594,True,12.0,54.0,0.012
+C_LM_pashupatinath,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",N,0.999,0.879,True,18.0,54.0,0.801
+C_LM_persepolis,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",I,0.997,0.717,True,12.0,54.0,0.0
+C_LM_petra,C_LM,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",J,0.999,0.0,True,6.0,54.0,0.0
+C_LM_rila,C_LM,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",B,0.999,0.023,True,6.0,54.0,0.0
+C_LM_salar,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.999,0.995,True,12.0,54.0,0.995
+C_LM_schonbrunn,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",A,0.999,0.99,True,24.0,54.0,0.99
+C_LM_suomenlinna,C_LM,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",F,0.998,0.044,True,6.0,54.0,0.029
+C_LM_tikal,C_LM,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",G,0.998,0.223,True,6.0,54.0,0.223
+C_LM_timbuktu,C_LM,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",M,0.999,0.0,True,6.0,54.0,0.0
+C_LM_vasa,C_LM,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",S,0.999,0.178,False,,54.0,0.0
+C_LM_watarun,C_LM,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",T,0.997,0.995,True,12.0,54.0,0.029
+C_LM_wawel,C_LM,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",P,0.999,0.0,False,,54.0,0.0
+C_LP_adele,C_LP,confirm,False,UNTESTABLE,the model gets the two-hop question wrong,T,0.284,,,,,
+C_LP_beethoven,C_LP,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",B,0.998,0.0,False,,54.0,0.0
+C_LP_benzema,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",L,0.962,0.798,True,24.0,54.0,0.025
+C_LP_buffett,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",O,0.994,0.993,True,24.0,54.0,0.986
+C_LP_curie,C_LP,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",W,0.939,0.301,True,6.0,54.0,0.015
+C_LP_dante,C_LP,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",F,0.997,0.164,True,6.0,54.0,0.014
+C_LP_galileo,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.996,0.854,True,12.0,54.0,0.68
+C_LP_graf,C_LP,confirm,False,UNTESTABLE,the model gets the two-hop question and hop 1 wrong,B,0.018,,,,,
+C_LP_haaland,C_LP,dev,False,UNTESTABLE,the model gets the two-hop question wrong,B,0.004,,,,,
+C_LP_hanks,C_LP,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",C,0.991,0.0,False,,54.0,0.0
+C_LP_hawking,C_LP,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",O,0.976,0.119,False,0.0,54.0,0.0
+C_LP_jordan,C_LP,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",B,0.771,0.217,True,6.0,54.0,0.178
+C_LP_kafka,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.999,0.998,True,24.0,54.0,0.098
+C_LP_kanye,C_LP,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",A,0.987,0.952,True,42.0,54.0,0.952
+C_LP_kobe,C_LP,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",P,0.333,0.65,True,18.0,42.0,0.544
+C_LP_lebron,C_LP,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",A,0.997,0.061,True,6.0,54.0,0.007
+C_LP_lennon,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",L,0.969,0.985,True,30.0,54.0,0.908
+C_LP_magic,C_LP,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",L,0.956,0.0,False,,54.0,0.0
+C_LP_marcopolo,C_LP,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",V,0.997,0.178,True,6.0,54.0,0.055
+C_LP_merkel,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",H,0.957,0.657,True,12.0,54.0,0.122
+C_LP_messi,C_LP,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",R,0.999,0.0,True,6.0,54.0,0.0
+C_LP_obama,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",H,0.998,0.951,True,18.0,54.0,0.947
+C_LP_portman,C_LP,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",J,0.985,0.121,True,6.0,54.0,0.0
+C_LP_reynolds,C_LP,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",V,0.982,0.136,False,0.0,42.0,0.0
+C_LP_sampras,C_LP,dev,False,UNTESTABLE,the model gets the two-hop question wrong,N,0.054,,,,,
+C_LP_shaq,C_LP,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",N,0.982,0.003,False,,54.0,0.0
+C_LP_tiger,C_LP,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",C,0.959,0.0,False,0.0,54.0,0.0
+C_LP_trudeau,C_LP,confirm,False,UNTESTABLE,the model gets hop 1 wrong,O,0.578,,,,,
+C_LP_wilde,C_LP,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",D,0.997,0.988,True,24.0,54.0,0.133
+C_LP_zidane,C_LP,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",M,0.672,0.0,False,-6.0,48.0,0.0
+C_LU_ainshams,C_LU,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",C,0.999,0.005,True,6.0,54.0,0.001
+C_LU_bohr,C_LU,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",C,0.988,0.194,True,6.0,54.0,0.037
+C_LU_case,C_LU,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",C,0.999,0.0,False,,54.0,0.0
+C_LU_cmu,C_LU,dev,False,UNCLEAR,in between,P,0.999,0.119,False,,54.0,0.0
+C_LU_complutense,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.997,0.998,True,36.0,54.0,0.191
+C_LU_duke,C_LU,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",D,0.998,0.001,True,6.0,54.0,0.001
+C_LU_emory,C_LU,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",A,0.991,0.981,True,24.0,54.0,0.981
+C_LU_erasmus,C_LU,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",R,0.987,0.994,True,12.0,54.0,0.082
+C_LU_eth,C_LU,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",Z,0.997,0.14,True,6.0,54.0,0.14
+C_LU_georgetown,C_LU,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",W,0.992,0.004,True,6.0,54.0,0.001
+C_LU_goethe,C_LU,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",F,0.997,0.878,True,12.0,54.0,0.878
+C_LU_gonzaga,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.998,0.978,True,24.0,54.0,0.0
+C_LU_harvard,C_LU,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",C,0.997,0.376,True,6.0,54.0,0.243
+C_LU_heriotwatt,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",E,0.997,0.996,True,24.0,54.0,0.008
+C_LU_humboldt,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.996,0.914,True,24.0,54.0,0.271
+C_LU_karolinska,C_LU,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",S,0.992,0.043,True,6.0,54.0,0.014
+C_LU_lomonosov,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.997,0.993,True,24.0,54.0,0.797
+C_LU_marquette,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",M,0.999,0.979,True,12.0,54.0,0.979
+C_LU_mcgill,C_LU,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",M,0.999,0.017,True,6.0,54.0,0.0
+C_LU_ntu,C_LU,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",T,0.997,0.0,False,0.0,54.0,0.0
+C_LU_puc,C_LU,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",S,0.999,0.002,False,,54.0,0.0
+C_LU_sapienza,C_LU,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",R,0.999,0.002,True,6.0,54.0,0.0
+C_LU_strathclyde,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",G,0.999,0.934,True,18.0,54.0,0.001
+C_LU_tsinghua,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",B,0.998,0.945,True,24.0,54.0,0.693
+C_LU_unsw,C_LU,confirm,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",S,0.99,0.171,True,6.0,54.0,0.052
+C_LU_vanderbilt,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",N,1.0,0.966,True,24.0,54.0,0.005
+C_LU_wits,C_LU,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",J,0.998,0.053,True,6.0,54.0,0.001
+C_LU_yonsei,C_LU,dev,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",S,0.997,0.997,True,12.0,54.0,0.951
+C_MN_bastille,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",7,1.0,0.0,False,,54.0,0.0
+C_MN_dday,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",6,0.999,0.001,False,,54.0,0.0
+C_MN_derby,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",5,0.993,0.0,False,,54.0,0.0
+C_MN_earthday,C_MN,dev,False,UNCLEAR,in between,4,0.997,0.194,True,6.0,54.0,0.004
+C_MN_fathers,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",6,0.998,0.053,True,6.0,54.0,0.002
+C_MN_fringe,C_MN,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",8,0.995,0.0,False,,54.0,0.0
+C_MN_india,C_MN,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",8,0.998,0.0,False,0.0,54.0,0.0
+C_MN_labor,C_MN,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",9,0.998,0.017,False,,54.0,0.0
+C_MN_memorial,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",5,0.999,0.0,False,,54.0,0.0
+C_MN_patrick,C_MN,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",3,0.999,0.0,False,,54.0,0.0
+C_MN_titanic,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",4,0.995,0.003,False,,54.0,0.0
+C_MN_tour,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",7,0.878,0.0,False,0.0,54.0,0.0
+C_MN_valentine,C_MN,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",2,1.0,0.0,False,,54.0,0.0
+C_MN_woodstock,C_MN,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",8,0.967,0.864,True,12.0,54.0,0.003
+C_PL_jupiter,C_PL,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",5,0.999,0.001,False,,54.0,0.0
+C_PL_mars,C_PL,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",4,0.987,0.0,False,-12.0,42.0,0.0
+C_PL_neptune,C_PL,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",8,0.877,0.0,False,,42.0,0.0
+C_PL_saturn,C_PL,confirm,True,CONSULTED (KIND NOT CHECKED),"needed early, beats noise, comes first; no same-kind word to compare",6,0.995,0.688,True,12.0,54.0,0.688
+C_PL_venus,C_PL,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",2,0.996,0.143,False,,54.0,0.0
+C_SP_bird,C_SP,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",5,0.999,0.0,False,,54.0,0.0
+C_SP_gretzky,C_SP,confirm,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",6,0.995,0.028,False,,54.0,0.0
+C_SP_jeter,C_SP,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",9,0.995,0.388,False,,54.0,0.0
+C_SP_lebron,C_SP,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",5,1.0,0.0,False,,54.0,0.0
+C_SP_ruth,C_SP,dev,False,SPREAD OUT,"short windows don't matter, but removing it over many layers does",9,0.997,0.299,False,,54.0,0.0
+C_VC_acropolis,C_VC,confirm,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",No,0.881,0.0,False,,54.0,0.0
+C_VC_angkor,C_VC,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",No,0.739,0.0,False,,48.0,0.0
+C_VC_blarney,C_VC,dev,False,UNTESTABLE,the model gets the two-hop question wrong,No,0.166,,,,,
+C_VC_borobudur,C_VC,dev,False,UNTESTABLE,the model gets the two-hop question wrong,No,0.087,,,,,
+C_VC_colosseum,C_VC,dev,False,UNTESTABLE,the model gets the two-hop question wrong,No,0.114,,,,,
+C_VC_eiffel,C_VC,dev,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",No,0.89,0.0,False,,54.0,0.0
+C_VC_fuji,C_VC,confirm,False,BYSTANDER,"the edit reaches the bridge, but removing it doesn't change the answer",No,0.866,0.0,False,,54.0,0.0
+C_VC_kremlin,C_VC,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",No,0.787,0.0,False,,48.0,0.0
+C_VC_machu,C_VC,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",No,0.834,0.0,False,,48.0,0.0
+C_VC_opera,C_VC,confirm,False,UNTESTABLE,the model gets the two-hop question wrong,No,0.106,,,,,
+C_VC_petra,C_VC,dev,False,UNTESTABLE,"no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read",No,0.743,0.0,False,,48.0,0.0
+C_VC_pyramids,C_VC,dev,False,UNTESTABLE,the model gets the two-hop question wrong,No,0.104,,,,,
+C_VC_schonbrunn,C_VC,dev,False,UNTESTABLE,the model gets the two-hop question wrong,No,0.125,,,,,
+C_VC_taj,C_VC,dev,False,UNTESTABLE,the model gets the two-hop question and hop 2 wrong,No,0.109,,,,,

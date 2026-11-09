@@ -1,0 +1,4 @@
+== 08:58:49 [x10-0] worker up on 592cbf86db7d, NVIDIA H200
+== 08:58:49 [x10-0] start: chain defer 3 13
+== 09:12:28 [x10-0] done (819s): chain defer 3 13
+== 09:12:28 [x10-0] queue empty: WORKER DONE

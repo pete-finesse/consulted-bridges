@@ -1,0 +1,4 @@
+== 09:09:03 [x8-3] worker up on 7e2dd77947ec, NVIDIA H200
+== 09:09:03 [x8-3] start: screen qwen36_27b 11 12
+== 09:13:17 [x8-3] done (254s): screen qwen36_27b 11 12
+== 09:13:17 [x8-3] queue empty: WORKER DONE

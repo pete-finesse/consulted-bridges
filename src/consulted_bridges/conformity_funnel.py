@@ -14,6 +14,7 @@ The confirmation half of the split (candidates.split()) is screened like the res
 (scope.md §6); nothing else about it is printed.
 
   python -m consulted_bridges.conformity_funnel --configs qwen35_4b qwen35_4b_jpp --out results/v2_run1_qwen35_4b
+  python -m consulted_bridges.conformity_funnel --configs qwen36_27b qwen36_27b_jpp --active --out results/v2_run2_qwen36_27b
 """
 from __future__ import annotations
 
@@ -23,7 +24,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from consulted_bridges.questions.proposed.candidates import SPECS, family, split
+from consulted_bridges.questions.proposed.candidates import ACTIVE, SPECS, family, split
 
 STEPS = ["drafted", "knows it", "single token", "onset", "need >= 0.5", "reach", "selected", "sel + reach"]
 
@@ -46,12 +47,13 @@ def cards(cfg):
     return c.set_index("sentence")
 
 
-def funnel(cfg):
+def funnel(cfg, active=False):
     c = cards(cfg)
     conf = set(split()["confirm"])
     rows = []
-    missing = sorted(set(SPECS) - set(c.index))
-    for q in SPECS:
+    qs = ACTIVE if active else SPECS    # --active: leave out the candidates DROPPED at the fact pass
+    missing = sorted(set(qs) - set(c.index))
+    for q in qs:
         r = c.loc[q] if q in c.index else None
         ok = lambda col: bool(r is not None and r[col])  # noqa: E731
         k, s, o, n = ok("knows_it"), ok("single_token"), ok("onset_ok"), ok("need_ok")
@@ -73,12 +75,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--configs", nargs="+", default=["qwen35_4b", "qwen35_4b_jpp"])
     ap.add_argument("--out", default="results/v2_run1_qwen35_4b")
+    ap.add_argument("--active", action="store_true", help="only candidates.ACTIVE (the DROPPED ones left out)")
     args = ap.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     parts = []
     for cfg in args.configs:
-        df, missing = funnel(cfg)
+        df, missing = funnel(cfg, args.active)
         if missing:
             print(f"{cfg}: {len(missing)} candidates have no card (counted as failing knows-it)")
         parts.append(df)

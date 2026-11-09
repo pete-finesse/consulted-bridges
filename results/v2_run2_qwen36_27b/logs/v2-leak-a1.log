@@ -1,0 +1,10 @@
+== 08:37:30 a: leak test (qwen36_27b_jpp)
+L_colosseum k=1 I/F: unblocked 2.938 blocked 0 effect 4.031 -> PASS
+L_colosseum k=2 I/F: unblocked 3.625 blocked 0 effect 3.312 -> PASS
+L_colosseum k=3 I/F: unblocked 4.078 blocked 0 effect 3.469 -> PASS
+L_colosseum k=3 I/?: unblocked 4.312 blocked 0 effect 3.469 -> PASS
+L_gates k=3 S/F: unblocked 6.875 blocked 0 effect 6.656 -> PASS
+V_LM_eiffel k=3 F/G: unblocked 4.781 blocked 0 effect 3.438 -> PASS
+V_LU_berklee k=3 B/F: unblocked 8.688 blocked 0 effect 3.531 -> PASS
+LEAK TEST PASS {'torch_chunk_gated_delta_rule': 'transformers.models.qwen3_5.modeling_qwen3_5.torch_chunk_gated_delta_rule', 'torch_recurrent_gated_delta_rule': 'transformers.models.qwen3_5.modeling_qwen3_5.torch_recurrent_gated_delta_rule', 'forward': 'transformers.models.qwen3_5.modeling_qwen3_5.Qwen3_5GatedDeltaNet.forward'}
+== 08:41:40 V2RUN DONE

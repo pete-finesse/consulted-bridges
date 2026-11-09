@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  62%|██████▏   | 526/851 [00:00<00:00, 5225.30it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 5408.88it/s]
+PROGRESS 0/14 starting C_CT_lalibela
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_CT_lalibela] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 1/14 starting C_DS_halong
+[C_DS_halong] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 2/14 starting C_EO_colosseum
+[C_EO_colosseum] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 3/14 starting C_LM_belem
+[C_LM_belem] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 4/14 starting C_LM_hagia
+[C_LM_hagia] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 5/14 starting C_LM_petra
+[C_LM_petra] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 6/14 starting C_LP_benzema
+[C_LP_benzema] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 7/14 starting C_LP_kobe
+[C_LP_kobe] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 8/14 starting C_LP_tiger
+[C_LP_tiger] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 9/14 starting C_LU_eth
+[C_LU_eth] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 10/14 starting C_LU_puc
+[C_LU_puc] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 11/14 starting C_MN_fathers
+[C_MN_fathers] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 12/14 starting C_PL_neptune
+[C_PL_neptune] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 13/14 starting C_VC_colosseum
+[C_VC_colosseum] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 14/14 ALLDONE

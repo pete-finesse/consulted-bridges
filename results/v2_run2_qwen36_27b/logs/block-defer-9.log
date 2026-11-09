@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 9775.91it/s]
+PROGRESS 0/2 V_LM_kremlin
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[V_LM_kremlin alone] A 1.00 B 0.00 (2s)
+[V_LM_kremlin agree1] A 0.99 B 0.02 C 0.99 C_late 0.99 D 0.00 D_late 0.01 (1s)
+[V_LM_kremlin agree2] A 0.98 B 0.26 C 0.98 C_late 0.98 D 0.00 D_late 0.02 (1s)
+[V_LM_kremlin agree3] A 0.97 B 0.33 C 0.98 C_late 0.97 D 0.00 D_late 0.05 (1s)
+[V_LM_kremlin disagree1] A 0.97 B 0.00 C 0.99 C_late 0.92 D 0.00 D_late 0.00 (1s)
+[V_LM_kremlin disagree2] A 0.18 B 0.00 C 0.98 C_late 0.76 D 0.00 D_late 0.00 (1s)
+[V_LM_kremlin disagree3] A 0.19 B 0.00 C 0.98 C_late 0.73 D 0.00 D_late 0.00 (1s)
+[V_LM_kremlin hidden1] A 0.99 B 0.00 C 0.99 C_late 0.98 D 0.00 D_late 0.00 (1s)
+[V_LM_kremlin hidden2] A 0.99 B 0.00 C 0.98 C_late 0.98 D 0.00 D_late 0.00 (1s)
+[V_LM_kremlin hidden3] A 0.98 B 0.00 C 0.98 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[V_LM_kremlin hidden_sub3] A 0.97 B 0.00 C 0.98 C_late 0.96 D 0.00 D_late 0.00 (1s)
+[V_LM_kremlin told_copy3] A 0.01 B 0.00 C 0.77 C_late 0.01 D 0.00 D_late 0.00 (1s)
+[V_LM_kremlin patch] P_all 0.98 (14s)
+PROGRESS 1/2 V_LU_berklee
+[V_LU_berklee alone] A 1.00 B 0.00 (0s)
+[V_LU_berklee agree1] A 0.99 B 0.07 C 0.99 C_late 0.99 D 0.02 D_late 0.01 (1s)
+[V_LU_berklee agree2] A 0.99 B 0.87 C 0.99 C_late 0.99 D 0.01 D_late 0.07 (1s)
+[V_LU_berklee agree3] A 0.99 B 0.93 C 0.98 C_late 0.99 D 0.02 D_late 0.29 (1s)
+[V_LU_berklee disagree1] A 0.08 B 0.00 C 0.99 C_late 0.99 D 0.02 D_late 0.01 (1s)
+[V_LU_berklee disagree2] A 0.01 B 0.00 C 0.99 C_late 0.99 D 0.01 D_late 0.02 (1s)
+[V_LU_berklee disagree3] A 0.02 B 0.01 C 0.98 C_late 0.99 D 0.02 D_late 0.04 (1s)
+[V_LU_berklee hidden1] A 0.99 B 0.03 C 0.99 C_late 0.99 D 0.02 D_late 0.03 (1s)
+[V_LU_berklee hidden2] A 0.99 B 0.02 C 0.99 C_late 0.99 D 0.01 D_late 0.02 (1s)
+[V_LU_berklee hidden3] A 0.99 B 0.02 C 0.98 C_late 0.99 D 0.02 D_late 0.02 (1s)
+[V_LU_berklee hidden_sub3] A 0.97 B 0.03 C 0.99 C_late 0.98 D 0.01 D_late 0.02 (1s)
+[V_LU_berklee told_copy3] A 0.00 B 0.00 C 0.89 C_late 0.01 D 0.23 D_late 0.00 (1s)
+[V_LU_berklee patch] P_all 0.99 (15s)
+PROGRESS ALLDONE

@@ -1,0 +1,93 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 12771.32it/s]
+PROGRESS 0/44 V_LM_eiffel alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[V_LM_eiffel alone] says 'F' (right) P(right) 1.00 P(peer) 0.00 onset 54 | need 1.00 bridge dLO +16.85 noise +0.24 kind 0.6135791062015876 | reach 1.00 rank 0 | bridge still needed (56s)
+PROGRESS 1/44 V_LM_eiffel agree1
+[V_LM_eiffel agree1] says 'F' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.95 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.94 rank 0 | bridge still needed (9s)
+PROGRESS 2/44 V_LM_eiffel agree2
+[V_LM_eiffel agree2] says 'F' (right) P(right) 0.97 P(peer) 0.97 onset 54 | need 0.50 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.88 rank 0 | mixed (7s)
+PROGRESS 3/44 V_LM_eiffel agree3
+[V_LM_eiffel agree3] says 'F' (right) P(right) 0.97 P(peer) 0.97 onset 54 | need 0.40 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.86 rank 0 | mixed (17s)
+PROGRESS 4/44 V_LM_eiffel disagree1
+[V_LM_eiffel disagree1] says 'F' (holds) P(right) 0.98 P(peer) 0.01 onset 54 | need 0.99 bridge dLO +12.87 noise +0.62 kind 0.24996324186818697 | reach 1.00 rank 0 | bridge still pulls (14s)
+PROGRESS 5/44 V_LM_eiffel disagree2
+[V_LM_eiffel disagree2] says 'F' (holds) P(right) 0.86 P(peer) 0.08 onset 48 | need 0.93 bridge dLO +9.50 noise +0.50 kind 0.8749930126841423 | reach 1.00 rank 1 | bridge still pulls (15s)
+PROGRESS 6/44 V_LM_eiffel disagree3
+[V_LM_eiffel disagree3] says 'F' (holds) P(right) 0.78 P(peer) 0.11 onset 48 | need 0.92 bridge dLO +9.06 noise +0.25 kind 0.249998034775206 | reach 1.00 rank 1 | bridge still pulls (25s)
+PROGRESS 7/44 V_LM_eiffel hidden1
+[V_LM_eiffel hidden1] says 'F' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 8/44 V_LM_eiffel hidden2
+[V_LM_eiffel hidden2] says 'F' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 1 | bridge still needed (13s)
+PROGRESS 9/44 V_LM_eiffel hidden3
+[V_LM_eiffel hidden3] says 'F' (right) P(right) 0.98 P(peer) nan onset 48 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 1 | bridge still needed (12s)
+PROGRESS 10/44 V_LM_eiffel hidden_sub1
+[V_LM_eiffel hidden_sub1] says 'F' (right) P(right) 0.98 P(peer) nan onset 30 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.20 rank 1 | bridge still needed (7s)
+PROGRESS 11/44 V_LM_eiffel hidden_sub2
+[V_LM_eiffel hidden_sub2] says 'F' (right) P(right) 0.97 P(peer) nan onset 36 | need 0.90 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.25 rank 1 | bridge still needed (10s)
+PROGRESS 12/44 V_LM_eiffel hidden_sub3
+[V_LM_eiffel hidden_sub3] says 'F' (right) P(right) 0.95 P(peer) nan onset 30 | need 0.92 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.18 rank 1 | bridge still needed (9s)
+PROGRESS 13/44 V_LM_eiffel disagree_g1
+[V_LM_eiffel disagree_g1] says 'F' (holds) P(right) 0.99 P(peer) 0.00 onset 54 | need 1.00 bridge dLO +15.43 noise +0.75 kind 0.8743567921998627 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS 14/44 V_LM_eiffel disagree_g2
+[V_LM_eiffel disagree_g2] says 'F' (holds) P(right) 0.93 P(peer) 0.02 onset 48 | need 0.94 bridge dLO +12.00 noise +0.62 kind 0.8749730056496352 | reach 1.00 rank 0 | bridge still pulls (14s)
+PROGRESS 15/44 V_LM_eiffel disagree_g3
+[V_LM_eiffel disagree_g3] says 'F' (holds) P(right) 0.88 P(peer) 0.03 onset 48 | need 0.95 bridge dLO +11.00 noise +0.75 kind 1.1249810701500849 | reach 1.00 rank 1 | bridge still pulls (15s)
+PROGRESS 16/44 V_LM_eiffel told_copy3
+[V_LM_eiffel told_copy3] says 'G' (full give-in) P(right) 0.06 P(peer) 0.94 onset 54 | need 0.70 bridge dLO +5.99 noise +0.37 kind 0.24999545147283841 | reach 1.00 rank 0 | bridge still pulls (18s)
+PROGRESS 17/44 V_LM_eiffel told_ignore3
+[V_LM_eiffel told_ignore3] says 'F' (holds) P(right) 0.99 P(peer) 0.00 onset 54 | need 1.00 bridge dLO +13.00 noise +0.25 kind 0.12494704330274953 | reach 1.00 rank 0 | bridge still pulls (19s)
+PROGRESS 18/44 V_LM_eiffel peer_bridge1
+[V_LM_eiffel peer_bridge1] says 'F' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.35 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.76 rank 0 | mixed (14s)
+PROGRESS 19/44 V_LM_eiffel peer_bridge3
+[V_LM_eiffel peer_bridge3] says 'F' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.37 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.52 rank 0 | mixed (15s)
+PROGRESS 20/44 V_LM_eiffel peer_bridge_wrong1
+[V_LM_eiffel peer_bridge_wrong1] says 'F' (holds) P(right) 0.97 P(peer) 0.00 onset 48 | need 0.99 bridge dLO +13.75 noise +0.25 kind 0.3744201548645316 | reach 1.00 rank 1 | bridge still pulls (17s)
+PROGRESS 21/44 V_LM_eiffel peer_bridge_wrong3
+[V_LM_eiffel peer_bridge_wrong3] says 'F' (holds) P(right) 0.83 P(peer) 0.02 onset 54 | need 0.94 bridge dLO +8.87 noise +0.62 kind 1.3749571408628802 | reach 1.00 rank 1 | bridge still pulls (18s)
+PROGRESS 22/44 V_LP_obama_m alone
+[V_LP_obama_m alone] says 'C' (right) P(right) 0.93 P(peer) 0.01 onset 54 | need 0.95 bridge dLO +6.37 noise +0.37 kind 0.4999293762635286 | reach 1.00 rank 0 | bridge still needed (12s)
+PROGRESS 23/44 V_LP_obama_m agree1
+[V_LP_obama_m agree1] says 'C' (right) P(right) 0.96 P(peer) 0.96 onset 54 | need 0.84 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 24/44 V_LP_obama_m agree2
+[V_LP_obama_m agree2] says 'C' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.02 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (15s)
+PROGRESS 25/44 V_LP_obama_m agree3
+[V_LP_obama_m agree3] says 'C' (right) P(right) 0.97 P(peer) 0.97 onset 54 | need -0.01 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (12s)
+PROGRESS 26/44 V_LP_obama_m disagree1
+[V_LP_obama_m disagree1] says 'C' (holds) P(right) 0.84 P(peer) 0.11 onset 54 | need 0.67 bridge dLO +6.87 noise +1.25 kind 1.2499921489968182 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS 27/44 V_LP_obama_m disagree2
+[V_LP_obama_m disagree2] says 'B' (full give-in) P(right) 0.00 P(peer) 0.98 onset 54 | need 0.06 bridge dLO +1.00 noise +0.87 kind 0.49985539524645883 | reach 1.00 rank 0 | bridge not needed (16s)
+PROGRESS 28/44 V_LP_obama_m disagree3
+[V_LP_obama_m disagree3] says 'B' (full give-in) P(right) 0.00 P(peer) 0.98 onset 54 | need -0.09 bridge dLO +0.12 noise +0.25 kind 0.12494978238408994 | reach 1.00 rank 0 | bridge not needed (17s)
+PROGRESS 29/44 V_LP_obama_m hidden1
+[V_LP_obama_m hidden1] says 'C' (right) P(right) 0.50 P(peer) nan onset 48 | need 0.47 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | mixed (11s)
+PROGRESS 30/44 V_LP_obama_m hidden2
+[V_LP_obama_m hidden2] says 'C' (right) P(right) 0.85 P(peer) nan onset 54 | need 0.81 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 31/44 V_LP_obama_m hidden3
+[V_LP_obama_m hidden3] says 'C' (right) P(right) 0.87 P(peer) nan onset 54 | need 0.79 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (15s)
+PROGRESS 32/44 V_LP_obama_m hidden_sub1
+[V_LP_obama_m hidden_sub1] says 'C' (right) P(right) 0.85 P(peer) nan onset 54 | need 0.75 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (12s)
+PROGRESS 33/44 V_LP_obama_m hidden_sub2
+[V_LP_obama_m hidden_sub2] says 'C' (right) P(right) 0.89 P(peer) nan onset 54 | need 0.82 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (12s)
+PROGRESS 34/44 V_LP_obama_m hidden_sub3
+[V_LP_obama_m hidden_sub3] says 'C' (right) P(right) 0.72 P(peer) nan onset 54 | need 0.51 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 35/44 V_LP_obama_m disagree_g1
+[V_LP_obama_m disagree_g1] says 'C' (holds) P(right) 0.93 P(peer) 0.05 onset 54 | need 0.95 bridge dLO +6.62 noise +0.50 kind 0.9999851236808357 | reach 1.00 rank 0 | bridge still pulls (15s)
+PROGRESS 36/44 V_LP_obama_m disagree_g2
+[V_LP_obama_m disagree_g2] says 'D' (full give-in) P(right) 0.00 P(peer) 0.99 onset 54 | need 0.17 bridge dLO +1.37 noise +0.87 kind 0.6244828925551547 | reach 1.00 rank 0 | bridge not needed (16s)
+PROGRESS 37/44 V_LP_obama_m disagree_g3
+[V_LP_obama_m disagree_g3] says 'D' (full give-in) P(right) 0.00 P(peer) 0.98 onset 54 | need 0.32 bridge dLO +1.00 noise +0.37 kind 0.2498484974636801 | reach 1.00 rank 0 | bridge not needed (18s)
+PROGRESS 38/44 V_LP_obama_m told_copy3
+[V_LP_obama_m told_copy3] says 'B' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need -0.39 bridge dLO -0.25 noise +0.50 kind 0.12455265043806918 | reach 1.00 rank 23 | bridge not needed (17s)
+PROGRESS 39/44 V_LP_obama_m told_ignore3
+[V_LP_obama_m told_ignore3] says 'B' (full give-in) P(right) 0.08 P(peer) 0.74 onset 48 | need 0.45 bridge dLO +3.00 noise +0.75 kind 1.2499726674103475 | reach 1.00 rank 0 | bridge still pulls (16s)
+PROGRESS 40/44 V_LP_obama_m peer_bridge1
+[V_LP_obama_m peer_bridge1] says 'C' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.57 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.95 rank 0 | bridge still needed (13s)
+PROGRESS 41/44 V_LP_obama_m peer_bridge3
+[V_LP_obama_m peer_bridge3] says 'C' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.06 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.78 rank 0 | bridge not needed (15s)
+PROGRESS 42/44 V_LP_obama_m peer_bridge_wrong1
+[V_LP_obama_m peer_bridge_wrong1] says 'C' (holds) P(right) 0.63 P(peer) 0.23 onset 54 | need 0.48 bridge dLO +4.50 noise +1.37 kind 4.87493154317066 | reach 1.00 rank 0 | mixed (15s)
+PROGRESS 43/44 V_LP_obama_m peer_bridge_wrong3
+[V_LP_obama_m peer_bridge_wrong3] says 'C' (holds) P(right) 0.41 P(peer) 0.41 onset 48 | need 0.37 bridge dLO +3.25 noise +1.25 kind 5.999530360931223 | reach 1.00 rank 0 | mixed (16s)
+PROGRESS ALLDONE

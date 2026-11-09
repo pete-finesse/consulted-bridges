@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 13341.28it/s]
+PROGRESS 0/14 starting C_CT_neuschwanstein
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_CT_neuschwanstein] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 1/14 starting C_DS_maasai
+[C_DS_maasai] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 2/14 starting C_EO_eiffel
+[C_EO_eiffel] UNTESTABLE: the model gets the two-hop question wrong
+PROGRESS 3/14 starting C_LM_blarney
+[C_LM_blarney] SPREAD OUT: short windows don't matter, but removing it over many layers does
+PROGRESS 4/14 starting C_LM_halong
+[C_LM_halong] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 5/14 starting C_LM_rila
+[C_LM_rila] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 6/14 starting C_LP_buffett
+[C_LP_buffett] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 7/14 starting C_LP_lebron
+[C_LP_lebron] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 8/14 starting C_LP_trudeau
+[C_LP_trudeau] UNTESTABLE: the model gets hop 1 wrong
+PROGRESS 9/14 starting C_LU_georgetown
+[C_LU_georgetown] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 10/14 starting C_LU_sapienza
+[C_LU_sapienza] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 11/14 starting C_MN_fringe
+[C_MN_fringe] UNTESTABLE: no positive result, and the edit can't remove the bridge from this prompt, so a negative can't be read
+PROGRESS 12/14 starting C_PL_saturn
+[C_PL_saturn] CONSULTED (KIND NOT CHECKED): needed early, beats noise, comes first; no same-kind word to compare
+PROGRESS 13/14 starting C_VC_eiffel
+[C_VC_eiffel] BYSTANDER: the edit reaches the bridge, but removing it doesn't change the answer
+PROGRESS 14/14 ALLDONE

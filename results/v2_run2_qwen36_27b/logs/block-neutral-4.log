@@ -1,0 +1,35 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 12922.89it/s]
+PROGRESS 0/2 L_spider
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[L_spider alone] A 0.99 B 0.44 (3s)
+[L_spider agree1] A 0.98 B 0.70 C 0.98 C_late 0.98 D 0.40 D_late 0.60 (1s)
+[L_spider agree2] A 0.99 B 0.83 C 0.96 C_late 0.99 D 0.12 D_late 0.89 (1s)
+[L_spider agree3] A 0.99 B 0.86 C 0.97 C_late 0.99 D 0.15 D_late 0.88 (2s)
+[L_spider disagree1] A 0.96 B 0.13 C 0.98 C_late 0.95 D 0.52 D_late 0.12 (1s)
+[L_spider disagree2] A 0.61 B 0.02 C 0.96 C_late 0.55 D 0.47 D_late 0.01 (1s)
+[L_spider disagree3] A 0.61 B 0.04 C 0.97 C_late 0.55 D 0.53 D_late 0.03 (1s)
+[L_spider copy3] A 0.00 B 0.00 C 0.10 C_late 0.00 D 0.06 D_late 0.00 (1s)
+[L_spider hidden1] A 0.97 B 0.36 C 0.98 C_late 0.97 D 0.40 D_late 0.35 (1s)
+[L_spider hidden2] A 0.97 B 0.39 C 0.96 C_late 0.96 D 0.12 D_late 0.38 (1s)
+[L_spider hidden3] A 0.97 B 0.40 C 0.97 C_late 0.97 D 0.15 D_late 0.40 (1s)
+[L_spider hidden_sub3] A 0.96 B 0.42 C 0.97 C_late 0.95 D 0.26 D_late 0.41 (1s)
+[L_spider told_copy3] A 0.00 B 0.00 C 0.78 C_late 0.00 D 0.37 D_late 0.00 (1s)
+[L_spider copy_alone] A 0.32 B 0.04 (0s)
+[L_spider patch] P_all 0.97 (16s)
+PROGRESS 1/2 V_LP_beyonce
+[V_LP_beyonce alone] A 0.99 B 0.00 (0s)
+[V_LP_beyonce agree1] A 0.94 B 0.11 C 0.71 C_late 0.90 D 0.00 D_late 0.02 (1s)
+[V_LP_beyonce agree2] A 0.99 B 0.43 C 0.93 C_late 0.98 D 0.00 D_late 0.02 (1s)
+[V_LP_beyonce agree3] A 0.98 B 0.45 C 0.84 C_late 0.96 D 0.00 D_late 0.12 (1s)
+[V_LP_beyonce disagree1] A 0.91 B 0.00 C 0.66 C_late 0.83 D 0.00 D_late 0.01 (1s)
+[V_LP_beyonce disagree2] A 0.90 B 0.00 C 0.92 C_late 0.85 D 0.00 D_late 0.00 (1s)
+[V_LP_beyonce disagree3] A 0.66 B 0.00 C 0.85 C_late 0.83 D 0.00 D_late 0.00 (1s)
+[V_LP_beyonce hidden1] A 0.63 B 0.00 C 0.71 C_late 0.65 D 0.00 D_late 0.00 (1s)
+[V_LP_beyonce hidden2] A 0.89 B 0.00 C 0.93 C_late 0.89 D 0.00 D_late 0.00 (1s)
+[V_LP_beyonce hidden3] A 0.95 B 0.00 C 0.84 C_late 0.94 D 0.00 D_late 0.00 (1s)
+[V_LP_beyonce hidden_sub3] A 0.79 B 0.00 C 0.85 C_late 0.81 D 0.00 D_late 0.00 (1s)
+[V_LP_beyonce told_copy3] A 0.00 B 0.00 C 0.53 C_late 0.00 D 0.02 D_late 0.00 (1s)
+[V_LP_beyonce patch] P_all 0.93 (16s)
+PROGRESS ALLDONE

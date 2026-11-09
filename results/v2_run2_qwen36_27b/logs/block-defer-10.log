@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 11735.85it/s]
+PROGRESS 0/2 V_LM_machu
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[V_LM_machu alone] A 1.00 B 0.00 (2s)
+[V_LM_machu agree1] A 0.99 B 0.43 C 0.99 C_late 0.99 D 0.00 D_late 0.42 (1s)
+[V_LM_machu agree2] A 0.98 B 0.96 C 0.97 C_late 0.98 D 0.01 D_late 0.43 (1s)
+[V_LM_machu agree3] A 0.98 B 0.49 C 0.98 C_late 0.98 D 0.01 D_late 0.56 (1s)
+[V_LM_machu disagree1] A 0.72 B 0.00 C 0.99 C_late 0.98 D 0.00 D_late 0.00 (1s)
+[V_LM_machu disagree2] A 0.01 B 0.00 C 0.98 C_late 0.74 D 0.01 D_late 0.00 (1s)
+[V_LM_machu disagree3] A 0.02 B 0.00 C 0.98 C_late 0.04 D 0.01 D_late 0.00 (1s)
+[V_LM_machu hidden1] A 0.96 B 0.00 C 0.99 C_late 0.96 D 0.00 D_late 0.00 (1s)
+[V_LM_machu hidden2] A 0.79 B 0.57 C 0.97 C_late 0.79 D 0.93 D_late 0.57 (1s)
+[V_LM_machu hidden3] A 0.97 B 0.00 C 0.98 C_late 0.97 D 0.01 D_late 0.00 (1s)
+[V_LM_machu hidden_sub3] A 0.93 B 0.00 C 0.98 C_late 0.87 D 0.00 D_late 0.00 (1s)
+[V_LM_machu told_copy3] A 0.00 B 0.00 C 0.62 C_late 0.00 D 0.03 D_late 0.00 (1s)
+[V_LM_machu patch] P_all 0.97 (15s)
+PROGRESS 1/2 V_LU_fudan
+[V_LU_fudan alone] A 1.00 B 0.01 (0s)
+[V_LU_fudan agree1] A 0.99 B 0.34 C 0.98 C_late 0.98 D 0.01 D_late 0.06 (1s)
+[V_LU_fudan agree2] A 0.99 B 0.98 C 0.98 C_late 0.99 D 0.02 D_late 0.80 (1s)
+[V_LU_fudan agree3] A 0.98 B 0.98 C 0.98 C_late 0.97 D 0.20 D_late 0.92 (1s)
+[V_LU_fudan disagree1] A 0.98 B 0.00 C 0.98 C_late 0.97 D 0.01 D_late 0.01 (1s)
+[V_LU_fudan disagree2] A 0.16 B 0.00 C 0.98 C_late 0.90 D 0.03 D_late 0.01 (1s)
+[V_LU_fudan disagree3] A 0.16 B 0.00 C 0.98 C_late 0.89 D 0.03 D_late 0.00 (1s)
+[V_LU_fudan hidden1] A 0.97 B 0.01 C 0.98 C_late 0.97 D 0.01 D_late 0.01 (1s)
+[V_LU_fudan hidden2] A 0.97 B 0.01 C 0.98 C_late 0.97 D 0.02 D_late 0.01 (1s)
+[V_LU_fudan hidden3] A 0.98 B 0.04 C 0.98 C_late 0.98 D 0.03 D_late 0.03 (1s)
+[V_LU_fudan hidden_sub3] A 0.97 B 0.02 C 0.99 C_late 0.97 D 0.02 D_late 0.01 (1s)
+[V_LU_fudan told_copy3] A 0.00 B 0.00 C 0.65 C_late 0.00 D 0.04 D_late 0.00 (1s)
+[V_LU_fudan patch] P_all 0.98 (14s)
+PROGRESS ALLDONE
