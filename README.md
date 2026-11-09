@@ -70,13 +70,12 @@ The Silent Dissent experiment harness and the paper notes were written before th
 
 ### What was built during the sprint weekend
 
-Everything not listed above was written during the sprint (7 to 9 November 2026): the bridge scorecard and its
+Everything not listed above was written during the sprint (6 to 9 November 2026): the bridge scorecard and its
 gates (`scorecard.py`, `legacy/bridge_card*.py`, `questions/`), the question bank (`bank.py`), the conformity
 experiment (`conformity.py`, `conformity_stats.py`, `conformity_select.py`, `conformity_funnel.py`,
 `conformity_block.py`, `conformity_v2_report.py`), the peer block and patching (`peerblock.py`), the candidate
 questions (`questions/proposed/candidates.py`, `status.py`), the pod runners under `scripts/pod/`, and every result
 under `results/`. The write-ups under `docs/conformity/` and the experiment log record the order in which it happened.
-If the sprint's official start was later than 6 November, the 6 November scorecard commits are pre-existing too.
 
 ## Credits
 
