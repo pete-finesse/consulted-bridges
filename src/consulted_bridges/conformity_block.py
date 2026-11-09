@@ -36,7 +36,8 @@ from pathlib import Path
 
 import pandas as pd
 
-from consulted_bridges.conformity import FAKE, QUESTIONS, SPECS, Prompt, peer_positions, prompts, wrong_letter
+from consulted_bridges import conformity
+from consulted_bridges.conformity import FAKE, QUESTIONS, SPECS, Prompt, peer_positions, prompts, swap_target, wrong_letter
 from consulted_bridges.interventions import Edit
 from consulted_bridges.load import load
 from consulted_bridges.peerblock import Block, Patch
@@ -124,9 +125,13 @@ def run_question(h, q, frame, W, do_patch, rows, dose, patch_rows):
         base = dict(question=q, frame=frame, condition=cond, peers=k, right=pm.right, peer_letter=None if pm.hidden or cond in ("alone", "copy_alone") else pm.pletter,
                     state_c=None if cond == "copy_alone" else state, window=None if not win else f"layers {win[0]}–{win[-1]}",
                     window_source=source if win else None, n_peer_tokens=len(pos))
+        kw, ka = swap_target(spec)          # D's other destination: the first same-kind word's answer (Spain's S)
         for cell, edits in cells.items():
-            pr, pw, _ = pm.probs(edits)
-            rows.append(dict(base, cell=cell, P_right=pr, P_peer=pw, lo_right=logit(pr), lo_peer=logit(pw)))
+            pr, pw, px = pm.probs_x(edits, [ka])
+            pk = px.get(ka, float("nan"))
+            rows.append(dict(base, cell=cell, P_right=pr, P_peer=pw, lo_right=logit(pr), lo_peer=logit(pw),
+                             kind_word=kw, kind_answer=ka, P_kind=pk, lo_kind=logit(pk),
+                             wrong_rule=conformity.WRONG_RULE))
         if (cond, k) in DOSE and win:
             res = pm.probs_many([[Edit("ablate", b, win, pm.allpos, strength=s)] for s in STRENGTHS])
             for s, (pr, pw, _) in zip(STRENGTHS, res):
@@ -169,8 +174,12 @@ def main():
     ap.add_argument("--questions", nargs="*", default=None)
     ap.add_argument("--shard", default="0/1")
     ap.add_argument("--patch", action="store_true")
+    ap.add_argument("--wrong-rule", default=None, choices=conformity.WRONG_RULES,
+                    help="the peers' wrong answer: free (default, run 3 on) or kind (runs 1-2); must match the windows run")
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
+    if args.wrong_rule:
+        conformity.WRONG_RULE = args.wrong_rule
     cfg = Path(args.config).stem
     qs = args.questions or QUESTIONS.get(cfg.replace("_jpp", ""), [])
     i, n = map(int, args.shard.split("/"))

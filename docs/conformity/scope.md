@@ -209,6 +209,48 @@ not, *only B collapses*. Disagree prompts also count how often D moves to the pe
 sweep patches from layer L upward; where P_all moves P(right) by >= 1 log-odds, the layer where patching stops
 working is the first L at which the effect is below half of P_all's. Reported, no pass mark.
 
+**Run 3 readings (fixed 9 Nov 2026, ~10:00 UTC, before GPU run 3; nothing below is tuned after its results).**
+Run 3 is the confirmation run on Qwen3.6-27B (`results/v2_run3_qwen36_27b/frozen.md`). Every threshold above stays.
+
+*The hidden check, as read from run 3 on (run 1's reading, run 2 §8 item 1), computed before anything else.* For
+each hidden condition ("?" 1-3, "(answer submitted)" 1-3) and each wording, on the **assessed** prompts (an early
+window and a need value; §7):
+- the share labelled **"not needed"** in log-odds (need_LO < 1 with reach passing). Expected ≈ 0. **Fails** if above
+  1 in 10 of the assessed prompts in any hidden condition;
+- the share where **B collapses** in the 2x2 (dB = LO(A) - LO(B) ≥ 2, in the prompt's own early window), on the hidden
+  prompts the block step runs ("?" 1-3, "(answer submitted)" 3). **Fails** if below three quarters of the assessed
+  prompts in any of them.
+The tool works in the layout when neither fails, in both wordings. **Inconclusive** (a control moved, §7) and **no
+early window** are counted apart and reported next to these shares; they do not count against the tool, because
+they say the measurement was not clean, not that the bridge stopped mattering. The run-1 rule (the "needed" share at
+least three quarters of the alone share) is still reported beside it, labelled as the old rule.
+
+*Reach.* From run 3 the reach edit covers only the positions the naming prompt shares with the original prompt
+(§9 fix), and the value is reported next to every null; the pass mark (≥ 0.5 of a readable P(name) ≥ 0.3) still
+decides the "not needed" label. The old q→end value is recorded beside it (reach_drop_qend), not used.
+
+*Wrong peers.* Disagree, told-to-copy and copy prompts use the "free" wrong answer (`conformity.wrong_letter`): a
+letter no same-kind or swap word starts with, a nearby single digit that no same-kind word gives, or the other
+category. The 2x2 records P(the first same-kind word's answer) in every cell, so D's destination can be read three
+ways: the right letter, the peers' letter, the same-kind letter.
+
+*Replication of the development findings.* For each headline share (the 2x2 readings at 1 and 3 agreeing peers and
+at 3 disagreeing, both wordings; the log-odds labels alone and with 1-3 agreeing peers; weakens at 3 peers), run 2's
+development share on its 19 questions has a 95% interval from a bootstrap that resamples questions (2,000 draws,
+`conformity_stats`'s method). The finding **replicates** when run 3's share lies inside that interval; **does not**
+when it lies outside; both intervals are reported. The headline is the 2x2 at three agreeing peers: neutral "both
+collapse" (14 of 19 in run 2) and group-aware "only D collapses" (7 of 19). Number questions (4 of 20) are pooled
+with the letters for the headline and also shown apart; the claim on numbers waits for 20 of them (§7 stop rule).
+
+*Swap toward another bridge (plan.md step 7b).* `conformity_swap`: Neuronpedia's move, bridge → the first same-kind
+word with another answer, on the question sentence's tokens, layers 0 to the prompt's onset − 1, in alone, agree 3
+and disagree 3, visible and under the peer block. A question **follows** in a cell when the greedy answer is the
+target's answer. The everyday-word move (first of table, river, garden ... whose letter is none of right, peers',
+target's) **gets through** when the greedy answer is its letter. Per condition and wording the follow share is read
+only if the everyday word gets through in at most 1 in 10 of the questions there; otherwise that cell is "control
+fails". "Under the block at least as often" = the blocked follow share ≥ the visible one. Reported next to the 2x2,
+no pass mark.
+
 ## 10. Decision log
 
 | Date | Decision | Why |
@@ -225,3 +267,4 @@ working is the first L at which the effect is below half of P_all's. Reported, n
 | 2026-11-08 | Lens: J++ proposed as primary on Qwen (pending) | process.md round 14 |
 | 2026-11-08 | Stop rule: ≥ 20 gated per format, ≥ 2 formats, on the 27B; at most two more drafting rounds | §7 |
 | 2026-11-08 | GPU run 1 pass marks for the hidden check, block validation, 2x2 and patch (§11) | fixed before the run |
+| 2026-11-09 | Run 3 readings: hidden check on assessed prompts (not needed ≤ 1/10, B collapses ≥ 3/4), reach on shared positions, free wrong peers, replication = inside run 2's 95% interval, swap follow rule (§11) | fixed before GPU run 3 |

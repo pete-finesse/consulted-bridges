@@ -1,0 +1,1 @@
+C_EL_helium C_EL_oxygen C_LM_alhambra C_LM_bluelagoon C_LM_chichen C_LM_galapagos C_LM_moai C_LM_tikal C_LM_timbuktu C_LM_vasa C_LP_dante C_LP_kanye C_LU_bohr C_LU_case C_LU_emory C_LU_goethe C_LU_mcgill C_LU_unsw C_PL_saturn C_SP_gretzky

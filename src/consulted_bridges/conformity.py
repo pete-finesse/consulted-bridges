@@ -81,6 +81,12 @@ EPS = 1e-6
 BATCH = int(__import__('os').environ.get('CB_BATCH', '8'))   # edited copies of a prompt per forward pass
 SUFFIX = " Answer with one letter."
 ONE = " Answer in one word."
+NUM1 = " Answer with a single number."     # the v2 number candidates (candidates.py)
+
+
+def suffix_of(user):
+    """The answer-format line a question ends with (letter, number or one word)."""
+    return next((x for x in (SUFFIX, NUM1) if user.endswith(x)), ONE)
 
 # Letter questions where the saved solo scorecard found need >= 0.5 and the bridge acting first (controls
 # built to fail left out), from the question bank's results table.
@@ -156,9 +162,83 @@ UNRELATED = ["Tokyo", "Cairo"]
 TH = dict(pull_noise=2.0, pull_kind=1.0, none_noise=1.0, need=0.5, none_need=0.2, reach=0.5, readable=0.3, present=100)
 
 
-def wrong_letter(qid, spec):
+# The peers' wrong answer. Two rules (scope.md §11, run 3):
+#   "kind"  (runs 1-2, the development runs): the first same-kind or swap word's letter whose letter differs from the
+#           right one (Spain's S for the Colosseum). Removing the bridge can send the model to exactly that letter,
+#           so D's destination in the 2x2 could not be read.
+#   "free"  (from run 3 on, the default): letters - a letter that no same-kind or swap word starts with and that
+#           differs from the right letter, chosen by a hash of the question id (fixed, no model involved); numbers -
+#           the nearest single digit that is neither the right answer nor a same-kind word's answer (the old one-off
+#           choice first); categories (yes/no, left/right, even/odd, continents) - the other answer.
+# The pilot's six calibration questions keep their fixed letters under both rules.
+# CB_WRONG_RULE=kind (or --wrong-rule kind on the drivers) reproduces the earlier runs exactly.
+WRONG_RULE = __import__("os").environ.get("CB_WRONG_RULE", "free")
+WRONG_RULES = ("free", "kind")
+FREE_LETTERS = "ABCDEFGHIJKLMNOPRSTUVW"          # Q, X, Y, Z left out: implausible first letters for these kinds
+# Answers of the same-kind words in the number families (candidates.py; standard facts), for the "free" rule.
+NUM_FACTS = {**{m: str(i + 1) for i, m in enumerate(["January", "February", "March", "April", "May", "June", "July",
+                                                      "August", "September", "October", "November", "December"])},
+             **{p: str(i + 1) for i, p in enumerate(["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn",
+                                                     "Uranus", "Neptune"])},
+             "hydrogen": "1", "helium": "2", "lithium": "3", "beryllium": "4", "boron": "5", "carbon": "6",
+             "nitrogen": "7", "oxygen": "8", "fluorine": "9", "neon": "10",
+             "guitar": "6", "violin": "4", "cello": "4", "viola": "4", "banjo": "5", "ukulele": "4", "mandolin": "8",
+             "baseball": "9", "basketball": "5", "hockey": "6", "volleyball": "6", "handball": "7", "polo": "4",
+             "soccer": "11", "football": "11", "rugby": "15", "cricket": "11"}
+
+
+def answer_format(spec):
+    """'letter', 'number' or 'category', from the answer keys."""
+    keys = list(spec["answers"])
+    if all(len(k) == 1 and k.isalpha() for k in keys):
+        return "letter"
+    if spec["answer"].isdigit():
+        return "number"
+    return "category"
+
+
+def _kind_initials(spec):
+    return {w[0].upper() for w in spec["same_kind"] + spec.get("swaps", []) if w[:1].isalpha()}
+
+
+def _free_letters(qid, spec, n=2):
+    import hashlib
+    bad = _kind_initials(spec) | {spec["answer"]}
+    pool = [L for L in FREE_LETTERS if L not in bad]
+    i = int(hashlib.sha256(qid.encode()).hexdigest(), 16) % len(pool)
+    return [pool[(i + j) % len(pool)] for j in range(n)]
+
+
+def _free_numbers(spec, n=2):
+    right = spec["answer"]
+    bad = {right} | {NUM_FACTS[w] for w in spec["same_kind"] if w in NUM_FACTS}
+    first = COUNT_WRONG.get(right)
+    r = int(right)
+    order = ([first] if first else []) + [str(r + d) for k in range(1, 9) for d in (k, -k)]
+    out = []
+    for x in order:
+        if x not in out and x not in bad and x.isdigit() and 1 <= int(x) <= 9 and x in spec["answers"]:
+            out.append(x)
+    return out[:n]
+
+
+def _free_categories(spec, n=2):
+    return [k for k in spec["answers"] if k != spec["answer"]][:n]
+
+
+def free_wrong(qid, spec, n=2):
+    f = answer_format(spec)
+    return (_free_letters(qid, spec, n) if f == "letter" else _free_numbers(spec, n) if f == "number"
+            else _free_categories(spec, n))
+
+
+def wrong_letter(qid, spec, rule=None):
+    """The peers' wrong answer under WRONG_RULE (see above)."""
+    rule = rule or WRONG_RULE
     if qid in PILOT_WRONG:
         return PILOT_WRONG[qid]
+    if rule == "free":
+        return free_wrong(qid, spec)[0]
     if spec["answer"] in COUNT_WRONG and not spec["user"].endswith(SUFFIX):
         return COUNT_WRONG[spec["answer"]]
     for w in spec["same_kind"] + spec.get("swaps", []):
@@ -181,14 +261,29 @@ DISAGREE_LIKE = {"disagree", "copy", "disagree_g", "told_copy", "told_ignore", "
 OWN_PART = False    # --own-part: also remove the bridge's own part (bridge minus same-kind words) in every early window
 
 
-def wrong_letter2(qid, spec):
+def wrong_letter2(qid, spec, rule=None):
     """A second wrong letter, different from the right letter and from wrong_letter(): the F-versus-G contrast."""
-    right, wrong = spec["answer"], wrong_letter(qid, spec)
+    rule = rule or WRONG_RULE
+    right, wrong = spec["answer"], wrong_letter(qid, spec, rule)
+    if rule == "free" and qid not in PILOT_WRONG:
+        return next(x for x in free_wrong(qid, spec, 3) if x not in (right, wrong))
     for w in spec["same_kind"] + spec.get("swaps", []):
         L = w[0].upper()
         if L.isalpha() and L not in (right, wrong):
             return L
     return next(L for L in "GKQXZJ" if L not in (right, wrong))
+
+
+def swap_target(spec):
+    """(word, its answer): the first same-kind word whose answer differs from the right one. Letters: its first
+    letter; numbers: NUM_FACTS; categories: none (None, None). The 2x2 records P(this answer) as D's other
+    destination, and the swap test (conformity_swap) moves the bridge onto this word."""
+    f = answer_format(spec)
+    for w in spec["same_kind"]:
+        a = w[0].upper() if f == "letter" else NUM_FACTS.get(w) if f == "number" else None
+        if a and a != spec["answer"] and a in spec["answers"]:
+            return w, a
+    return None, None
 
 
 def kind_word(spec):
@@ -205,7 +300,7 @@ def prompts(qid, frame="neutral", extra=()):
     """(condition, peers, peer string, spec) for one question. `extra` adds VARIANTS; with none, the output is
     exactly the original run's."""
     s = SPECS[qid]
-    sfx = SUFFIX if s["user"].endswith(SUFFIX) else ONE   # letter questions, or count questions ("one word")
+    sfx = suffix_of(s["user"])   # letter questions, v2 number questions, or count questions ("one word")
     q = s["user"][: -len(sfx)]
     right, wrong = s["answer"], wrong_letter(qid, s)
     out = [("alone", 0, wrong, dict(s))]
@@ -246,6 +341,17 @@ def peer_positions(h, text, peer, k):
     return sorted(set(pos))
 
 
+def reach_positions(h, tn, user, qspec):
+    """Positions of the naming prompt `tn` that it shares with the original prompt: from the question's first word
+    (`qspec`, Card.ALL) to the last token inside the user text `user`, nothing of the added instruction after it."""
+    at = tn.rfind(user)
+    if at < 0:
+        raise ValueError("user text not found in the naming prompt")
+    end = at + len(user)
+    offs = offsets(h, tn)
+    return [p for p in resolve_positions(h, tn, qspec) if offs[p][1] <= end and offs[p][1] > 0]
+
+
 class Prompt:
     def __init__(self, h, qid, cond, k, peer, spec):
         self.h, self.qid, self.cond, self.k, self.peer, self.spec = h, qid, cond, k, peer, spec
@@ -275,6 +381,15 @@ class Prompt:
         cands = list(dict.fromkeys(self.rforms + self.pforms))
         return [self._summ(r["cands"]) for r in answer_probs_many(self.h, self.c.text, cands, edit_sets, formats=FORMATS,
                                                                   chunk=BATCH)]
+
+    def probs_x(self, edits, answers):
+        """P(right), P(peers') and P(each answer in `answers`), one forward pass (Block and Patch allowed)."""
+        forms = {a: self.spec["answers"].get(a, [a]) for a in answers if a}
+        cands = list(dict.fromkeys(self.rforms + self.pforms + [f for v in forms.values() for f in v]))
+        r = answer_probs(self.h, self.c.text, cands, edits, formats=FORMATS)["cands"]
+        tot = lambda fs: sum(r[f].get(f"p[{x}]", 0.0) for f in fs for x in FORMATS)  # noqa: E731
+        pr, pw, _ = self._summ(r)
+        return pr, pw, {a: tot(v) for a, v in forms.items()}
 
     def _summ(self, r):
         tot = lambda forms: sum(r[f].get(f"p[{x}]", 0.0) for f in forms for x in FORMATS)  # noqa: E731
@@ -355,7 +470,12 @@ class Prompt:
         from consulted_bridges.text import chat
         tn = chat(h, S["user"] + S["name_ask"], S["name_prefill"])
         nb = c.P(tn, S["name_forms"], formats=SP)
-        rdrop = max(c.drop(nb, c.P(tn, S["name_forms"], self.rm(b, c.wins[i], c.ALL), formats=SP)) for i in early)
+        shared = reach_positions(h, tn, S["user"], c.ALL)
+        # scope.md §9 fix (run 3 on): the edit covers only the positions the naming prompt shares with the original
+        # prompt (the question's first word to the end of the user text), not the added "First name the ..." or the
+        # started reply, where the name is being produced. The old q->end edit is kept as reach_drop_qend.
+        rdrop = max(c.drop(nb, c.P(tn, S["name_forms"], self.rm(b, c.wins[i], shared), formats=SP)) for i in early)
+        rdrop_qend = max(c.drop(nb, c.P(tn, S["name_forms"], self.rm(b, c.wins[i], c.ALL), formats=SP)) for i in early)
         readable = nb >= TH["readable"]
         reach_ok = readable and rdrop >= TH["reach"]
         # presence
@@ -380,7 +500,8 @@ class Prompt:
                    bridge_drop=bd["drop"], bridge_drop_window=bd.get("drop_window"), bridge_P_right_after=bd.get("P_right_after"),
                    noise_drop=noise_drop, same_kind_drop=kind_drop, answer_drop=best["answer"]["drop"], need=need,
                    own_drop=own.get("drop"), own_dLO=own.get("dLO"),
-                   reach_P_before=nb, reach_drop=rdrop, reach_readable=readable, reach_pass=reach_ok,
+                   reach_P_before=nb, reach_drop=rdrop, reach_drop_qend=rdrop_qend, reach_positions="shared",
+                   reach_readable=readable, reach_pass=reach_ok, wrong_rule=WRONG_RULE,
                    presence_rank=rank_b, present=rank_b is not None and rank_b < TH["present"],
                    presence_controls=";".join(f"{w}={pres[w]}" for w in words[1:]), label=label)
         return rec, t0
@@ -396,10 +517,13 @@ def main():
     ap.add_argument("--set", default="letters", choices=["letters", "counts"])
     ap.add_argument("--variants", nargs="*", default=[], choices=VARIANTS, help="extra conditions (B1)")
     ap.add_argument("--own-part", action="store_true", help="also remove the bridge's own part (B4)")
+    ap.add_argument("--wrong-rule", default=None, choices=WRONG_RULES,
+                    help="the peers' wrong answer: free (default, run 3 on) or kind (runs 1-2)")
     ap.add_argument("--out", default=None)
     args = ap.parse_args()
-    global OWN_PART
+    global OWN_PART, WRONG_RULE
     OWN_PART = args.own_part
+    WRONG_RULE = args.wrong_rule or WRONG_RULE
     cfg = Path(args.config).stem
     i, n = map(int, args.shard.split("/"))
     qs = args.questions or (counts_for(cfg) if args.set == "counts" else questions_for(cfg))

@@ -1,0 +1,13 @@
+key,sentence,word,kind,strength,early_drop
+C_LU_case|null|river,C_LU_case,river,everyday word (noise),0.06,0.0
+C_LU_case|null|chair,C_LU_case,chair,everyday word (noise),0.052,0.0
+C_LU_case|null|table,C_LU_case,table,everyday word (noise),0.048,0.0
+C_LU_case|null|pencil,C_LU_case,pencil,everyday word (noise),0.047,0.0
+C_LU_case|null|jacket,C_LU_case,jacket,everyday word (noise),0.047,0.0
+C_LU_case|null|door,C_LU_case,door,everyday word (noise),0.047,0.0
+C_LU_case|null|button,C_LU_case,button,everyday word (noise),0.045,0.0
+C_LU_case|null|brick,C_LU_case,brick,everyday word (noise),0.045,0.0
+C_LU_case|null|shoe,C_LU_case,shoe,everyday word (noise),0.044,0.0
+C_LU_case|null|helmet,C_LU_case,helmet,everyday word (noise),0.042,0.0
+C_LU_case|null|window,C_LU_case,window,everyday word (noise),0.04,0.0
+C_LU_case|null|ticket,C_LU_case,ticket,everyday word (noise),0.04,0.0
