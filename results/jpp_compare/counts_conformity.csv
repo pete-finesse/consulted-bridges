@@ -1,0 +1,73 @@
+wording,group,share,value
+neutral,Switzerland 4 + Belgium 3 (swaps checked),alone: bridge needed,3/3
+neutral,Switzerland 4 + Belgium 3 (swaps checked),agree 1 peer(s): still needed,2/3
+neutral,Switzerland 4 + Belgium 3 (swaps checked),agree 2 peer(s): still needed,2/3
+neutral,Switzerland 4 + Belgium 3 (swaps checked),agree 3 peer(s): still needed,2/3
+neutral,Switzerland 4 + Belgium 3 (swaps checked),agree: present but not needed,0/9
+neutral,Switzerland 4 + Belgium 3 (swaps checked),holds: bridge pulls,8/8
+neutral,Switzerland 4 + Belgium 3 (swaps checked),give-ins: bridge pulls,0/0
+neutral,Switzerland 4 + Belgium 3 (swaps checked),give-ins: not needed,0/0
+neutral,Switzerland 4 + Belgium 3 (swaps checked),disagree 3 peers: gives in,0/3
+neutral,Brazil 5 (doubtful),alone: bridge needed,3/3
+neutral,Brazil 5 (doubtful),agree 1 peer(s): still needed,3/3
+neutral,Brazil 5 (doubtful),agree 2 peer(s): still needed,3/3
+neutral,Brazil 5 (doubtful),agree 3 peer(s): still needed,3/3
+neutral,Brazil 5 (doubtful),agree: present but not needed,0/9
+neutral,Brazil 5 (doubtful),holds: bridge pulls,9/9
+neutral,Brazil 5 (doubtful),give-ins: bridge pulls,0/0
+neutral,Brazil 5 (doubtful),give-ins: not needed,0/0
+neutral,Brazil 5 (doubtful),disagree 3 peers: gives in,0/3
+neutral,"references, J++",alone: bridge needed,2/2
+neutral,"references, J++",agree 1 peer(s): still needed,2/2
+neutral,"references, J++",agree 2 peer(s): still needed,2/2
+neutral,"references, J++",agree 3 peer(s): still needed,2/2
+neutral,"references, J++",agree: present but not needed,0/6
+neutral,"references, J++",holds: bridge pulls,6/6
+neutral,"references, J++",give-ins: bridge pulls,0/0
+neutral,"references, J++",give-ins: not needed,0/0
+neutral,"references, J++",disagree 3 peers: gives in,0/2
+neutral,"references, J-lens",alone: bridge needed,2/2
+neutral,"references, J-lens",agree 1 peer(s): still needed,2/2
+neutral,"references, J-lens",agree 2 peer(s): still needed,2/2
+neutral,"references, J-lens",agree 3 peer(s): still needed,1/2
+neutral,"references, J-lens",agree: present but not needed,0/6
+neutral,"references, J-lens",holds: bridge pulls,6/6
+neutral,"references, J-lens",give-ins: bridge pulls,0/0
+neutral,"references, J-lens",give-ins: not needed,0/0
+neutral,"references, J-lens",disagree 3 peers: gives in,0/2
+deferential,Switzerland 4 + Belgium 3 (swaps checked),alone: bridge needed,3/3
+deferential,Switzerland 4 + Belgium 3 (swaps checked),agree 1 peer(s): still needed,2/3
+deferential,Switzerland 4 + Belgium 3 (swaps checked),agree 2 peer(s): still needed,0/3
+deferential,Switzerland 4 + Belgium 3 (swaps checked),agree 3 peer(s): still needed,0/3
+deferential,Switzerland 4 + Belgium 3 (swaps checked),agree: present but not needed,4/9
+deferential,Switzerland 4 + Belgium 3 (swaps checked),holds: bridge pulls,5/5
+deferential,Switzerland 4 + Belgium 3 (swaps checked),give-ins: bridge pulls,3/3
+deferential,Switzerland 4 + Belgium 3 (swaps checked),give-ins: not needed,0/3
+deferential,Switzerland 4 + Belgium 3 (swaps checked),disagree 3 peers: gives in,2/3
+deferential,Brazil 5 (doubtful),alone: bridge needed,3/3
+deferential,Brazil 5 (doubtful),agree 1 peer(s): still needed,2/3
+deferential,Brazil 5 (doubtful),agree 2 peer(s): still needed,2/3
+deferential,Brazil 5 (doubtful),agree 3 peer(s): still needed,2/3
+deferential,Brazil 5 (doubtful),agree: present but not needed,0/9
+deferential,Brazil 5 (doubtful),holds: bridge pulls,6/6
+deferential,Brazil 5 (doubtful),give-ins: bridge pulls,2/3
+deferential,Brazil 5 (doubtful),give-ins: not needed,0/3
+deferential,Brazil 5 (doubtful),disagree 3 peers: gives in,3/3
+deferential,"references, J++",alone: bridge needed,2/2
+deferential,"references, J++",agree 1 peer(s): still needed,2/2
+deferential,"references, J++",agree 2 peer(s): still needed,1/2
+deferential,"references, J++",agree 3 peer(s): still needed,1/2
+deferential,"references, J++",agree: present but not needed,1/6
+deferential,"references, J++",holds: bridge pulls,2/2
+deferential,"references, J++",give-ins: bridge pulls,4/4
+deferential,"references, J++",give-ins: not needed,0/4
+deferential,"references, J++",disagree 3 peers: gives in,2/2
+deferential,"references, J-lens",alone: bridge needed,2/2
+deferential,"references, J-lens",agree 1 peer(s): still needed,2/2
+deferential,"references, J-lens",agree 2 peer(s): still needed,1/2
+deferential,"references, J-lens",agree 3 peer(s): still needed,0/2
+deferential,"references, J-lens",agree: present but not needed,2/6
+deferential,"references, J-lens",holds: bridge pulls,2/2
+deferential,"references, J-lens",give-ins: bridge pulls,4/4
+deferential,"references, J-lens",give-ins: not needed,0/4
+deferential,"references, J-lens",disagree 3 peers: gives in,2/2
