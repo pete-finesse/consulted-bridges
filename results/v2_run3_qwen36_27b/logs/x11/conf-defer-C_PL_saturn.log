@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  83%|████████▎ | 706/851 [00:00<00:00, 7042.75it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 7204.60it/s]
+PROGRESS 0/14 C_PL_saturn alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_PL_saturn alone] says '6' (right) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.95 bridge dLO +7.37 noise +0.25 kind 2.9991856694531416 | reach 0.07 rank 0 | bridge still needed (20s)
+PROGRESS 1/14 C_PL_saturn agree1
+[C_PL_saturn agree1] says '6' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.11 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.13 rank 5 | mixed (19s)
+PROGRESS 2/14 C_PL_saturn agree2
+[C_PL_saturn agree2] says '6' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.03 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.07 rank 7 | mixed (31s)
+PROGRESS 3/14 C_PL_saturn agree3
+[C_PL_saturn agree3] says '6' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.02 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.08 rank 7 | mixed (17s)
+PROGRESS 4/14 C_PL_saturn disagree1
+[C_PL_saturn disagree1] says '6' (holds) P(right) 0.95 P(peer) 0.05 onset 54 | need 0.90 bridge dLO +5.37 noise +0.37 kind 2.249980801162719 | reach 0.25 rank 3 | bridge still pulls (24s)
+PROGRESS 5/14 C_PL_saturn disagree2
+[C_PL_saturn disagree2] says '6' (holds) P(right) 0.59 P(peer) 0.40 onset 54 | need 0.82 bridge dLO +4.50 noise +0.37 kind 2.1249923148183316 | reach 0.30 rank 3 | bridge still pulls (29s)
+PROGRESS 6/14 C_PL_saturn disagree3
+[C_PL_saturn disagree3] says '6' (holds) P(right) 0.59 P(peer) 0.41 onset 54 | need 0.87 bridge dLO +4.37 noise +0.25 kind 1.9999933057210257 | reach 0.28 rank 5 | bridge still pulls (31s)
+PROGRESS 7/14 C_PL_saturn hidden1
+[C_PL_saturn hidden1] says '6' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.55 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.09 rank 2 | bridge still needed (20s)
+PROGRESS 8/14 C_PL_saturn hidden2
+[C_PL_saturn hidden2] says '6' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.56 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.06 rank 3 | bridge still needed (20s)
+PROGRESS 9/14 C_PL_saturn hidden3
+[C_PL_saturn hidden3] says '6' (right) P(right) 0.97 P(peer) nan onset 54 | need 0.57 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.06 rank 3 | bridge still needed (21s)
+PROGRESS 10/14 C_PL_saturn hidden_sub1
+[C_PL_saturn hidden_sub1] says '6' (right) P(right) 0.97 P(peer) nan onset 54 | need 0.40 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.12 rank 2 | mixed (10s)
+PROGRESS 11/14 C_PL_saturn hidden_sub2
+[C_PL_saturn hidden_sub2] says '6' (right) P(right) 0.95 P(peer) nan onset 54 | need 0.60 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.07 rank 3 | bridge still needed (17s)
+PROGRESS 12/14 C_PL_saturn hidden_sub3
+[C_PL_saturn hidden_sub3] says '6' (right) P(right) 0.95 P(peer) nan onset 54 | need 0.55 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.06 rank 3 | bridge still needed (16s)
+PROGRESS 13/14 C_PL_saturn told_copy3
+[C_PL_saturn told_copy3] says '7' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need 0.18 bridge dLO +2.24 noise +1.25 kind 1.2460317507358045 | reach 0.13 rank 85 | mixed (21s)
+PROGRESS ALLDONE

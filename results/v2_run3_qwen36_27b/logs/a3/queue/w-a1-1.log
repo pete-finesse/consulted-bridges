@@ -1,0 +1,6 @@
+== 09:47:27 [a1-1] worker up on f630d2c717ac, NVIDIA A100 80GB PCIe
+== 09:47:27 [a1-1] start: q neutral C_EL_oxygen
+== 09:58:13 [a1-1] done (646s): q neutral C_EL_oxygen
+== 09:58:13 [a1-1] start: q defer C_LM_bluelagoon
+== 10:07:18 [a1-1] done (545s): q defer C_LM_bluelagoon
+== 10:07:18 [a1-1] queue empty: WORKER DONE

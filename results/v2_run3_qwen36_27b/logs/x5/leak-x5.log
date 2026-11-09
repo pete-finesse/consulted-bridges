@@ -1,0 +1,12 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 9412.38it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+L_colosseum k=1 I/F: unblocked 2.906 blocked 0 effect 4.531 -> PASS
+L_colosseum k=2 I/F: unblocked 3.625 blocked 0 effect 3.188 -> PASS
+L_colosseum k=3 I/F: unblocked 4.25 blocked 0 effect 3.5 -> PASS
+L_colosseum k=3 I/?: unblocked 4.113 blocked 0 effect 3.5 -> PASS
+L_gates k=3 S/F: unblocked 6.5 blocked 0 effect 6.156 -> PASS
+V_LM_eiffel k=3 F/G: unblocked 4.906 blocked 0 effect 3.281 -> PASS
+V_LU_berklee k=3 B/F: unblocked 8.75 blocked 0 effect 3.5 -> PASS
+LEAK TEST PASS {'torch_chunk_gated_delta_rule': 'transformers.models.qwen3_5.modeling_qwen3_5.torch_chunk_gated_delta_rule', 'torch_recurrent_gated_delta_rule': 'transformers.models.qwen3_5.modeling_qwen3_5.torch_recurrent_gated_delta_rule', 'forward': 'transformers.models.qwen3_5.modeling_qwen3_5.Qwen3_5GatedDeltaNet.forward'}

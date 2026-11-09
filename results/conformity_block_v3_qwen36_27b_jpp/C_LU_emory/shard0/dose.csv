@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LU_emory,neutral,alone,0,A,,right,layers 12–23,own,0,0.25,0.854274597524263,0.00019696207323178215,1.76852863906012
+C_LU_emory,neutral,alone,0,A,,right,layers 12–23,own,0,0.5,0.0005450487357011099,0.00025746221350570885,-7.514090146665508
+C_LU_emory,neutral,alone,0,A,,right,layers 12–23,own,0,0.75,0.00037494671235605725,0.00033088850801891984,-7.888351625452477
+C_LU_emory,neutral,agree,3,A,A,right,layers 0–11,own,3,0.25,0.97344268886357,0.97344268886357,3.6015338697052326
+C_LU_emory,neutral,agree,3,A,A,right,layers 0–11,own,3,0.5,0.2811879265731687,0.2811879265731687,-0.9385767277691628
+C_LU_emory,neutral,agree,3,A,A,right,layers 0–11,own,3,0.75,0.1729901433365445,0.1729901433365445,-1.564581995588623
+C_LU_emory,neutral,hidden,3,A,,right,layers 0–11,own,3,0.25,0.8872693858993426,,2.063147614132613
+C_LU_emory,neutral,hidden,3,A,,right,layers 0–11,own,3,0.5,0.003471015500905244,,-5.659831022828639
+C_LU_emory,neutral,hidden,3,A,,right,layers 0–11,own,3,0.75,0.001458583893470517,,-6.528829601270823

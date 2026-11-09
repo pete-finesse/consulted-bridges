@@ -1,0 +1,13 @@
+frame,condition,format,questions,visible_follow,visible_n,visible_said_right,visible_said_peers,visible_everyday_through,visible_everyday_n,visible_control_ok,visible_removal_said_right,blocked_follow,blocked_n,blocked_said_right,blocked_said_peers,blocked_everyday_through,blocked_everyday_n,blocked_control_ok,blocked_removal_said_right
+defer,agree,letter,16,4,16,12,12.0,0.0,16,True,16,15.0,16.0,0.0,0.0,0.0,16.0,True,4.0
+defer,agree,number,4,2,4,2,0.0,,0,,3,4.0,4.0,0.0,0.0,,0.0,,2.0
+defer,alone,letter,16,15,16,0,,0.0,16,True,4,,,,,,,,
+defer,alone,number,4,3,4,1,,,0,,2,,,,,,,,
+defer,disagree,letter,15,4,15,0,11.0,0.0,15,True,0,12.0,15.0,2.0,0.0,0.0,15.0,True,6.0
+defer,disagree,number,4,3,4,1,0.0,,0,,2,4.0,4.0,0.0,0.0,,0.0,,2.0
+neutral,agree,letter,16,12,16,4,4.0,0.0,16,True,12,15.0,16.0,0.0,0.0,0.0,16.0,True,3.0
+neutral,agree,number,4,3,4,1,0.0,,0,,3,4.0,4.0,0.0,0.0,,0.0,,2.0
+neutral,alone,letter,16,15,16,0,,0.0,16,True,4,,,,,,,,
+neutral,alone,number,4,3,4,1,,,0,,2,,,,,,,,
+neutral,disagree,letter,16,15,16,0,1.0,0.0,16,True,1,15.0,16.0,0.0,0.0,0.0,16.0,True,3.0
+neutral,disagree,number,4,3,4,1,0.0,,0,,2,4.0,4.0,0.0,0.0,,0.0,,2.0

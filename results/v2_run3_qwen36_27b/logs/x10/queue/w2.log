@@ -1,0 +1,4 @@
+== 09:53:41 [x10-2] worker up on c7ade1e84c50, NVIDIA H200
+== 09:53:41 [x10-2] start: q defer C_LU_unsw
+== 09:58:25 [x10-2] done (284s): q defer C_LU_unsw
+== 09:58:25 [x10-2] queue empty: WORKER DONE

@@ -1,0 +1,4 @@
+== 10:05:41 [x7-3] worker up on 1fb24dd03cf8, NVIDIA H200
+== 10:05:41 [x7-3] start: q neutral C_LM_alhambra
+== 10:10:57 [x7-3] done (316s): q neutral C_LM_alhambra
+== 10:10:57 [x7-3] queue empty: WORKER DONE

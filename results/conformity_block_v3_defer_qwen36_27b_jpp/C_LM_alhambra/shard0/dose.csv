@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LM_alhambra,defer,alone,0,S,,right,layers 42–53,own,0,0.25,0.6679522635974081,0.0002877170031248195,0.6989379663769448
+C_LM_alhambra,defer,alone,0,S,,right,layers 42–53,own,0,0.5,0.06698494720368023,0.0013902311894428718,-2.633953408927902
+C_LM_alhambra,defer,alone,0,S,,right,layers 42–53,own,0,0.75,0.08063148343259602,0.00214875981258942,-2.4337978527800237
+C_LM_alhambra,defer,agree,3,S,S,right,layers 36–47,own,3,0.25,0.9601753931963609,0.9601753931963609,3.1826309863767306
+C_LM_alhambra,defer,agree,3,S,S,right,layers 36–47,own,3,0.5,0.9435412055659299,0.9435412055659299,2.8161289669203824
+C_LM_alhambra,defer,agree,3,S,S,right,layers 36–47,own,3,0.75,0.9462754352632929,0.9462754352632929,2.868663343651486
+C_LM_alhambra,defer,hidden,3,S,,right,layers 36–47,own,3,0.25,0.6602122922899025,,0.6642404047750857
+C_LM_alhambra,defer,hidden,3,S,,right,layers 36–47,own,3,0.5,0.29857684151102964,,-0.8540840294796566
+C_LM_alhambra,defer,hidden,3,S,,right,layers 36–47,own,3,0.75,0.27385553272985147,,-0.9751482712283303

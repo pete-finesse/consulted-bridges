@@ -1,0 +1,6 @@
+== 09:52:57 [x12-2] worker up on d5eea31952c6, NVIDIA H200
+== 09:52:57 [x12-2] start: q defer C_SP_gretzky
+== 09:58:32 [x12-2] done (335s): q defer C_SP_gretzky
+== 09:58:32 [x12-2] start: q defer C_LM_moai
+== 10:02:48 [x12-2] done (256s): q defer C_LM_moai
+== 10:02:49 [x12-2] queue empty: WORKER DONE

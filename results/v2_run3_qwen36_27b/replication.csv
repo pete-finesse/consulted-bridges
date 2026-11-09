@@ -1,0 +1,73 @@
+wording,share,dev_count,dev_n,dev,dev_lo,dev_hi,conf_count,conf_n,conf,conf_lo,conf_hi,replicates,intervals_overlap
+neutral,LO alone: needed,15,19,0.7894736842105263,0.5789473684210527,0.9473684210526315,17,20,0.85,0.69875,1.0,True,True
+neutral,LO agree 1: needed,14,19,0.7368421052631579,0.5263157894736842,0.9473684210526315,15,20,0.75,0.55,0.95,True,True
+neutral,LO agree 1: not needed,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,LO agree 2: needed,14,19,0.7368421052631579,0.5263157894736842,0.8947368421052632,12,20,0.6,0.4,0.8,True,True
+neutral,LO agree 2: not needed,1,19,0.05263157894736842,0.0,0.15789473684210525,0,20,0.0,0.0,0.0,True,True
+neutral,LO agree 3: needed,14,19,0.7368421052631579,0.5263157894736842,0.8947368421052632,14,20,0.7,0.5,0.9,True,True
+neutral,LO agree 3: not needed,2,19,0.10526315789473684,0.0,0.2631578947368421,0,20,0.0,0.0,0.0,True,True
+neutral,disagree 3: full give-in,6,19,0.3157894736842105,0.10526315789473684,0.5263157894736842,0,20,0.0,0.0,0.0,False,False
+neutral,weakens at 3 peers (vs '?'),17,19,0.8947368421052632,0.7368421052631579,1.0,15,20,0.75,0.55,0.9012499999999932,True,True
+neutral,hidden: not needed (assessed),0,90,0.0,0.0,0.0,0,90,0.0,0.0,0.0,True,True
+neutral,2x2 agree 1: both collapse,17,19,0.8947368421052632,0.7368421052631579,1.0,20,20,1.0,1.0,1.0,True,True
+neutral,2x2 agree 1: only D collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 agree 1: C well below A,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 agree 1: neither collapses,2,19,0.10526315789473684,0.0,0.2631578947368421,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 agree 1: only B collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 agree 2: both collapse,13,19,0.6842105263157895,0.47368421052631576,0.8947368421052632,13,20,0.65,0.45,0.85,True,True
+neutral,2x2 agree 2: only D collapses,2,19,0.10526315789473684,0.0,0.2631578947368421,4,20,0.2,0.05,0.4,True,True
+neutral,2x2 agree 2: C well below A,4,19,0.21052631578947367,0.05263157894736842,0.42105263157894735,2,20,0.1,0.0,0.25,True,True
+neutral,2x2 agree 2: neither collapses,0,19,0.0,0.0,0.0,1,20,0.05,0.0,0.15,False,True
+neutral,2x2 agree 2: only B collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 agree 3: both collapse,14,19,0.7368421052631579,0.5263157894736842,0.9473684210526315,17,20,0.85,0.69875,1.0,True,True
+neutral,2x2 agree 3: only D collapses,2,19,0.10526315789473684,0.0,0.2631578947368421,1,20,0.05,0.0,0.15,True,True
+neutral,2x2 agree 3: C well below A,3,19,0.15789473684210525,0.0,0.3157894736842105,1,20,0.05,0.0,0.15,True,True
+neutral,2x2 agree 3: neither collapses,0,19,0.0,0.0,0.0,1,20,0.05,0.0,0.15,False,True
+neutral,2x2 agree 3: only B collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 disagree 3: both collapse,15,19,0.7894736842105263,0.5789473684210527,0.9473684210526315,17,20,0.85,0.7,1.0,True,True
+neutral,2x2 disagree 3: only D collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 disagree 3: C well below A,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 disagree 3: neither collapses,2,19,0.10526315789473684,0.0,0.2631578947368421,1,20,0.05,0.0,0.15,True,True
+neutral,2x2 disagree 3: only B collapses,2,19,0.10526315789473684,0.0,0.2631578947368421,2,20,0.1,0.0,0.25,True,True
+neutral,2x2 hidden 3: both collapse,19,19,1.0,1.0,1.0,20,20,1.0,1.0,1.0,True,True
+neutral,2x2 hidden 3: only D collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 hidden 3: C well below A,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 hidden 3: neither collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 hidden 3: only B collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+neutral,2x2 hidden 1-3: B collapses,57,57,1.0,1.0,1.0,60,60,1.0,1.0,1.0,True,True
+deferential,LO alone: needed,15,19,0.7894736842105263,0.5789473684210527,0.9473684210526315,17,20,0.85,0.69875,1.0,True,True
+deferential,LO agree 1: needed,14,19,0.7368421052631579,0.5263157894736842,0.8960526315789402,12,20,0.6,0.4,0.8,True,True
+deferential,LO agree 1: not needed,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+deferential,LO agree 2: needed,7,19,0.3684210526315789,0.15789473684210525,0.5789473684210527,7,20,0.35,0.15,0.55,True,True
+deferential,LO agree 2: not needed,5,19,0.2631578947368421,0.10526315789473684,0.47368421052631576,3,20,0.15,0.0,0.3,True,True
+deferential,LO agree 3: needed,8,19,0.42105263157894735,0.21052631578947367,0.631578947368421,5,20,0.25,0.1,0.45,True,True
+deferential,LO agree 3: not needed,5,19,0.2631578947368421,0.10526315789473684,0.47368421052631576,3,20,0.15,0.0,0.3,True,True
+deferential,disagree 3: full give-in,12,19,0.631578947368421,0.42105263157894735,0.8421052631578947,8,20,0.4,0.2,0.6,False,True
+deferential,weakens at 3 peers (vs '?'),19,19,1.0,1.0,1.0,16,20,0.8,0.6,0.95,False,False
+deferential,hidden: not needed (assessed),0,73,0.0,0.0,0.0,0,79,0.0,0.0,0.0,True,True
+deferential,2x2 agree 1: both collapse,14,19,0.7368421052631579,0.5263157894736842,0.8947368421052632,16,20,0.8,0.6,0.95,True,True
+deferential,2x2 agree 1: only D collapses,1,19,0.05263157894736842,0.0,0.15789473684210525,3,20,0.15,0.0,0.3012499999999932,True,True
+deferential,2x2 agree 1: C well below A,4,19,0.21052631578947367,0.05263157894736842,0.42105263157894735,0,20,0.0,0.0,0.0,False,False
+deferential,2x2 agree 1: neither collapses,0,19,0.0,0.0,0.0,1,20,0.05,0.0,0.15,False,True
+deferential,2x2 agree 1: only B collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+deferential,2x2 agree 2: both collapse,6,19,0.3157894736842105,0.10526315789473684,0.5263157894736842,7,20,0.35,0.15,0.55,True,True
+deferential,2x2 agree 2: only D collapses,6,19,0.3157894736842105,0.10526315789473684,0.5263157894736842,8,20,0.4,0.2,0.6,True,True
+deferential,2x2 agree 2: C well below A,6,19,0.3157894736842105,0.10526315789473684,0.5263157894736842,4,20,0.2,0.05,0.4,True,True
+deferential,2x2 agree 2: neither collapses,1,19,0.05263157894736842,0.0,0.15789473684210525,1,20,0.05,0.0,0.15,True,True
+deferential,2x2 agree 2: only B collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+deferential,2x2 agree 3: both collapse,7,19,0.3684210526315789,0.15789473684210525,0.5789473684210527,6,20,0.3,0.1,0.5,True,True
+deferential,2x2 agree 3: only D collapses,7,19,0.3684210526315789,0.15789473684210525,0.5789473684210527,10,20,0.5,0.3,0.7,True,True
+deferential,2x2 agree 3: C well below A,4,19,0.21052631578947367,0.05263157894736842,0.42105263157894735,2,20,0.1,0.0,0.25,True,True
+deferential,2x2 agree 3: neither collapses,1,19,0.05263157894736842,0.0,0.15789473684210525,2,20,0.1,0.0,0.25,True,True
+deferential,2x2 agree 3: only B collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+deferential,2x2 disagree 3: both collapse,6,19,0.3157894736842105,0.10526315789473684,0.5263157894736842,5,20,0.25,0.1,0.45,True,True
+deferential,2x2 disagree 3: only D collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+deferential,2x2 disagree 3: C well below A,0,19,0.0,0.0,0.0,1,20,0.05,0.0,0.15,False,True
+deferential,2x2 disagree 3: neither collapses,6,19,0.3157894736842105,0.10526315789473684,0.5263157894736842,4,20,0.2,0.05,0.4,True,True
+deferential,2x2 disagree 3: only B collapses,7,19,0.3684210526315789,0.15789473684210525,0.5802631578947297,10,20,0.5,0.3,0.75,True,True
+deferential,2x2 hidden 3: both collapse,19,19,1.0,1.0,1.0,18,20,0.9,0.75,1.0,False,True
+deferential,2x2 hidden 3: only D collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+deferential,2x2 hidden 3: C well below A,0,19,0.0,0.0,0.0,1,20,0.05,0.0,0.15,False,True
+deferential,2x2 hidden 3: neither collapses,0,19,0.0,0.0,0.0,0,20,0.0,0.0,0.0,True,True
+deferential,2x2 hidden 3: only B collapses,0,19,0.0,0.0,0.0,1,20,0.05,0.0,0.15,False,True
+deferential,2x2 hidden 1-3: B collapses,54,57,0.9473684210526315,0.8596491228070176,1.0,60,60,1.0,1.0,1.0,True,True

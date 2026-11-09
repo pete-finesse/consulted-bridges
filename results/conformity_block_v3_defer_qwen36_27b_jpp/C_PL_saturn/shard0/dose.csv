@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_PL_saturn,defer,alone,0,6,,right,layers 36–47,own,0,0.25,0.3183288186926922,0.03355161390603232,-0.7614625331367104
+C_PL_saturn,defer,alone,0,6,,right,layers 36–47,own,0,0.5,0.0663116277854853,0.05164355004089922,-2.644777470769001
+C_PL_saturn,defer,alone,0,6,,right,layers 36–47,own,0,0.75,0.04587650134825047,0.0667499188416516,-3.034840083806708
+C_PL_saturn,defer,agree,3,6,6,right,layers 36–47,own,3,0.25,0.9895753159710421,0.9895753159710421,4.553099419073767
+C_PL_saturn,defer,agree,3,6,6,right,layers 36–47,own,3,0.5,0.9767440459032762,0.9767440459032762,3.7376634486624143
+C_PL_saturn,defer,agree,3,6,6,right,layers 36–47,own,3,0.75,0.9737282786501614,0.9737282786501614,3.61263916317137
+C_PL_saturn,defer,hidden,3,6,,right,layers 36–47,own,3,0.25,0.8337442442742219,,1.6123993939431709
+C_PL_saturn,defer,hidden,3,6,,right,layers 36–47,own,3,0.5,0.6003470976131935,,0.40691155760661135
+C_PL_saturn,defer,hidden,3,6,,right,layers 36–47,own,3,0.75,0.4137229237078994,,-0.34859602090631014

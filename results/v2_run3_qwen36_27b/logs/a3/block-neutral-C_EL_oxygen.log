@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  38%|███▊      | 320/851 [00:00<00:00, 3188.50it/s]Loading weights:  75%|███████▌  | 639/851 [00:00<00:00, 3096.59it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 3888.24it/s]
+PROGRESS 0/1 C_EL_oxygen
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_EL_oxygen alone] A 1.00 B 0.39 (2s)
+[C_EL_oxygen agree1] A 0.99 B 0.58 C 1.00 C_late 0.99 D 0.36 D_late 0.79 (2s)
+[C_EL_oxygen agree2] A 1.00 B 0.76 C 1.00 C_late 1.00 D 0.31 D_late 0.75 (2s)
+[C_EL_oxygen agree3] A 1.00 B 0.77 C 1.00 C_late 1.00 D 0.32 D_late 0.75 (2s)
+[C_EL_oxygen disagree1] A 1.00 B 0.52 C 1.00 C_late 1.00 D 0.36 D_late 0.53 (2s)
+[C_EL_oxygen disagree2] A 0.99 B 0.59 C 1.00 C_late 1.00 D 0.33 D_late 0.63 (2s)
+[C_EL_oxygen disagree3] A 0.99 B 0.47 C 1.00 C_late 1.00 D 0.33 D_late 0.48 (2s)
+[C_EL_oxygen hidden1] A 1.00 B 0.32 C 1.00 C_late 1.00 D 0.36 D_late 0.34 (2s)
+[C_EL_oxygen hidden2] A 1.00 B 0.30 C 1.00 C_late 1.00 D 0.34 D_late 0.31 (2s)
+[C_EL_oxygen hidden3] A 1.00 B 0.37 C 1.00 C_late 1.00 D 0.40 D_late 0.38 (2s)
+[C_EL_oxygen hidden_sub3] A 1.00 B 0.46 C 1.00 C_late 1.00 D 0.27 D_late 0.37 (2s)
+[C_EL_oxygen told_copy3] A 0.02 B 0.00 C 1.00 C_late 0.08 D 1.00 D_late 0.00 (2s)
+!! C_EL_oxygen: no same-length placeholder; patch skipped
+PROGRESS ALLDONE

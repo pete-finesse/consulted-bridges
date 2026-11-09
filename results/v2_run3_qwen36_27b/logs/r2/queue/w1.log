@@ -1,0 +1,4 @@
+== 10:29:44 [r2-1] worker up on 9c63eb24d1f7, NVIDIA H200
+== 10:29:44 [r2-1] start: q defer C_SP_gretzky
+== 10:35:15 [r2-1] done (331s): q defer C_SP_gretzky
+== 10:35:15 [r2-1] queue empty: WORKER DONE

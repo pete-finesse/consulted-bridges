@@ -1,0 +1,4 @@
+== 09:56:16 [x4-2] worker up on 9578bec7a96a, NVIDIA H200
+== 09:56:16 [x4-2] start: q defer C_LP_kanye
+== 10:01:42 [x4-2] done (326s): q defer C_LP_kanye
+== 10:01:42 [x4-2] queue empty: WORKER DONE

@@ -1,0 +1,4 @@
+== 09:59:35 [x5-2] worker up on 7ac2efbc597f, NVIDIA H200
+== 09:59:35 [x5-2] start: q defer C_LU_bohr
+== 10:05:22 [x5-2] done (347s): q defer C_LU_bohr
+== 10:05:22 [x5-2] queue empty: WORKER DONE

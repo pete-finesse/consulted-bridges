@@ -1,0 +1,216 @@
+prompts: 560 on 20 questions; failed rows: none recorded
+    wording  condition  peers  n  old_needed  old_not_needed  old_pulls  lo_needed  lo_not_needed  lo_mixed  lo_pulls  lo_inconclusive  unassessed  ceiling  need_lo_median  reach_median  reach_qend_median  reach_pass  full_give_in  partial_give_in  P_right_median
+deferential      agree      1 20           8               1          0         12              0         6         0                2           0        5        4.015814      0.161447           0.933614           6             0                0        0.991013
+deferential      agree      2 20           2               6          0          7              3        10         0                0           0       12        1.227952      0.204460           0.886840           7             0                0        0.988333
+deferential      agree      3 20           2               7          0          5              3        12         0                0           0       12        1.064350      0.267806           0.889923           7             0                0        0.979152
+deferential      alone      0 20          20               0          0         17              0         0         0                3           0        0        8.872178      0.149136           0.989866           8             0                0        0.996806
+deferential   disagree      1 20           0               0         19          0              0         1        19                0           0        0        6.664080      0.365115           0.996842           8             0                0        0.978979
+deferential   disagree      2 20           0               1         11          0              1         7        11                0           1        0        3.757720      0.538025           0.964183           9             6                3        0.542858
+deferential   disagree      3 20           0               2         11          0              2         5        11                0           2        0        3.352927      0.566131           0.964453           7             8                3        0.364745
+deferential     hidden      1 20          20               0          0         14              0         0         0                6           0        0        7.342132      0.382314           0.994716           9             0                0        0.974439
+deferential     hidden      2 20          18               0          0         13              0         0         0                7           0        0        7.049324      0.476123           0.990187          10             0                0        0.970974
+deferential     hidden      3 20          18               0          0         14              0         0         0                6           0        0        7.027125      0.899769           0.993281          12             0                0        0.969974
+deferential hidden_sub      1 20          18               0          0         13              0         0         0                7           0        0        6.483027      0.491716           0.993573           9             0                0        0.972226
+deferential hidden_sub      2 20          19               0          0         13              0         0         0                7           0        0        6.642683      0.368385           0.995445           9             0                0        0.952143
+deferential hidden_sub      3 20          17               0          0         12              0         0         0                8           0        0        6.463267      0.932237           0.995932          13             0                0        0.952729
+deferential  told_copy      3 20           0               4          8          0              4         7         8                1           0        0        1.750668      0.889806           0.998182          13            20                0        0.002598
+    neutral      agree      1 20          14               0          0         15              0         1         0                4           0        2        5.931471      0.132415           0.945497           6             0                0        0.993957
+    neutral      agree      2 20           9               1          0         12              0         5         0                3           0        7        4.787337      0.235340           0.900516           7             0                0        0.995938
+    neutral      agree      3 20           9               1          0         14              0         5         0                1           0        6        4.617080      0.286772           0.903036           7             0                0        0.994778
+    neutral      alone      0 20          20               0          0         17              0         0         0                3           0        0        8.872178      0.148812           0.989866           8             0                0        0.996806
+    neutral   disagree      1 20           0               0         19          0              0         1        19                0           0        0        9.077159      0.512122           0.992963           9             0                0        0.993194
+    neutral   disagree      2 20           0               0         17          0              0         3        17                0           0        0        5.979704      0.724344           0.993987          10             0                1        0.967852
+    neutral   disagree      3 20           0               0         17          0              0         3        17                0           0        0        6.578373      0.830551           0.994298          11             0                0        0.956986
+    neutral     hidden      1 20          18               0          0         14              0         0         0                6           0        0        9.381913      0.364174           0.994039           9             0                0        0.993111
+    neutral     hidden      2 20          19               1          0         15              0         0         0                5           0        0        8.907938      0.619935           0.993942          10             0                0        0.992766
+    neutral     hidden      3 20          19               1          0         15              0         0         0                5           0        1        9.097881      0.889419           0.994465          12             0                0        0.993469
+    neutral hidden_sub      1 20          18               1          0         16              0         0         0                4           0        0        9.325636      0.523568           0.993439           9             0                0        0.993361
+    neutral hidden_sub      2 20          19               0          0         15              0         0         0                5           0        0        9.123570      0.478099           0.994357           9             0                0        0.992630
+    neutral hidden_sub      3 20          18               1          0         15              0         0         0                5           0        1        8.710560      0.922155           0.995911          11             0                0        0.991870
+    neutral  told_copy      3 20           0               4          8          0              4         7         8                1           0        0        1.750668      0.889806           0.998266          13            20                0        0.002598
+                              sum  count
+wording     baseline   peers            
+deferential hidden     1       12     20
+                       2       17     20
+                       3       16     20
+            hidden_sub 1       12     20
+                       2       16     20
+                       3       15     20
+neutral     hidden     1       12     20
+                       2       17     20
+                       3       15     20
+            hidden_sub 1       12     20
+                       2       16     20
+                       3       13     20
+  frame                                                row   cell  prompts  eligible  passing    median passed
+  defer copy-only: P(peers') back toward the no-peer level      C      NaN       NaN      NaN       NaN   None
+  defer copy-only: P(peers') back toward the no-peer level C_late      NaN       NaN      NaN       NaN   None
+  defer  give-ins under disagree: back to the right letter      C     20.0      20.0     20.0  5.174037   True
+  defer  give-ins under disagree: back to the right letter C_late     20.0      20.0     20.0  4.839976   None
+  defer                   hidden prompts: almost no change      C     80.0      80.0     71.0  0.324865   True
+  defer                   hidden prompts: almost no change C_late     80.0      80.0     80.0  0.071423   None
+  defer                      told to copy: P(peers') drops      C     20.0      20.0     20.0 12.622789   True
+  defer                      told to copy: P(peers') drops C_late     20.0      20.0      3.0  0.200309   None
+neutral copy-only: P(peers') back toward the no-peer level      C      NaN       NaN      NaN       NaN   None
+neutral copy-only: P(peers') back toward the no-peer level C_late      NaN       NaN      NaN       NaN   None
+neutral  give-ins under disagree: back to the right letter      C      1.0       1.0      1.0  5.248026   True
+neutral  give-ins under disagree: back to the right letter C_late      1.0       1.0      1.0  2.215240   None
+neutral                   hidden prompts: almost no change      C     80.0      80.0     72.0  0.275082   True
+neutral                   hidden prompts: almost no change C_late     80.0      80.0     80.0  0.071835   None
+neutral                      told to copy: P(peers') drops      C     20.0      20.0     20.0 12.622789   True
+neutral                      told to copy: P(peers') drops C_late     20.0      20.0      3.0  0.200309   None
+reading                  C well below A (leaned on the peers)  both collapse (bridge needed either way)  neither collapses  only B collapses  only D collapses (peers the backup)
+frame   condition peers                                                                                                                                                          
+defer   agree     1                                       0.0                                      16.0                1.0               0.0                                  3.0
+                  2                                       4.0                                       7.0                1.0               0.0                                  8.0
+                  3                                       2.0                                       6.0                2.0               0.0                                 10.0
+        disagree  1                                       0.0                                      19.0                0.0               1.0                                  0.0
+                  2                                       0.0                                       8.0                6.0               6.0                                  0.0
+                  3                                       1.0                                       5.0                4.0              10.0                                  0.0
+        hidden    1                                       0.0                                      20.0                0.0               0.0                                  0.0
+                  2                                       0.0                                      20.0                0.0               0.0                                  0.0
+                  3                                       1.0                                      18.0                0.0               1.0                                  0.0
+neutral agree     1                                       0.0                                      20.0                0.0               0.0                                  0.0
+                  2                                       2.0                                      13.0                1.0               0.0                                  4.0
+                  3                                       1.0                                      17.0                1.0               0.0                                  1.0
+        disagree  1                                       0.0                                      20.0                0.0               0.0                                  0.0
+                  2                                       0.0                                      17.0                2.0               1.0                                  0.0
+                  3                                       0.0                                      17.0                1.0               2.0                                  0.0
+        hidden    1                                       0.0                                      20.0                0.0               0.0                                  0.0
+                  2                                       0.0                                      20.0                0.0               0.0                                  0.0
+                  3                                       0.0                                      20.0                0.0               0.0                                  0.0
+  frame  peers  D_dropped     D_top  n
+  defer      1      False     right  1
+  defer      1       True    peers'  2
+  defer      1       True     right 12
+  defer      1       True same-kind  5
+  defer      2      False    peers'  1
+  defer      2      False     right 10
+  defer      2      False same-kind  1
+  defer      2       True    peers'  1
+  defer      2       True     right  4
+  defer      2       True same-kind  3
+  defer      3      False     right 12
+  defer      3      False same-kind  2
+  defer      3       True    peers'  2
+  defer      3       True     right  2
+  defer      3       True same-kind  2
+neutral      1       True    peers'  2
+neutral      1       True     right 13
+neutral      1       True same-kind  5
+neutral      2      False     right  3
+neutral      2       True    peers'  3
+neutral      2       True     right  9
+neutral      2       True same-kind  5
+neutral      3      False     right  3
+neutral      3       True    peers'  3
+neutral      3       True     right  9
+neutral      3       True same-kind  5
+strength           0.25  0.50  0.75  1.00
+frame   condition                        
+defer   agree      0.51  0.93  1.25  1.41
+        alone      3.84  7.81  8.85  9.37
+        hidden     2.81  5.50  6.97  7.46
+neutral agree      1.32  4.14  4.60  4.84
+        alone      3.84  7.81  8.85  9.37
+        hidden     3.69  8.48  9.39  9.44
+patch: corr(P_all, C) by frame: {'defer': np.float64(0.55), 'neutral': np.float64(0.93)}
+    wording  condition  peers  prompts  no_early_window  assessed  inconclusive  assessed_clean  not_needed  not_needed_share  needed  reach_median_of_nulls  block_prompts  B_collapses  B_collapse_share  fails_not_needed  fails_B
+deferential     hidden      1       20                0        20             6              14           0               0.0      14                    NaN           20.0         20.0               1.0             False    False
+deferential     hidden      2       20                0        20             7              13           0               0.0      13                    NaN           20.0         20.0               1.0             False    False
+deferential     hidden      3       20                0        20             6              14           0               0.0      14                    NaN           20.0         20.0               1.0             False    False
+deferential hidden_sub      1       20                0        20             7              13           0               0.0      13                    NaN            NaN          NaN               NaN             False    False
+deferential hidden_sub      2       20                0        20             7              13           0               0.0      13                    NaN            NaN          NaN               NaN             False    False
+deferential hidden_sub      3       20                0        20             8              12           0               0.0      12                    NaN           20.0         20.0               1.0             False    False
+    neutral     hidden      1       20                0        20             6              14           0               0.0      14                    NaN           20.0         20.0               1.0             False    False
+    neutral     hidden      2       20                0        20             5              15           0               0.0      15                    NaN           20.0         20.0               1.0             False    False
+    neutral     hidden      3       20                0        20             5              15           0               0.0      15                    NaN           20.0         20.0               1.0             False    False
+    neutral hidden_sub      1       20                0        20             4              16           0               0.0      16                    NaN            NaN          NaN               NaN             False    False
+    neutral hidden_sub      2       20                0        20             5              15           0               0.0      15                    NaN            NaN          NaN               NaN             False    False
+    neutral hidden_sub      3       20                0        20             5              15           0               0.0      15                    NaN           20.0         20.0               1.0             False    False
+  frame condition format  questions  visible_follow  visible_n  visible_said_right  visible_said_peers  visible_everyday_through  visible_everyday_n visible_control_ok  visible_removal_said_right  blocked_follow  blocked_n  blocked_said_right  blocked_said_peers  blocked_everyday_through  blocked_everyday_n blocked_control_ok  blocked_removal_said_right
+  defer     agree letter         16               4         16                  12                12.0                       0.0                  16               True                          16            15.0       16.0                 0.0                 0.0                       0.0                16.0               True                         4.0
+  defer     agree number          4               2          4                   2                 0.0                       NaN                   0               None                           3             4.0        4.0                 0.0                 0.0                       NaN                 0.0               None                         2.0
+  defer     alone letter         16              15         16                   0                 NaN                       0.0                  16               True                           4             NaN        NaN                 NaN                 NaN                       NaN                 NaN                NaN                         NaN
+  defer     alone number          4               3          4                   1                 NaN                       NaN                   0               None                           2             NaN        NaN                 NaN                 NaN                       NaN                 NaN                NaN                         NaN
+  defer  disagree letter         15               4         15                   0                11.0                       0.0                  15               True                           0            12.0       15.0                 2.0                 0.0                       0.0                15.0               True                         6.0
+  defer  disagree number          4               3          4                   1                 0.0                       NaN                   0               None                           2             4.0        4.0                 0.0                 0.0                       NaN                 0.0               None                         2.0
+neutral     agree letter         16              12         16                   4                 4.0                       0.0                  16               True                          12            15.0       16.0                 0.0                 0.0                       0.0                16.0               True                         3.0
+neutral     agree number          4               3          4                   1                 0.0                       NaN                   0               None                           3             4.0        4.0                 0.0                 0.0                       NaN                 0.0               None                         2.0
+neutral     alone letter         16              15         16                   0                 NaN                       0.0                  16               True                           4             NaN        NaN                 NaN                 NaN                       NaN                 NaN                NaN                         NaN
+neutral     alone number          4               3          4                   1                 NaN                       NaN                   0               None                           2             NaN        NaN                 NaN                 NaN                       NaN                 NaN                NaN                         NaN
+neutral  disagree letter         16              15         16                   0                 1.0                       0.0                  16               True                           1            15.0       16.0                 0.0                 0.0                       0.0                16.0               True                         3.0
+neutral  disagree number          4               3          4                   1                 0.0                       NaN                   0               None                           2             4.0        4.0                 0.0                 0.0                       NaN                 0.0               None                         2.0
+    wording                             share  dev_count  dev_n  dev  dev_lo  dev_hi  conf_count  conf_n  conf  conf_lo  conf_hi  replicates  intervals_overlap
+    neutral                  LO alone: needed         15     19 0.79    0.58    0.95          17      20  0.85     0.70     1.00        True               True
+    neutral                LO agree 1: needed         14     19 0.74    0.53    0.95          15      20  0.75     0.55     0.95        True               True
+    neutral            LO agree 1: not needed          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral                LO agree 2: needed         14     19 0.74    0.53    0.89          12      20  0.60     0.40     0.80        True               True
+    neutral            LO agree 2: not needed          1     19 0.05    0.00    0.16           0      20  0.00     0.00     0.00        True               True
+    neutral                LO agree 3: needed         14     19 0.74    0.53    0.89          14      20  0.70     0.50     0.90        True               True
+    neutral            LO agree 3: not needed          2     19 0.11    0.00    0.26           0      20  0.00     0.00     0.00        True               True
+    neutral          disagree 3: full give-in          6     19 0.32    0.11    0.53           0      20  0.00     0.00     0.00       False              False
+    neutral       weakens at 3 peers (vs '?')         17     19 0.89    0.74    1.00          15      20  0.75     0.55     0.90        True               True
+    neutral     hidden: not needed (assessed)          0     90 0.00    0.00    0.00           0      90  0.00     0.00     0.00        True               True
+    neutral        2x2 agree 1: both collapse         17     19 0.89    0.74    1.00          20      20  1.00     1.00     1.00        True               True
+    neutral     2x2 agree 1: only D collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral       2x2 agree 1: C well below A          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral    2x2 agree 1: neither collapses          2     19 0.11    0.00    0.26           0      20  0.00     0.00     0.00        True               True
+    neutral     2x2 agree 1: only B collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral        2x2 agree 2: both collapse         13     19 0.68    0.47    0.89          13      20  0.65     0.45     0.85        True               True
+    neutral     2x2 agree 2: only D collapses          2     19 0.11    0.00    0.26           4      20  0.20     0.05     0.40        True               True
+    neutral       2x2 agree 2: C well below A          4     19 0.21    0.05    0.42           2      20  0.10     0.00     0.25        True               True
+    neutral    2x2 agree 2: neither collapses          0     19 0.00    0.00    0.00           1      20  0.05     0.00     0.15       False               True
+    neutral     2x2 agree 2: only B collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral        2x2 agree 3: both collapse         14     19 0.74    0.53    0.95          17      20  0.85     0.70     1.00        True               True
+    neutral     2x2 agree 3: only D collapses          2     19 0.11    0.00    0.26           1      20  0.05     0.00     0.15        True               True
+    neutral       2x2 agree 3: C well below A          3     19 0.16    0.00    0.32           1      20  0.05     0.00     0.15        True               True
+    neutral    2x2 agree 3: neither collapses          0     19 0.00    0.00    0.00           1      20  0.05     0.00     0.15       False               True
+    neutral     2x2 agree 3: only B collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral     2x2 disagree 3: both collapse         15     19 0.79    0.58    0.95          17      20  0.85     0.70     1.00        True               True
+    neutral  2x2 disagree 3: only D collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral    2x2 disagree 3: C well below A          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral 2x2 disagree 3: neither collapses          2     19 0.11    0.00    0.26           1      20  0.05     0.00     0.15        True               True
+    neutral  2x2 disagree 3: only B collapses          2     19 0.11    0.00    0.26           2      20  0.10     0.00     0.25        True               True
+    neutral       2x2 hidden 3: both collapse         19     19 1.00    1.00    1.00          20      20  1.00     1.00     1.00        True               True
+    neutral    2x2 hidden 3: only D collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral      2x2 hidden 3: C well below A          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral   2x2 hidden 3: neither collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral    2x2 hidden 3: only B collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+    neutral       2x2 hidden 1-3: B collapses         57     57 1.00    1.00    1.00          60      60  1.00     1.00     1.00        True               True
+deferential                  LO alone: needed         15     19 0.79    0.58    0.95          17      20  0.85     0.70     1.00        True               True
+deferential                LO agree 1: needed         14     19 0.74    0.53    0.90          12      20  0.60     0.40     0.80        True               True
+deferential            LO agree 1: not needed          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+deferential                LO agree 2: needed          7     19 0.37    0.16    0.58           7      20  0.35     0.15     0.55        True               True
+deferential            LO agree 2: not needed          5     19 0.26    0.11    0.47           3      20  0.15     0.00     0.30        True               True
+deferential                LO agree 3: needed          8     19 0.42    0.21    0.63           5      20  0.25     0.10     0.45        True               True
+deferential            LO agree 3: not needed          5     19 0.26    0.11    0.47           3      20  0.15     0.00     0.30        True               True
+deferential          disagree 3: full give-in         12     19 0.63    0.42    0.84           8      20  0.40     0.20     0.60       False               True
+deferential       weakens at 3 peers (vs '?')         19     19 1.00    1.00    1.00          16      20  0.80     0.60     0.95       False              False
+deferential     hidden: not needed (assessed)          0     73 0.00    0.00    0.00           0      79  0.00     0.00     0.00        True               True
+deferential        2x2 agree 1: both collapse         14     19 0.74    0.53    0.89          16      20  0.80     0.60     0.95        True               True
+deferential     2x2 agree 1: only D collapses          1     19 0.05    0.00    0.16           3      20  0.15     0.00     0.30        True               True
+deferential       2x2 agree 1: C well below A          4     19 0.21    0.05    0.42           0      20  0.00     0.00     0.00       False              False
+deferential    2x2 agree 1: neither collapses          0     19 0.00    0.00    0.00           1      20  0.05     0.00     0.15       False               True
+deferential     2x2 agree 1: only B collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+deferential        2x2 agree 2: both collapse          6     19 0.32    0.11    0.53           7      20  0.35     0.15     0.55        True               True
+deferential     2x2 agree 2: only D collapses          6     19 0.32    0.11    0.53           8      20  0.40     0.20     0.60        True               True
+deferential       2x2 agree 2: C well below A          6     19 0.32    0.11    0.53           4      20  0.20     0.05     0.40        True               True
+deferential    2x2 agree 2: neither collapses          1     19 0.05    0.00    0.16           1      20  0.05     0.00     0.15        True               True
+deferential     2x2 agree 2: only B collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+deferential        2x2 agree 3: both collapse          7     19 0.37    0.16    0.58           6      20  0.30     0.10     0.50        True               True
+deferential     2x2 agree 3: only D collapses          7     19 0.37    0.16    0.58          10      20  0.50     0.30     0.70        True               True
+deferential       2x2 agree 3: C well below A          4     19 0.21    0.05    0.42           2      20  0.10     0.00     0.25        True               True
+deferential    2x2 agree 3: neither collapses          1     19 0.05    0.00    0.16           2      20  0.10     0.00     0.25        True               True
+deferential     2x2 agree 3: only B collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+deferential     2x2 disagree 3: both collapse          6     19 0.32    0.11    0.53           5      20  0.25     0.10     0.45        True               True
+deferential  2x2 disagree 3: only D collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+deferential    2x2 disagree 3: C well below A          0     19 0.00    0.00    0.00           1      20  0.05     0.00     0.15       False               True
+deferential 2x2 disagree 3: neither collapses          6     19 0.32    0.11    0.53           4      20  0.20     0.05     0.40        True               True
+deferential  2x2 disagree 3: only B collapses          7     19 0.37    0.16    0.58          10      20  0.50     0.30     0.75        True               True
+deferential       2x2 hidden 3: both collapse         19     19 1.00    1.00    1.00          18      20  0.90     0.75     1.00       False               True
+deferential    2x2 hidden 3: only D collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+deferential      2x2 hidden 3: C well below A          0     19 0.00    0.00    0.00           1      20  0.05     0.00     0.15       False               True
+deferential   2x2 hidden 3: neither collapses          0     19 0.00    0.00    0.00           0      20  0.00     0.00     0.00        True               True
+deferential    2x2 hidden 3: only B collapses          0     19 0.00    0.00    0.00           1      20  0.05     0.00     0.15       False               True
+deferential       2x2 hidden 1-3: B collapses         54     57 0.95    0.86    1.00          60      60  1.00     1.00     1.00        True               True

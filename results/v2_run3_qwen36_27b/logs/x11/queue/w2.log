@@ -1,0 +1,4 @@
+== 09:53:51 [x11-2] worker up on fa7247fe1077, NVIDIA H200
+== 09:53:51 [x11-2] start: q defer C_PL_saturn
+== 09:59:56 [x11-2] done (365s): q defer C_PL_saturn
+== 09:59:56 [x11-2] queue empty: WORKER DONE

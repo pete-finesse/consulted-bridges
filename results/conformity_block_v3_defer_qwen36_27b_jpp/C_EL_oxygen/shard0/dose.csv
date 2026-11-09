@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_EL_oxygen,defer,alone,0,8,,right,layers 30–41,own,0,0.25,0.9841622372526476,0.00033015376416901184,4.129393623005155
+C_EL_oxygen,defer,alone,0,8,,right,layers 30–41,own,0,0.5,0.7684495148744775,0.002771500620853757,1.199576939702502
+C_EL_oxygen,defer,alone,0,8,,right,layers 30–41,own,0,0.75,0.532039046940405,0.00974476166401813,0.12833202434925012
+C_EL_oxygen,defer,agree,3,8,8,right,layers 30–41,own,3,0.25,0.9939946457521509,0.9939946457521509,5.109080374134776
+C_EL_oxygen,defer,agree,3,8,8,right,layers 30–41,own,3,0.5,0.9231912729266838,0.9231912729266838,2.486518175175201
+C_EL_oxygen,defer,agree,3,8,8,right,layers 30–41,own,3,0.75,0.869332166622145,0.869332166622145,1.8950668123071337
+C_EL_oxygen,defer,hidden,3,8,,right,layers 30–41,own,3,0.25,0.9756824071511205,,3.691937057003126
+C_EL_oxygen,defer,hidden,3,8,,right,layers 30–41,own,3,0.5,0.7910900844384771,,1.3315087150323819
+C_EL_oxygen,defer,hidden,3,8,,right,layers 30–41,own,3,0.75,0.5417950511016442,,0.16757122473044403

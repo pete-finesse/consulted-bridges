@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 269/851 [00:00<00:00, 2688.01it/s]Loading weights:  77%|███████▋  | 654/851 [00:00<00:00, 3367.15it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 4043.90it/s]
+PROGRESS 0/1 C_LM_chichen
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LM_chichen alone] A 0.99 B 0.02 (2s)
+[C_LM_chichen agree1] A 0.99 B 0.89 C 1.00 C_late 1.00 D 0.91 D_late 0.98 (1s)
+[C_LM_chichen agree2] A 1.00 B 0.97 C 1.00 C_late 1.00 D 0.04 D_late 0.97 (1s)
+[C_LM_chichen agree3] A 0.99 B 0.96 C 1.00 C_late 0.99 D 0.15 D_late 0.96 (1s)
+[C_LM_chichen disagree1] A 1.00 B 0.02 C 1.00 C_late 0.99 D 0.07 D_late 0.01 (1s)
+[C_LM_chichen disagree2] A 0.59 B 0.16 C 1.00 C_late 0.98 D 0.99 D_late 0.96 (1s)
+[C_LM_chichen disagree3] A 0.59 B 0.18 C 1.00 C_late 0.94 D 0.99 D_late 0.86 (1s)
+[C_LM_chichen hidden1] A 0.99 B 0.02 C 1.00 C_late 0.99 D 0.08 D_late 0.01 (1s)
+[C_LM_chichen hidden2] A 1.00 B 0.01 C 1.00 C_late 1.00 D 0.01 D_late 0.00 (1s)
+[C_LM_chichen hidden3] A 1.00 B 0.01 C 1.00 C_late 1.00 D 0.02 D_late 0.01 (1s)
+[C_LM_chichen hidden_sub3] A 1.00 B 0.01 C 1.00 C_late 1.00 D 0.01 D_late 0.01 (1s)
+[C_LM_chichen told_copy3] A 0.01 B 0.00 C 0.91 C_late 0.01 D 0.00 D_late 0.00 (1s)
+[C_LM_chichen patch] P_all 1.00 (23s)
+PROGRESS ALLDONE

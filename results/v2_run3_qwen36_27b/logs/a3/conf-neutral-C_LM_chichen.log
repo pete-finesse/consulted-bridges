@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  34%|███▍      | 292/851 [00:00<00:00, 2918.33it/s]Loading weights:  69%|██████▊   | 584/851 [00:00<00:00, 2679.72it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 3447.91it/s]
+PROGRESS 0/14 C_LM_chichen alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LM_chichen alone] says 'M' (right) P(right) 1.00 P(peer) 0.00 onset 54 | need 0.98 bridge dLO +7.53 noise +0.49 kind 1.4085718520724342 | reach 0.00 rank 0 | bridge still needed (16s)
+PROGRESS 1/14 C_LM_chichen agree1
+[C_LM_chichen agree1] says 'M' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.09 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.00 rank 0 | mixed (15s)
+PROGRESS 2/14 C_LM_chichen agree2
+[C_LM_chichen agree2] says 'M' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.02 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.04 rank 0 | mixed (16s)
+PROGRESS 3/14 C_LM_chichen agree3
+[C_LM_chichen agree3] says 'M' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.03 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.03 rank 0 | mixed (16s)
+PROGRESS 4/14 C_LM_chichen disagree1
+[C_LM_chichen disagree1] says 'M' (holds) P(right) 1.00 P(peer) 0.00 onset 54 | need 0.98 bridge dLO +9.25 noise +0.62 kind 0.7496085946084108 | reach 0.00 rank 0 | bridge still pulls (21s)
+PROGRESS 5/14 C_LM_chichen disagree2
+[C_LM_chichen disagree2] says 'M' (holds) P(right) 0.59 P(peer) 0.41 onset 24 | need 0.45 bridge dLO +1.75 noise +0.50 kind 0.24999931409691512 | reach 0.00 rank 0 | mixed (11s)
+PROGRESS 6/14 C_LM_chichen disagree3
+[C_LM_chichen disagree3] says 'M' (holds) P(right) 0.62 P(peer) 0.38 onset 36 | need 0.54 bridge dLO +2.37 noise +0.62 kind 0.12499952999523362 | reach 0.00 rank 0 | mixed (16s)
+PROGRESS 7/14 C_LM_chichen hidden1
+[C_LM_chichen hidden1] says 'M' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.98 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.00 rank 0 | bridge still needed (15s)
+PROGRESS 8/14 C_LM_chichen hidden2
+[C_LM_chichen hidden2] says 'M' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.30 rank 0 | bridge still needed (16s)
+PROGRESS 9/14 C_LM_chichen hidden3
+[C_LM_chichen hidden3] says 'M' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.39 rank 0 | bridge still needed (16s)
+PROGRESS 10/14 C_LM_chichen hidden_sub1
+[C_LM_chichen hidden_sub1] says 'M' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.01 rank 0 | bridge still needed (15s)
+PROGRESS 11/14 C_LM_chichen hidden_sub2
+[C_LM_chichen hidden_sub2] says 'M' (right) P(right) 1.00 P(peer) nan onset 54 | need 1.00 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.04 rank 0 | bridge still needed (17s)
+PROGRESS 12/14 C_LM_chichen hidden_sub3
+[C_LM_chichen hidden_sub3] says 'M' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.23 rank 0 | bridge still needed (18s)
+PROGRESS 13/14 C_LM_chichen told_copy3
+[C_LM_chichen told_copy3] says 'T' (full give-in) P(right) 0.01 P(peer) 0.98 onset 54 | need 0.41 bridge dLO +4.74 noise +0.87 kind 0.7499213250897734 | reach 0.96 rank 1 | bridge still pulls (24s)
+PROGRESS ALLDONE

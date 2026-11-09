@@ -1,0 +1,4 @@
+== 09:57:32 [x5-1] worker up on 7ac2efbc597f, NVIDIA H200
+== 09:57:32 [x5-1] start: q neutral C_LU_bohr
+== 10:04:42 [x5-1] done (430s): q neutral C_LU_bohr
+== 10:04:42 [x5-1] queue empty: WORKER DONE

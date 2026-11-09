@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  74%|███████▎  | 627/851 [00:00<00:00, 6231.39it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 6762.28it/s]
+PROGRESS 0/14 C_LU_unsw alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LU_unsw alone] says 'S' (right) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.95 bridge dLO +8.48 noise +0.65 kind 1.1327639539592198 | reach 0.96 rank 1 | bridge still needed (15s)
+PROGRESS 1/14 C_LU_unsw agree1
+[C_LU_unsw agree1] says 'S' (right) P(right) 0.85 P(peer) 0.85 onset 54 | need 0.86 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.98 rank 0 | bridge still needed (13s)
+PROGRESS 2/14 C_LU_unsw agree2
+[C_LU_unsw agree2] says 'S' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.04 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.93 rank 0 | bridge not needed (11s)
+PROGRESS 3/14 C_LU_unsw agree3
+[C_LU_unsw agree3] says 'S' (right) P(right) 0.97 P(peer) 0.97 onset 54 | need 0.04 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.90 rank 0 | bridge not needed (16s)
+PROGRESS 4/14 C_LU_unsw disagree1
+[C_LU_unsw disagree1] says 'S' (holds) P(right) 0.56 P(peer) 0.01 onset 18 | need 0.60 bridge dLO +3.25 noise +0.50 kind 0.7499775280048557 | reach 0.33 rank 0 | bridge still pulls (8s)
+PROGRESS 5/14 C_LU_unsw disagree2
+[C_LU_unsw disagree2] says 'S' (holds) P(right) 0.74 P(peer) 0.04 onset 30 | need 0.88 bridge dLO +6.12 noise +0.37 kind 0.8749904938720561 | reach 0.99 rank 0 | bridge still pulls (11s)
+PROGRESS 6/14 C_LU_unsw disagree3
+[C_LU_unsw disagree3] says 'S' (holds) P(right) 0.42 P(peer) 0.12 onset 24 | need 0.80 bridge dLO +2.75 noise +0.37 kind 0.4999976159333177 | reach 0.86 rank 1 | bridge still pulls (19s)
+PROGRESS 7/14 C_LU_unsw hidden1
+[C_LU_unsw hidden1] says 'S' (right) P(right) 0.85 P(peer) nan onset 54 | need 0.66 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 1 | bridge still needed (13s)
+PROGRESS 8/14 C_LU_unsw hidden2
+[C_LU_unsw hidden2] says 'S' (right) P(right) 0.69 P(peer) nan onset 54 | need 0.77 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 1 | bridge still needed (14s)
+PROGRESS 9/14 C_LU_unsw hidden3
+[C_LU_unsw hidden3] says 'S' (right) P(right) 0.51 P(peer) nan onset 54 | need 0.66 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 1 | bridge still needed (14s)
+PROGRESS 10/14 C_LU_unsw hidden_sub1
+[C_LU_unsw hidden_sub1] says 'S' (right) P(right) 0.73 P(peer) nan onset 54 | need 0.74 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 2 | bridge still needed (14s)
+PROGRESS 11/14 C_LU_unsw hidden_sub2
+[C_LU_unsw hidden_sub2] says 'S' (right) P(right) 0.63 P(peer) nan onset 54 | need 0.71 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 1 | bridge still needed (14s)
+PROGRESS 12/14 C_LU_unsw hidden_sub3
+[C_LU_unsw hidden_sub3] says 'S' (right) P(right) 0.67 P(peer) nan onset 54 | need 0.85 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 2 | bridge still needed (16s)
+PROGRESS 13/14 C_LU_unsw told_copy3
+[C_LU_unsw told_copy3] says 'U' (full give-in) P(right) 0.00 P(peer) 0.97 onset 54 | need 0.48 bridge dLO +2.74 noise +0.62 kind 1.997387744271479 | reach 0.97 rank 7 | mixed (16s)
+PROGRESS ALLDONE

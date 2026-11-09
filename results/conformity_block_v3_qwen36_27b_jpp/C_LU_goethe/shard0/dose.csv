@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LU_goethe,neutral,alone,0,F,,right,layers 18–29,own,0,0.25,0.04603270165211951,5.0633228343090985e-05,-3.031277343003076
+C_LU_goethe,neutral,alone,0,F,,right,layers 18–29,own,0,0.5,0.007245333449048857,0.00010334920504531096,-4.9201259712038565
+C_LU_goethe,neutral,alone,0,F,,right,layers 18–29,own,0,0.75,0.004954302694697777,0.00010945478479857621,-5.302532232774018
+C_LU_goethe,neutral,agree,3,F,F,right,layers 18–29,own,3,0.25,0.9787394987180487,0.9787394987180487,3.829414566689436
+C_LU_goethe,neutral,agree,3,F,F,right,layers 18–29,own,3,0.5,0.9652229451961492,0.9652229451961492,3.3234012813465363
+C_LU_goethe,neutral,agree,3,F,F,right,layers 18–29,own,3,0.75,0.9574166455203809,0.9574166455203809,3.1127752259769994
+C_LU_goethe,neutral,hidden,3,F,,right,layers 18–29,own,3,0.25,0.0077603256225527014,,-4.850940390353951
+C_LU_goethe,neutral,hidden,3,F,,right,layers 18–29,own,3,0.5,0.0035678247108381946,,-5.632224989022737
+C_LU_goethe,neutral,hidden,3,F,,right,layers 18–29,own,3,0.75,0.0035495438848875517,,-5.637380308416952

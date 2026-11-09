@@ -1,0 +1,4 @@
+== 09:52:24 [x6-2] worker up on 46dab1cc6c26, NVIDIA H200
+== 09:52:24 [x6-2] start: q defer C_LU_case
+== 09:57:46 [x6-2] done (322s): q defer C_LU_case
+== 09:57:46 [x6-2] queue empty: WORKER DONE

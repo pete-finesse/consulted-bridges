@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  68%|██████▊   | 582/851 [00:00<00:00, 5787.96it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 5542.54it/s]
+PROGRESS 0/14 C_LM_bluelagoon alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LM_bluelagoon alone] says 'I' (right) P(right) 1.00 P(peer) 0.00 onset 54 | need 0.74 bridge dLO +4.24 noise +0.37 kind 0.9916112834185888 | reach 0.00 rank 0 | bridge still needed (14s)
+PROGRESS 1/14 C_LM_bluelagoon agree1
+[C_LM_bluelagoon agree1] says 'I' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.03 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.05 rank 0 | mixed (13s)
+PROGRESS 2/14 C_LM_bluelagoon agree2
+[C_LM_bluelagoon agree2] says 'I' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.03 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.02 rank 0 | mixed (13s)
+PROGRESS 3/14 C_LM_bluelagoon agree3
+[C_LM_bluelagoon agree3] says 'I' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.38 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.14 rank 0 | mixed (14s)
+PROGRESS 4/14 C_LM_bluelagoon disagree1
+[C_LM_bluelagoon disagree1] says 'I' (holds) P(right) 0.98 P(peer) 0.01 onset 54 | need 0.97 bridge dLO +6.87 noise +0.87 kind 0.8749462714415954 | reach 0.10 rank 0 | bridge still pulls (18s)
+PROGRESS 5/14 C_LM_bluelagoon disagree2
+[C_LM_bluelagoon disagree2] says 'R' (partial give-in) P(right) 0.35 P(peer) 0.65 onset 18 | need 0.15 bridge dLO +1.12 noise +0.75 kind 0.3749988220778824 | reach 0.00 rank 0 | mixed (8s)
+PROGRESS 6/14 C_LM_bluelagoon disagree3
+[C_LM_bluelagoon disagree3] says 'I' (holds) P(right) 0.50 P(peer) 0.50 onset 30 | need 0.45 bridge dLO +2.25 noise +0.75 kind 0.6249985010482207 | reach 0.13 rank 0 | mixed (11s)
+PROGRESS 7/14 C_LM_bluelagoon hidden1
+[C_LM_bluelagoon hidden1] says 'I' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.73 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.08 rank 0 | bridge still needed (15s)
+PROGRESS 8/14 C_LM_bluelagoon hidden2
+[C_LM_bluelagoon hidden2] says 'I' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.80 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.03 rank 0 | bridge still needed (13s)
+PROGRESS 9/14 C_LM_bluelagoon hidden3
+[C_LM_bluelagoon hidden3] says 'I' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.92 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.33 rank 0 | bridge still needed (14s)
+PROGRESS 10/14 C_LM_bluelagoon hidden_sub1
+[C_LM_bluelagoon hidden_sub1] says 'I' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.94 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.04 rank 0 | bridge still needed (13s)
+PROGRESS 11/14 C_LM_bluelagoon hidden_sub2
+[C_LM_bluelagoon hidden_sub2] says 'I' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.77 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.05 rank 0 | bridge still needed (13s)
+PROGRESS 12/14 C_LM_bluelagoon hidden_sub3
+[C_LM_bluelagoon hidden_sub3] says 'I' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.88 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.16 rank 0 | bridge still needed (15s)
+PROGRESS 13/14 C_LM_bluelagoon told_copy3
+[C_LM_bluelagoon told_copy3] says 'R' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need 0.36 bridge dLO +4.44 noise +1.00 kind 1.8713302248247992 | reach 0.91 rank 1 | bridge still pulls (19s)
+PROGRESS ALLDONE

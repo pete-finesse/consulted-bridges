@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LM_moai,neutral,alone,0,C,,right,layers 36–47,own,0,0.25,0.0006938585586059357,1.6318009380315388e-05,-7.2725483248822
+C_LM_moai,neutral,alone,0,C,,right,layers 36–47,own,0,0.5,0.0001771406592803986,2.2520887143913125e-05,-8.638389299435008
+C_LM_moai,neutral,alone,0,C,,right,layers 36–47,own,0,0.75,0.00015651445366264856,2.4002230147428596e-05,-8.762205669873385
+C_LM_moai,neutral,agree,3,C,C,right,layers 30–41,own,3,0.25,0.8117108074359995,0.8117108074359995,1.4611650890062438
+C_LM_moai,neutral,agree,3,C,C,right,layers 30–41,own,3,0.5,0.6734421530253881,0.6734421530253881,0.7237949960802197
+C_LM_moai,neutral,agree,3,C,C,right,layers 30–41,own,3,0.75,0.6458005160819165,0.6458005160819165,0.6006303891473472
+C_LM_moai,neutral,hidden,3,C,,right,layers 42–53,own,3,0.25,0.08675127672968921,,-2.3539631316038476
+C_LM_moai,neutral,hidden,3,C,,right,layers 42–53,own,3,0.5,0.0014779725499420053,,-6.515604963234236
+C_LM_moai,neutral,hidden,3,C,,right,layers 42–53,own,3,0.75,0.0007470313611302819,,-7.19865608041315

@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  77%|███████▋  | 656/851 [00:00<00:00, 6545.06it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 6455.00it/s]
+PROGRESS 0/1 C_LM_timbuktu
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LM_timbuktu alone] A 1.00 B 0.22 (3s)
+[C_LM_timbuktu agree1] A 0.99 B 0.98 C 0.98 C_late 0.99 D 0.95 D_late 0.97 (1s)
+[C_LM_timbuktu agree2] A 0.99 B 0.97 C 0.97 C_late 0.99 D 0.96 D_late 0.97 (1s)
+[C_LM_timbuktu agree3] A 0.98 B 0.95 C 0.97 C_late 0.98 D 0.93 D_late 0.94 (1s)
+[C_LM_timbuktu disagree1] A 0.99 B 0.27 C 0.98 C_late 0.98 D 0.81 D_late 0.19 (1s)
+[C_LM_timbuktu disagree2] A 0.95 B 0.00 C 0.97 C_late 0.98 D 0.82 D_late 0.25 (1s)
+[C_LM_timbuktu disagree3] A 0.93 B 0.00 C 0.97 C_late 0.96 D 0.83 D_late 0.01 (1s)
+[C_LM_timbuktu hidden1] A 0.97 B 0.30 C 0.98 C_late 0.97 D 0.73 D_late 0.27 (1s)
+[C_LM_timbuktu hidden2] A 0.97 B 0.44 C 0.97 C_late 0.97 D 0.78 D_late 0.47 (1s)
+[C_LM_timbuktu hidden3] A 0.97 B 0.77 C 0.97 C_late 0.97 D 0.83 D_late 0.76 (1s)
+[C_LM_timbuktu hidden_sub3] A 0.96 B 0.69 C 0.97 C_late 0.97 D 0.94 D_late 0.65 (1s)
+[C_LM_timbuktu told_copy3] A 0.03 B 0.00 C 0.91 C_late 0.04 D 0.22 D_late 0.00 (1s)
+[C_LM_timbuktu patch] P_all 0.97 (18s)
+PROGRESS ALLDONE

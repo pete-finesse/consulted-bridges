@@ -1,0 +1,6 @@
+== 09:58:37 [x1-1] worker up on 1db6f3de83bc, NVIDIA H200
+== 09:58:37 [x1-1] start: q neutral C_LM_tikal
+== 10:05:40 [x1-1] done (423s): q neutral C_LM_tikal
+== 10:05:40 [x1-1] start: q defer C_LM_alhambra
+== 10:09:39 [x1-1] done (239s): q defer C_LM_alhambra
+== 10:09:39 [x1-1] queue empty: WORKER DONE

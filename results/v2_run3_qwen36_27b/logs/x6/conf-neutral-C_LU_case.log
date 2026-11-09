@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 13098.83it/s]
+PROGRESS 0/14 C_LU_case alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LU_case alone] says 'C' (right) P(right) 1.00 P(peer) 0.00 onset 54 | need 0.95 bridge dLO +6.11 noise +0.35 kind 0.17370667767279002 | reach 0.00 rank 0 | bridge still needed (56s)
+PROGRESS 1/14 C_LU_case agree1
+[C_LU_case agree1] says 'C' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.37 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.04 rank 0 | mixed (9s)
+PROGRESS 2/14 C_LU_case agree2
+[C_LU_case agree2] says 'C' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.03 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.02 rank 0 | mixed (8s)
+PROGRESS 3/14 C_LU_case agree3
+[C_LU_case agree3] says 'C' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.02 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.02 rank 0 | mixed (9s)
+PROGRESS 4/14 C_LU_case disagree1
+[C_LU_case disagree1] says 'C' (holds) P(right) 1.00 P(peer) 0.00 onset 54 | need 0.97 bridge dLO +5.37 noise +0.25 kind 0.2494173388644363 | reach 0.02 rank 0 | bridge still pulls (26s)
+PROGRESS 5/14 C_LU_case disagree2
+[C_LU_case disagree2] says 'C' (holds) P(right) 0.99 P(peer) 0.01 onset 54 | need 0.82 bridge dLO +5.12 noise +0.87 kind 0.7498983832405193 | reach 0.05 rank 0 | bridge still pulls (17s)
+PROGRESS 6/14 C_LU_case disagree3
+[C_LU_case disagree3] says 'C' (holds) P(right) 0.99 P(peer) 0.01 onset 54 | need 0.85 bridge dLO +5.12 noise +0.62 kind 0.6249516927762326 | reach 0.12 rank 0 | bridge still pulls (19s)
+PROGRESS 7/14 C_LU_case hidden1
+[C_LU_case hidden1] says 'C' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.98 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.09 rank 0 | bridge still needed (14s)
+PROGRESS 8/14 C_LU_case hidden2
+[C_LU_case hidden2] says 'C' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.96 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.10 rank 0 | bridge still needed (15s)
+PROGRESS 9/14 C_LU_case hidden3
+[C_LU_case hidden3] says 'C' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.85 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.23 rank 0 | bridge still needed (11s)
+PROGRESS 10/14 C_LU_case hidden_sub1
+[C_LU_case hidden_sub1] says 'C' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.33 rank 0 | bridge still needed (16s)
+PROGRESS 11/14 C_LU_case hidden_sub2
+[C_LU_case hidden_sub2] says 'C' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.98 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.01 rank 0 | bridge still needed (14s)
+PROGRESS 12/14 C_LU_case hidden_sub3
+[C_LU_case hidden_sub3] says 'C' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.91 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.39 rank 0 | bridge still needed (15s)
+PROGRESS 13/14 C_LU_case told_copy3
+[C_LU_case told_copy3] says 'I' (full give-in) P(right) 0.05 P(peer) 0.95 onset 54 | need 0.21 bridge dLO +1.12 noise +0.62 kind 0.6249827201973752 | reach 0.41 rank 14 | mixed (18s)
+PROGRESS ALLDONE

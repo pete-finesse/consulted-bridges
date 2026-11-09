@@ -1,0 +1,284 @@
+{
+ "config": "qwen36_27b_jpp",
+ "USE_HUB_KERNELS": "(unset)",
+ "impls": {
+  "torch_chunk_gated_delta_rule": "transformers.models.qwen3_5.modeling_qwen3_5.torch_chunk_gated_delta_rule",
+  "torch_recurrent_gated_delta_rule": "transformers.models.qwen3_5.modeling_qwen3_5.torch_recurrent_gated_delta_rule",
+  "forward": "transformers.models.qwen3_5.modeling_qwen3_5.Qwen3_5GatedDeltaNet.forward"
+ },
+ "dtype": "torch.bfloat16",
+ "tolerance": 0.001,
+ "pairs": [
+  {
+   "question": "L_colosseum",
+   "peers": 1,
+   "a": "I",
+   "b": "F",
+   "frame": "neutral",
+   "same_length": true,
+   "same_positions": true,
+   "positions": [
+    38
+   ],
+   "unblocked_diff": 2.90625,
+   "blocked_diff": 0.0,
+   "block_effect": 4.53125,
+   "top_a": [
+    "I",
+    "Italy",
+    "The",
+    "C",
+    "T"
+   ],
+   "top_b": [
+    "I",
+    "Italy",
+    "It",
+    "F",
+    "A"
+   ],
+   "top_blocked": [
+    "I",
+    "Italy",
+    "C",
+    "It",
+    "R"
+   ],
+   "passed": true
+  },
+  {
+   "question": "L_colosseum",
+   "peers": 2,
+   "a": "I",
+   "b": "F",
+   "frame": "neutral",
+   "same_length": true,
+   "same_positions": true,
+   "positions": [
+    38,
+    44
+   ],
+   "unblocked_diff": 3.625,
+   "blocked_diff": 0.0,
+   "block_effect": 3.1875,
+   "top_a": [
+    "I",
+    "C",
+    "The",
+    "T",
+    "Italy"
+   ],
+   "top_b": [
+    "I",
+    "F",
+    "Italy",
+    "The",
+    "C"
+   ],
+   "top_blocked": [
+    "I",
+    "Italy",
+    "C",
+    "It",
+    "R"
+   ],
+   "passed": true
+  },
+  {
+   "question": "L_colosseum",
+   "peers": 3,
+   "a": "I",
+   "b": "F",
+   "frame": "neutral",
+   "same_length": true,
+   "same_positions": true,
+   "positions": [
+    38,
+    44,
+    50
+   ],
+   "unblocked_diff": 4.25,
+   "blocked_diff": 0.0,
+   "block_effect": 3.5,
+   "top_a": [
+    "I",
+    "C",
+    "The",
+    "Italy",
+    "T"
+   ],
+   "top_b": [
+    "I",
+    "The",
+    "F",
+    "Italy",
+    "C"
+   ],
+   "top_blocked": [
+    "I",
+    "C",
+    "Italy",
+    "R",
+    "It"
+   ],
+   "passed": true
+  },
+  {
+   "question": "L_colosseum",
+   "peers": 3,
+   "a": "I",
+   "b": "?",
+   "frame": "neutral",
+   "same_length": true,
+   "same_positions": true,
+   "positions": [
+    38,
+    44,
+    50
+   ],
+   "unblocked_diff": 4.11328125,
+   "blocked_diff": 0.0,
+   "block_effect": 3.5,
+   "top_a": [
+    "I",
+    "C",
+    "The",
+    "Italy",
+    "T"
+   ],
+   "top_b": [
+    "I",
+    "Italy",
+    "C",
+    "It",
+    "R"
+   ],
+   "top_blocked": [
+    "I",
+    "C",
+    "Italy",
+    "R",
+    "It"
+   ],
+   "passed": true
+  },
+  {
+   "question": "L_gates",
+   "peers": 3,
+   "a": "S",
+   "b": "F",
+   "frame": "neutral",
+   "same_length": true,
+   "same_positions": true,
+   "positions": [
+    36,
+    42,
+    48
+   ],
+   "unblocked_diff": 6.5,
+   "blocked_diff": 0.0,
+   "block_effect": 6.15625,
+   "top_a": [
+    "S",
+    "D",
+    "B",
+    "A",
+    "T"
+   ],
+   "top_b": [
+    "S",
+    "F",
+    "D",
+    "B",
+    "O"
+   ],
+   "top_blocked": [
+    "S",
+    "D",
+    "B",
+    "O",
+    "M"
+   ],
+   "passed": true
+  },
+  {
+   "question": "V_LM_eiffel",
+   "peers": 3,
+   "a": "F",
+   "b": "G",
+   "frame": "neutral",
+   "same_length": true,
+   "same_positions": true,
+   "positions": [
+    38,
+    44,
+    50
+   ],
+   "unblocked_diff": 4.90625,
+   "blocked_diff": 0.0,
+   "block_effect": 3.28125,
+   "top_a": [
+    "F",
+    "P",
+    "The",
+    "E",
+    "France"
+   ],
+   "top_b": [
+    "F",
+    "G",
+    "P",
+    "The",
+    "E"
+   ],
+   "top_blocked": [
+    "F",
+    "P",
+    " F",
+    "C",
+    "E"
+   ],
+   "passed": true
+  },
+  {
+   "question": "V_LU_berklee",
+   "peers": 3,
+   "a": "B",
+   "b": "F",
+   "frame": "neutral",
+   "same_length": true,
+   "same_positions": true,
+   "positions": [
+    40,
+    46,
+    52
+   ],
+   "unblocked_diff": 8.75,
+   "blocked_diff": 0.0,
+   "block_effect": 3.5,
+   "top_a": [
+    "B",
+    "C",
+    "A",
+    "W",
+    "D"
+   ],
+   "top_b": [
+    "B",
+    "F",
+    "Boston",
+    "C",
+    "A"
+   ],
+   "top_blocked": [
+    "B",
+    "Boston",
+    "C",
+    "W",
+    "A"
+   ],
+   "passed": true
+  }
+ ],
+ "passed": true
+}

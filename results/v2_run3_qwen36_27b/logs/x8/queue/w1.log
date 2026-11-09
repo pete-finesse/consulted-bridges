@@ -1,0 +1,6 @@
+== 09:50:51 [x8-1] worker up on 6bb7b26aaaf2, NVIDIA H200
+== 09:50:51 [x8-1] start: q neutral C_LU_goethe
+== 09:57:45 [x8-1] done (414s): q neutral C_LU_goethe
+== 09:57:46 [x8-1] start: q neutral C_LM_moai
+== 10:01:59 [x8-1] done (253s): q neutral C_LM_moai
+== 10:01:59 [x8-1] queue empty: WORKER DONE

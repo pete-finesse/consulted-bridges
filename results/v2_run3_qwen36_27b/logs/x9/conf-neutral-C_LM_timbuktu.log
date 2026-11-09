@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  74%|███████▍  | 631/851 [00:00<00:00, 6306.53it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 6383.25it/s]
+PROGRESS 0/14 C_LM_timbuktu alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LM_timbuktu alone] says 'M' (right) P(right) 1.00 P(peer) 0.00 onset 54 | need 0.83 bridge dLO +3.77 noise +0.34 kind 1.054552336856883 | reach 0.94 rank 1 | bridge still needed (10s)
+PROGRESS 1/14 C_LM_timbuktu agree1
+[C_LM_timbuktu agree1] says 'M' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.56 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.14 rank 0 | bridge still needed (7s)
+PROGRESS 2/14 C_LM_timbuktu agree2
+[C_LM_timbuktu agree2] says 'M' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.00 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.10 rank 1 | mixed (7s)
+PROGRESS 3/14 C_LM_timbuktu agree3
+[C_LM_timbuktu agree3] says 'M' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.01 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.09 rank 0 | mixed (7s)
+PROGRESS 4/14 C_LM_timbuktu disagree1
+[C_LM_timbuktu disagree1] says 'M' (holds) P(right) 1.00 P(peer) 0.00 onset 54 | need 0.69 bridge dLO +2.75 noise +0.50 kind 0.37450479305458995 | reach 0.84 rank 1 | bridge still pulls (9s)
+PROGRESS 5/14 C_LM_timbuktu disagree2
+[C_LM_timbuktu disagree2] says 'M' (holds) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.59 bridge dLO +3.25 noise +0.12 kind 0.7498829981725308 | reach 0.39 rank 1 | bridge still pulls (9s)
+PROGRESS 6/14 C_LM_timbuktu disagree3
+[C_LM_timbuktu disagree3] says 'M' (holds) P(right) 0.99 P(peer) 0.01 onset 54 | need 0.66 bridge dLO +4.12 noise +0.25 kind 0.6249189875875585 | reach 0.33 rank 0 | bridge still pulls (10s)
+PROGRESS 7/14 C_LM_timbuktu hidden1
+[C_LM_timbuktu hidden1] says 'M' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.37 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.84 rank 1 | mixed (7s)
+PROGRESS 8/14 C_LM_timbuktu hidden2
+[C_LM_timbuktu hidden2] says 'M' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.11 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.57 rank 1 | bridge not needed (7s)
+PROGRESS 9/14 C_LM_timbuktu hidden3
+[C_LM_timbuktu hidden3] says 'M' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.03 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.88 rank 1 | bridge not needed (7s)
+PROGRESS 10/14 C_LM_timbuktu hidden_sub1
+[C_LM_timbuktu hidden_sub1] says 'M' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.17 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.82 rank 1 | bridge not needed (7s)
+PROGRESS 11/14 C_LM_timbuktu hidden_sub2
+[C_LM_timbuktu hidden_sub2] says 'M' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.20 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.78 rank 1 | mixed (7s)
+PROGRESS 12/14 C_LM_timbuktu hidden_sub3
+[C_LM_timbuktu hidden_sub3] says 'M' (right) P(right) 1.00 P(peer) nan onset 54 | need 0.05 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.95 rank 0 | bridge not needed (7s)
+PROGRESS 13/14 C_LM_timbuktu told_copy3
+[C_LM_timbuktu told_copy3] says 'L' (full give-in) P(right) 0.03 P(peer) 0.97 onset 54 | need 0.47 bridge dLO +5.00 noise +0.75 kind 1.874815225611889 | reach 0.44 rank 3 | bridge still pulls (10s)
+PROGRESS ALLDONE

@@ -1,0 +1,6 @@
+== 09:46:10 [a2-1] worker up on 5a48d44a5230, NVIDIA A100 80GB PCIe
+== 09:46:10 [a2-1] start: q neutral C_EL_helium
+== 10:02:04 [a2-1] done (954s): q neutral C_EL_helium
+== 10:02:04 [a2-1] start: q defer C_LM_chichen
+== 10:10:33 [a2-1] done (509s): q defer C_LM_chichen
+== 10:10:34 [a2-1] queue empty: WORKER DONE

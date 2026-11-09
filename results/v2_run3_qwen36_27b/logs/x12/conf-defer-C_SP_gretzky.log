@@ -1,0 +1,259 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 13003.58it/s]
+PROGRESS 0/14 C_SP_gretzky alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_SP_gretzky alone] says '6' (right) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.98 bridge dLO +5.25 noise +0.19 kind 0.4990786927418043 | reach 0.46 rank 0 | bridge still needed (17s)
+PROGRESS 1/14 C_SP_gretzky agree1
+[C_SP_gretzky agree1] says '6' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 1.00 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.89 rank 0 | bridge still needed (21s)
+PROGRESS 2/14 C_SP_gretzky agree2
+[C_SP_gretzky agree2] says '6' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.94 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.86 rank 0 | bridge still needed (18s)
+PROGRESS 3/14 C_SP_gretzky agree3
+[C_SP_gretzky agree3] says '6' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.92 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.89 rank 0 | bridge still needed (24s)
+PROGRESS 4/14 C_SP_gretzky disagree1
+[W1109 09:54:53.210112734 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 18350080, total: 150111977472).
+[W1109 09:54:53.375726534 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 3670016, total: 150111977472).
+Traceback (most recent call last):
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 542, in main
+    rec, t0 = pm.run(rows)
+              ^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 425, in run
+    self.probs_many([self.rm(self.dirs(tgt, tforms), w, self.onpos) for w in c.wins])]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 382, in probs_many
+    return [self._summ(r["cands"]) for r in answer_probs_many(self.h, self.c.text, cands, edit_sets, formats=FORMATS,
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in no_grad
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/interventions.py", line 278, in answer_probs_many
+    logits = h.model(input_ids=ids, attention_mask=mask).logits
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1722, in forward
+    logits = self.lm_head(hidden_states)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.40 GiB. GPU 0 has a total capacity of 139.80 GiB of which 2.15 GiB is free. Process 1277 has 70.89 GiB memory in use. Including non-PyTorch memory, this process has 66.74 GiB memory in use. Of the allocated memory 65.86 GiB is allocated by PyTorch, and 119.57 MiB is reserved by PyTorch but unallocated. expandable_segments is enabled. If instead the process is running out of virtual address space (VSZ), expandable segments may be over-reserving VA (each segment reserves ~9/8 of device memory, times the number of streams); reduce it via PYTORCH_CUDA_ALLOC_CONF expandable_segments_reserve / expandable_segments_reserve_by_class.
+!! C_SP_gretzky disagree1 failed: OutOfMemoryError('CUDA out of memory. Tried to allocate 2.40 GiB. GPU 0 has a total capacity of 139.80 GiB of which 2.15 GiB is free. Process 1277 has 70.89 GiB memory in use. Including non-PyTorch memory, this process has 66.74 GiB memory in use. Of the allocated memory 65.86 GiB is allocated by PyTorch, and 119.57 MiB is reserved by PyTorch but unallocated. expandable_segments is enabled. If instead the process is running out of virtual address space (VSZ), expandable segments may be over-reserving VA (each segment reserves ~9/8 of device memory, times the number of streams); reduce it via PYTORCH_CUDA_ALLOC_CONF expandable_segments_reserve / expandable_segments_reserve_by_class.')
+PROGRESS 5/14 C_SP_gretzky disagree2
+[W1109 09:55:06.525670532 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 16252928, total: 150111977472).
+[W1109 09:55:06.729276672 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 22544384, total: 150111977472).
+Traceback (most recent call last):
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 542, in main
+    rec, t0 = pm.run(rows)
+              ^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 425, in run
+    self.probs_many([self.rm(self.dirs(tgt, tforms), w, self.onpos) for w in c.wins])]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 382, in probs_many
+    return [self._summ(r["cands"]) for r in answer_probs_many(self.h, self.c.text, cands, edit_sets, formats=FORMATS,
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in no_grad
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/interventions.py", line 278, in answer_probs_many
+    logits = h.model(input_ids=ids, attention_mask=mask).logits
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1722, in forward
+    logits = self.lm_head(hidden_states)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.61 GiB. GPU 0 has a total capacity of 139.80 GiB of which 1.33 GiB is free. Process 1277 has 70.89 GiB memory in use. Including non-PyTorch memory, this process has 67.56 GiB memory in use. Of the allocated memory 65.89 GiB is allocated by PyTorch, and 187.19 MiB is reserved by PyTorch but unallocated. expandable_segments is enabled. If instead the process is running out of virtual address space (VSZ), expandable segments may be over-reserving VA (each segment reserves ~9/8 of device memory, times the number of streams); reduce it via PYTORCH_CUDA_ALLOC_CONF expandable_segments_reserve / expandable_segments_reserve_by_class.
+!! C_SP_gretzky disagree2 failed: OutOfMemoryError('CUDA out of memory. Tried to allocate 2.61 GiB. GPU 0 has a total capacity of 139.80 GiB of which 1.33 GiB is free. Process 1277 has 70.89 GiB memory in use. Including non-PyTorch memory, this process has 67.56 GiB memory in use. Of the allocated memory 65.89 GiB is allocated by PyTorch, and 187.19 MiB is reserved by PyTorch but unallocated. expandable_segments is enabled. If instead the process is running out of virtual address space (VSZ), expandable segments may be over-reserving VA (each segment reserves ~9/8 of device memory, times the number of streams); reduce it via PYTORCH_CUDA_ALLOC_CONF expandable_segments_reserve / expandable_segments_reserve_by_class.')
+PROGRESS 6/14 C_SP_gretzky disagree3
+[W1109 09:55:08.520686414 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 16252928, total: 150111977472).
+[W1109 09:55:08.701445877 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 18350080, total: 150111977472).
+[W1109 09:55:08.738609627 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 22544384, total: 150111977472).
+Traceback (most recent call last):
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 542, in main
+    rec, t0 = pm.run(rows)
+              ^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 425, in run
+    self.probs_many([self.rm(self.dirs(tgt, tforms), w, self.onpos) for w in c.wins])]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 382, in probs_many
+    return [self._summ(r["cands"]) for r in answer_probs_many(self.h, self.c.text, cands, edit_sets, formats=FORMATS,
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in no_grad
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/interventions.py", line 278, in answer_probs_many
+    logits = h.model(input_ids=ids, attention_mask=mask).logits
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1722, in forward
+    logits = self.lm_head(hidden_states)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.81 GiB. GPU 0 has a total capacity of 139.80 GiB of which 1.27 GiB is free. Process 1277 has 70.89 GiB memory in use. Including non-PyTorch memory, this process has 67.62 GiB memory in use. Of the allocated memory 65.92 GiB is allocated by PyTorch, and 214.81 MiB is reserved by PyTorch but unallocated. expandable_segments is enabled. If instead the process is running out of virtual address space (VSZ), expandable segments may be over-reserving VA (each segment reserves ~9/8 of device memory, times the number of streams); reduce it via PYTORCH_CUDA_ALLOC_CONF expandable_segments_reserve / expandable_segments_reserve_by_class.
+!! C_SP_gretzky disagree3 failed: OutOfMemoryError('CUDA out of memory. Tried to allocate 2.81 GiB. GPU 0 has a total capacity of 139.80 GiB of which 1.27 GiB is free. Process 1277 has 70.89 GiB memory in use. Including non-PyTorch memory, this process has 67.62 GiB memory in use. Of the allocated memory 65.92 GiB is allocated by PyTorch, and 214.81 MiB is reserved by PyTorch but unallocated. expandable_segments is enabled. If instead the process is running out of virtual address space (VSZ), expandable segments may be over-reserving VA (each segment reserves ~9/8 of device memory, times the number of streams); reduce it via PYTORCH_CUDA_ALLOC_CONF expandable_segments_reserve / expandable_segments_reserve_by_class.')
+PROGRESS 7/14 C_SP_gretzky hidden1
+[C_SP_gretzky hidden1] says '6' (right) P(right) 0.94 P(peer) nan onset 54 | need 0.91 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.71 rank 0 | bridge still needed (21s)
+PROGRESS 8/14 C_SP_gretzky hidden2
+[C_SP_gretzky hidden2] says '6' (right) P(right) 0.80 P(peer) nan onset 30 | need 0.87 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.39 rank 0 | bridge still needed (14s)
+PROGRESS 9/14 C_SP_gretzky hidden3
+[C_SP_gretzky hidden3] says '5' (wrong) P(right) 0.44 P(peer) nan onset 30 | need 0.58 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.30 rank 0 | bridge still needed (14s)
+PROGRESS 10/14 C_SP_gretzky hidden_sub1
+[C_SP_gretzky hidden_sub1] says '6' (right) P(right) 0.91 P(peer) nan onset 54 | need 0.93 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.74 rank 0 | bridge still needed (20s)
+PROGRESS 11/14 C_SP_gretzky hidden_sub2
+[C_SP_gretzky hidden_sub2] says '6' (right) P(right) 0.68 P(peer) nan onset 30 | need 0.81 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.31 rank 0 | bridge still needed (11s)
+PROGRESS 12/14 C_SP_gretzky hidden_sub3
+[C_SP_gretzky hidden_sub3] says '6' (right) P(right) 0.59 P(peer) nan onset 30 | need 0.08 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.21 rank 0 | mixed (13s)
+PROGRESS 13/14 C_SP_gretzky told_copy3
+[W1109 09:56:44.106611423 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 3670016, total: 150111977472).
+[W1109 09:56:44.211257677 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 9961472, total: 150111977472).
+[W1109 09:56:44.227643961 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 9961472, total: 150111977472).
+[W1109 09:56:44.232133891 CUDACachingAllocator.cpp:623] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 9961472, total: 150111977472).
+Traceback (most recent call last):
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 542, in main
+    rec, t0 = pm.run(rows)
+              ^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 425, in run
+    self.probs_many([self.rm(self.dirs(tgt, tforms), w, self.onpos) for w in c.wins])]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/conformity.py", line 382, in probs_many
+    return [self._summ(r["cands"]) for r in answer_probs_many(self.h, self.c.text, cands, edit_sets, formats=FORMATS,
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in no_grad
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/src/consulted_bridges/interventions.py", line 278, in answer_probs_many
+    logits = h.model(input_ids=ids, attention_mask=mask).logits
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1710, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 1081, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 287, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1279, in forward
+    hidden_states = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/modeling_layers.py", line 111, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 876, in forward
+    hidden_states = self.linear_attn(
+                    ^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/integrations/accelerate.py", line 1012, in wrapped
+    output = forward_func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 626, in forward
+    core_attn_out, last_recurrent_state = torch_chunk_gated_delta_rule(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/transformers/integrations/hub_kernels.py", line 1051, in wrapped
+    return implementation(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1552, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/fla/backends.py", line 200, in wrapper
+    return default_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/fla/ops/gated_delta_rule/chunk.py", line 571, in chunk_gated_delta_rule
+    o, final_state = ChunkGatedDeltaRuleFunction.apply(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/fla/utils/decorators.py", line 152, in wrapper
+    return fn(*processed_args, **processed_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 481, in decorate_fwd
+    return fwd(*args, **kwargs)  # pyrefly: ignore [not-callable]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/fla/ops/gated_delta_rule/chunk.py", line 292, in forward
+    g, o, A, final_state, initial_state, g_input = chunk_gated_delta_rule_fwd(
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/fla/ops/gated_delta_rule/chunk.py", line 95, in chunk_gated_delta_rule_fwd
+    h, v_new, final_state = chunk_gated_delta_rule_fwd_h(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1552, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/fla/backends.py", line 200, in wrapper
+    return default_function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/fla/ops/common/chunk_delta_h.py", line 723, in chunk_gated_delta_rule_fwd_h
+    final_state = k.new_zeros(N, HV, K, V, dtype=torch.float32) if output_final_state else None
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 139.80 GiB of which 129.50 MiB is free. Process 1277 has 71.29 GiB memory in use. Including non-PyTorch memory, this process has 68.37 GiB memory in use. Of the allocated memory 66.70 GiB is allocated by PyTorch, and 175.70 MiB is reserved by PyTorch but unallocated. expandable_segments is enabled. If instead the process is running out of virtual address space (VSZ), expandable segments may be over-reserving VA (each segment reserves ~9/8 of device memory, times the number of streams); reduce it via PYTORCH_CUDA_ALLOC_CONF expandable_segments_reserve / expandable_segments_reserve_by_class.
+!! C_SP_gretzky told_copy3 failed: OutOfMemoryError('CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 139.80 GiB of which 129.50 MiB is free. Process 1277 has 71.29 GiB memory in use. Including non-PyTorch memory, this process has 68.37 GiB memory in use. Of the allocated memory 66.70 GiB is allocated by PyTorch, and 175.70 MiB is reserved by PyTorch but unallocated. expandable_segments is enabled. If instead the process is running out of virtual address space (VSZ), expandable segments may be over-reserving VA (each segment reserves ~9/8 of device memory, times the number of streams); reduce it via PYTORCH_CUDA_ALLOC_CONF expandable_segments_reserve / expandable_segments_reserve_by_class.')
+PROGRESS ALLDONE

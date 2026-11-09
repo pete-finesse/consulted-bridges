@@ -1,0 +1,4 @@
+== 09:54:24 [x4-1] worker up on 9578bec7a96a, NVIDIA H200
+== 09:54:24 [x4-1] start: q neutral C_LP_kanye
+== 10:01:18 [x4-1] done (414s): q neutral C_LP_kanye
+== 10:01:18 [x4-1] queue empty: WORKER DONE

@@ -1,0 +1,6 @@
+== 09:50:44 [x6-1] worker up on 46dab1cc6c26, NVIDIA H200
+== 09:50:44 [x6-1] start: q neutral C_LU_case
+== 09:57:20 [x6-1] done (396s): q neutral C_LU_case
+== 09:57:20 [x6-1] start: q defer C_LM_galapagos
+== 10:00:57 [x6-1] done (217s): q defer C_LM_galapagos
+== 10:00:57 [x6-1] queue empty: WORKER DONE

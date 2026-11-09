@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 11709.78it/s]
+PROGRESS 0/14 C_SP_gretzky alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_SP_gretzky alone] says '6' (right) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.98 bridge dLO +5.25 noise +0.19 kind 0.4990786927418043 | reach 0.46 rank 0 | bridge still needed (22s)
+PROGRESS 1/14 C_SP_gretzky agree1
+[C_SP_gretzky agree1] says '6' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 1.00 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.89 rank 0 | bridge still needed (11s)
+PROGRESS 2/14 C_SP_gretzky agree2
+[C_SP_gretzky agree2] says '6' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.94 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.86 rank 0 | bridge still needed (20s)
+PROGRESS 3/14 C_SP_gretzky agree3
+[C_SP_gretzky agree3] says '6' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.92 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.89 rank 0 | bridge still needed (11s)
+PROGRESS 4/14 C_SP_gretzky disagree1
+[C_SP_gretzky disagree1] says '6' (holds) P(right) 0.98 P(peer) 0.00 onset 54 | need 0.98 bridge dLO +8.37 noise +0.37 kind 0.3749080847261341 | reach 0.89 rank 0 | bridge still pulls (25s)
+PROGRESS 5/14 C_SP_gretzky disagree2
+[C_SP_gretzky disagree2] says '6' (holds) P(right) 0.96 P(peer) 0.02 onset 54 | need 0.99 bridge dLO +8.00 noise +0.37 kind 0.37498151729226725 | reach 0.88 rank 0 | bridge still pulls (25s)
+PROGRESS 6/14 C_SP_gretzky disagree3
+[C_SP_gretzky disagree3] says '6' (holds) P(right) 0.95 P(peer) 0.03 onset 54 | need 0.96 bridge dLO +7.50 noise +0.25 kind 0.2499908348738984 | reach 0.90 rank 0 | bridge still pulls (18s)
+PROGRESS 7/14 C_SP_gretzky hidden1
+[C_SP_gretzky hidden1] says '6' (right) P(right) 0.94 P(peer) nan onset 54 | need 0.91 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.71 rank 0 | bridge still needed (10s)
+PROGRESS 8/14 C_SP_gretzky hidden2
+[C_SP_gretzky hidden2] says '6' (right) P(right) 0.80 P(peer) nan onset 30 | need 0.87 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.39 rank 0 | bridge still needed (6s)
+PROGRESS 9/14 C_SP_gretzky hidden3
+[C_SP_gretzky hidden3] says '5' (wrong) P(right) 0.44 P(peer) nan onset 30 | need 0.58 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.30 rank 0 | bridge still needed (7s)
+PROGRESS 10/14 C_SP_gretzky hidden_sub1
+[C_SP_gretzky hidden_sub1] says '6' (right) P(right) 0.91 P(peer) nan onset 54 | need 0.93 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.74 rank 0 | bridge still needed (10s)
+PROGRESS 11/14 C_SP_gretzky hidden_sub2
+[C_SP_gretzky hidden_sub2] says '6' (right) P(right) 0.68 P(peer) nan onset 30 | need 0.81 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.31 rank 0 | bridge still needed (6s)
+PROGRESS 12/14 C_SP_gretzky hidden_sub3
+[C_SP_gretzky hidden_sub3] says '6' (right) P(right) 0.59 P(peer) nan onset 30 | need 0.08 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.21 rank 0 | mixed (7s)
+PROGRESS 13/14 C_SP_gretzky told_copy3
+[C_SP_gretzky told_copy3] says '7' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need 0.45 bridge dLO +3.74 noise +0.75 kind 1.6240019091573403 | reach 0.91 rank 4 | bridge still pulls (17s)
+PROGRESS ALLDONE

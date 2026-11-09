@@ -1,0 +1,4 @@
+== 09:59:16 [x2-2] worker up on d45e847e31fb, NVIDIA H200
+== 09:59:16 [x2-2] start: q neutral C_LM_vasa
+== 10:05:07 [x2-2] done (351s): q neutral C_LM_vasa
+== 10:05:07 [x2-2] queue empty: WORKER DONE

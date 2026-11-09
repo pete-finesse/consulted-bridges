@@ -1,0 +1,4 @@
+== 09:54:36 [x7-1] worker up on 1fb24dd03cf8, NVIDIA H200
+== 09:54:36 [x7-1] start: q neutral C_LU_emory
+== 10:03:51 [x7-1] done (555s): q neutral C_LU_emory
+== 10:03:51 [x7-1] queue empty: WORKER DONE

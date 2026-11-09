@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 11725.36it/s]
+PROGRESS 0/14 C_LU_emory alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LU_emory alone] says 'A' (right) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.99 bridge dLO +9.36 noise +0.37 kind 1.2458729668754742 | reach 1.00 rank 0 | bridge still needed (16s)
+PROGRESS 1/14 C_LU_emory agree1
+[C_LU_emory agree1] says 'A' (right) P(right) 0.97 P(peer) 0.97 onset 54 | need 0.98 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge still needed (15s)
+PROGRESS 2/14 C_LU_emory agree2
+[C_LU_emory agree2] says 'A' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.28 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | mixed (14s)
+PROGRESS 3/14 C_LU_emory agree3
+[C_LU_emory agree3] says 'A' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.17 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 1.00 rank 0 | bridge not needed (14s)
+PROGRESS 4/14 C_LU_emory disagree1
+[C_LU_emory disagree1] says 'A' (holds) P(right) 0.96 P(peer) 0.01 onset 54 | need 0.98 bridge dLO +5.62 noise +0.75 kind 0.24997536214460414 | reach 1.00 rank 0 | bridge still pulls (17s)
+PROGRESS 5/14 C_LU_emory disagree2
+[C_LU_emory disagree2] says 'S' (full give-in) P(right) 0.01 P(peer) 0.98 onset 54 | need 0.31 bridge dLO +1.75 noise +0.75 kind 0.3749533458671168 | reach 1.00 rank 0 | bridge not needed (18s)
+PROGRESS 6/14 C_LU_emory disagree3
+[C_LU_emory disagree3] says 'S' (full give-in) P(right) 0.01 P(peer) 0.97 onset 54 | need 0.26 bridge dLO +1.50 noise +0.75 kind 0.3749515909755399 | reach 1.00 rank 0 | bridge not needed (31s)
+PROGRESS 7/14 C_LU_emory hidden1
+[C_LU_emory hidden1] says 'A' (right) P(right) 0.96 P(peer) nan onset 54 | need 0.96 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (9s)
+PROGRESS 8/14 C_LU_emory hidden2
+[C_LU_emory hidden2] says 'A' (right) P(right) 0.94 P(peer) nan onset 54 | need 0.95 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (7s)
+PROGRESS 9/14 C_LU_emory hidden3
+[C_LU_emory hidden3] says 'A' (right) P(right) 0.92 P(peer) nan onset 54 | need 0.91 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (8s)
+PROGRESS 10/14 C_LU_emory hidden_sub1
+[C_LU_emory hidden_sub1] says 'A' (right) P(right) 0.91 P(peer) nan onset 54 | need 0.96 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (8s)
+PROGRESS 11/14 C_LU_emory hidden_sub2
+[C_LU_emory hidden_sub2] says 'A' (right) P(right) 0.90 P(peer) nan onset 54 | need 0.92 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (8s)
+PROGRESS 12/14 C_LU_emory hidden_sub3
+[C_LU_emory hidden_sub3] says 'A' (right) P(right) 0.90 P(peer) nan onset 54 | need 0.90 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (8s)
+PROGRESS 13/14 C_LU_emory told_copy3
+[C_LU_emory told_copy3] says 'S' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need -0.07 bridge dLO +0.50 noise +0.62 kind 0.12469121881655099 | reach 1.00 rank 15 | bridge not needed (12s)
+PROGRESS ALLDONE

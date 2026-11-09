@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LM_timbuktu,defer,alone,0,M,,right,layers 24–35,own,0,0.25,0.9840011681004912,2.246368251655685e-05,4.119111370851551
+C_LM_timbuktu,defer,alone,0,M,,right,layers 24–35,own,0,0.5,0.7020398513807868,6.338750576825937e-05,0.857030422666154
+C_LM_timbuktu,defer,alone,0,M,,right,layers 24–35,own,0,0.75,0.3463242412933832,7.046722741545183e-05,-0.6352359969169801
+C_LM_timbuktu,defer,agree,3,M,M,right,layers 36–47,own,3,0.25,0.9619986754897054,0.9619986754897054,3.2313920591819167
+C_LM_timbuktu,defer,agree,3,M,M,right,layers 36–47,own,3,0.5,0.9548206616648203,0.9548206616648203,3.050883668163277
+C_LM_timbuktu,defer,agree,3,M,M,right,layers 36–47,own,3,0.75,0.9520865675970529,0.9520865675970529,2.9892600719534617
+C_LM_timbuktu,defer,hidden,3,M,,right,layers 42–53,own,3,0.25,0.9494373017924475,,2.9326553803432107
+C_LM_timbuktu,defer,hidden,3,M,,right,layers 42–53,own,3,0.5,0.9274070280205926,,2.5475244376728794
+C_LM_timbuktu,defer,hidden,3,M,,right,layers 42–53,own,3,0.75,0.8880537418354449,,2.071013342926247

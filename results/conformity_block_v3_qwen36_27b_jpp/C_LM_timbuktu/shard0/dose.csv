@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LM_timbuktu,neutral,alone,0,M,,right,layers 24–35,own,0,0.25,0.9840011681004912,2.246368251655685e-05,4.119111370851551
+C_LM_timbuktu,neutral,alone,0,M,,right,layers 24–35,own,0,0.5,0.7020398513807868,6.338750576825937e-05,0.857030422666154
+C_LM_timbuktu,neutral,alone,0,M,,right,layers 24–35,own,0,0.75,0.3463242412933832,7.046722741545183e-05,-0.6352359969169801
+C_LM_timbuktu,neutral,agree,3,M,M,right,layers 36–47,own,3,0.25,0.9926642620148575,0.9926642620148575,4.907634484151391
+C_LM_timbuktu,neutral,agree,3,M,M,right,layers 36–47,own,3,0.5,0.9876961327450087,0.9876961327450087,4.385461468555322
+C_LM_timbuktu,neutral,agree,3,M,M,right,layers 36–47,own,3,0.75,0.9856602959767092,0.9856602959767092,4.230279572811859
+C_LM_timbuktu,neutral,hidden,3,M,,right,layers 42–53,own,3,0.25,0.9954967245046578,,5.3984368133489165
+C_LM_timbuktu,neutral,hidden,3,M,,right,layers 42–53,own,3,0.5,0.992718444555562,,4.915102584277192
+C_LM_timbuktu,neutral,hidden,3,M,,right,layers 42–53,own,3,0.75,0.9841598122976297,,4.129238058523427

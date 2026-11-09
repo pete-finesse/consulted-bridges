@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 11677.72it/s]
+PROGRESS 0/14 C_LP_kanye alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LP_kanye alone] says 'A' (right) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.90 bridge dLO +8.58 noise +1.42 kind 7.768149423768274 | reach 0.95 rank 0 | bridge still needed (13s)
+PROGRESS 1/14 C_LP_kanye agree1
+[C_LP_kanye agree1] says 'A' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.96 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.98 rank 0 | bridge still needed (14s)
+PROGRESS 2/14 C_LP_kanye agree2
+[C_LP_kanye agree2] says 'A' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.18 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.96 rank 0 | bridge not needed (15s)
+PROGRESS 3/14 C_LP_kanye agree3
+[C_LP_kanye agree3] says 'A' (right) P(right) 0.97 P(peer) 0.97 onset 54 | need 0.07 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.93 rank 0 | bridge not needed (15s)
+PROGRESS 4/14 C_LP_kanye disagree1
+[C_LP_kanye disagree1] says 'A' (holds) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.99 bridge dLO +6.00 noise +0.37 kind 5.6246723698585726 | reach 0.98 rank 0 | mixed (17s)
+PROGRESS 5/14 C_LP_kanye disagree2
+[C_LP_kanye disagree2] says 'A' (holds) P(right) 0.63 P(peer) 0.34 onset 54 | need 0.70 bridge dLO +6.25 noise +0.75 kind 5.874772584849497 | reach 0.98 rank 0 | mixed (17s)
+PROGRESS 6/14 C_LP_kanye disagree3
+[C_LP_kanye disagree3] says 'A' (holds) P(right) 0.52 P(peer) 0.40 onset 54 | need 0.54 bridge dLO +5.62 noise +1.00 kind 5.499774230666828 | reach 0.98 rank 0 | mixed (17s)
+PROGRESS 7/14 C_LP_kanye hidden1
+[C_LP_kanye hidden1] says 'A' (right) P(right) 0.97 P(peer) nan onset 54 | need 0.90 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 0 | bridge still needed (12s)
+PROGRESS 8/14 C_LP_kanye hidden2
+[C_LP_kanye hidden2] says 'A' (right) P(right) 0.96 P(peer) nan onset 54 | need 0.94 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.98 rank 0 | bridge still needed (13s)
+PROGRESS 9/14 C_LP_kanye hidden3
+[C_LP_kanye hidden3] says 'A' (right) P(right) 0.95 P(peer) nan onset 54 | need 0.95 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.97 rank 0 | bridge still needed (14s)
+PROGRESS 10/14 C_LP_kanye hidden_sub1
+[C_LP_kanye hidden_sub1] says 'A' (right) P(right) 0.97 P(peer) nan onset 54 | need 0.86 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.98 rank 0 | bridge still needed (12s)
+PROGRESS 11/14 C_LP_kanye hidden_sub2
+[C_LP_kanye hidden_sub2] says 'A' (right) P(right) 0.93 P(peer) nan onset 54 | need 0.93 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 2 | bridge still needed (7s)
+PROGRESS 12/14 C_LP_kanye hidden_sub3
+[C_LP_kanye hidden_sub3] says 'A' (right) P(right) 0.95 P(peer) nan onset 54 | need 0.95 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 3 | bridge still needed (7s)
+PROGRESS 13/14 C_LP_kanye told_copy3
+[C_LP_kanye told_copy3] says 'V' (full give-in) P(right) 0.00 P(peer) 0.99 onset 54 | need 0.43 bridge dLO +1.75 noise +0.50 kind 1.7489707043745133 | reach 0.85 rank 0 | mixed (9s)
+PROGRESS ALLDONE

@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 11407.91it/s]
+PROGRESS 0/1 C_LP_kanye
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LP_kanye alone] A 0.99 B 0.00 (3s)
+[C_LP_kanye agree1] A 0.99 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.01 (1s)
+[C_LP_kanye agree2] A 0.99 B 0.09 C 0.98 C_late 0.99 D 0.00 D_late 0.02 (1s)
+[C_LP_kanye agree3] A 0.99 B 0.33 C 0.98 C_late 0.99 D 0.00 D_late 0.12 (1s)
+[C_LP_kanye disagree1] A 0.99 B 0.00 C 0.99 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[C_LP_kanye disagree2] A 0.90 B 0.01 C 0.98 C_late 0.97 D 0.00 D_late 0.01 (1s)
+[C_LP_kanye disagree3] A 0.94 B 0.01 C 0.98 C_late 0.98 D 0.00 D_late 0.02 (1s)
+[C_LP_kanye hidden1] A 0.99 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[C_LP_kanye hidden2] A 0.99 B 0.00 C 0.98 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[C_LP_kanye hidden3] A 0.98 B 0.00 C 0.98 C_late 0.98 D 0.00 D_late 0.00 (1s)
+[C_LP_kanye hidden_sub3] A 0.99 B 0.00 C 0.98 C_late 0.98 D 0.00 D_late 0.00 (1s)
+[C_LP_kanye told_copy3] A 0.00 B 0.00 C 0.50 C_late 0.00 D 0.07 D_late 0.00 (1s)
+[C_LP_kanye patch] P_all 0.98 (12s)
+PROGRESS ALLDONE

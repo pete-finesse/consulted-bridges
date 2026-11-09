@@ -1,0 +1,19 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  86%|████████▋ | 735/851 [00:00<00:00, 7334.22it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 7597.73it/s]
+PROGRESS 0/1 C_LM_tikal
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LM_tikal alone] A 1.00 B 0.01 (2s)
+[C_LM_tikal agree1] A 0.99 B 0.02 C 0.99 C_late 0.99 D 0.00 D_late 0.08 (1s)
+[C_LM_tikal agree2] A 0.99 B 0.01 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[C_LM_tikal agree3] A 0.99 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[C_LM_tikal disagree1] A 0.99 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[C_LM_tikal disagree2] A 0.99 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[C_LM_tikal disagree3] A 0.98 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[C_LM_tikal hidden1] A 0.99 B 0.00 C 0.99 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[C_LM_tikal hidden2] A 1.00 B 0.00 C 1.00 C_late 1.00 D 0.00 D_late 0.00 (1s)
+[C_LM_tikal hidden3] A 1.00 B 0.01 C 1.00 C_late 1.00 D 0.00 D_late 0.01 (1s)
+[C_LM_tikal hidden_sub3] A 0.99 B 0.00 C 1.00 C_late 0.99 D 0.00 D_late 0.00 (1s)
+[C_LM_tikal told_copy3] A 0.00 B 0.00 C 0.85 C_late 0.00 D 0.00 D_late 0.00 (1s)
+[C_LM_tikal patch] P_all 1.00 (13s)
+PROGRESS ALLDONE

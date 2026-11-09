@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  75%|███████▍  | 635/851 [00:00<00:00, 6347.71it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 6370.52it/s]
+PROGRESS 0/14 C_LM_tikal alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LM_tikal alone] says 'G' (right) P(right) 1.00 P(peer) 0.00 onset 54 | need 0.99 bridge dLO +9.29 noise +0.31 kind -9.491723574228672e-06 | reach 0.01 rank 0 | bridge still needed (16s)
+PROGRESS 1/14 C_LM_tikal agree1
+[C_LM_tikal agree1] says 'G' (right) P(right) 0.98 P(peer) 0.98 onset 54 | need 0.75 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.01 rank 0 | bridge still needed (15s)
+PROGRESS 2/14 C_LM_tikal agree2
+[C_LM_tikal agree2] says 'G' (right) P(right) 0.96 P(peer) 0.96 onset 54 | need 0.16 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.11 rank 0 | mixed (16s)
+PROGRESS 3/14 C_LM_tikal agree3
+[C_LM_tikal agree3] says 'G' (right) P(right) 0.92 P(peer) 0.92 onset 54 | need 0.22 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.08 rank 0 | mixed (14s)
+PROGRESS 4/14 C_LM_tikal disagree1
+[C_LM_tikal disagree1] says 'G' (holds) P(right) 0.98 P(peer) 0.01 onset 54 | need 0.99 bridge dLO +11.12 noise +0.50 kind 0.9999395186132425 | reach 0.22 rank 0 | bridge still pulls (17s)
+PROGRESS 5/14 C_LM_tikal disagree2
+[C_LM_tikal disagree2] says 'G' (holds) P(right) 0.57 P(peer) 0.39 onset 24 | need 0.39 bridge dLO +1.37 noise +0.37 kind 0.24999913000199492 | reach 0.22 rank 0 | mixed (10s)
+PROGRESS 6/14 C_LM_tikal disagree3
+[C_LM_tikal disagree3] says 'T' (full give-in) P(right) 0.12 P(peer) 0.86 onset 0 | need nan bridge dLO +nan noise +nan kind None | reach nan rank None | no early windows (11s)
+PROGRESS 7/14 C_LM_tikal hidden1
+[C_LM_tikal hidden1] says 'G' (right) P(right) 0.97 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.06 rank 0 | bridge still needed (13s)
+PROGRESS 8/14 C_LM_tikal hidden2
+[C_LM_tikal hidden2] says 'G' (right) P(right) 0.97 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.85 rank 0 | bridge still needed (14s)
+PROGRESS 9/14 C_LM_tikal hidden3
+[C_LM_tikal hidden3] says 'G' (right) P(right) 0.97 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.98 rank 0 | bridge still needed (16s)
+PROGRESS 10/14 C_LM_tikal hidden_sub1
+[C_LM_tikal hidden_sub1] says 'G' (right) P(right) 0.96 P(peer) nan onset 54 | need 0.98 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.12 rank 0 | bridge still needed (7s)
+PROGRESS 11/14 C_LM_tikal hidden_sub2
+[C_LM_tikal hidden_sub2] says 'G' (right) P(right) 0.92 P(peer) nan onset 54 | need 0.96 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.43 rank 0 | bridge still needed (7s)
+PROGRESS 12/14 C_LM_tikal hidden_sub3
+[C_LM_tikal hidden_sub3] says 'G' (right) P(right) 0.93 P(peer) nan onset 54 | need 0.96 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 0.99 rank 0 | bridge still needed (8s)
+PROGRESS 13/14 C_LM_tikal told_copy3
+[C_LM_tikal told_copy3] says 'T' (full give-in) P(right) 0.00 P(peer) 1.00 onset 54 | need 0.43 bridge dLO +2.98 noise +0.75 kind 0.12442413806165575 | reach 0.28 rank 1 | bridge still pulls (10s)
+PROGRESS ALLDONE

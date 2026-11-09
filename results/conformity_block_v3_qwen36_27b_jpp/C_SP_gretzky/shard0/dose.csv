@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_SP_gretzky,neutral,alone,0,6,,right,layers 30–41,own,0,0.25,0.9476343467006452,0.00019281454319148837,2.8957178125929603
+C_SP_gretzky,neutral,alone,0,6,,right,layers 30–41,own,0,0.5,0.0658606756638092,0.0013668967749182659,-2.652084060641258
+C_SP_gretzky,neutral,alone,0,6,,right,layers 30–41,own,0,0.75,0.017532313508768934,0.0011208053407502049,-4.026021789650309
+C_SP_gretzky,neutral,agree,3,6,6,right,layers 18–29,own,3,0.25,0.4085239186415734,0.4085239186415734,-0.3700707803848855
+C_SP_gretzky,neutral,agree,3,6,6,right,layers 18–29,own,3,0.5,0.006049217714254812,0.006049217714254812,-5.101758730374218
+C_SP_gretzky,neutral,agree,3,6,6,right,layers 18–29,own,3,0.75,0.0032951100083369843,0.0032951100083369843,-5.712015174301069
+C_SP_gretzky,neutral,hidden,3,6,,right,layers 30–41,own,3,0.25,0.004604363987599945,,-5.376135735533325
+C_SP_gretzky,neutral,hidden,3,6,,right,layers 30–41,own,3,0.5,0.0003894567135122502,,-7.850368299730821
+C_SP_gretzky,neutral,hidden,3,6,,right,layers 30–41,own,3,0.75,0.00015780009524200386,,-8.754023733444201

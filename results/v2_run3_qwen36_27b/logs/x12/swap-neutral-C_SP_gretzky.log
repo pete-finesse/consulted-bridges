@@ -1,0 +1,9 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 11956.95it/s]
+PROGRESS 0/1 C_SP_gretzky
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_SP_gretzky alone] A:6 R:other M:9 (target baseball->9, everyday None) (3s)
+[C_SP_gretzky agree3] A:6 R:other M:9 C:6 CR:other CM:9 (target baseball->9, everyday None) (5s)
+[C_SP_gretzky disagree3] A:6 R:other M:9 C:6 CR:other CM:9 (target baseball->9, everyday None) (4s)
+PROGRESS ALLDONE

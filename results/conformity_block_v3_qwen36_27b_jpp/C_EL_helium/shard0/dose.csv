@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_EL_helium,neutral,alone,0,2,,right,layers 36–47,own,0,0.25,0.7941930687017634,0.003245688621619153,1.3503880886522175
+C_EL_helium,neutral,alone,0,2,,right,layers 36–47,own,0,0.5,0.43781814721079926,0.009086630768356143,-0.25002174388276044
+C_EL_helium,neutral,alone,0,2,,right,layers 36–47,own,0,0.75,0.3013875255595336,0.011686070397881089,-0.8406992915420713
+C_EL_helium,neutral,agree,3,2,2,right,layers 36–47,own,3,0.25,0.5934120069393592,0.5934120069393592,0.3780885711366609
+C_EL_helium,neutral,agree,3,2,2,right,layers 36–47,own,3,0.5,0.34435691642737404,0.34435691642737404,-0.6439378937123825
+C_EL_helium,neutral,agree,3,2,2,right,layers 36–47,own,3,0.75,0.31144592409611643,0.31144592409611643,-0.7933681319520898
+C_EL_helium,neutral,hidden,3,2,,right,layers 42–53,own,3,0.25,0.17542225515507734,,-1.547675476690199
+C_EL_helium,neutral,hidden,3,2,,right,layers 42–53,own,3,0.5,0.02532369258904529,,-3.6503649999842036
+C_EL_helium,neutral,hidden,3,2,,right,layers 42–53,own,3,0.75,0.017656447961122403,,-4.018840056256983

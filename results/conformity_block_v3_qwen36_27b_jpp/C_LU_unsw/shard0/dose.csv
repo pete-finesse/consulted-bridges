@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LU_unsw,neutral,alone,0,S,,right,layers 30–41,own,0,0.25,0.672966508385589,0.0006136665503789225,0.7216329772572802
+C_LU_unsw,neutral,alone,0,S,,right,layers 30–41,own,0,0.5,0.044101502442398,0.0019376855967776173,-3.076157882450523
+C_LU_unsw,neutral,alone,0,S,,right,layers 30–41,own,0,0.75,0.027503180308573124,0.001758220323348787,-3.5655651596767397
+C_LU_unsw,neutral,agree,3,S,S,right,layers 18–29,own,3,0.25,0.7926607081693108,0.7926607081693108,1.3410387291352335
+C_LU_unsw,neutral,agree,3,S,S,right,layers 18–29,own,3,0.5,0.553329165039091,0.553329165039091,0.21413112335688236
+C_LU_unsw,neutral,agree,3,S,S,right,layers 18–29,own,3,0.75,0.46182048368104084,0.46182048368104084,-0.15301592585004614
+C_LU_unsw,neutral,hidden,3,S,,right,layers 18–29,own,3,0.25,0.30362550795159793,,-0.8300925186401751
+C_LU_unsw,neutral,hidden,3,S,,right,layers 18–29,own,3,0.5,0.0673348465124559,,-2.628368362695934
+C_LU_unsw,neutral,hidden,3,S,,right,layers 18–29,own,3,0.75,0.03791386164334065,,-3.2337871997792207

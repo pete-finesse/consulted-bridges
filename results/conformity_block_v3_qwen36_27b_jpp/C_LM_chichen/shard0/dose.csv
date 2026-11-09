@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LM_chichen,neutral,alone,0,M,,right,layers 42–53,own,0,0.25,0.9909216550179931,3.291421683773066e-05,4.6927435694186475
+C_LM_chichen,neutral,alone,0,M,,right,layers 42–53,own,0,0.5,0.8008597962277089,0.0004429462667888256,1.3916767776064267
+C_LM_chichen,neutral,alone,0,M,,right,layers 42–53,own,0,0.75,0.13902861517075227,0.001202837852955787,-1.8233814925849245
+C_LM_chichen,neutral,agree,3,M,M,right,layers 36–47,own,3,0.25,0.9867439768076034,0.9867439768076034,4.3099585807529595
+C_LM_chichen,neutral,agree,3,M,M,right,layers 36–47,own,3,0.5,0.9740571869444805,0.9740571869444805,3.6255753977056715
+C_LM_chichen,neutral,agree,3,M,M,right,layers 36–47,own,3,0.75,0.9664399841859602,0.9664399841859602,3.3602838478734536
+C_LM_chichen,neutral,hidden,3,M,,right,layers 42–53,own,3,0.25,0.9470580624494152,,2.884164608170921
+C_LM_chichen,neutral,hidden,3,M,,right,layers 42–53,own,3,0.5,0.12140644409874883,,-1.9791784382518425
+C_LM_chichen,neutral,hidden,3,M,,right,layers 42–53,own,3,0.75,0.019802106118863457,,-3.901966182127551

@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LP_dante,defer,alone,0,F,,right,layers 30–41,own,0,0.25,0.11458285164918015,0.001634451649288578,-2.0447607315093568
+C_LP_dante,defer,alone,0,F,,right,layers 30–41,own,0,0.5,0.031677042967311,0.0017871120528484084,-3.419973443020198
+C_LP_dante,defer,alone,0,F,,right,layers 30–41,own,0,0.75,0.022033432173944795,0.0018086290033685099,-3.7929145410859566
+C_LP_dante,defer,agree,3,F,F,right,layers 30–41,own,3,0.25,0.9305221332609164,0.9305221332609164,2.5947376245518914
+C_LP_dante,defer,agree,3,F,F,right,layers 30–41,own,3,0.5,0.9120705290804202,0.9120705290804202,2.339182295293171
+C_LP_dante,defer,agree,3,F,F,right,layers 30–41,own,3,0.75,0.9202272886239163,0.9202272886239163,2.445439209115173
+C_LP_dante,defer,hidden,3,F,,right,layers 18–29,own,3,0.25,0.08195219105772873,,-2.4161134273708305
+C_LP_dante,defer,hidden,3,F,,right,layers 18–29,own,3,0.5,0.016006691568646834,,-4.118612238805161
+C_LP_dante,defer,hidden,3,F,,right,layers 18–29,own,3,0.75,0.011056938402880271,,-4.493578617600082

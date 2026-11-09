@@ -1,0 +1,33 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights:  69%|██████▉   | 589/851 [00:00<00:00, 5886.78it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 5925.63it/s]
+PROGRESS 0/14 C_LU_mcgill alone
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LU_mcgill alone] says 'M' (right) P(right) 1.00 P(peer) 0.00 onset 54 | need 1.00 bridge dLO +10.73 noise +0.27 kind 9.247087769110749 | reach 1.00 rank 0 | bridge still needed (14s)
+PROGRESS 1/14 C_LU_mcgill agree1
+[C_LU_mcgill agree1] says 'M' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.41 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.99 rank 0 | mixed (12s)
+PROGRESS 2/14 C_LU_mcgill agree2
+[C_LU_mcgill agree2] says 'M' (right) P(right) 1.00 P(peer) 1.00 onset 54 | need 0.07 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.98 rank 0 | bridge not needed (11s)
+PROGRESS 3/14 C_LU_mcgill agree3
+[C_LU_mcgill agree3] says 'M' (right) P(right) 0.99 P(peer) 0.99 onset 54 | need 0.04 bridge dLO +0.00 noise +0.00 kind 0.0 | reach 0.96 rank 0 | bridge not needed (20s)
+PROGRESS 4/14 C_LU_mcgill disagree1
+[C_LU_mcgill disagree1] says 'M' (holds) P(right) 0.99 P(peer) 0.00 onset 54 | need 0.98 bridge dLO +8.87 noise +0.37 kind 5.749673512337036 | reach 1.00 rank 0 | bridge still pulls (19s)
+PROGRESS 5/14 C_LU_mcgill disagree2
+[C_LU_mcgill disagree2] says 'H' (partial give-in) P(right) 0.34 P(peer) 0.64 onset 48 | need 0.41 bridge dLO +4.87 noise +1.12 kind 4.6248081730508375 | reach 1.00 rank 0 | mixed (19s)
+PROGRESS 6/14 C_LU_mcgill disagree3
+[C_LU_mcgill disagree3] says 'H' (partial give-in) P(right) 0.34 P(peer) 0.64 onset 48 | need 0.51 bridge dLO +4.62 noise +0.87 kind 4.2498674730417925 | reach 1.00 rank 0 | mixed (26s)
+PROGRESS 7/14 C_LU_mcgill hidden1
+[C_LU_mcgill hidden1] says 'M' (right) P(right) 0.99 P(peer) nan onset 54 | need 0.99 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 8/14 C_LU_mcgill hidden2
+[C_LU_mcgill hidden2] says 'M' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.97 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (13s)
+PROGRESS 9/14 C_LU_mcgill hidden3
+[C_LU_mcgill hidden3] says 'M' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.95 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (14s)
+PROGRESS 10/14 C_LU_mcgill hidden_sub1
+[C_LU_mcgill hidden_sub1] says 'M' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.97 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (14s)
+PROGRESS 11/14 C_LU_mcgill hidden_sub2
+[C_LU_mcgill hidden_sub2] says 'M' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.94 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (15s)
+PROGRESS 12/14 C_LU_mcgill hidden_sub3
+[C_LU_mcgill hidden_sub3] says 'M' (right) P(right) 0.98 P(peer) nan onset 54 | need 0.94 bridge dLO -1000000000.00 noise -1000000000.00 kind -1000000000.0 | reach 1.00 rank 0 | bridge still needed (8s)
+PROGRESS 13/14 C_LU_mcgill told_copy3
+[C_LU_mcgill told_copy3] says 'H' (full give-in) P(right) 0.00 P(peer) 0.99 onset 54 | need 0.40 bridge dLO +2.00 noise +0.62 kind 1.2483371489333068 | reach 1.00 rank 0 | mixed (14s)
+PROGRESS ALLDONE

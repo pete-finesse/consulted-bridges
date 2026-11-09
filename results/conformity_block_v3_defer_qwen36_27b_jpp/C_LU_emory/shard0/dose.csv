@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LU_emory,defer,alone,0,A,,right,layers 12–23,own,0,0.25,0.854274597524263,0.00019696207323178215,1.76852863906012
+C_LU_emory,defer,alone,0,A,,right,layers 12–23,own,0,0.5,0.0005450487357011099,0.00025746221350570885,-7.514090146665508
+C_LU_emory,defer,alone,0,A,,right,layers 12–23,own,0,0.75,0.00037494671235605725,0.00033088850801891984,-7.888351625452477
+C_LU_emory,defer,agree,3,A,A,right,layers 0–11,own,3,0.25,0.974908936853393,0.974908936853393,3.659832335735954
+C_LU_emory,defer,agree,3,A,A,right,layers 0–11,own,3,0.5,0.8426785518779748,0.8426785518779748,1.678294418318007
+C_LU_emory,defer,agree,3,A,A,right,layers 0–11,own,3,0.75,0.7707612376829399,0.7707612376829399,1.2126145562535315
+C_LU_emory,defer,hidden,3,A,,right,layers 0–11,own,3,0.25,0.8390144746477828,,1.6509135022821608
+C_LU_emory,defer,hidden,3,A,,right,layers 0–11,own,3,0.5,0.006010306466549482,,-5.108251097906872
+C_LU_emory,defer,hidden,3,A,,right,layers 0–11,own,3,0.75,0.0032298384048271823,,-5.732088106873122

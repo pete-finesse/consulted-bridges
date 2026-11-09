@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LM_galapagos,neutral,alone,0,E,,right,layers 36–47,own,0,0.25,0.002452003128131537,5.7665760706367375e-05,-6.008394970951097
+C_LM_galapagos,neutral,alone,0,E,,right,layers 36–47,own,0,0.5,4.5265248610031875e-05,3.9945072215305084e-05,-10.00292569245515
+C_LM_galapagos,neutral,alone,0,E,,right,layers 36–47,own,0,0.75,3.5250935076949305e-05,3.9943024016051646e-05,-10.252983250495772
+C_LM_galapagos,neutral,agree,3,E,E,right,layers 36–47,own,3,0.25,0.9389128735579465,0.9389128735579465,2.73242154104156
+C_LM_galapagos,neutral,agree,3,E,E,right,layers 36–47,own,3,0.5,0.6338552748380758,0.6338552748380758,0.5487919760712796
+C_LM_galapagos,neutral,agree,3,E,E,right,layers 36–47,own,3,0.75,0.5203218462596877,0.5203218462596877,0.08133218926240005
+C_LM_galapagos,neutral,hidden,3,E,,right,layers 36–47,own,3,0.25,0.039519888823384135,,-3.190629215552394
+C_LM_galapagos,neutral,hidden,3,E,,right,layers 36–47,own,3,0.5,0.00037509605164199347,,-7.8879532606617815
+C_LM_galapagos,neutral,hidden,3,E,,right,layers 36–47,own,3,0.75,0.00025846465104939633,,-8.26049312173164

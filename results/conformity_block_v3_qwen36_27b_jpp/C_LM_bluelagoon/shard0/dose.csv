@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LM_bluelagoon,neutral,alone,0,I,,right,layers 36–47,own,0,0.25,0.8856597126301757,0.0005550669385317459,2.047153826182404
+C_LM_bluelagoon,neutral,alone,0,I,,right,layers 36–47,own,0,0.5,0.35961037109409444,0.0004771243823665595,-0.5770556434571528
+C_LM_bluelagoon,neutral,alone,0,I,,right,layers 36–47,own,0,0.75,0.26589866430605213,0.0004822058115703615,-1.0155318036716334
+C_LM_bluelagoon,neutral,agree,3,I,I,right,layers 42–53,own,3,0.25,0.9381013510724903,0.9381013510724903,2.718359640596898
+C_LM_bluelagoon,neutral,agree,3,I,I,right,layers 42–53,own,3,0.5,0.8016999008800615,0.8016999008800615,1.3969528140376748
+C_LM_bluelagoon,neutral,agree,3,I,I,right,layers 42–53,own,3,0.75,0.732124439549267,0.732124439549267,1.0054279528958232
+C_LM_bluelagoon,neutral,hidden,3,I,,right,layers 42–53,own,3,0.25,0.9260065859060306,,2.5269052563170193
+C_LM_bluelagoon,neutral,hidden,3,I,,right,layers 42–53,own,3,0.5,0.36118839084858634,,-0.5702099090313606
+C_LM_bluelagoon,neutral,hidden,3,I,,right,layers 42–53,own,3,0.75,0.13276569550638173,,-1.8767233009650341

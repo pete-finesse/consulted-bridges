@@ -1,0 +1,4 @@
+== 09:57:19 [x2-1] worker up on d45e847e31fb, NVIDIA H200
+== 09:57:19 [x2-1] start: q defer C_LM_timbuktu
+== 10:04:43 [x2-1] done (444s): q defer C_LM_timbuktu
+== 10:04:43 [x2-1] queue empty: WORKER DONE

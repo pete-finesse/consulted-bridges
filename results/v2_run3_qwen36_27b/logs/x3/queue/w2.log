@@ -1,0 +1,4 @@
+== 10:00:39 [x3-2] worker up on 9a0e46c17716, NVIDIA H200
+== 10:00:39 [x3-2] start: q defer C_LP_dante
+== 10:05:59 [x3-2] done (320s): q defer C_LP_dante
+== 10:05:59 [x3-2] queue empty: WORKER DONE

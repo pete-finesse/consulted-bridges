@@ -1,0 +1,4 @@
+== 10:06:12 [x5-3] worker up on 7ac2efbc597f, NVIDIA H200
+== 10:06:12 [x5-3] start: q neutral C_LM_galapagos
+== 10:17:16 [x5-3] done (664s): q neutral C_LM_galapagos
+== 10:17:16 [x5-3] queue empty: WORKER DONE

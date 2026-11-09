@@ -1,0 +1,4 @@
+== 09:51:07 [x12-1] worker up on d5eea31952c6, NVIDIA H200
+== 09:51:07 [x12-1] start: q neutral C_SP_gretzky
+== 09:59:21 [x12-1] done (494s): q neutral C_SP_gretzky
+== 09:59:21 [x12-1] queue empty: WORKER DONE

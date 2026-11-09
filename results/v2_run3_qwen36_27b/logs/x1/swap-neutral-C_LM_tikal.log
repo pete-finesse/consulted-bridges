@@ -1,0 +1,9 @@
+Loading weights:   0%|          | 0/851 [00:00<?, ?it/s]Loading weights: 100%|█████████▉| 848/851 [00:00<00:00, 8476.96it/s]Loading weights: 100%|██████████| 851/851 [00:00<00:00, 8475.86it/s]
+PROGRESS 0/1 C_LM_tikal
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/workspace/consulted-bridges/.venv/lib/python3.12/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+[C_LM_tikal alone] A:G R:G M:M E:G (target Mexico->M, everyday table) (3s)
+[C_LM_tikal agree3] A:G R:S M:M E:S C:G CR:S CM:M CE:S (target Mexico->M, everyday table) (3s)
+[C_LM_tikal disagree3] A:G R:S M:M E:S C:G CR:S CM:M CE:S (target Mexico->M, everyday river) (3s)
+PROGRESS ALLDONE

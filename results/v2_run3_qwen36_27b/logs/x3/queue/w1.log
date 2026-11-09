@@ -1,0 +1,6 @@
+== 09:58:12 [x3-1] worker up on 9a0e46c17716, NVIDIA H200
+== 09:58:12 [x3-1] start: q neutral C_LP_dante
+== 10:05:34 [x3-1] done (442s): q neutral C_LP_dante
+== 10:05:35 [x3-1] start: q defer C_EL_oxygen
+== 10:10:53 [x3-1] done (318s): q defer C_EL_oxygen
+== 10:10:53 [x3-1] queue empty: WORKER DONE

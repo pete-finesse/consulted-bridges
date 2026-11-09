@@ -1,0 +1,4 @@
+== 09:52:42 [x11-1] worker up on fa7247fe1077, NVIDIA H200
+== 09:52:42 [x11-1] start: q neutral C_PL_saturn
+== 09:59:07 [x11-1] done (385s): q neutral C_PL_saturn
+== 09:59:07 [x11-1] queue empty: WORKER DONE

@@ -1,0 +1,10 @@
+question,frame,condition,peers,right,peer_letter,state_c,window,window_source,n_peer_tokens,strength,P_right,P_peer,lo_right
+C_LU_case,defer,alone,0,C,,right,layers 30–41,own,0,0.25,0.9936841144205284,1.880603284774785e-05,5.058351383566915
+C_LU_case,defer,alone,0,C,,right,layers 30–41,own,0,0.5,0.2940902467577674,0.0003443452202295742,-0.8756007190570475
+C_LU_case,defer,alone,0,C,,right,layers 30–41,own,0,0.75,0.0786263587409127,0.0003018603977307814,-2.4611586486653336
+C_LU_case,defer,agree,3,C,C,right,layers 6–17,own,3,0.25,0.991544638924375,0.991544638924375,4.764463281542147
+C_LU_case,defer,agree,3,C,C,right,layers 6–17,own,3,0.5,0.9924407500494888,0.9924407500494888,4.877395340722066
+C_LU_case,defer,agree,3,C,C,right,layers 6–17,own,3,0.75,0.9927516363055285,0.9927516363055285,4.919704772186552
+C_LU_case,defer,hidden,3,C,,right,layers 30–41,own,3,0.25,0.9726008356242505,,3.569461241441143
+C_LU_case,defer,hidden,3,C,,right,layers 30–41,own,3,0.5,0.8577311609894167,,1.7965722180446624
+C_LU_case,defer,hidden,3,C,,right,layers 30–41,own,3,0.75,0.7524300192851072,,1.111614702265121

@@ -1,0 +1,4 @@
+== 10:31:42 [r1-1] worker up on 484ff817b0d5, NVIDIA H200
+== 10:31:42 [r1-1] start: q neutral C_PL_saturn
+== 10:37:50 [r1-1] done (368s): q neutral C_PL_saturn
+== 10:37:50 [r1-1] queue empty: WORKER DONE
