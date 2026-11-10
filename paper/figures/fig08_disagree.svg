@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="673.077656pt" height="147.132pt" viewBox="0 0 673.077656 147.132" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T18:14:01.591135</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 147.132 
+L 673.077656 147.132 
+L 673.077656 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 100.53 47.41218 
+L 130.2156 47.41218 
+L 130.2156 34.6887 
+L 100.53 34.6887 
+z
+" clip-path="url(#pfeb49e02a2)" style="fill: #1c5cab; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 130.2156 47.41218 
+L 137.637 47.41218 
+L 137.637 34.6887 
+L 130.2156 34.6887 
+z
+" clip-path="url(#pfeb49e02a2)" style="fill: #6da7ec; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 137.637 47.41218 
+L 167.3226 47.41218 
+L 167.3226 34.6887 
+L 137.637 34.6887 
+z
+" clip-path="url(#pfeb49e02a2)" style="fill: url(#hcefe6d0d7b); stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 100.53 70.0317 
+L 174.744 70.0317 
+L 174.744 57.30822 
+L 100.53 57.30822 
+z
+" clip-path="url(#pfeb49e02a2)" style="fill: url(#hcefe6d0d7b); stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 100.53 92.65122 
+L 147.402 92.65122 
+L 147.402 79.92774 
+L 100.53 79.92774 
+z
+" clip-path="url(#pfeb49e02a2)" style="fill: #1c5cab; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 147.402 92.65122 
+L 151.308 92.65122 
+L 151.308 79.92774 
+L 147.402 79.92774 
+z
+" clip-path="url(#pfeb49e02a2)" style="fill: #6da7ec; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 151.308 92.65122 
+L 174.744 92.65122 
+L 174.744 79.92774 
+L 151.308 79.92774 
+z
+" clip-path="url(#pfeb49e02a2)" style="fill: url(#hcefe6d0d7b); stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 100.53 115.27074 
+L 120.06 115.27074 
+L 120.06 102.54726 
+L 100.53 102.54726 
+z
+" clip-path="url(#pfeb49e02a2)" style="fill: #1c5cab; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 120.06 115.27074 
+L 127.872 115.27074 
+L 127.872 102.54726 
+L 120.06 102.54726 
+z
+" clip-path="url(#pfeb49e02a2)" style="fill: #6da7ec; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 127.872 115.27074 
+L 174.744 115.27074 
+L 174.744 102.54726 
+L 127.872 102.54726 
+z
+" clip-path="url(#pfeb49e02a2)" style="fill: url(#hcefe6d0d7b); stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 2.88 22.67208 
+L 393.48 22.67208 
+" clip-path="url(#pfeb49e02a2)" style="fill: none; stroke: #52514e; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 2.88 52.3602 
+L 393.48 52.3602 
+" clip-path="url(#pfeb49e02a2)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 2.88 74.97972 
+L 393.48 74.97972 
+" clip-path="url(#pfeb49e02a2)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 2.88 97.59924 
+L 393.48 97.59924 
+" clip-path="url(#pfeb49e02a2)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 2.88 120.21876 
+L 393.48 120.21876 
+" clip-path="url(#pfeb49e02a2)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="18.363515" transform="rotate(-0 4.4424 18.363515)">Model, wording</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(102.0924 11.551894)">State at 3 peers</text>
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(102.0924 18.279245)">holds · partly · fully</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(188.0244 11.86055)">Holds</text>
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(188.0244 18.318558)">pulls / prompts</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(242.7084 11.86055)">Holds</text>
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(242.7084 18.318558)">pushback</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(289.5804 11.551894)">Gives in fully</text>
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(289.5804 18.318558)">pulls / prompts</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(348.1704 11.551894)">Gives in fully</text>
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(348.1704 18.318558)">pushback</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7.2px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(4.4424 39.58112)">Qwen3.5-4B, neutral</text>
+    <text style="font-size: 7.2px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(4.4424 46.41901)">(n = 20 questions)</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="115.3728" y="42.935694" transform="rotate(-0 115.3728 42.935694)">8</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 6.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="152.4798" y="42.935694" transform="rotate(-0 152.4798 42.935694)">8</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="168.4944" y="42.790674" transform="rotate(-0 168.4944 42.790674)">+2</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="188.0244" y="43.196729" transform="rotate(-0 188.0244 43.196729)">17 / 35</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="242.7084" y="43.196729" transform="rotate(-0 242.7084 43.196729)">3.5</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="289.5804" y="43.196729" transform="rotate(-0 289.5804 43.196729)">3 / 15</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="348.1704" y="43.196729" transform="rotate(-0 348.1704 43.196729)">1.9</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 7.2px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(4.4424 62.015858)">Qwen3.5-4B, group-aware</text>
+    <text style="font-size: 7.2px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(4.4424 69.223312)">(n = 20 questions)</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 6.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="137.637" y="65.555214" transform="rotate(-0 137.637 65.555214)">20</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="188.0244" y="65.816249" transform="rotate(-0 188.0244 65.816249)">1 / 2</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="242.7084" y="65.816249" transform="rotate(-0 242.7084 65.816249)">2.8</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="289.5804" y="65.816249" transform="rotate(-0 289.5804 65.816249)">8 / 50</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="348.1704" y="65.816249" transform="rotate(-0 348.1704 65.816249)">1.1</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 7.2px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(4.4424 84.82016)">Qwen3.6-27B, neutral</text>
+    <text style="font-size: 7.2px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(4.4424 91.65805)">(n = 19 questions)</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 6.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="123.966" y="88.174734" transform="rotate(-0 123.966 88.174734)">12</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 6.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="163.026" y="88.174734" transform="rotate(-0 163.026 88.174734)">6</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="188.0244" y="88.435769" transform="rotate(-0 188.0244 88.435769)">40 / 44</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="242.7084" y="88.435769" transform="rotate(-0 242.7084 88.435769)">8.5</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="289.5804" y="88.435769" transform="rotate(-0 289.5804 88.435769)">1 / 11</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="348.1704" y="88.435769" transform="rotate(-0 348.1704 88.435769)">1.9</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 7.2px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(4.4424 107.254898)">Qwen3.6-27B, group-aware</text>
+    <text style="font-size: 7.2px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(4.4424 114.462352)">(n = 19 questions)</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 6.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="110.295" y="110.794254" transform="rotate(-0 110.295 110.794254)">5</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 6.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="151.308" y="110.794254" transform="rotate(-0 151.308 110.794254)">12</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="188.0244" y="111.055289" transform="rotate(-0 188.0244 111.055289)">21 / 27</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="242.7084" y="111.055289" transform="rotate(-0 242.7084 111.055289)">8.8</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="289.5804" y="111.055289" transform="rotate(-0 289.5804 111.055289)">13 / 25</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 7.4px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="348.1704" y="111.055289" transform="rotate(-0 348.1704 111.055289)">3.1</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 6.3px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #52514e" transform="translate(2.88 130.692463)">Pushback (median, log-odds): how far removing the bridge moves log P(peers') − log P(right) toward the peers, minus the everyday-word noise.</text>
+    <text style="font-size: 6.3px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #52514e" transform="translate(2.88 136.998985)">Pulls: labelled "bridge still pulls". Prompts pooled over 1–3 peers. 4B neutral: 2 of 20 questions at 3 peers end in another letter (+2). Probability labels, J++ lens. Development wrong letters are same-kind letters, so D's destination is not read.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pfeb49e02a2">
+   <rect x="2.88" y="2.88" width="390.6" height="141.372"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <pattern id="hcefe6d0d7b" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+   <rect x="0" y="0" width="73" height="73" fill="#eb6834"/>
+   <path d="M -36 36 
+L 36 -36 
+M -33 39 
+L 39 -33 
+M -30 42 
+L 42 -30 
+M -27 45 
+L 45 -27 
+M -24 48 
+L 48 -24 
+M -21 51 
+L 51 -21 
+M -18 54 
+L 54 -18 
+M -15 57 
+L 57 -15 
+M -12 60 
+L 60 -12 
+M -9 63 
+L 63 -9 
+M -6 66 
+L 66 -6 
+M -3 69 
+L 69 -3 
+M 0 72 
+L 72 0 
+M 3 75 
+L 75 3 
+M 6 78 
+L 78 6 
+M 9 81 
+L 81 9 
+M 12 84 
+L 84 12 
+M 15 87 
+L 87 15 
+M 18 90 
+L 90 18 
+M 21 93 
+L 93 21 
+M 24 96 
+L 96 24 
+M 27 99 
+L 99 27 
+M 30 102 
+L 102 30 
+M 33 105 
+L 105 33 
+M 36 108 
+L 108 36 
+" style="fill: #ffffff; stroke: #ffffff; stroke-width: 1.0; stroke-linecap: butt; stroke-linejoin: miter"/>
+  </pattern>
+ </defs>
+</svg>

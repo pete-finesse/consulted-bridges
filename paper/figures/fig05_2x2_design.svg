@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="438.702469pt" height="227.52pt" viewBox="0 0 438.702469 227.52" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T18:14:00.814949</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 227.52 
+L 438.702469 227.52 
+L 438.702469 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 53.658 91.896338 
+L 112.248 91.896338 
+Q 116.154 91.896338 116.154 90.334648 
+L 116.154 46.607324 
+Q 116.154 45.045634 112.248 45.045634 
+L 53.658 45.045634 
+Q 49.752 45.045634 49.752 46.607324 
+L 49.752 90.334648 
+Q 49.752 91.896338 53.658 91.896338 
+z
+" clip-path="url(#p41810dcca9)" style="fill: #ffffff; stroke: #52514e; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 123.966 91.896338 
+L 182.556 91.896338 
+Q 186.462 91.896338 186.462 90.334648 
+L 186.462 46.607324 
+Q 186.462 45.045634 182.556 45.045634 
+L 123.966 45.045634 
+Q 120.06 45.045634 120.06 46.607324 
+L 120.06 90.334648 
+Q 120.06 91.896338 123.966 91.896338 
+z
+" clip-path="url(#p41810dcca9)" style="fill: #ecebe7; stroke: #52514e; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 53.658 140.308732 
+L 112.248 140.308732 
+Q 116.154 140.308732 116.154 138.747042 
+L 116.154 95.019718 
+Q 116.154 93.458028 112.248 93.458028 
+L 53.658 93.458028 
+Q 49.752 93.458028 49.752 95.019718 
+L 49.752 138.747042 
+Q 49.752 140.308732 53.658 140.308732 
+z
+" clip-path="url(#p41810dcca9)" style="fill: #dbe8fa; stroke: #52514e; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 123.966 140.308732 
+L 182.556 140.308732 
+Q 186.462 140.308732 186.462 138.747042 
+L 186.462 95.019718 
+Q 186.462 93.458028 182.556 93.458028 
+L 123.966 93.458028 
+Q 120.06 93.458028 120.06 95.019718 
+L 120.06 138.747042 
+Q 120.06 140.308732 123.966 140.308732 
+z
+" clip-path="url(#p41810dcca9)" style="fill: #c3d8f3; stroke: #52514e; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 209.898 46.607324 
+L 231.381 46.607324 
+Q 235.287 46.607324 235.287 45.045634 
+L 235.287 35.675493 
+Q 235.287 34.113803 231.381 34.113803 
+L 209.898 34.113803 
+Q 205.992 34.113803 205.992 35.675493 
+L 205.992 45.045634 
+Q 205.992 46.607324 209.898 46.607324 
+z
+" clip-path="url(#p41810dcca9)" style="fill: url(#hff220a0b7e); stroke: #eb6834; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 209.898 67.690141 
+L 231.381 67.690141 
+Q 235.287 67.690141 235.287 66.128451 
+L 235.287 56.75831 
+Q 235.287 55.19662 231.381 55.19662 
+L 209.898 55.19662 
+Q 205.992 55.19662 205.992 56.75831 
+L 205.992 66.128451 
+Q 205.992 67.690141 209.898 67.690141 
+z
+" clip-path="url(#p41810dcca9)" style="fill: #6da7ec; stroke: #6da7ec; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 209.898 88.772958 
+L 231.381 88.772958 
+Q 235.287 88.772958 235.287 87.211268 
+L 235.287 77.841127 
+Q 235.287 76.279437 231.381 76.279437 
+L 209.898 76.279437 
+Q 205.992 76.279437 205.992 77.841127 
+L 205.992 87.211268 
+Q 205.992 88.772958 209.898 88.772958 
+z
+" clip-path="url(#p41810dcca9)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 209.898 109.855775 
+L 231.381 109.855775 
+Q 235.287 109.855775 235.287 108.294085 
+L 235.287 98.923944 
+Q 235.287 97.362254 231.381 97.362254 
+L 209.898 97.362254 
+Q 205.992 97.362254 205.992 98.923944 
+L 205.992 108.294085 
+Q 205.992 109.855775 209.898 109.855775 
+z
+" clip-path="url(#p41810dcca9)" style="fill: #ecebe7; stroke: #8a8984; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 209.898 130.938592 
+L 231.381 130.938592 
+Q 235.287 130.938592 235.287 129.376901 
+L 235.287 120.006761 
+Q 235.287 118.44507 231.381 118.44507 
+L 209.898 118.44507 
+Q 205.992 118.44507 205.992 120.006761 
+L 205.992 129.376901 
+Q 205.992 130.938592 209.898 130.938592 
+z
+" clip-path="url(#p41810dcca9)" style="fill: #a9a8a2; stroke: #a9a8a2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="82.953" y="35.675493" transform="rotate(-0 82.953 35.675493)">peers visible</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="153.261" y="35.675493" transform="rotate(-0 153.261 35.675493)">peers blocked</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(22.148784 68.466978)">bridge</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(25.064409 75.94896)">intact</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(22.148784 115.317682)">bridge</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(13.802691 122.799664)">removed</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="54.4392" y="59.480704" transform="rotate(-0 54.4392 59.480704)">A</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(72.745563 73.330055)">no edit</text>
+    <text style="font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(51.208156 79.788063)">the prompt as written</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="124.7472" y="59.480704" transform="rotate(-0 124.7472 59.480704)">C</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(132.849313 73.330055)">peer block on</text>
+    <text style="font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(131.909 80.049969)">fall from A: dC</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="54.4392" y="107.893099" transform="rotate(-0 54.4392 107.893099)">B</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(59.330969 121.698887)">bridge removed</text>
+    <text style="font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(61.788531 128.505926)">fall from A: dB</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="124.7472" y="107.893099" transform="rotate(-0 124.7472 107.893099)">D</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(141.918281 121.873403)">both on</text>
+    <text style="font-size: 6.8px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #0b0b0b" transform="translate(131.909 128.33141)">fall from A: dD</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="10.692" y="167.422394" transform="rotate(-0 10.692 167.422394)">What each difference measures (log-odds of P(right); each cell is one forward pass on the identical text)</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="10.692" y="179.840915" transform="rotate(-0 10.692 179.840915)">A − B  (dB)</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="61.47" y="179.840915" transform="rotate(-0 61.47 179.840915)">the bridge's effect with the peers visible</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="10.692" y="191.553592" transform="rotate(-0 10.692 191.553592)">C − D</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="61.47" y="191.553592" transform="rotate(-0 61.47 191.553592)">the bridge's effect with the peers blocked: compare with A − B</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="10.692" y="203.266268" transform="rotate(-0 10.692 203.266268)">A − C  (dC)</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="61.47" y="203.266268" transform="rotate(-0 61.47 203.266268)">the peers' effect with the bridge intact</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="10.692" y="214.978944" transform="rotate(-0 10.692 214.978944)">A − D  (dD)</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="61.47" y="214.978944" transform="rotate(-0 61.47 214.978944)">both together; with dB it sorts the readings</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="205.992" y="179.840915" transform="rotate(-0 205.992 179.840915)">A cell collapses when it falls ≥ 2 log-odds below A.</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="205.992" y="24.743662" transform="rotate(-0 205.992 24.743662)">Readings, taken in this order (agree prompts)</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="220.6395" y="42.274821" transform="rotate(-0 220.6395 42.274821)">leaned</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="239.193" y="39.579795" transform="rotate(-0 239.193 39.579795)">1.  dC ≥ 2</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="239.193" y="45.2711" transform="rotate(-0 239.193 45.2711)">C well below A: the model leaned on the peers from the start</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="220.6395" y="63.210943" transform="rotate(-0 220.6395 63.210943)">only D</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="239.193" y="60.662611" transform="rotate(-0 239.193 60.662611)">2.  dB &lt; 2, dD ≥ 2</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="239.193" y="66.334323" transform="rotate(-0 239.193 66.334323)">only D collapses: the peers were the backup; the own route is there</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="220.6395" y="84.440455" transform="rotate(-0 220.6395 84.440455)">both</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="239.193" y="81.745428" transform="rotate(-0 239.193 81.745428)">3.  dB ≥ 2, dD ≥ 2</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="239.193" y="87.394452" transform="rotate(-0 239.193 87.394452)">both collapse: the bridge is needed either way</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="220.6395" y="105.523272" transform="rotate(-0 220.6395 105.523272)">neither</text>
+   </g>
+   <g id="text_34">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="239.193" y="102.828245" transform="rotate(-0 239.193 102.828245)">4.  dB &lt; 2, dD &lt; 2</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="239.193" y="108.533988" transform="rotate(-0 239.193 108.533988)">neither: a second route or a weak tool (the hidden check decides)</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="220.6395" y="126.459393" transform="rotate(-0 220.6395 126.459393)">only B</text>
+   </g>
+   <g id="text_37">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="239.193" y="123.911062" transform="rotate(-0 239.193 123.911062)">5.  dB ≥ 2, dD &lt; 2</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="239.193" y="129.582774" transform="rotate(-0 239.193 129.582774)">only B collapses</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p41810dcca9">
+   <rect x="2.88" y="2.88" width="390.6" height="221.76"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <pattern id="hff220a0b7e" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+   <rect x="0" y="0" width="73" height="73" fill="#eb6834"/>
+   <path d="M -36 36 
+L 36 -36 
+M -33 39 
+L 39 -33 
+M -30 42 
+L 42 -30 
+M -27 45 
+L 45 -27 
+M -24 48 
+L 48 -24 
+M -21 51 
+L 51 -21 
+M -18 54 
+L 54 -18 
+M -15 57 
+L 57 -15 
+M -12 60 
+L 60 -12 
+M -9 63 
+L 63 -9 
+M -6 66 
+L 66 -6 
+M -3 69 
+L 69 -3 
+M 0 72 
+L 72 0 
+M 3 75 
+L 75 3 
+M 6 78 
+L 78 6 
+M 9 81 
+L 81 9 
+M 12 84 
+L 84 12 
+M 15 87 
+L 87 15 
+M 18 90 
+L 90 18 
+M 21 93 
+L 93 21 
+M 24 96 
+L 96 24 
+M 27 99 
+L 99 27 
+M 30 102 
+L 102 30 
+M 33 105 
+L 105 33 
+M 36 108 
+L 108 36 
+" style="fill: #eb6834; stroke: #eb6834; stroke-width: 1.0; stroke-linecap: butt; stroke-linejoin: miter"/>
+  </pattern>
+ </defs>
+</svg>

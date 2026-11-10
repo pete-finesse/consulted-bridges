@@ -42,3 +42,11 @@ research_notes/
 
 # Paper drafts, rounds and figures (local only; the submission lives in the Google Doc)
 docs/paper/
+
+# The paper (tracked in paper/). The two PDFs are kept; build products are not.
+!paper/causal-test-of-silent-dissent.pdf
+!paper/submitted/*.pdf
+paper/*.html
+paper/figs/
+paper/figures/*.png
+paper/*_no_abstract.*

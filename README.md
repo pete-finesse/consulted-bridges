@@ -9,6 +9,14 @@ This repository holds:
 - **Results** on Qwen3.5-4B and Qwen3.6-27B;
 - **An application to *Silent Dissent*** (arXiv 2610.02702): when an agent gives in to its peers, does its own hidden reasoning still push back?
 
+## The paper
+
+**[A Causal Test of Silent Dissent under Conformity](paper/causal-test-of-silent-dissent.pdf)**, by Peter Máté Lakner and Ayşe Ozdinçer, with Apart Research.
+
+When an LLM agrees with an answer it has already seen, did it think for itself or just echo it? We remove the model's own intermediate step, hide its peers' answers, or both, and see whether the answer survives. With three agreeing peers the answer survives without the model's own step in about half the questions on both Qwen models, and in most once the model is told to take the others into account. With the peers' answers hidden it almost never survives. Source, figure scripts and build are in [`paper/`](paper/).
+
+**This is not the version we submitted to the hackathon.** The submission of 9 November 2026 is kept at [`paper/submitted/`](paper/submitted/hackathon-submission-2026-11-09.pdf). It said that removing the intermediate step "collapses" the answer in 14 of 19 questions on Qwen3.6-27B, and set that against Qwen3.5-4B. Its rule counted any loss of 2 log-odds as a collapse, including losses that leave the correct answer on top, which is the case in 6 of those 14. Counting whether the correct answer survives, the two models behave about the same (10 of 19 and 10 of 20). The runs and the numbers have not changed. The wording and the contrast claimed more than they show, so after the deadline we restated the results and rewrote the text. Appendix D of the paper says what changed.
+
 ## The scorecard in brief
 
 - **Gates.** The model knows both hops. The edited words are single tokens. The answer's own direction has an onset layer.

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="396.36pt" height="227.175434pt" viewBox="0 0 396.36 227.175434" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T18:14:00.148134</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 227.175434 
+L 396.36 227.175434 
+L 396.36 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 295.0488 33.4413 
+L 316.1412 33.4413 
+Q 320.8284 33.4413 320.8284 30.9465 
+L 320.8284 23.67 
+Q 320.8284 21.1752 316.1412 21.1752 
+L 295.0488 21.1752 
+Q 290.3616 21.1752 290.3616 23.67 
+L 290.3616 30.9465 
+Q 290.3616 33.4413 295.0488 33.4413 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 330.2028 33.4413 
+L 351.2952 33.4413 
+Q 355.9824 33.4413 355.9824 30.9465 
+L 355.9824 23.67 
+Q 355.9824 21.1752 351.2952 21.1752 
+L 330.2028 21.1752 
+Q 325.5156 21.1752 325.5156 23.67 
+L 325.5156 30.9465 
+Q 325.5156 33.4413 330.2028 33.4413 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 365.3568 33.4413 
+L 386.4492 33.4413 
+Q 391.1364 33.4413 391.1364 30.9465 
+L 391.1364 23.67 
+Q 391.1364 21.1752 386.4492 21.1752 
+L 365.3568 21.1752 
+Q 360.6696 21.1752 360.6696 23.67 
+L 360.6696 30.9465 
+Q 360.6696 33.4413 365.3568 33.4413 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 295.0488 53.1918 
+L 316.1412 53.1918 
+Q 320.8284 53.1918 320.8284 50.697 
+L 320.8284 43.4205 
+Q 320.8284 40.9257 316.1412 40.9257 
+L 295.0488 40.9257 
+Q 290.3616 40.9257 290.3616 43.4205 
+L 290.3616 50.697 
+Q 290.3616 53.1918 295.0488 53.1918 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 330.2028 53.1918 
+L 351.2952 53.1918 
+Q 355.9824 53.1918 355.9824 50.697 
+L 355.9824 43.4205 
+Q 355.9824 40.9257 351.2952 40.9257 
+L 330.2028 40.9257 
+Q 325.5156 40.9257 325.5156 43.4205 
+L 325.5156 50.697 
+Q 325.5156 53.1918 330.2028 53.1918 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 365.3568 53.1918 
+L 386.4492 53.1918 
+Q 391.1364 53.1918 391.1364 50.697 
+L 391.1364 43.4205 
+Q 391.1364 40.9257 386.4492 40.9257 
+L 365.3568 40.9257 
+Q 360.6696 40.9257 360.6696 43.4205 
+L 360.6696 50.697 
+Q 360.6696 53.1918 365.3568 53.1918 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #ffffff; stroke: #8a8984; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 295.0488 72.9423 
+L 316.1412 72.9423 
+Q 320.8284 72.9423 320.8284 70.4475 
+L 320.8284 63.171 
+Q 320.8284 60.6762 316.1412 60.6762 
+L 295.0488 60.6762 
+Q 290.3616 60.6762 290.3616 63.171 
+L 290.3616 70.4475 
+Q 290.3616 72.9423 295.0488 72.9423 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #6da7ec; stroke: #6da7ec; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 330.2028 72.9423 
+L 351.2952 72.9423 
+Q 355.9824 72.9423 355.9824 70.4475 
+L 355.9824 63.171 
+Q 355.9824 60.6762 351.2952 60.6762 
+L 330.2028 60.6762 
+Q 325.5156 60.6762 325.5156 63.171 
+L 325.5156 70.4475 
+Q 325.5156 72.9423 330.2028 72.9423 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #6da7ec; stroke: #6da7ec; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 365.3568 72.9423 
+L 386.4492 72.9423 
+Q 391.1364 72.9423 391.1364 70.4475 
+L 391.1364 63.171 
+Q 391.1364 60.6762 386.4492 60.6762 
+L 365.3568 60.6762 
+Q 360.6696 60.6762 360.6696 63.171 
+L 360.6696 70.4475 
+Q 360.6696 72.9423 365.3568 72.9423 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 295.0488 92.6928 
+L 316.1412 92.6928 
+Q 320.8284 92.6928 320.8284 90.198 
+L 320.8284 82.9215 
+Q 320.8284 80.4267 316.1412 80.4267 
+L 295.0488 80.4267 
+Q 290.3616 80.4267 290.3616 82.9215 
+L 290.3616 90.198 
+Q 290.3616 92.6928 295.0488 92.6928 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 330.2028 92.6928 
+L 351.2952 92.6928 
+Q 355.9824 92.6928 355.9824 90.198 
+L 355.9824 82.9215 
+Q 355.9824 80.4267 351.2952 80.4267 
+L 330.2028 80.4267 
+Q 325.5156 80.4267 325.5156 82.9215 
+L 325.5156 90.198 
+Q 325.5156 92.6928 330.2028 92.6928 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 365.3568 92.6928 
+L 386.4492 92.6928 
+Q 391.1364 92.6928 391.1364 90.198 
+L 391.1364 82.9215 
+Q 391.1364 80.4267 386.4492 80.4267 
+L 365.3568 80.4267 
+Q 360.6696 80.4267 360.6696 82.9215 
+L 360.6696 90.198 
+Q 360.6696 92.6928 365.3568 92.6928 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 295.0488 112.4433 
+L 316.1412 112.4433 
+Q 320.8284 112.4433 320.8284 109.9485 
+L 320.8284 102.672 
+Q 320.8284 100.1772 316.1412 100.1772 
+L 295.0488 100.1772 
+Q 290.3616 100.1772 290.3616 102.672 
+L 290.3616 109.9485 
+Q 290.3616 112.4433 295.0488 112.4433 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 330.2028 112.4433 
+L 351.2952 112.4433 
+Q 355.9824 112.4433 355.9824 109.9485 
+L 355.9824 102.672 
+Q 355.9824 100.1772 351.2952 100.1772 
+L 330.2028 100.1772 
+Q 325.5156 100.1772 325.5156 102.672 
+L 325.5156 109.9485 
+Q 325.5156 112.4433 330.2028 112.4433 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 365.3568 112.4433 
+L 386.4492 112.4433 
+Q 391.1364 112.4433 391.1364 109.9485 
+L 391.1364 102.672 
+Q 391.1364 100.1772 386.4492 100.1772 
+L 365.3568 100.1772 
+Q 360.6696 100.1772 360.6696 102.672 
+L 360.6696 109.9485 
+Q 360.6696 112.4433 365.3568 112.4433 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 295.0488 132.1938 
+L 316.1412 132.1938 
+Q 320.8284 132.1938 320.8284 129.699 
+L 320.8284 122.4225 
+Q 320.8284 119.9277 316.1412 119.9277 
+L 295.0488 119.9277 
+Q 290.3616 119.9277 290.3616 122.4225 
+L 290.3616 129.699 
+Q 290.3616 132.1938 295.0488 132.1938 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #6da7ec; stroke: #6da7ec; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 330.2028 132.1938 
+L 351.2952 132.1938 
+Q 355.9824 132.1938 355.9824 129.699 
+L 355.9824 122.4225 
+Q 355.9824 119.9277 351.2952 119.9277 
+L 330.2028 119.9277 
+Q 325.5156 119.9277 325.5156 122.4225 
+L 325.5156 129.699 
+Q 325.5156 132.1938 330.2028 132.1938 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #6da7ec; stroke: #6da7ec; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 365.3568 132.1938 
+L 386.4492 132.1938 
+Q 391.1364 132.1938 391.1364 129.699 
+L 391.1364 122.4225 
+Q 391.1364 119.9277 386.4492 119.9277 
+L 365.3568 119.9277 
+Q 360.6696 119.9277 360.6696 122.4225 
+L 360.6696 129.699 
+Q 360.6696 132.1938 365.3568 132.1938 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 295.0488 151.9443 
+L 316.1412 151.9443 
+Q 320.8284 151.9443 320.8284 149.4495 
+L 320.8284 142.173 
+Q 320.8284 139.6782 316.1412 139.6782 
+L 295.0488 139.6782 
+Q 290.3616 139.6782 290.3616 142.173 
+L 290.3616 149.4495 
+Q 290.3616 151.9443 295.0488 151.9443 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #6da7ec; stroke: #6da7ec; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 330.2028 151.9443 
+L 351.2952 151.9443 
+Q 355.9824 151.9443 355.9824 149.4495 
+L 355.9824 142.173 
+Q 355.9824 139.6782 351.2952 139.6782 
+L 330.2028 139.6782 
+Q 325.5156 139.6782 325.5156 142.173 
+L 325.5156 149.4495 
+Q 325.5156 151.9443 330.2028 151.9443 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #6da7ec; stroke: #6da7ec; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 365.3568 151.9443 
+L 386.4492 151.9443 
+Q 391.1364 151.9443 391.1364 149.4495 
+L 391.1364 142.173 
+Q 391.1364 139.6782 386.4492 139.6782 
+L 365.3568 139.6782 
+Q 360.6696 139.6782 360.6696 142.173 
+L 360.6696 149.4495 
+Q 360.6696 151.9443 365.3568 151.9443 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #6da7ec; stroke: #6da7ec; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 295.0488 171.6948 
+L 316.1412 171.6948 
+Q 320.8284 171.6948 320.8284 169.2 
+L 320.8284 161.9235 
+Q 320.8284 159.4287 316.1412 159.4287 
+L 295.0488 159.4287 
+Q 290.3616 159.4287 290.3616 161.9235 
+L 290.3616 169.2 
+Q 290.3616 171.6948 295.0488 171.6948 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #ffffff; stroke: #8a8984; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 330.2028 171.6948 
+L 351.2952 171.6948 
+Q 355.9824 171.6948 355.9824 169.2 
+L 355.9824 161.9235 
+Q 355.9824 159.4287 351.2952 159.4287 
+L 330.2028 159.4287 
+Q 325.5156 159.4287 325.5156 161.9235 
+L 325.5156 169.2 
+Q 325.5156 171.6948 330.2028 171.6948 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #ffffff; stroke: #8a8984; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 365.3568 171.6948 
+L 386.4492 171.6948 
+Q 391.1364 171.6948 391.1364 169.2 
+L 391.1364 161.9235 
+Q 391.1364 159.4287 386.4492 159.4287 
+L 365.3568 159.4287 
+Q 360.6696 159.4287 360.6696 161.9235 
+L 360.6696 169.2 
+Q 360.6696 171.6948 365.3568 171.6948 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 295.0488 191.4453 
+L 316.1412 191.4453 
+Q 320.8284 191.4453 320.8284 188.9505 
+L 320.8284 181.674 
+Q 320.8284 179.1792 316.1412 179.1792 
+L 295.0488 179.1792 
+Q 290.3616 179.1792 290.3616 181.674 
+L 290.3616 188.9505 
+Q 290.3616 191.4453 295.0488 191.4453 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #ffffff; stroke: #8a8984; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 330.2028 191.4453 
+L 351.2952 191.4453 
+Q 355.9824 191.4453 355.9824 188.9505 
+L 355.9824 181.674 
+Q 355.9824 179.1792 351.2952 179.1792 
+L 330.2028 179.1792 
+Q 325.5156 179.1792 325.5156 181.674 
+L 325.5156 188.9505 
+Q 325.5156 191.4453 330.2028 191.4453 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #ffffff; stroke: #8a8984; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 365.3568 191.4453 
+L 386.4492 191.4453 
+Q 391.1364 191.4453 391.1364 188.9505 
+L 391.1364 181.674 
+Q 391.1364 179.1792 386.4492 179.1792 
+L 365.3568 179.1792 
+Q 360.6696 179.1792 360.6696 181.674 
+L 360.6696 188.9505 
+Q 360.6696 191.4453 365.3568 191.4453 
+z
+" clip-path="url(#p39957cc3d4)" style="fill: #1c5cab; stroke: #1c5cab; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 2.88 13.275 
+L 393.48 13.275 
+" clip-path="url(#p39957cc3d4)" style="fill: none; stroke: #52514e; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 2.88 37.1835 
+L 393.48 37.1835 
+" clip-path="url(#p39957cc3d4)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 2.88 56.934 
+L 393.48 56.934 
+" clip-path="url(#p39957cc3d4)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 2.88 76.6845 
+L 393.48 76.6845 
+" clip-path="url(#p39957cc3d4)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 2.88 96.435 
+L 393.48 96.435 
+" clip-path="url(#p39957cc3d4)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 2.88 116.1855 
+L 393.48 116.1855 
+" clip-path="url(#p39957cc3d4)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 2.88 135.936 
+L 393.48 135.936 
+" clip-path="url(#p39957cc3d4)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 2.88 155.6865 
+L 393.48 155.6865 
+" clip-path="url(#p39957cc3d4)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 2.88 175.437 
+L 393.48 175.437 
+" clip-path="url(#p39957cc3d4)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 2.88 195.1875 
+L 393.48 195.1875 
+" clip-path="url(#p39957cc3d4)" style="fill: none; stroke: #ecebe7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="9.921586" transform="rotate(-0 4.4424 9.921586)">Question</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="148.9644" y="9.921586" transform="rotate(-0 148.9644 9.921586)">Test it rests on</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="305.595" y="9.921586" transform="rotate(-0 305.595 9.921586)">4B</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="340.749" y="9.921586" transform="rotate(-0 340.749 9.921586)">27B dev</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="375.903" y="9.921586" transform="rotate(-0 375.903 9.921586)">27B conf.</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="29.132437" transform="rotate(-0 4.4424 29.132437)">Does the answer need the bridge alone?</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="147.402" y="29.053125" transform="rotate(-0 147.402 29.053125)">the gate: need and reach</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="305.595" y="29.222508" transform="rotate(-0 305.595 29.222508)">done</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="340.749" y="29.222508" transform="rotate(-0 340.749 29.222508)">done</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="375.903" y="29.222508" transform="rotate(-0 375.903 29.222508)">done</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="48.882938" transform="rotate(-0 4.4424 48.882938)">Is a readable bridge a used bridge?</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="147.402" y="48.803625" transform="rotate(-0 147.402 48.803625)">presence (rank) against removal</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="305.595" y="48.973008" transform="rotate(-0 305.595 48.973008)">done</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="340.749" y="48.973008" transform="rotate(-0 340.749 48.973008)">done</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #52514e" x="375.903" y="48.973008" transform="rotate(-0 375.903 48.973008)">not read</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="68.633438" transform="rotate(-0 4.4424 68.633438)">Does removal still work in group prompts?</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="147.402" y="68.596406" transform="rotate(-0 147.402 68.596406)">hidden twins, dose-response, B in hidden 2×2</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="305.595" y="68.596406" transform="rotate(-0 305.595 68.596406)">partial</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="340.749" y="68.596406" transform="rotate(-0 340.749 68.596406)">partial</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="375.903" y="68.723508" transform="rotate(-0 375.903 68.723508)">done</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="88.383938" transform="rotate(-0 4.4424 88.383938)">Do agreeing peers weaken the bridge?</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="147.402" y="88.304625" transform="rotate(-0 147.402 88.304625)">need in log-odds, agree vs. hidden twin</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="305.595" y="88.474008" transform="rotate(-0 305.595 88.474008)">done</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="340.749" y="88.474008" transform="rotate(-0 340.749 88.474008)">done</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="375.903" y="88.474008" transform="rotate(-0 375.903 88.474008)">done</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="108.178641" transform="rotate(-0 4.4424 108.178641)">Are the peers a backup or a replacement?</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="147.402" y="108.097406" transform="rotate(-0 147.402 108.097406)">the 2×2 (block × removal); the patch</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="305.595" y="108.224508" transform="rotate(-0 305.595 108.224508)">done</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="340.749" y="108.224508" transform="rotate(-0 340.749 108.224508)">done</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="375.903" y="108.224508" transform="rotate(-0 375.903 108.224508)">done</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="127.884937" transform="rotate(-0 4.4424 127.884937)">Does the bridge pull against wrong peers?</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="147.402" y="127.805625" transform="rotate(-0 147.402 127.805625)">pull labels; where D's answer goes</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="305.595" y="127.847906" transform="rotate(-0 305.595 127.847906)">partial</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="340.749" y="127.847906" transform="rotate(-0 340.749 127.847906)">partial</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="375.903" y="127.975008" transform="rotate(-0 375.903 127.975008)">done</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="147.679641" transform="rotate(-0 4.4424 147.679641)">When are the peers read?</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="147.402" y="147.578812" transform="rotate(-0 147.402 147.578812)">patch layer sweep</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="305.595" y="147.598406" transform="rotate(-0 305.595 147.598406)">partial</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="340.749" y="147.598406" transform="rotate(-0 340.749 147.598406)">partial</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #0b0b0b" x="375.903" y="147.598406" transform="rotate(-0 375.903 147.598406)">partial</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="167.385937" transform="rotate(-0 4.4424 167.385937)">Does the answer follow a swapped bridge?</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="147.402" y="167.306625" transform="rotate(-0 147.402 167.306625)">swap toward another bridge</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #8a8984" x="305.595" y="167.476008" transform="rotate(-0 305.595 167.476008)">not run</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #8a8984" x="340.749" y="167.476008" transform="rotate(-0 340.749 167.476008)">not run</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="375.903" y="167.476008" transform="rotate(-0 375.903 167.476008)">done</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 6.9px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #0b0b0b" x="4.4424" y="187.136437" transform="rotate(-0 4.4424 187.136437)">Do the findings hold on new questions?</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #52514e" x="147.402" y="187.099406" transform="rotate(-0 147.402 187.099406)">20 frozen confirmation questions</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #8a8984" x="305.595" y="187.226508" transform="rotate(-0 305.595 187.226508)">not run</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #8a8984" x="340.749" y="187.226508" transform="rotate(-0 340.749 187.226508)">not run</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="375.903" y="187.226508" transform="rotate(-0 375.903 187.226508)">done</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #52514e" transform="translate(4.4424 209.591291)">done: run and reported. partial: the original rule failed in one wording, the reading is confounded, or too few questions to read;</text>
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #52514e" transform="translate(4.4424 216.198123)">for the patch sweep the peers are read in the same layers as the bridge acts (4B), not clearly after. not read: measured, not reported.</text>
+    <text style="font-size: 6.6px; font-family: 'Helvetica', 'Arial', 'DejaVu Sans'; fill: #52514e" transform="translate(4.4424 222.804955)">Sources: method-map.html §5, plan.md §6, run summaries 1–3.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p39957cc3d4">
+   <rect x="2.88" y="2.88" width="390.6" height="207.9"/>
+  </clipPath>
+ </defs>
+</svg>
